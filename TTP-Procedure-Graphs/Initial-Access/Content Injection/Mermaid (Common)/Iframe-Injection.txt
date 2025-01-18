@@ -1,0 +1,22 @@
+graph TD;
+    A[Compromise Legitimate Website]
+    B[Inject Malicious iframe]
+    C[Victim Visits Compromised Site]
+    D[iframe Loads External Malicious Content]
+    E[Initial Access Achieved]
+
+    A -->|"Gain access to website’s HTML codebase Corporate Control: Web Hosting Service"| B
+    A -->|"Exploit weak admin credentials or software vulnerabilities Third Party Control: CMS Software"| B
+    A -->|"Avoid detection by leveraging obfuscated iframe code Corporate Control: HTML Codebase"| B
+    A -->|"Monitor for changes to ensure persistence Corporate Control: Admin Account"| B
+    B -->|"Insert iframe pointing to malicious external content Corporate Control: Website Codebase"| C
+    B -->|"Ensure iframe blends in with legitimate site content Corporate Control: Visual Layout"| C
+    B -->|"Avoid triggering security tools by using stealth techniques Corporate Control: Web Server Logs"| C
+    B -->|"Validate iframe functionality to ensure consistent redirection Third Party Control: Malicious Domain"| C
+    C -->|"Victim visits compromised website Third Party Control: Victim Browser"| D
+    C -->|"Malicious iframe delivers payload to victim Third Party Control: Victim Browser"| D
+    C -->|"This step facilitates final delivery of malicious content Third Party Control: Victim System"| D
+    C -->|"Monitor interactions for refinement and persistence Corporate Control: Security Monitoring"| D
+    D -->|"Malicious content executes on victim’s machine Third Party Control: Victim System"| E
+    D -->|"Payload grants initial access for further exploitation Corporate Control: Initial Compromise"| E
+    D -->|"Monitor for suspicious file or network activity Corporate Control: Network Logs"| E

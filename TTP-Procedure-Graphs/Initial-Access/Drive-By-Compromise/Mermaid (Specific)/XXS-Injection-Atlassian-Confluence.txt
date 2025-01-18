@@ -1,0 +1,18 @@
+graph TD;
+    A[Identify XSS Vulnerabilities in Confluence Pages]
+    B[Inject Malicious Scripts into Shared Pages]
+    C[Users Interact with Compromised Pages]
+    D[Payload Executes on User Systems]
+    E[Initial Access]
+
+    A -->|"Scan Confluence pages for input validation weaknesses Third Party Control: Web Application"| B
+    A -->|"Leverage misconfigured permissions for script injection Corporate Control: Admin Panel"| B
+    A -->|"Identify commonly accessed shared pages for injection Corporate Control: User Analytics"| B
+    B -->|"Insert obfuscated JavaScript payloads into vulnerable fields Corporate Control: Page Content"| C
+    B -->|"Ensure payloads trigger on user interaction Corporate Control: Script Behavior"| C
+    B -->|"Monitor script execution using embedded analytics Corporate Control: Monitoring Tools"| C
+    C -->|"Users unknowingly execute malicious scripts Third Party Control: User Browsers"| D
+    C -->|"Scripts steal session cookies or credentials Corporate Control: User Accounts"| D
+    C -->|"Compromise user accounts or systems Third Party Control: Victim Systems"| D
+    D -->|"Achieve initial access via stolen credentials Corporate Control: System Compromise"| E
+    D -->|"Prepare for further exploitation Corporate Control: Persistent Mechanisms"| E

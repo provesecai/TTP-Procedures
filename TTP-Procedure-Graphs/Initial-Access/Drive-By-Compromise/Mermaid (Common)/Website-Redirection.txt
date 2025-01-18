@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Website Redirection Mechanism]
+    B[Redirect Users to Malicious Page]
+    C[Victims Interact with Malicious Page]
+    D[Payload Delivered via Redirection]
+    E[Initial Access]
+
+    A -->|"Identify vulnerable redirection scripts or settings Third Party Control: Website Code"| B
+    A -->|"Exploit misconfigured URL parameters Corporate Control: Website Backend"| B
+    A -->|"Inject malicious redirect logic Corporate Control: Web Server"| B
+    A -->|"Ensure redirections trigger under specific conditions Corporate Control: User Interaction Monitoring"| B
+    B -->|"Redirect users to malicious domains Corporate Control: Malicious Hosting"| C
+    B -->|"Use cloaking techniques to avoid detection Third Party Control: Redirect Rules"| C
+    B -->|"Track redirected traffic for effectiveness Corporate Control: Analytics Tools"| C
+    B -->|"Monitor targeted victim profiles Corporate Control: Targeting Systems"| C
+    C -->|"Malicious page delivers exploit payload Third Party Control: User Browser"| D
+    C -->|"Exploit browser vulnerabilities for code execution Third Party Control: Browser Plugins"| D
+    C -->|"Payload executed within victim's browser Corporate Control: Attack Infrastructure"| D
+    C -->|"Maintain stealth to prevent user suspicion Corporate Control: Stealth Techniques"| D
+    D -->|"Achieve initial compromise through exploit Third Party Control: User System"| E
+    D -->|"Initial foothold created for future actions Corporate Control: Persistent Access"| E
+    D -->|"Ensure access is undetected Corporate Control: Anti-Detection Tools"| E
+    D -->|"Prepare for additional exploitation Corporate Control: Infrastructure Setup"| E

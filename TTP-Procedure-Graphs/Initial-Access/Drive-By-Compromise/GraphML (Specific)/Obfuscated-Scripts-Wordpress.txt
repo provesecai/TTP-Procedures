@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Obfuscated-Scripts-Wordpress" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Create Malicious Obfuscated Plugin Code</data>
+</node>
+<node id="B">
+  <data key="label">Upload Plugin to WordPress Repositories</data>
+</node>
+<node id="C">
+  <data key="label">Admins Install Compromised Plugins</data>
+</node>
+<node id="D">
+  <data key="label">Plugin Executes Malicious Script</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Develop obfuscated malicious functionality - Corporate Control: Plugin Code</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Inject backdoors into legitimate plugins - Corporate Control: Source Code</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Ensure plugins pass basic repository checks - Corporate Control: QA Systems</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Upload plugin to WordPress repository - Corporate Control: Plugin Marketplace</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Monitor downloads to track effectiveness - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Evade detection using complex obfuscation - Corporate Control: Evasion Techniques</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Admins install plugins on WordPress sites - Third Party Control: Admin Panels</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Plugins execute malicious code during runtime - Corporate Control: Web Servers</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Malicious payload achieves initial compromise - Third Party Control: User Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare environment for future exploitation - Corporate Control: Persistence Tools</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,13 @@
+graph TD;
+    A[Exploit PhpBB Vulnerabilities]
+    B[Inject HTML Payloads into Forum Posts]
+    C[Users View Compromised Threads]
+    D[HTML Executes to Capture Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Exploit unpatched PhpBB installations Corporate Control: PhpBB Software"| B
+    A -->|"Target post creation or editing functionality Corporate Control: Post Submission"| B
+    B -->|"Inject HTML forms designed to capture user login data Corporate Control: Forum Content"| C
+    B -->|"Ensure obfuscated payloads persist despite updates Corporate Control: Forum Database"| C
+    C -->|"Users interact with malicious posts Third Party Control: User Browsers"| D
+    C -->|"Stolen credentials used for unauthorized access Corporate Control: User Accounts"| E

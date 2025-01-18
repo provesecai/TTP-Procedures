@@ -1,0 +1,14 @@
+graph TD;
+    A[Exploit Reuters Content Management System]
+    B[Inject iframe into News Articles]
+    C[Visitors Load Compromised Articles]
+    D[iframe Delivers Malicious Content]
+    E[Initial Access Achieved]
+
+    A -->|"Compromise Reuters’ CMS accounts Corporate Control: CMS Admin Accounts"| B
+    A -->|"Insert iframe pointing to attacker-controlled server Corporate Control: News Content"| B
+    B -->|"Ensure iframe loads during high-traffic news cycles Corporate Control: News Articles"| C
+    B -->|"Obfuscate iframe code to evade detection Corporate Control: HTML Templates"| C
+    C -->|"Visitors trigger malicious payloads when reading news Third Party Control: Visitor Browsers"| D
+    C -->|"Payload executes on visitor machines Corporate Control: User Systems"| D
+    D -->|"Initial access achieved for lateral movement Corporate Control: Visitor Devices"| E

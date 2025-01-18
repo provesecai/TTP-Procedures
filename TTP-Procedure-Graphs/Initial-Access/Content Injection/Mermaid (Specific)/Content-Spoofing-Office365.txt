@@ -1,0 +1,14 @@
+graph TD;
+    A[Clone Office 365 Login Portals]
+    B[Host Spoofed Portals on Phishing Servers]
+    C[Lure Users via Targeted Campaigns]
+    D[Capture User Login Details]
+    E[Initial Access Achieved]
+
+    A -->|"Replicate layout and branding of Office 365 login pages Corporate Control: Office365 Websites"| B
+    A -->|"Deploy pages on attacker-controlled servers Corporate Control: Phishing Infrastructure"| B
+    B -->|"Ensure phishing portals are indistinguishable from genuine ones Corporate Control: Website Appearance"| C
+    B -->|"Use targeted spear-phishing emails to lure victims Corporate Control: Targeted Campaigns"| C
+    C -->|"Victims submit credentials to spoofed portals Third Party Control: Phishing Websites"| D
+    C -->|"Credentials sent to attacker-controlled storage Corporate Control: Attacker Servers"| D
+    D -->|"Initial access achieved via compromised Office365 accounts Corporate Control: User Accounts"| E

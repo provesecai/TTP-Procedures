@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised-CDN" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+  <data key="label">Compromise Content Delivery Network</data>
+</node>
+<node id="B">
+  <data key="label">Inject Malicious Content</data>
+</node>
+<node id="C">
+  <data key="label">Content Delivered to Users</data>
+</node>
+<node id="D">
+  <data key="label">Malicious Payload Executes</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+  <data key="label">Target popular CDNs for maximum impact - Third Party Control: CDN Services</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Exploit vulnerabilities in CDN servers - Corporate Control: CDN Infrastructure</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Gain admin access to CDN configuration - Third Party Control: Admin Accounts</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Deploy monitoring tools to track delivery - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Insert malicious scripts or payloads into assets - Corporate Control: Hosted Files</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure payloads are undetectable during delivery - Corporate Control: Obfuscation Methods</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Design payloads to trigger on user interaction - Corporate Control: User Behavior Monitoring</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Monitor delivery effectiveness to victims - Corporate Control: Feedback Tools</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Users access compromised assets via CDN - Third Party Control: User Systems</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Malicious payload delivered to victims' devices - Corporate Control: User Systems</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payloads trigger silently on target systems - Third Party Control: Victim Devices</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Ensure payload persistence within assets - Corporate Control: Persistent Exploits</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Payload executes, achieving initial compromise - Third Party Control: User Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial access achieved through CDN compromise - Corporate Control: Exploitation Outcome</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Set up communication channels for further attacks - Corporate Control: Command Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare victim environments for additional operations - Corporate Control: Setup Tools</data>
+</edge>
+</graph>
+</graphml>

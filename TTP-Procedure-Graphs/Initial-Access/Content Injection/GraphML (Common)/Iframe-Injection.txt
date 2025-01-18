@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Iframe-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Legitimate Website</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious iframe</data>
+</node>
+<node id="C">
+<data key="label">Victim Visits Compromised Site</data>
+</node>
+<node id="D">
+<data key="label">iframe Loads External Malicious Content</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to website’s HTML codebase Corporate Control: Web Hosting Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit weak admin credentials or software vulnerabilities Third Party Control: CMS Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by leveraging obfuscated iframe code Corporate Control: HTML Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for changes to ensure persistence Corporate Control: Admin Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert iframe pointing to malicious external content Corporate Control: Website Codebase</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure iframe blends in with legitimate site content Corporate Control: Visual Layout</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid triggering security tools by using stealth techniques Corporate Control: Web Server Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate iframe functionality to ensure consistent redirection Third Party Control: Malicious Domain</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim visits compromised website Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious iframe delivers payload to victim Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">This step facilitates final delivery of malicious content Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor interactions for refinement and persistence Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious content executes on victim’s machine Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload grants initial access for further exploitation Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious file or network activity Corporate Control: Network Logs</data>
+</edge>
+</graph>
+</graphml>

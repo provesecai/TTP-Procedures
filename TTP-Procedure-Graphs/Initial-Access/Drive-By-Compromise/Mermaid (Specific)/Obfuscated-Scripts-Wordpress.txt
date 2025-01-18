@@ -1,0 +1,17 @@
+graph TD;
+    A[Create Malicious Obfuscated Plugin Code]
+    B[Upload Plugin to WordPress Repositories]
+    C[Admins Install Compromised Plugins]
+    D[Plugin Executes Malicious Script]
+    E[Initial Access]
+
+    A -->|"Develop obfuscated malicious functionality Corporate Control: Plugin Code"| B
+    A -->|"Inject backdoors into legitimate plugins Corporate Control: Source Code"| B
+    A -->|"Ensure plugins pass basic repository checks Corporate Control: QA Systems"| B
+    B -->|"Upload plugin to WordPress repository Corporate Control: Plugin Marketplace"| C
+    B -->|"Monitor downloads to track effectiveness Corporate Control: Analytics Tools"| C
+    B -->|"Evade detection using complex obfuscation Corporate Control: Evasion Techniques"| C
+    C -->|"Admins install plugins on WordPress sites Third Party Control: Admin Panels"| D
+    C -->|"Plugins execute malicious code during runtime Corporate Control: Web Servers"| D
+    D -->|"Malicious payload achieves initial compromise Third Party Control: User Systems"| E
+    D -->|"Prepare environment for future exploitation Corporate Control: Persistence Tools"| E

@@ -1,0 +1,14 @@
+graph TD;
+    A[Compromise Blogger Accounts]
+    B[Embed Malicious iframe in Blog Posts]
+    C[Visitors Access Compromised Blogs]
+    D[iframe Executes Payload]
+    E[Initial Access Achieved]
+
+    A -->|"Gain access to high-traffic Blogger accounts Corporate Control: Blogger Platform"| B
+    A -->|"Insert iframe pointing to malicious content Corporate Control: Blog Content"| B
+    B -->|"Ensure iframe mimics legitimate media embeds Corporate Control: Blog Layout"| C
+    B -->|"Maintain persistence by automated re-injections Corporate Control: Blog Scripts"| C
+    C -->|"Visitors unknowingly load iframe content Third Party Control: Visitor Browsers"| D
+    C -->|"Malicious content compromises visitor devices Corporate Control: User Systems"| D
+    D -->|"Initial access achieved through device compromise Corporate Control: Visitor Accounts"| E

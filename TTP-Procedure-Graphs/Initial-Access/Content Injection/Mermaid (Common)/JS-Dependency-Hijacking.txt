@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Third-Party Dependency]
+    B[Create Malicious JavaScript Package]
+    C[Replace or Inject Malicious Package]
+    D[Victim Application Loads Compromised Dependency]
+    E[Initial Access Achieved]
+
+    A -->|"Identify widely used dependencies with lax security practices Third Party Control: Open-Source Repositories"| B
+    A -->|"Map dependencies used by high-value targets Corporate Control: Dependency Mapping Tools"| B
+    A -->|"Scan for unmaintained or abandoned packages Third Party Control: Package Management Systems"| B
+    A -->|"Validate potential attack vectors in third-party libraries Corporate Control: Application Analysis"| B
+    B -->|"Craft malicious JavaScript package mimicking legitimate ones Third Party Control: Malicious Package"| C
+    B -->|"Host malicious package on popular repositories Third Party Control: Open-Source Repository"| C
+    B -->|"Ensure malicious code executes stealthily on load Corporate Control: Payload Obfuscation"| C
+    B -->|"Test payload to ensure seamless integration Corporate Control: Test Environments"| C
+    C -->|"Inject malicious package into victim’s supply chain Third Party Control: CI/CD Pipeline"| D
+    C -->|"Replace legitimate packages with malicious versions Third Party Control: Package Registry"| D
+    C -->|"Ensure victims unknowingly install malicious dependencies Corporate Control: Dependency Updates"| D
+    C -->|"Monitor adoption rates of malicious package Corporate Control: Repository Analytics"| D
+    D -->|"Victim application executes malicious dependency Third Party Control: Victim Application"| E
+    D -->|"Payload execution enables initial access Corporate Control: Application Runtime"| E
+    D -->|"Monitor victim systems for further actions Corporate Control: Attack Infrastructure"| E
+    D -->|"Use evasion techniques to prevent detection Corporate Control: Obfuscated Code"| E

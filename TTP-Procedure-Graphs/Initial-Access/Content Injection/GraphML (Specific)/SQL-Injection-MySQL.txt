@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SQL-Injection-MySQL" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable MySQL Queries</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious SQL Payload</data>
+</node>
+<node id="C">
+<data key="label">Exploit Database Vulnerabilities</data>
+</node>
+<node id="D">
+<data key="label">Exfiltrate Sensitive Data</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for unparameterized queries in web applications Corporate Control: Web Applications</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test for error-based or boolean-based vulnerabilities Corporate Control: SQL Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft payloads targeting database structure Third Party Control: MySQL Database</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute UNION-based attacks to extract data Corporate Control: Application Logic</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Compromise database to access user credentials Corporate Control: User Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter database entries to enable persistence Corporate Control: Database Integrity</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through stolen credentials Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

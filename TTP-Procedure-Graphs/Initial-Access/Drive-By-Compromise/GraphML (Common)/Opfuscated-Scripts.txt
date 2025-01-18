@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Obfuscated-Scripts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+  <data key="label">Create Malicious Obfuscated Script</data>
+</node>
+<node id="B">
+  <data key="label">Inject Script into Webpage</data>
+</node>
+<node id="C">
+  <data key="label">Script Loaded by User's Browser</data>
+</node>
+<node id="D">
+  <data key="label">Script Executes Hidden Payload</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+  <data key="label">Develop script to hide malicious intent - Corporate Control: Attack Infrastructure</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Use advanced obfuscation techniques - Corporate Control: Malicious Script Tools</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Ensure compatibility with target environments - Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Evade static and dynamic analysis - Corporate Control: Anti-Debugging Techniques</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Inject script into target websites - Third Party Control: Web Hosting</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Leverage vulnerabilities in CMS or plugins - Third Party Control: Content Management Systems</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Embed script into high-traffic pages - Corporate Control: Compromised Admin Accounts</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure script persistence using server-side methods - Corporate Control: Web Server</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">User's browser loads the obfuscated script - Third Party Control: User Browser</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Script triggers payload delivery without detection - Corporate Control: Payload Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Monitor script execution for successful delivery - Corporate Control: Attack Monitoring</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Ensure minimal performance impact to remain undetected - Corporate Control: Evasion Techniques</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Payload executes, achieving initial compromise - Third Party Control: User System</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial foothold established - Corporate Control: Victim Environment</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Set up for further exploitation - Corporate Control: Command Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Evade security measures during payload execution - Corporate Control: Anti-Detection Techniques</data>
+</edge>
+</graph>
+</graphml>

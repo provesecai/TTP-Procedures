@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HTML-Injection-Shopify" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Shopify Themes</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious HTML into Theme Templates</data>
+</node>
+<node id="C">
+<data key="label">Merchants Apply Compromised Themes</data>
+</node>
+<node id="D">
+<data key="label">Customers Interact with Compromised Stores</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Exploit vulnerabilities in Shopify’s theme marketplace Corporate Control: Theme Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain access to theme developer accounts Third Party Control: Developer Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert HTML payloads to capture payment data Corporate Control: Checkout Pages</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by obfuscating malicious scripts Corporate Control: Theme Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Merchants unknowingly use compromised themes Third Party Control: Store Owners</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Customers trigger malicious payloads during checkout Third Party Control: Customer Browsers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Stolen payment or login details enable initial access Corporate Control: Customer Accounts</data>
+</edge>
+</graph>
+</graphml>

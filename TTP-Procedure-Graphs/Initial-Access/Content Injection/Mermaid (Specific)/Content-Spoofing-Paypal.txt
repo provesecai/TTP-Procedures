@@ -1,0 +1,14 @@
+graph TD;
+    A[Clone PayPal Login Pages]
+    B[Host Spoofed Pages on Phishing Servers]
+    C[Lure Users to Spoofed Pages]
+    D[Capture Login Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Copy design and functionality of PayPal login Corporate Control: PayPal Website"| B
+    A -->|"Host pages on attacker-controlled domains Corporate Control: Malicious Domains"| B
+    B -->|"Ensure phishing pages bypass browser warnings Third Party Control: Browser Controls"| C
+    B -->|"Test spoofed pages for visual accuracy Corporate Control: Spoofed Websites"| C
+    C -->|"Use phishing emails or social media ads to lure users Corporate Control: Phishing Campaigns"| D
+    C -->|"Users unknowingly enter credentials on spoofed pages Corporate Control: User Inputs"| D
+    D -->|"Stolen credentials enable unauthorized account access Corporate Control: User Accounts"| E

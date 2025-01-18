@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised-ThirdPartyCode-NPM-PackageRegistry" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Identify Popular NPM Packages</data>
+</node>
+<node id="B">
+  <data key="label">Inject Malicious Code into Package Updates</data>
+</node>
+<node id="C">
+  <data key="label">Distribute Updated Packages</data>
+</node>
+<node id="D">
+  <data key="label">Payload Executes in User Environments</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Research widely-used open-source packages - Corporate Control: NPM Registry</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Identify maintainers with weak credentials - Corporate Control: Contributor Accounts</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Monitor GitHub repositories for vulnerable packages - Third Party Control: Open Source Repos</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Inject obfuscated malicious payloads into updates - Corporate Control: Package Source Code</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Push updates to the NPM registry - Corporate Control: Registry System</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure payload triggers during regular package usage - Corporate Control: Payload Design</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Updated packages installed by developers - Third Party Control: Developer Systems</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload embedded into user applications - Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Track compromised systems using telemetry - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial compromise achieved through infected code - Third Party Control: Developer Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare compromised systems for further attacks - Corporate Control: Persistent Foothold</data>
+</edge>
+</graph>
+</graphml>

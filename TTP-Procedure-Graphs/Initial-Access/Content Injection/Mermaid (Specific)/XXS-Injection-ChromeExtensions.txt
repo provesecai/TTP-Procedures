@@ -1,0 +1,14 @@
+graph TD;
+    A[Compromise Chrome Web Store Extensions]
+    B[Inject Malicious Scripts into Extensions]
+    C[Users Install or Update Extensions]
+    D[Scripts Execute on Websites Accessed]
+    E[Initial Access Achieved]
+
+    A -->|"Exploit weak access controls in Chrome Web Store Third Party Control: Chrome Extension Repository"| B
+    A -->|"Replace legitimate extension code with malicious payloads Corporate Control: Extension Source"| B
+    B -->|"Ensure obfuscated payloads bypass Chrome Store reviews Corporate Control: Store Review Process"| C
+    B -->|"Embed keylogging or session hijacking scripts Third Party Control: Browser Context"| C
+    C -->|"Users unknowingly install or update compromised extensions Corporate Control: User Systems"| D
+    C -->|"Malicious scripts execute on targeted web pages Third Party Control: Active Browsers"| D
+    D -->|"Initial access achieved through stolen credentials or sessions Corporate Control: User Accounts"| E

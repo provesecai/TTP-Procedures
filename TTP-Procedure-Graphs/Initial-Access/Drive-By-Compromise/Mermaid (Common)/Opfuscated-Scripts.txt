@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Obfuscated Script]
+    B[Inject Script into Webpage]
+    C[Script Loaded by User's Browser]
+    D[Script Executes Hidden Payload]
+    E[Initial Access]
+
+    A -->|"Develop script to hide malicious intent Corporate Control: Attack Infrastructure"| B
+    A -->|"Use advanced obfuscation techniques Corporate Control: Malicious Script Tools"| B
+    A -->|"Ensure compatibility with target environments Corporate Control: Testing Environment"| B
+    A -->|"Evade static and dynamic analysis Corporate Control: Anti-Debugging Techniques"| B
+    B -->|"Inject script into target websites Third Party Control: Web Hosting"| C
+    B -->|"Leverage vulnerabilities in CMS or plugins Third Party Control: Content Management Systems"| C
+    B -->|"Embed script into high-traffic pages Corporate Control: Compromised Admin Accounts"| C
+    B -->|"Ensure script persistence using server-side methods Corporate Control: Web Server"| C
+    C -->|"User's browser loads the obfuscated script Third Party Control: User Browser"| D
+    C -->|"Script triggers payload delivery without detection Corporate Control: Payload Infrastructure"| D
+    C -->|"Monitor script execution for successful delivery Corporate Control: Attack Monitoring"| D
+    C -->|"Ensure minimal performance impact to remain undetected Corporate Control: Evasion Techniques"| D
+    D -->|"Payload executes, achieving initial compromise Third Party Control: User System"| E
+    D -->|"Initial foothold established Corporate Control: Victim Environment"| E
+    D -->|"Set up for further exploitation Corporate Control: Command Infrastructure"| E
+    D -->|"Evade security measures during payload execution Corporate Control: Anti-Detection Techniques"| E

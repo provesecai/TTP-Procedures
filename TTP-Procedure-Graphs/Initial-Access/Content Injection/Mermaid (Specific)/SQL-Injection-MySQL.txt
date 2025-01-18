@@ -1,0 +1,14 @@
+graph TD;
+    A[Identify Vulnerable MySQL Queries]
+    B[Inject Malicious SQL Payload]
+    C[Exploit Database Vulnerabilities]
+    D[Exfiltrate Sensitive Data]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for unparameterized queries in web applications Corporate Control: Web Applications"| B
+    A -->|"Test for error-based or boolean-based vulnerabilities Corporate Control: SQL Logs"| B
+    B -->|"Craft payloads targeting database structure Third Party Control: MySQL Database"| C
+    B -->|"Execute UNION-based attacks to extract data Corporate Control: Application Logic"| C
+    C -->|"Compromise database to access user credentials Corporate Control: User Data"| D
+    C -->|"Alter database entries to enable persistence Corporate Control: Database Integrity"| D
+    D -->|"Initial access achieved through stolen credentials Corporate Control: User Accounts"| E

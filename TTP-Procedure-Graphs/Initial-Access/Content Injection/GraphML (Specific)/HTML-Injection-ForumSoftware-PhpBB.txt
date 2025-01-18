@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HTML-Injection-PhpBB" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Exploit PhpBB Vulnerabilities</data>
+</node>
+<node id="B">
+<data key="label">Inject HTML Payloads into Forum Posts</data>
+</node>
+<node id="C">
+<data key="label">Users View Compromised Threads</data>
+</node>
+<node id="D">
+<data key="label">HTML Executes to Capture Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Exploit unpatched PhpBB installations Corporate Control: PhpBB Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target post creation or editing functionality Corporate Control: Post Submission</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject HTML forms designed to capture user login data Corporate Control: Forum Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure obfuscated payloads persist despite updates Corporate Control: Forum Database</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users interact with malicious posts Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Stolen credentials used for unauthorized access Corporate Control: User Accounts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via compromised user accounts Corporate Control: Targeted Accounts</data>
+</edge>
+</graph>
+</graphml>

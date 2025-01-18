@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Watering-Hole-WordPress" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise WordPress Plugins</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious Code into Popular Plugins</data>
+</node>
+<node id="C">
+<data key="label">Admins Install Compromised Plugins</data>
+</node>
+<node id="D">
+<data key="label">Visitors Trigger Malicious Payload</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Target high-traffic plugins via known vulnerabilities Corporate Control: Plugin Marketplace</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain access to developer accounts or repositories Third Party Control: Developer Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads in plugin updates Corporate Control: Plugin Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by avoiding detection in reviews Corporate Control: Plugin Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Admins update or install the compromised plugin Third Party Control: Admin Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users visiting affected sites trigger the payload Corporate Control: Website Visitors</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload steals credentials or deploys malware Corporate Control: Visitor Devices</data>
+</edge>
+</graph>
+</graphml>

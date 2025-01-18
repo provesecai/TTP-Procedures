@@ -1,0 +1,18 @@
+graph TD;
+    A[Compromise CloudFront Distribution Settings]
+    B[Insert Malicious Content into CDN Assets]
+    C[Compromised Assets Delivered to Users]
+    D[Payload Activates on Victim Devices]
+    E[Initial Access]
+
+    A -->|"Exploit misconfigured access control for CloudFront Corporate Control: CDN Distribution"| B
+    A -->|"Compromise AWS IAM credentials for admin access Corporate Control: AWS Account"| B
+    A -->|"Leverage API keys to inject malicious code Corporate Control: API Access"| B
+    B -->|"Embed malicious scripts into cached assets Corporate Control: CDN Cache"| C
+    B -->|"Ensure obfuscation to bypass content scanning Corporate Control: Script Design"| C
+    B -->|"Monitor delivery metrics for affected regions Corporate Control: Analytics Tools"| C
+    C -->|"Compromised content loaded by victim browsers Third Party Control: User Browsers"| D
+    C -->|"Payload designed to trigger automatically on load Third Party Control: Browser Environment"| D
+    C -->|"Track payload execution to assess effectiveness Corporate Control: Feedback Infrastructure"| D
+    D -->|"Malicious payload establishes initial compromise Third Party Control: User Systems"| E
+    D -->|"Prepare systems for persistence and further attacks Corporate Control: Post-Exploitation Setup"| E

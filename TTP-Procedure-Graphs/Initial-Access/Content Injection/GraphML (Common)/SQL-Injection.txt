@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SQL-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Database Query</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious SQL Query</data>
+</node>
+<node id="C">
+<data key="label">Exploit Database Vulnerability</data>
+</node>
+<node id="D">
+<data key="label">Exfiltrate Sensitive Data or Alter State</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for input fields not properly sanitized Corporate Control: Application Input</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify queries vulnerable to injection Third Party Control: SQL Database</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Map application behavior under various inputs Corporate Control: Web Server Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test for specific DBMS behaviors to craft payloads Corporate Control: Database Management System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft SQL payloads designed to bypass validation Third Party Control: Database Query</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject payloads via exposed inputs or parameters Corporate Control: Input Field</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use UNION or stacked queries for enhanced access Third Party Control: SQL Database</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test payloads for successful execution Corporate Control: Web Application</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit database to gain unauthorized access Third Party Control: Database System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract sensitive user credentials or session tokens Corporate Control: Stored Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter database state to create further access Third Party Control: Database System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor application logs for further attack opportunities Corporate Control: Web Server</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate or utilize compromised data for initial access Third Party Control: User Session</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor victim application for changes indicative of compromise Corporate Control: SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage data for privilege escalation or lateral movement Corporate Control: Data Integrity</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use stealth techniques to avoid detection Corporate Control: Attack Infrastructure</data>
+</edge>
+</graph>
+</graphml>

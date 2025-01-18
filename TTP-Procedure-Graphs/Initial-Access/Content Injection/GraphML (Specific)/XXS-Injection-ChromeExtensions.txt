@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XXS-Injection-ChromeExtensions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Chrome Web Store Extensions</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Scripts into Extensions</data>
+</node>
+<node id="C">
+<data key="label">Users Install or Update Extensions</data>
+</node>
+<node id="D">
+<data key="label">Scripts Execute on Websites Accessed</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Exploit weak access controls in Chrome Web Store Third Party Control: Chrome Extension Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Replace legitimate extension code with malicious payloads Corporate Control: Extension Source</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure obfuscated payloads bypass Chrome Store reviews Corporate Control: Store Review Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed keylogging or session hijacking scripts Third Party Control: Browser Context</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users unknowingly install or update compromised extensions Corporate Control: User Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious scripts execute on targeted web pages Third Party Control: Active Browsers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through stolen credentials or sessions Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

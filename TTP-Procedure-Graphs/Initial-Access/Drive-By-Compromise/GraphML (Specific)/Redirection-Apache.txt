@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Redirection-Apache" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Exploit Misconfigured .htaccess File</data>
+</node>
+<node id="B">
+  <data key="label">Insert Malicious Redirect Rules</data>
+</node>
+<node id="C">
+  <data key="label">Redirect Users to Malicious Website</data>
+</node>
+<node id="D">
+  <data key="label">Payload Delivered via Redirect</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Identify vulnerable .htaccess configurations - Third Party Control: Web Server Settings</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Gain access to Apache admin panel - Corporate Control: Admin Accounts</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Analyze server logs for potential redirect points - Corporate Control: Web Logs</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Insert obfuscated redirect rules into .htaccess - Corporate Control: Server Configuration</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Test redirects for effectiveness - Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Track redirected traffic using analytics - Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Victims unknowingly redirected to malicious site - Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Exploit browser vulnerabilities for code execution - Third Party Control: Browser Plugins</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload executed on victim devices - Corporate Control: Malicious Website</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Achieve initial compromise via malicious redirects - Third Party Control: Victim Machines</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare environment for future attacks - Corporate Control: Persistence Tools</data>
+</edge>
+</graph>
+</graphml>

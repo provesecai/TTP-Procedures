@@ -1,0 +1,14 @@
+graph TD;
+    A[Target Social Media Sites]
+    B[Exploit Input Fields in Posts or Comments]
+    C[Inject Malicious Scripts into Content]
+    D[Users Interact with Compromised Posts]
+    E[Initial Access Achieved]
+
+    A -->|"Identify input fields lacking sanitization Corporate Control: Social Media Platform"| B
+    A -->|"Craft scripts designed to steal session cookies Corporate Control: User Sessions"| B
+    B -->|"Embed payloads in posts, comments, or private messages Corporate Control: Post Input"| C
+    B -->|"Obfuscate scripts to evade detection Corporate Control: Content Review"| C
+    C -->|"Users trigger payloads when viewing or interacting with posts Third Party Control: User Browsers"| D
+    C -->|"Malicious scripts capture sensitive data or hijack sessions Third Party Control: Browser Context"| D
+    D -->|"Initial access achieved through user account compromise Corporate Control: User Accounts"| E

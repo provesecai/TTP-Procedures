@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Database Query]
+    B[Inject Malicious SQL Query]
+    C[Exploit Database Vulnerability]
+    D[Exfiltrate Sensitive Data or Alter State]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for input fields not properly sanitized Corporate Control: Application Input"| B
+    A -->|"Identify queries vulnerable to injection Third Party Control: SQL Database"| B
+    A -->|"Map application behavior under various inputs Corporate Control: Web Server Logs"| B
+    A -->|"Test for specific DBMS behaviors to craft payloads Corporate Control: Database Management System"| B
+    B -->|"Craft SQL payloads designed to bypass validation Third Party Control: Database Query"| C
+    B -->|"Inject payloads via exposed inputs or parameters Corporate Control: Input Field"| C
+    B -->|"Use UNION or stacked queries for enhanced access Third Party Control: SQL Database"| C
+    B -->|"Test payloads for successful execution Corporate Control: Web Application"| C
+    C -->|"Exploit database to gain unauthorized access Third Party Control: Database System"| D
+    C -->|"Extract sensitive user credentials or session tokens Corporate Control: Stored Data"| D
+    C -->|"Alter database state to create further access Third Party Control: Database System"| D
+    C -->|"Monitor application logs for further attack opportunities Corporate Control: Web Server"| D
+    D -->|"Exfiltrate or utilize compromised data for initial access Third Party Control: User Session"| E
+    D -->|"Monitor victim application for changes indicative of compromise Corporate Control: SIEM"| E
+    D -->|"Leverage data for privilege escalation or lateral movement Corporate Control: Data Integrity"| E
+    D -->|"Use stealth techniques to avoid detection Corporate Control: Attack Infrastructure"| E

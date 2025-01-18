@@ -1,0 +1,14 @@
+graph TD;
+    A[Target PostgreSQL-Based Applications]
+    B[Inject SQL Payloads]
+    C[Access or Modify Sensitive Data]
+    D[Leverage Database Access for Initial Access]
+    E[Initial Access Achieved]
+
+    A -->|"Identify input fields vulnerable to SQL injection Corporate Control: Application Input"| B
+    A -->|"Target applications using PostgreSQL backend Corporate Control: Database Backend"| B
+    B -->|"Craft payloads to manipulate database queries Corporate Control: SQL Queries"| C
+    B -->|"Use SQL injection to escalate privileges Corporate Control: Database Permissions"| C
+    C -->|"Extract sensitive data such as credentials Corporate Control: User Data"| D
+    C -->|"Modify database records to enable backdoors Corporate Control: Database Records"| D
+    D -->|"Initial access achieved via database exploitation Corporate Control: Application Servers"| E

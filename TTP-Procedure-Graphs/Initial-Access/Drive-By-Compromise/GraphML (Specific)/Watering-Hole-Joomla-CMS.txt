@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Watering-Hole-Joomla-CMS" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Compromise Joomla Admin Panel</data>
+</node>
+<node id="B">
+  <data key="label">Inject Malicious Code into CMS Templates</data>
+</node>
+<node id="C">
+  <data key="label">Malicious Code Loaded by Visitors</data>
+</node>
+<node id="D">
+  <data key="label">Payload Executes on Victim Systems</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Identify weak Joomla admin credentials - Third Party Control: Admin Accounts</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Exploit vulnerabilities in outdated plugins - Corporate Control: CMS Plugins</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Gain admin access through brute force attacks - Corporate Control: Attack Tools</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Modify templates to include malicious JavaScript - Corporate Control: CMS Templates</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Embed payloads designed to trigger on user interaction - Corporate Control: Script Injection</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Test payload delivery using analytics - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Users unknowingly load malicious scripts - Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload activates silently within victim's browser - Third Party Control: Browser Runtime</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Achieve initial compromise through payload execution - Corporate Control: Attack Outcome</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare for further exploitation - Corporate Control: Persistence Mechanisms</data>
+</edge>
+</graph>
+</graphml>

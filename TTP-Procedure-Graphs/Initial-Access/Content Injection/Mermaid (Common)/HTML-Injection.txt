@@ -1,0 +1,23 @@
+graph TD;
+    A[Access Vulnerable Input Field]
+    B[Inject Malicious HTML Content]
+    C[Victim Views Injected Page]
+    D[Malicious Payload Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Identify forms or input fields accepting unvalidated input Corporate Control: Web Application"| B
+    A -->|"Use automated tools to map attack surfaces Third Party Control: Scanning Tools"| B
+    A -->|"Prioritize high-value targets based on user traffic Corporate Control: Web Analytics"| B
+    A -->|"Monitor for changes in web app behavior during testing Corporate Control: Application Logs"| B
+    B -->|"Insert crafted HTML code into vulnerable input fields Corporate Control: Input Fields"| C
+    B -->|"Avoid triggering input sanitization or WAF Corporate Control: Web Application Firewall"| C
+    B -->|"Design payloads to mimic legitimate content Third Party Control: User Interaction"| C
+    B -->|"Establish persistence by altering session variables Corporate Control: Cookies"| C
+    C -->|"Victim loads compromised web page Third Party Control: Victim Browser"| D
+    C -->|"Payload captures sensitive details such as credentials Third Party Control: User Input"| D
+    C -->|"Redirect victim to malicious domain Third Party Control: DNS"| D
+    C -->|"Validate payload success rate via analytics Corporate Control: Attack Logs"| D
+    D -->|"Initial access achieved through compromised session Third Party Control: Victim Session"| E
+    D -->|"Credential theft enables further compromise Third Party Control: Victim Credentials"| E
+    D -->|"Monitor for suspicious activity on high-value accounts Corporate Control: SIEM"| E
+    D -->|"Utilize stealth techniques to avoid detection Corporate Control: Obfuscated Code"| E

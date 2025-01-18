@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Content-Spoofing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Application</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Content</data>
+</node>
+<node id="C">
+<data key="label">Host Spoofed Content</data>
+</node>
+<node id="D">
+<data key="label">Direct Victim to Malicious Content</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for web applications with inadequate content validation Corporate Control: Web Hosting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify public-facing endpoints prone to spoofing Third Party Control: Application Endpoints</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Map potential attack surfaces for content spoofing Corporate Control: Web Pages</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by testing spoofed payloads incrementally Corporate Control: Web Server Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Design malicious content mimicking legitimate assets Third Party Control: Spoofed Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host malicious content on attacker-controlled domains Third Party Control: Malicious Domain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure spoofed content looks legitimate to end users Corporate Control: Content Design</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate spoofed content for seamless victim interaction Corporate Control: Test Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Host spoofed content publicly Third Party Control: Attacker Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use phishing campaigns to lure victims to spoofed content Third Party Control: Email Campaigns</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor victim interactions to validate success Corporate Control: Attack Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Refine spoofed content for improved evasion Corporate Control: Content Updates</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Victim interacts with malicious content Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload execution grants initial access Third Party Control: Victim Browser</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor victim’s machine for further exploitation opportunities Corporate Control: SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use detection evasion techniques to maintain stealth Corporate Control: Obfuscated Payload</data>
+</edge>
+</graph>
+</graphml>

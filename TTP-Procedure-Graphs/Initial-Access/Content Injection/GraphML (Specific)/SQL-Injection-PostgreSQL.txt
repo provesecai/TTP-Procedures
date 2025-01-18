@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SQL-Injection-PostgreSQL" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Target PostgreSQL-Based Applications</data>
+</node>
+<node id="B">
+<data key="label">Inject SQL Payloads</data>
+</node>
+<node id="C">
+<data key="label">Access or Modify Sensitive Data</data>
+</node>
+<node id="D">
+<data key="label">Leverage Database Access for Initial Access</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify input fields vulnerable to SQL injection Corporate Control: Application Input</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target applications using PostgreSQL backend Corporate Control: Database Backend</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft payloads to manipulate database queries Corporate Control: SQL Queries</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use SQL injection to escalate privileges Corporate Control: Database Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract sensitive data such as credentials Corporate Control: User Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify database records to enable backdoors Corporate Control: Database Records</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via database exploitation Corporate Control: Application Servers</data>
+</edge>
+</graph>
+</graphml>

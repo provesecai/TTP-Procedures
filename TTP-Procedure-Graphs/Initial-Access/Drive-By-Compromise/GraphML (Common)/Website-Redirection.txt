@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Website-Redirection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+  <data key="label">Compromise Website Redirection Mechanism</data>
+</node>
+<node id="B">
+  <data key="label">Redirect Users to Malicious Page</data>
+</node>
+<node id="C">
+  <data key="label">Victims Interact with Malicious Page</data>
+</node>
+<node id="D">
+  <data key="label">Payload Delivered via Redirection</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+  <data key="label">Identify vulnerable redirection scripts or settings - Third Party Control: Website Code</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Exploit misconfigured URL parameters - Corporate Control: Website Backend</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Inject malicious redirect logic - Corporate Control: Web Server</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Ensure redirections trigger under specific conditions - Corporate Control: User Interaction Monitoring</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Redirect users to malicious domains - Corporate Control: Malicious Hosting</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Use cloaking techniques to avoid detection - Third Party Control: Redirect Rules</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Track redirected traffic for effectiveness - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Monitor targeted victim profiles - Corporate Control: Targeting Systems</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Malicious page delivers exploit payload - Third Party Control: User Browser</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Exploit browser vulnerabilities for code execution - Third Party Control: Browser Plugins</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload executed within victim's browser - Corporate Control: Attack Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Maintain stealth to prevent user suspicion - Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Achieve initial compromise through exploit - Third Party Control: User System</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial foothold created for future actions - Corporate Control: Persistent Access</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Ensure access is undetected - Corporate Control: Anti-Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare for additional exploitation - Corporate Control: Infrastructure Setup</data>
+</edge>
+</graph>
+</graphml>

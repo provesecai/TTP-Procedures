@@ -1,0 +1,14 @@
+graph TD;
+    A[Create Malicious Ad Campaign]
+    B[Host Ads on Google Ads Network]
+    C[Users Click on Malicious Ads]
+    D[Redirect to Exploit Kit Landing Page]
+    E[Initial Access Achieved]
+
+    A -->|"Craft ads mimicking legitimate content Third Party Control: Ad Design Tools"| B
+    A -->|"Bypass ad network reviews with obfuscated payloads Corporate Control: Ad Content"| B
+    B -->|"Distribute ads targeting specific demographics Corporate Control: Targeted Ad Delivery"| C
+    B -->|"Host payloads on attacker-controlled servers Corporate Control: Malicious Servers"| C
+    C -->|"Victims interact with ads and are redirected Third Party Control: User Browsers"| D
+    C -->|"Exploit kits deliver malicious payloads Corporate Control: Exploit Kits"| D
+    D -->|"Payload execution grants initial access Third Party Control: Victim Systems"| E

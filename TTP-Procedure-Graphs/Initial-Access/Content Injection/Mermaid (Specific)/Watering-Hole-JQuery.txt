@@ -1,0 +1,14 @@
+graph TD;
+    A[Compromise jQuery Repository]
+    B[Inject Malicious JavaScript into jQuery Library]
+    C[Developers Include Compromised jQuery]
+    D[Malicious Code Executes on User Devices]
+    E[Initial Access Achieved]
+
+    A -->|"Exploit weak access controls on the jQuery repository Third Party Control: jQuery Repository"| B
+    A -->|"Replace legitimate versions with malicious code Corporate Control: Source Code"| B
+    B -->|"Ensure payload evades integrity checks Corporate Control: Code Signing"| C
+    B -->|"Obfuscate malicious functionality within library Third Party Control: Library Code"| C
+    C -->|"Developers unknowingly include compromised jQuery in projects Third Party Control: Developer Systems"| D
+    C -->|"End users trigger malicious code during site interactions Third Party Control: User Browsers"| D
+    D -->|"Payload collects credentials or sensitive information Corporate Control: User Systems"| E

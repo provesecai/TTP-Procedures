@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised-ThirdPartyCode-PyPI" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Identify Popular PyPI Packages</data>
+</node>
+<node id="B">
+  <data key="label">Insert Malicious Code into Package Updates</data>
+</node>
+<node id="C">
+  <data key="label">Distribute Updated Packages</data>
+</node>
+<node id="D">
+  <data key="label">Payload Executes in User Environments</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Monitor PyPI for frequently downloaded packages - Third Party Control: PyPI Registry</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Identify maintainers with insecure access controls - Corporate Control: Developer Accounts</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Leverage known vulnerabilities in the package update process - Corporate Control: CI/CD Pipelines</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Inject obfuscated malicious code into Python packages - Corporate Control: Package Source Code</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Push compromised updates to the PyPI repository - Corporate Control: Registry System</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure payload triggers during normal library usage - Corporate Control: Function Logic</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Developers unknowingly install compromised libraries - Third Party Control: Developer Environments</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload executes when developers import or execute libraries - Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Monitor compromised systems using embedded telemetry - Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial compromise achieved through malicious library - Corporate Control: Developer Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Establish persistence and prepare for lateral movement - Corporate Control: Attack Framework</data>
+</edge>
+</graph>
+</graphml>

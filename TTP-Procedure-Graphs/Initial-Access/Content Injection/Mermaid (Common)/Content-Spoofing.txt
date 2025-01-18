@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Application]
+    B[Create Malicious Content]
+    C[Host Spoofed Content]
+    D[Direct Victim to Malicious Content]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for web applications with inadequate content validation Corporate Control: Web Hosting"| B
+    A -->|"Identify public-facing endpoints prone to spoofing Third Party Control: Application Endpoints"| B
+    A -->|"Map potential attack surfaces for content spoofing Corporate Control: Web Pages"| B
+    A -->|"Avoid detection by testing spoofed payloads incrementally Corporate Control: Web Server Logs"| B
+    B -->|"Design malicious content mimicking legitimate assets Third Party Control: Spoofed Content"| C
+    B -->|"Host malicious content on attacker-controlled domains Third Party Control: Malicious Domain"| C
+    B -->|"Ensure spoofed content looks legitimate to end users Corporate Control: Content Design"| C
+    B -->|"Validate spoofed content for seamless victim interaction Corporate Control: Test Environment"| C
+    C -->|"Host spoofed content publicly Third Party Control: Attacker Infrastructure"| D
+    C -->|"Use phishing campaigns to lure victims to spoofed content Third Party Control: Email Campaigns"| D
+    C -->|"Monitor victim interactions to validate success Corporate Control: Attack Logs"| D
+    C -->|"Refine spoofed content for improved evasion Corporate Control: Content Updates"| D
+    D -->|"Victim interacts with malicious content Third Party Control: Victim System"| E
+    D -->|"Payload execution grants initial access Third Party Control: Victim Browser"| E
+    D -->|"Monitor victim’s machine for further exploitation opportunities Corporate Control: SIEM"| E
+    D -->|"Use detection evasion techniques to maintain stealth Corporate Control: Obfuscated Payload"| Egraph TD;

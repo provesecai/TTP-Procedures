@@ -1,0 +1,18 @@
+graph TD;
+    A[Exploit Misconfigured .htaccess File]
+    B[Insert Malicious Redirect Rules]
+    C[Redirect Users to Malicious Website]
+    D[Payload Delivered via Redirect]
+    E[Initial Access]
+
+    A -->|"Identify vulnerable .htaccess configurations Third Party Control: Web Server Settings"| B
+    A -->|"Gain access to Apache admin panel Corporate Control: Admin Accounts"| B
+    A -->|"Analyze server logs for potential redirect points Corporate Control: Web Logs"| B
+    B -->|"Insert obfuscated redirect rules into .htaccess Corporate Control: Server Configuration"| C
+    B -->|"Test redirects for effectiveness Corporate Control: Testing Environment"| C
+    B -->|"Track redirected traffic using analytics Corporate Control: Monitoring Tools"| C
+    C -->|"Victims unknowingly redirected to malicious site Third Party Control: User Browsers"| D
+    C -->|"Exploit browser vulnerabilities for code execution Third Party Control: Browser Plugins"| D
+    C -->|"Payload executed on victim devices Corporate Control: Malicious Website"| D
+    D -->|"Achieve initial compromise via malicious redirects Third Party Control: Victim Machines"| E
+    D -->|"Prepare environment for future attacks Corporate Control: Persistence Tools"| E

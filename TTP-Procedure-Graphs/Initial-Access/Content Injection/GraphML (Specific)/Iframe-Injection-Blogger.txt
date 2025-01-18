@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Iframe-Injection-Blogger" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Blogger Accounts</data>
+</node>
+<node id="B">
+<data key="label">Embed Malicious iframe in Blog Posts</data>
+</node>
+<node id="C">
+<data key="label">Visitors Access Compromised Blogs</data>
+</node>
+<node id="D">
+<data key="label">iframe Executes Payload</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to high-traffic Blogger accounts Corporate Control: Blogger Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert iframe pointing to malicious content Corporate Control: Blog Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure iframe mimics legitimate media embeds Corporate Control: Blog Layout</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain persistence by automated re-injections Corporate Control: Blog Scripts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Visitors unknowingly load iframe content Third Party Control: Visitor Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious content compromises visitor devices Corporate Control: User Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through device compromise Corporate Control: Visitor Accounts</data>
+</edge>
+</graph>
+</graphml>

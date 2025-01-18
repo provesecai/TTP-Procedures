@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XXS-Injection-SharePoint" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Identify Vulnerable SharePoint Web Parts</data>
+</node>
+<node id="B">
+  <data key="label">Inject Malicious Script into SharePoint Pages</data>
+</node>
+<node id="C">
+  <data key="label">Users Interact with Compromised Pages</data>
+</node>
+<node id="D">
+  <data key="label">Payload Executes on User Systems</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Analyze web parts for input validation weaknesses - Corporate Control: SharePoint Environment</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Test for cross-site scripting vulnerabilities - Third Party Control: Web Application Testing</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Leverage known CVEs to bypass security controls - Corporate Control: Vulnerability Exploits</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Inject JavaScript payloads into SharePoint pages - Corporate Control: Page Content</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure scripts execute during user interactions - Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Monitor script effectiveness using telemetry - Corporate Control: Analytics Tools</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Users unknowingly trigger payloads - Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payload exploits browser vulnerabilities - Third Party Control: Browser Extensions</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Compromise victim accounts or systems - Corporate Control: User Accounts</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Initial compromise achieved on victim systems - Third Party Control: Victim Machines</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Set up for further exploitation - Corporate Control: Persistence Tools</data>
+</edge>
+</graph>
+</graphml>

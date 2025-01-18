@@ -1,0 +1,18 @@
+graph TD;
+    A[Identify Popular PyPI Packages]
+    B[Insert Malicious Code into Package Updates]
+    C[Distribute Updated Packages]
+    D[Payload Executes in User Environments]
+    E[Initial Access]
+
+    A -->|"Monitor PyPI for frequently downloaded packages Third Party Control: PyPI Registry"| B
+    A -->|"Identify maintainers with insecure access controls Corporate Control: Developer Accounts"| B
+    A -->|"Leverage known vulnerabilities in the package update process Corporate Control: CI/CD Pipelines"| B
+    B -->|"Inject obfuscated malicious code into Python packages Corporate Control: Package Source Code"| C
+    B -->|"Push compromised updates to the PyPI repository Corporate Control: Registry System"| C
+    B -->|"Ensure payload triggers during normal library usage Corporate Control: Function Logic"| C
+    C -->|"Developers unknowingly install compromised libraries Third Party Control: Developer Environments"| D
+    C -->|"Payload executes when developers import or execute libraries Third Party Control: Application Runtime"| D
+    C -->|"Monitor compromised systems using embedded telemetry Corporate Control: Monitoring Tools"| D
+    D -->|"Initial compromise achieved through malicious library Corporate Control: Developer Systems"| E
+    D -->|"Establish persistence and prepare for lateral movement Corporate Control: Attack Framework"| E

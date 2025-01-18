@@ -1,0 +1,14 @@
+graph TD;
+    A[Target Python Library on PyPI]
+    B[Upload Malicious Fork or Package Update]
+    C[Developers Use Compromised Library]
+    D[Malicious Payload Executes on Import]
+    E[Initial Access Achieved]
+
+    A -->|"Identify popular libraries with minimal maintenance Third Party Control: PyPI Registry"| B
+    A -->|"Exploit typosquatting to confuse developers Corporate Control: Package Naming"| B
+    B -->|"Insert obfuscated malicious code in library Corporate Control: Python Files"| C
+    B -->|"Ensure payload evades security reviews Corporate Control: Review Processes"| C
+    C -->|"Developers import compromised libraries into projects Third Party Control: Developer Environments"| D
+    C -->|"Payload activates during runtime Third Party Control: Application Context"| D
+    D -->|"Initial access achieved via compromised server Corporate Control: Server Infrastructure"| E

@@ -1,0 +1,14 @@
+graph TD;
+    A[Compromise Shopify Themes]
+    B[Inject Malicious HTML into Theme Templates]
+    C[Merchants Apply Compromised Themes]
+    D[Customers Interact with Compromised Stores]
+    E[Initial Access Achieved]
+
+    A -->|"Exploit vulnerabilities in Shopify’s theme marketplace Corporate Control: Theme Repository"| B
+    A -->|"Gain access to theme developer accounts Third Party Control: Developer Accounts"| B
+    B -->|"Insert HTML payloads to capture payment data Corporate Control: Checkout Pages"| C
+    B -->|"Ensure persistence by obfuscating malicious scripts Corporate Control: Theme Code"| C
+    C -->|"Merchants unknowingly use compromised themes Third Party Control: Store Owners"| D
+    C -->|"Customers trigger malicious payloads during checkout Third Party Control: Customer Browsers"| D
+    D -->|"Stolen payment or login details enable initial access Corporate Control: Customer Accounts"| E

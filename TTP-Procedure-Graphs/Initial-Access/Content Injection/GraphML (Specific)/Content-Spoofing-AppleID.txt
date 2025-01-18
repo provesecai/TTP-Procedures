@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Content-Spoofing-AppleID" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Clone Apple ID Login Pages</data>
+</node>
+<node id="B">
+<data key="label">Host Spoofed Pages on Phishing Domains</data>
+</node>
+<node id="C">
+<data key="label">Lure Victims via Phishing Emails</data>
+</node>
+<node id="D">
+<data key="label">Capture Victim Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Duplicate design and functionality of Apple ID login Corporate Control: Apple Websites</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host spoofed pages on attacker-controlled domains Corporate Control: Phishing Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure spoofed pages bypass browser security checks Corporate Control: SSL Certificates</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft convincing phishing emails targeting Apple users Corporate Control: Email Campaigns</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims unknowingly enter credentials on fake pages Third Party Control: Phishing Websites</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exfiltrate credentials for unauthorized access Corporate Control: Attacker Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through compromised Apple ID Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

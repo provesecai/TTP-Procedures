@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XXS-Injection-SocialPlatforms" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Target Social Media Sites</data>
+</node>
+<node id="B">
+<data key="label">Exploit Input Fields in Posts or Comments</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Scripts into Content</data>
+</node>
+<node id="D">
+<data key="label">Users Interact with Compromised Posts</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify input fields lacking sanitization Corporate Control: Social Media Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft scripts designed to steal session cookies Corporate Control: User Sessions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads in posts, comments, or private messages Corporate Control: Post Input</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate scripts to evade detection Corporate Control: Content Review</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users trigger payloads when viewing or interacting with posts Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious scripts capture sensitive data or hijack sessions Third Party Control: Browser Context</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through user account compromise Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

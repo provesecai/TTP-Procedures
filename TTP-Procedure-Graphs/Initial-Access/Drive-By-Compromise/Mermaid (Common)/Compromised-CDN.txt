@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Content Delivery Network]
+    B[Inject Malicious Content]
+    C[Content Delivered to Users]
+    D[Malicious Payload Executes]
+    E[Initial Access]
+
+    A -->|"Target popular CDNs for maximum impact Third Party Control: CDN Services"| B
+    A -->|"Exploit vulnerabilities in CDN servers Corporate Control: CDN Infrastructure"| B
+    A -->|"Gain admin access to CDN configuration Third Party Control: Admin Accounts"| B
+    A -->|"Deploy monitoring tools to track delivery Corporate Control: Analytics Tools"| B
+    B -->|"Insert malicious scripts or payloads into assets Corporate Control: Hosted Files"| C
+    B -->|"Ensure payloads are undetectable during delivery Corporate Control: Obfuscation Methods"| C
+    B -->|"Design payloads to trigger on user interaction Corporate Control: User Behavior Monitoring"| C
+    B -->|"Monitor delivery effectiveness to victims Corporate Control: Feedback Tools"| C
+    C -->|"Users access compromised assets via CDN Third Party Control: User Systems"| D
+    C -->|"Malicious payload delivered to victims' devices Corporate Control: User Systems"| D
+    C -->|"Payloads trigger silently on target systems Third Party Control: Victim Devices"| D
+    C -->|"Ensure payload persistence within assets Corporate Control: Persistent Exploits"| D
+    D -->|"Payload executes, achieving initial compromise Third Party Control: User Systems"| E
+    D -->|"Initial access achieved through CDN compromise Corporate Control: Exploitation Outcome"| E
+    D -->|"Set up communication channels for further attacks Corporate Control: Command Infrastructure"| E
+    D -->|"Prepare victim environments for additional operations Corporate Control: Setup Tools"| E

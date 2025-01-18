@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malvertising-GoogleAds" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Ad Campaign</data>
+</node>
+<node id="B">
+<data key="label">Host Ads on Google Ads Network</data>
+</node>
+<node id="C">
+<data key="label">Users Click on Malicious Ads</data>
+</node>
+<node id="D">
+<data key="label">Redirect to Exploit Kit Landing Page</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Craft ads mimicking legitimate content Third Party Control: Ad Design Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass ad network reviews with obfuscated payloads Corporate Control: Ad Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute ads targeting specific demographics Corporate Control: Targeted Ad Delivery</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host payloads on attacker-controlled servers Corporate Control: Malicious Servers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims interact with ads and are redirected Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit kits deliver malicious payloads Corporate Control: Exploit Kits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload execution grants initial access Third Party Control: Victim Systems</data>
+</edge>
+</graph>
+</graphml>

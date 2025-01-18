@@ -1,0 +1,17 @@
+graph TD;
+    A[Compromise Joomla Admin Panel]
+    B[Inject Malicious Code into CMS Templates]
+    C[Malicious Code Loaded by Visitors]
+    D[Payload Executes on Victim Systems]
+    E[Initial Access]
+
+    A -->|"Identify weak Joomla admin credentials Third Party Control: Admin Accounts"| B
+    A -->|"Exploit vulnerabilities in outdated plugins Corporate Control: CMS Plugins"| B
+    A -->|"Gain admin access through brute force attacks Corporate Control: Attack Tools"| B
+    B -->|"Modify templates to include malicious JavaScript Corporate Control: CMS Templates"| C
+    B -->|"Embed payloads designed to trigger on user interaction Corporate Control: Script Injection"| C
+    B -->|"Test payload delivery using analytics Corporate Control: Analytics Tools"| C
+    C -->|"Users unknowingly load malicious scripts Third Party Control: User Browsers"| D
+    C -->|"Payload activates silently within victim's browser Third Party Control: Browser Runtime"| D
+    D -->|"Achieve initial compromise through payload execution Corporate Control: Attack Outcome"| E
+    D -->|"Prepare for further exploitation Corporate Control: Persistence Mechanisms"| E

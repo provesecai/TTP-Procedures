@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HTML-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Vulnerable Input Field</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious HTML Content</data>
+</node>
+<node id="C">
+<data key="label">Victim Views Injected Page</data>
+</node>
+<node id="D">
+<data key="label">Malicious Payload Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify forms or input fields accepting unvalidated input Corporate Control: Web Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use automated tools to map attack surfaces Third Party Control: Scanning Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize high-value targets based on user traffic Corporate Control: Web Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for changes in web app behavior during testing Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert crafted HTML code into vulnerable input fields Corporate Control: Input Fields</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid triggering input sanitization or WAF Corporate Control: Web Application Firewall</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Design payloads to mimic legitimate content Third Party Control: User Interaction</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistence by altering session variables Corporate Control: Cookies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim loads compromised web page Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload captures sensitive details such as credentials Third Party Control: User Input</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect victim to malicious domain Third Party Control: DNS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate payload success rate via analytics Corporate Control: Attack Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through compromised session Third Party Control: Victim Session</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential theft enables further compromise Third Party Control: Victim Credentials</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious activity on high-value accounts Corporate Control: SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Utilize stealth techniques to avoid detection Corporate Control: Obfuscated Code</data>
+</edge>
+</graph>
+</graphml>

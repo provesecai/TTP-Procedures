@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Watering-Hole" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Legitimate Website</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious JavaScript</data>
+</node>
+<node id="C">
+<data key="label">Victim Visits Compromised Site</data>
+</node>
+<node id="D">
+<data key="label">Malicious Script Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to a high-traffic site Corporate Control: Web Hosting Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit CMS or plugin vulnerabilities Third Party Control: CMS Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Establish control over site content Corporate Control: Admin Panel</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for admin activity to avoid detection Corporate Control: Admin Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious script into site HTML Corporate Control: Website Codebase</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use obfuscated JavaScript to evade scanning tools Corporate Control: Injected Script</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Script designed to load on specific user actions Third Party Control: User Interaction</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistent injection methods Corporate Control: CMS Plugin</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim unknowingly triggers the script Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious payloads are delivered to the victim's browser Third Party Control: Payload Transfer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">This step sets up the delivery mechanism for initial access Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use of sandboxing to identify and block threats Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes on the victim's machine Third Party Control: Victim Machine</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Methods for delivering malicious payload Third Party Control: Exploited Software</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for future exploitation Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious network traffic or file changes Corporate Control: Network Monitoring</data>
+</edge>
+</graph>
+</graphml>

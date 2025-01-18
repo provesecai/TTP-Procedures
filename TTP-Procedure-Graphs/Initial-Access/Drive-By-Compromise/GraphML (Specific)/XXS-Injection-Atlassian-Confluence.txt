@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XXS-Injection-Atlassian-Confluence" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Identify XSS Vulnerabilities in Confluence Pages</data>
+</node>
+<node id="B">
+  <data key="label">Inject Malicious Scripts into Shared Pages</data>
+</node>
+<node id="C">
+  <data key="label">Users Interact with Compromised Pages</data>
+</node>
+<node id="D">
+  <data key="label">Payload Executes on User Systems</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Scan Confluence pages for input validation weaknesses - Third Party Control: Web Application</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Leverage misconfigured permissions for script injection - Corporate Control: Admin Panel</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Identify commonly accessed shared pages for injection - Corporate Control: User Analytics</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Insert obfuscated JavaScript payloads into vulnerable fields - Corporate Control: Page Content</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Ensure payloads trigger on user interaction - Corporate Control: Script Behavior</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Monitor script execution using embedded analytics - Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Users unknowingly execute malicious scripts - Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Scripts steal session cookies or credentials - Corporate Control: User Accounts</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Compromise user accounts or systems - Third Party Control: Victim Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Achieve initial access via stolen credentials - Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare for further exploitation - Corporate Control: Persistent Mechanisms</data>
+</edge>
+</graph>
+</graphml>

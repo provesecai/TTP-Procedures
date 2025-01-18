@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cloudflare-CDN" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+  <data key="label">Identify Cloudflare Configuration Vulnerabilities</data>
+</node>
+<node id="B">
+  <data key="label">Compromise Admin Credentials</data>
+</node>
+<node id="C">
+  <data key="label">Inject Malicious Content into Cached Assets</data>
+</node>
+<node id="D">
+  <data key="label">Malicious Content Delivered to Users</data>
+</node>
+<node id="E">
+  <data key="label">Initial Access</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+  <data key="label">Scan for misconfigured cache settings - Corporate Control: CDN Servers</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Exploit weak access controls in admin panel - Corporate Control: Cloudflare Account</data>
+</edge>
+<edge source="A" target="B">
+  <data key="label">Monitor CDN behavior for potential exploits - Corporate Control: Analysis Tools</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Use stolen credentials to access CDN dashboard - Corporate Control: Admin Accounts</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Deploy malicious scripts into commonly accessed files - Corporate Control: Cached Files</data>
+</edge>
+<edge source="B" target="C">
+  <data key="label">Maintain access to CDN using obfuscated backdoors - Corporate Control: Persistence Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Compromised files served to end-users - Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Payloads designed to execute on download - Corporate Control: Payload Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+  <data key="label">Track effectiveness using injected analytics - Corporate Control: Feedback Systems</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Malicious content achieves initial access to victim systems - Third Party Control: Victim Machines</data>
+</edge>
+<edge source="D" target="E">
+  <data key="label">Prepare environment for further exploitation - Corporate Control: Attack Setup</data>
+</edge>
+</graph>
+</graphml>

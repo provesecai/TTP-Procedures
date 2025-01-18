@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Advertisements]
+    B[Host Ads on High-Traffic Platforms]
+    C[Victim Clicks Malicious Ad]
+    D[Redirect to Exploit Kit Landing Page]
+    E[Initial Access Achieved]
+
+    A -->|"Design ads mimicking legitimate content Third Party Control: Ad Design"| B
+    A -->|"Host malicious assets on attacker-controlled infrastructure Corporate Control: Malicious Servers"| B
+    A -->|"Craft ads to target specific audiences Corporate Control: Ad Campaign"| B
+    A -->|"Test ad functionality to ensure smooth delivery Corporate Control: Ad Infrastructure"| B
+    B -->|"Distribute ads via legitimate ad networks Corporate Control: Ad Network"| C
+    B -->|"Bypass ad vetting processes using obfuscated payloads Third Party Control: Ad Delivery"| C
+    B -->|"Place ads on high-traffic or niche platforms Corporate Control: Hosting Platform"| C
+    B -->|"Validate ad visibility to ensure engagement Corporate Control: Analytics Dashboard"| C
+    C -->|"Victim interacts with ad unknowingly triggering malicious content Third Party Control: User Browser"| D
+    C -->|"Redirect victim to attacker-controlled landing page Corporate Control: Redirect Mechanism"| D
+    C -->|"Validate redirection logic to maintain consistency Corporate Control: Ad Network Logs"| D
+    C -->|"Monitor victim interactions with the landing page Third Party Control: Landing Page Analytics"| D
+    D -->|"Exploit victim's system via drive-by compromise Corporate Control: Exploit Kit"| E
+    D -->|"Deliver malware to victim systems Corporate Control: Payload Delivery"| E
+    D -->|"Monitor victim machine for further exploitation opportunities Third Party Control: Malware Behavior"| E
+    D -->|"Use stealth techniques to evade detection Corporate Control: Network Monitoring"| E

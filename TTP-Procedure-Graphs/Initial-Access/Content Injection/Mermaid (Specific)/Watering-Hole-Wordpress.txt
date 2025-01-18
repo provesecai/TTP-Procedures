@@ -1,0 +1,14 @@
+graph TD;
+    A[Compromise WordPress Plugins]
+    B[Insert Malicious Code into Popular Plugins]
+    C[Admins Install Compromised Plugins]
+    D[Visitors Trigger Malicious Payload]
+    E[Initial Access Achieved]
+
+    A -->|"Target high-traffic plugins via known vulnerabilities Corporate Control: Plugin Marketplace"| B
+    A -->|"Gain access to developer accounts or repositories Third Party Control: Developer Accounts"| B
+    B -->|"Embed payloads in plugin updates Corporate Control: Plugin Files"| C
+    B -->|"Ensure persistence by avoiding detection in reviews Corporate Control: Plugin Security"| C
+    C -->|"Admins update or install the compromised plugin Third Party Control: Admin Systems"| D
+    C -->|"Users visiting affected sites trigger the payload Corporate Control: Website Visitors"| D
+    D -->|"Payload steals credentials or deploys malware Corporate Control: Visitor Devices"| E

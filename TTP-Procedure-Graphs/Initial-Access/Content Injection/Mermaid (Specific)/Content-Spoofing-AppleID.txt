@@ -1,0 +1,14 @@
+graph TD;
+    A[Clone Apple ID Login Pages]
+    B[Host Spoofed Pages on Phishing Domains]
+    C[Lure Victims via Phishing Emails]
+    D[Capture Victim Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Duplicate design and functionality of Apple ID login Corporate Control: Apple Websites"| B
+    A -->|"Host spoofed pages on attacker-controlled domains Corporate Control: Phishing Infrastructure"| B
+    B -->|"Ensure spoofed pages bypass browser security checks Corporate Control: SSL Certificates"| C
+    B -->|"Craft convincing phishing emails targeting Apple users Corporate Control: Email Campaigns"| C
+    C -->|"Victims unknowingly enter credentials on fake pages Third Party Control: Phishing Websites"| D
+    C -->|"Exfiltrate credentials for unauthorized access Corporate Control: Attacker Systems"| D
+    D -->|"Initial access achieved through compromised Apple ID Corporate Control: User Accounts"| E

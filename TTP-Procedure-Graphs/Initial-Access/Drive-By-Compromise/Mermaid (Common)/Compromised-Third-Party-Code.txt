@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Popular Third-Party Scripts]
+    B[Inject Malicious Code into Libraries]
+    C[Code Distributed to Users]
+    D[Malicious Code Executes]
+    E[Initial Access]
+
+    A -->|"Research widely-used scripts or libraries Third Party Control: Open Source Repositories"| B
+    A -->|"Identify vulnerabilities in code update processes Corporate Control: Developer Tools"| B
+    A -->|"Analyze usage patterns to maximize impact Third Party Control: Analytics Data"| B
+    A -->|"Target high-traffic projects for compromise Corporate Control: Popular Repositories"| B
+    B -->|"Insert malicious payloads into libraries Third Party Control: Source Code"| C
+    B -->|"Ensure payload execution during typical usage Corporate Control: Injected Functions"| C
+    B -->|"Contribute updates to open repositories Corporate Control: Development Accounts"| C
+    B -->|"Evade detection by masking malicious changes Corporate Control: Obfuscation Techniques"| C
+    C -->|"Updated code reaches end users Third Party Control: Distribution Systems"| D
+    C -->|"Users unknowingly install compromised libraries Third Party Control: User Applications"| D
+    C -->|"Malicious functions triggered during usage Corporate Control: Application Runtime"| D
+    C -->|"Monitor distribution to track effectiveness Corporate Control: Analytics Tools"| D
+    D -->|"Payload executes within user environments Third Party Control: User Systems"| E
+    D -->|"Establish initial compromise Corporate Control: System Access"| E
+    D -->|"Set up channels for future attacks Corporate Control: Persistent Foothold"| E
+    D -->|"Achieve initial access to victim's environment Corporate Control: Compromise Outcome"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="JS-Dependency-Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Third-Party Dependency</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious JavaScript Package</data>
+</node>
+<node id="C">
+<data key="label">Replace or Inject Malicious Package</data>
+</node>
+<node id="D">
+<data key="label">Victim Application Loads Compromised Dependency</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify widely used dependencies with lax security practices Third Party Control: Open-Source Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Map dependencies used by high-value targets Corporate Control: Dependency Mapping Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for unmaintained or abandoned packages Third Party Control: Package Management Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Validate potential attack vectors in third-party libraries Corporate Control: Application Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious JavaScript package mimicking legitimate ones Third Party Control: Malicious Package</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host malicious package on popular repositories Third Party Control: Open-Source Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code executes stealthily on load Corporate Control: Payload Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test payload to ensure seamless integration Corporate Control: Test Environments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious package into victim’s supply chain Third Party Control: CI/CD Pipeline</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replace legitimate packages with malicious versions Third Party Control: Package Registry</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure victims unknowingly install malicious dependencies Corporate Control: Dependency Updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor adoption rates of malicious package Corporate Control: Repository Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Victim application executes malicious dependency Third Party Control: Victim Application</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload execution enables initial access Corporate Control: Application Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor victim systems for further actions Corporate Control: Attack Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use evasion techniques to prevent detection Corporate Control: Obfuscated Code</data>
+</edge>
+</graph>
+</graphml>

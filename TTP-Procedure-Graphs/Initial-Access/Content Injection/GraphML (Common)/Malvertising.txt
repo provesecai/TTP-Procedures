@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malvertising" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Advertisements</data>
+</node>
+<node id="B">
+<data key="label">Host Ads on High-Traffic Platforms</data>
+</node>
+<node id="C">
+<data key="label">Victim Clicks Malicious Ad</data>
+</node>
+<node id="D">
+<data key="label">Redirect to Exploit Kit Landing Page</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design ads mimicking legitimate content Third Party Control: Ad Design</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host malicious assets on attacker-controlled infrastructure Corporate Control: Malicious Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft ads to target specific audiences Corporate Control: Ad Campaign</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test ad functionality to ensure smooth delivery Corporate Control: Ad Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute ads via legitimate ad networks Corporate Control: Ad Network</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass ad vetting processes using obfuscated payloads Third Party Control: Ad Delivery</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place ads on high-traffic or niche platforms Corporate Control: Hosting Platform</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate ad visibility to ensure engagement Corporate Control: Analytics Dashboard</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim interacts with ad unknowingly triggering malicious content Third Party Control: User Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect victim to attacker-controlled landing page Corporate Control: Redirect Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate redirection logic to maintain consistency Corporate Control: Ad Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor victim interactions with the landing page Third Party Control: Landing Page Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit victim's system via drive-by compromise Corporate Control: Exploit Kit</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deliver malware to victim systems Corporate Control: Payload Delivery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor victim machine for further exploitation opportunities Third Party Control: Malware Behavior</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use stealth techniques to evade detection Corporate Control: Network Monitoring</data>
+</edge>
+</graph>
+</graphml>

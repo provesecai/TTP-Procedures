@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Iframe-Injection-Reuters" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Exploit Reuters Content Management System</data>
+</node>
+<node id="B">
+<data key="label">Inject iframe into News Articles</data>
+</node>
+<node id="C">
+<data key="label">Visitors Load Compromised Articles</data>
+</node>
+<node id="D">
+<data key="label">iframe Delivers Malicious Content</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Compromise Reuters’ CMS accounts Corporate Control: CMS Admin Accounts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert iframe pointing to attacker-controlled server Corporate Control: News Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure iframe loads during high-traffic news cycles Corporate Control: News Articles</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate iframe code to evade detection Corporate Control: HTML Templates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Visitors trigger malicious payloads when reading news Third Party Control: Visitor Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload executes on visitor machines Corporate Control: User Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for lateral movement Corporate Control: Visitor Devices</data>
+</edge>
+</graph>
+</graphml>

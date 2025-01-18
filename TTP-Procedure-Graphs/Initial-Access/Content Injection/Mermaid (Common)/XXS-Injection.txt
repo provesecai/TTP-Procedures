@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Web Application]
+    B[Inject Malicious XSS Script]
+    C[Victim Interacts with Compromised Page]
+    D[Execute Script in Victim's Browser]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for input validation flaws Corporate Control: Web Application"| B
+    A -->|"Enumerate exposed parameters vulnerable to XSS Third Party Control: Browser Input"| B
+    A -->|"Map potential injection points in web app Corporate Control: Web Pages"| B
+    A -->|"Avoid detection by testing payloads incrementally Corporate Control: Web Server Logs"| B
+    B -->|"Inject malicious script via vulnerable parameters Corporate Control: Input Field"| C
+    B -->|"Use encoded payloads to bypass input sanitization Corporate Control: Web Application"| C
+    B -->|"Test execution of payloads in various user contexts Corporate Control: Application Servers"| C
+    B -->|"Maintain persistence of injection via obfuscation Corporate Control: Injected Code"| C
+    C -->|"Victim unknowingly triggers the malicious code Third Party Control: Victim Browser"| D
+    C -->|"Exploit user session to execute payload Third Party Control: Active Session"| D
+    C -->|"Script captures sensitive information Third Party Control: User Inputs"| D
+    C -->|"Monitor and log payload interactions for refinement Corporate Control: Attack Infrastructure"| D
+    D -->|"Payload executes in victim’s browser Third Party Control: Victim Browser"| E
+    D -->|"Keylogging or credential theft methods used Third Party Control: Victim Input"| E
+    D -->|"Initial access achieved through stolen session tokens Third Party Control: User Session"| E
+    D -->|"Monitor for suspicious data exfiltration Corporate Control: Network Monitoring"| E

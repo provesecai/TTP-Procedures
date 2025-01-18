@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Content-Spoofing-Paypal" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Clone PayPal Login Pages</data>
+</node>
+<node id="B">
+<data key="label">Host Spoofed Pages on Phishing Servers</data>
+</node>
+<node id="C">
+<data key="label">Lure Users to Spoofed Pages</data>
+</node>
+<node id="D">
+<data key="label">Capture Login Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Copy design and functionality of PayPal login Corporate Control: PayPal Website</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host pages on attacker-controlled domains Corporate Control: Malicious Domains</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure phishing pages bypass browser warnings Third Party Control: Browser Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test spoofed pages for visual accuracy Corporate Control: Spoofed Websites</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use phishing emails or social media ads to lure users Corporate Control: Phishing Campaigns</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users unknowingly enter credentials on spoofed pages Corporate Control: User Inputs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Stolen credentials enable unauthorized account access Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

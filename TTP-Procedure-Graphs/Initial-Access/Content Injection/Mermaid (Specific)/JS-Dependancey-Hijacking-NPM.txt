@@ -1,0 +1,14 @@
+graph TD;
+    A[Identify Popular NPM Package]
+    B[Upload Malicious Update to NPM]
+    C[Developers Install Compromised Package]
+    D[Malicious Code Executes in Applications]
+    E[Initial Access Achieved]
+
+    A -->|"Target widely used packages with lax update monitoring Third Party Control: NPM Registry"| B
+    A -->|"Exploit abandoned or unmaintained packages Corporate Control: Repository Accounts"| B
+    B -->|"Inject malicious code into package update Corporate Control: Package Files"| C
+    B -->|"Ensure payload evades static analysis Corporate Control: Security Scanners"| C
+    C -->|"Developers unknowingly install compromised versions Third Party Control: Development Environments"| D
+    C -->|"Malicious code executes within application runtime Third Party Control: Application Servers"| D
+    D -->|"Initial access achieved for lateral movement Corporate Control: Target Systems"| E

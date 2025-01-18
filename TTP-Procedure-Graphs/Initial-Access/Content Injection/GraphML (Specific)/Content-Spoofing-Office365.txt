@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Content-Spoofing-Office365" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Clone Office 365 Login Portals</data>
+</node>
+<node id="B">
+<data key="label">Host Spoofed Portals on Phishing Servers</data>
+</node>
+<node id="C">
+<data key="label">Lure Users via Targeted Campaigns</data>
+</node>
+<node id="D">
+<data key="label">Capture User Login Details</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Replicate layout and branding of Office 365 login pages Corporate Control: Office365 Websites</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy pages on attacker-controlled servers Corporate Control: Phishing Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure phishing portals are indistinguishable from genuine ones Corporate Control: Website Appearance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use targeted spear-phishing emails to lure victims Corporate Control: Targeted Campaigns</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims submit credentials to spoofed portals Third Party Control: Phishing Websites</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Credentials sent to attacker-controlled storage Corporate Control: Attacker Servers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via compromised Office365 accounts Corporate Control: User Accounts</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="JS-Dependancy-Hijacking-PyPI" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Target Python Library on PyPI</data>
+</node>
+<node id="B">
+<data key="label">Upload Malicious Fork or Package Update</data>
+</node>
+<node id="C">
+<data key="label">Developers Use Compromised Library</data>
+</node>
+<node id="D">
+<data key="label">Malicious Payload Executes on Import</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify popular libraries with minimal maintenance Third Party Control: PyPI Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit typosquatting to confuse developers Corporate Control: Package Naming</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert obfuscated malicious code in library Corporate Control: Python Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload evades security reviews Corporate Control: Review Processes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developers import compromised libraries into projects Third Party Control: Developer Environments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload activates during runtime Third Party Control: Application Context</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via compromised server Corporate Control: Server Infrastructure</data>
+</edge>
+</graph>
+</graphml>

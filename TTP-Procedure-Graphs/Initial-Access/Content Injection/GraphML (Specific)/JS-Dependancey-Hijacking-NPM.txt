@@ -1,0 +1,42 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="JS-Dependancy-Hijacking-NPM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Popular NPM Package</data>
+</node>
+<node id="B">
+<data key="label">Upload Malicious Update to NPM</data>
+</node>
+<node id="C">
+<data key="label">Developers Install Compromised Package</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes in Applications</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Target widely used packages with lax update monitoring Third Party Control: NPM Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit abandoned or unmaintained packages Corporate Control: Repository Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into package update Corporate Control: Package Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload evades static analysis Corporate Control: Security Scanners</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developers unknowingly install compromised versions Third Party Control: Development Environments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code executes within application runtime Third Party Control: Application Servers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for lateral movement Corporate Control: Target Systems</data>
+</edge>
+</graph>
+</graphml>
