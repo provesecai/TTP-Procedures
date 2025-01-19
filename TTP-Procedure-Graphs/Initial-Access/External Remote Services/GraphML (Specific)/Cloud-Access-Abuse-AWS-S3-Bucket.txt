@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cloud-Access-Abuse-AWS-S3-Bucket" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Publicly Accessible S3 Buckets</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Bucket Contents</data>
+</node>
+<node id="C">
+<data key="label">Extract Sensitive Data</data>
+</node>
+<node id="D">
+<data key="label">Analyze Data for Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use tools like AWS CLI or automated scanners Corporate Control: S3 Storage</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Search for misconfigured buckets exposing data Corporate Control: S3 Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on buckets allowing public read or write access Corporate Control: IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Minimize detection by mimicking legitimate access Corporate Control: Access Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate files and metadata within the bucket Corporate Control: S3 Contents</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Search for configuration files, logs, or sensitive data Corporate Control: Data Objects</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract key information without triggering alerts Corporate Control: S3 Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate contents for valuable data Corporate Control: Object Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify plaintext credentials or API keys in files Corporate Control: Extracted Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for authentication using stolen credentials Corporate Control: IAM Accounts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection during enumeration Corporate Control: S3 Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test extracted credentials on AWS services Corporate Control: Cloud Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use credentials to gain access to internal AWS resources Corporate Control: AWS Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via misconfigured S3 bucket Corporate Control: Cloud Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation Corporate Control: Cloud Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence by modifying IAM policies Corporate Control: Cloud Permissions</data>
+</edge>
+</graph>
+</graphml>

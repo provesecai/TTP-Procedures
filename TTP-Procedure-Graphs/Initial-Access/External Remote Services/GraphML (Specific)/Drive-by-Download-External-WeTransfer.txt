@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Drive-by-Download-External-WeTransfer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Upload Malicious File to WeTransfer</data>
+</node>
+<node id="B">
+<data key="label">Distribute Download Links to Targets</data>
+</node>
+<node id="C">
+<data key="label">Victims Download and Execute File</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes on Victim Machine</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Upload disguised malware file to WeTransfer Corporate Control: WeTransfer Storage</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure file bypasses malware scanning Corporate Control: Antivirus Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft legitimate-looking file metadata Corporate Control: File Properties</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare links for broad or targeted distribution Corporate Control: Sharing Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send WeTransfer links via phishing emails Third Party Control: Email Delivery</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Tailor email campaigns for specific individuals or groups Corporate Control: Target Users</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage social engineering to gain trust Corporate Control: Email Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for delivery and interaction rates Corporate Control: Email Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim downloads and opens malicious file Third Party Control: Victim Machine</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embedded malware begins execution Third Party Control: Payload Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish connection with attacker's server Third Party Control: Command Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by appearing as a legitimate file Corporate Control: Malware Behavior</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain foothold on victim's machine Third Party Control: Compromised Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via WeTransfer compromise Corporate Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence through registry modifications Corporate Control: Compromised System</data>
+</edge>
+</graph>
+</graphml>

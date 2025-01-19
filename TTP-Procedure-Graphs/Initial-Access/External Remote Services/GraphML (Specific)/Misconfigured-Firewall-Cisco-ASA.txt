@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Misconfigured-Firewall-Cisco-ASA" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cisco ASA VPN Endpoint</data>
+</node>
+<node id="B">
+<data key="label">Send Crafted XML Payload</data>
+</node>
+<node id="C">
+<data key="label">Exploit Double-Free Vulnerability</data>
+</node>
+<node id="D">
+<data key="label">Bypass Authentication</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for Cisco ASA VPN services Corporate Control: Public-Facing Firewall</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on VPN endpoints using specific firmware versions Corporate Control: Firewall Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Research exposed endpoints for CVE-2018-0101 Corporate Control: Vulnerability Database</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Minimize detection using low-profile scans Corporate Control: Firewall Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send specially crafted XML payload to ASA Corporate Control: VPN Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Trigger double-free vulnerability in webvpn Corporate Control: ASA Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid triggering crash logs Corporate Control: ASA Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure stealth through obfuscation Corporate Control: VPN Traffic</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit vulnerability to bypass authentication Corporate Control: VPN Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Access administrative functions without credentials Corporate Control: Firewall Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Set up persistence for further access Corporate Control: VPN Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection by analyzing logs Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain unauthorized access to internal network Corporate Control: VPN Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through VPN compromise Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement or data exfiltration Corporate Control: VPN Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure stealth while maintaining access Corporate Control: Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

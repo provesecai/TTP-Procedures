@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Publicly Accessible S3 Buckets]
+    B[Enumerate Bucket Contents]
+    C[Extract Sensitive Data]
+    D[Analyze Data for Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Use tools like AWS CLI or automated scanners Corporate Control: S3 Storage"| B
+    A -->|"Search for misconfigured buckets exposing data Corporate Control: S3 Permissions"| B
+    A -->|"Focus on buckets allowing public read or write access Corporate Control: IAM Policies"| B
+    A -->|"Minimize detection by mimicking legitimate access Corporate Control: Access Logs"| B
+    B -->|"Enumerate files and metadata within the bucket Corporate Control: S3 Contents"| C
+    B -->|"Search for configuration files, logs, or sensitive data Corporate Control: Data Objects"| C
+    B -->|"Extract key information without triggering alerts Corporate Control: S3 Monitoring"| C
+    B -->|"Validate contents for valuable data Corporate Control: Object Metadata"| C
+    C -->|"Identify plaintext credentials or API keys in files Corporate Control: Extracted Data"| D
+    C -->|"Prepare for authentication using stolen credentials Corporate Control: IAM Accounts"| D
+    C -->|"Monitor for detection during enumeration Corporate Control: S3 Logs"| D
+    C -->|"Test extracted credentials on AWS services Corporate Control: Cloud Services"| D
+    D -->|"Use credentials to gain access to internal AWS resources Corporate Control: AWS Infrastructure"| E
+    D -->|"Initial access achieved via misconfigured S3 bucket Corporate Control: Cloud Systems"| E
+    D -->|"Prepare for further exploitation Corporate Control: Cloud Network"| E
+    D -->|"Ensure persistence by modifying IAM policies Corporate Control: Cloud Permissions"| E

@@ -1,0 +1,24 @@
+graph TD;
+    A[Identify Vulnerable File-Sharing Service]
+    B[Compromise Service Infrastructure]
+    C[Inject Malicious Files or Links]
+    D[Victims Access Malicious Files]
+    E[Initial Access Achieved]
+
+    A -->|"Perform reconnaissance to identify services Corporate Control: File-Sharing Platform"| B
+    A -->|"Target popular services with known vulnerabilities Corporate Control: Public File Hosts"| B
+    A -->|"Analyze service configurations for weaknesses Corporate Control: File-Sharing Service Settings"| B
+    A -->|"Minimize detection by using stealth tactics Corporate Control: Service Monitoring"| B
+    B -->|"Exploit vulnerabilities in service infrastructure Corporate Control: Hosting Servers"| C
+    B -->|"Leverage admin-level access from breaches Corporate Control: Admin Accounts"| C
+    B -->|"Modify file storage systems Corporate Control: Storage Infrastructure"| C
+    B -->|"Ensure persistence in compromised service Corporate Control: File Systems"| C
+    C -->|"Inject malicious files or links Corporate Control: File Repository"| D
+    C -->|"Use legitimate filenames to appear benign Corporate Control: File Metadata"| D
+    C -->|"Distribute files widely Corporate Control: Sharing Mechanism"| D
+    C -->|"Avoid detection by maintaining low profile Corporate Control: Monitoring Systems"| D
+    D -->|"Victims download and execute malicious files Corporate Control: Victim Systems"| E
+    D -->|"Malicious payload activates on victim systems Corporate Control: Initial Payload"| E
+    D -->|"Prepare for further exploitation Corporate Control: Initial Access"| E
+    D -->|"Monitor for suspicious activity Corporate Control: Security Logs"| E
+    E -->|"Initial Access achieved through file compromise Corporate Control: Victim Systems"

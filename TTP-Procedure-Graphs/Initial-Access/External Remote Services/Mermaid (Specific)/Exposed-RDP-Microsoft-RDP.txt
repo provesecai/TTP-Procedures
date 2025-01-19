@@ -1,0 +1,23 @@
+graph TD;
+    A[Scan for Exposed RDP Services]
+    B[Brute-Force RDP Credentials]
+    C[Obtain Valid Login]
+    D[Establish RDP Session]
+    E[Initial Access Achieved]
+
+    A -->|"Use tools like Shodan or Nmap to identify RDP endpoints Corporate Control: RDP Servers"| B
+    A -->|"Prioritize endpoints with open TCP 3389 Corporate Control: Network Configuration"| B
+    A -->|"Avoid detection by scanning at low intensity Corporate Control: Security Monitoring"| B
+    A -->|"Gather information about server configurations Corporate Control: RDP Services"| B
+    B -->|"Attempt login using dictionary attack Third Party Control: Credential Files"| C
+    B -->|"Focus on default or weak credentials Corporate Control: User Accounts"| C
+    B -->|"Test accounts against organizational patterns Corporate Control: Username Format"| C
+    B -->|"Avoid triggering lockouts using slow brute-forcing Corporate Control: Account Policy"| C
+    C -->|"Successfully log in with compromised credentials Corporate Control: RDP Server"| D
+    C -->|"Prepare for establishing persistence Corporate Control: Compromised Account"| D
+    C -->|"Ensure minimal footprint Corporate Control: Monitoring Systems"| D
+    C -->|"Test internal network access Corporate Control: RDP Connectivity"| D
+    D -->|"Establish active session on RDP server Corporate Control: RDP Infrastructure"| E
+    D -->|"Gain foothold in target environment Corporate Control: Initial Access"| E
+    D -->|"Ensure session stealth and persistence Corporate Control: RDP Logs"| E
+    D -->|"Initial Access achieved Corporate Control: Internal Network"| E

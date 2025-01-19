@@ -1,0 +1,23 @@
+graph TD;
+    A[Upload Malicious File to WeTransfer]
+    B[Distribute Download Links to Targets]
+    C[Victims Download and Execute File]
+    D[Malware Executes on Victim Machine]
+    E[Initial Access Achieved]
+
+    A -->|"Upload disguised malware file to WeTransfer Corporate Control: WeTransfer Storage"| B
+    A -->|"Ensure file bypasses malware scanning Corporate Control: Antivirus Configuration"| B
+    A -->|"Craft legitimate-looking file metadata Corporate Control: File Properties"| B
+    A -->|"Prepare links for broad or targeted distribution Corporate Control: Sharing Configuration"| B
+    B -->|"Send WeTransfer links via phishing emails Third Party Control: Email Delivery"| C
+    B -->|"Tailor email campaigns for specific individuals or groups Corporate Control: Target Users"| C
+    B -->|"Leverage social engineering to gain trust Corporate Control: Email Content"| C
+    B -->|"Monitor for delivery and interaction rates Corporate Control: Email Gateway"| C
+    C -->|"Victim downloads and opens malicious file Third Party Control: Victim Machine"| D
+    C -->|"Embedded malware begins execution Third Party Control: Payload Execution"| D
+    C -->|"Establish connection with attacker's server Third Party Control: Command Server"| D
+    C -->|"Avoid detection by appearing as a legitimate file Corporate Control: Malware Behavior"| D
+    D -->|"Gain foothold on victim's machine Third Party Control: Compromised Device"| E
+    D -->|"Initial access achieved via WeTransfer compromise Corporate Control: Victim System"| E
+    D -->|"Prepare for lateral movement Corporate Control: Internal Network"| E
+    D -->|"Ensure persistence through registry modifications Corporate Control: Compromised System"| E

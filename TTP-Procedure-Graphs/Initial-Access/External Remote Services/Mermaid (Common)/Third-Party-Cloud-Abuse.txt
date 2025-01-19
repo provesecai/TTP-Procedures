@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Third-Party Cloud Service]
+    B[Obtain Access to Cloud Service]
+    C[Exploit Cloud Misconfigurations]
+    D[Gain Access to Target Data or Systems]
+    E[Initial Access Achieved]
+
+    A -->|"Identify third-party cloud platforms Corporate Control: Cloud Service Provider"| B
+    A -->|"Research available APIs and endpoints Corporate Control: Cloud API Documentation"| B
+    A -->|"Analyze potential vulnerabilities Corporate Control: Cloud Service Configuration"| B
+    A -->|"Avoid detection by mimicking normal usage Corporate Control: Cloud Monitoring"| B
+    B -->|"Use stolen credentials or API keys Third Party Control: Threat Actor"| C
+    B -->|"Leverage misconfigured access policies Corporate Control: IAM Policies"| C
+    B -->|"Exploit weak authentication mechanisms Corporate Control: Cloud Login Systems"| C
+    B -->|"Test configurations for unauthorized access Corporate Control: Cloud Resources"| C
+    C -->|"Access sensitive cloud-based resources Corporate Control: Cloud Data"| D
+    C -->|"Establish persistence in the service Corporate Control: Cloud Session"| D
+    C -->|"Prepare for lateral movement Corporate Control: Cloud Network"| D
+    C -->|"Monitor for detection Corporate Control: Cloud Security Logs"| D
+    D -->|"Gain foothold in target’s cloud environment Corporate Control: Cloud Access"| E
+    D -->|"Extract initial credentials for access Corporate Control: Cloud System"| E
+    D -->|"Maintain low visibility Corporate Control: Security Monitoring"| E
+    D -->|"Initial Access achieved through cloud entry Corporate Control: Cloud Systems"| E

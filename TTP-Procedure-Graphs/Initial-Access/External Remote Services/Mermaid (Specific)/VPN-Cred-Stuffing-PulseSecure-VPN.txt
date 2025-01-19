@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Pulse Secure VPN Endpoint]
+    B[Exploit Arbitrary File Read Vulnerability]
+    C[Extract Sensitive Data]
+    D[Recover VPN Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for Pulse Secure VPN endpoints Corporate Control: Public-Facing Servers"| B
+    A -->|"Focus on endpoints vulnerable to CVE-2019-11510 Corporate Control: VPN Gateway"| B
+    A -->|"Analyze configurations for susceptibility Corporate Control: SSL VPN Service"| B
+    A -->|"Avoid detection using low-intensity scanning Corporate Control: Network Monitoring"| B
+    B -->|"Send crafted requests to exploit file read flaw Corporate Control: VPN Software"| C
+    B -->|"Access plaintext sensitive files on the server Corporate Control: VPN Configuration"| C
+    B -->|"Extract user authentication files Corporate Control: VPN Data"| C
+    B -->|"Monitor for detection responses Corporate Control: Security Logs"| C
+    C -->|"Recover VPN credentials from extracted files Corporate Control: User Accounts"| D
+    C -->|"Test extracted credentials on VPN login Corporate Control: Authentication System"| D
+    C -->|"Prepare for persistent access Corporate Control: VPN Configurations"| D
+    C -->|"Ensure credentials remain undetected Corporate Control: Security Monitoring"| D
+    D -->|"Authenticate to VPN using stolen credentials Corporate Control: VPN Gateway"| E
+    D -->|"Gain foothold in the internal network Corporate Control: Internal Network"| E
+    D -->|"Ensure stealth while maintaining access Corporate Control: VPN Logs"| E
+    D -->|"Initial access achieved via Pulse Secure VPN exploitation Corporate Control: Internal Systems"| E

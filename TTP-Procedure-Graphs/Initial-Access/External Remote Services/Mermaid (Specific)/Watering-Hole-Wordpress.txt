@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise WordPress Website]
+    B[Inject Malicious JavaScript]
+    C[Victim Visits Compromised Site]
+    D[Deliver Exploit Payload]
+    E[Initial Access Achieved]
+
+    A -->|"Identify WordPress sites with vulnerable plugins Corporate Control: WordPress Website"| B
+    A -->|"Exploit vulnerabilities like outdated plugins or themes Corporate Control: CMS Plugins"| B
+    A -->|"Gain admin access through credential stuffing Corporate Control: Admin Panel"| B
+    A -->|"Minimize detection by avoiding excessive activity Corporate Control: Website Logs"| B
+    B -->|"Inject malicious JavaScript into the site's pages Corporate Control: Website Codebase"| C
+    B -->|"Obfuscate script to bypass content security policies Corporate Control: Injected Script"| C
+    B -->|"Ensure persistent injection using backdoors Corporate Control: Website Files"| C
+    B -->|"Target specific users with geofencing or IP filtering Corporate Control: Script Payload"| C
+    C -->|"Victim's browser automatically loads malicious script Third Party Control: Victim Browser"| D
+    C -->|"Payload exploits browser vulnerabilities Third Party Control: Browser Components"| D
+    C -->|"Deliver malicious code to the victim's system Third Party Control: Payload Delivery"| D
+    C -->|"Monitor for detection triggers Corporate Control: Website Security"| D
+    D -->|"Payload executes on the victim's machine Third Party Control: Victim System"| E
+    D -->|"Initial access achieved through exploit delivery Third Party Control: Browser Environment"| E
+    D -->|"Set up for further exploitation Corporate Control: Compromised System"| E
+    D -->|"Maintain persistence for prolonged access Corporate Control: Initial Foothold"| E

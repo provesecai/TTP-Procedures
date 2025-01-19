@@ -1,0 +1,24 @@
+mermaid
+graph TD;
+    A[Host Malicious Document on Google Drive]
+    B[Distribute Document Links to Targets]
+    C[Victims Download and Open Document]
+    D[Malware Executes on Victim Machine]
+    E[Initial Access Achieved]
+
+    A -->|"Upload malicious file disguised as legitimate Corporate Control: Google Drive"| B
+    A -->|"Ensure document appears authentic Corporate Control: File Metadata"| B
+    A -->|"Use file-sharing permissions to target specific users Corporate Control: File Sharing Settings"| B
+    A -->|"Minimize detection through obfuscation Corporate Control: Antivirus Scans"| B
+    B -->|"Send phishing emails containing Google Drive links Third Party Control: Email Delivery"| C
+    B -->|"Use social engineering to increase credibility Corporate Control: Email Content"| C
+    B -->|"Focus on targeted individuals or groups Corporate Control: Victim Users"| C
+    B -->|"Ensure links bypass spam filters Corporate Control: Email Gateway"| C
+    C -->|"Victim downloads and opens the malicious file Third Party Control: Victim Machine"| D
+    C -->|"Malware embedded in the file begins execution Third Party Control: Payload Execution"| D
+    C -->|"Establish connection to attacker-controlled server Third Party Control: Command Server"| D
+    C -->|"Avoid raising suspicion by appearing benign Corporate Control: Malware Behavior"| D
+    D -->|"Payload gains foothold on victim machine Third Party Control: Compromised Device"| E
+    D -->|"Initial access achieved through malicious file Corporate Control: Victim Machine"| E
+    D -->|"Prepare for further exploitation Corporate Control: Compromised System"| E
+    D -->|"Ensure persistence on the victim’s system Corporate Control: Initial Foothold"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify VMware Horizon Instances]
+    B[Exploit Weak Authentication]
+    C[Access VMware Horizon Environment]
+    D[Establish RDP Connection]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for VMware Horizon servers Corporate Control: Public-Facing Servers"| B
+    A -->|"Focus on endpoints exposing RDP or Blast protocol Corporate Control: Horizon Gateway"| B
+    A -->|"Analyze version for misconfigurations or known exploits Corporate Control: VMware Configuration"| B
+    A -->|"Avoid detection using low-intensity scans Corporate Control: Firewall Logs"| B
+    B -->|"Attempt brute-force or dictionary attack Corporate Control: Authentication System"| C
+    B -->|"Exploit lack of multi-factor authentication Corporate Control: User Login Systems"| C
+    B -->|"Avoid lockouts by using slow attack speeds Corporate Control: VMware Login Logs"| C
+    B -->|"Monitor response to refine credential guessing Corporate Control: Login Behavior"| C
+    C -->|"Gain unauthorized access to Horizon virtual desktops Corporate Control: VMware Environment"| D
+    C -->|"Prepare for further exploitation Corporate Control: Virtual Desktop Infrastructure"| D
+    C -->|"Minimize detection during RDP session Corporate Control: Security Logs"| D
+    C -->|"Ensure persistence for extended access Corporate Control: Horizon Session"| D
+    D -->|"Establish full RDP session Corporate Control: Horizon Gateway"| E
+    D -->|"Initial access achieved to VMware Horizon Corporate Control: Target Environment"| E
+    D -->|"Begin reconnaissance for internal systems Corporate Control: Virtual Environment"| E
+    D -->|"Prepare for lateral movement Corporate Control: Internal Network"| E

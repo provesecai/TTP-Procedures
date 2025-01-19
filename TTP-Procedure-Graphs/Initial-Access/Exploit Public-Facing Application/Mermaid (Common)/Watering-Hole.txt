@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Legitimate Website]
+    B[Inject Malicious JavaScript]
+    C[Victim Visits Compromised Site]
+    D[Malicious Script Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Gain access to a high-traffic site Corporate Control: Web Hosting Service"| B
+    A -->|"Exploit CMS or plugin vulnerabilities Third Party Control: CMS Software"| B
+    A -->|"Establish control over site content Corporate Control: Admin Panel"| B
+    A -->|"Monitor for admin activity to avoid detection Corporate Control: Admin Account"| B
+    B -->|"Embed malicious script into site HTML Corporate Control: Website Codebase"| C
+    B -->|"Use obfuscated JavaScript to evade scanning tools Corporate Control: Injected Script"| C
+    B -->|"Script designed to load on specific user actions Third Party Control: User Interaction"| C
+    B -->|"Ensure persistent injection methods Corporate Control: CMS Plugin"| C
+    C -->|"Victim unknowingly triggers the script Third Party Control: Victim Browser"| D
+    C -->|"Malicious payloads are delivered to the victim's browser Third Party Control: Payload Transfer"| D
+    C -->|"This step sets up the delivery mechanism for initial access Third Party Control: Victim System"| D
+    C -->|"Use of sandboxing to identify and block threats Corporate Control: Security Monitoring"| D
+    D -->|"Payload executes on the victim's machine Third Party Control: Victim Machine"| E
+    D -->|"Methods for delivering malicious payload Third Party Control: Exploited Software"| E
+    D -->|"Initial access achieved for future exploitation Corporate Control: Initial Compromise"| E
+    D -->|"Monitor for suspicious network traffic or file changes Corporate Control: Network Monitoring"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VPN-Cred-Stuffing-Citrix-Gateway-Netscaler" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Citrix Gateway</data>
+</node>
+<node id="B">
+<data key="label">Exploit Known Vulnerability (CVE-2019-19781)</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Payload</data>
+</node>
+<node id="D">
+<data key="label">Gain Access to Internal Systems</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for Citrix Gateway instances Corporate Control: Public-Facing Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use vulnerability databases to identify targets Corporate Control: Known Exploits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on exposed endpoints for CVE-2019-19781 Corporate Control: Citrix Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Minimize detection through low-intensity scans Corporate Control: IDS/IPS Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit path traversal vulnerability Corporate Control: Gateway Software</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass authentication mechanisms Corporate Control: Citrix Login Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject commands to gain control of internal systems Corporate Control: Gateway Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor responses to avoid detection Corporate Control: IDS Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject payload to establish persistence Corporate Control: Internal Network</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Target internal systems via compromised Citrix Corporate Control: Network Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for further attack stages Corporate Control: Citrix Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure stealth by using encrypted channels Corporate Control: Network Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent access to internal network Corporate Control: Internal Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved Corporate Control: Internal Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for lateral movement Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare to escalate privileges Corporate Control: Target Systems</data>
+</edge>
+</graph>
+</graphml>

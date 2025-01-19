@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VPN-Cred-Stuffing-PulseSecure-VPN" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Pulse Secure VPN Endpoint</data>
+</node>
+<node id="B">
+<data key="label">Exploit Arbitrary File Read Vulnerability</data>
+</node>
+<node id="C">
+<data key="label">Extract Sensitive Data</data>
+</node>
+<node id="D">
+<data key="label">Recover VPN Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for Pulse Secure VPN endpoints Corporate Control: Public-Facing Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on endpoints vulnerable to CVE-2019-11510 Corporate Control: VPN Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze configurations for susceptibility Corporate Control: SSL VPN Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection using low-intensity scanning Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send crafted requests to exploit file read flaw Corporate Control: VPN Software</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Access plaintext sensitive files on the server Corporate Control: VPN Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract user authentication files Corporate Control: VPN Data</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for detection responses Corporate Control: Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Recover VPN credentials from extracted files Corporate Control: User Accounts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test extracted credentials on VPN login Corporate Control: Authentication System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for persistent access Corporate Control: VPN Configurations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure credentials remain undetected Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Authenticate to VPN using stolen credentials Corporate Control: VPN Gateway</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain foothold in the internal network Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure stealth while maintaining access Corporate Control: VPN Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via Pulse Secure VPN exploitation Corporate Control: Internal Systems</data>
+</edge>
+</graph>
+</graphml>

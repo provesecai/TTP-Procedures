@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Misconfigured-Firewall-MikroTik" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan for Exposed MikroTik Routers</data>
+</node>
+<node id="B">
+<data key="label">Exploit Misconfigured Winbox Service</data>
+</node>
+<node id="C">
+<data key="label">Gain Admin Access to Router</data>
+</node>
+<node id="D">
+<data key="label">Establish Backdoor for Persistent Access</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Search for MikroTik routers exposing management interfaces Corporate Control: Public-Facing Devices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on ports used by Winbox (TCP 8291) Corporate Control: Router Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze router versions for known vulnerabilities Corporate Control: MikroTik Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection through stealthy scans Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit default credentials or misconfigurations Corporate Control: Winbox Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage public exploits for MikroTik routers Corporate Control: Router Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass authentication using tools like RouterOS exploit kits Corporate Control: Router Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Minimize detection by altering access patterns Corporate Control: Router Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Gain admin access to router management interface Corporate Control: Router Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying router configurations Corporate Control: Device Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Install backdoor for future access Corporate Control: Router Firmware</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious activity or detection Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish control over internal network traffic Corporate Control: Network Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via router exploitation Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation Corporate Control: Network Devices</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent and stealthy access Corporate Control: Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

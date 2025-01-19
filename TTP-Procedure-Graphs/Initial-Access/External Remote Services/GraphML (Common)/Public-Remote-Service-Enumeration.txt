@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Public-Remote-Service-Enumeration" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Public-Facing Remote Services</data>
+</node>
+<node id="B">
+<data key="label">Identify Misconfigured or Outdated Services</data>
+</node>
+<node id="C">
+<data key="label">Exploit Misconfigurations or Vulnerabilities</data>
+</node>
+<node id="D">
+<data key="label">Gain Initial Access</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use tools like Shodan to identify remote services Third Party Control: Public Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Filter results for exposed management interfaces Corporate Control: Remote Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Research specific versions for known exploits Corporate Control: Remote Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by appearing as legitimate traffic Corporate Control: Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on services like RDP, SSH, or FTP Corporate Control: IT Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attempt access with default credentials Corporate Control: Login Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit vulnerable software components Corporate Control: Remote Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test for misconfigurations or leaked keys Corporate Control: Encryption Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Successfully exploit identified weakness Corporate Control: Remote Access</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass any weak authentication measures Corporate Control: Service Login</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish remote session with target systems Corporate Control: Remote Network</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Minimize activity to remain undetected Corporate Control: Security Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve access to internal network Corporate Control: Initial Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further stages of attack Corporate Control: Compromised Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved Corporate Control: Target Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid triggering alerts Corporate Control: Monitoring Logs</data>
+</edge>
+</graph>
+</graphml>

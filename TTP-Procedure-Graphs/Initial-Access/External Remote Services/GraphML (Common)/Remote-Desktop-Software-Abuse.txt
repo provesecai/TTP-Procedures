@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Remote-Desktop-Software-Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Remote Desktop Software in Use</data>
+</node>
+<node id="B">
+<data key="label">Target Vulnerabilities in Software</data>
+</node>
+<node id="C">
+<data key="label">Exploit Weak Authentication Settings</data>
+</node>
+<node id="D">
+<data key="label">Establish Remote Session</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gather information on organization’s software Corporate Control: IT Infrastructure</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on widely used remote desktop solutions Corporate Control: Remote Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for open RDP or VNC ports Corporate Control: Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid triggering alerts with low-profile scans Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify outdated or vulnerable versions Corporate Control: Remote Desktop Software</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage known exploits for specific software Third Party Control: Exploit Database</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by obfuscating exploit attempts Corporate Control: Network Intrusion Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence with minimal activity Corporate Control: Remote Session</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit weak passwords or no multi-factor Corporate Control: Authentication Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass login restrictions Corporate Control: User Accounts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for remote session access Corporate Control: Remote Software</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test configurations for stealth access Corporate Control: Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish active remote session Corporate Control: Remote Desktop Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure session remains undetected Corporate Control: Logging Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial Access achieved Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Internal Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Scan for Exposed MikroTik Routers]
+    B[Exploit Misconfigured Winbox Service]
+    C[Gain Admin Access to Router]
+    D[Establish Backdoor for Persistent Access]
+    E[Initial Access Achieved]
+
+    A -->|"Search for MikroTik routers exposing management interfaces Corporate Control: Public-Facing Devices"| B
+    A -->|"Focus on ports used by Winbox (TCP 8291) Corporate Control: Router Configuration"| B
+    A -->|"Analyze router versions for known vulnerabilities Corporate Control: MikroTik Firmware"| B
+    A -->|"Avoid detection through stealthy scans Corporate Control: Network Monitoring"| B
+    B -->|"Exploit default credentials or misconfigurations Corporate Control: Winbox Service"| C
+    B -->|"Leverage public exploits for MikroTik routers Corporate Control: Router Management"| C
+    B -->|"Bypass authentication using tools like RouterOS exploit kits Corporate Control: Router Firmware"| C
+    B -->|"Minimize detection by altering access patterns Corporate Control: Router Logs"| C
+    C -->|"Gain admin access to router management interface Corporate Control: Router Management"| D
+    C -->|"Ensure persistence by modifying router configurations Corporate Control: Device Settings"| D
+    C -->|"Install backdoor for future access Corporate Control: Router Firmware"| D
+    C -->|"Monitor for suspicious activity or detection Corporate Control: Security Monitoring"| D
+    D -->|"Establish control over internal network traffic Corporate Control: Network Access"| E
+    D -->|"Initial access achieved via router exploitation Corporate Control: Internal Network"| E
+    D -->|"Prepare for further exploitation Corporate Control: Network Devices"| E
+    D -->|"Ensure persistent and stealthy access Corporate Control: Monitoring Systems"| E

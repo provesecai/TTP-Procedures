@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Third-Party-Cloud-Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Third-Party Cloud Service</data>
+</node>
+<node id="B">
+<data key="label">Obtain Access to Cloud Service</data>
+</node>
+<node id="C">
+<data key="label">Exploit Cloud Misconfigurations</data>
+</node>
+<node id="D">
+<data key="label">Gain Access to Target Data or Systems</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify third-party cloud platforms Corporate Control: Cloud Service Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Research available APIs and endpoints Corporate Control: Cloud API Documentation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze potential vulnerabilities Corporate Control: Cloud Service Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by mimicking normal usage Corporate Control: Cloud Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen credentials or API keys Third Party Control: Threat Actor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage misconfigured access policies Corporate Control: IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit weak authentication mechanisms Corporate Control: Cloud Login Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test configurations for unauthorized access Corporate Control: Cloud Resources</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Access sensitive cloud-based resources Corporate Control: Cloud Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish persistence in the service Corporate Control: Cloud Session</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for lateral movement Corporate Control: Cloud Network</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection Corporate Control: Cloud Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain foothold in target’s cloud environment Corporate Control: Cloud Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract initial credentials for access Corporate Control: Cloud System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain low visibility Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial Access achieved through cloud entry Corporate Control: Cloud Systems</data>
+</edge>
+</graph>
+</graphml>

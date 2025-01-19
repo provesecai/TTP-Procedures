@@ -1,0 +1,23 @@
+graph TD;
+    A[Enumerate Public-Facing Remote Services]
+    B[Identify Misconfigured or Outdated Services]
+    C[Exploit Misconfigurations or Vulnerabilities]
+    D[Gain Initial Access]
+    E[Initial Access Achieved]
+
+    A -->|"Use tools like Shodan to identify remote services Third Party Control: Public Services"| B
+    A -->|"Filter results for exposed management interfaces Corporate Control: Remote Services"| B
+    A -->|"Research specific versions for known exploits Corporate Control: Remote Access"| B
+    A -->|"Avoid detection by appearing as legitimate traffic Corporate Control: Network Logs"| B
+    B -->|"Focus on services like RDP, SSH, or FTP Corporate Control: IT Systems"| C
+    B -->|"Attempt access with default credentials Corporate Control: Login Systems"| C
+    B -->|"Exploit vulnerable software components Corporate Control: Remote Service"| C
+    B -->|"Test for misconfigurations or leaked keys Corporate Control: Encryption Systems"| C
+    C -->|"Successfully exploit identified weakness Corporate Control: Remote Access"| D
+    C -->|"Bypass any weak authentication measures Corporate Control: Service Login"| D
+    C -->|"Establish remote session with target systems Corporate Control: Remote Network"| D
+    C -->|"Minimize activity to remain undetected Corporate Control: Security Systems"| D
+    D -->|"Achieve access to internal network Corporate Control: Initial Access"| E
+    D -->|"Prepare for further stages of attack Corporate Control: Compromised Network"| E
+    D -->|"Initial access achieved Corporate Control: Target Systems"| E
+    D -->|"Avoid triggering alerts Corporate Control: Monitoring Logs"| E

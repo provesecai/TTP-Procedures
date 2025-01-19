@@ -1,0 +1,23 @@
+graph TD;
+    A[Host Malicious File on External Service]
+    B[Attract Victims to Download File]
+    C[Victim Executes Malicious File]
+    D[Establish Connection to Attacker Server]
+    E[Initial Access Achieved]
+
+    A -->|"Upload malicious file to trusted file-sharing service Corporate Control: External Hosting Service"| B
+    A -->|"Obfuscate file to avoid detection Corporate Control: Antivirus Scanning"| B
+    A -->|"Create convincing file names Corporate Control: File Metadata"| B
+    A -->|"Test detection against common tools Corporate Control: Security Software"| B
+    B -->|"Use social engineering to share file links Third Party Control: Threat Actor"| C
+    B -->|"Deliver file links via email or ads Third Party Control: Delivery Platforms"| C
+    B -->|"Ensure high download rates Corporate Control: Victim Trust"| C
+    B -->|"Monitor victim responses Corporate Control: Security Awareness"| C
+    C -->|"Victim executes malicious file Third Party Control: Victim System"| D
+    C -->|"Payload establishes callback to server Third Party Control: Command Server"| D
+    C -->|"Prepare for further commands Corporate Control: Initial Payload"| D
+    C -->|"Avoid victim suspicion Corporate Control: Victim System"| D
+    D -->|"Establish control over victim machine Corporate Control: Initial Compromise"| E
+    D -->|"Initial access achieved Corporate Control: Victim System"| E
+    D -->|"Prepare for further attack stages Corporate Control: Initial Compromise"| E
+    D -->|"Monitor for detection Corporate Control: Security Monitoring"| E

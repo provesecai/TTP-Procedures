@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised-File-Sharing-Service" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable File-Sharing Service</data>
+</node>
+<node id="B">
+<data key="label">Compromise Service Infrastructure</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Files or Links</data>
+</node>
+<node id="D">
+<data key="label">Victims Access Malicious Files</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Perform reconnaissance to identify services Corporate Control: File-Sharing Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target popular services with known vulnerabilities Corporate Control: Public File Hosts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze service configurations for weaknesses Corporate Control: File-Sharing Service Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Minimize detection by using stealth tactics Corporate Control: Service Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit vulnerabilities in service infrastructure Corporate Control: Hosting Servers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage admin-level access from breaches Corporate Control: Admin Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file storage systems Corporate Control: Storage Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence in compromised service Corporate Control: File Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious files or links Corporate Control: File Repository</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use legitimate filenames to appear benign Corporate Control: File Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Distribute files widely Corporate Control: Sharing Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by maintaining low profile Corporate Control: Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Victims download and execute malicious files Corporate Control: Victim Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious payload activates on victim systems Corporate Control: Initial Payload</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation Corporate Control: Initial Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious activity Corporate Control: Security Logs</data>
+</edge>
+</graph>
+</graphml>

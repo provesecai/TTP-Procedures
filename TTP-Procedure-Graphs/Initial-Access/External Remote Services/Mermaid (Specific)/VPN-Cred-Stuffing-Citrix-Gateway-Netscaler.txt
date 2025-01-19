@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Citrix Gateway]
+    B[Exploit Known Vulnerability (CVE-2019-19781)]
+    C[Inject Malicious Payload]
+    D[Gain Access to Internal Systems]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for Citrix Gateway instances Corporate Control: Public-Facing Servers"| B
+    A -->|"Use vulnerability databases to identify targets Corporate Control: Known Exploits"| B
+    A -->|"Focus on exposed endpoints for CVE-2019-19781 Corporate Control: Citrix Services"| B
+    A -->|"Minimize detection through low-intensity scans Corporate Control: IDS/IPS Logs"| B
+    B -->|"Exploit path traversal vulnerability Corporate Control: Gateway Software"| C
+    B -->|"Bypass authentication mechanisms Corporate Control: Citrix Login Systems"| C
+    B -->|"Inject commands to gain control of internal systems Corporate Control: Gateway Services"| C
+    B -->|"Monitor responses to avoid detection Corporate Control: IDS Logs"| C
+    C -->|"Inject payload to establish persistence Corporate Control: Internal Network"| D
+    C -->|"Target internal systems via compromised Citrix Corporate Control: Network Services"| D
+    C -->|"Prepare for further attack stages Corporate Control: Citrix Gateway"| D
+    C -->|"Ensure stealth by using encrypted channels Corporate Control: Network Logs"| D
+    D -->|"Establish persistent access to internal network Corporate Control: Internal Services"| E
+    D -->|"Initial access achieved Corporate Control: Internal Environment"| E
+    D -->|"Monitor for lateral movement Corporate Control: Security Monitoring"| E
+    D -->|"Prepare to escalate privileges Corporate Control: Target Systems"| E

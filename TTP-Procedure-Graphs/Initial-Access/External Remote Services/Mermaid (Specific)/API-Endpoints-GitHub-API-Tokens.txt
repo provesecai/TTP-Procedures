@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Exposed GitHub API Tokens]
+    B[Use Tokens to Access GitHub Repositories]
+    C[Clone Repositories to Extract Sensitive Data]
+    D[Analyze Data for Credentials or Keys]
+    E[Initial Access Achieved]
+
+    A -->|"Search public repositories for exposed tokens Corporate Control: GitHub Repositories"| B
+    A -->|"Focus on files containing sensitive information Corporate Control: Repository Contents"| B
+    A -->|"Use automated tools like truffleHog or git-secrets Corporate Control: Token Scanners"| B
+    A -->|"Avoid detection by minimizing GitHub API requests Corporate Control: GitHub Activity Logs"| B
+    B -->|"Authenticate to GitHub using extracted tokens Corporate Control: GitHub API"| C
+    B -->|"Access private repositories linked to the token Corporate Control: GitHub Repositories"| C
+    B -->|"Enumerate repository contents for valuable data Corporate Control: Repository Files"| C
+    B -->|"Monitor for unusual token usage alerts Corporate Control: GitHub Security Alerts"| C
+    C -->|"Clone repositories to attacker-controlled systems Corporate Control: Repository Data"| D
+    C -->|"Search for plaintext credentials or SSH keys Corporate Control: Sensitive Files"| D
+    C -->|"Analyze configuration files for further attack paths Corporate Control: Repository Metadata"| D
+    C -->|"Ensure no trace of unauthorized access Corporate Control: Repository Logs"| D
+    D -->|"Use extracted credentials to access internal systems Corporate Control: Internal Services"| E
+    D -->|"Initial access achieved via GitHub API exploitation Corporate Control: Internal Network"| E
+    D -->|"Prepare for lateral movement Corporate Control: Internal Systems"| E
+    D -->|"Ensure persistence by modifying configurations Corporate Control: Repository Files"| E

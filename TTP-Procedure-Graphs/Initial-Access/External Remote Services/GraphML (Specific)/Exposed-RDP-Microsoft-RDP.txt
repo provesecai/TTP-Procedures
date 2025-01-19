@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Exposed-RDP-Microsoft-RDP" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan for Exposed RDP Services</data>
+</node>
+<node id="B">
+<data key="label">Brute-Force RDP Credentials</data>
+</node>
+<node id="C">
+<data key="label">Obtain Valid Login</data>
+</node>
+<node id="D">
+<data key="label">Establish RDP Session</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use tools like Shodan or Nmap to identify RDP endpoints Corporate Control: RDP Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize endpoints with open TCP 3389 Corporate Control: Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by scanning at low intensity Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gather information about server configurations Corporate Control: RDP Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attempt login using dictionary attack Third Party Control: Credential Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on default or weak credentials Corporate Control: User Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test accounts against organizational patterns Corporate Control: Username Format</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid triggering lockouts using slow brute-forcing Corporate Control: Account Policy</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Successfully log in with compromised credentials Corporate Control: RDP Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for establishing persistence Corporate Control: Compromised Account</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure minimal footprint Corporate Control: Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test internal network access Corporate Control: RDP Connectivity</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish active session on RDP server Corporate Control: RDP Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain foothold in target environment Corporate Control: Initial Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure session stealth and persistence Corporate Control: RDP Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial Access achieved Corporate Control: Internal Network</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,24 @@
+mermaid
+graph TD;
+    A[Identify Cisco ASA VPN Endpoint]
+    B[Send Crafted XML Payload]
+    C[Exploit Double-Free Vulnerability]
+    D[Bypass Authentication]
+    E[Initial Access Achieved]
+
+    A -->|"Scan for Cisco ASA VPN services Corporate Control: Public-Facing Firewall"| B
+    A -->|"Focus on VPN endpoints using specific firmware versions Corporate Control: Firewall Firmware"| B
+    A -->|"Research exposed endpoints for CVE-2018-0101 Corporate Control: Vulnerability Database"| B
+    A -->|"Minimize detection using low-profile scans Corporate Control: Firewall Logs"| B
+    B -->|"Send specially crafted XML payload to ASA Corporate Control: VPN Gateway"| C
+    B -->|"Trigger double-free vulnerability in webvpn Corporate Control: ASA Services"| C
+    B -->|"Avoid triggering crash logs Corporate Control: ASA Logging"| C
+    B -->|"Ensure stealth through obfuscation Corporate Control: VPN Traffic"| C
+    C -->|"Exploit vulnerability to bypass authentication Corporate Control: VPN Gateway"| D
+    C -->|"Access administrative functions without credentials Corporate Control: Firewall Management"| D
+    C -->|"Set up persistence for further access Corporate Control: VPN Gateway"| D
+    C -->|"Monitor for detection by analyzing logs Corporate Control: Network Monitoring"| D
+    D -->|"Gain unauthorized access to internal network Corporate Control: VPN Infrastructure"| E
+    D -->|"Initial access achieved through VPN compromise Corporate Control: Internal Network"| E
+    D -->|"Prepare for lateral movement or data exfiltration Corporate Control: VPN Configuration"| E
+    D -->|"Ensure stealth while maintaining access Corporate Control: Security Monitoring"| E

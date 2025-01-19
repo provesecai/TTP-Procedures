@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Drive-by-Download-External-Google-Drive" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Host Malicious Document on Google Drive</data>
+</node>
+<node id="B">
+<data key="label">Distribute Document Links to Targets</data>
+</node>
+<node id="C">
+<data key="label">Victims Download and Open Document</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes on Victim Machine</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Upload malicious file disguised as legitimate Corporate Control: Google Drive</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure document appears authentic Corporate Control: File Metadata</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use file-sharing permissions to target specific users Corporate Control: File Sharing Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Minimize detection through obfuscation Corporate Control: Antivirus Scans</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send phishing emails containing Google Drive links Third Party Control: Email Delivery</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use social engineering to increase credibility Corporate Control: Email Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on targeted individuals or groups Corporate Control: Victim Users</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure links bypass spam filters Corporate Control: Email Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim downloads and opens the malicious file Third Party Control: Victim Machine</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware embedded in the file begins execution Third Party Control: Payload Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish connection to attacker-controlled server Third Party Control: Command Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid raising suspicion by appearing benign Corporate Control: Malware Behavior</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload gains foothold on victim machine Third Party Control: Compromised Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through malicious file Corporate Control: Victim Machine</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation Corporate Control: Compromised System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence on the victim’s system Corporate Control: Initial Foothold</data>
+</edge>
+</graph>
+</graphml>

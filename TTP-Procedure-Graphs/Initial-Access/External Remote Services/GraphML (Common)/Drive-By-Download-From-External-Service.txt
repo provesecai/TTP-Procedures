@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Drive-By-Download-From-External-Service" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Host Malicious File on External Service</data>
+</node>
+<node id="B">
+<data key="label">Attract Victims to Download File</data>
+</node>
+<node id="C">
+<data key="label">Victim Executes Malicious File</data>
+</node>
+<node id="D">
+<data key="label">Establish Connection to Attacker Server</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Upload malicious file to trusted file-sharing service Corporate Control: External Hosting Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate file to avoid detection Corporate Control: Antivirus Scanning</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create convincing file names Corporate Control: File Metadata</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test detection against common tools Corporate Control: Security Software</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use social engineering to share file links Third Party Control: Threat Actor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver file links via email or ads Third Party Control: Delivery Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure high download rates Corporate Control: Victim Trust</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor victim responses Corporate Control: Security Awareness</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim executes malicious file Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload establishes callback to server Third Party Control: Command Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare for further commands Corporate Control: Initial Payload</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid victim suspicion Corporate Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish control over victim machine Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved Corporate Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further attack stages Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection Corporate Control: Security Monitoring</data>
+</edge>
+</graph>
+</graphml>
