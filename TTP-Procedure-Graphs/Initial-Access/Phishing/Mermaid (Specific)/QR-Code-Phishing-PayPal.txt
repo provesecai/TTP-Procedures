@@ -1,0 +1,23 @@
+graph TD;
+    A[Create QR Code Linking to Fake PayPal Login Page]
+    B[Distribute QR Code via Email or Printed Media]
+    C[Victim Scans the QR Code]
+    D[Fake PayPal Login Page Captures Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Design a fake PayPal login page Corporate Control: Phishing Site"| B
+    A -->|"Host the page on a domain mimicking PayPal Third Party Control: Domain Hosting"| B
+    A -->|"Generate a QR code that redirects to the page Corporate Control: QR Code Generator"| B
+    A -->|"Test the QR code functionality Corporate Control: Testing Environment"| B
+    B -->|"Embed QR code in emails, posters, or flyers Corporate Control: Distribution Medium"| C
+    B -->|"Include convincing text to encourage scanning Third Party Control: Social Engineering Techniques"| C
+    B -->|"Avoid spam detection in emails Corporate Control: Anti-Spam Evasion"| C
+    B -->|"Distribute codes in high-traffic physical locations Third Party Control: Public Locations"| C
+    C -->|"Victim scans the QR code with their device Third Party Control: QR Code Reader"| D
+    C -->|"Redirects to the fake PayPal login page Third Party Control: Phishing Page"| D
+    C -->|"Encourages victim to log in for account verification Corporate Control: Social Engineering Content"| D
+    C -->|"Capture credentials in real-time Corporate Control: Credential Harvesting"| D
+    D -->|"Attacker retrieves victim credentials from the fake page Corporate Control: Database Storage"| E
+    D -->|"Access victim’s PayPal account for financial exploitation Corporate Control: Stolen Account"| E
+    D -->|"Monitor account activity to avoid detection Corporate Control: Account Monitoring Tools"| E
+    D -->|"Prepare for further exploitation of financial assets Corporate Control: Persistence Mechanisms"| E

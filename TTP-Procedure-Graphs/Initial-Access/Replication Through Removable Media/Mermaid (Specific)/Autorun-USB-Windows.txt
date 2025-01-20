@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Autorun Configuration File]
+    B[Deploy Configuration and Malicious Executable to USB Drive]
+    C[Insert USB Drive into Victim's Windows Machine]
+    D[Malicious Executable Auto-Executes via Autorun.inf]
+    E[Initial Access Achieved]
+
+    A -->|"Craft Autorun.inf file to execute malware Corporate Control: Autorun Configuration"| B
+    A -->|"Embed malicious executable alongside Autorun.inf Corporate Control: Malware Payload"| B
+    A -->|"Test Autorun functionality for compatibility Corporate Control: Testing Environment"| B
+    A -->|"Obfuscate executable to bypass antivirus detection Third Party Control: Obfuscation Tools"| B
+    B -->|"Distribute USB drives via targeted delivery (e.g., drops in parking lots) Third Party Control: Physical Delivery"| C
+    B -->|"Ensure USB drives are labeled to entice victims Corporate Control: Social Engineering Techniques"| C
+    B -->|"Leverage human curiosity or urgency to prompt usage Corporate Control: Behavioral Exploitation"| C
+    B -->|"Avoid detection by endpoint monitoring tools Corporate Control: Endpoint Protection"| C
+    C -->|"Victim inserts the USB drive into their system Third Party Control: Windows System"| D
+    C -->|"Autorun.inf triggers the execution of the malicious executable Corporate Control: Malicious Code Execution"| D
+    C -->|"Malware bypasses security tools and establishes foothold Corporate Control: Security Evasion"| D
+    C -->|"Avoid immediate detection through stealth Corporate Control: Stealth Techniques"| D
+    D -->|"Malware installs backdoor for persistence Corporate Control: Backdoor Installation"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Monitor for signs of detection during installation Corporate Control: Security Monitoring"| E
+    D -->|"Prepare for lateral movement Corporate Control: Exploitation Scripts"| E

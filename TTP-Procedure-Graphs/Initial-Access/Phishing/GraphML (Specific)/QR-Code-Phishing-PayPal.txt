@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="QR_Code_Phishing_PayPal" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create QR Code Linking to Fake PayPal Login Page</data>
+</node>
+<node id="B">
+<data key="label">Distribute QR Code via Email or Printed Media</data>
+</node>
+<node id="C">
+<data key="label">Victim Scans the QR Code</data>
+</node>
+<node id="D">
+<data key="label">Fake PayPal Login Page Captures Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design a fake PayPal login page Corporate Control: Phishing Site</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host the page on a domain mimicking PayPal Third Party Control: Domain Hosting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Generate a QR code that redirects to the page Corporate Control: QR Code Generator</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test the QR code functionality Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed QR code in emails, posters, or flyers Corporate Control: Distribution Medium</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Include convincing text to encourage scanning Third Party Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid spam detection in emails Corporate Control: Anti-Spam Evasion</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute codes in high-traffic physical locations Third Party Control: Public Locations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim scans the QR code with their device Third Party Control: QR Code Reader</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirects to the fake PayPal login page Third Party Control: Phishing Page</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encourages victim to log in for account verification Corporate Control: Social Engineering Content</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture credentials in real-time Corporate Control: Credential Harvesting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker retrieves victim credentials from the fake page Corporate Control: Database Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access victim’s PayPal account for financial exploitation Corporate Control: Stolen Account</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor account activity to avoid detection Corporate Control: Account Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation of financial assets Corporate Control: Persistence Mechanisms</data>
+</edge>
+</graph>
+</graphml>

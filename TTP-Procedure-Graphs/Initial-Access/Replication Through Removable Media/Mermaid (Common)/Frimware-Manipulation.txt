@@ -1,0 +1,15 @@
+graph TD;
+    A[Modify USB Device Firmware]
+    B[Distribute Modified Devices]
+    C[Victim Connects USB]
+    D[Firmware Payload Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Reprogram USB firmware to act as a malicious HID device Corporate Control: Attacker System"| B
+    A -->|"Test firmware for compatibility with target operating systems Corporate Control: Attacker System"| B
+    B -->|"Deliver modified USB devices through phishing campaigns or fake giveaways Third Party Control: USB Device"| C
+    B -->|"Use branded packaging to increase credibility Third Party Control: USB Packaging"| C
+    C -->|"USB device acts as a keyboard or mouse, injecting commands Third Party Control: Target System"| D
+    C -->|"Firmware exploits system vulnerabilities to install backdoor Third Party Control: Target System"| D
+    D -->|"Establish remote access or initiate malware download Corporate Control: Victim Device"| E
+    D -->|"Initial foothold established for further exploitation Corporate Control: Victim Device"| E

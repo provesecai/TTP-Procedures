@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Linux_AutoMount_Script" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Auto-Mount Configuration File</data>
+</node>
+<node id="B">
+<data key="label">Deploy Configuration and Malicious Script to USB Drive</data>
+</node>
+<node id="C">
+<data key="label">Insert USB Drive into Victim's Linux Machine</data>
+</node>
+<node id="D">
+<data key="label">Script Executes Automatically via Auto-Mount</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design a script to execute upon auto-mount Corporate Control: Auto-Mount Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed obfuscated payload to evade detection Corporate Control: Obfuscation Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test script functionality across Linux distributions Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure script executes on auto-mount without prompts Corporate Control: Auto-Execution Compatibility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute USB drives to targeted locations Corporate Control: USB Distribution Campaign</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Label drives with enticing names to prompt usage Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place script in auto-mount compatible directories Corporate Control: Drive Organization</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by Linux endpoint monitoring tools Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim inserts USB drive into Linux system Third Party Control: Linux System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Auto-mount settings trigger malicious script execution Corporate Control: Exploit Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script installs backdoor for persistence Corporate Control: Malware Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by obfuscating script activity Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Backdoor establishes command-and-control communication Corporate Control: C2 Communication</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement within the network Corporate Control: Exploitation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection Corporate Control: Endpoint Monitoring</data>
+</edge>
+</graph>
+</graphml>

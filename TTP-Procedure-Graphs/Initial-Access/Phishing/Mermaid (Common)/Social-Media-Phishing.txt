@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Fake Social Media Profile]
+    B[Send Phishing Messages]
+    C[Victim Interacts with Malicious Content]
+    D[Payload Delivered]
+    E[Initial Access Achieved]
+
+    A -->|"Set up a fake profile resembling a trusted entity Corporate Control: Social Media Account"| B
+    A -->|"Ensure profile appears legitimate with stolen or fake information Third Party Control: Stolen Data"| B
+    A -->|"Target victims through connections Corporate Control: Friend Requests"| B
+    A -->|"Avoid detection by social media platforms Third Party Control: Obfuscation Tools"| B
+    B -->|"Send messages containing malicious links or attachments Corporate Control: Messaging Service"| C
+    B -->|"Use personalized and convincing content Corporate Control: Social Engineering Techniques"| C
+    B -->|"Encourage victim to interact with urgency or fear tactics Corporate Control: Message Content"| C
+    B -->|"Avoid spam filters by using platform-specific techniques Third Party Control: Messaging Platform"| C
+    C -->|"Victim interacts with the malicious content Third Party Control: Victim Browser"| D
+    C -->|"Payload is delivered via the malicious link or attachment Corporate Control: Payload Delivery System"| D
+    C -->|"Exploit victim’s device or application Third Party Control: Exploited Device"| D
+    C -->|"Avoid immediate detection by using obfuscation Corporate Control: Obfuscation Tools"| D
+    D -->|"Payload executes and grants access Corporate Control: Initial System Access"| E
+    D -->|"Foothold established for further exploitation Corporate Control: Malware Deployment"| E
+    D -->|"Monitors for signs of detection or resistance Corporate Control: Monitoring Tools"| E
+    D -->|"Attempts to avoid security measures Third Party Control: Endpoint Protection"| E

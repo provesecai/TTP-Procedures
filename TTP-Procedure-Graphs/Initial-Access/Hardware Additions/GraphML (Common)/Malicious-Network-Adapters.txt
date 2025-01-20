@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Network-Adapters" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Modified Network Adapter</data>
+</node>
+<node id="B">
+<data key="label">Victim Installs Adapter</data>
+</node>
+<node id="C">
+<data key="label">Adapter Monitors Network Traffic</data>
+</node>
+<node id="D">
+<data key="label">Malicious Payload Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify network adapter firmware Corporate Control: Hardware Supply Chain</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious payload in adapter Corporate Control: Adapter Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Distribute adapters to targets Corporate Control: Logistics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adapter is installed on victim network Third Party Control: Network Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Malicious payload begins execution Third Party Control: Adapter Firmware</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor network traffic for sensitive data Third Party Control: Network Traffic</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit identified vulnerabilities Third Party Control: Victim OS</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access is achieved Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Foothold established for further exploitation Corporate Control: Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

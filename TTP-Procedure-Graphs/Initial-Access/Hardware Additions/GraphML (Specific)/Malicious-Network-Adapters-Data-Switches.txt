@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Network-Adapters-Data-Switches" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Modified Network Switches</data>
+</node>
+<node id="B">
+<data key="label">Switch Installed in Data Center</data>
+</node>
+<node id="C">
+<data key="label">Switch Firmware Exploits Connected Devices</data>
+</node>
+<node id="D">
+<data key="label">Payload Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify switch firmware to include backdoor Corporate Control: Device Manufacturer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Distribute devices through legitimate channels Corporate Control: Supply Chain</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target firmware vulnerabilities of enterprise devices Corporate Control: Firmware Design</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Switch installed in corporate networks Third Party Control: IT Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Switch begins scanning connected systems Third Party Control: Network Devices</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious payload targets system vulnerabilities Third Party Control: Network Endpoints</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload establishes persistent network foothold Corporate Control: Command Link</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through exploited devices Corporate Control: Target Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor compromised traffic Corporate Control: Network Analysis</data>
+</edge>
+</graph>
+</graphml>

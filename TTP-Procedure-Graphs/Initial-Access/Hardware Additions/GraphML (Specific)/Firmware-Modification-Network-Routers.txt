@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Firmware-Modification-Network-Routers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Router Firmware</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised Routers</data>
+</node>
+<node id="C">
+<data key="label">Router Installed on Network</data>
+</node>
+<node id="D">
+<data key="label">Malicious Firmware Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access router firmware during production Corporate Control: Device Manufacturer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious code for network surveillance Corporate Control: Firmware Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test compatibility with ISP configurations Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compromised routers distributed via retailers Third Party Control: Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Router installed by unsuspecting victims Third Party Control: Consumer Network</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious firmware activates during setup Third Party Control: Network Setup</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoor communicates with C2 servers Corporate Control: Firmware Link</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access established on victim network Third Party Control: Network Traffic</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor network traffic for sensitive data Corporate Control: Threat Analysis</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,19 @@
+graph TD;
+    A[Alter Device Firmware]
+    B[Distribute Modified Devices]
+    C[Device Activates on Usage]
+    D[Firmware Executes Malicious Payload]
+    E[Initial Access Achieved]
+
+    A -->|"Access firmware during production Corporate Control: Device Manufacturer"| B
+    A -->|"Inject malicious backdoors into firmware Corporate Control: Device Codebase"| B
+    A -->|"Ensure compatibility with production systems Corporate Control: Testing Environment"| B
+    A -->|"Obfuscate malicious payload for detection evasion Corporate Control: Firmware Payload"| B
+    B -->|"Devices are distributed to targets Third Party Control: Supply Chain"| C
+    B -->|"Malicious firmware activates upon power-on Third Party Control: Victim Device"| C
+    B -->|"Firmware establishes persistent access Third Party Control: Device Codebase"| C
+    C -->|"Malicious code spreads across victim system Third Party Control: Victim OS"| D
+    C -->|"Secure foothold with minimal detection mechanisms Corporate Control: Payload Design"| D
+    D -->|"Initial compromise is achieved Third Party Control: Victim System"| E
+    D -->|"Monitor firmware activity Corporate Control: Device Analysis"| E
+    D -->|"Initial access leads to further compromise Corporate Control: Target Network"| E

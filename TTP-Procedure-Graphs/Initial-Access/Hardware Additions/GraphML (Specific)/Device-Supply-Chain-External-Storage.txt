@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Device-Supply-Chain-External-Storage" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise External Hard Drives in Supply Chain</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised Hard Drives</data>
+</node>
+<node id="C">
+<data key="label">Victim Connects Hard Drive to System</data>
+</node>
+<node id="D">
+<data key="label">Malware Activates on Device</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify firmware of storage devices Corporate Control: Device Manufacturer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious code into controller firmware Corporate Control: Firmware Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Distribute devices through trusted retailers Corporate Control: Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victim connects device to target system Third Party Control: Victim System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Malware executes when drive is accessed Third Party Control: OS Interaction</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload targets endpoint vulnerabilities Third Party Control: Endpoint OS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persistence mechanisms establish foothold Corporate Control: Malware Components</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access confirmed on target network Third Party Control: Host Machine</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious activity Corporate Control: Network Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Craft Malicious Application Bundle]
+    B[Deploy Malicious Bundle to USB Drive]
+    C[Insert USB Drive into Victim's macOS System]
+    D[Victim Launches Application via Finder]
+    E[Initial Access Achieved]
+
+    A -->|"Create macOS-compatible malicious app Corporate Control: App Development Tools"| B
+    A -->|"Use a convincing app name and icon Third Party Control: Branding Mimicry"| B
+    A -->|"Sign the app with a legitimate or stolen developer certificate Corporate Control: Developer Certificate"| B
+    A -->|"Test for compatibility across macOS versions Corporate Control: Testing Environment"| B
+    B -->|"Distribute USB drives via targeted delivery Corporate Control: USB Distribution Campaign"| C
+    B -->|"Leverage human curiosity with enticing app names Corporate Control: Social Engineering Techniques"| C
+    B -->|"Ensure malware evades macOS Gatekeeper checks Corporate Control: Gatekeeper Bypass"| C
+    B -->|"Place the app in a readable location on the drive Corporate Control: Drive Organization"| C
+    C -->|"Victim accesses the USB drive using Finder Third Party Control: Finder App"| D
+    C -->|"Victim launches the application manually Corporate Control: User Interaction"| D
+    C -->|"Application executes malicious payload Corporate Control: Exploit Code"| D
+    C -->|"Avoid detection by macOS security features Corporate Control: Stealth Techniques"| D
+    D -->|"Payload installs a backdoor for persistence Corporate Control: Backdoor Installation"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Monitor for signs of detection Corporate Control: Security Monitoring"| E
+    D -->|"Prepare for lateral movement Corporate Control: Exploitation Scripts"| E

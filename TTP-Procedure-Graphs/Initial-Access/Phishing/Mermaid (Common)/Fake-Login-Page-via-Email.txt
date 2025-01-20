@@ -1,0 +1,23 @@
+graph TD;
+    A[Design Fake Login Page]
+    B[Send Phishing Email]
+    C[Victim Enters Credentials]
+    D[Credentials Captured]
+    E[Initial Access Achieved]
+
+    A -->|"Create a page mimicking a trusted service Corporate Control: Website Template"| B
+    A -->|"Ensure page is visually identical to original Third Party Control: Web Hosting Provider"| B
+    A -->|"Host page on a deceptive domain Third Party Control: Domain Registrar"| B
+    A -->|"Test page functionality for capturing input Corporate Control: Testing Environment"| B
+    B -->|"Personalize phishing email for credibility Corporate Control: Email Content"| C
+    B -->|"Include a direct link to the fake page Third Party Control: URL Shortener"| C
+    B -->|"Use urgency or fear to prompt victim action Corporate Control: Social Engineering Content"| C
+    B -->|"Avoid spam detection mechanisms Third Party Control: Email Filtering Services"| C
+    C -->|"Victim visits the fake page Third Party Control: Victim Browser"| D
+    C -->|"Enters credentials into the input fields Corporate Control: Web Form"| D
+    C -->|"Credentials are captured in real-time Corporate Control: Credential Storage System"| D
+    C -->|"Redirects victim to original login page Third Party Control: Legitimate Website"| D
+    D -->|"Credentials are stored securely by the attacker Corporate Control: Malicious Database"| E
+    D -->|"Prepares for account takeover Corporate Control: Credential Analysis Tools"| E
+    D -->|"Enables system or network access using credentials Corporate Control: Initial Compromise"| E
+    D -->|"Monitors activity for further exploitation Corporate Control: Monitoring Tools"| E

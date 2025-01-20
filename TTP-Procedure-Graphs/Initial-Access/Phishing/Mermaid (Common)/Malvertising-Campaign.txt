@@ -1,0 +1,23 @@
+graph TD;
+    A[Place Malicious Ads on Ad Networks]
+    B[Victim Interacts with the Ad]
+    C[Victim Redirected to Malicious Site]
+    D[Malware Delivered]
+    E[Initial Access Achieved]
+
+    A -->|"Compromise or buy ad space on legitimate networks Third Party Control: Ad Network"| B
+    A -->|"Embed links to malicious sites Corporate Control: Malicious Content"| B
+    A -->|"Target specific users or regions through ad networks Third Party Control: Targeting System"| B
+    A -->|"Test for stealth against automated scanning tools Corporate Control: Testing Environment"| B
+    B -->|"Ad engages the victim through interaction Third Party Control: Victim Browser"| C
+    B -->|"Redirects victim to the malicious URL Third Party Control: Redirect Script"| C
+    B -->|"Uses browser vulnerabilities to remain undetected Corporate Control: Exploit Script"| C
+    B -->|"Avoids detection through obfuscation and stealth techniques Corporate Control: Obfuscation Tools"| C
+    C -->|"Victim accesses the malicious site Third Party Control: Victim System"| D
+    C -->|"Browser downloads malicious payload automatically Corporate Control: Drive-By Download"| D
+    C -->|"Uses drive-by download methods Corporate Control: Exploitation Script"| D
+    C -->|"Mitigation through active browser security features Corporate Control: Endpoint Protection"| D
+    D -->|"Payload executes or prepares for activation Third Party Control: Exploited Software"| E
+    D -->|"Malware attempts to gain access Third Party Control: Malicious Payload"| E
+    D -->|"Foothold established on victim system Corporate Control: Initial System Access"| E
+    D -->|"Network monitoring tools may detect malicious traffic Corporate Control: Monitoring Systems"| E

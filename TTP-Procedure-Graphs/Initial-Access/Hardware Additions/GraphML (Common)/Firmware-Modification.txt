@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Firmware-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Alter Device Firmware</data>
+</node>
+<node id="B">
+<data key="label">Distribute Modified Devices</data>
+</node>
+<node id="C">
+<data key="label">Device Activates on Usage</data>
+</node>
+<node id="D">
+<data key="label">Firmware Executes Malicious Payload</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access firmware during production Corporate Control: Device Manufacturer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious backdoors into firmware Corporate Control: Device Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure compatibility with production systems Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate malicious payload for detection evasion Corporate Control: Firmware Payload</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Devices are distributed to targets Third Party Control: Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Malicious firmware activates upon power-on Third Party Control: Victim Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Firmware establishes persistent access Third Party Control: Device Codebase</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code spreads across victim system Third Party Control: Victim OS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Secure foothold with minimal detection mechanisms Corporate Control: Payload Design</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial compromise is achieved Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor firmware activity Corporate Control: Device Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access leads to further compromise Corporate Control: Target Network</data>
+</edge>
+</graph>
+</graphml>

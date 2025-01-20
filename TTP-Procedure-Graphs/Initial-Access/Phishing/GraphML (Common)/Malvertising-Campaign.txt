@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malvertising_Campaign" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Place Malicious Ads on Ad Networks</data>
+</node>
+<node id="B">
+<data key="label">Victim Interacts with the Ad</data>
+</node>
+<node id="C">
+<data key="label">Victim Redirected to Malicious Site</data>
+</node>
+<node id="D">
+<data key="label">Malware Delivered</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Compromise or buy ad space on legitimate networks Third Party Control: Ad Network</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed links to malicious sites Corporate Control: Malicious Content</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target specific users or regions through ad networks Third Party Control: Targeting System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test for stealth against automated scanning tools Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ad engages the victim through interaction Third Party Control: Victim Browser</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirects victim to the malicious URL Third Party Control: Redirect Script</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Uses browser vulnerabilities to remain undetected Corporate Control: Exploit Script</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoids detection through obfuscation and stealth techniques Corporate Control: Obfuscation Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim accesses the malicious site Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Browser downloads malicious payload automatically Corporate Control: Drive-By Download</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses drive-by download methods Corporate Control: Exploitation Script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Mitigation through active browser security features Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes or prepares for activation Third Party Control: Exploited Software</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware attempts to gain access Third Party Control: Malicious Payload</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Foothold established on victim system Corporate Control: Initial System Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Network monitoring tools may detect malicious traffic Corporate Control: Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

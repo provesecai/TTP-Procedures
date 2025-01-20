@@ -1,0 +1,15 @@
+graph TD;
+    A[Modify USB Firmware]
+    B[Distribute Compromised USB Devices]
+    C[Target Connects USB]
+    D[Malicious Firmware Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Inject malicious code into USB firmware, bypassing antivirus detection Corporate Control: Attacker System"| B
+    A -->|"Test firmware behavior to ensure compatibility with target systems Corporate Control: Attacker System"| B
+    B -->|"Leave USB drives in target's facilities or deliver via mail Third Party Control: Physical Locations"| C
+    B -->|"Create USB branding to increase credibility (e.g., corporate logos) Third Party Control: USB Device"| C
+    C -->|"Victim plugs USB into machine, triggering firmware execution Third Party Control: Target System"| D
+    C -->|"Firmware emulates HID devices (e.g., keyboard, mouse) to inject commands Third Party Control: Target System"| D
+    D -->|"Exploit vulnerabilities in host system to gain code execution Corporate Control: Victim Device"| E
+    D -->|"Install persistence mechanisms or initiate data exfiltration Corporate Control: Victim Device"| E

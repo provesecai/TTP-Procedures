@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious LNK File]
+    B[Deploy LNK File to USB Drive]
+    C[Insert USB Drive into Victim's Windows Machine]
+    D[Victim Clicks the LNK File]
+    E[Initial Access Achieved]
+
+    A -->|"Craft LNK file with a path to execute malicious script Corporate Control: LNK Configuration"| B
+    A -->|"Embed obfuscated script to evade detection Corporate Control: Script Obfuscation"| B
+    A -->|"Test LNK functionality across Windows versions Corporate Control: Testing Environment"| B
+    A -->|"Ensure compatibility with common file viewers Corporate Control: File Compatibility"| B
+    B -->|"Label LNK files to appear as legitimate documents Corporate Control: Social Engineering Techniques"| C
+    B -->|"Distribute USB drives in high-traffic areas Third Party Control: Physical Delivery"| C
+    B -->|"Leverage curiosity to prompt victim interaction Corporate Control: Behavioral Exploitation"| C
+    B -->|"Avoid endpoint detection with stealth techniques Corporate Control: Endpoint Protection"| C
+    C -->|"Victim opens USB drive and views LNK file Third Party Control: Windows Explorer"| D
+    C -->|"LNK triggers execution of the embedded script Corporate Control: Exploit Execution"| D
+    C -->|"Script bypasses security measures to deliver payload Corporate Control: Security Evasion"| D
+    C -->|"Avoid immediate detection during execution Corporate Control: Stealth Techniques"| D
+    D -->|"Payload establishes a foothold on victim system Corporate Control: Malware Installation"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Prepare for persistence mechanisms Corporate Control: Backdoor Installation"| E
+    D -->|"Monitor activity to avoid detection Corporate Control: Monitoring Tools"| E

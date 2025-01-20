@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hidden_Partition_USB_Drive" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Hidden Partition</data>
+</node>
+<node id="B">
+<data key="label">Plant USB in Target Environment</data>
+</node>
+<node id="C">
+<data key="label">Victim Inserts USB</data>
+</node>
+<node id="D">
+<data key="label">Hidden Partition Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use tools to create hidden, bootable partition on USB drive Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure hidden partition to deliver payload upon insertion Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leave USB drives in strategic locations (e.g., parking lots, lobbies) Third Party Control: Physical Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use realistic labels or markings to entice victims Third Party Control: USB Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim inserts USB, triggering hidden partition execution Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hidden partition bypasses user interaction to deploy payload Third Party Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes to establish a foothold in the system Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker gains remote access or deploys additional tools Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

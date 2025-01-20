@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Fake Gmail Login Page]
+    B[Send Phishing Email Containing Link to Fake Page]
+    C[Victim Clicks Link and Visits Fake Page]
+    D[Victim Enters Gmail Credentials]
+    E[Initial Access Achieved]
+
+    A -->|"Design a fake Gmail login page mimicking the legitimate site Corporate Control: Fake Login Page"| B
+    A -->|"Host fake page on a deceptive domain Third Party Control: Malicious Hosting Provider"| B
+    A -->|"Ensure page uses HTTPS for credibility Third Party Control: SSL Certificate"| B
+    A -->|"Prepare scripts to capture and store entered credentials Corporate Control: Credential Harvesting Code"| B
+    B -->|"Send phishing email to targeted Gmail users Corporate Control: Email System"| C
+    B -->|"Craft email content with urgency to prompt victim action Corporate Control: Social Engineering Techniques"| C
+    B -->|"Avoid detection by Gmail spam filters Third Party Control: Spam Filter Evasion"| C
+    B -->|"Use sender spoofing to mimic trusted entities Third Party Control: Spoofing Tools"| C
+    C -->|"Victim clicks link and is redirected to fake page Third Party Control: Victim Browser"| D
+    C -->|"Fake page captures credentials as they are entered Corporate Control: Credential Capture Script"| D
+    C -->|"Redirect victim to legitimate Gmail site post-login Corporate Control: Redirect Script"| D
+    C -->|"Credentials are sent to attacker’s storage server Corporate Control: Malicious Credential Database"| D
+    D -->|"Attacker logs into victim’s Gmail account Corporate Control: Compromised Gmail Account"| E
+    D -->|"Establish foothold in Google Workspace environment Corporate Control: Workspace Access"| E
+    D -->|"Monitor Gmail activity for sensitive information Corporate Control: Account Monitoring Tools"| E
+    D -->|"Prepare for further attacks leveraging compromised account Corporate Control: Lateral Movement Preparation"| E

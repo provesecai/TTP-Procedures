@@ -1,0 +1,16 @@
+graph TD;
+    A[Modify Router Firmware]
+    B[Distribute Compromised Routers]
+    C[Router Installed on Network]
+    D[Malicious Firmware Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Access router firmware during production Corporate Control: Device Manufacturer"| B
+    A -->|"Embed malicious code for network surveillance Corporate Control: Firmware Codebase"| B
+    A -->|"Test compatibility with ISP configurations Corporate Control: Testing Environment"| B
+    B -->|"Compromised routers distributed via retailers Third Party Control: Supply Chain"| C
+    B -->|"Router installed by unsuspecting victims Third Party Control: Consumer Network"| C
+    C -->|"Malicious firmware activates during setup Third Party Control: Network Setup"| D
+    C -->|"Backdoor communicates with C2 servers Corporate Control: Firmware Link"| D
+    D -->|"Initial access established on victim network Third Party Control: Network Traffic"| E
+    D -->|"Monitor network traffic for sensitive data Corporate Control: Threat Analysis"| E

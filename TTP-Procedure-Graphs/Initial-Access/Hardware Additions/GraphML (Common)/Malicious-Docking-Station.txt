@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Docking-Station" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Compromised Docking Station</data>
+</node>
+<node id="B">
+<data key="label">Device Connects to Dock</data>
+</node>
+<node id="C">
+<data key="label">Dock Exploits Connected Device</data>
+</node>
+<node id="D">
+<data key="label">Payload Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify firmware in docking station Corporate Control: Hardware Supply Chain</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy docks in high-traffic areas Corporate Control: Public Spaces</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure dock compatibility with multiple devices Corporate Control: Hardware Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Design payload to activate upon connection Corporate Control: Malicious Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Device automatically syncs with dock firmware Third Party Control: Victim Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Malicious code begins execution Third Party Control: Connected Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Secure persistence through installed backdoors Corporate Control: Malware Components</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload spreads across victim system Third Party Control: Victim OS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold with minimal detection Third Party Control: OS-level Exploits</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for device-specific vulnerabilities Corporate Control: Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload achieves initial compromise goals Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access confirmed for further exploitation Corporate Control: Target Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual network activity Corporate Control: Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

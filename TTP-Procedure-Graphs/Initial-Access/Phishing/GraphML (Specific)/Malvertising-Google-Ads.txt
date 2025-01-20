@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malvertising_Google_Ads" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Ad Campaign</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Ads via Google Ads Platform</data>
+</node>
+<node id="C">
+<data key="label">Victim Clicks on Malicious Ad</data>
+</node>
+<node id="D">
+<data key="label">Redirects to Malicious Website</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design ads that mimic legitimate businesses Corporate Control: Ad Design</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Include links redirecting to malicious sites Corporate Control: Malicious Redirect URL</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure ad compliance to bypass Google’s ad review process Third Party Control: Ad Review Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test ad delivery on targeted platforms Corporate Control: Testing Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy ads on Google Ads platform targeting specific demographics Corporate Control: Ad Targeting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target users based on browsing behavior or interests Third Party Control: Google Ads Targeting System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Optimize ads for high visibility Corporate Control: Ad Optimization Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by modifying ad metadata Corporate Control: Metadata Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim clicks on the ad and is redirected to a malicious site Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect URL leads to a payload delivery page Corporate Control: Malicious Landing Page</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim unknowingly downloads malicious content Corporate Control: Drive-By Download Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid immediate detection using sandbox evasion Corporate Control: Exploit Evasion Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware executes on the victim’s device Third Party Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish foothold within victim system Corporate Control: Initial System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement or data exfiltration Corporate Control: Network Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for security detection during execution Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

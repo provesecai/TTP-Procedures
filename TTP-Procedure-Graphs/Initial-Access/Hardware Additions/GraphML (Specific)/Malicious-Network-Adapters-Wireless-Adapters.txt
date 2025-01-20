@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Network-Adapters-Wireless-Adapters" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Compromised Wireless Adapters</data>
+</node>
+<node id="B">
+<data key="label">Victim Connects Wireless Adapter to Network</data>
+</node>
+<node id="C">
+<data key="label">Adapter Monitors and Injects Traffic</data>
+</node>
+<node id="D">
+<data key="label">Payload Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed malicious firmware in wireless adapters Corporate Control: Device Manufacturing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Distribute devices via online retailers Corporate Control: Logistics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target vulnerabilities in wireless protocols Corporate Control: Adapter Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victim installs adapter on network device Third Party Control: Network Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adapter begins monitoring traffic Corporate Control: Wireless Traffic</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Injects malicious payloads into network streams Third Party Control: Wireless Protocols</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload establishes foothold on network devices Corporate Control: Backdoor Design</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through compromised network Corporate Control: Threat Link</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual wireless traffic Corporate Control: Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

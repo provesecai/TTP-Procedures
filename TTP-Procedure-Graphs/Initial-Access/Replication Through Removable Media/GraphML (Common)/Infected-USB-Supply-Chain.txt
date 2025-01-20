@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Infected_USB_Supply_Chain" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise USB Supply Chain</data>
+</node>
+<node id="B">
+<data key="label">Distribute Infected USB Drives</data>
+</node>
+<node id="C">
+<data key="label">Victim Connects USB</data>
+</node>
+<node id="D">
+<data key="label">Payload Execution</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Inject malware during USB manufacturing or distribution Corporate Control: Attacker's Supply Chain Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malware is embedded in USB controller firmware Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute infected USB drives through legitimate retail channels Third Party Control: Retail Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target bulk purchases for large organizations Third Party Control: Corporate Buyers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim unknowingly connects infected USB to a workstation Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious firmware executes upon USB insertion Third Party Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Firmware installs a backdoor or initiates data exfiltration Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access established for further compromise Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,21 @@
+graph TD;
+    A[Distribute Malicious Peripherals]
+    B[Victim Connects Peripheral]
+    C[Peripheral Executes Malicious Commands]
+    D[Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Leave malicious devices in target locations Corporate Control: Public Spaces"| B
+    A -->|"Use enticing peripheral designs Corporate Control: Device Manufacturing"| B
+    A -->|"Load payloads in device firmware Corporate Control: Peripheral Code"| B
+    A -->|"Ensure compatibility with victim systems Corporate Control: Testing Setup"| B
+    B -->|"Victim curiosity or need prompts usage Third Party Control: Victim System"| C
+    B -->|"Device initializes malicious firmware Third Party Control: Device Driver"| C
+    B -->|"Malicious instructions are sent to host OS Third Party Control: Host OS"| C
+    B -->|"Implement obfuscation to bypass detection Corporate Control: Device Configuration"| C
+    C -->|"Payload execution begins on host system Third Party Control: Victim System"| D
+    C -->|"Establish foothold with persistence mechanisms Third Party Control: Malware Components"| D
+    C -->|"Evade system monitoring Corporate Control: Obfuscated Operations"| D
+    D -->|"Payload achieves intended malicious goals Third Party Control: Host System"| E
+    D -->|"Initial access established Corporate Control: Target Compromise"| E
+    D -->|"Network activity is monitored Corporate Control: Threat Analysis"| E

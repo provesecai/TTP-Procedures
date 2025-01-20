@@ -1,0 +1,23 @@
+graph TD;
+    A[Generate Malicious QR Code]
+    B[Distribute QR Code via Email or Physical Medium]
+    C[Victim Scans the QR Code]
+    D[Redirect to Malicious Site]
+    E[Initial Access Achieved]
+
+    A -->|"Create a QR code linking to a malicious website Corporate Control: QR Code Generator"| B
+    A -->|"Ensure the link is obfuscated to appear legitimate Corporate Control: Obfuscation Techniques"| B
+    A -->|"Embed payload into the linked website Corporate Control: Website Hosting"| B
+    A -->|"Test the functionality and stealth of the QR code Corporate Control: Testing Environment"| B
+    B -->|"Email or distribute QR codes on physical media Corporate Control: Distribution Channels"| C
+    B -->|"Use convincing text to encourage scanning Third Party Control: Social Engineering Tactics"| C
+    B -->|"Place codes in high-traffic areas for visibility Third Party Control: Public Locations"| C
+    B -->|"Avoid detection by security tools scanning for malicious links Corporate Control: Anti-Scanning Tools"| C
+    C -->|"Victim scans the QR code with their device Third Party Control: Victim Device"| D
+    C -->|"Redirects the victim to the malicious site Third Party Control: QR Code Reader"| D
+    C -->|"Uses social engineering to encourage further interaction Third Party Control: Victim Interaction"| D
+    C -->|"Victim unknowingly enables malicious payload Corporate Control: Exploit Activation"| D
+    D -->|"Payload executes on the victim's system Third Party Control: Exploited Device"| E
+    D -->|"Attempts to establish foothold or deliver malware Corporate Control: Malware Deployment"| E
+    D -->|"Initial access is achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Monitor for abnormal activity to avoid detection Corporate Control: Network Monitoring"| E

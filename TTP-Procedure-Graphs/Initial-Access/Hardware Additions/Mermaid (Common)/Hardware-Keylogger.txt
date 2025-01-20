@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Hardware-Based Keylogger]
+    B[Victim Connects Keylogger to System]
+    C[Keylogger Captures Credentials]
+    D[Transmits Captured Data]
+    E[Initial Access Achieved]
+
+    A -->|"Modify USB or keyboard hardware Corporate Control: Device Manufacturing"| B
+    A -->|"Embed credential-stealing firmware Corporate Control: Hardware Codebase"| B
+    A -->|"Distribute keyloggers through supply chain Corporate Control: Distribution Network"| B
+    B -->|"Keylogger installed unknowingly by victim Third Party Control: Victim Device"| C
+    B -->|"Device initializes without suspicion Third Party Control: Input Device"| C
+    C -->|"Keystrokes are recorded and stored Third Party Control: Victim System"| D
+    C -->|"Captured data includes sensitive credentials Third Party Control: User Interaction"| D
+    D -->|"Transmits data to attacker-controlled server Third Party Control: C2 Server"| E
+    D -->|"Access credentials enable initial compromise Corporate Control: Target Network"| E

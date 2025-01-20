@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Baited-Peripheral-Enterprise-Malicious-Mouse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Distribute Malicious Mice in Offices</data>
+</node>
+<node id="B">
+<data key="label">Victim Connects Mouse to Enterprise System</data>
+</node>
+<node id="C">
+<data key="label">Mouse Firmware Executes Commands</data>
+</node>
+<node id="D">
+<data key="label">Exploits Endpoint Vulnerabilities</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed malicious firmware in mouse Corporate Control: Device Preparation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy devices in targeted offices Corporate Control: Device Distribution</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure compatibility with enterprise systems Corporate Control: Firmware Design</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victim unknowingly uses compromised mouse Third Party Control: Human Behavior</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Mouse executes hidden keystroke commands Third Party Control: OS Interface</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Commands exploit known vulnerabilities Corporate Control: OS Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload bypasses detection with obfuscation Corporate Control: Malware Design</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial foothold established via privilege escalation Third Party Control: System Privileges</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor system for unusual behavior Corporate Control: Threat Detection</data>
+</edge>
+</graph>
+</graphml>

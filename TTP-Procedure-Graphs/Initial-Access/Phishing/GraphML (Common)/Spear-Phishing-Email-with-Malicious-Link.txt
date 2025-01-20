@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Spear_Phishing_Email_with_Malicious_Link" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Craft Convincing Phishing Email</data>
+</node>
+<node id="B">
+<data key="label">Include Malicious Link</data>
+</node>
+<node id="C">
+<data key="label">Victim Clicks the Link</data>
+</node>
+<node id="D">
+<data key="label">Malicious Content Delivered</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Create realistic phishing email content Corporate Control: Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Include personalized details to avoid suspicion Third Party Control: Email Service Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure credibility through sender details Corporate Control: Email Sender Domain</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by spam filters Third Party Control: Anti-Spam Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host malicious website with payload Third Party Control: Web Hosting Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use HTTPS to avoid browser warnings Third Party Control: SSL Certificate</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect to legitimate site post-infection Third Party Control: Redirect Script</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor user interactions for payload delivery Corporate Control: Web Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim visits the malicious site Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploits or scripts are delivered Third Party Control: Malicious Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Initiates execution of malicious payload Third Party Control: Exploit Script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use stealth techniques to bypass detection Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit victim’s browser or application Third Party Control: Browser Plugin</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload on victim’s system Corporate Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish foothold for further compromise Corporate Control: Initial System Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid triggering alerts or defenses Corporate Control: Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

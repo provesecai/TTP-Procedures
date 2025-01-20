@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_USB_Devices" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify USB Firmware</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised USB Devices</data>
+</node>
+<node id="C">
+<data key="label">Target Connects USB</data>
+</node>
+<node id="D">
+<data key="label">Malicious Firmware Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Inject malicious code into USB firmware, bypassing antivirus detection Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test firmware behavior to ensure compatibility with target systems Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leave USB drives in target's facilities or deliver via mail Third Party Control: Physical Locations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create USB branding to increase credibility (e.g., corporate logos) Third Party Control: USB Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim plugs USB into machine, triggering firmware execution Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Firmware emulates HID devices (e.g., keyboard, mouse) to inject commands Third Party Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit vulnerabilities in host system to gain code execution Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Install persistence mechanisms or initiate data exfiltration Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

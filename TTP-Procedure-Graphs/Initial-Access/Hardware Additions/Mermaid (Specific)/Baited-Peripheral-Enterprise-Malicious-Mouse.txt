@@ -1,0 +1,16 @@
+graph TD;
+    A[Distribute Malicious Mice in Offices]
+    B[Victim Connects Mouse to Enterprise System]
+    C[Mouse Firmware Executes Commands]
+    D[Exploits Endpoint Vulnerabilities]
+    E[Initial Access Achieved]
+
+    A -->|"Embed malicious firmware in mouse Corporate Control: Device Preparation"| B
+    A -->|"Deploy devices in targeted offices Corporate Control: Device Distribution"| B
+    A -->|"Ensure compatibility with enterprise systems Corporate Control: Firmware Design"| B
+    B -->|"Victim unknowingly uses compromised mouse Third Party Control: Human Behavior"| C
+    B -->|"Mouse executes hidden keystroke commands Third Party Control: OS Interface"| C
+    C -->|"Commands exploit known vulnerabilities Corporate Control: OS Configuration"| D
+    C -->|"Payload bypasses detection with obfuscation Corporate Control: Malware Design"| D
+    D -->|"Initial foothold established via privilege escalation Third Party Control: System Privileges"| E
+    D -->|"Monitor system for unusual behavior Corporate Control: Threat Detection"| E

@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Compromised Charging Station]
+    B[Victim Connects Device]
+    C[Station Exploits Device Vulnerabilities]
+    D[Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Modify public charging stations Corporate Control: Charging Station Hardware"| B
+    A -->|"Embed malicious firmware to exploit devices Corporate Control: Station Firmware"| B
+    A -->|"Deploy stations in high-traffic locations Corporate Control: Public Spaces"| B
+    B -->|"Victims connect devices to charge Third Party Control: Victim Device"| C
+    B -->|"Station identifies connected device vulnerabilities Third Party Control: USB Interface"| C
+    C -->|"Payload initiates on victim system Third Party Control: Victim OS"| D
+    C -->|"Malware spreads through connected system Third Party Control: Device Data"| D
+    D -->|"Persistence mechanisms are established Third Party Control: Malware Components"| E
+    D -->|"Initial access achieved for further compromise Corporate Control: Command and Control"| E

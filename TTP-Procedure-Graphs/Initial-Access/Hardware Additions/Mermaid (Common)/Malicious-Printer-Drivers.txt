@@ -1,0 +1,16 @@
+graph TD;
+    A[Distribute Printers with Malicious Drivers]
+    B[Victim Installs Printer]
+    C[Malicious Driver Executes]
+    D[Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Embed malware in printer drivers Corporate Control: Driver Codebase"| B
+    A -->|"Distribute printers to unsuspecting users Corporate Control: Device Logistics"| B
+    A -->|"Obfuscate malicious payload for detection evasion Corporate Control: Driver Payload"| B
+    B -->|"Drivers installed on victim systems Third Party Control: Victim OS"| C
+    B -->|"Printer initializes malicious functionality Third Party Control: Device Setup"| C
+    C -->|"Payload starts executing commands Third Party Control: Victim System"| D
+    C -->|"Establish foothold through backdoor creation Corporate Control: Malware Persistence"| D
+    D -->|"Payload achieves initial compromise goals Third Party Control: Host System"| E
+    D -->|"Initial access confirmed Corporate Control: Target Compromise"| E

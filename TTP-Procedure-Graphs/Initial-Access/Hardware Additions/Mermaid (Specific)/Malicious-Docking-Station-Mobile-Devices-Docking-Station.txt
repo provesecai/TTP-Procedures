@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Modified Docking Stations in Airports]
+    B[Device Connects to Dock for Charging]
+    C[Dock Exploits Mobile OS Vulnerabilities]
+    D[Malicious Payload Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Embed exploit code in docking firmware Corporate Control: Hardware Modification"| B
+    A -->|"Deploy stations in high-traffic areas Corporate Control: Public Spaces"| B
+    A -->|"Target popular mobile OS vulnerabilities Corporate Control: Firmware Exploits"| B
+    B -->|"Device connects for charging Third Party Control: Mobile Device"| C
+    B -->|"Dock exploits vulnerabilities in charging protocols Third Party Control: USB Protocol"| C
+    C -->|"Malicious payload installs on mobile OS Third Party Control: Mobile OS"| D
+    C -->|"Persistent backdoor is established Third Party Control: Malware Components"| D
+    D -->|"Attacker gains foothold on victim's mobile device Corporate Control: Initial Compromise"| E
+    D -->|"Monitor device for further exploitation Corporate Control: Threat Analysis"| E

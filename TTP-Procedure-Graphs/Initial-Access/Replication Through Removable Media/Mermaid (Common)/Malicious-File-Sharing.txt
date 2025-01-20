@@ -1,0 +1,15 @@
+graph TD;
+    A[Create Infected Files]
+    B[Distribute USB Device with Files]
+    C[Target Opens Infected File]
+    D[Payload Execution]
+    E[Initial Access Achieved]
+
+    A -->|"Embed malware into common file types (e.g., PDF, DOCX) Corporate Control: Attacker System"| B
+    A -->|"Craft files with enticing names like 'Employee_Salaries.xlsx' Corporate Control: Attacker System"| B
+    B -->|"Copy files to USB devices and leave them in target-rich environments Third Party Control: USB Device"| C
+    B -->|"Plant devices at conventions, offices, or public spaces Third Party Control: Physical Locations"| C
+    C -->|"Victim opens file, triggering embedded malicious macros Third Party Control: Target System"| D
+    C -->|"Malware bypasses defenses, leveraging file format vulnerabilities Third Party Control: Target System"| D
+    D -->|"Payload executes to exfiltrate data or create backdoor Corporate Control: Victim Device"| E
+    D -->|"Initial access established for remote attacker operations Corporate Control: Victim Device"| E

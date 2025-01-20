@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fake_Login_Page" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Design Fake Login Page</data>
+</node>
+<node id="B">
+<data key="label">Send Phishing Email</data>
+</node>
+<node id="C">
+<data key="label">Victim Enters Credentials</data>
+</node>
+<node id="D">
+<data key="label">Credentials Captured</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Create a page mimicking a trusted service Corporate Control: Website Template</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure page is visually identical to original Third Party Control: Web Hosting Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host page on a deceptive domain Third Party Control: Domain Registrar</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test page functionality for capturing input Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Personalize phishing email for credibility Corporate Control: Email Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Include a direct link to the fake page Third Party Control: URL Shortener</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use urgency or fear to prompt victim action Corporate Control: Social Engineering Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid spam detection mechanisms Third Party Control: Email Filtering Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim visits the fake page Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Enters credentials into the input fields Corporate Control: Web Form</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Credentials are captured in real-time Corporate Control: Credential Storage System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirects victim to original login page Third Party Control: Legitimate Website</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credentials are stored securely by the attacker Corporate Control: Malicious Database</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepares for account takeover Corporate Control: Credential Analysis Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Enables system or network access using credentials Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitors activity for further exploitation Corporate Control: Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

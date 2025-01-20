@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-USB-Charging-Station" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Compromised Charging Station</data>
+</node>
+<node id="B">
+<data key="label">Victim Connects Device</data>
+</node>
+<node id="C">
+<data key="label">Station Exploits Device Vulnerabilities</data>
+</node>
+<node id="D">
+<data key="label">Payload Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify public charging stations Corporate Control: Charging Station Hardware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious firmware to exploit devices Corporate Control: Station Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy stations in high-traffic locations Corporate Control: Public Spaces</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victims connect devices to charge Third Party Control: Victim Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Station identifies connected device vulnerabilities Third Party Control: USB Interface</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload initiates on victim system Third Party Control: Victim OS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware spreads through connected system Third Party Control: Device Data</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistence mechanisms are established Third Party Control: Malware Components</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further compromise Corporate Control: Command and Control</data>
+</edge>
+</graph>
+</graphml>

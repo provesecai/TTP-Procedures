@@ -1,0 +1,15 @@
+graph TD;
+    A[Compromise USB Supply Chain]
+    B[Distribute Infected USB Drives]
+    C[Victim Connects USB]
+    D[Payload Execution]
+    E[Initial Access Achieved]
+
+    A -->|"Inject malware during USB manufacturing or distribution Corporate Control: Attacker's Supply Chain Access"| B
+    A -->|"Ensure malware is embedded in USB controller firmware Corporate Control: Attacker System"| B
+    B -->|"Distribute infected USB drives through legitimate retail channels Third Party Control: Retail Supply Chain"| C
+    B -->|"Target bulk purchases for large organizations Third Party Control: Corporate Buyers"| C
+    C -->|"Victim unknowingly connects infected USB to a workstation Third Party Control: Target System"| D
+    C -->|"Malicious firmware executes upon USB insertion Third Party Control: Target System"| D
+    D -->|"Firmware installs a backdoor or initiates data exfiltration Corporate Control: Victim Device"| E
+    D -->|"Initial access established for further compromise Corporate Control: Victim Device"| E

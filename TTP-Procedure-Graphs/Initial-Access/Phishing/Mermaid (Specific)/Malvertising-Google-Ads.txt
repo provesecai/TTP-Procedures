@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Ad Campaign]
+    B[Deploy Malicious Ads via Google Ads Platform]
+    C[Victim Clicks on Malicious Ad]
+    D[Redirects to Malicious Website]
+    E[Initial Access Achieved]
+
+    A -->|"Design ads that mimic legitimate businesses Corporate Control: Ad Design"| B
+    A -->|"Include links redirecting to malicious sites Corporate Control: Malicious Redirect URL"| B
+    A -->|"Ensure ad compliance to bypass Google’s ad review process Third Party Control: Ad Review Process"| B
+    A -->|"Test ad delivery on targeted platforms Corporate Control: Testing Tools"| B
+    B -->|"Deploy ads on Google Ads platform targeting specific demographics Corporate Control: Ad Targeting"| C
+    B -->|"Target users based on browsing behavior or interests Third Party Control: Google Ads Targeting System"| C
+    B -->|"Optimize ads for high visibility Corporate Control: Ad Optimization Tools"| C
+    B -->|"Avoid detection by modifying ad metadata Corporate Control: Metadata Obfuscation"| C
+    C -->|"Victim clicks on the ad and is redirected to a malicious site Third Party Control: Victim Browser"| D
+    C -->|"Redirect URL leads to a payload delivery page Corporate Control: Malicious Landing Page"| D
+    C -->|"Victim unknowingly downloads malicious content Corporate Control: Drive-By Download Mechanism"| D
+    C -->|"Avoid immediate detection using sandbox evasion Corporate Control: Exploit Evasion Techniques"| D
+    D -->|"Malware executes on the victim’s device Third Party Control: Victim Device"| E
+    D -->|"Establish foothold within victim system Corporate Control: Initial System Compromise"| E
+    D -->|"Prepare for lateral movement or data exfiltration Corporate Control: Network Access"| E
+    D -->|"Monitor for security detection during execution Corporate Control: Security Monitoring Tools"| E

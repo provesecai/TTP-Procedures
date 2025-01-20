@@ -1,0 +1,16 @@
+graph TD;
+    A[Compromise Laptops During Shipment]
+    B[Malware Preloaded on Device]
+    C[Victim Activates Device]
+    D[Malicious Code Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Intercept devices during delivery Corporate Control: Logistics Provider"| B
+    A -->|"Install backdoor in OS bootloader Corporate Control: OS Firmware"| B
+    A -->|"Ensure stealth with obfuscated payloads Corporate Control: Malware Design"| B
+    B -->|"Deliver compromised devices to enterprises Third Party Control: Corporate Supply Chain"| C
+    B -->|"Device initialized by enterprise staff Third Party Control: Device Activation"| C
+    C -->|"Backdoor executes upon first boot Third Party Control: OS Startup"| D
+    C -->|"Payload gains network access Corporate Control: Internal Network"| D
+    D -->|"Initial access confirmed on corporate systems Third Party Control: Endpoint Systems"| E
+    D -->|"Monitor for unusual device behavior Corporate Control: Network Monitoring"| E

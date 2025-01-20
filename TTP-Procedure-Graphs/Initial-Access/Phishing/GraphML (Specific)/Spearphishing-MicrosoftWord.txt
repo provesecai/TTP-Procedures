@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Spear_Phishing_Microsoft_Word" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Word Document</data>
+</node>
+<node id="B">
+<data key="label">Send Phishing Email Containing Word Document</data>
+</node>
+<node id="C">
+<data key="label">Victim Opens Malicious Document</data>
+</node>
+<node id="D">
+<data key="label">Document Executes Malicious Macro</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design Word document with embedded malicious macro Corporate Control: Macro Development</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate macro to bypass detection tools Corporate Control: Obfuscation Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test macro payload in a sandboxed environment Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure compatibility with targeted Word versions Corporate Control: Compatibility Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send phishing email to victim with malicious attachment Corporate Control: Email System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use convincing social engineering techniques Corporate Control: Email Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid email filtering with header manipulation Third Party Control: Email Filtering System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target specific individuals within the organization Corporate Control: Victim Selection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim opens the document and enables macros Third Party Control: Victim Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Macro executes and downloads additional payloads Corporate Control: Malicious Macro</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid immediate detection through stealth Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Gain execution on victim's device through exploit Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes on the system and establishes foothold Corporate Control: Malware Execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved Corporate Control: Compromised Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement within the network Corporate Control: Network Exploitation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection by security tools Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

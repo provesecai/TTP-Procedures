@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malvertising_Third_Party_Ads" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Third-Party Ad Network</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Ad Network</data>
+</node>
+<node id="C">
+<data key="label">Ads Delivered to Legitimate Websites</data>
+</node>
+<node id="D">
+<data key="label">Victim Interacts with Ads</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify vulnerabilities in the ad network infrastructure Corporate Control: Ad Network Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit misconfigured permissions or outdated software Third Party Control: Ad Network Infrastructure</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain access to ad delivery pipelines Corporate Control: Ad Delivery System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into advertisements Corporate Control: Ad Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious ads are delivered to high-traffic websites Third Party Control: Website Ad Space</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test code execution on ad-enabled websites Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by network monitoring tools Corporate Control: Obfuscation Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target specific demographics through ad network settings Corporate Control: Ad Targeting Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Legitimate websites display malicious ads Third Party Control: Publisher Website</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim interacts with the malicious ad Corporate Control: Victim Interaction</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirects victim to a malicious site hosting payload Corporate Control: Exploit Landing Page</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ad network’s legitimate status helps bypass scrutiny Third Party Control: Ad Verification Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload triggers and executes on victim’s device Corporate Control: Exploit Code</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Foothold established for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor system activity to avoid detection Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for persistence or lateral movement Corporate Control: Exploitation Scripts</data>
+</edge>
+</graph>
+</graphml>

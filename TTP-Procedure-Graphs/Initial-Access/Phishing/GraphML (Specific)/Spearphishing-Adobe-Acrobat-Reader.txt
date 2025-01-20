@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Spear_Phishing_Adobe_Acrobat_Reader" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Craft Phishing Email with Malicious PDF Attachment</data>
+</node>
+<node id="B">
+<data key="label">Send Email to Targeted User</data>
+</node>
+<node id="C">
+<data key="label">Victim Opens Malicious PDF</data>
+</node>
+<node id="D">
+<data key="label">PDF Exploits Vulnerability in Acrobat Reader</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Create a PDF containing embedded exploit Corporate Control: Exploit Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test payload against Acrobat Reader vulnerabilities Third Party Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use obfuscation to bypass detection Corporate Control: PDF Obfuscation Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure compatibility with targeted Acrobat Reader version Corporate Control: Version Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send phishing email using a spoofed sender Corporate Control: Email Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Include subject line to lure victim Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid spam filters using email header manipulation Third Party Control: Email Filtering Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target employees in sensitive roles Corporate Control: Email Recipient List</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim opens the PDF on their system Third Party Control: Victim Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit triggers due to unpatched vulnerability Corporate Control: Exploited Software</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypasses endpoint protection using obfuscation Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious payload begins to execute Third Party Control: Embedded Exploit</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload establishes a foothold on the victim system Corporate Control: Malware Execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further actions Corporate Control: Initial System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor system for detection by antivirus Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation through persistence Corporate Control: Backdoor Installation</data>
+</edge>
+</graph>
+</graphml>

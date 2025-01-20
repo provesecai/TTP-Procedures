@@ -1,0 +1,23 @@
+graph TD;
+    A[Send Phishing Email to Targeted Users]
+    B[Include Link to Fake Office365 Login Page]
+    C[User Clicks the Link]
+    D[User Enters Credentials on Fake Page]
+    E[Initial Access Achieved]
+
+    A -->|"Craft email mimicking trusted sources Corporate Control: Email System"| B
+    A -->|"Include a link designed to look legitimate Third Party Control: Fake Website"| B
+    A -->|"Use urgency to prompt user action Corporate Control: Email Content"| B
+    A -->|"Avoid detection by spam filters Corporate Control: Email Filtering Tools"| B
+    B -->|"Host fake login page mimicking Office365 login Third Party Control: Fake Login Page"| C
+    B -->|"Use HTTPS to avoid browser warnings Third Party Control: SSL Certificate"| C
+    B -->|"Design page to capture entered credentials Corporate Control: Credential Harvesting System"| C
+    B -->|"Redirect to legitimate Office365 page after credentials are entered Corporate Control: Redirect Script"| C
+    C -->|"User visits the fake login page Third Party Control: Victim Browser"| D
+    C -->|"Enters credentials into the fake login form Corporate Control: Fake Login Form"| D
+    C -->|"Credentials are sent to the attacker Third Party Control: Data Collection Server"| D
+    C -->|"Redirects user to the original Office365 site Third Party Control: Legitimate Office365 Site"| D
+    D -->|"Attacker uses credentials for unauthorized access Corporate Control: Compromised Account"| E
+    D -->|"Establish foothold in Office365 environment Corporate Control: Office365 Platform"| E
+    D -->|"Monitor activity for suspicious behavior Corporate Control: Security Monitoring Tools"| E
+    D -->|"Prepare for further exploitation through the account Corporate Control: Stolen Credentials"| E

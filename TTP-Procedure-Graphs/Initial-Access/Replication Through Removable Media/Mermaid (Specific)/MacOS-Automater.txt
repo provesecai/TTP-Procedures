@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Automator Workflow]
+    B[Deploy Workflow and Support Files to USB Drive]
+    C[Insert USB Drive into Victim's macOS System]
+    D[Victim Launches Workflow via Finder]
+    E[Initial Access Achieved]
+
+    A -->|"Design a malicious Automator workflow Corporate Control: Automator Workflow Tools"| B
+    A -->|"Use legitimate-looking app icons and names Third Party Control: Branding Mimicry"| B
+    A -->|"Sign workflow with stolen or fake certificate Corporate Control: Developer Certificate"| B
+    A -->|"Test compatibility across macOS versions Corporate Control: Testing Environment"| B
+    B -->|"Deploy USB drives through targeted campaigns Corporate Control: USB Distribution Campaign"| C
+    B -->|"Label workflows as productivity tools to entice usage Corporate Control: Social Engineering Techniques"| C
+    B -->|"Avoid Gatekeeper warnings with certificate signing Corporate Control: Gatekeeper Bypass"| C
+    B -->|"Place workflow in a prominent folder on the USB Corporate Control: Drive Organization"| C
+    C -->|"Victim accesses the USB drive via Finder Third Party Control: Finder App"| D
+    C -->|"Workflow executes malicious commands Corporate Control: Workflow Execution"| D
+    C -->|"Commands install payload for persistence Corporate Control: Payload Delivery"| D
+    C -->|"Avoid detection with macOS stealth techniques Corporate Control: Stealth Techniques"| D
+    D -->|"Malware establishes communication with attacker Corporate Control: Command and Control"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Monitor system for signs of detection Corporate Control: Endpoint Monitoring"| E
+    D -->|"Prepare for lateral movement Corporate Control: Exploitation Scripts"| E

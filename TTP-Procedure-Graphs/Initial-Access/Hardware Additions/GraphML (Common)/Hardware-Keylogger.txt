@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hardware-Keylogger" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Hardware-Based Keylogger</data>
+</node>
+<node id="B">
+<data key="label">Victim Connects Keylogger to System</data>
+</node>
+<node id="C">
+<data key="label">Keylogger Captures Credentials</data>
+</node>
+<node id="D">
+<data key="label">Transmits Captured Data</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Modify USB or keyboard hardware Corporate Control: Device Manufacturing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed credential-stealing firmware Corporate Control: Hardware Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Distribute keyloggers through supply chain Corporate Control: Distribution Network</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Keylogger installed unknowingly by victim Third Party Control: Victim Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Device initializes without suspicion Third Party Control: Input Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Keystrokes are recorded and stored Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Captured data includes sensitive credentials Third Party Control: User Interaction</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Transmits data to attacker-controlled server Third Party Control: C2 Server</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access credentials enable initial compromise Corporate Control: Target Network</data>
+</edge>
+</graph>
+</graphml>

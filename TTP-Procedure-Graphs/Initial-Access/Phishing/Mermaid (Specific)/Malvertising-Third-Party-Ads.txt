@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Third-Party Ad Network]
+    B[Inject Malicious Code into Ad Network]
+    C[Ads Delivered to Legitimate Websites]
+    D[Victim Interacts with Ads]
+    E[Initial Access Achieved]
+
+    A -->|"Identify vulnerabilities in the ad network infrastructure Corporate Control: Ad Network Analysis"| B
+    A -->|"Exploit misconfigured permissions or outdated software Third Party Control: Ad Network Infrastructure"| B
+    A -->|"Gain access to ad delivery pipelines Corporate Control: Ad Delivery System"| B
+    A -->|"Inject malicious code into advertisements Corporate Control: Ad Content"| B
+    B -->|"Ensure malicious ads are delivered to high-traffic websites Third Party Control: Website Ad Space"| C
+    B -->|"Test code execution on ad-enabled websites Corporate Control: Testing Environment"| C
+    B -->|"Avoid detection by network monitoring tools Corporate Control: Obfuscation Techniques"| C
+    B -->|"Target specific demographics through ad network settings Corporate Control: Ad Targeting Tools"| C
+    C -->|"Legitimate websites display malicious ads Third Party Control: Publisher Website"| D
+    C -->|"Victim interacts with the malicious ad Corporate Control: Victim Interaction"| D
+    C -->|"Redirects victim to a malicious site hosting payload Corporate Control: Exploit Landing Page"| D
+    C -->|"Ad network’s legitimate status helps bypass scrutiny Third Party Control: Ad Verification Systems"| D
+    D -->|"Payload triggers and executes on victim’s device Corporate Control: Exploit Code"| E
+    D -->|"Foothold established for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Monitor system activity to avoid detection Corporate Control: Security Monitoring Tools"| E
+    D -->|"Prepare for persistence or lateral movement Corporate Control: Exploitation Scripts"| E

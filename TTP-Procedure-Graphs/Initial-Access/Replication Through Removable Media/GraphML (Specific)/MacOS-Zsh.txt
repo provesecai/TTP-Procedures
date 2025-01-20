@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="macOS_Zsh_Script" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Zsh Script</data>
+</node>
+<node id="B">
+<data key="label">Deploy Script to USB Drive</data>
+</node>
+<node id="C">
+<data key="label">Insert USB Drive into Victim's macOS System</data>
+</node>
+<node id="D">
+<data key="label">Victim Executes Script Manually</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Write Zsh script to execute malicious commands Corporate Control: Zsh Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed obfuscated payload to bypass security tools Corporate Control: Obfuscation Techniques</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test script compatibility across macOS versions Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure script prompts victim interaction Corporate Control: Behavioral Exploitation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute USB drives via social engineering campaigns Corporate Control: USB Deployment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Label USB drives to appear enticing Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place scripts in prominent directories Corporate Control: Drive Organization</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid macOS security alerts during execution Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim views and executes Zsh script Third Party Control: Terminal App</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script triggers execution of embedded payload Corporate Control: Exploit Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload installs persistence mechanisms Corporate Control: Malware Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by macOS monitoring tools Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Backdoor establishes communication with attacker Corporate Control: C2 Communication</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Exploitation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection Corporate Control: Endpoint Monitoring</data>
+</edge>
+</graph>
+</graphml>

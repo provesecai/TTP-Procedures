@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Fake LinkedIn Profile]
+    B[Send Connection Requests to Targeted Users]
+    C[Engage Victims with Malicious Links in Messages]
+    D[Victim Clicks Link and Triggers Exploit]
+    E[Initial Access Achieved]
+
+    A -->|"Set up a fake profile mimicking a trusted professional Corporate Control: Fake Profile"| B
+    A -->|"Use stolen images and details for authenticity Third Party Control: Stolen Identity Data"| B
+    A -->|"Target specific industries or professionals Corporate Control: Targeting Criteria"| B
+    A -->|"Avoid LinkedIn’s detection algorithms Corporate Control: Obfuscation Techniques"| B
+    B -->|"Send connection requests to potential victims Corporate Control: Outreach Campaign"| C
+    B -->|"Engage with victims using professional context Corporate Control: Social Engineering Messages"| C
+    B -->|"Embed malicious links in messages Corporate Control: Malicious URL"| C
+    B -->|"Encourage victim to click by offering opportunities Third Party Control: Social Engineering Techniques"| C
+    C -->|"Victim clicks on malicious link in message Third Party Control: Victim Browser"| D
+    C -->|"Redirects to a malicious landing page Corporate Control: Malicious Website"| D
+    C -->|"Triggers exploit code to compromise victim’s device Third Party Control: Exploit Script"| D
+    C -->|"Avoid detection using obfuscation Corporate Control: Stealth Techniques"| D
+    D -->|"Payload executes and establishes initial access Corporate Control: Malware Delivery"| E
+    D -->|"Foothold established for further exploitation Corporate Control: Compromised System"| E
+    D -->|"Monitor for signs of detection Corporate Control: Endpoint Monitoring"| E
+    D -->|"Prepare for lateral movement or persistence Corporate Control: Exploitation Tools"| E

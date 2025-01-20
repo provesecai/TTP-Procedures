@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Device-Supply-Chain-Enterprise-Laptops" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Laptops During Shipment</data>
+</node>
+<node id="B">
+<data key="label">Malware Preloaded on Device</data>
+</node>
+<node id="C">
+<data key="label">Victim Activates Device</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Intercept devices during delivery Corporate Control: Logistics Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Install backdoor in OS bootloader Corporate Control: OS Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure stealth with obfuscated payloads Corporate Control: Malware Design</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver compromised devices to enterprises Third Party Control: Corporate Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Device initialized by enterprise staff Third Party Control: Device Activation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoor executes upon first boot Third Party Control: OS Startup</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload gains network access Corporate Control: Internal Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access confirmed on corporate systems Third Party Control: Endpoint Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual device behavior Corporate Control: Network Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Firmware-Modification-IoT" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Firmware in IoT Devices</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised IoT Devices</data>
+</node>
+<node id="C">
+<data key="label">IoT Device Activated by Victim</data>
+</node>
+<node id="D">
+<data key="label">Malicious Firmware Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access firmware during manufacturing Corporate Control: IoT Manufacturer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject backdoor into firmware Corporate Control: Firmware Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test for stealth and compatibility Corporate Control: Device Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compromised devices distributed to targets Third Party Control: Supply Chain</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victim unknowingly activates device Third Party Control: IoT Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious firmware establishes network presence Third Party Control: Home Network</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Device begins communicating with C2 servers Third Party Control: IoT Software</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistent access established through backdoor Corporate Control: Command Link</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Corporate Control: Target Network</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,15 @@
+graph TD;
+    A[Create Hidden Partition]
+    B[Plant USB in Target Environment]
+    C[Victim Inserts USB]
+    D[Hidden Partition Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Use tools to create hidden, bootable partition on USB drive Corporate Control: Attacker System"| B
+    A -->|"Configure hidden partition to deliver payload upon insertion Corporate Control: Attacker System"| B
+    B -->|"Leave USB drives in strategic locations (e.g., parking lots, lobbies) Third Party Control: Physical Environment"| C
+    B -->|"Use realistic labels or markings to entice victims Third Party Control: USB Device"| C
+    C -->|"Victim inserts USB, triggering hidden partition execution Third Party Control: Target System"| D
+    C -->|"Hidden partition bypasses user interaction to deploy payload Third Party Control: Target System"| D
+    D -->|"Payload executes to establish a foothold in the system Corporate Control: Victim Device"| E
+    D -->|"Attacker gains remote access or deploys additional tools Corporate Control: Victim Device"| E

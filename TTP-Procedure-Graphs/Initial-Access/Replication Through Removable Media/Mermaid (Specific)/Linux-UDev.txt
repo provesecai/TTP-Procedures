@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious UDev Rule]
+    B[Deploy Rule and Payload to USB Drive]
+    C[Insert USB Drive into Victim's Linux System]
+    D[UDev Rule Executes Malicious Payload]
+    E[Initial Access Achieved]
+
+    A -->|"Craft a UDev rule to trigger on USB insertion Corporate Control: UDev Configuration"| B
+    A -->|"Embed malicious script to execute payload Corporate Control: Script Development"| B
+    A -->|"Test UDev rule across Linux distributions Corporate Control: Testing Environment"| B
+    A -->|"Obfuscate script to evade detection tools Corporate Control: Obfuscation Techniques"| B
+    B -->|"Deploy USB drives in targeted locations Corporate Control: USB Distribution"| C
+    B -->|"Label drives to appear as legitimate Corporate Control: Social Engineering Techniques"| C
+    B -->|"Leverage human curiosity to prompt usage Corporate Control: Behavioral Exploitation"| C
+    B -->|"Avoid detection by Linux endpoint tools Corporate Control: Endpoint Protection"| C
+    C -->|"Victim inserts USB drive into Linux machine Third Party Control: Linux System"| D
+    C -->|"UDev rule triggers execution of the malicious script Corporate Control: Exploit Execution"| D
+    C -->|"Script installs backdoor for persistence Corporate Control: Malware Persistence"| D
+    C -->|"Avoid detection by monitoring system activity Corporate Control: Monitoring Tools"| D
+    D -->|"Backdoor establishes command-and-control communication Corporate Control: C2 Communication"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Prepare for lateral movement Corporate Control: Exploitation Scripts"| E
+    D -->|"Monitor for signs of detection Corporate Control: Endpoint Monitoring"| E

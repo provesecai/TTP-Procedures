@@ -1,0 +1,15 @@
+graph TD;
+    A[Create Malicious Autorun File]
+    B[Distribute USB Device]
+    C[User Connects USB]
+    D[Payload Execution]
+    E[Initial Access Achieved]
+
+    A -->|"Craft an autorun.inf file to launch malicious payload when USB is inserted Corporate Control: Attacker System"| B
+    A -->|"Embed malicious executables and scripts in USB drive Corporate Control: Attacker System"| B
+    B -->|"Leave USB devices in high-traffic areas (e.g., parking lots, lobbies) Third Party Control: Physical Environment"| C
+    B -->|"Use branding or enticing labels to encourage use Third Party Control: USB Packaging"| C
+    C -->|"Victim unknowingly plugs USB into their computer, triggering autorun Third Party Control: Target Device"| D
+    C -->|"Payload executes with user permissions, delivering initial exploit Third Party Control: Target Device"| D
+    D -->|"Exploit vulnerabilities or execute payload to gain system access Corporate Control: Victim Device"| E
+    D -->|"Foothold established for further exploitation Corporate Control: Victim Device"| E

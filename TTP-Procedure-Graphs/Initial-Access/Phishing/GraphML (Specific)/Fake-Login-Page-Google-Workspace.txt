@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fake_Login_Page_Google_Workspace" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Fake Gmail Login Page</data>
+</node>
+<node id="B">
+<data key="label">Send Phishing Email Containing Link to Fake Page</data>
+</node>
+<node id="C">
+<data key="label">Victim Clicks Link and Visits Fake Page</data>
+</node>
+<node id="D">
+<data key="label">Victim Enters Gmail Credentials</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design a fake Gmail login page mimicking the legitimate site Corporate Control: Fake Login Page</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Host fake page on a deceptive domain Third Party Control: Malicious Hosting Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure page uses HTTPS for credibility Third Party Control: SSL Certificate</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare scripts to capture and store entered credentials Corporate Control: Credential Harvesting Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send phishing email to targeted Gmail users Corporate Control: Email System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft email content with urgency to prompt victim action Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by Gmail spam filters Third Party Control: Spam Filter Evasion</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use sender spoofing to mimic trusted entities Third Party Control: Spoofing Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim clicks link and is redirected to fake page Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Fake page captures credentials as they are entered Corporate Control: Credential Capture Script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect victim to legitimate Gmail site post-login Corporate Control: Redirect Script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Credentials are sent to attacker’s storage server Corporate Control: Malicious Credential Database</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker logs into victim’s Gmail account Corporate Control: Compromised Gmail Account</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish foothold in Google Workspace environment Corporate Control: Workspace Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Gmail activity for sensitive information Corporate Control: Account Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further attacks leveraging compromised account Corporate Control: Lateral Movement Preparation</data>
+</edge>
+</graph>
+</graphml>

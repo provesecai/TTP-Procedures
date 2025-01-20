@@ -1,0 +1,15 @@
+graph TD;
+    A[Create Bootable USB with Malware]
+    B[Deliver USB to Target]
+    C[Victim Boots from USB]
+    D[Malware Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Prepare bootable USB with malicious OS image Corporate Control: Attacker System"| B
+    A -->|"Configure USB to bypass boot security settings Corporate Control: Attacker System"| B
+    B -->|"Place USB drives in target locations or send via mail Third Party Control: Physical Distribution"| C
+    B -->|"Use deceptive labels (e.g., 'Secure Backup') to increase trust Third Party Control: USB Packaging"| C
+    C -->|"Victim boots system using USB, unknowingly loading malicious OS Third Party Control: Target System"| D
+    C -->|"Malicious OS bypasses authentication and deploys payloads Third Party Control: Target System"| D
+    D -->|"Payload installs backdoor or exfiltrates sensitive data Corporate Control: Victim Device"| E
+    D -->|"Initial foothold established for further actions Corporate Control: Victim Device"| E

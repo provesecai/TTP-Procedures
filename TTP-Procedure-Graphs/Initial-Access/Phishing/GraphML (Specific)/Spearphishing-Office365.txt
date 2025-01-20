@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Spear_Phishing_Office365" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Send Phishing Email to Targeted Users</data>
+</node>
+<node id="B">
+<data key="label">Include Link to Fake Office365 Login Page</data>
+</node>
+<node id="C">
+<data key="label">User Clicks the Link</data>
+</node>
+<node id="D">
+<data key="label">User Enters Credentials on Fake Page</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Craft email mimicking trusted sources Corporate Control: Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Include a link designed to look legitimate Third Party Control: Fake Website</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use urgency to prompt user action Corporate Control: Email Content</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by spam filters Corporate Control: Email Filtering Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host fake login page mimicking Office365 login Third Party Control: Fake Login Page</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use HTTPS to avoid browser warnings Third Party Control: SSL Certificate</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Design page to capture entered credentials Corporate Control: Credential Harvesting System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect to legitimate Office365 page after credentials are entered Corporate Control: Redirect Script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User visits the fake login page Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Enters credentials into the fake login form Corporate Control: Fake Login Form</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Credentials are sent to the attacker Third Party Control: Data Collection Server</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirects user to the original Office365 site Third Party Control: Legitimate Office365 Site</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker uses credentials for unauthorized access Corporate Control: Compromised Account</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish foothold in Office365 environment Corporate Control: Office365 Platform</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor activity for suspicious behavior Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for further exploitation through the account Corporate Control: Stolen Credentials</data>
+</edge>
+</graph>
+</graphml>

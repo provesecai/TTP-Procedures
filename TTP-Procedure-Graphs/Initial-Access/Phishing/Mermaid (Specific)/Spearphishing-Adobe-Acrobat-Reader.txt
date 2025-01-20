@@ -1,0 +1,23 @@
+graph TD;
+    A[Craft Phishing Email with Malicious PDF Attachment]
+    B[Send Email to Targeted User]
+    C[Victim Opens Malicious PDF]
+    D[PDF Exploits Vulnerability in Acrobat Reader]
+    E[Initial Access Achieved]
+
+    A -->|"Create a PDF containing embedded exploit Corporate Control: Exploit Code"| B
+    A -->|"Test payload against Acrobat Reader vulnerabilities Third Party Control: Testing Environment"| B
+    A -->|"Use obfuscation to bypass detection Corporate Control: PDF Obfuscation Tools"| B
+    A -->|"Ensure compatibility with targeted Acrobat Reader version Corporate Control: Version Testing"| B
+    B -->|"Send phishing email using a spoofed sender Corporate Control: Email Account"| C
+    B -->|"Include subject line to lure victim Corporate Control: Social Engineering Techniques"| C
+    B -->|"Avoid spam filters using email header manipulation Third Party Control: Email Filtering Tools"| C
+    B -->|"Target employees in sensitive roles Corporate Control: Email Recipient List"| C
+    C -->|"Victim opens the PDF on their system Third Party Control: Victim Device"| D
+    C -->|"Exploit triggers due to unpatched vulnerability Corporate Control: Exploited Software"| D
+    C -->|"Bypasses endpoint protection using obfuscation Corporate Control: Endpoint Protection"| D
+    C -->|"Malicious payload begins to execute Third Party Control: Embedded Exploit"| D
+    D -->|"Payload establishes a foothold on the victim system Corporate Control: Malware Execution"| E
+    D -->|"Initial access achieved for further actions Corporate Control: Initial System Compromise"| E
+    D -->|"Monitor system for detection by antivirus Corporate Control: Security Monitoring Tools"| E
+    D -->|"Prepare for further exploitation through persistence Corporate Control: Backdoor Installation"| E

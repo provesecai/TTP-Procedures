@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Printers with Malicious Drivers]
+    B[Victim Installs Printer on Windows System]
+    C[Malicious Driver Exploits Print Spooler]
+    D[Driver Installs Backdoor]
+    E[Initial Access Achieved]
+
+    A -->|"Modify printer drivers to exploit Print Spooler vulnerabilities Corporate Control: Printer Firmware"| B
+    A -->|"Distribute compromised printers to corporate environments Corporate Control: Supply Chain"| B
+    A -->|"Ensure drivers target common OS vulnerabilities Corporate Control: Driver Testing"| B
+    B -->|"Victim installs printer on Windows system Third Party Control: Victim OS"| C
+    B -->|"Driver initializes and interacts with Print Spooler service Third Party Control: Print Spooler"| C
+    C -->|"Exploit vulnerabilities to gain elevated privileges Third Party Control: Windows OS"| D
+    C -->|"Backdoor is established to enable persistent access Corporate Control: Malware Component"| D
+    D -->|"Initial access achieved for further compromise Third Party Control: Target Network"| E
+    D -->|"Monitor for unusual print activity Corporate Control: Network Analysis"| E

@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Worm_Propagation_USB_Device" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Self-Propagating Worm</data>
+</node>
+<node id="B">
+<data key="label">Distribute Worm-Infected USBs</data>
+</node>
+<node id="C">
+<data key="label">Victim Inserts USB</data>
+</node>
+<node id="D">
+<data key="label">Worm Propagates to System</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Develop worm capable of spreading to connected devices Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed worm in autorun scripts or infected files Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute infected USBs through physical drops or mail Third Party Control: Physical Distribution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leave devices in areas frequented by the target Third Party Control: Target Locations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">USB connects to victim system, executing the worm Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Worm exploits vulnerabilities to replicate across networks Third Party Control: Target Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker gains access to infected systems Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Worm establishes persistence for long-term exploitation Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

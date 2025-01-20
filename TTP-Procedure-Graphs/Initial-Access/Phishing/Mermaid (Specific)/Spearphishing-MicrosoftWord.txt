@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Word Document]
+    B[Send Phishing Email Containing Word Document]
+    C[Victim Opens Malicious Document]
+    D[Document Executes Malicious Macro]
+    E[Initial Access Achieved]
+
+    A -->|"Design Word document with embedded malicious macro Corporate Control: Macro Development"| B
+    A -->|"Obfuscate macro to bypass detection tools Corporate Control: Obfuscation Tools"| B
+    A -->|"Test macro payload in a sandboxed environment Corporate Control: Testing Environment"| B
+    A -->|"Ensure compatibility with targeted Word versions Corporate Control: Compatibility Testing"| B
+    B -->|"Send phishing email to victim with malicious attachment Corporate Control: Email System"| C
+    B -->|"Use convincing social engineering techniques Corporate Control: Email Content"| C
+    B -->|"Avoid email filtering with header manipulation Third Party Control: Email Filtering System"| C
+    B -->|"Target specific individuals within the organization Corporate Control: Victim Selection"| C
+    C -->|"Victim opens the document and enables macros Third Party Control: Victim Device"| D
+    C -->|"Macro executes and downloads additional payloads Corporate Control: Malicious Macro"| D
+    C -->|"Avoid immediate detection through stealth Corporate Control: Stealth Techniques"| D
+    C -->|"Gain execution on victim's device through exploit Third Party Control: Victim System"| D
+    D -->|"Payload executes on the system and establishes foothold Corporate Control: Malware Execution"| E
+    D -->|"Initial access achieved Corporate Control: Compromised Device"| E
+    D -->|"Prepare for lateral movement within the network Corporate Control: Network Exploitation"| E
+    D -->|"Monitor for signs of detection by security tools Corporate Control: Security Monitoring Tools"| E

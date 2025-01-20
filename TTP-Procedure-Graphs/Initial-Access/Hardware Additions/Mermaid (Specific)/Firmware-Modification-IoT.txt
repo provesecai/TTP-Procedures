@@ -1,0 +1,16 @@
+graph TD;
+    A[Modify Firmware in IoT Devices]
+    B[Distribute Compromised IoT Devices]
+    C[IoT Device Activated by Victim]
+    D[Malicious Firmware Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Access firmware during manufacturing Corporate Control: IoT Manufacturer"| B
+    A -->|"Inject backdoor into firmware Corporate Control: Firmware Codebase"| B
+    A -->|"Test for stealth and compatibility Corporate Control: Device Testing"| B
+    B -->|"Compromised devices distributed to targets Third Party Control: Supply Chain"| C
+    B -->|"Victim unknowingly activates device Third Party Control: IoT Device"| C
+    C -->|"Malicious firmware establishes network presence Third Party Control: Home Network"| D
+    C -->|"Device begins communicating with C2 servers Third Party Control: IoT Software"| D
+    D -->|"Persistent access established through backdoor Corporate Control: Command Link"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: Target Network"| E

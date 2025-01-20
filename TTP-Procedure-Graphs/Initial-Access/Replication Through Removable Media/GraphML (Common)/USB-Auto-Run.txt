@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="USB_Auto_Run" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Autorun File</data>
+</node>
+<node id="B">
+<data key="label">Distribute USB Device</data>
+</node>
+<node id="C">
+<data key="label">User Connects USB</data>
+</node>
+<node id="D">
+<data key="label">Payload Execution</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Craft an autorun.inf file to launch malicious payload when USB is inserted Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious executables and scripts in USB drive Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leave USB devices in high-traffic areas (e.g., parking lots, lobbies) Third Party Control: Physical Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use branding or enticing labels to encourage use Third Party Control: USB Packaging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim unknowingly plugs USB into their computer, triggering autorun Third Party Control: Target Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload executes with user permissions, delivering initial exploit Third Party Control: Target Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit vulnerabilities or execute payload to gain system access Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Foothold established for further exploitation Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

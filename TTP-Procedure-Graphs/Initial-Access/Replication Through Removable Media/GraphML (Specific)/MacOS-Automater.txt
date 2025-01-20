@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="macOS_Automator_Workflow" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Automator Workflow</data>
+</node>
+<node id="B">
+<data key="label">Deploy Workflow and Support Files to USB Drive</data>
+</node>
+<node id="C">
+<data key="label">Insert USB Drive into Victim's macOS System</data>
+</node>
+<node id="D">
+<data key="label">Victim Launches Workflow via Finder</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design a malicious Automator workflow Corporate Control: Automator Workflow Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use legitimate-looking app icons and names Third Party Control: Branding Mimicry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Sign workflow with stolen or fake certificate Corporate Control: Developer Certificate</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test compatibility across macOS versions Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy USB drives through targeted campaigns Corporate Control: USB Distribution Campaign</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Label workflows as productivity tools to entice usage Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid Gatekeeper warnings with certificate signing Corporate Control: Gatekeeper Bypass</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place workflow in a prominent folder on the USB Corporate Control: Drive Organization</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim accesses the USB drive via Finder Third Party Control: Finder App</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Workflow executes malicious commands Corporate Control: Workflow Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Commands install payload for persistence Corporate Control: Payload Delivery</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection with macOS stealth techniques Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware establishes communication with attacker Corporate Control: Command and Control</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor system for signs of detection Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Exploitation Scripts</data>
+</edge>
+</graph>
+</graphml>

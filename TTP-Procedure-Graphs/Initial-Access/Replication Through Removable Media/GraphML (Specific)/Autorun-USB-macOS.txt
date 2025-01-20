@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Autorun_USB_macOS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Craft Malicious Application Bundle</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Bundle to USB Drive</data>
+</node>
+<node id="C">
+<data key="label">Insert USB Drive into Victim's macOS System</data>
+</node>
+<node id="D">
+<data key="label">Victim Launches Application via Finder</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Create macOS-compatible malicious app Corporate Control: App Development Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use a convincing app name and icon Third Party Control: Branding Mimicry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Sign the app with a legitimate or stolen developer certificate Corporate Control: Developer Certificate</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test for compatibility across macOS versions Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute USB drives via targeted delivery Corporate Control: USB Distribution Campaign</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage human curiosity with enticing app names Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malware evades macOS Gatekeeper checks Corporate Control: Gatekeeper Bypass</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place the app in a readable location on the drive Corporate Control: Drive Organization</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim accesses the USB drive using Finder Third Party Control: Finder App</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim launches the application manually Corporate Control: User Interaction</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Application executes malicious payload Corporate Control: Exploit Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by macOS security features Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload installs a backdoor for persistence Corporate Control: Backdoor Installation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Exploitation Scripts</data>
+</edge>
+</graph>
+</graphml>

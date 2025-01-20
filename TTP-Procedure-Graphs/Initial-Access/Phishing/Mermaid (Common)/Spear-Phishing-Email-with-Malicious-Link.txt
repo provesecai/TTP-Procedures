@@ -1,0 +1,23 @@
+graph TD;
+    A[Craft Convincing Phishing Email]
+    B[Include Malicious Link]
+    C[Victim Clicks the Link]
+    D[Malicious Content Delivered]
+    E[Initial Access Achieved]
+
+    A -->|"Create realistic phishing email content Corporate Control: Email System"| B
+    A -->|"Include personalized details to avoid suspicion Third Party Control: Email Service Provider"| B
+    A -->|"Ensure credibility through sender details Corporate Control: Email Sender Domain"| B
+    A -->|"Avoid detection by spam filters Third Party Control: Anti-Spam Services"| B
+    B -->|"Host malicious website with payload Third Party Control: Web Hosting Service"| C
+    B -->|"Use HTTPS to avoid browser warnings Third Party Control: SSL Certificate"| C
+    B -->|"Redirect to legitimate site post-infection Third Party Control: Redirect Script"| C
+    B -->|"Monitor user interactions for payload delivery Corporate Control: Web Analytics"| C
+    C -->|"Victim visits the malicious site Third Party Control: Victim Browser"| D
+    C -->|"Exploits or scripts are delivered Third Party Control: Malicious Server"| D
+    C -->|"Initiates execution of malicious payload Third Party Control: Exploit Script"| D
+    C -->|"Use stealth techniques to bypass detection Corporate Control: Endpoint Protection"| D
+    D -->|"Exploit victim’s browser or application Third Party Control: Browser Plugin"| E
+    D -->|"Execute payload on victim’s system Corporate Control: Victim System"| E
+    D -->|"Establish foothold for further compromise Corporate Control: Initial System Access"| E
+    D -->|"Avoid triggering alerts or defenses Corporate Control: Monitoring Systems"| E

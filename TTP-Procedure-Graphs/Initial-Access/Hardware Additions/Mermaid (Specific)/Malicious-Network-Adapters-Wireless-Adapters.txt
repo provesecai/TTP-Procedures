@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Compromised Wireless Adapters]
+    B[Victim Connects Wireless Adapter to Network]
+    C[Adapter Monitors and Injects Traffic]
+    D[Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Embed malicious firmware in wireless adapters Corporate Control: Device Manufacturing"| B
+    A -->|"Distribute devices via online retailers Corporate Control: Logistics"| B
+    A -->|"Target vulnerabilities in wireless protocols Corporate Control: Adapter Firmware"| B
+    B -->|"Victim installs adapter on network device Third Party Control: Network Device"| C
+    B -->|"Adapter begins monitoring traffic Corporate Control: Wireless Traffic"| C
+    C -->|"Injects malicious payloads into network streams Third Party Control: Wireless Protocols"| D
+    C -->|"Payload establishes foothold on network devices Corporate Control: Backdoor Design"| D
+    D -->|"Initial access achieved through compromised network Corporate Control: Threat Link"| E
+    D -->|"Monitor for unusual wireless traffic Corporate Control: Threat Monitoring"| E

@@ -1,0 +1,15 @@
+graph TD;
+    A[Create Self-Propagating Worm]
+    B[Distribute Worm-Infected USBs]
+    C[Victim Inserts USB]
+    D[Worm Propagates to System]
+    E[Initial Access Achieved]
+
+    A -->|"Develop worm capable of spreading to connected devices Corporate Control: Attacker System"| B
+    A -->|"Embed worm in autorun scripts or infected files Corporate Control: Attacker System"| B
+    B -->|"Distribute infected USBs through physical drops or mail Third Party Control: Physical Distribution"| C
+    B -->|"Leave devices in areas frequented by the target Third Party Control: Target Locations"| C
+    C -->|"USB connects to victim system, executing the worm Third Party Control: Target System"| D
+    C -->|"Worm exploits vulnerabilities to replicate across networks Third Party Control: Target Network"| D
+    D -->|"Attacker gains access to infected systems Corporate Control: Victim Device"| E
+    D -->|"Worm establishes persistence for long-term exploitation Corporate Control: Victim Device"| E

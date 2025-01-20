@@ -1,0 +1,20 @@
+graph TD;
+    A[Deploy Compromised Docking Station]
+    B[Device Connects to Dock]
+    C[Dock Exploits Connected Device]
+    D[Payload Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Modify firmware in docking station Corporate Control: Hardware Supply Chain"| B
+    A -->|"Deploy docks in high-traffic areas Corporate Control: Public Spaces"| B
+    A -->|"Ensure dock compatibility with multiple devices Corporate Control: Hardware Configuration"| B
+    A -->|"Design payload to activate upon connection Corporate Control: Malicious Firmware"| B
+    B -->|"Device automatically syncs with dock firmware Third Party Control: Victim Device"| C
+    B -->|"Malicious code begins execution Third Party Control: Connected Device"| C
+    B -->|"Secure persistence through installed backdoors Corporate Control: Malware Components"| C
+    C -->|"Payload spreads across victim system Third Party Control: Victim OS"| D
+    C -->|"Establish foothold with minimal detection Third Party Control: OS-level Exploits"| D
+    C -->|"Monitor for device-specific vulnerabilities Corporate Control: Threat Analysis"| D
+    D -->|"Payload achieves initial compromise goals Third Party Control: Victim System"| E
+    D -->|"Initial access confirmed for further exploitation Corporate Control: Target Network"| E
+    D -->|"Monitor for unusual network activity Corporate Control: Threat Monitoring"| E

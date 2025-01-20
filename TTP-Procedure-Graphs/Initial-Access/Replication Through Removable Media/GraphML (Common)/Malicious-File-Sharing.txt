@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_File_Sharing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Infected Files</data>
+</node>
+<node id="B">
+<data key="label">Distribute USB Device with Files</data>
+</node>
+<node id="C">
+<data key="label">Target Opens Infected File</data>
+</node>
+<node id="D">
+<data key="label">Payload Execution</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed malware into common file types (e.g., PDF, DOCX) Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft files with enticing names like 'Employee_Salaries.xlsx' Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Copy files to USB devices and leave them in target-rich environments Third Party Control: USB Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Plant devices at conventions, offices, or public spaces Third Party Control: Physical Locations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim opens file, triggering embedded malicious macros Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware bypasses defenses, leveraging file format vulnerabilities Third Party Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes to exfiltrate data or create backdoor Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access established for remote attacker operations Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

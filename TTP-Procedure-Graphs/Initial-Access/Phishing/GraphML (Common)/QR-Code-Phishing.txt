@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="QR_Code_Phishing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Generate Malicious QR Code</data>
+</node>
+<node id="B">
+<data key="label">Distribute QR Code via Email or Physical Medium</data>
+</node>
+<node id="C">
+<data key="label">Victim Scans the QR Code</data>
+</node>
+<node id="D">
+<data key="label">Redirect to Malicious Site</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Create a QR code linking to a malicious website Corporate Control: QR Code Generator</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure the link is obfuscated to appear legitimate Corporate Control: Obfuscation Techniques</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed payload into the linked website Corporate Control: Website Hosting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test the functionality and stealth of the QR code Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Email or distribute QR codes on physical media Corporate Control: Distribution Channels</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use convincing text to encourage scanning Third Party Control: Social Engineering Tactics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place codes in high-traffic areas for visibility Third Party Control: Public Locations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by security tools scanning for malicious links Corporate Control: Anti-Scanning Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim scans the QR code with their device Third Party Control: Victim Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirects the victim to the malicious site Third Party Control: QR Code Reader</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses social engineering to encourage further interaction Third Party Control: Victim Interaction</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim unknowingly enables malicious payload Corporate Control: Exploit Activation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes on the victim's system Third Party Control: Exploited Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attempts to establish foothold or deliver malware Corporate Control: Malware Deployment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access is achieved for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for abnormal activity to avoid detection Corporate Control: Network Monitoring</data>
+</edge>
+</graph>
+</graphml>

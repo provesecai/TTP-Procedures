@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Docking-Station-Mobile-Devices-Docking-Station" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Modified Docking Stations in Airports</data>
+</node>
+<node id="B">
+<data key="label">Device Connects to Dock for Charging</data>
+</node>
+<node id="C">
+<data key="label">Dock Exploits Mobile OS Vulnerabilities</data>
+</node>
+<node id="D">
+<data key="label">Malicious Payload Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed exploit code in docking firmware Corporate Control: Hardware Modification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy stations in high-traffic areas Corporate Control: Public Spaces</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target popular mobile OS vulnerabilities Corporate Control: Firmware Exploits</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Device connects for charging Third Party Control: Mobile Device</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Dock exploits vulnerabilities in charging protocols Third Party Control: USB Protocol</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious payload installs on mobile OS Third Party Control: Mobile OS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persistent backdoor is established Third Party Control: Malware Components</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker gains foothold on victim's mobile device Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor device for further exploitation Corporate Control: Threat Analysis</data>
+</edge>
+</graph>
+</graphml>

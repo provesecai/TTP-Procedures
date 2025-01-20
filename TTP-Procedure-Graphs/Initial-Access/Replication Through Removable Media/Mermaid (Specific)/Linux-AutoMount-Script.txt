@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Auto-Mount Configuration File]
+    B[Deploy Configuration and Malicious Script to USB Drive]
+    C[Insert USB Drive into Victim's Linux Machine]
+    D[Script Executes Automatically via Auto-Mount]
+    E[Initial Access Achieved]
+
+    A -->|"Design a script to execute upon auto-mount Corporate Control: Auto-Mount Scripting"| B
+    A -->|"Embed obfuscated payload to evade detection Corporate Control: Obfuscation Tools"| B
+    A -->|"Test script functionality across Linux distributions Corporate Control: Testing Environment"| B
+    A -->|"Ensure script executes on auto-mount without prompts Corporate Control: Auto-Execution Compatibility"| B
+    B -->|"Distribute USB drives to targeted locations Corporate Control: USB Distribution Campaign"| C
+    B -->|"Label drives with enticing names to prompt usage Corporate Control: Social Engineering Techniques"| C
+    B -->|"Place script in auto-mount compatible directories Corporate Control: Drive Organization"| C
+    B -->|"Avoid detection by Linux endpoint monitoring tools Corporate Control: Endpoint Protection"| C
+    C -->|"Victim inserts USB drive into Linux system Third Party Control: Linux System"| D
+    C -->|"Auto-mount settings trigger malicious script execution Corporate Control: Exploit Execution"| D
+    C -->|"Script installs backdoor for persistence Corporate Control: Malware Persistence"| D
+    C -->|"Avoid detection by obfuscating script activity Corporate Control: Stealth Techniques"| D
+    D -->|"Backdoor establishes command-and-control communication Corporate Control: C2 Communication"| E
+    D -->|"Initial access achieved for further exploitation Corporate Control: System Compromise"| E
+    D -->|"Prepare for lateral movement within the network Corporate Control: Exploitation Tools"| E
+    D -->|"Monitor for signs of detection Corporate Control: Endpoint Monitoring"| E

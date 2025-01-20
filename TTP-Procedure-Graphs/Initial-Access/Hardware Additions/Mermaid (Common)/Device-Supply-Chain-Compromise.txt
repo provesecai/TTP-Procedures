@@ -1,0 +1,16 @@
+graph TD;
+    A[Compromise Device During Shipment]
+    B[Malware Preloaded on Device]
+    C[Victim Deploys Device]
+    D[Malware Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Intercept device shipments Corporate Control: Supply Chain"| B
+    A -->|"Modify device software with malicious payload Corporate Control: Preloaded Malware"| B
+    A -->|"Ensure malware activates automatically Corporate Control: Payload Design"| B
+    B -->|"Devices delivered to unsuspecting users Third Party Control: Victim Delivery"| C
+    B -->|"Malware is installed upon usage Third Party Control: Device Usage"| C
+    C -->|"Payload execution begins Third Party Control: Victim OS"| D
+    C -->|"Persistent access is established Third Party Control: Malware Components"| D
+    D -->|"Initial compromise is achieved Third Party Control: Victim System"| E
+    D -->|"Monitor supply chain for signs of tampering Corporate Control: Logistics Monitoring"| E

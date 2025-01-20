@@ -1,0 +1,16 @@
+graph TD;
+    A[Install Hardware Keylogger on POS Device]
+    B[Keylogger Captures Payment Card Data]
+    C[Keylogger Stores Captured Data]
+    D[Keylogger Transmits Data to Attacker]
+    E[Initial Access Achieved]
+
+    A -->|"Physically access POS terminals in retail stores Corporate Control: Store Environment"| B
+    A -->|"Connect hardware keylogger between card reader and POS Corporate Control: POS Device"| B
+    A -->|"Ensure keylogger operates covertly Corporate Control: Device Design"| B
+    B -->|"Keylogger intercepts payment card data in transit Third Party Control: Card Reader"| C
+    B -->|"Captured data includes sensitive payment information Third Party Control: Transaction Data"| C
+    C -->|"Store intercepted data securely within keylogger Corporate Control: Keylogger Memory"| D
+    C -->|"Device transmits data periodically to attacker server Third Party Control: C2 Server"| D
+    D -->|"Gain access to enterprise payment systems using stolen credentials Corporate Control: POS Network"| E
+    D -->|"Initial access confirmed through compromised data Corporate Control: Network Entry"| E

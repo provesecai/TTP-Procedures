@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious Attachment]
+    B[Send Phishing Email]
+    C[Victim Opens the Attachment]
+    D[Exploit Triggered]
+    E[Initial Access Achieved]
+
+    A -->|"Design executable disguised as a legitimate file Corporate Control: File Template"| B
+    A -->|"Embed exploit within attachment Corporate Control: Malware Development Tools"| B
+    A -->|"Obfuscate malicious code to evade detection Third Party Control: Obfuscation Service"| B
+    A -->|"Test against security tools for effectiveness Corporate Control: Testing Environment"| B
+    B -->|"Use believable sender identity Corporate Control: Email Account"| C
+    B -->|"Send emails in bulk or target specific users Third Party Control: Bulk Email Service"| C
+    B -->|"Use social engineering to prompt interaction Corporate Control: Email Content"| C
+    B -->|"Avoid spam filters using advanced techniques Third Party Control: Email Filtering Services"| C
+    C -->|"Victim downloads and opens the attachment Third Party Control: Victim Device"| D
+    C -->|"Embedded exploit triggers Corporate Control: Exploit Code"| D
+    C -->|"Establishes initial foothold on the system Third Party Control: Exploited Device"| D
+    C -->|"Avoid immediate detection with stealth techniques Corporate Control: Endpoint Protection"| D
+    D -->|"Exploit executes to gain system control Third Party Control: Exploited Application"| E
+    D -->|"Load malware or other payloads Corporate Control: Malware Payload"| E
+    D -->|"Prepare for post-compromise actions Corporate Control: System Preparation"| E
+    D -->|"Bypass security tools during execution Corporate Control: Monitoring Systems"| E

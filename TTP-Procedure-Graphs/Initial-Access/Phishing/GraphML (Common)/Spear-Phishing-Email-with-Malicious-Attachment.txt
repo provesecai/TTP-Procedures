@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Spear_Phishing_Email_with_Malicious_Attachment" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Attachment</data>
+</node>
+<node id="B">
+<data key="label">Send Phishing Email</data>
+</node>
+<node id="C">
+<data key="label">Victim Opens the Attachment</data>
+</node>
+<node id="D">
+<data key="label">Exploit Triggered</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Design executable disguised as a legitimate file Corporate Control: File Template</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed exploit within attachment Corporate Control: Malware Development Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate malicious code to evade detection Third Party Control: Obfuscation Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test against security tools for effectiveness Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use believable sender identity Corporate Control: Email Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send emails in bulk or target specific users Third Party Control: Bulk Email Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use social engineering to prompt interaction Corporate Control: Email Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid spam filters using advanced techniques Third Party Control: Email Filtering Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim downloads and opens the attachment Third Party Control: Victim Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embedded exploit triggers Corporate Control: Exploit Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establishes initial foothold on the system Third Party Control: Exploited Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid immediate detection with stealth techniques Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit executes to gain system control Third Party Control: Exploited Application</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Load malware or other payloads Corporate Control: Malware Payload</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for post-compromise actions Corporate Control: System Preparation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypass security tools during execution Corporate Control: Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Bootable_USB" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Bootable USB with Malware</data>
+</node>
+<node id="B">
+<data key="label">Deliver USB to Target</data>
+</node>
+<node id="C">
+<data key="label">Victim Boots from USB</data>
+</node>
+<node id="D">
+<data key="label">Malware Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Prepare bootable USB with malicious OS image Corporate Control: Attacker System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure USB to bypass boot security settings Corporate Control: Attacker System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place USB drives in target locations or send via mail Third Party Control: Physical Distribution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use deceptive labels (e.g., 'Secure Backup') to increase trust Third Party Control: USB Packaging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim boots system using USB, unknowingly loading malicious OS Third Party Control: Target System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious OS bypasses authentication and deploys payloads Third Party Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload installs backdoor or exfiltrates sensitive data Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial foothold established for further actions Corporate Control: Victim Device</data>
+</edge>
+</graph>
+</graphml>

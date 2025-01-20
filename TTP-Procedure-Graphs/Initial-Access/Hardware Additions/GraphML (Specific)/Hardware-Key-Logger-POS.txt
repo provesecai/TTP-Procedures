@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hardware-Key-Logger-POS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Install Hardware Keylogger on POS Device</data>
+</node>
+<node id="B">
+<data key="label">Keylogger Captures Payment Card Data</data>
+</node>
+<node id="C">
+<data key="label">Keylogger Stores Captured Data</data>
+</node>
+<node id="D">
+<data key="label">Keylogger Transmits Data to Attacker</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Physically access POS terminals in retail stores Corporate Control: Store Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Connect hardware keylogger between card reader and POS Corporate Control: POS Device</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure keylogger operates covertly Corporate Control: Device Design</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Keylogger intercepts payment card data in transit Third Party Control: Card Reader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Captured data includes sensitive payment information Third Party Control: Transaction Data</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store intercepted data securely within keylogger Corporate Control: Keylogger Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Device transmits data periodically to attacker server Third Party Control: C2 Server</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain access to enterprise payment systems using stolen credentials Corporate Control: POS Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access confirmed through compromised data Corporate Control: Network Entry</data>
+</edge>
+</graph>
+</graphml>

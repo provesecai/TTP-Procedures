@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Social_Media_Phishing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Fake Social Media Profile</data>
+</node>
+<node id="B">
+<data key="label">Send Phishing Messages</data>
+</node>
+<node id="C">
+<data key="label">Victim Interacts with Malicious Content</data>
+</node>
+<node id="D">
+<data key="label">Payload Delivered</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Set up a fake profile resembling a trusted entity Corporate Control: Social Media Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure profile appears legitimate with stolen or fake information Third Party Control: Stolen Data</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target victims through connections Corporate Control: Friend Requests</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by social media platforms Third Party Control: Obfuscation Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send messages containing malicious links or attachments Corporate Control: Messaging Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use personalized and convincing content Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encourage victim to interact with urgency or fear tactics Corporate Control: Message Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid spam filters by using platform-specific techniques Third Party Control: Messaging Platform</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim interacts with the malicious content Third Party Control: Victim Browser</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload is delivered via the malicious link or attachment Corporate Control: Payload Delivery System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit victim’s device or application Third Party Control: Exploited Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid immediate detection by using obfuscation Corporate Control: Obfuscation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes and grants access Corporate Control: Initial System Access</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Foothold established for further exploitation Corporate Control: Malware Deployment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitors for signs of detection or resistance Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attempts to avoid security measures Third Party Control: Endpoint Protection</data>
+</edge>
+</graph>
+</graphml>

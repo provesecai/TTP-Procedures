@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Modified Network Switches]
+    B[Switch Installed in Data Center]
+    C[Switch Firmware Exploits Connected Devices]
+    D[Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Modify switch firmware to include backdoor Corporate Control: Device Manufacturer"| B
+    A -->|"Distribute devices through legitimate channels Corporate Control: Supply Chain"| B
+    A -->|"Target firmware vulnerabilities of enterprise devices Corporate Control: Firmware Design"| B
+    B -->|"Switch installed in corporate networks Third Party Control: IT Infrastructure"| C
+    B -->|"Switch begins scanning connected systems Third Party Control: Network Devices"| C
+    C -->|"Malicious payload targets system vulnerabilities Third Party Control: Network Endpoints"| D
+    C -->|"Payload establishes persistent network foothold Corporate Control: Command Link"| D
+    D -->|"Initial access achieved through exploited devices Corporate Control: Target Network"| E
+    D -->|"Monitor compromised traffic Corporate Control: Network Analysis"| E

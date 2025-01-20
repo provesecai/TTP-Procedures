@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Autorun_USB_Windows" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Autorun Configuration File</data>
+</node>
+<node id="B">
+<data key="label">Deploy Configuration and Malicious Executable to USB Drive</data>
+</node>
+<node id="C">
+<data key="label">Insert USB Drive into Victim's Windows Machine</data>
+</node>
+<node id="D">
+<data key="label">Malicious Executable Auto-Executes via Autorun.inf</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Craft Autorun.inf file to execute malware Corporate Control: Autorun Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious executable alongside Autorun.inf Corporate Control: Malware Payload</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test Autorun functionality for compatibility Corporate Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate executable to bypass antivirus detection Third Party Control: Obfuscation Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute USB drives via targeted delivery (e.g., drops in parking lots) Third Party Control: Physical Delivery</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure USB drives are labeled to entice victims Corporate Control: Social Engineering Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage human curiosity or urgency to prompt usage Corporate Control: Behavioral Exploitation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by endpoint monitoring tools Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim inserts the USB drive into their system Third Party Control: Windows System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Autorun.inf triggers the execution of the malicious executable Corporate Control: Malicious Code Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware bypasses security tools and establishes foothold Corporate Control: Security Evasion</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid immediate detection through stealth Corporate Control: Stealth Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware installs backdoor for persistence Corporate Control: Backdoor Installation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Corporate Control: System Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection during installation Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare for lateral movement Corporate Control: Exploitation Scripts</data>
+</edge>
+</graph>
+</graphml>

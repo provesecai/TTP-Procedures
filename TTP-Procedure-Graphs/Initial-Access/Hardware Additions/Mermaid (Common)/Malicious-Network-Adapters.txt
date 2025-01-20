@@ -1,0 +1,16 @@
+graph TD;
+    A[Deploy Modified Network Adapter]
+    B[Victim Installs Adapter]
+    C[Adapter Monitors Network Traffic]
+    D[Malicious Payload Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Modify network adapter firmware Corporate Control: Hardware Supply Chain"| B
+    A -->|"Embed malicious payload in adapter Corporate Control: Adapter Firmware"| B
+    A -->|"Distribute adapters to targets Corporate Control: Logistics"| B
+    B -->|"Adapter is installed on victim network Third Party Control: Network Device"| C
+    B -->|"Malicious payload begins execution Third Party Control: Adapter Firmware"| C
+    C -->|"Monitor network traffic for sensitive data Third Party Control: Network Traffic"| D
+    C -->|"Exploit identified vulnerabilities Third Party Control: Victim OS"| D
+    D -->|"Initial access is achieved Third Party Control: Victim System"| E
+    D -->|"Foothold established for further exploitation Corporate Control: Threat Monitoring"| E
