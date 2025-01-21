@@ -1,0 +1,23 @@
+graph TD;
+    A[Search GitHub for Exposed Credentials]
+    B[Extract and Test Credentials]
+    C[Validate on Target System]
+    D[Obtain Access to Services]
+    E[Initial Access Achieved]
+
+    A -->|"Search repositories for exposed keys or passwords Third Party Control: GitHub Repository"| B
+    A -->|"Identify misconfigured repository policies Corporate Control: Repository Management"| B
+    A -->|"Target public repositories linked to the organization Third Party Control: Public Repositories"| B
+    A -->|"Notify corporate stakeholders of potential exposure Corporate Control: Monitoring Tools"| B
+    B -->|"Download or clone repositories for analysis Third Party Control: Source Code"| C
+    B -->|"Parse files for sensitive data patterns Corporate Control: Static Analysis"| C
+    B -->|"Test credentials on known organizational endpoints Corporate Control: Network Services"| C
+    B -->|"Avoid detection by simulating normal traffic Corporate Control: Network Monitoring"| C
+    C -->|"Validate credentials on organizational services Corporate Control: Authentication Systems"| D
+    C -->|"Target cloud services, VPNs, or internal portals Corporate Control: Cloud Platforms"| D
+    C -->|"Avoid triggering account lockouts Corporate Control: Access Policy"| D
+    C -->|"Monitor failed login attempts for anomalies Corporate Control: Threat Detection"| D
+    D -->|"Gain access to initial corporate services Corporate Control: Cloud Services"| E
+    D -->|"Initial Access achieved via exposed credentials Corporate Control: Initial Compromise"| E
+    D -->|"Monitor for access to unauthorized systems Corporate Control: SIEM Logs"| E
+    D -->|"Investigate repository access for credential leaks Corporate Control: Security Response"| E

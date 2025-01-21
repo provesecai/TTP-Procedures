@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Third-Party Vendor with Network Access]
+    B[Obtain Vendor's VPN Credentials]
+    C[Establish VPN Connection to Target Network]
+    D[Access Internal Resources]
+    E[Initial Access Achieved]
+
+    A -->|"Research vendors connected to target Corporate Control: Vendor List"| B
+    A -->|"Identify vendors with weak security practices Third Party Control: Vendor Security"| B
+    A -->|"Gather information on vendor's VPN solution Third Party Control: VPN Software"| B
+    A -->|"Monitor vendor communications for vulnerabilities Corporate Control: Communication Channels"| B
+    B -->|"Phish vendor employees for credentials Third Party Control: Phishing Campaign"| C
+    B -->|"Purchase credentials from underground forums Third Party Control: Dark Web Marketplaces"| C
+    B -->|"Exploit vendor's weak password policies Third Party Control: Vendor IT Policies"| C
+    B -->|"Monitor for credential leaks involving vendor Third Party Control: Data Breach Reports"| C
+    C -->|"Use obtained credentials to connect via VPN Corporate Control: VPN Gateway"| D
+    C -->|"Mimic legitimate vendor access patterns Corporate Control: Network Traffic"| D
+    C -->|"Avoid triggering security alerts Corporate Control: Intrusion Detection Systems"| D
+    C -->|"Maintain VPN connection for extended access Corporate Control: VPN Session Management"| D
+    D -->|"Navigate internal network to identify assets Corporate Control: Network Resources"| E
+    D -->|"Leverage vendor permissions to access data Corporate Control: Access Controls"| E
+    D -->|"Establish additional footholds within network Corporate Control: System Access"| E
+    D -->|"Monitor for unusual activity from vendor accounts Corporate Control: Security Monitoring"| E

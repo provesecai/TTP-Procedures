@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BruteForceRDP" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan for RDP Servers</data>
+</node>
+<node id="B">
+<data key="label">Attempt Login with Brute-Force Tool</data>
+</node>
+<node id="C">
+<data key="label">Identify Valid Credentials</data>
+</node>
+<node id="D">
+<data key="label">Access Target System</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify publicly exposed RDP endpoints Third Party Control: IP Addresses</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use tools like Shodan to locate targets Third Party Control: Network Scanners</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize systems with weak configurations Corporate Control: System Policy</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid triggering IDS alerts Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Automate login attempts using brute-force tools Corporate Control: Authentication System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test against common or default credentials Corporate Control: User Accounts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure retry limits are bypassed or avoided Corporate Control: Security Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Account lockout policies are analyzed Corporate Control: Account Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Successfully crack credentials Corporate Control: Login System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection with low-frequency attempts Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Report success to command and control server Third Party Control: C2 Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use MFA or other detection systems Corporate Control: Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Login successfully with brute-forced credentials Corporate Control: User Account</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access limited to initial system compromise Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection strategies for abnormal RDP usage Corporate Control: Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

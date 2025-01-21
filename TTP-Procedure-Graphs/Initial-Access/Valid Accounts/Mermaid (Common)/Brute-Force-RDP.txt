@@ -1,0 +1,22 @@
+graph TD;
+    A[Scan for RDP Servers]
+    B[Attempt Login with Brute-Force Tool]
+    C[Identify Valid Credentials]
+    D[Access Target System]
+    E[Initial Access Achieved]
+
+    A -->|"Identify publicly exposed RDP endpoints Third Party Control: IP Addresses"| B
+    A -->|"Use tools like Shodan to locate targets Third Party Control: Network Scanners"| B
+    A -->|"Prioritize systems with weak configurations Corporate Control: System Policy"| B
+    A -->|"Avoid triggering IDS alerts Corporate Control: Network Monitoring"| B
+    B -->|"Automate login attempts using brute-force tools Corporate Control: Authentication System"| C
+    B -->|"Test against common or default credentials Corporate Control: User Accounts"| C
+    B -->|"Ensure retry limits are bypassed or avoided Corporate Control: Security Policy"| C
+    B -->|"Account lockout policies are analyzed Corporate Control: Account Security"| C
+    C -->|"Successfully crack credentials Corporate Control: Login System"| D
+    C -->|"Avoid detection with low-frequency attempts Corporate Control: Authentication Logs"| D
+    C -->|"Report success to command and control server Third Party Control: C2 Infrastructure"| D
+    C -->|"Use MFA or other detection systems Corporate Control: Endpoint Security"| D
+    D -->|"Login successfully with brute-forced credentials Corporate Control: User Account"| E
+    D -->|"Access limited to initial system compromise Corporate Control: Initial Compromise"| E
+    D -->|"Detection strategies for abnormal RDP usage Corporate Control: Monitoring Systems"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GitHubAWSKeys" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Search GitHub for Exposed AWS Keys</data>
+</node>
+<node id="B">
+<data key="label">Identify Valid Access Keys</data>
+</node>
+<node id="C">
+<data key="label">Configure AWS CLI with Keys</data>
+</node>
+<node id="D">
+<data key="label">Access AWS Services</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use search queries to find exposed keys Third Party Control: GitHub Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Focus on repositories related to target organization Corporate Control: Organization Repos</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Automate searches with scripts Third Party Control: Automation Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for new exposures continuously Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify key validity by testing permissions Corporate Control: AWS Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on keys with high-level permissions Third Party Control: Leaked Keys</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture access details in logs Corporate Control: AWS CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implement alerts for use of exposed keys Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use AWS CLI to authenticate Third Party Control: CLI Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Explore accessible services based on permissions Corporate Control: IAM Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by mimicking regular traffic Corporate Control: AWS Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence with additional key creation Corporate Control: IAM Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access S3 buckets, databases, or compute services Corporate Control: AWS Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract sensitive data from accessible resources Corporate Control: Cloud Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial Access achieved via AWS keys Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual activity in cloud accounts Corporate Control: Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

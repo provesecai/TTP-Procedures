@@ -1,0 +1,23 @@
+graph TD;
+    A[Search GitHub for Exposed AWS Keys]
+    B[Identify Valid Access Keys]
+    C[Configure AWS CLI with Keys]
+    D[Access AWS Services]
+    E[Initial Access Achieved]
+
+    A -->|"Use search queries to find exposed keys Third Party Control: GitHub Repositories"| B
+    A -->|"Focus on repositories related to target organization Corporate Control: Organization Repos"| B
+    A -->|"Automate searches with scripts Third Party Control: Automation Tools"| B
+    A -->|"Monitor for new exposures continuously Corporate Control: Security Monitoring"| B
+    B -->|"Verify key validity by testing permissions Corporate Control: AWS Console"| C
+    B -->|"Focus on keys with high-level permissions Third Party Control: Leaked Keys"| C
+    B -->|"Capture access details in logs Corporate Control: AWS CloudTrail"| C
+    B -->|"Implement alerts for use of exposed keys Corporate Control: Monitoring Tools"| C
+    C -->|"Use AWS CLI to authenticate Third Party Control: CLI Configuration"| D
+    C -->|"Explore accessible services based on permissions Corporate Control: IAM Policies"| D
+    C -->|"Avoid detection by mimicking regular traffic Corporate Control: AWS Logs"| D
+    C -->|"Maintain persistence with additional key creation Corporate Control: IAM Settings"| D
+    D -->|"Access S3 buckets, databases, or compute services Corporate Control: AWS Infrastructure"| E
+    D -->|"Extract sensitive data from accessible resources Corporate Control: Cloud Storage"| E
+    D -->|"Initial Access achieved via AWS keys Corporate Control: Initial Compromise"| E
+    D -->|"Monitor for unusual activity in cloud accounts Corporate Control: Security Monitoring"| E

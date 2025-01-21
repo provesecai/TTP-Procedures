@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Third-Party Vendor]
+    B[Obtain Vendor Account Credentials]
+    C[Access Shared Corporate Systems]
+    D[Escalate to Target Organization]
+    E[Initial Access Achieved]
+
+    A -->|"Analyze vendor systems for security gaps Third Party Control: Vendor Infrastructure"| B
+    A -->|"Research vendor policies and tools Corporate Control: Vendor Relationship"| B
+    A -->|"Use OSINT to identify potential access points Third Party Control: Public Records"| B
+    A -->|"Monitor vendor communications for potential leads Corporate Control: Monitoring Tools"| B
+    B -->|"Steal or buy vendor credentials via underground forums Third Party Control: Credential Markets"| C
+    B -->|"Exploit shared login systems or SSO configurations Corporate Control: Authentication System"| C
+    B -->|"Avoid triggering alerts during login attempts Corporate Control: Security Policy"| C
+    B -->|"Leverage weak vendor account policies Corporate Control: Vendor Security Policies"| C
+    C -->|"Access corporate systems shared with vendor Corporate Control: Vendor Portals"| D
+    C -->|"Test for further access within the organization Corporate Control: Network Infrastructure"| D
+    C -->|"Monitor vendor system activity Corporate Control: SIEM Tools"| D
+    C -->|"Use detection mechanisms for suspicious vendor behavior Corporate Control: Monitoring Tools"| D
+    D -->|"Escalate permissions or leverage data Corporate Control: Shared Resources"| E
+    D -->|"Compromise corporate systems through vendor trust Corporate Control: Access Logs"| E
+    D -->|"Initial Access achieved via third-party trust Corporate Control: Initial Compromise"| E
+    D -->|"Investigate vendor-based anomalies Corporate Control: Threat Intelligence"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GitHubRepositoryLeak" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Search GitHub for Exposed Credentials</data>
+</node>
+<node id="B">
+<data key="label">Extract and Test Credentials</data>
+</node>
+<node id="C">
+<data key="label">Validate on Target System</data>
+</node>
+<node id="D">
+<data key="label">Obtain Access to Services</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Search repositories for exposed keys or passwords Third Party Control: GitHub Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured repository policies Corporate Control: Repository Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target public repositories linked to the organization Third Party Control: Public Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Notify corporate stakeholders of potential exposure Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Download or clone repositories for analysis Third Party Control: Source Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Parse files for sensitive data patterns Corporate Control: Static Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test credentials on known organizational endpoints Corporate Control: Network Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid detection by simulating normal traffic Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate credentials on organizational services Corporate Control: Authentication Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Target cloud services, VPNs, or internal portals Corporate Control: Cloud Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid triggering account lockouts Corporate Control: Access Policy</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor failed login attempts for anomalies Corporate Control: Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain access to initial corporate services Corporate Control: Cloud Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial Access achieved via exposed credentials Corporate Control: Initial Compromise</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for access to unauthorized systems Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate repository access for credential leaks Corporate Control: Security Response</data>
+</edge>
+</graph>
+</graphml>
