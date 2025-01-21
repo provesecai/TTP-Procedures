@@ -1,0 +1,23 @@
+graph TD;
+    A[Inject Malicious Code into Library]
+    B[Distribute Compromised Library]
+    C[Victim Integrates Library]
+    D[Malicious Code Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Access the library's source code repository Third Party Control: Repository"| B
+    A -->|"Embed obfuscated malicious code Corporate Control: Library Code"| B
+    A -->|"Ensure changes pass unnoticed by maintainers Corporate Control: Commit History"| B
+    A -->|"Monitor for repository activity to avoid detection Corporate Control: Contributor Logs"| B
+    B -->|"Publish compromised library to distribution platform Third Party Control: Package Manager"| C
+    B -->|"Ensure malicious code executes upon integration Corporate Control: Code Logic"| C
+    B -->|"Package library with unchanged metadata for trust Corporate Control: Metadata"| C
+    B -->|"Prepare contingency for possible code review Corporate Control: Obfuscation Techniques"| C
+    C -->|"Victim integrates library into their application Third Party Control: Development Process"| D
+    C -->|"Malicious code triggers during runtime Third Party Control: Application Runtime"| D
+    C -->|"Initial foothold established within application Third Party Control: Application Environment"| D
+    C -->|"Monitor for application behavior anomalies Corporate Control: Runtime Logs"| D
+    D -->|"Malicious payload executes in target environment Third Party Control: Application Process"| E
+    D -->|"Initial access achieved via application compromise Third Party Control: Execution Logs"| E
+    D -->|"Setup for further exploitation or persistence Corporate Control: Network Monitoring"| E
+    D -->|"Watch for unexpected application behavior Corporate Control: Endpoint Detection"| E

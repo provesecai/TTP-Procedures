@@ -1,0 +1,23 @@
+graph TD;
+    A[Infect Removable Media]
+    B[Distribute Infected Media]
+    C[Media Connected to Victim System]
+    D[Malware Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Embed malware into removable media Corporate Control: Media Device"| B
+    A -->|"Use autorun scripts for payload activation Corporate Control: Autorun Configuration"| B
+    A -->|"Test media with various target systems Third Party Control: Testing Environment"| B
+    A -->|"Ensure malware remains undetectable Corporate Control: Malware Obfuscation"| B
+    B -->|"Distribute infected media via supply chain Corporate Control: Distribution Network"| C
+    B -->|"Place media in locations frequented by targets Third Party Control: Target Locations"| C
+    B -->|"Monitor distribution effectiveness Corporate Control: Distribution Analytics"| C
+    B -->|"Prepare media for resilience against removal Corporate Control: Media Configuration"| C
+    C -->|"Victim connects infected media to system Third Party Control: User Device"| D
+    C -->|"Malware activates upon connection Third Party Control: Execution Environment"| D
+    C -->|"Foothold established on victim's system Third Party Control: Compromised Device"| D
+    C -->|"Monitor for abnormal USB activities Corporate Control: Endpoint Monitoring"| D
+    D -->|"Malicious code executes, gaining initial access Third Party Control: Victim System"| E
+    D -->|"Setup for further exploitation Corporate Control: Threat Analysis"| E
+    D -->|"Investigate suspicious USB activity Corporate Control: Endpoint Logs"| E
+    D -->|"Implement mitigations for unauthorized devices Corporate Control: Access Control"| E

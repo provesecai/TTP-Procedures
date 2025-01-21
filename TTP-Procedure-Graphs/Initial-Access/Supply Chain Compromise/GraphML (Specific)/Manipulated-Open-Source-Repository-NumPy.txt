@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulated_Open_Source_Repository_NumPy" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Upload Fake NumPy and Pandas Packages</data>
+</node>
+<node id="B">
+<data key="label">Host Packages on Unofficial Python Repositories</data>
+</node>
+<node id="C">
+<data key="label">Data Scientists Download and Use Compromised Packages</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Activates in Data Pipelines</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Clone legitimate library repositories Corporate Control: Cloned Codebases</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert backdoors or credential theft scripts into libraries Corporate Control: Package Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure fake packages mimic original metadata Corporate Control: Package Metadata</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor downloads to identify potential victims Corporate Control: Download Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Host fake libraries on unofficial Python mirrors Corporate Control: Repository Hosting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Promote fake libraries in online forums or search results Corporate Control: SEO Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with machine learning workflows Corporate Control: Dependency Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare fallback versions in case of detection Corporate Control: Backup Packages</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Data scientists unknowingly integrate fake libraries Third Party Control: Data Science Workflows</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoors activate during data pipeline execution Third Party Control: Pipeline Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exfiltrate sensitive data from environments Third Party Control: Data Servers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual pipeline behaviors Corporate Control: Pipeline Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attackers gain access to machine learning environments Third Party Control: ML Environments</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for data theft or sabotage Third Party Control: Data Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in package dependencies Corporate Control: Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement stricter repository validation Corporate Control: Dependency Management Policies</data>
+</edge>
+</graph>
+</graphml>

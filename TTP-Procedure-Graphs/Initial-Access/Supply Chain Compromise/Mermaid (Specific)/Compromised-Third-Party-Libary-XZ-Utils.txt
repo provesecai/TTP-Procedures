@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise XZ Utils Source Code Repository]
+    B[Insert Backdoor into Compression Library]
+    C[Release Infected Library Version]
+    D[Users Integrate Compromised Library]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to XZ Utils' source code repository Corporate Control: Source Code Management System"| B
+    A -->|"Insert backdoor into the compression library's codebase Corporate Control: Compression Algorithm Code"| B
+    A -->|"Ensure backdoor remains undetected during code reviews Corporate Control: Code Review Process"| B
+    A -->|"Monitor repository for unauthorized changes Corporate Control: Repository Monitoring"| B
+    B -->|"Tag and release the compromised version of the library Corporate Control: Release Management System"| C
+    B -->|"Distribute the infected library through official channels Corporate Control: Package Distribution Network"| C
+    B -->|"Maintain versioning consistency to avoid suspicion Corporate Control: Version Control System"| C
+    B -->|"Prepare for potential vulnerability disclosures Corporate Control: Public Relations Team"| C
+    C -->|"Developers integrate the compromised library into their projects Third Party Control: Development Environments"| D
+    C -->|"Backdoor activates when the library is used Third Party Control: Application Runtime"| D
+    C -->|"Establishes unauthorized access to the system Third Party Control: System Interfaces"| D
+    C -->|"Monitor for unusual library behavior Corporate Control: Application Monitoring"| D
+    D -->|"Attackers gain initial access to systems using the library Third Party Control: Compromised Applications"| E
+    D -->|"Facilitate further exploitation such as data exfiltration Third Party Control: Data Storage"| E
+    D -->|"Investigate anomalies in system performance Corporate Control: Incident Response Team"| E
+    D -->|"Implement security patches and updates Corporate Control: Software Maintenance"| E

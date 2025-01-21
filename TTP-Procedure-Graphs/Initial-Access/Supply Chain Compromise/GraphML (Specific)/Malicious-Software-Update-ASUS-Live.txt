@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Software_Update_ASUS_Live" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise ASUS Live Update Servers</data>
+</node>
+<node id="B">
+<data key="label">Embed Malicious Code into Updates</data>
+</node>
+<node id="C">
+<data key="label">Distribute Updates to ASUS Users</data>
+</node>
+<node id="D">
+<data key="label">Users Install Infected Updates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to update servers Corporate Control: ASUS Infrastructure</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify update packages to include malware Corporate Control: Update Packages</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Maintain legitimate digital signatures Corporate Control: Signing Certificates</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor server activity for detection Corporate Control: Update Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Release infected updates to official channels Corporate Control: Update Channels</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure updates are indistinguishable from legitimate ones Corporate Control: Update Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test for stealth during installation Corporate Control: Test Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare rollback in case of detection Corporate Control: Version Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users download and install malicious updates Third Party Control: User Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload bypasses antivirus and installs itself Third Party Control: Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold in victim systems during installation Third Party Control: User Machines</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor update logs for anomalies Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload activates, granting attacker access Third Party Control: Execution Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for lateral movement or data theft Third Party Control: User Data</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate unusual update behavior Corporate Control: Threat Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Enhance update validation processes Corporate Control: Software Security</data>
+</edge>
+</graph>
+</graphml>

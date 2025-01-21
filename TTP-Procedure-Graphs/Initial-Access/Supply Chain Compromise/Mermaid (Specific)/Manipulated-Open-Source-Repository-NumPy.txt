@@ -1,0 +1,23 @@
+graph TD;
+    A[Upload Fake NumPy and Pandas Packages]
+    B[Host Packages on Unofficial Python Repositories]
+    C[Data Scientists Download and Use Compromised Packages]
+    D[Malicious Code Activates in Data Pipelines]
+    E[Initial Access Achieved]
+
+    A -->|"Clone legitimate library repositories Corporate Control: Cloned Codebases"| B
+    A -->|"Insert backdoors or credential theft scripts into libraries Corporate Control: Package Code"| B
+    A -->|"Ensure fake packages mimic original metadata Corporate Control: Package Metadata"| B
+    A -->|"Monitor downloads to identify potential victims Corporate Control: Download Logs"| B
+    B -->|"Host fake libraries on unofficial Python mirrors Corporate Control: Repository Hosting"| C
+    B -->|"Promote fake libraries in online forums or search results Corporate Control: SEO Manipulation"| C
+    B -->|"Ensure compatibility with machine learning workflows Corporate Control: Dependency Validation"| C
+    B -->|"Prepare fallback versions in case of detection Corporate Control: Backup Packages"| C
+    C -->|"Data scientists unknowingly integrate fake libraries Third Party Control: Data Science Workflows"| D
+    C -->|"Backdoors activate during data pipeline execution Third Party Control: Pipeline Execution"| D
+    C -->|"Exfiltrate sensitive data from environments Third Party Control: Data Servers"| D
+    C -->|"Monitor for unusual pipeline behaviors Corporate Control: Pipeline Monitoring"| D
+    D -->|"Attackers gain access to machine learning environments Third Party Control: ML Environments"| E
+    D -->|"Initial access achieved for data theft or sabotage Third Party Control: Data Storage"| E
+    D -->|"Investigate anomalies in package dependencies Corporate Control: Incident Response"| E
+    D -->|"Implement stricter repository validation Corporate Control: Dependency Management Policies"| E

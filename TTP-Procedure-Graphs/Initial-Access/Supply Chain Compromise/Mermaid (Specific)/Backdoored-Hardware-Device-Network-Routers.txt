@@ -1,0 +1,22 @@
+graph TD;
+    A[Modify Router Firmware in Factory]
+    B[Distribute Routers to Retailers]
+    C[Routers Deployed in Target Networks]
+    D[Backdoor Activates to Intercept Traffic]
+    E[Initial Access Achieved]
+
+    A -->|"Inject malicious firmware into routers during assembly Corporate Control: Factory Production Line"| B
+    A -->|"Ensure malware remains undetected in quality checks Third Party Control: Quality Assurance"| B
+    A -->|"Embed persistence mechanisms in firmware Corporate Control: Firmware Management System"| B
+    A -->|"Test infected routers in controlled environments Corporate Control: Testing Environment"| B
+    B -->|"Ship compromised routers to distribution hubs Corporate Control: Distribution Network"| C
+    B -->|"Avoid tamper detection with secure packaging Corporate Control: Packaging Process"| C
+    B -->|"Ensure smooth delivery to retailers Corporate Control: Logistics Systems"| C
+    B -->|"Track shipments to target regions Corporate Control: Shipment Monitoring"| C
+    C -->|"Organizations deploy infected routers in networks Third Party Control: IT Infrastructure"| D
+    C -->|"Backdoor activates upon specific network configurations Third Party Control: Network Settings"| D
+    C -->|"Monitor unusual traffic patterns for command signals Third Party Control: Router Logs"| D
+    D -->|"Intercept or redirect traffic to attacker servers Third Party Control: Network Infrastructure"| E
+    D -->|"Facilitate further exploitation or data exfiltration Third Party Control: Victim Network"| E
+    D -->|"Monitor network for signs of compromise Corporate Control: Network Monitoring Systems"| E
+    D -->|"Deploy patches or replace hardware Corporate Control: Incident Response Team"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Hardware Supply Chain]
+    B[Distribute Backdoored Device]
+    C[Device Used in Victim's Network]
+    D[Backdoor Activates]
+    E[Initial Access Achieved]
+
+    A -->|"Inject backdoor during manufacturing Corporate Control: Production Line"| B
+    A -->|"Modify firmware to include malicious code Corporate Control: Firmware Code"| B
+    A -->|"Ensure backdoor is stealthy to avoid detection Third Party Control: Quality Assurance"| B
+    A -->|"Prepare contingencies for exposure Corporate Control: Firmware Update System"| B
+    B -->|"Distribute compromised hardware to target Corporate Control: Distribution Channel"| C
+    B -->|"Avoid tampering detection mechanisms Corporate Control: Packaging"| C
+    B -->|"Monitor hardware delivery processes Corporate Control: Logistics Tracking"| C
+    B -->|"Embed documentation with misleading details Corporate Control: User Manual"| C
+    C -->|"Hardware integrated into victim network Third Party Control: Network Devices"| D
+    C -->|"Malicious firmware activates under specific conditions Third Party Control: Activation Process"| D
+    C -->|"Initial foothold established via hardware Third Party Control: Device Logs"| D
+    C -->|"Monitor for unusual device behavior Corporate Control: Device Monitoring"| D
+    D -->|"Backdoor enables remote access for attackers Third Party Control: Network Interface"| E
+    D -->|"Initial access achieved through compromised hardware Third Party Control: Execution Logs"| E
+    D -->|"Investigate network for anomalies Corporate Control: Threat Detection"| E
+    D -->|"Implement mitigations for further access Corporate Control: Incident Response"| E

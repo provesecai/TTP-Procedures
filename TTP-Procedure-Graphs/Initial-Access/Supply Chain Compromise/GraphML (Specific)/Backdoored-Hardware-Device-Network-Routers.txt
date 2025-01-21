@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdoored_Hardware_Device_Network_Routers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Router Firmware in Factory</data>
+</node>
+<node id="B">
+<data key="label">Distribute Routers to Retailers</data>
+</node>
+<node id="C">
+<data key="label">Routers Deployed in Target Networks</data>
+</node>
+<node id="D">
+<data key="label">Backdoor Activates to Intercept Traffic</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Inject malicious firmware into routers during assembly Corporate Control: Factory Production Line</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malware remains undetected in quality checks Third Party Control: Quality Assurance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed persistence mechanisms in firmware Corporate Control: Firmware Management System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test infected routers in controlled environments Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ship compromised routers to distribution hubs Corporate Control: Distribution Network</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid tamper detection with secure packaging Corporate Control: Packaging Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure smooth delivery to retailers Corporate Control: Logistics Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track shipments to target regions Corporate Control: Shipment Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Organizations deploy infected routers in networks Third Party Control: IT Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoor activates upon specific network configurations Third Party Control: Network Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unusual traffic patterns for command signals Third Party Control: Router Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Intercept or redirect traffic to attacker servers Third Party Control: Network Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Facilitate further exploitation or data exfiltration Third Party Control: Victim Network</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor network for signs of compromise Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy patches or replace hardware Corporate Control: Incident Response Team</data>
+</edge>
+</graph>
+</graphml>

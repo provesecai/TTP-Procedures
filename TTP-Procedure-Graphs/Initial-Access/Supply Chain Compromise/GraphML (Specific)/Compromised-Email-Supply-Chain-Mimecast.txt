@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Email_Supply_Chain_Mimecast" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Mimecast Filtering System</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious Rules into Email Filters</data>
+</node>
+<node id="C">
+<data key="label">Send Emails with Embedded Malware</data>
+</node>
+<node id="D">
+<data key="label">Recipients Open Malicious Emails</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to Mimecast admin accounts Corporate Control: Admin Portal</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create malicious email filtering rules Corporate Control: Email Filtering System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Hide rules under legitimate-looking configurations Corporate Control: Filter Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor rule activity for detection Corporate Control: Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert links to payload-hosting domains Corporate Control: Email Templates</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payloads evade detection mechanisms Corporate Control: Embedded Attachments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility with recipient email systems Corporate Control: Compatibility Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare fallback rules if detection occurs Corporate Control: Backup Filters</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Recipients interact with malicious email content Third Party Control: User Mailboxes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload activates upon user action Third Party Control: Mail Client Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold via downloaded malware Third Party Control: User Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor email campaign success metrics Corporate Control: Email Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware compromises recipient systems Third Party Control: Recipient Devices</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further data exploitation Third Party Control: User Data</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate unusual email activity Corporate Control: Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Strengthen email security filters Corporate Control: Filter Updates</data>
+</edge>
+</graph>
+</graphml>

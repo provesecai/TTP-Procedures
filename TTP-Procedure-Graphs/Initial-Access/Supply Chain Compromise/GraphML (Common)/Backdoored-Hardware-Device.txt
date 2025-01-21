@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdoored_Hardware_Device" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Hardware Supply Chain</data>
+</node>
+<node id="B">
+<data key="label">Distribute Backdoored Device</data>
+</node>
+<node id="C">
+<data key="label">Device Used in Victim's Network</data>
+</node>
+<node id="D">
+<data key="label">Backdoor Activates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Inject backdoor during manufacturing Corporate Control: Production Line</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify firmware to include malicious code Corporate Control: Firmware Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure backdoor is stealthy to avoid detection Third Party Control: Quality Assurance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare contingencies for exposure Corporate Control: Firmware Update System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute compromised hardware to target Corporate Control: Distribution Channel</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid tampering detection mechanisms Corporate Control: Packaging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor hardware delivery processes Corporate Control: Logistics Tracking</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed documentation with misleading details Corporate Control: User Manual</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hardware integrated into victim network Third Party Control: Network Devices</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious firmware activates under specific conditions Third Party Control: Activation Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Initial foothold established via hardware Third Party Control: Device Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual device behavior Corporate Control: Device Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Backdoor enables remote access for attackers Third Party Control: Network Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved through compromised hardware Third Party Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate network for anomalies Corporate Control: Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement mitigations for further access Corporate Control: Incident Response</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Software_Update_SolarWinds_Orion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise SolarWinds Build Environment</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Orion Updates</data>
+</node>
+<node id="C">
+<data key="label">Distribute Infected Updates to Customers</data>
+</node>
+<node id="D">
+<data key="label">Customers Install Compromised Updates</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to SolarWinds' build servers Corporate Control: Build Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject SUNBURST malware into Orion software Corporate Control: Source Code Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malicious code remains undetected during development Corporate Control: Code Review Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor build environment for anomalies Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Sign compromised updates with legitimate certificates Corporate Control: Code Signing Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute updates through official channels Corporate Control: Update Distribution System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain versioning consistency to avoid suspicion Corporate Control: Version Control System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for potential rollback scenarios Corporate Control: Release Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Customers download and install updates Third Party Control: Customer Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code executes within customer environments Third Party Control: IT Management Software</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establishes communication with command and control servers Third Party Control: Network Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual network activity Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attackers gain persistent access to customer networks Third Party Control: Compromised Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Facilitate further exploitation and data exfiltration Third Party Control: Data Repositories</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in system behavior Corporate Control: Endpoint Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement incident response procedures Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Cloud_Service_Microsoft_Azure" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Azure Storage Account</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Scripts into Shared Files</data>
+</node>
+<node id="C">
+<data key="label">Victims Access Shared Content</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes on Victim Machines</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Exploit misconfigured storage container access Corporate Control: Azure Storage Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain unauthorized access using stolen credentials Corporate Control: Azure Account Login</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious scripts into commonly accessed files Corporate Control: Shared Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor account activity to avoid detection Corporate Control: Account Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute malicious files via shared links Corporate Control: File Sharing Feature</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts evade detection by cloud security tools Corporate Control: Embedded Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test payload execution compatibility with victim systems Corporate Control: Testing Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare rollback scenarios if detection occurs Corporate Control: Backup Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims open shared content containing malicious scripts Third Party Control: Shared Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload activates in victim’s environment upon interaction Third Party Control: User Applications</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold in victim systems via executed script Third Party Control: Network Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unusual interactions with shared content Corporate Control: Access Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compromise victim machines through malicious execution Third Party Control: User Machines</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for lateral movement Corporate Control: Threat Response Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in shared file activity Corporate Control: Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy configuration changes to secure storage Corporate Control: Storage Security Settings</data>
+</edge>
+</graph>
+</graphml>

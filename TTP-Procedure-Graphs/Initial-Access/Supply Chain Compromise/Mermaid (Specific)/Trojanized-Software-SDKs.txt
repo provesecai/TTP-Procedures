@@ -1,0 +1,23 @@
+graph TD;
+    A[Inject Malicious Code into SDK]
+    B[Distribute Trojanized SDK via Official Repositories]
+    C[Developers Integrate Compromised SDK into Applications]
+    D[End Users Install Infected Applications]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to SDK source repository Corporate Control: Source Code Repository"| B
+    A -->|"Insert malicious tracking or data exfiltration code Corporate Control: SDK Codebase"| B
+    A -->|"Ensure malicious code evades scrutiny during reviews Corporate Control: Review Process"| B
+    A -->|"Monitor repository activity to avoid detection Corporate Control: Repository Logs"| B
+    B -->|"Publish compromised SDKs in official developer repositories Corporate Control: Distribution Platform"| C
+    B -->|"Ensure SDK is compatible with popular development frameworks Corporate Control: Compatibility Testing"| C
+    B -->|"Distribute updates labeled as performance improvements Corporate Control: Update Metadata"| C
+    B -->|"Prepare contingency for exposure with rollback options Corporate Control: Backup Systems"| C
+    C -->|"Developers unknowingly integrate malicious SDKs into apps Third Party Control: Development Environment"| D
+    C -->|"Infected applications are distributed to end users via app stores Third Party Control: App Distribution"| D
+    C -->|"Backdoor activates when the app is launched Third Party Control: Application Runtime"| D
+    C -->|"Monitor unusual activity in app performance Corporate Control: Application Monitoring"| D
+    D -->|"Malicious code executes on end-user devices Third Party Control: User Devices"| E
+    D -->|"Initial access achieved for data exfiltration or control Third Party Control: Victim Environment"| E
+    D -->|"Investigate anomalies in application behavior Corporate Control: Threat Analytics"| E
+    D -->|"Deploy updates to patch or replace compromised SDKs Corporate Control: Incident Response Team"| E

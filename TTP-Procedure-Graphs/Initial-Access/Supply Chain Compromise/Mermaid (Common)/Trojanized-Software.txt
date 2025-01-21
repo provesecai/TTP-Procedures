@@ -1,0 +1,23 @@
+graph TD;
+    A[Distribute Trojanized Software]
+    B[Victim Downloads Software]
+    C[Victim Installs Software]
+    D[Malicious Code Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Compromise software distribution platform Corporate Control: Hosting Platform"| B
+    A -->|"Embed backdoor or malware into software Corporate Control: Software Codebase"| B
+    A -->|"Maintain legitimate appearance to avoid detection Third Party Control: Software Metadata"| B
+    A -->|"Monitor for downloads to ensure stealth Corporate Control: Platform Analytics"| B
+    B -->|"Victim unknowingly downloads compromised software Third Party Control: Download Process"| C
+    B -->|"Ensure integrity checks pass successfully Third Party Control: Integrity Validation"| C
+    B -->|"Package with obfuscation techniques to evade scanning Corporate Control: Binary Packaging"| C
+    B -->|"Prepare fallback in case of detection Corporate Control: Malicious Code"| C
+    C -->|"Victim installs software on their system Third Party Control: Installation Process"| D
+    C -->|"Malicious components activate during installation Corporate Control: Install Scripts"| D
+    C -->|"Malware sets up for initial access or persistence Corporate Control: System Files"| D
+    C -->|"Monitor installation activity for anomalies Corporate Control: Security Logs"| D
+    D -->|"Payload executes, enabling attacker foothold Third Party Control: Victim System"| E
+    D -->|"Initial access achieved, allowing further exploitation Third Party Control: Execution Logs"| E
+    D -->|"Monitor for unexpected software activity Corporate Control: Threat Intelligence"| E
+    D -->|"Investigate abnormal file or network behavior Corporate Control: Network Logs"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Third_Party_Library" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Inject Malicious Code into Library</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised Library</data>
+</node>
+<node id="C">
+<data key="label">Victim Integrates Library</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access the library's source code repository Third Party Control: Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed obfuscated malicious code Corporate Control: Library Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure changes pass unnoticed by maintainers Corporate Control: Commit History</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for repository activity to avoid detection Corporate Control: Contributor Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Publish compromised library to distribution platform Third Party Control: Package Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code executes upon integration Corporate Control: Code Logic</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Package library with unchanged metadata for trust Corporate Control: Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare contingency for possible code review Corporate Control: Obfuscation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim integrates library into their application Third Party Control: Development Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code triggers during runtime Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Initial foothold established within application Third Party Control: Application Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for application behavior anomalies Corporate Control: Runtime Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious payload executes in target environment Third Party Control: Application Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved via application compromise Third Party Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Setup for further exploitation or persistence Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Watch for unexpected application behavior Corporate Control: Endpoint Detection</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Azure Storage Account]
+    B[Inject Malicious Scripts into Shared Files]
+    C[Victims Access Shared Content]
+    D[Malicious Code Executes on Victim Machines]
+    E[Initial Access Achieved]
+
+    A -->|"Exploit misconfigured storage container access Corporate Control: Azure Storage Settings"| B
+    A -->|"Obtain unauthorized access using stolen credentials Corporate Control: Azure Account Login"| B
+    A -->|"Embed malicious scripts into commonly accessed files Corporate Control: Shared Files"| B
+    A -->|"Monitor account activity to avoid detection Corporate Control: Account Logs"| B
+    B -->|"Distribute malicious files via shared links Corporate Control: File Sharing Feature"| C
+    B -->|"Ensure scripts evade detection by cloud security tools Corporate Control: Embedded Scripts"| C
+    B -->|"Test payload execution compatibility with victim systems Corporate Control: Testing Environment"| C
+    B -->|"Prepare rollback scenarios if detection occurs Corporate Control: Backup Systems"| C
+    C -->|"Victims open shared content containing malicious scripts Third Party Control: Shared Files"| D
+    C -->|"Payload activates in victim’s environment upon interaction Third Party Control: User Applications"| D
+    C -->|"Establish foothold in victim systems via executed script Third Party Control: Network Infrastructure"| D
+    C -->|"Monitor unusual interactions with shared content Corporate Control: Access Logs"| D
+    D -->|"Compromise victim machines through malicious execution Third Party Control: User Machines"| E
+    D -->|"Initial access achieved for lateral movement Corporate Control: Threat Response Systems"| E
+    D -->|"Investigate anomalies in shared file activity Corporate Control: Incident Response"| E
+    D -->|"Deploy configuration changes to secure storage Corporate Control: Storage Security Settings"| E

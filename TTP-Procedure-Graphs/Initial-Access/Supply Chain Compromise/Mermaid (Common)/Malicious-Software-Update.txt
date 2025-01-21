@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Update Server]
+    B[Embed Malicious Code]
+    C[Victim Downloads Update]
+    D[Malicious Update Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Gain access to a software update server Corporate Control: Update Distribution Service"| B
+    A -->|"Exploit vulnerabilities in update server software Third Party Control: Server Application"| B
+    A -->|"Inject malicious updates into distribution pipeline Corporate Control: Distribution System"| B
+    A -->|"Monitor for anomalies in update requests Corporate Control: Update Logs"| B
+    B -->|"Embed malware into legitimate update packages Corporate Control: Update Package"| C
+    B -->|"Ensure malware persists through code obfuscation Corporate Control: Embedded Code"| C
+    B -->|"Package with trusted certificates to avoid detection Third Party Control: Digital Certificates"| C
+    B -->|"Prepare for potential rollbacks or detection Corporate Control: Version Control"| C
+    C -->|"Victim downloads and installs compromised update Third Party Control: Victim System"| D
+    C -->|"Malware bypasses scanning mechanisms during installation Third Party Control: Installation Process"| D
+    C -->|"Initial foothold established via malicious payload Third Party Control: Payload Execution"| D
+    C -->|"Monitor network traffic for update-related anomalies Corporate Control: Network Monitoring"| D
+    D -->|"Payload executes on victim machine Third Party Control: Victim System"| E
+    D -->|"Persistence mechanisms established during initial execution Corporate Control: System Files"| E
+    D -->|"Initial access achieved, enabling further exploitation Corporate Control: Access Logs"| E
+    D -->|"Monitor for unusual update execution activity Corporate Control: Endpoint Detection"| E

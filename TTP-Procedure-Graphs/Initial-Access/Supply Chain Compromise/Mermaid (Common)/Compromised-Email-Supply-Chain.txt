@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Email Service Provider]
+    B[Modify Legitimate Emails]
+    C[Victim Receives Modified Email]
+    D[Victim Interacts with Malicious Content]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to email service provider Corporate Control: Email Provider"| B
+    A -->|"Exploit vulnerabilities in email service software Corporate Control: Server Application"| B
+    A -->|"Establish persistence in compromised email system Third Party Control: Email Infrastructure"| B
+    A -->|"Avoid detection by monitoring email activity Corporate Control: Activity Logs"| B
+    B -->|"Insert malicious links or attachments into emails Corporate Control: Email Content"| C
+    B -->|"Ensure emails appear legitimate to recipients Corporate Control: Email Metadata"| C
+    B -->|"Deliver emails from trusted domains to evade suspicion Third Party Control: Sender Reputation"| C
+    B -->|"Monitor email logs for anomalies or detections Corporate Control: Delivery Logs"| C
+    C -->|"Victim receives and opens the modified email Third Party Control: Recipient Inbox"| D
+    C -->|"Victim interacts with embedded malicious content Third Party Control: Malicious Link"| D
+    C -->|"Malware downloads or triggers upon interaction Third Party Control: Payload Execution"| D
+    C -->|"Monitor email campaigns for engagement metrics Corporate Control: Email Analytics"| D
+    D -->|"Payload executes on victim system Third Party Control: Execution Environment"| E
+    D -->|"Initial access achieved for further exploitation Third Party Control: Victim Device"| E
+    D -->|"Investigate anomalies in email campaigns Corporate Control: Threat Detection"| E
+    D -->|"Prepare mitigations for similar email-based threats Corporate Control: Incident Response"| E

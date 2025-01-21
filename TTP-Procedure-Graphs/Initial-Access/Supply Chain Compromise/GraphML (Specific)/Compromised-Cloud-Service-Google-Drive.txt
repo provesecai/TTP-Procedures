@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Cloud_Service_Google_Drive" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Google Workspace Shared Docs</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Macros into Files</data>
+</node>
+<node id="C">
+<data key="label">Users Access Infected Documents</data>
+</node>
+<node id="D">
+<data key="label">Macros Execute on Victim Machines</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to shared documents Corporate Control: Google Drive Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed malicious macros into collaborative files Corporate Control: Google Workspace Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify sharing settings to maximize visibility Corporate Control: Sharing Configurations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by blending malicious macros with legitimate content Corporate Control: Document Content</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Share infected documents with targeted users Corporate Control: File Sharing Features</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of macros with victim systems Corporate Control: Testing Environments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure macros bypass Google security scans Corporate Control: Embedded Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for account suspension by using multiple aliases Corporate Control: Backup Accounts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims access and open compromised documents Third Party Control: User Applications</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious macros activate upon document interaction Third Party Control: Document Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold in victim systems through executed code Third Party Control: Victim Devices</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unusual file interactions Corporate Control: Google Drive Activity Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware gains access to victim environments via macro execution Third Party Control: Execution Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Third Party Control: User Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate unusual document activity Corporate Control: Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Apply stricter macro execution policies Corporate Control: Workspace Policies</data>
+</edge>
+</graph>
+</graphml>

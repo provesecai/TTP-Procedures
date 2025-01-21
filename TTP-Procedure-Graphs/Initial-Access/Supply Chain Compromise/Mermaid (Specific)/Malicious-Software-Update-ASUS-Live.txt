@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise ASUS Live Update Servers]
+    B[Embed Malicious Code into Updates]
+    C[Distribute Updates to ASUS Users]
+    D[Users Install Infected Updates]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to update servers Corporate Control: ASUS Infrastructure"| B
+    A -->|"Modify update packages to include malware Corporate Control: Update Packages"| B
+    A -->|"Maintain legitimate digital signatures Corporate Control: Signing Certificates"| B
+    A -->|"Monitor server activity for detection Corporate Control: Update Logs"| B
+    B -->|"Release infected updates to official channels Corporate Control: Update Channels"| C
+    B -->|"Ensure updates are indistinguishable from legitimate ones Corporate Control: Update Metadata"| C
+    B -->|"Test for stealth during installation Corporate Control: Test Environment"| C
+    B -->|"Prepare rollback in case of detection Corporate Control: Version Control"| C
+    C -->|"Users download and install malicious updates Third Party Control: User Systems"| D
+    C -->|"Payload bypasses antivirus and installs itself Third Party Control: Endpoint Security"| D
+    C -->|"Establish foothold in victim systems during installation Third Party Control: User Machines"| D
+    C -->|"Monitor update logs for anomalies Corporate Control: Endpoint Monitoring"| D
+    D -->|"Payload activates, granting attacker access Third Party Control: Execution Environment"| E
+    D -->|"Initial access achieved for lateral movement or data theft Third Party Control: User Data"| E
+    D -->|"Investigate unusual update behavior Corporate Control: Threat Response"| E
+    D -->|"Enhance update validation processes Corporate Control: Software Security"| E

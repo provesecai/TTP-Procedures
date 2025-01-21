@@ -1,0 +1,23 @@
+graph TD;
+    A[Backdoor IoT Devices During Assembly]
+    B[Distribute Compromised IoT Devices to Vendors]
+    C[Devices Integrated Into Critical Infrastructure]
+    D[Backdoor Activates for Remote Command Execution]
+    E[Initial Access Achieved]
+
+    A -->|"Embed unauthorized remote command protocols Corporate Control: Firmware Programming"| B
+    A -->|"Ensure backdoor evades detection during testing Third Party Control: Factory Testing Process"| B
+    A -->|"Prepare stealth persistence mechanisms Corporate Control: Firmware Configurations"| B
+    A -->|"Monitor testing logs to avoid detection Corporate Control: Factory Monitoring Systems"| B
+    B -->|"Ship IoT devices to trusted vendors Corporate Control: Logistics Systems"| C
+    B -->|"Maintain normal inventory tracking to avoid suspicion Corporate Control: Inventory Management"| C
+    B -->|"Validate vendor trust using counterfeit certificates Third Party Control: Vendor Certification"| C
+    B -->|"Monitor vendor activity for updates Corporate Control: Supply Chain Analytics"| C
+    C -->|"Devices installed in critical infrastructure Third Party Control: Industrial Systems"| D
+    C -->|"Malicious code activates during routine device use Third Party Control: Operating Environment"| D
+    C -->|"Establish communication with attacker-controlled C2 servers Third Party Control: Network Traffic"| D
+    C -->|"Intercept sensitive data transmitted by IoT devices Third Party Control: Data Flow"| D
+    D -->|"Backdoor allows unauthorized remote control Third Party Control: Industrial Networks"| E
+    D -->|"Initial foothold established in infrastructure systems Third Party Control: Victim IoT Devices"| E
+    D -->|"Investigate abnormal device activity Corporate Control: Incident Response Team"| E
+    D -->|"Deploy firmware updates to remove backdoors Corporate Control: Firmware Update System"| E

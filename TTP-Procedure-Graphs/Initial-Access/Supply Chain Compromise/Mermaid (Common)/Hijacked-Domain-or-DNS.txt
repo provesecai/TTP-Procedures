@@ -1,0 +1,23 @@
+graph TD;
+    A[Hijack Domain or DNS]
+    B[Redirect Victim Traffic]
+    C[Deliver Malicious Payload]
+    D[Payload Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Compromise domain registrar account Corporate Control: Registrar Portal"| B
+    A -->|"Modify DNS records to redirect traffic Corporate Control: DNS Records"| B
+    A -->|"Use phishing or social engineering to hijack domains Third Party Control: Registrar Account"| B
+    A -->|"Monitor domain activity for detection attempts Corporate Control: Domain Monitoring"| B
+    B -->|"Redirect victim traffic to malicious servers Corporate Control: Malicious Server"| C
+    B -->|"Ensure redirection is seamless to avoid suspicion Corporate Control: Redirection Mechanism"| C
+    B -->|"Obfuscate malicious server details Corporate Control: Server Logs"| C
+    B -->|"Prepare contingency for restoration if detected Corporate Control: Backup Records"| C
+    C -->|"Deliver malicious payload to victim system Third Party Control: Delivery Mechanism"| D
+    C -->|"Payload bypasses network defenses Corporate Control: Firewall Rules"| D
+    C -->|"Establish foothold via malicious code execution Third Party Control: Victim Machine"| D
+    C -->|"Monitor traffic anomalies for possible exposure Corporate Control: Traffic Analytics"| D
+    D -->|"Payload executes, enabling initial access Corporate Control: Compromised System"| E
+    D -->|"Investigate DNS changes for anomalies Corporate Control: DNS Logs"| E
+    D -->|"Implement countermeasures for domain hijacking Corporate Control: Threat Mitigation"| E
+    D -->|"Prepare monitoring strategies for similar attacks Corporate Control: Incident Response"| E

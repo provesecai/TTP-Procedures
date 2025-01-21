@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacked_Domain_or_DNS_Registrar_Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Domain Registrar Accounts</data>
+</node>
+<node id="B">
+<data key="label">Modify DNS Records to Redirect Traffic</data>
+</node>
+<node id="C">
+<data key="label">Redirect Victim Traffic to Malicious Servers</data>
+</node>
+<node id="D">
+<data key="label">Malicious Payload Delivered to Victims</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Obtain credentials via phishing or brute force Corporate Control: Registrar Portal</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify DNS records to point to malicious servers Corporate Control: DNS Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure changes evade detection by account owners Corporate Control: Registrar Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor DNS activity for anomalies Corporate Control: Monitoring Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect traffic to attacker-controlled IPs Corporate Control: Malicious DNS Servers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure redirections match legitimate site behavior Corporate Control: Traffic Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious payloads in redirected sites Corporate Control: Website Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare backups for original DNS settings Corporate Control: DNS Rollback</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims access malicious servers unknowingly Third Party Control: User Browsers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payloads execute upon interaction with malicious pages Third Party Control: Browser Sessions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor traffic metrics for effectiveness Corporate Control: Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate unusual traffic patterns Corporate Control: Threat Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Victims’ machines are compromised by payload execution Third Party Control: Execution Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for lateral movement Corporate Control: Compromised Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy mitigation for hijacked domains Corporate Control: Domain Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Strengthen registrar security protocols Corporate Control: Security Enhancements</data>
+</edge>
+</graph>
+</graphml>

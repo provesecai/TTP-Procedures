@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Trojanized_Software_SDKs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Inject Malicious Code into SDK</data>
+</node>
+<node id="B">
+<data key="label">Distribute Trojanized SDK via Official Repositories</data>
+</node>
+<node id="C">
+<data key="label">Developers Integrate Compromised SDK into Applications</data>
+</node>
+<node id="D">
+<data key="label">End Users Install Infected Applications</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to SDK source repository Corporate Control: Source Code Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert malicious tracking or data exfiltration code Corporate Control: SDK Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malicious code evades scrutiny during reviews Corporate Control: Review Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor repository activity to avoid detection Corporate Control: Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Publish compromised SDKs in official developer repositories Corporate Control: Distribution Platform</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SDK is compatible with popular development frameworks Corporate Control: Compatibility Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute updates labeled as performance improvements Corporate Control: Update Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare contingency for exposure with rollback options Corporate Control: Backup Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developers unknowingly integrate malicious SDKs into apps Third Party Control: Development Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Infected applications are distributed to end users via app stores Third Party Control: App Distribution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoor activates when the app is launched Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unusual activity in app performance Corporate Control: Application Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious code executes on end-user devices Third Party Control: User Devices</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for data exfiltration or control Third Party Control: Victim Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in application behavior Corporate Control: Threat Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy updates to patch or replace compromised SDKs Corporate Control: Incident Response Team</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacked_Domain_or_DNS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Hijack Domain or DNS</data>
+</node>
+<node id="B">
+<data key="label">Redirect Victim Traffic</data>
+</node>
+<node id="C">
+<data key="label">Deliver Malicious Payload</data>
+</node>
+<node id="D">
+<data key="label">Payload Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Compromise domain registrar account Corporate Control: Registrar Portal</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify DNS records to redirect traffic Corporate Control: DNS Records</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use phishing or social engineering to hijack domains Third Party Control: Registrar Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor domain activity for detection attempts Corporate Control: Domain Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect victim traffic to malicious servers Corporate Control: Malicious Server</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure redirection is seamless to avoid suspicion Corporate Control: Redirection Mechanism</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate malicious server details Corporate Control: Server Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare contingency for restoration if detected Corporate Control: Backup Records</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deliver malicious payload to victim system Third Party Control: Delivery Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload bypasses network defenses Corporate Control: Firewall Rules</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold via malicious code execution Third Party Control: Victim Machine</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor traffic anomalies for possible exposure Corporate Control: Traffic Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes, enabling initial access Corporate Control: Compromised System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate DNS changes for anomalies Corporate Control: DNS Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement countermeasures for domain hijacking Corporate Control: Threat Mitigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare monitoring strategies for similar attacks Corporate Control: Incident Response</data>
+</edge>
+</graph>
+</graphml>

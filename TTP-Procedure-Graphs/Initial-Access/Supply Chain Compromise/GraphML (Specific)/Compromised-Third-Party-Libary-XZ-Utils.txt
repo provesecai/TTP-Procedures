@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Third_Party_Library_XZ_Utils" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise XZ Utils Source Code Repository</data>
+</node>
+<node id="B">
+<data key="label">Insert Backdoor into Compression Library</data>
+</node>
+<node id="C">
+<data key="label">Release Infected Library Version</data>
+</node>
+<node id="D">
+<data key="label">Users Integrate Compromised Library</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain unauthorized access to XZ Utils' source code repository Corporate Control: Source Code Management System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert backdoor into the compression library's codebase Corporate Control: Compression Algorithm Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure backdoor remains undetected during code reviews Corporate Control: Code Review Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor repository for unauthorized changes Corporate Control: Repository Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Tag and release the compromised version of the library Corporate Control: Release Management System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute the infected library through official channels Corporate Control: Package Distribution Network</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain versioning consistency to avoid suspicion Corporate Control: Version Control System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for potential vulnerability disclosures Corporate Control: Public Relations Team</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developers integrate the compromised library into their projects Third Party Control: Development Environments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Backdoor activates when the library is used Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establishes unauthorized access to the system Third Party Control: System Interfaces</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual library behavior Corporate Control: Application Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attackers gain initial access to systems using the library Third Party Control: Compromised Applications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Facilitate further exploitation such as data exfiltration Third Party Control: Data Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in system performance Corporate Control: Incident Response Team</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement security patches and updates Corporate Control: Software Maintenance</data>
+</edge>
+</graph>
+</graphml>

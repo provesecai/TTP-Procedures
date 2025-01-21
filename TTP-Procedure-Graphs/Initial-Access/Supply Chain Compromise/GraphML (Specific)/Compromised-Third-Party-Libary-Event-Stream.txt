@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Third_Party_Library_Event_Stream" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Event-Stream Repository</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Package</data>
+</node>
+<node id="C">
+<data key="label">Release Updated Version to Developers</data>
+</node>
+<node id="D">
+<data key="label">Developers Deploy Compromised Code</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to maintainer's npm account Corporate Control: Repository Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into the library's codebase Corporate Control: Source Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disguise malicious changes as legitimate updates Corporate Control: Commit History</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor repository for detection attempts Corporate Control: Version Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Publish updated version to npm registry Corporate Control: Package Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure package metadata appears legitimate Corporate Control: Package Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test for seamless integration with dependent applications Corporate Control: Testing Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for potential code reviews Corporate Control: Maintainer Review</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developers integrate compromised package into their projects Third Party Control: Application Development</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code activates during application runtime Third Party Control: Application Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual activity in dependent projects Corporate Control: Dependency Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate unusual dependency behavior Corporate Control: Developer Reports</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware executes, gaining unauthorized access Third Party Control: Execution Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved for further exploitation Third Party Control: Compromised Applications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalies in npm package behavior Corporate Control: Threat Mitigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Patch and secure dependency management workflows Corporate Control: Development Security</data>
+</edge>
+</graph>
+</graphml>

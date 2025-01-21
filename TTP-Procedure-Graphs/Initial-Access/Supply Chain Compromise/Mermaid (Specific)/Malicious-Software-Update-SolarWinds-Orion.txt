@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise SolarWinds Build Environment]
+    B[Inject Malicious Code into Orion Updates]
+    C[Distribute Infected Updates to Customers]
+    D[Customers Install Compromised Updates]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to SolarWinds' build servers Corporate Control: Build Server"| B
+    A -->|"Inject SUNBURST malware into Orion software Corporate Control: Source Code Repository"| B
+    A -->|"Ensure malicious code remains undetected during development Corporate Control: Code Review Process"| B
+    A -->|"Monitor build environment for anomalies Corporate Control: Security Monitoring"| B
+    B -->|"Sign compromised updates with legitimate certificates Corporate Control: Code Signing Infrastructure"| C
+    B -->|"Distribute updates through official channels Corporate Control: Update Distribution System"| C
+    B -->|"Maintain versioning consistency to avoid suspicion Corporate Control: Version Control System"| C
+    B -->|"Prepare for potential rollback scenarios Corporate Control: Release Management"| C
+    C -->|"Customers download and install updates Third Party Control: Customer Systems"| D
+    C -->|"Malicious code executes within customer environments Third Party Control: IT Management Software"| D
+    C -->|"Establishes communication with command and control servers Third Party Control: Network Infrastructure"| D
+    C -->|"Monitor for unusual network activity Corporate Control: Network Monitoring"| D
+    D -->|"Attackers gain persistent access to customer networks Third Party Control: Compromised Systems"| E
+    D -->|"Facilitate further exploitation and data exfiltration Third Party Control: Data Repositories"| E
+    D -->|"Investigate anomalies in system behavior Corporate Control: Endpoint Detection"| E
+    D -->|"Implement incident response procedures Corporate Control: Security Operations Center"| E

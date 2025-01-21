@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Mimecast Filtering System]
+    B[Insert Malicious Rules into Email Filters]
+    C[Send Emails with Embedded Malware]
+    D[Recipients Open Malicious Emails]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to Mimecast admin accounts Corporate Control: Admin Portal"| B
+    A -->|"Create malicious email filtering rules Corporate Control: Email Filtering System"| B
+    A -->|"Hide rules under legitimate-looking configurations Corporate Control: Filter Settings"| B
+    A -->|"Monitor rule activity for detection Corporate Control: Security Logs"| B
+    B -->|"Insert links to payload-hosting domains Corporate Control: Email Templates"| C
+    B -->|"Ensure payloads evade detection mechanisms Corporate Control: Embedded Attachments"| C
+    B -->|"Test compatibility with recipient email systems Corporate Control: Compatibility Testing"| C
+    B -->|"Prepare fallback rules if detection occurs Corporate Control: Backup Filters"| C
+    C -->|"Recipients interact with malicious email content Third Party Control: User Mailboxes"| D
+    C -->|"Payload activates upon user action Third Party Control: Mail Client Execution"| D
+    C -->|"Establish foothold via downloaded malware Third Party Control: User Systems"| D
+    C -->|"Monitor email campaign success metrics Corporate Control: Email Analytics"| D
+    D -->|"Malware compromises recipient systems Third Party Control: Recipient Devices"| E
+    D -->|"Initial access achieved for further data exploitation Third Party Control: User Data"| E
+    D -->|"Investigate unusual email activity Corporate Control: Incident Response"| E
+    D -->|"Strengthen email security filters Corporate Control: Filter Updates"| E

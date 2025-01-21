@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Trojanized_Software" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Distribute Trojanized Software</data>
+</node>
+<node id="B">
+<data key="label">Victim Downloads Software</data>
+</node>
+<node id="C">
+<data key="label">Victim Installs Software</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Compromise software distribution platform Corporate Control: Hosting Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed backdoor or malware into software Corporate Control: Software Codebase</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Maintain legitimate appearance to avoid detection Third Party Control: Software Metadata</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for downloads to ensure stealth Corporate Control: Platform Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Victim unknowingly downloads compromised software Third Party Control: Download Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure integrity checks pass successfully Third Party Control: Integrity Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Package with obfuscation techniques to evade scanning Corporate Control: Binary Packaging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare fallback in case of detection Corporate Control: Malicious Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim installs software on their system Third Party Control: Installation Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious components activate during installation Corporate Control: Install Scripts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware sets up for initial access or persistence Corporate Control: System Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor installation activity for anomalies Corporate Control: Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes, enabling attacker foothold Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved, allowing further exploitation Third Party Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected software activity Corporate Control: Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate abnormal file or network behavior Corporate Control: Network Logs</data>
+</edge>
+</graph>
+</graphml>

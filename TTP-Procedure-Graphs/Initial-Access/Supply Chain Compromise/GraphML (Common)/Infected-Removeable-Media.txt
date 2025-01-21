@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Infected_Removable_Media" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Infect Removable Media</data>
+</node>
+<node id="B">
+<data key="label">Distribute Infected Media</data>
+</node>
+<node id="C">
+<data key="label">Media Connected to Victim System</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed malware into removable media Corporate Control: Media Device</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use autorun scripts for payload activation Corporate Control: Autorun Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test media with various target systems Third Party Control: Testing Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malware remains undetectable Corporate Control: Malware Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute infected media via supply chain Corporate Control: Distribution Network</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place media in locations frequented by targets Third Party Control: Target Locations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor distribution effectiveness Corporate Control: Distribution Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare media for resilience against removal Corporate Control: Media Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim connects infected media to system Third Party Control: User Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware activates upon connection Third Party Control: Execution Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Foothold established on victim's system Third Party Control: Compromised Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal USB activities Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious code executes, gaining initial access Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Setup for further exploitation Corporate Control: Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate suspicious USB activity Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement mitigations for unauthorized devices Corporate Control: Access Control</data>
+</edge>
+</graph>
+</graphml>

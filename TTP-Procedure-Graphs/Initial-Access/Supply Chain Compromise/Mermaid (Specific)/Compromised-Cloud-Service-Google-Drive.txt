@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Google Workspace Shared Docs]
+    B[Inject Malicious Macros into Files]
+    C[Users Access Infected Documents]
+    D[Macros Execute on Victim Machines]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to shared documents Corporate Control: Google Drive Settings"| B
+    A -->|"Embed malicious macros into collaborative files Corporate Control: Google Workspace Files"| B
+    A -->|"Modify sharing settings to maximize visibility Corporate Control: Sharing Configurations"| B
+    A -->|"Avoid detection by blending malicious macros with legitimate content Corporate Control: Document Content"| B
+    B -->|"Share infected documents with targeted users Corporate Control: File Sharing Features"| C
+    B -->|"Test compatibility of macros with victim systems Corporate Control: Testing Environments"| C
+    B -->|"Ensure macros bypass Google security scans Corporate Control: Embedded Scripts"| C
+    B -->|"Prepare for account suspension by using multiple aliases Corporate Control: Backup Accounts"| C
+    C -->|"Victims access and open compromised documents Third Party Control: User Applications"| D
+    C -->|"Malicious macros activate upon document interaction Third Party Control: Document Runtime"| D
+    C -->|"Establish foothold in victim systems through executed code Third Party Control: Victim Devices"| D
+    C -->|"Monitor unusual file interactions Corporate Control: Google Drive Activity Logs"| D
+    D -->|"Malware gains access to victim environments via macro execution Third Party Control: Execution Environment"| E
+    D -->|"Initial access achieved for further exploitation Third Party Control: User Systems"| E
+    D -->|"Investigate unusual document activity Corporate Control: Security Analytics"| E
+    D -->|"Apply stricter macro execution policies Corporate Control: Workspace Policies"| E

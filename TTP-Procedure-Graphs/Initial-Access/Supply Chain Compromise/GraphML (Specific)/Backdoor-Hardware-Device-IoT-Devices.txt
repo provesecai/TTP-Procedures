@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdoor_Hardware_Device_IoT_Devices" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Backdoor IoT Devices During Assembly</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised IoT Devices to Vendors</data>
+</node>
+<node id="C">
+<data key="label">Devices Integrated Into Critical Infrastructure</data>
+</node>
+<node id="D">
+<data key="label">Backdoor Activates for Remote Command Execution</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed unauthorized remote command protocols Corporate Control: Firmware Programming</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure backdoor evades detection during testing Third Party Control: Factory Testing Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare stealth persistence mechanisms Corporate Control: Firmware Configurations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor testing logs to avoid detection Corporate Control: Factory Monitoring Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ship IoT devices to trusted vendors Corporate Control: Logistics Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain normal inventory tracking to avoid suspicion Corporate Control: Inventory Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate vendor trust using counterfeit certificates Third Party Control: Vendor Certification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor vendor activity for updates Corporate Control: Supply Chain Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Devices installed in critical infrastructure Third Party Control: Industrial Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code activates during routine device use Third Party Control: Operating Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish communication with attacker-controlled C2 servers Third Party Control: Network Traffic</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept sensitive data transmitted by IoT devices Third Party Control: Data Flow</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Backdoor allows unauthorized remote control Third Party Control: Industrial Networks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial foothold established in infrastructure systems Third Party Control: Victim IoT Devices</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate abnormal device activity Corporate Control: Incident Response Team</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy firmware updates to remove backdoors Corporate Control: Firmware Update System</data>
+</edge>
+</graph>
+</graphml>

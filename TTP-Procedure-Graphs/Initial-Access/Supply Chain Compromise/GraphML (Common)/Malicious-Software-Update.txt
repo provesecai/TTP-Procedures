@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Software_Update" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Update Server</data>
+</node>
+<node id="B">
+<data key="label">Embed Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Victim Downloads Update</data>
+</node>
+<node id="D">
+<data key="label">Malicious Update Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to a software update server Corporate Control: Update Distribution Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit vulnerabilities in update server software Third Party Control: Server Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious updates into distribution pipeline Corporate Control: Distribution System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalies in update requests Corporate Control: Update Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malware into legitimate update packages Corporate Control: Update Package</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malware persists through code obfuscation Corporate Control: Embedded Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Package with trusted certificates to avoid detection Third Party Control: Digital Certificates</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for potential rollbacks or detection Corporate Control: Version Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim downloads and installs compromised update Third Party Control: Victim System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware bypasses scanning mechanisms during installation Third Party Control: Installation Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Initial foothold established via malicious payload Third Party Control: Payload Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor network traffic for update-related anomalies Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes on victim machine Third Party Control: Victim System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistence mechanisms established during initial execution Corporate Control: System Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initial access achieved, allowing further actions Corporate Control: Access Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual update execution activity Corporate Control: Endpoint Detection</data>
+</edge>
+</graph>
+</graphml>

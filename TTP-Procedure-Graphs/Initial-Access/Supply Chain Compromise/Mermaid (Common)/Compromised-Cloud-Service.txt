@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Cloud Account]
+    B[Modify Cloud Service Content]
+    C[Victim Accesses Compromised Content]
+    D[Malicious Code Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Gain unauthorized access to cloud service account Corporate Control: Account Login"| B
+    A -->|"Exploit weak credentials or MFA bypass Corporate Control: Authentication System"| B
+    A -->|"Establish persistence within cloud account Third Party Control: Cloud Infrastructure"| B
+    A -->|"Avoid detection through activity obfuscation Corporate Control: Access Logs"| B
+    B -->|"Modify hosted content with malicious payloads Corporate Control: Hosted Files"| C
+    B -->|"Ensure payload is embedded in frequently accessed content Corporate Control: File Metadata"| C
+    B -->|"Test for compatibility with victim systems Corporate Control: Testing Environment"| C
+    B -->|"Maintain backup of original content for fallback Corporate Control: Version History"| C
+    C -->|"Victim interacts with compromised content Third Party Control: User Application"| D
+    C -->|"Malicious code executes in victim environment Third Party Control: Execution Environment"| D
+    C -->|"Initial foothold established in victim system Third Party Control: Payload Delivery"| D
+    C -->|"Monitor for anomalies in cloud traffic Corporate Control: Traffic Monitoring"| D
+    D -->|"Payload triggers on victim system Third Party Control: Execution Process"| E
+    D -->|"Initial access achieved for further exploitation Third Party Control: Victim Machine"| E
+    D -->|"Investigate cloud activity for compromise signs Corporate Control: Incident Response"| E
+    D -->|"Set up for persistent access or lateral movement Corporate Control: Threat Monitoring"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Inject Malicious Code]
+    B[Commit Code to Repository]
+    C[Victim Downloads Code]
+    D[Malicious Code Executes]
+    E[Initial Access Achieved]
+
+    A -->|"Identify and target popular open-source projects Third Party Control: Repository Selection"| B
+    A -->|"Inject malicious code via pull requests or commits Third Party Control: Source Code"| B
+    A -->|"Obfuscate changes to avoid detection Corporate Control: Code Review Process"| B
+    A -->|"Monitor repository activity to ensure stealth Corporate Control: Commit Logs"| B
+    B -->|"Submit malicious code as legitimate updates Corporate Control: Repository Admins"| C
+    B -->|"Ensure changes align with project coding standards Corporate Control: Code Quality"| C
+    B -->|"Prepare for scrutiny by maintainers Corporate Control: Review Process"| C
+    B -->|"Embed malicious payload for stealthy execution Corporate Control: Source Files"| C
+    C -->|"Victim downloads compromised code Third Party Control: Development Process"| D
+    C -->|"Malicious code triggers during compilation or runtime Third Party Control: Build System"| D
+    C -->|"Establish foothold in victim environment Corporate Control: Application Execution"| D
+    C -->|"Monitor for unusual project activity Corporate Control: Threat Monitoring"| D
+    D -->|"Payload executes, gaining initial access Corporate Control: Compromised Application"| E
+    D -->|"Investigate unusual repository activity Corporate Control: Threat Detection"| E
+    D -->|"Implement mitigation strategies for similar attacks Corporate Control: Incident Response"| E
+    D -->|"Prepare monitoring systems for repository changes Corporate Control: Security Logs"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulated_Open_Source_Repository" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Inject Malicious Code</data>
+</node>
+<node id="B">
+<data key="label">Commit Code to Repository</data>
+</node>
+<node id="C">
+<data key="label">Victim Downloads Code</data>
+</node>
+<node id="D">
+<data key="label">Malicious Code Executes</data>
+</node>
+<node id="E">
+<data key="label">Initial Access Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify and target popular open-source projects Third Party Control: Repository Selection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code via pull requests or commits Third Party Control: Source Code</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate changes to avoid detection Corporate Control: Code Review Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor repository activity to ensure stealth Corporate Control: Commit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Submit malicious code as legitimate updates Corporate Control: Repository Admins</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure changes align with project coding standards Corporate Control: Code Quality</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for scrutiny by maintainers Corporate Control: Review Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious payload for stealthy execution Corporate Control: Source Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim downloads compromised code Third Party Control: Development Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code triggers during compilation or runtime Third Party Control: Build System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish foothold in victim environment Corporate Control: Application Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual project activity Corporate Control: Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes, gaining initial access Corporate Control: Compromised Application</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate unusual repository activity Corporate Control: Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement mitigation strategies for similar attacks Corporate Control: Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare monitoring systems for repository changes Corporate Control: Security Logs</data>
+</edge>
+</graph>
+</graphml>

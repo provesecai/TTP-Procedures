@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Domain Registrar Accounts]
+    B[Modify DNS Records to Redirect Traffic]
+    C[Redirect Victim Traffic to Malicious Servers]
+    D[Malicious Payload Delivered to Victims]
+    E[Initial Access Achieved]
+
+    A -->|"Obtain credentials via phishing or brute force Corporate Control: Registrar Portal"| B
+    A -->|"Modify DNS records to point to malicious servers Corporate Control: DNS Management"| B
+    A -->|"Ensure changes evade detection by account owners Corporate Control: Registrar Logs"| B
+    A -->|"Monitor DNS activity for anomalies Corporate Control: Monitoring Systems"| B
+    B -->|"Redirect traffic to attacker-controlled IPs Corporate Control: Malicious DNS Servers"| C
+    B -->|"Ensure redirections match legitimate site behavior Corporate Control: Traffic Obfuscation"| C
+    B -->|"Embed malicious payloads in redirected sites Corporate Control: Website Code"| C
+    B -->|"Prepare backups for original DNS settings Corporate Control: DNS Rollback"| C
+    C -->|"Victims access malicious servers unknowingly Third Party Control: User Browsers"| D
+    C -->|"Payloads execute upon interaction with malicious pages Third Party Control: Browser Sessions"| D
+    C -->|"Monitor traffic metrics for effectiveness Corporate Control: Analytics"| D
+    C -->|"Investigate unusual traffic patterns Corporate Control: Threat Response"| D
+    D -->|"Victims’ machines are compromised by payload execution Third Party Control: Execution Environment"| E
+    D -->|"Initial access achieved for lateral movement Corporate Control: Compromised Systems"| E
+    D -->|"Deploy mitigation for hijacked domains Corporate Control: Domain Recovery"| E
+    D -->|"Strengthen registrar security protocols Corporate Control: Security Enhancements"| E

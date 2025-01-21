@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Event-Stream Repository]
+    B[Inject Malicious Code into Package]
+    C[Release Updated Version to Developers]
+    D[Developers Deploy Compromised Code]
+    E[Initial Access Achieved]
+
+    A -->|"Gain access to maintainer's npm account Corporate Control: Repository Access"| B
+    A -->|"Inject malicious code into the library's codebase Corporate Control: Source Code"| B
+    A -->|"Disguise malicious changes as legitimate updates Corporate Control: Commit History"| B
+    A -->|"Monitor repository for detection attempts Corporate Control: Version Control Logs"| B
+    B -->|"Publish updated version to npm registry Corporate Control: Package Manager"| C
+    B -->|"Ensure package metadata appears legitimate Corporate Control: Package Metadata"| C
+    B -->|"Test for seamless integration with dependent applications Corporate Control: Testing Frameworks"| C
+    B -->|"Prepare for potential code reviews Corporate Control: Maintainer Review"| C
+    C -->|"Developers integrate compromised package into their projects Third Party Control: Application Development"| D
+    C -->|"Malicious code activates during application runtime Third Party Control: Application Runtime"| D
+    C -->|"Monitor for unusual activity in dependent projects Corporate Control: Dependency Monitoring"| D
+    C -->|"Investigate unusual dependency behavior Corporate Control: Developer Reports"| D
+    D -->|"Malware executes, gaining unauthorized access Third Party Control: Execution Environment"| E
+    D -->|"Initial access achieved for further exploitation Third Party Control: Compromised Applications"| E
+    D -->|"Investigate anomalies in npm package behavior Corporate Control: Threat Mitigation"| E
+    D -->|"Patch and secure dependency management workflows Corporate Control: Development Security"| E
