@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="IAMRoleHijackAWSIAMRole" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for IAM Role Abuse</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Script Using Compromised Role</data>
+</node>
+<node id="D">
+<data key="label">Configure Role for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Compromised IAM credentials allow role assumption Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify roles with privileged permissions Corporate Control: IAM Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized role assumptions Corporate Control: AWS CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Assume compromised IAM role to access cloud resources Corporate Control: AWS IAM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious script under the assumed role Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with the role’s permissions Corporate Control: Role Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual activities by assumed roles Corporate Control: Cloud Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Configure script execution triggers Corporate Control: AWS CloudWatch Events</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate script behavior to achieve objectives Corporate Control: Test Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection through obfuscation and stealth Corporate Control: Script Scanners</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute the script under compromised IAM role Corporate Control: AWS Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve attack objectives while avoiding detection Corporate Control: Resource Monitoring</data>
+</edge>
+</graph>
+</graphml>

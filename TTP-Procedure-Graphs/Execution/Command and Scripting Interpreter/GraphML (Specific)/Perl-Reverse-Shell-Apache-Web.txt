@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PerlReverseShellApacheWeb" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Apache Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Perl Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Reverse Shell</data>
+</node>
+<node id="E">
+<data key="label">Reverse Shell Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via exploitation of Apache mod_perl vulnerability Corporate Control: Web Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by injecting a web shell script Corporate Control: Apache Configuration Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring for changes in mod_perl configurations Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare Perl script with reverse shell functionality Corporate Control: Script Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject script into a writable Apache directory Corporate Control: Apache Document Root</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script to bypass mod_security detection Corporate Control: WAF Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes in server directories Corporate Control: Web Server Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger script execution via crafted HTTP GET request Corporate Control: Apache Access Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reverse shell connects to an attacker-controlled server Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible by analyzing outbound connections Corporate Control: Firewall Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual Perl script activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse shell allows attacker to execute arbitrary commands Corporate Control: Target Host</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves attacker control over Apache server Corporate Control: Web Application Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound connections Corporate Control: Network Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves compromise of web server Corporate Control: Host Environment</data>
+</edge>
+</graph>
+</graphml>

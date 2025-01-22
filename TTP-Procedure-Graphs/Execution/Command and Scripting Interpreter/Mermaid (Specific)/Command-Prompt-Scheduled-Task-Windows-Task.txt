@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Task Scheduler Exploitation]
+    C[Create Malicious Task via Command Prompt]
+    D[Trigger Task Execution via Scheduled Time]
+    E[Scheduled Task Execution Achieved]
+
+    A -->|"Access gained via phishing delivering a malicious script Corporate Control: Email System"| B
+    A -->|"Script executes and spawns a cmd.exe process Corporate Control: Windows Endpoint"| B
+    A -->|"Foothold established via attacker commands Corporate Control: Command Prompt"| B
+    A -->|"Detection possible by monitoring attachment behavior Corporate Control: Email Security Tools"| B
+    B -->|"Define a task using schtasks.exe with hidden parameters Corporate Control: Windows Task Scheduler"| C
+    B -->|"Configure task to run cmd.exe with malicious payload Corporate Control: Windows System"| C
+    B -->|"Schedule task for off-hours execution Corporate Control: Windows Scheduler"| C
+    B -->|"Monitor for creation of new tasks Corporate Control: SIEM Systems"| C
+    C -->|"Trigger execution via scheduled time or immediate run Corporate Control: Windows Command Prompt"| D
+    C -->|"Validate execution success through task logs Corporate Control: Event Viewer"| D
+    C -->|"Avoid detection by minimizing resource usage Corporate Control: Windows Logs"| D
+    C -->|"Monitor task execution patterns Corporate Control: Endpoint Monitoring Tools"| D
+    D -->|"Malicious task executes, achieving attacker objectives Corporate Control: Target Host"| E
+    D -->|"Payload connects to external server for further commands Corporate Control: Network Monitoring"| E
+    D -->|"Execution completes without triggering security alarms Corporate Control: Security Monitoring Tools"| E
+    D -->|"Monitor for anomalies in task configurations Corporate Control: SIEM Systems"| E

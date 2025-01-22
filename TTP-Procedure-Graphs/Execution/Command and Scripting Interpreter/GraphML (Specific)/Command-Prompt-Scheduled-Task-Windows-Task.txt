@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CommandPromptScheduledTaskWindows" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Task Scheduler Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Task via Command Prompt</data>
+</node>
+<node id="D">
+<data key="label">Trigger Task Execution via Scheduled Time</data>
+</node>
+<node id="E">
+<data key="label">Scheduled Task Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing delivering a malicious script Corporate Control: Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Script executes and spawns a cmd.exe process Corporate Control: Windows Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established via attacker commands Corporate Control: Command Prompt</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring attachment behavior Corporate Control: Email Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Define a task using schtasks.exe with hidden parameters Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure task to run cmd.exe with malicious payload Corporate Control: Windows System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Schedule task for off-hours execution Corporate Control: Windows Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for creation of new tasks Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution via scheduled time or immediate run Corporate Control: Windows Command Prompt</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate execution success through task logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by minimizing resource usage Corporate Control: Windows Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution patterns Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious task executes, achieving attacker objectives Corporate Control: Target Host</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload connects to external server for further commands Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes without triggering security alarms Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in task configurations Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

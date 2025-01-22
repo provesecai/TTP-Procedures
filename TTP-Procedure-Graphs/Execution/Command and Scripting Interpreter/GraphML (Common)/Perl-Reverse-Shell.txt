@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PerlReverseShell" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Perl Reverse Shell Execution</data>
+</node>
+<node id="C">
+<data key="label">Deliver Malicious Perl Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Reverse Shell Script</data>
+</node>
+<node id="E">
+<data key="label">Reverse Shell Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via brute-forcing FTP credentials Corporate Control: FTP Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Upload Perl script to writable directory Corporate Control: File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by uploading reverse shell script Corporate Control: FTP Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through FTP brute force monitoring Corporate Control: Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare Perl script with reverse shell payload Corporate Control: Script Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure Perl interpreter is present on target system Corporate Control: Target Host</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify script to evade detection by antivirus Corporate Control: Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual uploads or changes Corporate Control: File Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute Perl script using /usr/bin/perl Corporate Control: Host System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish connection to attacker C2 server Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by encrypting outbound traffic Corporate Control: Firewall Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual Perl script invocations Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse shell connects to attacker-controlled system Corporate Control: Network Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate execution and issue further commands Corporate Control: Host System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible via outbound traffic analysis Corporate Control: Network Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves full remote access Corporate Control: Target Environment</data>
+</edge>
+</graph>
+</graphml>

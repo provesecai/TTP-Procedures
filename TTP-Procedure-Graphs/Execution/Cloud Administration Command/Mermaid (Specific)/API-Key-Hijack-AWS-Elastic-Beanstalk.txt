@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Elastic Beanstalk Exploitation]
+    C[Deploy Malicious Application]
+    D[Configure Application for Execution]
+    E[Execution Achieved]
+
+    A -->|"Compromised AWS API keys allow access to Elastic Beanstalk Corporate Control: AWS Management Console"| B
+    A -->|"Enumerate permissions for Elastic Beanstalk access Corporate Control: IAM Policies"| B
+    A -->|"Monitor for unauthorized API key usage Corporate Control: CloudTrail Logs"| B
+    B -->|"Create a new application with embedded malicious code Corporate Control: Elastic Beanstalk"| C
+    B -->|"Configure environment settings to facilitate execution Corporate Control: Environment Configuration"| C
+    B -->|"Obfuscate application behavior to avoid detection Corporate Control: Code Repository"| C
+    B -->|"Monitor for new or altered applications Corporate Control: Elastic Beanstalk Logs"| C
+    C -->|"Deploy the application to the cloud environment Corporate Control: Elastic Beanstalk"| D
+    C -->|"Integrate application with other AWS services Corporate Control: Service Integrations"| D
+    C -->|"Monitor for unusual application activity Corporate Control: CloudWatch Logs"| D
+    D -->|"Execute application to achieve intended attack objective Corporate Control: Elastic Beanstalk"| E
+    D -->|"Minimize resource usage and activity to avoid detection Corporate Control: Monitoring Tools"| E

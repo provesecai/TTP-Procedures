@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for EC2 Resource Abuse]
+    C[Provision Unauthorized EC2 Instances]
+    D[Configure Instances for Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised AWS credentials Corporate Control: AWS IAM Console"| B
+    A -->|"Identify permissions for creating or managing EC2 instances Corporate Control: IAM Policies"| B
+    A -->|"Monitor for unauthorized API calls to EC2 services Corporate Control: CloudTrail Logs"| B
+    B -->|"Provision EC2 instances in an underutilized region to avoid detection Corporate Control: AWS Management Console"| C
+    B -->|"Configure instances with minimal logging to reduce visibility Corporate Control: EC2 Logging"| C
+    B -->|"Deploy malicious scripts or payloads to instances Corporate Control: EC2 User Data Configuration"| C
+    B -->|"Monitor for unauthorized EC2 instance creation Corporate Control: AWS Config"| C
+    C -->|"Set up instances with persistent access and execute commands Corporate Control: EC2 Metadata Service"| D
+    C -->|"Obfuscate activity through encryption or process hiding Corporate Control: Security Monitoring Tools"| D
+    C -->|"Establish communication with Command and Control (C2) servers Corporate Control: EC2 Networking"| D
+    C -->|"Monitor for unusual network activity or traffic Corporate Control: VPC Flow Logs"| D
+    D -->|"Trigger execution of payloads within instances Corporate Control: EC2 Instance"| E
+    D -->|"Validate successful execution and exfiltration of data Corporate Control: Resource Logs"| E
+    D -->|"Avoid detection by throttling instance resource consumption Corporate Control: Monitoring Tools"| E
+    D -->|"Monitor for irregular activity or unauthorized instance operations Corporate Control: AWS Security Hub"| E

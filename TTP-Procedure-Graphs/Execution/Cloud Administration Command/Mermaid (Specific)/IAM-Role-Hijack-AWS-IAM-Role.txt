@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for IAM Role Abuse]
+    C[Deploy Malicious Script Using Compromised Role]
+    D[Configure Role for Execution]
+    E[Execution Achieved]
+
+    A -->|"Compromised IAM credentials allow role assumption Corporate Control: AWS IAM Console"| B
+    A -->|"Identify roles with privileged permissions Corporate Control: IAM Management"| B
+    A -->|"Monitor for unauthorized role assumptions Corporate Control: AWS CloudTrail"| B
+    B -->|"Assume compromised IAM role to access cloud resources Corporate Control: AWS IAM"| C
+    B -->|"Deploy malicious script under the assumed role Corporate Control: Task Scheduler"| C
+    B -->|"Ensure compatibility with the role’s permissions Corporate Control: Role Policies"| C
+    B -->|"Monitor for unusual activities by assumed roles Corporate Control: Cloud Security Logs"| C
+    C -->|"Configure script execution triggers Corporate Control: AWS CloudWatch Events"| D
+    C -->|"Validate script behavior to achieve objectives Corporate Control: Test Environment"| D
+    C -->|"Avoid detection through obfuscation and stealth Corporate Control: Script Scanners"| D
+    D -->|"Execute the script under compromised IAM role Corporate Control: AWS Infrastructure"| E
+    D -->|"Achieve attack objectives while avoiding detection Corporate Control: Resource Monitoring"| E

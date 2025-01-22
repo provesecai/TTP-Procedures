@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for IoT Shell Script Execution]
+    C[Deploy Malicious Shell Script]
+    D[Trigger Execution on IoT Device]
+    E[Shell Script Execution Achieved]
+
+    A -->|"Access gained by exploiting misconfigured SSH/Telnet on IoT device Corporate Control: IoT Network"| B
+    A -->|"Foothold established via weak/default credentials Corporate Control: Device Authentication"| B
+    A -->|"Detection possible by monitoring repeated SSH/Telnet login attempts Corporate Control: Network Logs"| B
+    B -->|"Upload malicious shell script to writable directory on IoT device Corporate Control: Device Storage"| C
+    B -->|"Ensure script permissions allow execution Corporate Control: File System"| C
+    B -->|"Obfuscate script content to bypass simple detection mechanisms Corporate Control: Security Monitoring"| C
+    B -->|"Monitor for unusual file uploads Corporate Control: IoT Monitoring Tools"| C
+    C -->|"Invoke shell script via system command line Corporate Control: IoT Shell Environment"| D
+    C -->|"Trigger actions to disable security mechanisms on the device Corporate Control: IoT Device"| D
+    C -->|"Establish outbound communication with attacker server Corporate Control: Network Firewall"| D
+    C -->|"Monitor for unusual shell invocations Corporate Control: Security Logs"| D
+    D -->|"Shell script achieves execution and controls device Corporate Control: IoT Infrastructure"| E
+    D -->|"Validate command functionality from attacker-controlled system Corporate Control: Network Monitoring"| E
+    D -->|"Execution completes without user detection Corporate Control: Device Logs"| E
+    D -->|"Detection possible through anomaly-based intrusion detection Corporate Control: SIEM Systems"| E

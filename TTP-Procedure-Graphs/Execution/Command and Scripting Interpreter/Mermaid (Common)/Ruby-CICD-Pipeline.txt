@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Ruby Script Injection]
+    C[Inject Malicious Ruby Script]
+    D[Trigger Execution in CI/CD Pipeline]
+    E[Ruby Script Execution Achieved]
+
+    A -->|"Access gained via compromised credentials for CI/CD platform Corporate Control: Jenkins/GitLab"| B
+    A -->|"Attacker logs into build system using stolen credentials Corporate Control: CI/CD System"| B
+    A -->|"Detection possible through monitoring unauthorized logins Corporate Control: System Logs"| B
+    B -->|"Inject malicious Ruby script into build configuration files Corporate Control: Build Repository"| C
+    B -->|"Obfuscate script to avoid detection during build process Corporate Control: Code Repository"| C
+    B -->|"Monitor for unusual changes in configuration files Corporate Control: CI/CD Monitoring"| C
+    B -->|"Ensure compatibility with existing build dependencies Corporate Control: Pipeline Environment"| C
+    C -->|"Trigger build process to execute malicious script Corporate Control: Build Agent"| D
+    C -->|"Payload executes within the CI/CD environment Corporate Control: Execution Logs"| D
+    C -->|"Avoid detection by mimicking legitimate build processes Corporate Control: Build Logs"| D
+    C -->|"Monitor for unusual build artifacts Corporate Control: Artifact Repository"| D
+    D -->|"Script completes execution and exfiltrates data Corporate Control: Network Monitoring"| E
+    D -->|"Validate payload execution and achieve objectives Corporate Control: Host Logs"| E
+    D -->|"Detection possible via behavioral analysis of builds Corporate Control: Security Tools"| E
+    D -->|"Execution achieves attacker control over CI/CD system Corporate Control: Infrastructure Logs"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ResourceProvisioningAbuseAKS" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for AKS Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Provision Malicious Kubernetes Pods</data>
+</node>
+<node id="D">
+<data key="label">Configure Pods for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through compromised Azure credentials Corporate Control: Azure Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate permissions to manage Kubernetes resources Corporate Control: IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized Kubernetes API calls Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create Kubernetes pods with malicious payloads Corporate Control: AKS Cluster Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy containers containing preloaded exploits Corporate Control: Azure Container Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure pods to operate with elevated privileges Corporate Control: Kubernetes Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized pod creation Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish persistent access within the cluster Corporate Control: Kubernetes Networking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute commands or payloads within the compromised cluster Corporate Control: Kubernetes Pods</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate pod behavior to evade detection Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual pod or container activity Corporate Control: Azure Monitor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger malicious activities through API or scheduled tasks Corporate Control: Kubernetes API</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate execution success and exfiltrate data Corporate Control: Azure Sentinel</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection through legitimate-looking activity patterns Corporate Control: Security Analytics Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious activity across Kubernetes resources Corporate Control: Azure Kubernetes Logs</data>
+</edge>
+</graph>
+</graphml>

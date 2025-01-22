@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VBScriptExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for VBScript Injection</data>
+</node>
+<node id="C">
+<data key="label">Deliver Malicious VBScript</data>
+</node>
+<node id="D">
+<data key="label">Execute VBScript in Host Environment</data>
+</node>
+<node id="E">
+<data key="label">VBScript Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through phishing email targeting outdated Office apps Corporate Control: Email Client</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Victim opens document with embedded VBScript macro Corporate Control: Microsoft Office</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by enabling macros Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through macro execution alerts Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious VBScript into trusted Office templates Corporate Control: Document Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate VBScript code to bypass antivirus Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with target application versions Corporate Control: Legacy Applications</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual macro behavior Corporate Control: Host Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute VBScript using wscript.exe Corporate Control: Script Host</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload connects to attacker C2 server Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible through monitoring script host activity Corporate Control: Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized script execution Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">VBScript achieves intended execution objectives Corporate Control: Host System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for lateral movement initiated via VBScript Corporate Control: Network Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by analyzing process tree behavior Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves attacker objectives Corporate Control: Target Environment</data>
+</edge>
+</graph>
+</graphml>

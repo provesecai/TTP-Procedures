@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for AppleScript Execution]
+    C[Deliver Malicious AppleScript]
+    D[Trigger Automation Scripts]
+    E[AppleScript Execution Achieved]
+
+    A -->|"Access gained via phishing email targeting macOS users Corporate Control: Email Client"| B
+    A -->|"Victim downloads malicious AppleScript disguised as a PDF Corporate Control: Endpoint File System"| B
+    A -->|"Foothold established by running the AppleScript file Corporate Control: User Actions"| B
+    A -->|"Detection possible through monitoring file type mismatches Corporate Control: Endpoint Monitoring"| B
+    B -->|"Write AppleScript to automate malicious actions Corporate Control: AppleScript Editor"| C
+    B -->|"Disguise AppleScript as legitimate automation tool Corporate Control: User Workflows"| C
+    B -->|"Ensure script compatibility with macOS environment Corporate Control: macOS System"| C
+    B -->|"Monitor for new AppleScripts in sensitive directories Corporate Control: File Integrity Monitoring"| C
+    C -->|"Trigger script execution via osascript Corporate Control: AppleScript Host"| D
+    C -->|"Execute payload to exfiltrate sensitive data Corporate Control: Network Monitoring"| D
+    C -->|"Avoid detection by mimicking user workflows Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor for unexpected osascript executions Corporate Control: macOS Logs"| D
+    D -->|"Payload completes and achieves attacker objectives Corporate Control: Host Logs"| E
+    D -->|"Monitor for additional automation triggers Corporate Control: System Logs"| E
+    D -->|"Execution completes, achieving malicious automation Corporate Control: Target Environment"| E
+    D -->|"Detection possible by correlating unusual automation tasks Corporate Control: SIEM Systems"| E

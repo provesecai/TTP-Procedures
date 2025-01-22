@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ShellScriptIoTOpenWrtRouter" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for OpenWrt Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Shell Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution on Router</data>
+</node>
+<node id="E">
+<data key="label">Shell Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via exploitation of default credentials on OpenWrt Corporate Control: Router Login Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by logging into the router shell Corporate Control: SSH/Telnet</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring login attempts Corporate Control: Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload malicious shell script to writable router storage Corporate Control: OpenWrt File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify router startup scripts to include the malicious shell Corporate Control: Initialization Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script to avoid detection during execution Corporate Control: Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for changes in router configuration files Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution by restarting router services Corporate Control: Router Shell</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script executes to disable security configurations Corporate Control: Network Firewall</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish connection to attacker-controlled server Corporate Control: Router Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible through monitoring unusual traffic patterns Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious script achieves persistent execution Corporate Control: Router Firmware</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload allows attacker control over router operations Corporate Control: Target Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves control over network traffic Corporate Control: Router Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible through anomaly-based monitoring Corporate Control: Network Security Tools</data>
+</edge>
+</graph>
+</graphml>

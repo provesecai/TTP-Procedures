@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RubyCICDJenkins" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Jenkins Pipeline Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Ruby Script into Build Config</data>
+</node>
+<node id="D">
+<data key="label">Trigger Pipeline Execution</data>
+</node>
+<node id="E">
+<data key="label">Ruby Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via exploitation of Jenkins script console Corporate Control: Jenkins Admin Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by authenticating with stolen admin credentials Corporate Control: Jenkins Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible via monitoring Jenkins audit logs Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious Ruby script into pipeline configuration file Corporate Control: Build Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disguise script as part of build deployment tasks Corporate Control: CI/CD Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test script compatibility with build environment Corporate Control: Pipeline Runner</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes in pipeline configurations Corporate Control: Jenkins Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger build to execute Ruby script Corporate Control: Jenkins Build Executor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload connects to external C2 server Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible through traffic analysis Corporate Control: Firewall Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor build output for anomalies Corporate Control: Artifact Repository</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ruby script exfiltrates sensitive build artifacts Corporate Control: Jenkins Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate script execution success Corporate Control: CI/CD Runner Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized pipeline triggers Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves control over Jenkins CI/CD system Corporate Control: Target Infrastructure</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ContainerOrchestrationManipulation" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Container Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Container</data>
+</node>
+<node id="D">
+<data key="label">Configure Container for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through misconfigured container registries Corporate Control: Container Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate available images and permissions Corporate Control: Orchestration Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Download a legitimate image for modification Corporate Control: Image Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized image downloads Corporate Control: Container Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify container image to include malicious code Corporate Control: Image Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload the modified image to the registry Corporate Control: Container Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare deployment plan for the malicious container Corporate Control: Orchestration Platform</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new image uploads with altered metadata Corporate Control: Image Scanning Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malicious container to the target environment Corporate Control: Kubernetes Cluster</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish communication between the container and command server Corporate Control: Network Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate container behavior to evade detection Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unusual activity in running containers Corporate Control: Container Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure the container environment to facilitate execution Corporate Control: Orchestration Setup</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate container runtime for compatibility Corporate Control: Resource Inventory</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection through resource allocation adjustments Corporate Control: Cluster Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor orchestration activities for anomalies Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

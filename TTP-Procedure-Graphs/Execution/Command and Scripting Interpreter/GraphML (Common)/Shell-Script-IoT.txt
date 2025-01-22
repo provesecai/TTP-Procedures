@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ShellScriptIoT" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for IoT Shell Script Execution</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Shell Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution on IoT Device</data>
+</node>
+<node id="E">
+<data key="label">Shell Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained by exploiting misconfigured SSH/Telnet on IoT device Corporate Control: IoT Network</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established via weak/default credentials Corporate Control: Device Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring repeated SSH/Telnet login attempts Corporate Control: Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload malicious shell script to writable directory on IoT device Corporate Control: Device Storage</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script permissions allow execution Corporate Control: File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script content to bypass simple detection mechanisms Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual file uploads Corporate Control: IoT Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invoke shell script via system command line Corporate Control: IoT Shell Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger actions to disable security mechanisms on the device Corporate Control: IoT Device</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish outbound communication with attacker server Corporate Control: Network Firewall</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual shell invocations Corporate Control: Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Shell script achieves execution and controls device Corporate Control: IoT Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate command functionality from attacker-controlled system Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes without user detection Corporate Control: Device Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible through anomaly-based intrusion detection Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

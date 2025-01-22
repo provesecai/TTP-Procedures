@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Scheduled Task Creation]
+    C[Create Malicious Scheduled Task]
+    D[Trigger Task Execution]
+    E[Scheduled Task Execution Achieved]
+
+    A -->|"Access gained via spear-phishing email delivering malicious link Corporate Control: Email System"| B
+    A -->|"Victim downloads script disguised as a legitimate update Corporate Control: Endpoint File System"| B
+    A -->|"Foothold established via cmd.exe execution Corporate Control: Process Monitoring"| B
+    A -->|"Detection possible via monitoring script downloads Corporate Control: Email Security"| B
+    B -->|"Create a scheduled task using schtasks.exe Corporate Control: Task Scheduler"| C
+    B -->|"Define task to execute malicious script at regular intervals Corporate Control: System Scheduler"| C
+    B -->|"Obfuscate task name and parameters to avoid detection Corporate Control: SIEM Tools"| C
+    B -->|"Monitor for creation of unusual scheduled tasks Corporate Control: Task Monitoring"| C
+    C -->|"Trigger scheduled task execution via cmd.exe Corporate Control: Command Prompt"| D
+    C -->|"Payload connects to attacker-controlled C2 server Corporate Control: Network Logs"| D
+    C -->|"Avoid detection by executing in off-hours Corporate Control: System Logs"| D
+    C -->|"Monitor for unauthorized task triggers Corporate Control: Endpoint Security"| D
+    D -->|"Scheduled task executes malicious script Corporate Control: Host System"| E
+    D -->|"Payload achieves intended objectives Corporate Control: Endpoint Logs"| E
+    D -->|"Detection possible through analysis of task execution behavior Corporate Control: SIEM Systems"| E
+    D -->|"Execution completes, establishing attacker persistence Corporate Control: System Monitoring"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for GitLab CI/CD Exploitation]
+    C[Inject Malicious Ruby Script]
+    D[Trigger Build Process for Execution]
+    E[Ruby Script Execution Achieved]
+
+    A -->|"Access gained via compromised GitLab administrator credentials Corporate Control: GitLab Authentication"| B
+    A -->|"Attacker logs into CI/CD platform with admin privileges Corporate Control: GitLab Login Portal"| B
+    A -->|"Detection possible through monitoring unauthorized logins Corporate Control: Login Logs"| B
+    B -->|"Inject malicious Ruby script into pipeline configuration file Corporate Control: GitLab CI/CD Configurations"| C
+    B -->|"Obfuscate script to blend in with legitimate build steps Corporate Control: Code Repository"| C
+    B -->|"Ensure script compatibility with CI/CD runtime Corporate Control: Pipeline Environment"| C
+    B -->|"Monitor for unusual changes in pipeline configurations Corporate Control: File Monitoring Tools"| C
+    C -->|"Trigger pipeline to execute malicious Ruby script Corporate Control: GitLab Runner"| D
+    C -->|"Ruby script connects to attacker-controlled C2 server Corporate Control: Network Monitoring"| D
+    C -->|"Monitor for anomalies in build artifacts Corporate Control: Artifact Repository"| D
+    C -->|"Avoid detection by mimicking normal build processes Corporate Control: Build Logs"| D
+    D -->|"Execution allows full compromise of CI/CD environment Corporate Control: Target Environment"| E
+    D -->|"Payload achieves data exfiltration or environment manipulation Corporate Control: Host Logs"| E
+    D -->|"Monitor for unauthorized pipeline executions Corporate Control: SIEM Systems"| E
+    D -->|"Execution achieves persistence in build systems Corporate Control: Target Infrastructure"| E

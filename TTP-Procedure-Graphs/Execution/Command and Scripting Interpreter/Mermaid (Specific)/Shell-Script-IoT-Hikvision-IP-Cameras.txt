@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Hikvision Exploitation]
+    C[Deploy Malicious Shell Script]
+    D[Trigger Execution via Device Commands]
+    E[Shell Script Execution Achieved]
+
+    A -->|"Access gained by exploiting CVE-2023-XXXX vulnerability Corporate Control: Hikvision Firmware"| B
+    A -->|"Foothold established through weak default credentials Corporate Control: IoT Device"| B
+    A -->|"Detection possible by monitoring device access logs Corporate Control: Network Logs"| B
+    B -->|"Prepare malicious shell script for device persistence Corporate Control: Local File System"| C
+    B -->|"Upload script via vulnerable admin web interface Corporate Control: Hikvision Admin Panel"| C
+    B -->|"Ensure execution permissions are set correctly Corporate Control: Device Firmware"| C
+    B -->|"Monitor for unauthorized script uploads Corporate Control: SIEM Tools"| C
+    C -->|"Trigger execution using device command injection Corporate Control: Admin Web Interface"| D
+    C -->|"Script modifies camera configurations to disable logging Corporate Control: IoT Configuration"| D
+    C -->|"Establish outbound communication with C2 server Corporate Control: Firewall Monitoring"| D
+    C -->|"Detection possible through traffic analysis Corporate Control: Network Security Tools"| D
+    D -->|"Script achieves full remote control of the device Corporate Control: IoT Infrastructure"| E
+    D -->|"Execution completes, allowing ongoing surveillance Corporate Control: Target Environment"| E
+    D -->|"Monitor for repeated device compromise attempts Corporate Control: Network Logs"| E
+    D -->|"Detection possible by correlating unauthorized commands Corporate Control: SIEM Systems"| E

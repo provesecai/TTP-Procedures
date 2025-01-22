@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ResourceProvisioningAbuseAWSEC2" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for EC2 Resource Abuse</data>
+</node>
+<node id="C">
+<data key="label">Provision Unauthorized EC2 Instances</data>
+</node>
+<node id="D">
+<data key="label">Configure Instances for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through compromised AWS credentials Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions for creating or managing EC2 instances Corporate Control: IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API calls to EC2 services Corporate Control: CloudTrail Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Provision EC2 instances in an underutilized region to avoid detection Corporate Control: AWS Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure instances with minimal logging to reduce visibility Corporate Control: EC2 Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious scripts or payloads to instances Corporate Control: EC2 User Data Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized EC2 instance creation Corporate Control: AWS Config</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Set up instances with persistent access and execute commands Corporate Control: EC2 Metadata Service</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate activity through encryption or process hiding Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish communication with Command and Control (C2) servers Corporate Control: EC2 Networking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual network activity or traffic Corporate Control: VPC Flow Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger execution of payloads within instances Corporate Control: EC2 Instance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate successful execution and exfiltration of data Corporate Control: Resource Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by throttling instance resource consumption Corporate Control: Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for irregular activity or unauthorized instance operations Corporate Control: AWS Security Hub</data>
+</edge>
+</graph>
+</graphml>

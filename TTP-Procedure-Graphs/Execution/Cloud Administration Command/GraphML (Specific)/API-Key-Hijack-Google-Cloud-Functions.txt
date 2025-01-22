@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="APIKeyHijackGoogleCloudFunctions" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Cloud Functions Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Cloud Function</data>
+</node>
+<node id="D">
+<data key="label">Configure Function Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Compromised Google Cloud API keys allow access to Cloud Functions Corporate Control: Google Cloud Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate permissions for Cloud Functions access Corporate Control: IAM Roles</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API key usage Corporate Control: Cloud Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create or modify a Cloud Function with embedded malicious payload Corporate Control: Google Cloud Functions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate function behavior to avoid detection Corporate Control: Code Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test functionality and compatibility with the environment Corporate Control: Testing Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new or altered Cloud Functions Corporate Control: Cloud Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy the function and trigger its execution Corporate Control: Cloud Functions Console</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Integrate function with other cloud services Corporate Control: Google Pub/Sub</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual execution activity Corporate Control: Google Cloud Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute function to achieve intended attack objective Corporate Control: Cloud Functions Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Minimize resource usage and activity to avoid detection Corporate Control: Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

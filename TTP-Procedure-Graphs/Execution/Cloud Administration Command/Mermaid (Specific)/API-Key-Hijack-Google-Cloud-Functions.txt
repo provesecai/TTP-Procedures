@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Cloud Functions Exploitation]
+    C[Deploy Malicious Cloud Function]
+    D[Configure Function Execution]
+    E[Execution Achieved]
+
+    A -->|"Compromised Google Cloud API keys allow access to Cloud Functions Corporate Control: Google Cloud Console"| B
+    A -->|"Enumerate permissions for Cloud Functions access Corporate Control: IAM Roles"| B
+    A -->|"Monitor for unauthorized API key usage Corporate Control: Cloud Audit Logs"| B
+    B -->|"Create or modify a Cloud Function with embedded malicious payload Corporate Control: Google Cloud Functions"| C
+    B -->|"Obfuscate function behavior to avoid detection Corporate Control: Code Repository"| C
+    B -->|"Test functionality and compatibility with the environment Corporate Control: Testing Tools"| C
+    B -->|"Monitor for new or altered Cloud Functions Corporate Control: Cloud Monitoring"| C
+    C -->|"Deploy the function and trigger its execution Corporate Control: Cloud Functions Console"| D
+    C -->|"Integrate function with other cloud services Corporate Control: Google Pub/Sub"| D
+    C -->|"Monitor for unusual execution activity Corporate Control: Google Cloud Logging"| D
+    D -->|"Execute function to achieve intended attack objective Corporate Control: Cloud Functions Infrastructure"| E
+    D -->|"Minimize resource usage and activity to avoid detection Corporate Control: Monitoring Tools"| E

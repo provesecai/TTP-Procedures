@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VBScriptExecutionExcelMacros" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for VBScript Macro Injection</data>
+</node>
+<node id="C">
+<data key="label">Embed Malicious VBScript into Excel File</data>
+</node>
+<node id="D">
+<data key="label">Trigger Macro Execution</data>
+</node>
+<node id="E">
+<data key="label">VBScript Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering Excel attachment Corporate Control: User Email</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Victim opens Excel file and enables legacy macros Corporate Control: Office Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by running VBScript macro Corporate Control: Process Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring suspicious Excel activity Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed VBScript into Excel VBA module Corporate Control: Office VBA Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate VBScript code to evade detection Corporate Control: Script Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with target Office version Corporate Control: Legacy Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual changes in Office documents Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger VBScript execution through user interaction Corporate Control: Office Application</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload executes commands to exfiltrate data Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected network connections Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible via VBA macro activity logging Corporate Control: Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Macro achieves execution objectives Corporate Control: Host System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate execution success through attacker-controlled server Corporate Control: C2 Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves attacker objectives Corporate Control: Target Host</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual macro behavior Corporate Control: Endpoint Logs</data>
+</edge>
+</graph>
+</graphml>

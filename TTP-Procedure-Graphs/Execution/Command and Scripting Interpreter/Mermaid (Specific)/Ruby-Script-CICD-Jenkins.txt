@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Jenkins Pipeline Exploitation]
+    C[Inject Malicious Ruby Script into Build Config]
+    D[Trigger Pipeline Execution]
+    E[Ruby Script Execution Achieved]
+
+    A -->|"Access gained via exploitation of Jenkins script console Corporate Control: Jenkins Admin Console"| B
+    A -->|"Foothold established by authenticating with stolen admin credentials Corporate Control: Jenkins Authentication"| B
+    A -->|"Detection possible via monitoring Jenkins audit logs Corporate Control: SIEM Systems"| B
+    B -->|"Inject malicious Ruby script into pipeline configuration file Corporate Control: Build Repository"| C
+    B -->|"Disguise script as part of build deployment tasks Corporate Control: CI/CD Configurations"| C
+    B -->|"Test script compatibility with build environment Corporate Control: Pipeline Runner"| C
+    B -->|"Monitor for unauthorized changes in pipeline configurations Corporate Control: Jenkins Logs"| C
+    C -->|"Trigger build to execute Ruby script Corporate Control: Jenkins Build Executor"| D
+    C -->|"Payload connects to external C2 server Corporate Control: Network Monitoring"| D
+    C -->|"Detection possible through traffic analysis Corporate Control: Firewall Tools"| D
+    C -->|"Monitor build output for anomalies Corporate Control: Artifact Repository"| D
+    D -->|"Ruby script exfiltrates sensitive build artifacts Corporate Control: Jenkins Logs"| E
+    D -->|"Validate script execution success Corporate Control: CI/CD Runner Logs"| E
+    D -->|"Monitor for unauthorized pipeline triggers Corporate Control: Security Monitoring Tools"| E
+    D -->|"Execution achieves control over Jenkins CI/CD system Corporate Control: Target Infrastructure"| E

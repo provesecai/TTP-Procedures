@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ScriptingAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Scripting Abuse</data>
+</node>
+<node id="C">
+<data key="label">Upload Malicious Script</data>
+</node>
+<node id="D">
+<data key="label">Configure Script Execution</data>
+</node>
+<node id="E">
+<data key="label">Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through spear-phishing targeting credentials Corporate Control: Employee Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Phishing email contained a malicious attachment or link Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Credentials stolen through fake login portals Third Party Control: Web Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection opportunities via anomaly detection in email traffic Corporate Control: Email Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attacker authenticates to cloud services using stolen credentials Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reconnaissance of cloud storage and resource permissions Corporate Control: IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify targets for script deployment and plan further steps Corporate Control: Resource Inventory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitoring resource changes and API calls for anomalous activity Corporate Control: Cloud Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Upload malicious script to cloud storage for execution Corporate Control: Cloud Storage Service</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Configure permissions for script execution Corporate Control: IAM Role Setup</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious script disguised to avoid detection Corporate Control: File Scanners</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection via monitoring file upload patterns and content scanning Corporate Control: Cloud Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure cloud scheduler or automation service to trigger script execution Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use obfuscation techniques to hide script functionality Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure prerequisites for execution, such as runtime environment setup Corporate Control: Cloud Environment Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task schedules for irregular or unauthorized configurations Corporate Control: Task Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

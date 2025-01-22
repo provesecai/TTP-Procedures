@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="APIKeyHijackAWSElasticBeanstalk" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Elastic Beanstalk Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Application</data>
+</node>
+<node id="D">
+<data key="label">Configure Application for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Compromised AWS API keys allow access to Elastic Beanstalk Corporate Control: AWS Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate permissions for Elastic Beanstalk access Corporate Control: IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API key usage Corporate Control: CloudTrail Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a new application with embedded malicious code Corporate Control: Elastic Beanstalk</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure environment settings to facilitate execution Corporate Control: Environment Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate application behavior to avoid detection Corporate Control: Code Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new or altered applications Corporate Control: Elastic Beanstalk Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy the application to the cloud environment Corporate Control: Elastic Beanstalk</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Integrate application with other AWS services Corporate Control: Service Integrations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual application activity Corporate Control: CloudWatch Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute application to achieve intended attack objective Corporate Control: Elastic Beanstalk</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Minimize resource usage and activity to avoid detection Corporate Control: Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

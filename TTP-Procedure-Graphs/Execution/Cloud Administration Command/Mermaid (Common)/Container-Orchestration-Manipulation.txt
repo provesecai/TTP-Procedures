@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Container Exploitation]
+    C[Deploy Malicious Container]
+    D[Configure Container for Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through misconfigured container registries Corporate Control: Container Registry"| B
+    A -->|"Enumerate available images and permissions Corporate Control: Orchestration Platform"| B
+    A -->|"Download a legitimate image for modification Corporate Control: Image Repository"| B
+    A -->|"Monitor for unauthorized image downloads Corporate Control: Container Logs"| B
+    B -->|"Modify container image to include malicious code Corporate Control: Image Editor"| C
+    B -->|"Upload the modified image to the registry Corporate Control: Container Registry"| C
+    B -->|"Prepare deployment plan for the malicious container Corporate Control: Orchestration Platform"| C
+    B -->|"Monitor for new image uploads with altered metadata Corporate Control: Image Scanning Tools"| C
+    C -->|"Deploy malicious container to the target environment Corporate Control: Kubernetes Cluster"| D
+    C -->|"Establish communication between the container and command server Corporate Control: Network Configuration"| D
+    C -->|"Obfuscate container behavior to evade detection Corporate Control: Process Monitoring Tools"| D
+    C -->|"Detect unusual activity in running containers Corporate Control: Container Monitoring Tools"| D
+    D -->|"Configure the container environment to facilitate execution Corporate Control: Orchestration Setup"| E
+    D -->|"Validate container runtime for compatibility Corporate Control: Resource Inventory"| E
+    D -->|"Avoid detection through resource allocation adjustments Corporate Control: Cluster Management"| E
+    D -->|"Monitor orchestration activities for anomalies Corporate Control: Security Monitoring Tools"| E

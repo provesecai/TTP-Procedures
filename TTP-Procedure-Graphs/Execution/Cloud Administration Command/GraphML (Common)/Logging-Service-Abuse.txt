@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LoggingServiceAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Log Manipulation</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Logs</data>
+</node>
+<node id="D">
+<data key="label">Configure Log Triggers</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access achieved through vulnerable monitoring agents Corporate Control: Log Management Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigurations in logging services Corporate Control: Log Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate logging pipelines and their triggers Corporate Control: Cloud Logging Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalies in log configurations Corporate Control: Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious scripts for injection into log files Corporate Control: Log Processing Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify specific log triggers for execution Corporate Control: Log Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Plan obfuscation strategies for malicious log entries Corporate Control: Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for log file alterations Corporate Control: Log Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious scripts into logging pipelines Corporate Control: Log Processing Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure scripts match expected logging formats Corporate Control: Cloud Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by hiding malicious activity in normal logs Corporate Control: Activity Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor log files for injected commands Corporate Control: Log Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger execution through log processing automation Corporate Control: Cloud Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve payload execution within log processing environment Corporate Control: Log Processing Pipeline</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by leveraging trusted log automation Corporate Control: Cloud Activity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual log-based execution patterns Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

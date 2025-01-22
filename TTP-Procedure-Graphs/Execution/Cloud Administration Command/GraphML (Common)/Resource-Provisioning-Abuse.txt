@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ResourceProvisioningAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Resource Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Provision Malicious Resources</data>
+</node>
+<node id="D">
+<data key="label">Configure Resources for Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access achieved via social engineering Corporate Control: Employee Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compromise user account with administrative privileges Corporate Control: IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate cloud resources available for provisioning Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual administrative access Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Plan provisioning strategy for malicious virtual machines Corporate Control: Resource Planner</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify exploitable services or configurations Corporate Control: Resource Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up unauthorized permissions for resource access Corporate Control: IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect attempts to alter resource permissions Corporate Control: Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Provision unauthorized virtual machines or containers Corporate Control: Cloud Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy payload to the provisioned resources Corporate Control: Resource Setup</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate resource metadata to avoid detection Corporate Control: Resource Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized resource creation Corporate Control: Cloud Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare execution environment with required dependencies Corporate Control: Resource Preparation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure runtime triggers for automatic execution Corporate Control: Cloud Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by minimizing resource usage Corporate Control: Resource Usage Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor new runtime configurations for irregularities Corporate Control: Cloud Monitoring</data>
+</edge>
+</graph>
+</graphml>

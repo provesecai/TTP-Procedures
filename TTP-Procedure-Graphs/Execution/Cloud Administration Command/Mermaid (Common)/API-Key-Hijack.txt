@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for API Key Abuse]
+    C[Deploy Malicious API Calls]
+    D[Configure API Resources]
+    E[Execution Achieved]
+
+    A -->|"API keys stolen from misconfigured or exposed repositories Third Party Control: Code Repositories"| B
+    A -->|"Access cloud services using stolen API keys Corporate Control: Cloud API Gateway"| B
+    A -->|"Enumerate API endpoints to identify potential targets Corporate Control: Cloud Management Console"| B
+    A -->|"Monitor for API key misuse through audit logs Corporate Control: API Monitoring Tools"| B
+    B -->|"Authenticate with cloud services using compromised API keys Corporate Control: API Gateway"| C
+    B -->|"Identify endpoints for deploying malicious payloads Corporate Control: API Management Console"| C
+    B -->|"Establish unauthorized permissions through APIs Corporate Control: IAM Settings"| C
+    B -->|"Monitor API activity for anomalous behavior Corporate Control: Cloud Audit Logs"| C
+    C -->|"Invoke API to deploy malicious payloads to cloud resources Corporate Control: Cloud Functions"| D
+    C -->|"Payload designed to exploit specific cloud services Corporate Control: Cloud Infrastructure"| D
+    C -->|"Obfuscate API calls to bypass detection Corporate Control: API Gateway Logs"| D
+    C -->|"Detect unusual API activity with real-time alerts Corporate Control: Cloud Security Tools"| D
+    D -->|"Configure API triggers for automated execution Corporate Control: Event Triggers"| E
+    D -->|"Ensure seamless payload execution through proper API setup Corporate Control: API Scheduler"| E
+    D -->|"Avoid detection by modifying API metadata Corporate Control: Resource Management Logs"| E
+    D -->|"Monitor for unusual configurations in API usage Corporate Control: Security Monitoring Tools"| E

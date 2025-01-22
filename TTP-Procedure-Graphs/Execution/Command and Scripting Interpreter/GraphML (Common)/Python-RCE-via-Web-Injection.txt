@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PythonRCEWebInjection" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Python RCE</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Code into Web Server</data>
+</node>
+<node id="D">
+<data key="label">Execute Python Payload</data>
+</node>
+<node id="E">
+<data key="label">RCE Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through SQL injection in Python web app Corporate Control: Web Application Firewall</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit vulnerable Flask app to upload reverse shell Corporate Control: Web Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by executing shell commands via RCE Corporate Control: Server Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible via real-time monitoring of app behavior Corporate Control: WAF Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare Python script with reverse shell payload Corporate Control: Script Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload malicious code to the app’s temp directory Corporate Control: File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hide payload within legitimate Python modules Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for anomalies in Python runtime Corporate Control: Host Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invoke malicious code via HTTP POST request Corporate Control: Web Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution through remote commands Corporate Control: HTTP API Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection using obfuscated Python libraries Corporate Control: Security Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized POST requests Corporate Control: Network Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse shell connects to attacker C2 server Corporate Control: Network Firewall</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate shell functionality and execute further commands Corporate Control: Host System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by analyzing outbound connections Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves remote control of target server Corporate Control: Target Infrastructure</data>
+</edge>
+</graph>
+</graphml>

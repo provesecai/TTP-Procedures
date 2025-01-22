@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Perl Reverse Shell Execution]
+    C[Deliver Malicious Perl Script]
+    D[Trigger Reverse Shell Script]
+    E[Reverse Shell Execution Achieved]
+
+    A -->|"Access gained via brute-forcing FTP credentials Corporate Control: FTP Server"| B
+    A -->|"Upload Perl script to writable directory Corporate Control: File System"| B
+    A -->|"Foothold established by uploading reverse shell script Corporate Control: FTP Server"| B
+    A -->|"Detection possible through FTP brute force monitoring Corporate Control: Network Logs"| B
+    B -->|"Prepare Perl script with reverse shell payload Corporate Control: Script Repository"| C
+    B -->|"Ensure Perl interpreter is present on target system Corporate Control: Target Host"| C
+    B -->|"Modify script to evade detection by antivirus Corporate Control: Endpoint Security"| C
+    B -->|"Monitor for unusual uploads or changes Corporate Control: File Monitoring"| C
+    C -->|"Execute Perl script using /usr/bin/perl Corporate Control: Host System"| D
+    C -->|"Establish connection to attacker C2 server Corporate Control: Network Monitoring"| D
+    C -->|"Avoid detection by encrypting outbound traffic Corporate Control: Firewall Tools"| D
+    C -->|"Monitor for unusual Perl script invocations Corporate Control: SIEM Tools"| D
+    D -->|"Reverse shell connects to attacker-controlled system Corporate Control: Network Infrastructure"| E
+    D -->|"Validate execution and issue further commands Corporate Control: Host System"| E
+    D -->|"Detection possible via outbound traffic analysis Corporate Control: Network Logs"| E
+    D -->|"Execution achieves full remote access Corporate Control: Target Environment"| E

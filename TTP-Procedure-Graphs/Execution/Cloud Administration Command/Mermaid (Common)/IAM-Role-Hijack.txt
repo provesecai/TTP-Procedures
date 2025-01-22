@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for IAM Role Abuse]
+    C[Deploy Malicious Script]
+    D[Configure Role Permissions]
+    E[Execution Achieved]
+
+    A -->|"Access achieved through spear-phishing Corporate Control: Employee Email"| B
+    A -->|"Identify roles and permissions for exploitation Corporate Control: IAM Management Console"| B
+    A -->|"Hijack underprivileged role credentials Corporate Control: IAM Role Configuration"| B
+    A -->|"Monitor for anomalous role changes Corporate Control: IAM Activity Logs"| B
+    B -->|"Attacker assumes compromised IAM roles Corporate Control: Cloud Management Console"| C
+    B -->|"Enumerate resources available to the compromised role Corporate Control: Cloud Services"| C
+    B -->|"Prepare a script to execute under the hijacked role Corporate Control: Role Permissions Setup"| C
+    B -->|"Monitor for unusual API calls or privilege escalations Corporate Control: Audit Logs"| C
+    C -->|"Upload and schedule the malicious script Corporate Control: Task Scheduler"| D
+    C -->|"Ensure role compatibility with the script Corporate Control: Resource Management"| D
+    C -->|"Obfuscate script contents to avoid detection Corporate Control: Script Scanning Tools"| D
+    C -->|"Monitor for new tasks associated with roles Corporate Control: Task Monitoring Tools"| D
+    D -->|"Configure permissions to allow execution Corporate Control: IAM Policies"| E
+    D -->|"Execute the script under the compromised role Corporate Control: Resource Execution"| E
+    D -->|"Avoid detection through obfuscation and minimal privilege use Corporate Control: Role Activity Logs"| E
+    D -->|"Monitor for unexpected task executions Corporate Control: Resource Monitoring Tools"| E

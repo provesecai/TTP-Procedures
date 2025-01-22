@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RubyCICDPipeline" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Ruby Script Injection</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Ruby Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution in CI/CD Pipeline</data>
+</node>
+<node id="E">
+<data key="label">Ruby Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised credentials for CI/CD platform Corporate Control: Jenkins/GitLab</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attacker logs into build system using stolen credentials Corporate Control: CI/CD System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring unauthorized logins Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious Ruby script into build configuration files Corporate Control: Build Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script to avoid detection during build process Corporate Control: Code Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual changes in configuration files Corporate Control: CI/CD Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with existing build dependencies Corporate Control: Pipeline Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger build process to execute malicious script Corporate Control: Build Agent</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload executes within the CI/CD environment Corporate Control: Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by mimicking legitimate build processes Corporate Control: Build Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual build artifacts Corporate Control: Artifact Repository</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Script completes execution and exfiltrates data Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate payload execution and achieve objectives Corporate Control: Host Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible via behavioral analysis of builds Corporate Control: Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves attacker control over CI/CD system Corporate Control: Infrastructure Logs</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ShellScriptIoTHikvisionCameras" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Hikvision Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Shell Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Device Commands</data>
+</node>
+<node id="E">
+<data key="label">Shell Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained by exploiting CVE-2023-XXXX vulnerability Corporate Control: Hikvision Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established through weak default credentials Corporate Control: IoT Device</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring device access logs Corporate Control: Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious shell script for device persistence Corporate Control: Local File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload script via vulnerable admin web interface Corporate Control: Hikvision Admin Panel</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution permissions are set correctly Corporate Control: Device Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized script uploads Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution using device command injection Corporate Control: Admin Web Interface</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script modifies camera configurations to disable logging Corporate Control: IoT Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish outbound communication with C2 server Corporate Control: Firewall Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detection possible through traffic analysis Corporate Control: Network Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Script achieves full remote control of the device Corporate Control: IoT Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, allowing ongoing surveillance Corporate Control: Target Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for repeated device compromise attempts Corporate Control: Network Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by correlating unauthorized commands Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

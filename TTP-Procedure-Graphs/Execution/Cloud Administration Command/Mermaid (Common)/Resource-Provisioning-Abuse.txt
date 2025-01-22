@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Resource Exploitation]
+    C[Provision Malicious Resources]
+    D[Configure Resources for Execution]
+    E[Execution Achieved]
+
+    A -->|"Access achieved via social engineering Corporate Control: Employee Email System"| B
+    A -->|"Compromise user account with administrative privileges Corporate Control: IAM Console"| B
+    A -->|"Enumerate cloud resources available for provisioning Corporate Control: Cloud Management Console"| B
+    A -->|"Monitor for unusual administrative access Corporate Control: SIEM Tools"| B
+    B -->|"Plan provisioning strategy for malicious virtual machines Corporate Control: Resource Planner"| C
+    B -->|"Identify exploitable services or configurations Corporate Control: Resource Configuration"| C
+    B -->|"Set up unauthorized permissions for resource access Corporate Control: IAM Policies"| C
+    B -->|"Detect attempts to alter resource permissions Corporate Control: Activity Logs"| C
+    C -->|"Provision unauthorized virtual machines or containers Corporate Control: Cloud Services"| D
+    C -->|"Deploy payload to the provisioned resources Corporate Control: Resource Setup"| D
+    C -->|"Obfuscate resource metadata to avoid detection Corporate Control: Resource Monitoring"| D
+    C -->|"Monitor for unauthorized resource creation Corporate Control: Cloud Security Tools"| D
+    D -->|"Prepare execution environment with required dependencies Corporate Control: Resource Preparation"| E
+    D -->|"Configure runtime triggers for automatic execution Corporate Control: Cloud Scheduler"| E
+    D -->|"Avoid detection by minimizing resource usage Corporate Control: Resource Usage Monitoring"| E
+    D -->|"Monitor new runtime configurations for irregularities Corporate Control: Cloud Monitoring"| E

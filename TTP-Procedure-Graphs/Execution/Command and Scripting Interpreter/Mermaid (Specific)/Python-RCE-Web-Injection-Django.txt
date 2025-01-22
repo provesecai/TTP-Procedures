@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Django Exploitation]
+    C[Inject Malicious Python Code]
+    D[Execute Code on Django Server]
+    E[Python RCE Execution Achieved]
+
+    A -->|"Access gained via SQL injection in Django-based web app Corporate Control: Web Application Firewall"| B
+    A -->|"Exploit Django admin panel misconfiguration Corporate Control: Web Application IAM"| B
+    A -->|"Foothold established by injecting malicious Python commands Corporate Control: Django Backend"| B
+    A -->|"Detection possible through real-time WAF monitoring Corporate Control: Network Logs"| B
+    B -->|"Craft Python script for reverse shell payload Corporate Control: Script Repository"| C
+    B -->|"Embed script into Django templates to execute server-side Corporate Control: Django Templating Engine"| C
+    B -->|"Obfuscate Python payloads using base64 encoding Corporate Control: Application Logs"| C
+    B -->|"Monitor for template modifications within the app Corporate Control: File Integrity Monitoring"| C
+    C -->|"Trigger execution via manipulated HTTP POST requests Corporate Control: Django Request Handler"| D
+    C -->|"Payload establishes outbound connection to attacker C2 Corporate Control: Network Firewall"| D
+    C -->|"Avoid detection by mimicking legitimate Django API requests Corporate Control: Web Traffic Logs"| D
+    C -->|"Monitor for unusual behavior in Django view functions Corporate Control: Application Security Tools"| D
+    D -->|"Reverse shell successfully connects to attacker C2 server Corporate Control: Network Monitoring"| E
+    D -->|"Payload allows further exploitation of the server Corporate Control: Target System"| E
+    D -->|"Execution achieves attacker control over Django server Corporate Control: Web Application Infrastructure"| E
+    D -->|"Detection possible by correlating outbound traffic with payload triggers Corporate Control: SIEM Systems"| E

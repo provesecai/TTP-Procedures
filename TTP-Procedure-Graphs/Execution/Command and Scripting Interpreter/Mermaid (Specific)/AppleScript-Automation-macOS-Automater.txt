@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Automator Workflow Injection]
+    C[Inject Malicious AppleScript]
+    D[Trigger Workflow Execution]
+    E[Automator Script Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering fake macOS update Corporate Control: Email Client"| B
+    A -->|"Victim downloads and opens a malicious Automator workflow Corporate Control: macOS Application"| B
+    A -->|"Foothold established by adding workflows to system startup Corporate Control: macOS Startup Items"| B
+    A -->|"Detection possible by monitoring new startup items Corporate Control: Endpoint Monitoring Tools"| B
+    B -->|"Prepare AppleScript to automate unauthorized actions Corporate Control: AppleScript Editor"| C
+    B -->|"Embed script into Automator workflow with legitimate-looking actions Corporate Control: Automator Workflow"| C
+    B -->|"Ensure compatibility with macOS security restrictions Corporate Control: macOS Gatekeeper"| C
+    B -->|"Monitor for unusual workflows or script activities Corporate Control: System Logs"| C
+    C -->|"Trigger workflow execution via osascript command Corporate Control: AppleScript Runtime"| D
+    C -->|"Automator executes commands to exfiltrate sensitive data Corporate Control: Network Monitoring"| D
+    C -->|"Avoid detection by mimicking legitimate macOS workflows Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor for unexpected osascript executions Corporate Control: Security Tools"| D
+    D -->|"Payload completes, achieving attacker objectives Corporate Control: Host Logs"| E
+    D -->|"Monitor for additional triggers tied to malicious workflows Corporate Control: Endpoint Monitoring"| E
+    D -->|"Execution achieves automation of attacker actions Corporate Control: Target Host"| E
+    D -->|"Detection possible via script execution correlation Corporate Control: SIEM Systems"| E

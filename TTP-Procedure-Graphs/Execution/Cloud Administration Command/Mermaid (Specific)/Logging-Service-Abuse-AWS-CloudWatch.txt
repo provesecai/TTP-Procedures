@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for CloudWatch Exploitation]
+    C[Inject Malicious Scripts into Log Streams]
+    D[Configure Log Triggers]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised AWS credentials Corporate Control: AWS IAM Console"| B
+    A -->|"Enumerate log groups and streams in CloudWatch Corporate Control: CloudWatch Console"| B
+    A -->|"Monitor for unauthorized log access attempts Corporate Control: CloudTrail Logs"| B
+    B -->|"Inject malicious payloads into existing log streams Corporate Control: CloudWatch Logs"| C
+    B -->|"Obfuscate injected payloads to evade detection Corporate Control: Log Formatting Tools"| C
+    B -->|"Configure triggers to process malicious logs Corporate Control: Log Processing Rules"| C
+    C -->|"Set up Lambda functions or EventBridge rules for log processing Corporate Control: AWS Lambda"| D
+    C -->|"Validate payload execution within the processing pipeline Corporate Control: Resource Logs"| D
+    C -->|"Monitor for unusual processing patterns Corporate Control: CloudWatch Monitoring"| D
+    D -->|"Trigger payloads through automated log triggers Corporate Control: Log Pipeline"| E
+    D -->|"Achieve execution objectives within the logging system Corporate Control: AWS Infrastructure"| E
+    D -->|"Avoid detection through minimal activity Corporate Control: Log Monitoring Tools"| E

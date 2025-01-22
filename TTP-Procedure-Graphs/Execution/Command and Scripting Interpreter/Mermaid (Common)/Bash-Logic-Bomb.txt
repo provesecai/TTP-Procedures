@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Logic Bomb Deployment]
+    C[Deliver Conditional Bash Script]
+    D[Trigger System Event]
+    E[Logic Bomb Execution Achieved]
+
+    A -->|"Access gained via compromised SSH credentials Corporate Control: Public SSH Server"| B
+    A -->|"Establish connection to vulnerable server Corporate Control: Network Logs"| B
+    A -->|"Upload an obfuscated Bash script to hidden directory Corporate Control: Linux Filesystem"| B
+    A -->|"Detection possible via monitoring SSH login attempts Corporate Control: SIEM Tools"| B
+    B -->|"Write logic bomb script to trigger on system uptime Corporate Control: Cron Scheduler"| C
+    B -->|"Disguise malicious intent by embedding legitimate commands Corporate Control: Script Logs"| C
+    B -->|"Evade detection by modifying file permissions Corporate Control: File Monitoring Tools"| C
+    B -->|"Monitor for unusual script changes Corporate Control: File Integrity Monitoring"| C
+    C -->|"Trigger script execution based on specific events Corporate Control: Linux Event Manager"| D
+    C -->|"Modify environment variables to ensure successful execution Corporate Control: System Configuration"| D
+    C -->|"Avoid detection by encrypting payloads Corporate Control: Security Tools"| D
+    C -->|"Monitor for new or suspicious cron jobs Corporate Control: System Monitoring"| D
+    D -->|"Logic bomb executes after event triggers Corporate Control: Target System"| E
+    D -->|"Payload achieves attacker objectives Corporate Control: Host Environment"| E
+    D -->|"Monitor for unexpected system-level events Corporate Control: Endpoint Detection Tools"| E
+    D -->|"Execution completes without raising alarms Corporate Control: Logging Systems"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BashLogicBombKubernetes" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Kubernetes Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Bash Script in Pod</data>
+</node>
+<node id="D">
+<data key="label">Trigger Bash Logic Bomb in Cluster</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via misconfigured kubelet API Corporate Control: Kubernetes API Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate accessible Kubernetes pods and containers Corporate Control: Kubernetes Cluster</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by accessing pods with elevated permissions Corporate Control: Kubernetes Node IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring unauthorized API requests Corporate Control: Kubernetes Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Write malicious Bash script to /tmp directory in Kubernetes pods Corporate Control: Container File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure cron jobs inside pods to trigger Bash script Corporate Control: Kubernetes Pod Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate Bash script logic using escape sequences Corporate Control: Script Obfuscation Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor pod configurations for unexpected cron jobs Corporate Control: Kubernetes Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute Bash logic bomb by triggering pod-level events Corporate Control: Kubernetes Orchestrator</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload disrupts cluster communication or exfiltrates data Corporate Control: Kubernetes Networking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by hiding malicious logs Corporate Control: Kubernetes Log Aggregation Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual processes within Kubernetes containers Corporate Control: Container Runtime Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Logic bomb executes successfully within the cluster Corporate Control: Kubernetes Node</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload establishes persistence or performs data exfiltration Corporate Control: Cluster Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by monitoring pod-level resource usage Corporate Control: Kubernetes Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, achieving attacker objectives Corporate Control: Kubernetes Cluster Infrastructure</data>
+</edge>
+</graph>
+</graphml>

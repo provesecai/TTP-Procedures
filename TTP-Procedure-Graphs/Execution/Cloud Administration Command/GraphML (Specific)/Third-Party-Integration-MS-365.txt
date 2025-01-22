@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ThirdPartyIntegrationExploitMicrosoft365" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Exploiting Microsoft 365 Integrations</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Integration or Application</data>
+</node>
+<node id="D">
+<data key="label">Configure Application Triggers</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Compromised credentials gained through phishing attack Corporate Control: Microsoft 365 User Accounts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log in to the victim’s Microsoft 365 environment using stolen credentials Corporate Control: Azure Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate existing third-party integrations and permissions Corporate Control: Integration Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Register a malicious application with elevated privileges Corporate Control: Microsoft Graph API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing integrations to include malicious components Corporate Control: Microsoft 365 Application Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual integration requests Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Configure the application to intercept sensitive data or automate malicious actions Corporate Control: Microsoft Teams or OneDrive</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage integration to access and exfiltrate information from SharePoint Corporate Control: Microsoft 365 File Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual data access patterns Corporate Control: Microsoft Cloud App Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger the malicious integration to achieve its objectives Corporate Control: Integration Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate successful execution and collect exfiltrated data Corporate Control: Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by mimicking legitimate application behavior Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalous application activity Corporate Control: Microsoft Sentinel</data>
+</edge>
+</graph>
+</graphml>

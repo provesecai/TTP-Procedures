@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ScriptingAbuseAWSLambda" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Lambda Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Lambda Function</data>
+</node>
+<node id="D">
+<data key="label">Configure Lambda Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through compromised AWS credentials Corporate Control: AWS IAM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate permissions to identify Lambda access Corporate Control: AWS IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual login activities Corporate Control: AWS CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create or modify Lambda function with embedded payload Corporate Control: AWS Lambda</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure IAM permissions to allow Lambda execution Corporate Control: IAM Role</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate payload functionality to bypass detection Corporate Control: Code Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual function uploads Corporate Control: Lambda Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malicious Lambda to interact with other cloud resources Corporate Control: AWS Lambda</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger Lambda execution via event-based triggers Corporate Control: EventBridge</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected function executions Corporate Control: CloudWatch Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate successful execution of the malicious payload Corporate Control: Resource Inventory</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection through minimal permissions and activity Corporate Control: Lambda Monitoring</data>
+</edge>
+</graph>
+</graphml>

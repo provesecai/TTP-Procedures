@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BashLogicBomb" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Logic Bomb Deployment</data>
+</node>
+<node id="C">
+<data key="label">Deliver Conditional Bash Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger System Event</data>
+</node>
+<node id="E">
+<data key="label">Logic Bomb Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised SSH credentials Corporate Control: Public SSH Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Establish connection to vulnerable server Corporate Control: Network Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Upload an obfuscated Bash script to hidden directory Corporate Control: Linux Filesystem</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible via monitoring SSH login attempts Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Write logic bomb script to trigger on system uptime Corporate Control: Cron Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disguise malicious intent by embedding legitimate commands Corporate Control: Script Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evade detection by modifying file permissions Corporate Control: File Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual script changes Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger script execution based on specific events Corporate Control: Linux Event Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify environment variables to ensure successful execution Corporate Control: System Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by encrypting payloads Corporate Control: Security Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for new or suspicious cron jobs Corporate Control: System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Logic bomb executes after event triggers Corporate Control: Target System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload achieves attacker objectives Corporate Control: Host Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected system-level events Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes without raising alarms Corporate Control: Logging Systems</data>
+</edge>
+</graph>
+</graphml>

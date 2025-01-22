@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Serverless Exploitation]
+    C[Deploy Malicious Function]
+    D[Configure Function Triggers]
+    E[Execution Achieved]
+
+    A -->|"Access gained through phishing targeting credentials Corporate Control: Employee Email System"| B
+    A -->|"Attacker logs into the cloud environment Corporate Control: Cloud Management Console"| B
+    A -->|"Enumerate serverless functions and permissions Corporate Control: Serverless Management Console"| B
+    A -->|"Monitor for new login sessions or privilege escalations Corporate Control: Security Tools"| B
+    B -->|"Prepare malicious function with embedded payload Corporate Control: Development Tools"| C
+    B -->|"Identify high-privilege functions for exploitation Corporate Control: Cloud Functions"| C
+    B -->|"Establish execution permissions on cloud resources Corporate Control: IAM Roles"| C
+    B -->|"Detect unusual uploads or changes in functions Corporate Control: Cloud Activity Logs"| C
+    C -->|"Upload malicious serverless function Corporate Control: Cloud Functions Platform"| D
+    C -->|"Test functionality and obfuscate payload Corporate Control: Testing Environment"| D
+    C -->|"Integrate function with existing services Corporate Control: Cloud Networking"| D
+    C -->|"Monitor for unapproved functions or integrations Corporate Control: Function Monitoring Tools"| D
+    D -->|"Configure triggers for function execution Corporate Control: Event Triggers"| E
+    D -->|"Validate payload execution and achieve objectives Corporate Control: Cloud Functions Platform"| E
+    D -->|"Avoid detection by minimizing function activity Corporate Control: Security Analytics Tools"| E
+    D -->|"Monitor for unusual trigger configurations Corporate Control: Event Monitoring Tools"| E

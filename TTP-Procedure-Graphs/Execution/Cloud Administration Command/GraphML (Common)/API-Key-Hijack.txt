@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="APIKeyHijack" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for API Key Abuse</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious API Calls</data>
+</node>
+<node id="D">
+<data key="label">Configure API Resources</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">API keys stolen from misconfigured or exposed repositories Third Party Control: Code Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access cloud services using stolen API keys Corporate Control: Cloud API Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate API endpoints to identify potential targets Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for API key misuse through audit logs Corporate Control: API Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Authenticate with cloud services using compromised API keys Corporate Control: API Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify endpoints for deploying malicious payloads Corporate Control: API Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish unauthorized permissions through APIs Corporate Control: IAM Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API activity for anomalous behavior Corporate Control: Cloud Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invoke API to deploy malicious payloads to cloud resources Corporate Control: Cloud Functions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload designed to exploit specific cloud services Corporate Control: Cloud Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate API calls to bypass detection Corporate Control: API Gateway Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unusual API activity with real-time alerts Corporate Control: Cloud Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure API triggers for automated execution Corporate Control: Event Triggers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure seamless payload execution through proper API setup Corporate Control: API Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by modifying API metadata Corporate Control: Resource Management Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual configurations in API usage Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

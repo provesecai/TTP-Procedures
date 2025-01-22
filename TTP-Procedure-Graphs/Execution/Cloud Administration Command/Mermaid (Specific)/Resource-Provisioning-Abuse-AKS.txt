@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for AKS Exploitation]
+    C[Provision Malicious Kubernetes Pods]
+    D[Configure Pods for Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised Azure credentials Corporate Control: Azure Active Directory"| B
+    A -->|"Enumerate permissions to manage Kubernetes resources Corporate Control: IAM Policies"| B
+    A -->|"Monitor for unauthorized Kubernetes API calls Corporate Control: Azure Activity Logs"| B
+    B -->|"Create Kubernetes pods with malicious payloads Corporate Control: AKS Cluster Management"| C
+    B -->|"Deploy containers containing preloaded exploits Corporate Control: Azure Container Registry"| C
+    B -->|"Configure pods to operate with elevated privileges Corporate Control: Kubernetes Configuration"| C
+    B -->|"Monitor for unauthorized pod creation Corporate Control: Azure Security Center"| C
+    C -->|"Establish persistent access within the cluster Corporate Control: Kubernetes Networking"| D
+    C -->|"Execute commands or payloads within the compromised cluster Corporate Control: Kubernetes Pods"| D
+    C -->|"Obfuscate pod behavior to evade detection Corporate Control: Security Monitoring Tools"| D
+    C -->|"Monitor for unusual pod or container activity Corporate Control: Azure Monitor"| D
+    D -->|"Trigger malicious activities through API or scheduled tasks Corporate Control: Kubernetes API"| E
+    D -->|"Validate execution success and exfiltrate data Corporate Control: Azure Sentinel"| E
+    D -->|"Avoid detection through legitimate-looking activity patterns Corporate Control: Security Analytics Tools"| E
+    D -->|"Monitor for suspicious activity across Kubernetes resources Corporate Control: Azure Kubernetes Logs"| E

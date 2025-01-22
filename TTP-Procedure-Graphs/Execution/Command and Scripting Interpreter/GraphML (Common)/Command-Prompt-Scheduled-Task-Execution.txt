@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CommandPromptScheduledTaskExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Scheduled Task Creation</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Scheduled Task</data>
+</node>
+<node id="D">
+<data key="label">Trigger Task Execution</data>
+</node>
+<node id="E">
+<data key="label">Scheduled Task Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via spear-phishing email delivering malicious link Corporate Control: Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Victim downloads script disguised as a legitimate update Corporate Control: Endpoint File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established via cmd.exe execution Corporate Control: Process Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible via monitoring script downloads Corporate Control: Email Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a scheduled task using schtasks.exe Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Define task to execute malicious script at regular intervals Corporate Control: System Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate task name and parameters to avoid detection Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for creation of unusual scheduled tasks Corporate Control: Task Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger scheduled task execution via cmd.exe Corporate Control: Command Prompt</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload connects to attacker-controlled C2 server Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by executing in off-hours Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized task triggers Corporate Control: Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Scheduled task executes malicious script Corporate Control: Host System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload achieves intended objectives Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible through analysis of task execution behavior Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, establishing attacker persistence Corporate Control: System Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Scripting Abuse]
+    C[Upload Malicious Script]
+    D[Configure Script Execution]
+    E[Script Execution Achieved]
+
+    A -->|"Access gained through spear-phishing targeting credentials Corporate Control: Employee Email System"| B
+    A -->|"Phishing email contained a malicious attachment or link Corporate Control: Endpoint Protection"| B
+    A -->|"Credentials stolen through fake login portals Third Party Control: Web Application"| B
+    A -->|"Detection opportunities via anomaly detection in email traffic Corporate Control: Email Security Tools"| B
+    B -->|"Attacker authenticates to cloud services using stolen credentials Corporate Control: Cloud Management Console"| C
+    B -->|"Reconnaissance of cloud storage and resource permissions Corporate Control: IAM Policies"| C
+    B -->|"Identify targets for script deployment and plan further steps Corporate Control: Resource Inventory"| C
+    B -->|"Monitoring resource changes and API calls for anomalous activity Corporate Control: Cloud Activity Logs"| C
+    C -->|"Upload malicious script to cloud storage for execution Corporate Control: Cloud Storage Service"| D
+    C -->|"Configure permissions for script execution Corporate Control: IAM Role Setup"| D
+    C -->|"Malicious script disguised to avoid detection Corporate Control: File Scanners"| D
+    C -->|"Detection via monitoring file upload patterns and content scanning Corporate Control: Cloud Security Tools"| D
+    D -->|"Configure cloud scheduler or automation service to trigger script execution Corporate Control: Task Scheduler"| E
+    D -->|"Use obfuscation techniques to hide script functionality Corporate Control: Security Monitoring Tools"| E
+    D -->|"Ensure prerequisites for execution, such as runtime environment setup Corporate Control: Cloud Environment Configuration"| E
+    D -->|"Monitor task schedules for irregular or unauthorized configurations Corporate Control: Task Monitoring Tools"| E

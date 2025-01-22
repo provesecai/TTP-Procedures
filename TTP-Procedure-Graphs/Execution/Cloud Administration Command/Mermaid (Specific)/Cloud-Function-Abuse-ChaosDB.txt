@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Azure Functions Exploitation]
+    C[Deploy Malicious Function]
+    D[Configure Function Triggers]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised Azure credentials Corporate Control: Azure Active Directory"| B
+    A -->|"Identify permissions to create or modify Azure Functions Corporate Control: Azure IAM Policies"| B
+    A -->|"Monitor for unauthorized access attempts Corporate Control: Azure Security Center"| B
+    B -->|"Develop a function with embedded malicious code Corporate Control: Azure Functions"| C
+    B -->|"Test function in isolated environment to ensure stealth Corporate Control: Azure DevTest Labs"| C
+    B -->|"Deploy function to target environment Corporate Control: Azure Portal"| C
+    B -->|"Monitor for new function deployments Corporate Control: Azure Monitor"| C
+    C -->|"Configure triggers (e.g., HTTP requests, timers) to initiate function Corporate Control: Azure Event Grid"| D
+    C -->|"Ensure function has necessary permissions for intended actions Corporate Control: Azure Role Assignments"| D
+    C -->|"Monitor for unusual function configurations Corporate Control: Azure Policy"| D
+    D -->|"Execute function to perform malicious activities Corporate Control: Azure Functions Runtime"| E
+    D -->|"Validate successful execution and persistence Corporate Control: Azure Logs"| E
+    D -->|"Avoid detection by mimicking legitimate function behavior Corporate Control: Azure Application Insights"| E
+    D -->|"Monitor for anomalies in function executions Corporate Control: Azure Sentinel"| E

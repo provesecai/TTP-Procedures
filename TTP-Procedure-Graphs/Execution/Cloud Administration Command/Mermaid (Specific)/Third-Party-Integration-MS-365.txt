@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Exploiting Microsoft 365 Integrations]
+    C[Deploy Malicious Integration or Application]
+    D[Configure Application Triggers]
+    E[Execution Achieved]
+
+    A -->|"Compromised credentials gained through phishing attack Corporate Control: Microsoft 365 User Accounts"| B
+    A -->|"Log in to the victim’s Microsoft 365 environment using stolen credentials Corporate Control: Azure Active Directory"| B
+    A -->|"Enumerate existing third-party integrations and permissions Corporate Control: Integration Management Console"| B
+    B -->|"Register a malicious application with elevated privileges Corporate Control: Microsoft Graph API"| C
+    B -->|"Modify existing integrations to include malicious components Corporate Control: Microsoft 365 Application Console"| C
+    B -->|"Monitor for unusual integration requests Corporate Control: Azure Security Center"| C
+    C -->|"Configure the application to intercept sensitive data or automate malicious actions Corporate Control: Microsoft Teams or OneDrive"| D
+    C -->|"Leverage integration to access and exfiltrate information from SharePoint Corporate Control: Microsoft 365 File Management"| D
+    C -->|"Monitor for unusual data access patterns Corporate Control: Microsoft Cloud App Security"| D
+    D -->|"Trigger the malicious integration to achieve its objectives Corporate Control: Integration Scheduler"| E
+    D -->|"Validate successful execution and collect exfiltrated data Corporate Control: Application Logs"| E
+    D -->|"Avoid detection by mimicking legitimate application behavior Corporate Control: Security Monitoring Tools"| E
+    D -->|"Monitor for anomalous application activity Corporate Control: Microsoft Sentinel"| E

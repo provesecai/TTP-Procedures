@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for OpenWrt Exploitation]
+    C[Deploy Malicious Shell Script]
+    D[Trigger Execution on Router]
+    E[Shell Script Execution Achieved]
+
+    A -->|"Access gained via exploitation of default credentials on OpenWrt Corporate Control: Router Login Interface"| B
+    A -->|"Foothold established by logging into the router shell Corporate Control: SSH/Telnet"| B
+    A -->|"Detection possible by monitoring login attempts Corporate Control: Network Logs"| B
+    B -->|"Upload malicious shell script to writable router storage Corporate Control: OpenWrt File System"| C
+    B -->|"Modify router startup scripts to include the malicious shell Corporate Control: Initialization Scripts"| C
+    B -->|"Obfuscate script to avoid detection during execution Corporate Control: Security Tools"| C
+    B -->|"Monitor for changes in router configuration files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Trigger execution by restarting router services Corporate Control: Router Shell"| D
+    C -->|"Script executes to disable security configurations Corporate Control: Network Firewall"| D
+    C -->|"Establish connection to attacker-controlled server Corporate Control: Router Network Logs"| D
+    C -->|"Detection possible through monitoring unusual traffic patterns Corporate Control: Intrusion Detection Systems"| D
+    D -->|"Malicious script achieves persistent execution Corporate Control: Router Firmware"| E
+    D -->|"Payload allows attacker control over router operations Corporate Control: Target Environment"| E
+    D -->|"Execution achieves control over network traffic Corporate Control: Router Logs"| E
+    D -->|"Detection possible through anomaly-based monitoring Corporate Control: Network Security Tools"| E

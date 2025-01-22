@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Log Manipulation]
+    C[Inject Malicious Logs]
+    D[Configure Log Triggers]
+    E[Execution Achieved]
+
+    A -->|"Access achieved through vulnerable monitoring agents Corporate Control: Log Management Tools"| B
+    A -->|"Identify misconfigurations in logging services Corporate Control: Log Management Console"| B
+    A -->|"Enumerate logging pipelines and their triggers Corporate Control: Cloud Logging Services"| B
+    A -->|"Monitor for anomalies in log configurations Corporate Control: Activity Logs"| B
+    B -->|"Prepare malicious scripts for injection into log files Corporate Control: Log Processing Tools"| C
+    B -->|"Identify specific log triggers for execution Corporate Control: Log Management Console"| C
+    B -->|"Plan obfuscation strategies for malicious log entries Corporate Control: Security Tools"| C
+    B -->|"Monitor for log file alterations Corporate Control: Log Monitoring"| C
+    C -->|"Inject malicious scripts into logging pipelines Corporate Control: Log Processing Tools"| D
+    C -->|"Ensure scripts match expected logging formats Corporate Control: Cloud Services"| D
+    C -->|"Avoid detection by hiding malicious activity in normal logs Corporate Control: Activity Monitoring Tools"| D
+    C -->|"Monitor log files for injected commands Corporate Control: Log Security Tools"| D
+    D -->|"Trigger execution through log processing automation Corporate Control: Cloud Scheduler"| E
+    D -->|"Achieve payload execution within log processing environment Corporate Control: Log Processing Pipeline"| E
+    D -->|"Avoid detection by leveraging trusted log automation Corporate Control: Cloud Activity Monitoring"| E
+    D -->|"Monitor for unusual log-based execution patterns Corporate Control: Security Monitoring Tools"| E

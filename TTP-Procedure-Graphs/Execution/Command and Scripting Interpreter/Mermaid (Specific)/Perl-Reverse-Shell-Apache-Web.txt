@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Apache Exploitation]
+    C[Deploy Malicious Perl Script]
+    D[Trigger Reverse Shell]
+    E[Reverse Shell Execution Achieved]
+
+    A -->|"Access gained via exploitation of Apache mod_perl vulnerability Corporate Control: Web Server"| B
+    A -->|"Foothold established by injecting a web shell script Corporate Control: Apache Configuration Files"| B
+    A -->|"Detection possible by monitoring for changes in mod_perl configurations Corporate Control: File Integrity Monitoring"| B
+    B -->|"Prepare Perl script with reverse shell functionality Corporate Control: Script Repository"| C
+    B -->|"Inject script into a writable Apache directory Corporate Control: Apache Document Root"| C
+    B -->|"Obfuscate script to bypass mod_security detection Corporate Control: WAF Tools"| C
+    B -->|"Monitor for unauthorized changes in server directories Corporate Control: Web Server Logs"| C
+    C -->|"Trigger script execution via crafted HTTP GET request Corporate Control: Apache Access Logs"| D
+    C -->|"Reverse shell connects to an attacker-controlled server Corporate Control: Network Monitoring"| D
+    C -->|"Detection possible by analyzing outbound connections Corporate Control: Firewall Logs"| D
+    C -->|"Monitor for unusual Perl script activity Corporate Control: SIEM Systems"| D
+    D -->|"Reverse shell allows attacker to execute arbitrary commands Corporate Control: Target Host"| E
+    D -->|"Execution achieves attacker control over Apache server Corporate Control: Web Application Infrastructure"| E
+    D -->|"Monitor for unauthorized outbound connections Corporate Control: Network Security Tools"| E
+    D -->|"Execution achieves compromise of web server Corporate Control: Host Environment"| E

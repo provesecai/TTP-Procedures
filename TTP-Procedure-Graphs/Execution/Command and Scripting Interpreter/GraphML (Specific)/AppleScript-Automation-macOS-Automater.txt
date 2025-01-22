@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AppleScriptmacOSAutomator" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Automator Workflow Injection</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious AppleScript</data>
+</node>
+<node id="D">
+<data key="label">Trigger Workflow Execution</data>
+</node>
+<node id="E">
+<data key="label">Automator Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering fake macOS update Corporate Control: Email Client</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Victim downloads and opens a malicious Automator workflow Corporate Control: macOS Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by adding workflows to system startup Corporate Control: macOS Startup Items</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring new startup items Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare AppleScript to automate unauthorized actions Corporate Control: AppleScript Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed script into Automator workflow with legitimate-looking actions Corporate Control: Automator Workflow</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with macOS security restrictions Corporate Control: macOS Gatekeeper</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual workflows or script activities Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger workflow execution via osascript command Corporate Control: AppleScript Runtime</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automator executes commands to exfiltrate sensitive data Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by mimicking legitimate macOS workflows Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected osascript executions Corporate Control: Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload completes, achieving attacker objectives Corporate Control: Host Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for additional triggers tied to malicious workflows Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves automation of attacker actions Corporate Control: Target Host</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible via script execution correlation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

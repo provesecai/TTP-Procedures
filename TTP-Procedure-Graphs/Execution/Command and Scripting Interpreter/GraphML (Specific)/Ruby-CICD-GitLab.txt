@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RubyCICDGitLab" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for GitLab CI/CD Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Ruby Script</data>
+</node>
+<node id="D">
+<data key="label">Trigger Build Process for Execution</data>
+</node>
+<node id="E">
+<data key="label">Ruby Script Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised GitLab administrator credentials Corporate Control: GitLab Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attacker logs into CI/CD platform with admin privileges Corporate Control: GitLab Login Portal</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring unauthorized logins Corporate Control: Login Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious Ruby script into pipeline configuration file Corporate Control: GitLab CI/CD Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script to blend in with legitimate build steps Corporate Control: Code Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script compatibility with CI/CD runtime Corporate Control: Pipeline Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual changes in pipeline configurations Corporate Control: File Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger pipeline to execute malicious Ruby script Corporate Control: GitLab Runner</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ruby script connects to attacker-controlled C2 server Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in build artifacts Corporate Control: Artifact Repository</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by mimicking normal build processes Corporate Control: Build Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution allows full compromise of CI/CD environment Corporate Control: Target Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload achieves data exfiltration or environment manipulation Corporate Control: Host Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized pipeline executions Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves persistence in build systems Corporate Control: Target Infrastructure</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CloudFunctionAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Serverless Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Function</data>
+</node>
+<node id="D">
+<data key="label">Configure Function Triggers</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through phishing targeting credentials Corporate Control: Employee Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attacker logs into the cloud environment Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate serverless functions and permissions Corporate Control: Serverless Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for new login sessions or privilege escalations Corporate Control: Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious function with embedded payload Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify high-privilege functions for exploitation Corporate Control: Cloud Functions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish execution permissions on cloud resources Corporate Control: IAM Roles</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual uploads or changes in functions Corporate Control: Cloud Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Upload malicious serverless function Corporate Control: Cloud Functions Platform</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test functionality and obfuscate payload Corporate Control: Testing Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Integrate function with existing services Corporate Control: Cloud Networking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unapproved functions or integrations Corporate Control: Function Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure triggers for function execution Corporate Control: Event Triggers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate payload execution and achieve objectives Corporate Control: Cloud Functions Platform</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by minimizing function activity Corporate Control: Security Analytics Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual trigger configurations Corporate Control: Event Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

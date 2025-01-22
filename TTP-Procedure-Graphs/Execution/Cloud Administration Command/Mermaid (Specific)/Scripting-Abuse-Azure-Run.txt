@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for RunCommand Exploitation]
+    C[Deploy Malicious Script via RunCommand]
+    D[Configure Script Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised Azure credentials Corporate Control: Azure Active Directory"| B
+    A -->|"Attacker authenticates to Azure portal using stolen credentials Corporate Control: Azure Portal"| B
+    A -->|"Enumerate permissions to identify RunCommand access Corporate Control: Azure IAM Policies"| B
+    A -->|"Monitor for unusual login activities Corporate Control: Azure Activity Logs"| B
+    B -->|"Identify target virtual machines with RunCommand enabled Corporate Control: Azure Virtual Machines"| C
+    B -->|"Prepare malicious scripts for execution Corporate Control: Script Repository"| C
+    B -->|"Ensure RunCommand capability is available on target VMs Corporate Control: VM Extensions"| C
+    B -->|"Monitor for changes in RunCommand configurations Corporate Control: Azure Monitor"| C
+    C -->|"Execute scripts using Azure RunCommand Corporate Control: Azure RunCommand"| D
+    C -->|"Scripts designed to establish persistence or exfiltrate data Corporate Control: Virtual Machines"| D
+    C -->|"Obfuscate script outputs to avoid detection Corporate Control: Log Analytics"| D
+    C -->|"Monitor for unexpected script executions Corporate Control: Azure Security Center"| D
+    D -->|"Configure RunCommand to execute scripts with necessary privileges Corporate Control: Azure IAM Roles"| E
+    D -->|"Validate successful execution of scripts Corporate Control: VM Logs"| E
+    D -->|"Avoid detection through minimal permissions and activity Corporate Control: Azure Sentinel"| E

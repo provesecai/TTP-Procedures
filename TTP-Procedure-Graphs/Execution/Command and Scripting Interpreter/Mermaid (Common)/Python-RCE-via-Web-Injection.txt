@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Python RCE]
+    C[Inject Malicious Code into Web Server]
+    D[Execute Python Payload]
+    E[RCE Execution Achieved]
+
+    A -->|"Access gained through SQL injection in Python web app Corporate Control: Web Application Firewall"| B
+    A -->|"Exploit vulnerable Flask app to upload reverse shell Corporate Control: Web Server"| B
+    A -->|"Foothold established by executing shell commands via RCE Corporate Control: Server Logs"| B
+    A -->|"Detection possible via real-time monitoring of app behavior Corporate Control: WAF Tools"| B
+    B -->|"Prepare Python script with reverse shell payload Corporate Control: Script Repository"| C
+    B -->|"Upload malicious code to the app’s temp directory Corporate Control: File System"| C
+    B -->|"Hide payload within legitimate Python modules Corporate Control: Application Logs"| C
+    B -->|"Monitor for anomalies in Python runtime Corporate Control: Host Monitoring"| C
+    C -->|"Invoke malicious code via HTTP POST request Corporate Control: Web Application Logs"| D
+    C -->|"Trigger execution through remote commands Corporate Control: HTTP API Monitoring"| D
+    C -->|"Avoid detection using obfuscated Python libraries Corporate Control: Security Tools"| D
+    C -->|"Monitor for unauthorized POST requests Corporate Control: Network Logs"| D
+    D -->|"Reverse shell connects to attacker C2 server Corporate Control: Network Firewall"| E
+    D -->|"Validate shell functionality and execute further commands Corporate Control: Host System"| E
+    D -->|"Detection possible by analyzing outbound connections Corporate Control: SIEM Systems"| E
+    D -->|"Execution achieves remote control of target server Corporate Control: Target Infrastructure"| E

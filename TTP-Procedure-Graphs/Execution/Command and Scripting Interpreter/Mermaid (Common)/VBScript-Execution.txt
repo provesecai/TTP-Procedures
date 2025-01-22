@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for VBScript Injection]
+    C[Deliver Malicious VBScript]
+    D[Execute VBScript in Host Environment]
+    E[VBScript Execution Achieved]
+
+    A -->|"Access gained through phishing email targeting outdated Office apps Corporate Control: Email Client"| B
+    A -->|"Victim opens document with embedded VBScript macro Corporate Control: Microsoft Office"| B
+    A -->|"Foothold established by enabling macros Corporate Control: Endpoint Protection"| B
+    A -->|"Detection possible through macro execution alerts Corporate Control: SIEM Systems"| B
+    B -->|"Embed malicious VBScript into trusted Office templates Corporate Control: Document Repository"| C
+    B -->|"Obfuscate VBScript code to bypass antivirus Corporate Control: Endpoint Monitoring"| C
+    B -->|"Ensure compatibility with target application versions Corporate Control: Legacy Applications"| C
+    B -->|"Monitor for unusual macro behavior Corporate Control: Host Logs"| C
+    C -->|"Execute VBScript using wscript.exe Corporate Control: Script Host"| D
+    C -->|"Payload connects to attacker C2 server Corporate Control: Network Monitoring"| D
+    C -->|"Detection possible through monitoring script host activity Corporate Control: Endpoint Security"| D
+    C -->|"Monitor for unauthorized script execution Corporate Control: SIEM Tools"| D
+    D -->|"VBScript achieves intended execution objectives Corporate Control: Host System"| E
+    D -->|"Monitor for lateral movement initiated via VBScript Corporate Control: Network Logs"| E
+    D -->|"Detection possible by analyzing process tree behavior Corporate Control: Endpoint Monitoring"| E
+    D -->|"Execution achieves attacker objectives Corporate Control: Target Environment"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Kubernetes Exploitation]
+    C[Deploy Malicious Bash Script in Pod]
+    D[Trigger Bash Logic Bomb in Cluster]
+    E[Execution Achieved]
+
+    A -->|"Access gained via misconfigured kubelet API Corporate Control: Kubernetes API Server"| B
+    A -->|"Enumerate accessible Kubernetes pods and containers Corporate Control: Kubernetes Cluster"| B
+    A -->|"Foothold established by accessing pods with elevated permissions Corporate Control: Kubernetes Node IAM Policies"| B
+    A -->|"Detection possible by monitoring unauthorized API requests Corporate Control: Kubernetes Logs"| B
+    B -->|"Write malicious Bash script to /tmp directory in Kubernetes pods Corporate Control: Container File System"| C
+    B -->|"Configure cron jobs inside pods to trigger Bash script Corporate Control: Kubernetes Pod Scheduler"| C
+    B -->|"Obfuscate Bash script logic using escape sequences Corporate Control: Script Obfuscation Tools"| C
+    B -->|"Monitor pod configurations for unexpected cron jobs Corporate Control: Kubernetes Monitoring Tools"| C
+    C -->|"Execute Bash logic bomb by triggering pod-level events Corporate Control: Kubernetes Orchestrator"| D
+    C -->|"Payload disrupts cluster communication or exfiltrates data Corporate Control: Kubernetes Networking"| D
+    C -->|"Avoid detection by hiding malicious logs Corporate Control: Kubernetes Log Aggregation Tools"| D
+    C -->|"Monitor for unusual processes within Kubernetes containers Corporate Control: Container Runtime Logs"| D
+    D -->|"Logic bomb executes successfully within the cluster Corporate Control: Kubernetes Node"| E
+    D -->|"Payload establishes persistence or performs data exfiltration Corporate Control: Cluster Logs"| E
+    D -->|"Detection possible by monitoring pod-level resource usage Corporate Control: Kubernetes Security Tools"| E
+    D -->|"Execution completes, achieving attacker objectives Corporate Control: Kubernetes Cluster Infrastructure"| E

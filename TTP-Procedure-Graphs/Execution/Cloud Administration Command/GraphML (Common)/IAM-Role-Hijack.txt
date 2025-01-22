@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="IAMRoleHijack" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for IAM Role Abuse</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Script</data>
+</node>
+<node id="D">
+<data key="label">Configure Role Permissions</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access achieved through spear-phishing Corporate Control: Employee Email</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify roles and permissions for exploitation Corporate Control: IAM Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Hijack underprivileged role credentials Corporate Control: IAM Role Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous role changes Corporate Control: IAM Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attacker assumes compromised IAM roles Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate resources available to the compromised role Corporate Control: Cloud Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare a script to execute under the hijacked role Corporate Control: Role Permissions Setup</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual API calls or privilege escalations Corporate Control: Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Upload and schedule the malicious script Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure role compatibility with the script Corporate Control: Resource Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate script contents to avoid detection Corporate Control: Script Scanning Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for new tasks associated with roles Corporate Control: Task Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure permissions to allow execution Corporate Control: IAM Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute the script under the compromised role Corporate Control: Resource Execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection through obfuscation and minimal privilege use Corporate Control: Role Activity Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected task executions Corporate Control: Resource Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

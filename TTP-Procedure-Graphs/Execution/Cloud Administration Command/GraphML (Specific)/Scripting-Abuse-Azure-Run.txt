@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ScriptingAbuseAzureRunCommand" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access Achieved</data>
+</node>
+<node id="B">
+<data key="label">Prepare for RunCommand Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Script via RunCommand</data>
+</node>
+<node id="D">
+<data key="label">Configure Script Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through compromised Azure credentials Corporate Control: Azure Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attacker authenticates to Azure portal using stolen credentials Corporate Control: Azure Portal</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate permissions to identify RunCommand access Corporate Control: Azure IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual login activities Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify target virtual machines with RunCommand enabled Corporate Control: Azure Virtual Machines</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious scripts for execution Corporate Control: Script Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure RunCommand capability is available on target VMs Corporate Control: VM Extensions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for changes in RunCommand configurations Corporate Control: Azure Monitor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute scripts using Azure RunCommand Corporate Control: Azure RunCommand</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Scripts designed to establish persistence or exfiltrate data Corporate Control: Virtual Machines</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate script outputs to avoid detection Corporate Control: Log Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected script executions Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure RunCommand to execute scripts with necessary privileges Corporate Control: Azure IAM Roles</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate successful execution of scripts Corporate Control: VM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection through minimal permissions and activity Corporate Control: Azure Sentinel</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Access Achieved]
+    B[Prepare for Lambda Exploitation]
+    C[Deploy Malicious Lambda Function]
+    D[Configure Lambda Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through compromised AWS credentials Corporate Control: AWS IAM"| B
+    A -->|"Enumerate permissions to identify Lambda access Corporate Control: AWS IAM Policies"| B
+    A -->|"Monitor for unusual login activities Corporate Control: AWS CloudTrail"| B
+    B -->|"Create or modify Lambda function with embedded payload Corporate Control: AWS Lambda"| C
+    B -->|"Configure IAM permissions to allow Lambda execution Corporate Control: IAM Role"| C
+    B -->|"Obfuscate payload functionality to bypass detection Corporate Control: Code Management"| C
+    B -->|"Detect unusual function uploads Corporate Control: Lambda Activity Logs"| C
+    C -->|"Deploy malicious Lambda to interact with other cloud resources Corporate Control: AWS Lambda"| D
+    C -->|"Trigger Lambda execution via event-based triggers Corporate Control: EventBridge"| D
+    C -->|"Monitor for unexpected function executions Corporate Control: CloudWatch Logs"| D
+    D -->|"Validate successful execution of the malicious payload Corporate Control: Resource Inventory"| E
+    D -->|"Avoid detection through minimal permissions and activity Corporate Control: Lambda Monitoring"| E

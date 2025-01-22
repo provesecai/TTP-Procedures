@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AppleScriptAutomation" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for AppleScript Execution</data>
+</node>
+<node id="C">
+<data key="label">Deliver Malicious AppleScript</data>
+</node>
+<node id="D">
+<data key="label">Trigger Automation Scripts</data>
+</node>
+<node id="E">
+<data key="label">AppleScript Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email targeting macOS users Corporate Control: Email Client</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Victim downloads malicious AppleScript disguised as a PDF Corporate Control: Endpoint File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by running the AppleScript file Corporate Control: User Actions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring file type mismatches Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Write AppleScript to automate malicious actions Corporate Control: AppleScript Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disguise AppleScript as legitimate automation tool Corporate Control: User Workflows</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script compatibility with macOS environment Corporate Control: macOS System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new AppleScripts in sensitive directories Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger script execution via osascript Corporate Control: AppleScript Host</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute payload to exfiltrate sensitive data Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by mimicking user workflows Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected osascript executions Corporate Control: macOS Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload completes and achieves attacker objectives Corporate Control: Host Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for additional automation triggers Corporate Control: System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, achieving malicious automation Corporate Control: Target Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by correlating unusual automation tasks Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>
