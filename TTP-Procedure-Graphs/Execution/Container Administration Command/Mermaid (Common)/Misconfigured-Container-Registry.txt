@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Registry Exploitation]
+    C[Deploy Malicious Image]
+    D[Trigger Container Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via exposed container registry Corporate Control: Public Registry"| B
+    A -->|"Attacker identifies misconfigured registry with unauthenticated access Corporate Control: Registry Logs"| B
+    A -->|"Foothold established by enumerating available images Corporate Control: Container Registry"| B
+    A -->|"Detection possible by monitoring unauthorized access attempts Corporate Control: Registry Monitoring Tools"| B
+    B -->|"Prepare malicious container image for deployment Corporate Control: Image Repository"| C
+    B -->|"Inject payloads into legitimate-looking images Corporate Control: Container Filesystem"| C
+    B -->|"Monitor for unusual image modifications Corporate Control: File Integrity Monitoring"| C
+    B -->|"Ensure payload compatibility with target runtime Corporate Control: Runtime Configuration"| C
+    C -->|"Pull and deploy malicious image to target environment Corporate Control: Host System"| D
+    C -->|"Trigger image execution within the container runtime Corporate Control: Runtime Environment"| D
+    C -->|"Avoid detection by obfuscating image metadata Corporate Control: Security Monitoring"| D
+    C -->|"Monitor for unusual container start activities Corporate Control: Runtime Logs"| D
+    D -->|"Image executes payload achieving attacker objectives Corporate Control: Target Environment"| E
+    D -->|"Monitor for unauthorized network activity from the container Corporate Control: Firewall Tools"| E
+    D -->|"Execution completes without triggering alarms Corporate Control: Security Tools"| E
+    D -->|"Execution achieves compromise of the target environment Corporate Control: Host Infrastructure"| E

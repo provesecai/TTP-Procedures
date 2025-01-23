@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PersistentVolumesKubernetes" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Persistent Volume Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Files into Persistent Volume</data>
+</node>
+<node id="D">
+<data key="label">Trigger Malicious Volume Mount</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via Kubernetes misconfiguration Corporate Control: Kubernetes Cluster</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by identifying accessible persistent volumes Corporate Control: Kubernetes Persistent Volume Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring volume activity Corporate Control: Kubernetes Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious files for injection Corporate Control: File Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify persistent volume claim to include malicious content Corporate Control: Volume Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized persistent volume claims Corporate Control: Kubernetes Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious secrets blend with legitimate configurations Corporate Control: Kubernetes Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious files into persistent volume Corporate Control: Persistent Volume</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger pod mounts to execute malicious content Corporate Control: Kubernetes Pods</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual file modifications within volumes Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by disguising malicious content as legitimate Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload through volume-mounted workloads Corporate Control: Kubernetes Pods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve attacker objectives within containerized workloads Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in file usage within persistent volumes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, achieving control over workloads Corporate Control: Kubernetes Cluster</data>
+</edge>
+</graph>
+</graphml>

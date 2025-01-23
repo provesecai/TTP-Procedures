@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious DaemonSet Definition]
+    C[Deploy DaemonSet to Kubernetes Cluster]
+    D[Trigger DaemonSet Execution Across Nodes]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised service account credentials Corporate Control: Kubernetes RBAC"| B
+    A -->|"Foothold established by authenticating to Kubernetes API server Corporate Control: Kubernetes API"| B
+    A -->|"Detection possible by monitoring for unauthorized API requests Corporate Control: Kubernetes Logs"| B
+    B -->|"Create DaemonSet definition with malicious container Corporate Control: YAML Configurations"| C
+    B -->|"Push container images to Kubernetes container registry Corporate Control: Container Registry"| C
+    B -->|"Ensure malicious DaemonSet mimics legitimate configurations Corporate Control: Kubernetes Namespace"| C
+    B -->|"Monitor for unauthorized DaemonSet modifications Corporate Control: Kubernetes Monitoring Tools"| C
+    C -->|"Deploy DaemonSet to run on all cluster nodes Corporate Control: Kubernetes Nodes"| D
+    C -->|"Trigger commands to execute malicious payloads on nodes Corporate Control: Node Workloads"| D
+    C -->|"Avoid detection by disguising DaemonSet metadata Corporate Control: Security Tools"| D
+    C -->|"Monitor for anomalies in DaemonSet activity Corporate Control: Kubernetes Logs"| D
+    D -->|"Achieve execution of malicious payloads across cluster nodes Corporate Control: Kubernetes Cluster"| E
+    D -->|"Validate execution by accessing sensitive cluster data Corporate Control: Target Infrastructure"| E
+    D -->|"Execution achieves compromise of all Kubernetes nodes Corporate Control: Kubernetes Nodes"| E
+    D -->|"Detection possible by correlating DaemonSet activity with unusual patterns Corporate Control: SIEM Systems"| E

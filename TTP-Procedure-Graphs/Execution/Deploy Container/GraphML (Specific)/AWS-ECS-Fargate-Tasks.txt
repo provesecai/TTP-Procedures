@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AWSECSFargateTasks" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for ECS Fargate Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Fargate Task</data>
+</node>
+<node id="D">
+<data key="label">Trigger Task Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised AWS IAM credentials Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by authenticating to AWS ECS Corporate Control: AWS ECS</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring for unusual API requests Corporate Control: AWS CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare Fargate task definition with malicious container image Corporate Control: Task Definitions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Push container image to AWS Elastic Container Registry Corporate Control: AWS ECR</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with target ECS cluster configurations Corporate Control: ECS Cluster</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized task definition modifications Corporate Control: AWS Security Hub</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malicious task in Fargate to execute commands Corporate Control: ECS Workloads</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger task execution within the ECS environment Corporate Control: ECS Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by disguising task metadata Corporate Control: CloudWatch Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual task execution patterns Corporate Control: AWS Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve execution objectives within the Fargate environment Corporate Control: AWS ECS Fargate</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized activity originating from Fargate tasks Corporate Control: Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves full compromise of ECS workloads Corporate Control: AWS Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible through ECS-Fargate task execution analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

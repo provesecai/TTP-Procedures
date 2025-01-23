@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Privileged Mode Exploitation]
+    C[Deploy Malicious Container]
+    D[Exploit Privileged Mode]
+    E[Command Execution Achieved]
+
+    A -->|"Access gained via stolen SSH credentials Corporate Control: SSH Server"| B
+    A -->|"Attacker logs into Docker host with administrative privileges Corporate Control: Docker Daemon"| B
+    A -->|"Foothold established by identifying running containers Corporate Control: Docker Environment"| B
+    A -->|"Detection possible through monitoring SSH login patterns Corporate Control: Security Logs"| B
+    B -->|"Create a new container with --privileged flag Corporate Control: Docker Daemon"| C
+    B -->|"Inject tools like nsenter into the container for host access Corporate Control: Container File System"| C
+    B -->|"Configure container with host networking to escalate access Corporate Control: Container Configuration"| C
+    B -->|"Monitor for new container creation activities Corporate Control: Docker Monitoring Tools"| C
+    C -->|"Exploit privileged mode to access the host namespace Corporate Control: Host System"| D
+    C -->|"Mount host file system within the container Corporate Control: Host File System"| D
+    C -->|"Avoid detection by mimicking legitimate containers Corporate Control: Security Monitoring"| D
+    C -->|"Monitor for unusual namespace modifications Corporate Control: Endpoint Detection Tools"| D
+    D -->|"Execute malicious commands directly on the host system Corporate Control: Host Namespace"| E
+    D -->|"Achieve full access to the host resources Corporate Control: Host Logs"| E
+    D -->|"Detection possible through behavior analysis of container activities Corporate Control: SIEM Systems"| E
+    D -->|"Execution achieves attacker objectives Corporate Control: Host Infrastructure"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious CronJob Definition]
+    C[Deploy CronJob to Kubernetes Cluster]
+    D[Trigger Scheduled Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised Kubernetes service account Corporate Control: Kubernetes API"| B
+    A -->|"Foothold established by authenticating to the cluster Corporate Control: Kubernetes API Server"| B
+    A -->|"Detection possible by monitoring unauthorized API requests Corporate Control: Kubernetes Logs"| B
+    B -->|"Prepare CronJob YAML definition with malicious workload Corporate Control: CronJob Configuration"| C
+    B -->|"Push malicious container image to Kubernetes container registry Corporate Control: Container Registry"| C
+    B -->|"Ensure CronJob matches legitimate configurations Corporate Control: Kubernetes Namespace"| C
+    B -->|"Monitor for unauthorized CronJob definitions Corporate Control: Kubernetes Monitoring Tools"| C
+    C -->|"Deploy CronJob to execute malicious commands on schedule Corporate Control: Kubernetes Cluster"| D
+    C -->|"Trigger commands to exfiltrate data or disrupt services Corporate Control: Kubernetes Pods"| D
+    C -->|"Avoid detection by disguising CronJob metadata Corporate Control: Kubernetes Logs"| D
+    C -->|"Monitor for unusual activity in CronJob execution Corporate Control: SIEM Systems"| D
+    D -->|"Achieve execution of scheduled malicious commands Corporate Control: Kubernetes Workloads"| E
+    D -->|"Validate execution by accessing critical cluster resources Corporate Control: Target Infrastructure"| E
+    D -->|"Execution achieves compromise of Kubernetes workloads Corporate Control: Kubernetes Cluster"| E
+    D -->|"Detection possible by correlating CronJob schedules with anomalies Corporate Control: Kubernetes Logs"| E

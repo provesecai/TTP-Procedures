@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MisconfiguredContainerRegistryAmazonECR" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for ECR Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Image to ECR</data>
+</node>
+<node id="D">
+<data key="label">Trigger Container Execution in ECS</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised AWS IAM credentials Corporate Control: AWS IAM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by authenticating to ECR with stolen credentials Corporate Control: AWS ECR</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring for unusual API requests Corporate Control: AWS CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious container image for deployment Corporate Control: Image Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Push image to AWS ECR with tags mimicking legitimate images Corporate Control: AWS Elastic Container Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized image uploads Corporate Control: AWS Security Hub</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure image includes payload compatible with ECS workloads Corporate Control: Image Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy image to AWS ECS using compromised task definitions Corporate Control: AWS ECS</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger ECS service to execute malicious container Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by hiding payload within normal-looking tasks Corporate Control: CloudWatch Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in ECS deployment activities Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve execution of payload in ECS container Corporate Control: Container Tasks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized data access originating from ECS tasks Corporate Control: AWS Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves compromise of cloud containerized workloads Corporate Control: AWS Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible through analysis of ECR-ECS interactions Corporate Control: Cloud Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

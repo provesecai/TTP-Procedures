@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="KubernetesDaemonSets" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare Malicious DaemonSet Definition</data>
+</node>
+<node id="C">
+<data key="label">Deploy DaemonSet to Kubernetes Cluster</data>
+</node>
+<node id="D">
+<data key="label">Trigger DaemonSet Execution Across Nodes</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised service account credentials Corporate Control: Kubernetes RBAC</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by authenticating to Kubernetes API server Corporate Control: Kubernetes API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring for unauthorized API requests Corporate Control: Kubernetes Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create DaemonSet definition with malicious container Corporate Control: YAML Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Push container images to Kubernetes container registry Corporate Control: Container Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious DaemonSet mimics legitimate configurations Corporate Control: Kubernetes Namespace</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized DaemonSet modifications Corporate Control: Kubernetes Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy DaemonSet to run on all cluster nodes Corporate Control: Kubernetes Nodes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger commands to execute malicious payloads on nodes Corporate Control: Node Workloads</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by disguising DaemonSet metadata Corporate Control: Security Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in DaemonSet activity Corporate Control: Kubernetes Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve execution of malicious payloads across cluster nodes Corporate Control: Kubernetes Cluster</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate execution by accessing sensitive cluster data Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves compromise of all Kubernetes nodes Corporate Control: Kubernetes Nodes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detection possible by correlating DaemonSet activity with unusual patterns Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>
