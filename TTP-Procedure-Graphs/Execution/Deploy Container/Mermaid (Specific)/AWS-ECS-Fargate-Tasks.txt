@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for ECS Fargate Exploitation]
+    C[Deploy Malicious Fargate Task]
+    D[Trigger Task Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised AWS IAM credentials Corporate Control: AWS IAM Console"| B
+    A -->|"Foothold established by authenticating to AWS ECS Corporate Control: AWS ECS"| B
+    A -->|"Detection possible through monitoring for unusual API requests Corporate Control: AWS CloudTrail"| B
+    B -->|"Prepare Fargate task definition with malicious container image Corporate Control: Task Definitions"| C
+    B -->|"Push container image to AWS Elastic Container Registry Corporate Control: AWS ECR"| C
+    B -->|"Ensure compatibility with target ECS cluster configurations Corporate Control: ECS Cluster"| C
+    B -->|"Monitor for unauthorized task definition modifications Corporate Control: AWS Security Hub"| C
+    C -->|"Deploy malicious task in Fargate to execute commands Corporate Control: ECS Workloads"| D
+    C -->|"Trigger task execution within the ECS environment Corporate Control: ECS Scheduler"| D
+    C -->|"Avoid detection by disguising task metadata Corporate Control: CloudWatch Logs"| D
+    C -->|"Monitor for unusual task execution patterns Corporate Control: AWS Security Tools"| D
+    D -->|"Achieve execution objectives within the Fargate environment Corporate Control: AWS ECS Fargate"| E
+    D -->|"Monitor for unauthorized activity originating from Fargate tasks Corporate Control: Network Monitoring"| E
+    D -->|"Execution achieves full compromise of ECS workloads Corporate Control: AWS Infrastructure"| E
+    D -->|"Detection possible through ECS-Fargate task execution analysis Corporate Control: SIEM Systems"| E

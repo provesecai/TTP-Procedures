@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Docker API Exploitation]
+    C[Deploy Privileged Container via API]
+    D[Access Host Namespace via Privileged Container]
+    E[Execution Achieved]
+
+    A -->|"Access gained via stolen SSH credentials Corporate Control: SSH Server"| B
+    A -->|"Attacker identifies Docker API endpoint accessible via localhost Corporate Control: Docker Host"| B
+    A -->|"Foothold established by authenticating to the Docker API Corporate Control: Docker API Endpoint"| B
+    A -->|"Detection possible by monitoring API access logs Corporate Control: Docker Logs"| B
+    B -->|"Craft API request to create a privileged container Corporate Control: Docker Daemon"| C
+    B -->|"Include malicious payload in the container image Corporate Control: Image Repository"| C
+    B -->|"Monitor for unusual API requests Corporate Control: SIEM Systems"| C
+    B -->|"Disguise requests as legitimate container management actions Corporate Control: Docker Monitoring Tools"| C
+    C -->|"Start privileged container with host namespace access Corporate Control: Host System"| D
+    C -->|"Mount host filesystem within the container Corporate Control: File System"| D
+    C -->|"Avoid detection by mimicking legitimate container names Corporate Control: Security Tools"| D
+    C -->|"Monitor for unusual container lifecycle events Corporate Control: Container Logs"| D
+    D -->|"Execute commands directly on the host system Corporate Control: Host Namespace"| E
+    D -->|"Achieve full access to host resources Corporate Control: Target Infrastructure"| E
+    D -->|"Detection possible by correlating host activities with container events Corporate Control: Security Analytics"| E
+    D -->|"Execution achieves attacker control over the Docker host Corporate Control: Docker Daemon"| E

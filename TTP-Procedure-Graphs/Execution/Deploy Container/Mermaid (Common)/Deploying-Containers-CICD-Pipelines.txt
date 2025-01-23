@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious CI/CD Pipeline]
+    C[Inject Containerized Workloads]
+    D[Deploy Malicious Containers to Production]
+    E[Execution Achieved]
+
+    A -->|"Access gained via stolen GitLab credentials Corporate Control: GitLab Login"| B
+    A -->|"Foothold established by accessing CI/CD pipeline configurations Corporate Control: GitLab CI/CD"| B
+    A -->|"Detection possible by monitoring unauthorized repository access Corporate Control: GitLab Audit Logs"| B
+    B -->|"Modify pipeline to include containerized payloads Corporate Control: YAML Configuration"| C
+    B -->|"Push container images with malicious scripts Corporate Control: Container Registry"| C
+    B -->|"Ensure compatibility with deployment configurations Corporate Control: Deployment Scripts"| C
+    B -->|"Monitor for unauthorized pipeline modifications Corporate Control: CI/CD Monitoring Tools"| C
+    C -->|"Trigger CI/CD pipeline to deploy containers Corporate Control: Deployment Target"| D
+    C -->|"Validate deployment of malicious workloads Corporate Control: Kubernetes Namespace"| D
+    C -->|"Avoid detection by disguising containers as part of legitimate pipelines Corporate Control: Artifact Repository"| D
+    C -->|"Monitor for anomalies in CI/CD deployment activity Corporate Control: Security Tools"| D
+    D -->|"Malicious containers execute in production Corporate Control: Production Workloads"| E
+    D -->|"Achieve execution objectives in production environment Corporate Control: Target Infrastructure"| E
+    D -->|"Monitor for unauthorized activity in production workloads Corporate Control: SIEM Systems"| E
+    D -->|"Execution achieves full compromise of production workloads Corporate Control: Target Environment"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Harbor Exploitation]
+    C[Deploy Malicious Image to Harbor]
+    D[Trigger Malicious Container Deployment]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised Harbor admin credentials Corporate Control: Harbor UI"| B
+    A -->|"Foothold established by accessing Harbor registry with elevated privileges Corporate Control: Harbor API"| B
+    A -->|"Detection possible by monitoring unauthorized login attempts Corporate Control: Harbor Audit Logs"| B
+    B -->|"Prepare malicious container image with embedded payload Corporate Control: Image Repository"| C
+    B -->|"Push malicious image to a private repository within Harbor Corporate Control: Private Registry"| C
+    B -->|"Monitor for unauthorized changes to registry repositories Corporate Control: SIEM Systems"| C
+    B -->|"Ensure payload mimics legitimate container usage Corporate Control: Registry Metadata"| C
+    C -->|"Deploy container image from Harbor to Kubernetes cluster Corporate Control: Kubernetes Workloads"| D
+    C -->|"Trigger container runtime to execute malicious commands Corporate Control: Container Runtime"| D
+    C -->|"Avoid detection by disguising metadata in container image Corporate Control: Docker Monitoring Tools"| D
+    C -->|"Monitor for unusual activity in container image pull logs Corporate Control: Harbor Logs"| D
+    D -->|"Malicious container executes payload achieving attacker objectives Corporate Control: Kubernetes Pods"| E
+    D -->|"Monitor for unauthorized workload activity from container Corporate Control: Kubernetes Security Tools"| E
+    D -->|"Execution completes with full compromise of workloads Corporate Control: Kubernetes Cluster"| E
+    D -->|"Detection possible by correlating registry activities with cluster events Corporate Control: SIEM Systems"| E

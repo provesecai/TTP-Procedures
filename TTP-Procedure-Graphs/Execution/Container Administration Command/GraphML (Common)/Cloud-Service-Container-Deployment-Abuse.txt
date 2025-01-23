@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CloudServiceContainerDeploymentAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare for Cloud Container Deployment Abuse</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Container to Cloud Service</data>
+</node>
+<node id="D">
+<data key="label">Trigger Malicious Container Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised cloud credentials Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attacker logs into cloud container service using stolen credentials Corporate Control: Cloud Provider API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Foothold established by enumerating container deployment permissions Corporate Control: Cloud IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through monitoring for unusual login activity Corporate Control: Cloud Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious container image for deployment Corporate Control: Image Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload image to cloud provider's container registry Corporate Control: Cloud Container Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure image includes tools for further exploitation Corporate Control: Image Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized uploads to container registry Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy container to cloud-managed orchestration service Corporate Control: Cloud Orchestration Service</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Configure container with elevated privileges Corporate Control: Container Deployment Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by disguising container as part of legitimate workload Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual deployment activities Corporate Control: Cloud Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger container execution via cloud scheduling tools Corporate Control: Cloud Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Container executes malicious payload Corporate Control: Cloud Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate execution by establishing outbound communication Corporate Control: Firewall Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected resource usage by deployed containers Corporate Control: Cloud Performance Monitoring</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves attacker objectives within the cloud environment Corporate Control: Target Environment</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Monitor for lateral movement originating from compromised containers Corporate Control: Network Logs</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution completes, achieving control over cloud resources Corporate Control: Cloud Orchestration System</data>
+</edge>
+</graph>
+</graphml>

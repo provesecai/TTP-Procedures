@@ -1,0 +1,26 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Cloud Container Deployment Abuse]
+    C[Deploy Malicious Container to Cloud Service]
+    D[Trigger Malicious Container Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised cloud credentials Corporate Control: AWS IAM Console"| B
+    A -->|"Attacker logs into cloud container service using stolen credentials Corporate Control: Cloud Provider API"| B
+    A -->|"Foothold established by enumerating container deployment permissions Corporate Control: Cloud IAM Policies"| B
+    A -->|"Detection possible through monitoring for unusual login activity Corporate Control: Cloud Activity Logs"| B
+    B -->|"Prepare malicious container image for deployment Corporate Control: Image Repository"| C
+    B -->|"Upload image to cloud provider's container registry Corporate Control: Cloud Container Registry"| C
+    B -->|"Ensure image includes tools for further exploitation Corporate Control: Image Metadata"| C
+    B -->|"Monitor for unauthorized uploads to container registry Corporate Control: SIEM Systems"| C
+    C -->|"Deploy container to cloud-managed orchestration service Corporate Control: Cloud Orchestration Service"| D
+    C -->|"Configure container with elevated privileges Corporate Control: Container Deployment Settings"| D
+    C -->|"Avoid detection by disguising container as part of legitimate workload Corporate Control: Security Monitoring Tools"| D
+    C -->|"Monitor for unusual deployment activities Corporate Control: Cloud Monitoring Tools"| D
+    D -->|"Trigger container execution via cloud scheduling tools Corporate Control: Cloud Scheduler"| E
+    D -->|"Container executes malicious payload Corporate Control: Cloud Infrastructure"| E
+    D -->|"Validate execution by establishing outbound communication Corporate Control: Firewall Monitoring"| E
+    D -->|"Monitor for unexpected resource usage by deployed containers Corporate Control: Cloud Performance Monitoring"| E
+    E -->|"Execution achieves attacker objectives within the cloud environment Corporate Control: Target Environment"| E
+    E -->|"Monitor for lateral movement originating from compromised containers Corporate Control: Network Logs"| E
+    E -->|"Execution completes, achieving control over cloud resources Corporate Control: Cloud Orchestration System"| E

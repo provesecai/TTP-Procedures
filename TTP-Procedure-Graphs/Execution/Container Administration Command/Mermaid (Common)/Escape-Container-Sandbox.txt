@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for Escape Exploitation]
+    C[Deploy Escape Payload]
+    D[Trigger Escape Exploit]
+    E[Command Execution Achieved]
+
+    A -->|"Access gained via container misconfiguration Corporate Control: Kubernetes Pod"| B
+    A -->|"Foothold established by identifying exploitable containers Corporate Control: Container Runtime"| B
+    A -->|"Detection possible by monitoring for unusual container activity Corporate Control: Container Logs"| B
+    B -->|"Prepare exploit payload targeting container vulnerabilities Corporate Control: Exploit Repository"| C
+    B -->|"Upload payload to container filesystem Corporate Control: Container File System"| C
+    B -->|"Monitor for unusual file modifications Corporate Control: Security Monitoring"| C
+    B -->|"Ensure exploit compatibility with container runtime Corporate Control: Container Runtime Logs"| C
+    C -->|"Trigger container escape exploit via vulnerable runtime Corporate Control: Host Namespace"| D
+    C -->|"Leverage exploit to gain access to the host system Corporate Control: Host System"| D
+    C -->|"Avoid detection by obfuscating exploit logs Corporate Control: Endpoint Monitoring Tools"| D
+    C -->|"Monitor for anomalies in container-host interaction Corporate Control: SIEM Systems"| D
+    D -->|"Exploit successfully executes commands on the host Corporate Control: Host Environment"| E
+    D -->|"Achieve full control over the host system Corporate Control: Host Infrastructure"| E
+    D -->|"Monitor for unauthorized host-level processes Corporate Control: Security Logs"| E
+    D -->|"Execution achieves complete compromise of the host Corporate Control: Target Infrastructure"| E

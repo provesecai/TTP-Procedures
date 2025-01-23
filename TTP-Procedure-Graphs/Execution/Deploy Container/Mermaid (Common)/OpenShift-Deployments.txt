@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare for OpenShift Deployment Exploitation]
+    C[Modify OpenShift Deployment Configurations]
+    D[Trigger Deployment of Malicious Workloads]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised OpenShift admin credentials Corporate Control: OpenShift Authentication"| B
+    A -->|"Foothold established by authenticating to OpenShift API server Corporate Control: OpenShift API"| B
+    A -->|"Detection possible by monitoring unauthorized logins Corporate Control: OpenShift Logs"| B
+    B -->|"Create or modify deployment configurations Corporate Control: OpenShift Deployment Configurations"| C
+    B -->|"Push container images with embedded payloads Corporate Control: Image Registry"| C
+    B -->|"Ensure deployment matches legitimate resource configurations Corporate Control: OpenShift Namespace"| C
+    B -->|"Monitor for unauthorized changes to deployment configurations Corporate Control: OpenShift Monitoring Tools"| C
+    C -->|"Deploy workloads using modified deployment configurations Corporate Control: OpenShift Workloads"| D
+    C -->|"Trigger execution of malicious workloads within OpenShift Corporate Control: OpenShift Pods"| D
+    C -->|"Avoid detection by obfuscating deployment metadata Corporate Control: OpenShift Monitoring Tools"| D
+    C -->|"Monitor for unusual activity in OpenShift deployments Corporate Control: SIEM Systems"| D
+    D -->|"Achieve execution of malicious payloads in OpenShift Corporate Control: OpenShift Cluster"| E
+    D -->|"Validate execution by accessing sensitive OpenShift resources Corporate Control: Target Infrastructure"| E
+    D -->|"Execution achieves compromise of OpenShift workloads Corporate Control: OpenShift Infrastructure"| E
+    D -->|"Detection possible by correlating deployment changes with activity logs Corporate Control: OpenShift Logs"| E
