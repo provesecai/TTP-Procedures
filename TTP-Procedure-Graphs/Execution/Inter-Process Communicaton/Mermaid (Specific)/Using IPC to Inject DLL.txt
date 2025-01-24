@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Target Process for Injection]
+    C[Load Malicious DLL into Target Process via IPC]
+    D[Trigger DLL Execution in Target Process]
+    E[Execution Achieved]
+
+    A -->|"Initial foothold established via remote phishing campaign Corporate Control: Endpoint Email System"| B
+    A -->|"Deploy basic beacon for system reconnaissance Corporate Control: Victim Endpoint"| B
+    A -->|"Detection possible through unusual system calls Corporate Control: Endpoint Detection and Response"| B
+    B -->|"Identify processes with accessible memory using OpenProcess() Corporate Control: Target Process"| C
+    B -->|"Analyze process memory access permissions for injection Corporate Control: Memory Manager"| C
+    B -->|"Monitor process enumeration activity for anomalies Corporate Control: SIEM Monitoring"| C
+    C -->|"Allocate memory in target process with VirtualAllocEx() Corporate Control: Target Process Memory"| D
+    C -->|"Write malicious DLL path to allocated memory with WriteProcessMemory() Corporate Control: IPC Injection"| D
+    C -->|"Inject DLL using CreateRemoteThread() API Corporate Control: Target Process"| D
+    C -->|"Monitor for unauthorized thread creation in target process Corporate Control: Endpoint Monitoring"| D
+    D -->|"Trigger DLL execution by invoking LoadLibrary() Corporate Control: Target Process Context"| E
+    D -->|"Malicious code executes within the context of the injected process Corporate Control: Process Runtime"| E
+    D -->|"Detect anomalies in thread activity post-injection Corporate Control: SIEM Systems"| E
+    E -->|"Payload execution achieves attacker control Corporate Control: Endpoint Infrastructure"| E
+    E -->|"Monitor injected process behavior for abnormal activity Corporate Control: Behavioral Analysis Tools"| E

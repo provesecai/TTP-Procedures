@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DLLInjectionViaIPC" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare Malicious DLL</data>
+</node>
+<node id="C">
+<data key="label">Inject DLL into Target Process via IPC</data>
+</node>
+<node id="D">
+<data key="label">Trigger DLL Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through spear-phishing Corporate Control: Victim's Inbox</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze target system for vulnerable processes Corporate Control: Target Application</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through attachment analysis Corporate Control: Email Scanning Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious DLL targeting specific process Corporate Control: DLL File</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject DLL using inter-process communication API Corporate Control: IPC Library</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor DLL injection activities for anomalies Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish hooks to trigger malicious DLL execution Corporate Control: Application Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure execution avoids sandbox detection Corporate Control: Endpoint Protection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution logs for injected DLL activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger payload execution through the injected DLL Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, granting attacker control Corporate Control: Endpoint Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual application behavior Corporate Control: Behavioral Analysis Tools</data>
+</edge>
+</graph>
+</graphml>

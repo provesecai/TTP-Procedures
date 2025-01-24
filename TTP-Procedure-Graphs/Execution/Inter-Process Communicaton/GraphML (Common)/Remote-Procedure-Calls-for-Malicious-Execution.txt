@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RPCForMaliciousExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Vulnerable RPC Endpoint</data>
+</node>
+<node id="C">
+<data key="label">Craft and Send Malicious RPC Request</data>
+</node>
+<node id="D">
+<data key="label">Trigger Malicious Code Execution via RPC</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised credentials Corporate Control: User Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for unauthorized login attempts Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate RPC services available on the target Corporate Control: RPC Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify specific RPC endpoint with execution vulnerability Corporate Control: Target Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious payload designed for RPC exploitation Corporate Control: Payload Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload bypasses endpoint protection Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network traffic for unusual RPC requests Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Send malicious RPC request to execute payload Corporate Control: RPC Handler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger vulnerability in RPC process to execute code Corporate Control: Target Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor endpoint behavior for anomalies in RPC handling Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via RPC mechanism Corporate Control: Victim Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution achieves attacker control over target system Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detectable through RPC-specific anomaly monitoring Corporate Control: SIEM Logs</data>
+</edge>
+</graph>
+</graphml>

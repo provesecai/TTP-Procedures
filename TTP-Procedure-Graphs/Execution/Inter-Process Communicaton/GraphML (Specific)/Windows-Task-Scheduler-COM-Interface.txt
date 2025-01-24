@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsTaskSchedulerCOM" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Abuse Windows Task Scheduler COM Interface</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Task into Task Scheduler</data>
+</node>
+<node id="D">
+<data key="label">Trigger Task to Execute Payload</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email with embedded PowerShell command Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Establish foothold using PowerShell to deploy initial payload Corporate Control: Endpoint System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PowerShell activity for unauthorized use Corporate Control: Endpoint Protection Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use ITaskService interface to interact with Task Scheduler Corporate Control: COM Runtime</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a new task with malicious payload as the executable Corporate Control: Task Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor task creation logs for suspicious entries Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Register and store the malicious task in the Task Scheduler Library Corporate Control: Task Library</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task execution bypasses endpoint security Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized task registrations Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger the task to execute payload using COM methods Corporate Control: Task Scheduler Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executes as part of the scheduled task Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task execution logs for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves attacker control over the target process Corporate Control: Endpoint Device</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Detectable through Windows Task Scheduler activity monitoring Corporate Control: Behavioral Analysis Tools</data>
+</edge>
+</graph>
+</graphml>

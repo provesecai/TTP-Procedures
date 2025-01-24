@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Vulnerable RPC Endpoint]
+    C[Craft and Send Malicious RPC Request]
+    D[Trigger Malicious Code Execution via RPC]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised credentials Corporate Control: User Account"| B
+    A -->|"Monitor system logs for unauthorized login attempts Corporate Control: Endpoint Logs"| B
+    A -->|"Enumerate RPC services available on the target Corporate Control: RPC Registry"| B
+    B -->|"Identify specific RPC endpoint with execution vulnerability Corporate Control: Target Service"| C
+    B -->|"Craft malicious payload designed for RPC exploitation Corporate Control: Payload Code"| C
+    B -->|"Ensure payload bypasses endpoint protection Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Monitor network traffic for unusual RPC requests Corporate Control: Network Monitoring Tools"| C
+    C -->|"Send malicious RPC request to execute payload Corporate Control: RPC Handler"| D
+    C -->|"Trigger vulnerability in RPC process to execute code Corporate Control: Target Process"| D
+    C -->|"Monitor endpoint behavior for anomalies in RPC handling Corporate Control: Endpoint Monitoring Tools"| D
+    D -->|"Payload executes successfully via RPC mechanism Corporate Control: Victim Device"| E
+    D -->|"Execution achieves attacker control over target system Corporate Control: Target Infrastructure"| E
+    D -->|"Detectable through RPC-specific anomaly monitoring Corporate Control: SIEM Logs"| E

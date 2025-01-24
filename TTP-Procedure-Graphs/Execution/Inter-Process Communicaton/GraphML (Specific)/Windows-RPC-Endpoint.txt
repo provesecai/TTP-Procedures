@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsRPC" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Available RPC Services</data>
+</node>
+<node id="C">
+<data key="label">Craft Malicious RPC Request</data>
+</node>
+<node id="D">
+<data key="label">Trigger Code Execution via RPC Endpoint</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via stolen credentials Corporate Control: Target Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring for abnormal logins Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Establish foothold by connecting to RPC service over SMB Corporate Control: RPC Transport Layer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate RPC endpoints using rpcinfo or RpcEnumBindingHandles() Corporate Control: RPC Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze endpoints for exploitable methods (e.g., StartService, ExecuteCommand) Corporate Control: RPC Endpoint Handler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized enumeration of RPC endpoints Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Craft malicious RPC request targeting specific method Corporate Control: Payload Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate payload to evade RPC logging and detection Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor network traffic for unusual RPC calls Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Send RPC request to trigger malicious method execution Corporate Control: RPC Handler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit vulnerability in RPC endpoint to execute commands Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in RPC traffic using endpoint-specific monitoring Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves control over target process Corporate Control: Endpoint Device</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Monitor target process activity for unauthorized behavior Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

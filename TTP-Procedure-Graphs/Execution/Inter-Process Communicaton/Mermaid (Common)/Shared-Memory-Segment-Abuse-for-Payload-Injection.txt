@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Allocate Shared Memory Segment]
+    C[Inject Malicious Payload into Shared Memory]
+    D[Trigger Execution via Shared Memory Access]
+    E[Execution Achieved]
+
+    A -->|"Access gained via malicious document Corporate Control: User Endpoint"| B
+    A -->|"Compromise endpoint through phishing campaign Corporate Control: Email Gateway"| B
+    A -->|"Detection possible by monitoring abnormal email attachments Corporate Control: Email Monitoring Systems"| B
+    B -->|"Create shared memory segment in target system Corporate Control: Operating System Memory"| C
+    B -->|"Ensure memory segment is accessible to target process Corporate Control: Memory Handler"| C
+    B -->|"Monitor for unauthorized memory segment creation Corporate Control: System Logs"| C
+    C -->|"Inject malicious code into shared memory Corporate Control: Shared Memory"| D
+    C -->|"Prepare payload for execution by target process Corporate Control: Target Application Memory"| D
+    C -->|"Monitor memory activity for injection indicators Corporate Control: Endpoint Detection Tools"| D
+    D -->|"Trigger payload execution via inter-process communication Corporate Control: Target Process"| E
+    D -->|"Payload successfully executed in shared memory Corporate Control: Victim Machine"| E
+    D -->|"Execution completes, granting attacker control Corporate Control: Target Device"| E
+    D -->|"Detect anomalies in shared memory access Corporate Control: SIEM Systems"| E

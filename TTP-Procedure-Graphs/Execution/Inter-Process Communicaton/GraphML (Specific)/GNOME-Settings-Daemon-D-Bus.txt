@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GNOMESettingsDaemonDBus" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Available D-Bus Services</data>
+</node>
+<node id="C">
+<data key="label">Craft Malicious D-Bus Message for GNOME Settings Daemon</data>
+</node>
+<node id="D">
+<data key="label">Trigger Payload Execution via D-Bus Message Handler</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing with embedded SSH credential stealer Corporate Control: User Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance scripts to list active D-Bus services Corporate Control: Target System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual D-Bus enumeration attempts Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'dbus-send' to enumerate GNOME D-Bus interfaces Corporate Control: D-Bus Transport Layer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify vulnerable GNOME settings interface for injection Corporate Control: GNOME Daemon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor D-Bus traffic for unauthorized message activity Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Craft malicious message targeting settings change handler Corporate Control: Payload Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate payload to evade D-Bus-specific monitoring Corporate Control: D-Bus Protocol</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized D-Bus method invocations Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Send malicious message to trigger GNOME D-Bus handler execution Corporate Control: GNOME Settings Daemon</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully within GNOME process context Corporate Control: GNOME Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in GNOME process behavior Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves attacker control over the GNOME environment Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Detectable through D-Bus activity monitoring Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

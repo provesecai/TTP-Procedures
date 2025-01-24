@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate D-Bus Services Related to Systemd]
+    C[Abuse Systemd D-Bus Interface to Inject Malicious Service]
+    D[Trigger Execution of Malicious Systemd Service]
+    E[Execution Achieved]
+
+    A -->|"Access gained via SSH brute force attack Corporate Control: Target System"| B
+    A -->|"Deploy lightweight reconnaissance script for process enumeration Corporate Control: Linux Endpoint"| B
+    A -->|"Monitor for unusual logins or SSH access attempts Corporate Control: SIEM Logs"| B
+    B -->|"Enumerate available D-Bus services using dbus-send Corporate Control: Systemd D-Bus Interface"| C
+    B -->|"Identify systemd service creation methods on D-Bus API Corporate Control: D-Bus Service Registry"| C
+    B -->|"Monitor for unauthorized D-Bus enumeration activity Corporate Control: Endpoint Monitoring Tools"| C
+    C -->|"Inject malicious payload as part of a new systemd service Corporate Control: Payload Code"| D
+    C -->|"Obfuscate service configuration to mimic legitimate processes Corporate Control: System Configuration"| D
+    C -->|"Monitor for unusual D-Bus messages targeting systemd Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Trigger malicious service execution through systemctl on D-Bus Corporate Control: Systemd Process"| E
+    D -->|"Payload executes as part of the newly created service Corporate Control: Process Runtime"| E
+    D -->|"Monitor for anomalies in systemd process activity Corporate Control: SIEM Systems"| E
+    E -->|"Execution achieves control over the target system Corporate Control: Target Infrastructure"| D
+    E -->|"Detectable through systemd and D-Bus activity monitoring Corporate Control: Endpoint Monitoring Tools"| D

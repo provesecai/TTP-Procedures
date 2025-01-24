@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate Available COM Objects]
+    C[Abuse Vulnerable COM Object for Payload Delivery]
+    D[Trigger Payload Execution via COM Interface]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing attack Corporate Control: User Endpoint"| B
+    A -->|"Detectable through abnormal email activity Corporate Control: Email Monitoring Tools"| B
+    A -->|"Analyze target system for accessible COM objects Corporate Control: COM Registry"| B
+    B -->|"Identify vulnerable COM object capable of payload execution Corporate Control: Target Application"| C
+    B -->|"Craft malicious payload for COM object exploitation Corporate Control: Payload Code"| C
+    B -->|"Monitor COM object interactions for anomalies Corporate Control: Endpoint Logs"| C
+    C -->|"Invoke COM interface to deliver malicious payload Corporate Control: COM Interface"| D
+    C -->|"Ensure payload avoids detection during delivery Corporate Control: Endpoint Protection"| D
+    C -->|"Monitor for unauthorized COM object usage Corporate Control: SIEM Systems"| D
+    D -->|"Payload executes via COM object in target process Corporate Control: Target Process"| E
+    D -->|"Execution completes, granting attacker control Corporate Control: Target Infrastructure"| E
+    D -->|"Monitor for anomalies in COM object behavior Corporate Control: Behavioral Monitoring Tools"| E

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsPrintSpooler" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Accessible RPC Endpoints in Print Spooler Service</data>
+</node>
+<node id="C">
+<data key="label">Craft Malicious RPC Request to Spooler API</data>
+</node>
+<node id="D">
+<data key="label">Trigger Remote Code Execution via Spooler Service</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through phishing email with malicious macro Corporate Control: User Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy lightweight PowerShell script for RPC enumeration Corporate Control: Endpoint System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized endpoint access Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use RpcEnumBindingHandles() to identify RPC endpoints Corporate Control: Spooler Service API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze endpoint for exploitable method calls (e.g., AddPrinterDriverEx) Corporate Control: RPC Method</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unusual activity on the Print Spooler RPC interface Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Craft malicious RPC request with exploit payload Corporate Control: Payload Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass endpoint protection with obfuscated payload Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious spooler-related RPC activity Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Send crafted RPC request to trigger Print Spooler code execution Corporate Control: RPC Transport</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit vulnerability to execute payload as SYSTEM Corporate Control: Target Process Memory</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies in spooler service execution patterns Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves SYSTEM-level control via Print Spooler Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Detectable through logs of spooler activity spikes Corporate Control: Behavioral Analysis Tools</data>
+</edge>
+</graph>
+</graphml>

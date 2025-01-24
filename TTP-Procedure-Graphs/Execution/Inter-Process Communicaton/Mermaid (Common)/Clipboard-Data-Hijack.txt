@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Monitor Clipboard Activity]
+    C[Inject Malicious Payload into Clipboard]
+    D[Trigger Payload via Clipboard Paste]
+    E[Execution Achieved]
+
+    A -->|"Access gained via malicious document Corporate Control: User Endpoint"| B
+    A -->|"Compromise endpoint through phishing campaign Corporate Control: Email System"| B
+    A -->|"Detection possible through monitoring email attachments Corporate Control: Email Monitoring Tools"| B
+    B -->|"Use inter-process communication API to monitor clipboard Corporate Control: Clipboard Memory"| C
+    B -->|"Detect clipboard usage patterns for target application Corporate Control: Application Logs"| C
+    B -->|"Monitor clipboard contents for anomalies Corporate Control: Endpoint Protection Tools"| C
+    C -->|"Inject payload into clipboard during specific operations Corporate Control: Clipboard Memory"| D
+    C -->|"Ensure payload triggers code execution in target environment Corporate Control: Application Runtime"| D
+    C -->|"Monitor endpoint activity for clipboard usage anomalies Corporate Control: Endpoint Logs"| D
+    D -->|"Trigger payload execution during clipboard paste operation Corporate Control: User Interaction"| E
+    D -->|"Execution achieves attacker control via clipboard memory Corporate Control: Endpoint Infrastructure"| E
+    D -->|"Detectable through clipboard activity monitoring Corporate Control: Behavioral Analysis Systems"| E

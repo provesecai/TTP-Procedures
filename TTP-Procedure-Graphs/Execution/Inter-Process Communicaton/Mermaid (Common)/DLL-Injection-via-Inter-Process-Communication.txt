@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious DLL]
+    C[Inject DLL into Target Process via IPC]
+    D[Trigger DLL Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained through spear-phishing Corporate Control: Victim's Inbox"| B
+    A -->|"Analyze target system for vulnerable processes Corporate Control: Target Application"| B
+    A -->|"Detection possible through attachment analysis Corporate Control: Email Scanning Tools"| B
+    B -->|"Craft malicious DLL targeting specific process Corporate Control: DLL File"| C
+    B -->|"Inject DLL using inter-process communication API Corporate Control: IPC Library"| C
+    B -->|"Monitor DLL injection activities for anomalies Corporate Control: Endpoint Monitoring"| C
+    C -->|"Establish hooks to trigger malicious DLL execution Corporate Control: Application Memory"| D
+    C -->|"Ensure execution avoids sandbox detection Corporate Control: Endpoint Protection Tools"| D
+    C -->|"Monitor execution logs for injected DLL activity Corporate Control: SIEM Systems"| D
+    D -->|"Trigger payload execution through the injected DLL Corporate Control: Target Process"| E
+    D -->|"Execution completes, granting attacker control Corporate Control: Endpoint Device"| E
+    D -->|"Monitor for unusual application behavior Corporate Control: Behavioral Analysis Tools"| E

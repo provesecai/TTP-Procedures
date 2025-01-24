@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UnixDomainSockets" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Accessible Unix Domain Sockets</data>
+</node>
+<node id="C">
+<data key="label">Establish Connection to Vulnerable Socket</data>
+</node>
+<node id="D">
+<data key="label">Inject Malicious Commands via Socket Communication</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via SSH brute force attack Corporate Control: Target Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy initial reconnaissance tools to enumerate processes Corporate Control: Target System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual logins from external IPs Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate sockets using tools like ss or lsof Corporate Control: Socket Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable or executable sockets with weak permissions Corporate Control: Target Application</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor socket usage for unauthorized access Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish connection to a writable socket Corporate Control: IPC Transport Layer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject payload commands formatted for the socket protocol Corporate Control: Malicious Payload</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor traffic on Unix domain sockets for irregular patterns Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger payload execution by simulating valid socket communication Corporate Control: Process Memory</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes within the context of the target process Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detectable through anomalies in socket communication Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution completes, granting attacker control over the process Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Monitor for unauthorized execution through socket interactions Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Abuse Windows Task Scheduler COM Interface]
+    C[Inject Malicious Task into Task Scheduler]
+    D[Trigger Task to Execute Payload]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing email with embedded PowerShell command Corporate Control: Email Gateway"| B
+    A -->|"Establish foothold using PowerShell to deploy initial payload Corporate Control: Endpoint System"| B
+    A -->|"Monitor PowerShell activity for unauthorized use Corporate Control: Endpoint Protection Tools"| B
+    B -->|"Use ITaskService interface to interact with Task Scheduler Corporate Control: COM Runtime"| C
+    B -->|"Create a new task with malicious payload as the executable Corporate Control: Task Configuration"| C
+    B -->|"Monitor task creation logs for suspicious entries Corporate Control: SIEM Logs"| C
+    C -->|"Register and store the malicious task in the Task Scheduler Library Corporate Control: Task Library"| D
+    C -->|"Ensure task execution bypasses endpoint security Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Monitor for unauthorized task registrations Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Trigger the task to execute payload using COM methods Corporate Control: Task Scheduler Runtime"| E
+    D -->|"Payload successfully executes as part of the scheduled task Corporate Control: Target Process"| E
+    D -->|"Monitor task execution logs for anomalies Corporate Control: SIEM Systems"| E
+    E -->|"Execution achieves attacker control over the target process Corporate Control: Endpoint Device"| D
+    E -->|"Detectable through Windows Task Scheduler activity monitoring Corporate Control: Behavioral Analysis Tools"| D

@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SharedMemorySegmentAbuse" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Allocate Shared Memory Segment</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Payload into Shared Memory</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Shared Memory Access</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious document Corporate Control: User Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compromise endpoint through phishing campaign Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible by monitoring abnormal email attachments Corporate Control: Email Monitoring Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create shared memory segment in target system Corporate Control: Operating System Memory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure memory segment is accessible to target process Corporate Control: Memory Handler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized memory segment creation Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious code into shared memory Corporate Control: Shared Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare payload for execution by target process Corporate Control: Target Application Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor memory activity for injection indicators Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger payload execution via inter-process communication Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executed in shared memory Corporate Control: Victim Machine</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, granting attacker control Corporate Control: Target Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in shared memory access Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

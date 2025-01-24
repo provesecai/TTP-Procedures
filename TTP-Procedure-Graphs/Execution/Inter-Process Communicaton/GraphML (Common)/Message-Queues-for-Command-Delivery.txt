@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MessageQueuesForCommandDelivery" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Access Message Queue Service</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Commands into Queue</data>
+</node>
+<node id="D">
+<data key="label">Deliver and Execute Commands on Target Process</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via spear-phishing Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compromise message queue credentials Corporate Control: Messaging System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible via unusual access to message queues Corporate Control: Message Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify active message queues and their permissions Corporate Control: Queue Management System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject commands formatted for execution Corporate Control: Queue Payloads</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual message payloads Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deliver malicious messages to target process Corporate Control: Target Process Queue</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution when message is processed Corporate Control: Target Process Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized message processing Corporate Control: Queue Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Commands execute successfully within target process Corporate Control: Endpoint Device</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes with attacker control Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in message queue usage Corporate Control: Behavioral Analysis Tools</data>
+</edge>
+</graph>
+</graphml>

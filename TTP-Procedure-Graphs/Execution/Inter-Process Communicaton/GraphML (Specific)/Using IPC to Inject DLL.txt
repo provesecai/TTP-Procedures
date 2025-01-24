@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UsingIPCInjectDLL" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Target Process for Injection</data>
+</node>
+<node id="C">
+<data key="label">Load Malicious DLL into Target Process via IPC</data>
+</node>
+<node id="D">
+<data key="label">Trigger DLL Execution in Target Process</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Initial foothold established via remote phishing campaign Corporate Control: Endpoint Email System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy basic beacon for system reconnaissance Corporate Control: Victim Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detection possible through unusual system calls Corporate Control: Endpoint Detection and Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify processes with accessible memory using OpenProcess() Corporate Control: Target Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze process memory access permissions for injection Corporate Control: Memory Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor process enumeration activity for anomalies Corporate Control: SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Allocate memory in target process with VirtualAllocEx() Corporate Control: Target Process Memory</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Write malicious DLL path to allocated memory with WriteProcessMemory() Corporate Control: IPC Injection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject DLL using CreateRemoteThread() API Corporate Control: Target Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized thread creation in target process Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger DLL execution by invoking LoadLibrary() Corporate Control: Target Process Context</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious code executes within the context of the injected process Corporate Control: Process Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in thread activity post-injection Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Payload execution achieves attacker control Corporate Control: Endpoint Infrastructure</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Monitor injected process behavior for abnormal activity Corporate Control: Behavioral Analysis Tools</data>
+</edge>
+</graph>
+</graphml>

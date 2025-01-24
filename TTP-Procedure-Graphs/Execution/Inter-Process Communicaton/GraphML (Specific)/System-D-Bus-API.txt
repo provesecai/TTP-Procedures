@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SystemDBusAPI" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate D-Bus Services Related to Systemd</data>
+</node>
+<node id="C">
+<data key="label">Abuse Systemd D-Bus Interface to Inject Malicious Service</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution of Malicious Systemd Service</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via SSH brute force attack Corporate Control: Target System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy lightweight reconnaissance script for process enumeration Corporate Control: Linux Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual logins or SSH access attempts Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate available D-Bus services using dbus-send Corporate Control: Systemd D-Bus Interface</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify systemd service creation methods on D-Bus API Corporate Control: D-Bus Service Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized D-Bus enumeration activity Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject malicious payload as part of a new systemd service Corporate Control: Payload Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate service configuration to mimic legitimate processes Corporate Control: System Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual D-Bus messages targeting systemd Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger malicious service execution through systemctl on D-Bus Corporate Control: Systemd Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes as part of the newly created service Corporate Control: Process Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in systemd process activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Execution achieves control over the target system Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Detectable through systemd and D-Bus activity monitoring Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

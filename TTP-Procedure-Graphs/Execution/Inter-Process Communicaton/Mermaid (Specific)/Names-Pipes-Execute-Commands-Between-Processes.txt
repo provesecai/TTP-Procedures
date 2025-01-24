@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Discover Active Named Pipes on the System]
+    C[Set Up Malicious Named Pipe Server]
+    D[Deliver Payload Commands via Pipe Communication]
+    E[Trigger Execution on Target Process]
+
+    A -->|"Access gained via remote phishing Corporate Control: Target Endpoint"| B
+    A -->|"Foothold established by executing an initial script dropper Corporate Control: User Device"| B
+    A -->|"Detection possible through EDR monitoring of new processes Corporate Control: Endpoint Detection"| B
+    B -->|"Use 'Get-ChildItem \\.\pipe\' to enumerate named pipes Corporate Control: Named Pipe Registry"| C
+    B -->|"Analyze pipes associated with inter-process communication flows Corporate Control: Pipe Access Logs"| C
+    B -->|"Monitor for unusual named pipe enumeration commands Corporate Control: SIEM Systems"| C
+    C -->|"Create malicious named pipe server with CreateNamedPipe() API Corporate Control: IPC Mechanism"| D
+    C -->|"Ensure permissions allow unauthenticated connections Corporate Control: Pipe Security Descriptor"| D
+    C -->|"Monitor for unauthorized named pipe creation Corporate Control: System Logs"| D
+    D -->|"Inject commands using WriteFile() to send malicious payload Corporate Control: Pipe Communication Channel"| E
+    D -->|"Deliver command buffers formatted to exploit process handlers Corporate Control: Target Process Memory"| E
+    D -->|"Monitor anomalies in IPC communication traffic Corporate Control: Endpoint Monitoring"| D
+    E -->|"Payload executes in the targeted process environment Corporate Control: Victim Process"| D
+    E -->|"Execution completes and attacker gains process control Corporate Control: Target Endpoint"| D

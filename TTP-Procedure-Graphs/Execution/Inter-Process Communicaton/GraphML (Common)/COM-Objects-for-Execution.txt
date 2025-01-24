@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="COMObjectsForExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Available COM Objects</data>
+</node>
+<node id="C">
+<data key="label">Abuse Vulnerable COM Object for Payload Delivery</data>
+</node>
+<node id="D">
+<data key="label">Trigger Payload Execution via COM Interface</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing attack Corporate Control: User Endpoint</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detectable through abnormal email activity Corporate Control: Email Monitoring Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze target system for accessible COM objects Corporate Control: COM Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify vulnerable COM object capable of payload execution Corporate Control: Target Application</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious payload for COM object exploitation Corporate Control: Payload Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor COM object interactions for anomalies Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invoke COM interface to deliver malicious payload Corporate Control: COM Interface</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure payload avoids detection during delivery Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized COM object usage Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes via COM object in target process Corporate Control: Target Process</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution completes, granting attacker control Corporate Control: Target Infrastructure</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in COM object behavior Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Accessible Unix Domain Sockets]
+    C[Establish Connection to Vulnerable Socket]
+    D[Inject Malicious Commands via Socket Communication]
+    E[Execution Achieved]
+
+    A -->|"Access gained via SSH brute force attack Corporate Control: Target Endpoint"| B
+    A -->|"Deploy initial reconnaissance tools to enumerate processes Corporate Control: Target System"| B
+    A -->|"Monitor for unusual logins from external IPs Corporate Control: SIEM Logs"| B
+    B -->|"Enumerate sockets using tools like ss or lsof Corporate Control: Socket Registry"| C
+    B -->|"Identify writable or executable sockets with weak permissions Corporate Control: Target Application"| C
+    B -->|"Monitor socket usage for unauthorized access Corporate Control: Network Monitoring Tools"| C
+    C -->|"Establish connection to a writable socket Corporate Control: IPC Transport Layer"| D
+    C -->|"Inject payload commands formatted for the socket protocol Corporate Control: Malicious Payload"| D
+    C -->|"Monitor traffic on Unix domain sockets for irregular patterns Corporate Control: Endpoint Monitoring Tools"| D
+    D -->|"Trigger payload execution by simulating valid socket communication Corporate Control: Process Memory"| E
+    D -->|"Payload executes within the context of the target process Corporate Control: Target Process"| E
+    D -->|"Detectable through anomalies in socket communication Corporate Control: Behavioral Monitoring Tools"| E
+    E -->|"Execution completes, granting attacker control over the process Corporate Control: Target Infrastructure"| D
+    E -->|"Monitor for unauthorized execution through socket interactions Corporate Control: SIEM Systems"| D

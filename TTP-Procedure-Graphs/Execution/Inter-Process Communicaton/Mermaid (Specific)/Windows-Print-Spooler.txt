@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Accessible RPC Endpoints in Print Spooler Service]
+    C[Craft Malicious RPC Request to Spooler API]
+    D[Trigger Remote Code Execution via Spooler Service]
+    E[Execution Achieved]
+
+    A -->|"Access gained through phishing email with malicious macro Corporate Control: User Endpoint"| B
+    A -->|"Deploy lightweight PowerShell script for RPC enumeration Corporate Control: Endpoint System"| B
+    A -->|"Monitor for unauthorized endpoint access Corporate Control: SIEM Logs"| B
+    B -->|"Use RpcEnumBindingHandles() to identify RPC endpoints Corporate Control: Spooler Service API"| C
+    B -->|"Analyze endpoint for exploitable method calls (e.g., AddPrinterDriverEx) Corporate Control: RPC Method"| C
+    B -->|"Monitor unusual activity on the Print Spooler RPC interface Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Craft malicious RPC request with exploit payload Corporate Control: Payload Code"| D
+    C -->|"Bypass endpoint protection with obfuscated payload Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Monitor for suspicious spooler-related RPC activity Corporate Control: SIEM Logs"| D
+    D -->|"Send crafted RPC request to trigger Print Spooler code execution Corporate Control: RPC Transport"| E
+    D -->|"Exploit vulnerability to execute payload as SYSTEM Corporate Control: Target Process Memory"| E
+    D -->|"Monitor anomalies in spooler service execution patterns Corporate Control: Endpoint Monitoring Tools"| E
+    E -->|"Execution achieves SYSTEM-level control via Print Spooler Corporate Control: Target Infrastructure"| D
+    E -->|"Detectable through logs of spooler activity spikes Corporate Control: Behavioral Analysis Tools"| D

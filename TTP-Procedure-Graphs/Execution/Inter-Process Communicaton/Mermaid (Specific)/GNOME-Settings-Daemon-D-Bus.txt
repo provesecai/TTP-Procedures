@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate Available D-Bus Services]
+    C[Craft Malicious D-Bus Message for GNOME Settings Daemon]
+    D[Trigger Payload Execution via D-Bus Message Handler]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing with embedded SSH credential stealer Corporate Control: User Endpoint"| B
+    A -->|"Deploy reconnaissance scripts to list active D-Bus services Corporate Control: Target System"| B
+    A -->|"Monitor for unusual D-Bus enumeration attempts Corporate Control: SIEM Logs"| B
+    B -->|"Use 'dbus-send' to enumerate GNOME D-Bus interfaces Corporate Control: D-Bus Transport Layer"| C
+    B -->|"Identify vulnerable GNOME settings interface for injection Corporate Control: GNOME Daemon"| C
+    B -->|"Monitor D-Bus traffic for unauthorized message activity Corporate Control: Endpoint Monitoring Tools"| C
+    C -->|"Craft malicious message targeting settings change handler Corporate Control: Payload Code"| D
+    C -->|"Obfuscate payload to evade D-Bus-specific monitoring Corporate Control: D-Bus Protocol"| D
+    C -->|"Monitor for unauthorized D-Bus method invocations Corporate Control: SIEM Logs"| D
+    D -->|"Send malicious message to trigger GNOME D-Bus handler execution Corporate Control: GNOME Settings Daemon"| E
+    D -->|"Payload executes successfully within GNOME process context Corporate Control: GNOME Runtime"| E
+    D -->|"Monitor for anomalies in GNOME process behavior Corporate Control: Endpoint Logs"| E
+    E -->|"Execution achieves attacker control over the GNOME environment Corporate Control: Target Infrastructure"| D
+    E -->|"Detectable through D-Bus activity monitoring Corporate Control: SIEM Systems"| D

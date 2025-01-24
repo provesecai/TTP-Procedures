@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Access Message Queue Service]
+    C[Inject Malicious Commands into Queue]
+    D[Deliver and Execute Commands on Target Process]
+    E[Execution Achieved]
+
+    A -->|"Access gained via spear-phishing Corporate Control: Email Gateway"| B
+    A -->|"Compromise message queue credentials Corporate Control: Messaging System"| B
+    A -->|"Detection possible via unusual access to message queues Corporate Control: Message Logs"| B
+    B -->|"Identify active message queues and their permissions Corporate Control: Queue Management System"| C
+    B -->|"Inject commands formatted for execution Corporate Control: Queue Payloads"| C
+    B -->|"Monitor for unusual message payloads Corporate Control: SIEM Systems"| C
+    C -->|"Deliver malicious messages to target process Corporate Control: Target Process Queue"| D
+    C -->|"Trigger execution when message is processed Corporate Control: Target Process Memory"| D
+    C -->|"Monitor for unauthorized message processing Corporate Control: Queue Monitoring Tools"| D
+    D -->|"Commands execute successfully within target process Corporate Control: Endpoint Device"| E
+    D -->|"Execution completes with attacker control Corporate Control: Target Infrastructure"| E
+    D -->|"Detect anomalies in message queue usage Corporate Control: Behavioral Analysis Tools"| E

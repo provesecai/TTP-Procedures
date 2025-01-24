@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Vulnerable Message Queue]
+    C[Inject Malicious Payload into MSMQ]
+    D[Trigger Message Delivery to Target Process]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering initial foothold Corporate Control: Victim's Email System"| B
+    A -->|"Deploy basic persistence mechanism to maintain access Corporate Control: User Endpoint"| B
+    A -->|"Monitor for anomalies in initial access behavior Corporate Control: Endpoint Detection"| B
+    B -->|"Discover active message queues with administrative access Corporate Control: MSMQ Service"| C
+    B -->|"Identify queues processing critical commands Corporate Control: Queue Logs"| C
+    B -->|"Monitor for unauthorized access to MSMQ queues Corporate Control: SIEM Logs"| C
+    C -->|"Inject payload into MSMQ as formatted message Corporate Control: Queue Payloads"| D
+    C -->|"Obfuscate payload to avoid detection by queue monitoring Corporate Control: MSMQ Logs"| D
+    C -->|"Monitor queue behavior for unusual payload size or format Corporate Control: Behavioral Monitoring"| D
+    D -->|"Trigger delivery of the malicious message to target process Corporate Control: MSMQ Client"| E
+    D -->|"Exploit message handling logic to execute payload Corporate Control: Target Process Memory"| E
+    D -->|"Detect anomalies in message delivery and execution Corporate Control: Endpoint Monitoring Tools"| E
+    E -->|"Payload successfully executes in target environment Corporate Control: Endpoint Device"| E
+    E -->|"Execution grants attacker control over the process Corporate Control: Target Infrastructure"| D
+    E -->|"Monitor for unauthorized message consumption Corporate Control: SIEM Systems"| D
