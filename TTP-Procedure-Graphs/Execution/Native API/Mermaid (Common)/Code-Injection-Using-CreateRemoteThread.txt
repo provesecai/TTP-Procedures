@@ -1,0 +1,15 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Target Process for Injection]
+    C[Inject Malicious Code Using CreateRemoteThread]
+    D[Trigger Execution of Code Within Target Process]
+
+    A -->|"Access gained via phishing email Corporate Control: Email Gateway"| B
+    A -->|"Analyze active processes to find injection targets Corporate Control: Process Tree Logs"| B
+    A -->|"Monitor for suspicious process enumeration Corporate Control: SIEM Alerts"| B
+    B -->|"Select process with elevated privileges (e.g., svchost.exe) Corporate Control: Process Permissions"| C
+    B -->|"Monitor for anomalies in process handle access Corporate Control: Behavioral Detection Tools"| C
+    C -->|"Inject shellcode or payload using CreateRemoteThread API Corporate Control: Target Process Memory"| D
+    C -->|"Monitor thread creation actions for unauthorized behavior Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Trigger execution of payload within the context of the target process Corporate Control: Process Runtime"| D
+    C -->|"Monitor for anomalies in thread behavior Corporate Control: SIEM Logs"| D

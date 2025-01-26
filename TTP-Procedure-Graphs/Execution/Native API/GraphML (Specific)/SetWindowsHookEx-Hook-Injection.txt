@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SetWindowsHookExHookInjection" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Processes for Hook Injection</data>
+</node>
+<node id="C">
+<data key="label">Inject Malicious Hook into Target Process</data>
+</node>
+<node id="D">
+<data key="label">Trigger Hook to Execute Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering a malicious macro Corporate Control: Email Security Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance script to identify processes with active user interaction Corporate Control: Windows Task Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to Windows user processes Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use EnumWindows API to identify processes with GUI interaction Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze processes capable of handling window messages Corporate Control: Process Privileges and Memory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized enumeration of GUI-based processes Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject hook using SetWindowsHookEx targeting message handlers Corporate Control: Hook Injection API</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure payload triggers during user interaction events Corporate Control: Windows Message Handling</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in hook injection API usage Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger malicious hook by simulating user input or window events Corporate Control: Target Application Runtime</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Execute payload within the context of the hooked process Corporate Control: Target Process Memory</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor for anomalies in process execution flows Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

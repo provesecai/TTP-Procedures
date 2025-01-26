@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Target Process for Injection]
+    C[Allocate Memory in Target Process Using VirtualAllocEx]
+    D[Inject Malicious Payload into Allocated Memory]
+    E[Execute Payload via Remote Thread]
+
+    A -->|"Access gained through phishing campaign Corporate Control: Email Security Gateway"| B
+    A -->|"Deploy script to enumerate active processes Corporate Control: Task Manager Logs"| B
+    A -->|"Monitor for unusual process enumeration activities Corporate Control: SIEM Logs"| B
+    B -->|"Select target process with elevated privileges Corporate Control: Process Privilege Logs"| C
+    B -->|"Ensure target process has writable and executable memory Corporate Control: Memory Protection Logs"| C
+    B -->|"Monitor for unauthorized API calls interacting with sensitive processes Corporate Control: Endpoint Monitoring"| C
+    C -->|"Allocate memory in the target process using VirtualAllocEx API Corporate Control: Memory Allocation Logs"| D
+    C -->|"Prepare malicious payload for injection Corporate Control: Payload Development Environment"| D
+    C -->|"Monitor API usage related to memory allocation Corporate Control: Endpoint Protection Systems"| D
+    D -->|"Inject malicious payload into allocated memory using WriteProcessMemory Corporate Control: Process Memory"| E
+    D -->|"Monitor memory injection activities for unauthorized behavior Corporate Control: Behavioral Analytics"| E
+    E -->|"Trigger payload execution via CreateRemoteThread API Corporate Control: Thread Execution Context"| D
+    E -->|"Monitor anomalies in thread execution behavior Corporate Control: Endpoint Monitoring Tools"| D

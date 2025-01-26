@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RegistryManipulationRegSetValueEx" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Target Registry Key for Manipulation</data>
+</node>
+<node id="C">
+<data key="label">Craft Malicious Value for Registry Key</data>
+</node>
+<node id="D">
+<data key="label">Modify Registry Key Using RegSetValueEx API</data>
+</node>
+<node id="E">
+<data key="label">Payload Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious attachment Corporate Control: Email Security Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Perform reconnaissance to identify high-value registry keys Corporate Control: Registry Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual registry access attempts Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze registry for keys linked to autostart or sensitive configurations Corporate Control: Windows Registry Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Select keys used for execution control (e.g., Run, RunOnce) Corporate Control: Registry Tree Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor registry access patterns for anomalies Corporate Control: SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Add malicious executable to startup registry key Corporate Control: Registry Modification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure key points to payload bypassing runtime detection Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized registry changes Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger execution when the system starts Corporate Control: Startup Scripts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unusual startup behavior Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executes via modified registry key Corporate Control: System Runtime Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in registry behavior Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

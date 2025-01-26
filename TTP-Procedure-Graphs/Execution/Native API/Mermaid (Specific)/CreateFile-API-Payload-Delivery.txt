@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious Payload for Delivery]
+    C[Write Payload to Target File Using CreateFile API]
+    D[Execute Payload from Target File]
+    E[Execution Achieved]
+
+    A -->|"Initial access gained via stolen credentials Corporate Control: Identity Provider"| B
+    A -->|"Deploy lightweight reconnaissance script to enumerate writable directories Corporate Control: Endpoint Monitoring Logs"| B
+    A -->|"Monitor for unauthorized file enumeration Corporate Control: SIEM Alerts"| B
+    B -->|"Craft malicious executable or script targeting critical processes Corporate Control: Exploit Development Tools"| C
+    B -->|"Ensure payload is obfuscated to evade file scanning Corporate Control: Endpoint Protection"| C
+    B -->|"Monitor for suspicious file creation attempts Corporate Control: File Integrity Monitoring"| C
+    C -->|"Write malicious payload to target file location using CreateFile API Corporate Control: File Write Operations"| D
+    C -->|"Ensure payload bypasses runtime monitoring Corporate Control: File Scanning Tools"| D
+    C -->|"Monitor for unauthorized file writes in sensitive directories Corporate Control: Endpoint Detection Systems"| D
+    D -->|"Trigger execution of payload via user action or automated process Corporate Control: File Execution Context"| E
+    D -->|"Payload successfully executes in target environment Corporate Control: Process Runtime"| E
+    D -->|"Monitor for unauthorized execution attempts of newly created files Corporate Control: Behavioral Detection Systems"| E
+    E -->|"Execution completes, granting attacker full control Corporate Control: Target Application Runtime"| D
+    E -->|"Monitor anomalies in file execution behaviors Corporate Control: SIEM Systems"| D

@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify ElasticSearch Snapshot Schedulers]
+    C[Modify Scheduler to Include Malicious Commands]
+    D[Trigger Scheduler to Execute Commands]
+
+    A -->|"Access gained via misconfigured ElasticSearch cluster Corporate Control: ElasticSearch Logs"| B
+    A -->|"Deploy enumeration script to analyze snapshot scheduler settings Corporate Control: ElasticSearch Audit Logs"| B
+    A -->|"Monitor for unusual API requests to ElasticSearch endpoints Corporate Control: SIEM Alerts"| B
+    B -->|"Identify writable scheduler configurations Corporate Control: Scheduler Configuration Logs"| C
+    B -->|"Target high-privilege nodes for modification Corporate Control: Cluster Permissions"| C
+    B -->|"Monitor for unauthorized access to scheduler settings Corporate Control: File Integrity Monitoring"| C
+    C -->|"Modify scheduler to include commands executing malicious payload Corporate Control: Scheduler YAML Files"| D
+    C -->|"Ensure modifications mimic legitimate snapshot settings Corporate Control: Behavioral Monitoring Tools"| D
+    C -->|"Monitor for anomalies in scheduler modifications Corporate Control: SIEM Systems"| D
+    C -->|"Scheduler executes malicious commands during scheduled interval Corporate Control: Execution Logs"| D
+    C -->|"Detect unusual behavior in ElasticSearch activity Corporate Control: Endpoint Monitoring Tools"| D

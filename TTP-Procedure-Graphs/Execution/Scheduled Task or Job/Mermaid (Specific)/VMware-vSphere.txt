@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Permissions for Scheduled Tasks in vSphere]
+    C[Create Malicious Task in vSphere]
+    D[Trigger Task to Deploy Malicious VM or Payload]
+
+    A -->|"Access gained via brute-force attack on vSphere credentials Corporate Control: vSphere Management Interface"| B
+    A -->|"Deploy script to enumerate scheduled task configurations Corporate Control: vSphere Logs"| B
+    A -->|"Monitor for unauthorized logins to vSphere Web Client Corporate Control: SIEM Systems"| B
+    B -->|"Identify tasks with writable configurations Corporate Control: vSphere Task Logs"| C
+    B -->|"Target tasks linked to provisioning or management actions Corporate Control: VM Permissions"| C
+    B -->|"Monitor for unauthorized task modifications in vSphere Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Create scheduled task to deploy malicious VM or execute scripts Corporate Control: Scheduled Task Configuration"| D
+    C -->|"Ensure task appears legitimate to avoid detection Corporate Control: Endpoint Monitoring Systems"| D
+    C -->|"Monitor task creation for anomalies in the task registry Corporate Control: vSphere Logs"| D
+    C -->|"Task executes, deploying malicious VM or executing payload Corporate Control: Task Execution Logs"| D
+    C -->|"Detect anomalies in VM deployments or task activity Corporate Control: SIEM Alerts"| D

@@ -1,0 +1,16 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious Command for Execution]
+    C[Call CreateProcess to Execute Command]
+    D[Command Executes in Target Environment]
+
+    A -->|"Access gained through spear-phishing Corporate Control: Email Security Gateway"| B
+    A -->|"Deploy initial payload to analyze system environment Corporate Control: Endpoint Logs"| B
+    A -->|"Monitor for unauthorized script execution Corporate Control: SIEM Logs"| B
+    B -->|"Craft malicious command targeting sensitive processes Corporate Control: Command Line Parameters"| C
+    B -->|"Ensure command avoids detection through obfuscation Corporate Control: Anti-Malware Tools"| C
+    B -->|"Monitor for unusual command-line parameters Corporate Control: Endpoint Protection Systems"| C
+    C -->|"Use CreateProcess API to execute crafted command Corporate Control: Windows API Layer"| D
+    C -->|"Monitor API activity for process creation anomalies Corporate Control: SIEM Alerts"| D
+    C -->|"Command executes successfully, granting attacker control Corporate Control: Target System"| D
+    C -->|"Monitor for anomalous execution flows in process hierarchy Corporate Control: Behavioral Analytics"| D

@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate Processes Using EnumProcesses API]
+    C[Identify High-Value Targets for Injection]
+    D[Inject and Execute Payload in Target Process]
+    E[Execution Achieved]
+
+    A -->|"Access gained via malicious attachment Corporate Control: Email Gateway"| B
+    A -->|"Deploy reconnaissance script to identify active processes Corporate Control: Endpoint Monitoring Logs"| B
+    A -->|"Monitor for unusual enumeration API calls Corporate Control: SIEM Alerts"| B
+    B -->|"Use EnumProcesses API to gather active process details Corporate Control: Windows Process Manager"| C
+    B -->|"Identify processes with elevated privileges or weak memory protections Corporate Control: Target Process Context"| C
+    B -->|"Monitor for unauthorized API access to process details Corporate Control: Endpoint Detection Tools"| C
+    C -->|"Select high-value processes for injection (e.g., lsass.exe) Corporate Control: Process Privileges and Memory Layout"| D
+    C -->|"Prepare payload tailored to exploit process vulnerabilities Corporate Control: Exploit Development Tools"| D
+    C -->|"Monitor for suspicious access patterns in critical processes Corporate Control: Behavioral Monitoring Systems"| D
+    D -->|"Inject malicious payload into identified process Corporate Control: Process Memory"| E
+    D -->|"Execute payload to achieve reverse shell or system enumeration Corporate Control: Target Application Context"| E
+    D -->|"Monitor injected processes for unauthorized activity Corporate Control: SIEM Systems"| E
+    E -->|"Payload execution grants attacker control over critical resources Corporate Control: Process Runtime"| D
+    E -->|"Detect anomalies in process behavior following injection Corporate Control: Endpoint Protection Tools"| D

@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Gather Information About the System Environment]
+    C[Craft Malicious Command for CreateProcess API]
+    D[Execute Command via CreateProcess]
+    E[Command Execution Achieved]
+
+    A -->|"Initial access gained via drive-by download Corporate Control: Web Gateway"| B
+    A -->|"Deploy lightweight payload to perform initial reconnaissance Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor web traffic for unusual file downloads Corporate Control: Web Proxy Logs"| B
+    B -->|"Enumerate system environment variables and critical paths Corporate Control: Windows Environment Variables"| C
+    B -->|"Identify paths to high-value executables (e.g., cmd.exe, powershell.exe) Corporate Control: System File Integrity Logs"| C
+    B -->|"Monitor for unexpected access to sensitive executables Corporate Control: Endpoint Detection Tools"| C
+    C -->|"Craft malicious command targeting sensitive operations Corporate Control: Malicious Command Parameters"| D
+    C -->|"Use CreateProcess API to execute the crafted command Corporate Control: Windows API Layer"| D
+    C -->|"Monitor API calls related to process creation Corporate Control: Endpoint Behavioral Monitoring"| D
+    D -->|"Execute command to perform system enumeration or launch C2 channel Corporate Control: Process Context"| E
+    D -->|"Monitor process tree for suspicious child processes Corporate Control: SIEM Logs"| E
+    E -->|"Command execution grants attacker further control Corporate Control: System Runtime Environment"| D
+    E -->|"Detect anomalies in process creation hierarchy Corporate Control: Endpoint Monitoring Tools"| D

@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VMwarevSphereScheduledTasks" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Permissions for Scheduled Tasks in vSphere</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Task in vSphere</data>
+</node>
+<node id="D">
+<data key="label">Trigger Task to Deploy Malicious VM or Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via brute-force attack on vSphere credentials Corporate Control: vSphere Management Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to enumerate scheduled task configurations Corporate Control: vSphere Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized logins to vSphere Web Client Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify tasks with writable configurations Corporate Control: vSphere Task Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target tasks linked to provisioning or management actions Corporate Control: VM Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized task modifications in vSphere Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create scheduled task to deploy malicious VM or execute scripts Corporate Control: Scheduled Task Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task appears legitimate to avoid detection Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task creation for anomalies in the task registry Corporate Control: vSphere Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Task executes, deploying malicious VM or executing payload Corporate Control: Task Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in VM deployments or task activity Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

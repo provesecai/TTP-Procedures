@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze EventBridge Rules and Permissions]
+    C[Create Malicious Event Rule]
+    D[Trigger Rule to Execute Payload]
+
+    A -->|"Access gained via compromised AWS keys Corporate Control: AWS IAM Logs"| B
+    A -->|"Deploy enumeration script to analyze EventBridge configurations Corporate Control: CloudTrail Logs"| B
+    A -->|"Monitor for unauthorized API requests targeting EventBridge Corporate Control: AWS Security Hub"| B
+    B -->|"Identify roles with permissions to create or modify EventBridge rules Corporate Control: IAM Role Policies"| C
+    B -->|"Focus on rules configured to trigger high-privilege functions Corporate Control: EventBridge Logs"| C
+    B -->|"Monitor for excessive API activity on EventBridge endpoints Corporate Control: Behavioral Analytics"| C
+    C -->|"Create malicious rule to invoke Lambda function or EC2 instance Corporate Control: EventBridge Rule Configuration"| D
+    C -->|"Ensure rule configuration mimics legitimate automation Corporate Control: CloudWatch Monitoring"| D
+    C -->|"Monitor for unauthorized rule creation or updates Corporate Control: SIEM Systems"| D
+    C -->|"Trigger rule to execute malicious payload or modify resources Corporate Control: EventBridge Execution Logs"| D
+    C -->|"Detect anomalies in resource activity triggered by EventBridge Corporate Control: AWS Security Hub Alerts"| D

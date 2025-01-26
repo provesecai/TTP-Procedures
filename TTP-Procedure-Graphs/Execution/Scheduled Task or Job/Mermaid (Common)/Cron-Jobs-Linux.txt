@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze Cron Permissions and Existing Jobs]
+    C[Inject Malicious Script into Cron Tab]
+    D[Trigger Execution via Scheduled Cron Job]
+
+    A -->|"Access gained via SSH brute-force attack Corporate Control: SSH Gateway"| B
+    A -->|"Deploy script to identify writable cron paths Corporate Control: Linux Cron Configuration"| B
+    A -->|"Monitor for unusual SSH logins or failed attempts Corporate Control: SIEM Alerts"| B
+    B -->|"Analyze cron jobs for existing vulnerabilities Corporate Control: Cron Tab Permissions"| C
+    B -->|"Select writable cron files for injection Corporate Control: Linux File System"| C
+    B -->|"Monitor cron tab modifications for unauthorized changes Corporate Control: Endpoint Monitoring Tools"| C
+    C -->|"Inject malicious script into writable cron tab Corporate Control: Cron Configuration Files"| D
+    C -->|"Schedule script for execution during low activity times Corporate Control: Cron Scheduling"| D
+    C -->|"Monitor cron file write actions for anomalies Corporate Control: File Integrity Monitoring"| D
+    C -->|"Cron job executes the injected script Corporate Control: Cron Execution Logs"| D
+    C -->|"Monitor execution patterns for unauthorized scripts Corporate Control: Behavioral Analytics Tools"| D

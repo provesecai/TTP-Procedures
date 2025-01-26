@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AtCommandScheduledTask" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Analyze Permissions for `at` Command</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Job Using `at` Command</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Scheduled Job</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via drive-by download Corporate Control: Web Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy enumeration script to identify `at` command permissions Corporate Control: Task Manager Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual command-line activities Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify users authorized to schedule tasks via `at` command Corporate Control: Task Scheduling Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Select targets with writable permissions for task creation Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor task creation for anomalies Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use `at` command to schedule execution of malicious script Corporate Control: Scheduler Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script avoids detection through obfuscation Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized task creation attempts Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Task executes script as per scheduled time Corporate Control: Task Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor execution logs for unexpected behavior Corporate Control: Behavioral Analytics</data>
+</edge>
+</graph>
+</graphml>

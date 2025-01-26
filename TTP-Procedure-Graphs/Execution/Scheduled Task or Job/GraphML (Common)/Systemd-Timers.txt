@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SystemdTimersAutomation" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Writable Systemd Timer Units</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Systemd Timer File</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Systemd Timer</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen credentials Corporate Control: Identity Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance script to enumerate writable unit files Corporate Control: Linux File System Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized enumeration of system files Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable systemd timer files with elevated privileges Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Select timer units used for administrative tasks Corporate Control: Timer Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized file access or modifications Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create systemd timer to execute malicious commands Corporate Control: Timer Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure timer file avoids detection by mimicking legitimate tasks Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious timer creation activity Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Timer triggers execution of malicious commands Corporate Control: Timer Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor execution logs for anomalies in systemd activity Corporate Control: Endpoint Detection Systems</data>
+</edge>
+</graph>
+</graphml>

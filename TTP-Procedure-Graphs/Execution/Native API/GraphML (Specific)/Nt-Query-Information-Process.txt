@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NtQueryInformationProcess" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Processes Using NtQueryInformationProcess</data>
+</node>
+<node id="C">
+<data key="label">Identify High-Value Processes for Injection</data>
+</node>
+<node id="D">
+<data key="label">Perform Further Reconnaissance via Process Handles</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen credentials Corporate Control: RDP Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy payload to query system for running processes Corporate Control: Process Activity Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous API calls related to process enumeration Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use NtQueryInformationProcess API to enumerate active processes Corporate Control: Windows Process API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify processes with elevated privileges or weak protections Corporate Control: Process Privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized access to sensitive processes Corporate Control: EDR Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Select processes for potential injection or exploitation Corporate Control: Process Handle Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify weak memory protections to prepare for payload injection Corporate Control: Target Memory Segments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system for API usage anomalies related to process handles Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Perform injection or other malicious actions via process handles Corporate Control: Process Memory</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Ensure payload is obfuscated to bypass runtime detection Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in process behavior following injection Corporate Control: SIEM Logs</data>
+</edge>
+</graph>
+</graphml>

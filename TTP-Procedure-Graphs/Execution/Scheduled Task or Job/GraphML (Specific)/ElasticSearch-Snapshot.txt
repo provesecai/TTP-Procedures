@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ElasticSearchSnapshotSchedulers" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify ElasticSearch Snapshot Schedulers</data>
+</node>
+<node id="C">
+<data key="label">Modify Scheduler to Include Malicious Commands</data>
+</node>
+<node id="D">
+<data key="label">Trigger Scheduler to Execute Commands</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via misconfigured ElasticSearch cluster Corporate Control: ElasticSearch Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy enumeration script to analyze snapshot scheduler settings Corporate Control: ElasticSearch Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual API requests to ElasticSearch endpoints Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable scheduler configurations Corporate Control: Scheduler Configuration Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target high-privilege nodes for modification Corporate Control: Cluster Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized access to scheduler settings Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify scheduler to include commands executing malicious payload Corporate Control: Scheduler YAML Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure modifications mimic legitimate snapshot settings Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in scheduler modifications Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Scheduler executes malicious commands during scheduled interval Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect unusual behavior in ElasticSearch activity Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

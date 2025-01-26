@@ -1,0 +1,15 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify System Resources Using APIs]
+    C[Gather Data on Processes, Users, and Network Configuration]
+    D[Leverage Information for Further Exploitation]
+
+    A -->|"Access gained via drive-by download Corporate Control: Web Gateway"| B
+    A -->|"Deploy reconnaissance script targeting system APIs Corporate Control: Endpoint Protection"| B
+    A -->|"Monitor for unauthorized API enumeration Corporate Control: SIEM Logs"| B
+    B -->|"Use EnumProcesses and NetUserEnum APIs to gather system data Corporate Control: API Registry"| C
+    B -->|"Identify sensitive processes, users, and network configurations Corporate Control: Process and Network Logs"| C
+    B -->|"Monitor for excessive API calls on sensitive data Corporate Control: Endpoint Monitoring Tools"| C
+    C -->|"Analyze gathered data to determine high-value targets Corporate Control: Threat Intelligence Systems"| D
+    C -->|"Prepare payloads based on discovered vulnerabilities Corporate Control: Exploit Development Environment"| D
+    C -->|"Monitor for anomalous activity based on system enumeration Corporate Control: Behavioral Analytics"| D

@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Prepare Malicious Payload for Delivery]
+    C[Write Payload to Target File Using WriteFile]
+    D[Trigger Payload Execution via File Interaction]
+
+    A -->|"Access gained through phishing campaign Corporate Control: Email Gateway"| B
+    A -->|"Analyze target directories for writable paths Corporate Control: File Access Logs"| B
+    A -->|"Monitor for unauthorized file enumeration Corporate Control: Endpoint Detection Systems"| B
+    B -->|"Prepare malicious executable for deployment Corporate Control: Development Tools"| C
+    B -->|"Obfuscate payload to evade detection Corporate Control: Anti-Virus Scanning"| C
+    B -->|"Monitor for unauthorized file writes to sensitive directories Corporate Control: File Integrity Monitoring"| C
+    C -->|"Write payload to the target file location using WriteFile API Corporate Control: File Write Operations"| D
+    C -->|"Ensure payload is executable in the target environment Corporate Control: File Permissions Logs"| D
+    C -->|"Monitor for suspicious write actions to critical paths Corporate Control: Behavioral Analytics"| D
+    C -->|"Trigger execution via user interaction or scheduled task Corporate Control: Task Scheduler"| D
+    C -->|"Monitor file interactions for anomalies Corporate Control: SIEM Systems"| D

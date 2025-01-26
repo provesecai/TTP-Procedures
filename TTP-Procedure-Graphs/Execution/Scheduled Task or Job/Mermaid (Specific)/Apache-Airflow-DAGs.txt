@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze DAG Permissions in Airflow Environment]
+    C[Create Malicious DAG for Scheduled Execution]
+    D[Trigger DAG to Execute Payload]
+
+    A -->|"Access gained via exposed Airflow web interface Corporate Control: Airflow Audit Logs"| B
+    A -->|"Deploy script to analyze DAG permissions and configurations Corporate Control: Airflow Metadata Database"| B
+    A -->|"Monitor for unauthorized API calls to Airflow web service Corporate Control: SIEM Systems"| B
+    B -->|"Identify writable DAGs with scheduled execution privileges Corporate Control: Airflow Scheduler Logs"| C
+    B -->|"Focus on DAGs running on high-value nodes Corporate Control: Cluster Configuration"| C
+    B -->|"Monitor for unauthorized modifications to DAG definitions Corporate Control: File Integrity Monitoring"| C
+    C -->|"Create DAG with tasks executing malicious commands Corporate Control: DAG Configuration Files"| D
+    C -->|"Ensure DAG tasks mimic legitimate workloads Corporate Control: Cluster Monitoring Tools"| D
+    C -->|"Monitor Airflow logs for suspicious DAG creation activities Corporate Control: Behavioral Analytics"| D
+    C -->|"Trigger DAG execution to deploy malicious payload Corporate Control: Airflow Execution Logs"| D
+    C -->|"Detect anomalies in DAG execution tasks Corporate Control: SIEM Alerts"| D

@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsTaskSchedulerStartup" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Startup Folders and Task Permissions</data>
+</node>
+<node id="C">
+<data key="label">Create Task to Execute on System Startup</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via System Boot</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing delivering executable Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to identify writable startup folders Corporate Control: Startup Folder Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to startup folders Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze Task Scheduler permissions for creating startup tasks Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Select writable locations for adding tasks Corporate Control: File System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new task creation attempts Corporate Control: Behavioral Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create task scheduled for execution at system startup Corporate Control: Windows Task Registry</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task is obfuscated to mimic legitimate processes Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task creation logs for suspicious entries Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Task executes malicious payload during system startup Corporate Control: Task Scheduler Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor for anomalies in startup execution behaviors Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

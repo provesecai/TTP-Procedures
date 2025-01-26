@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LoadLibraryDLLInjection" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate DLLs on Target System</data>
+</node>
+<node id="C">
+<data key="label">Craft Malicious DLL and Load Using LoadLibrary</data>
+</node>
+<node id="D">
+<data key="label">Inject DLL into Target Process</data>
+</node>
+<node id="E">
+<data key="label">DLL Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via spear-phishing attack delivering a macro-based payload Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Initial payload deployed to query system configuration and active processes Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor endpoint telemetry for suspicious executable activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify system DLLs through the Windows System32 directory Corporate Control: Windows File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft DLL targeting exploitable system functions (e.g., WinAPI) Corporate Control: Development Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor file creation events in DLL paths Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage LoadLibrary API to inject DLL into memory of high-value process Corporate Control: Process Memory Allocations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DLL exploits functions commonly invoked by the target process Corporate Control: Process Execution Context</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor API calls to LoadLibrary and associated memory regions Corporate Control: Endpoint Detection Systems (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute DLL logic to establish reverse shell or process injection Corporate Control: Target Process Context</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload execution achieved within target application process Corporate Control: Application Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in API call patterns for DLL execution Corporate Control: Behavioral Analytics Tools</data>
+</edge>
+</graph>
+</graphml>

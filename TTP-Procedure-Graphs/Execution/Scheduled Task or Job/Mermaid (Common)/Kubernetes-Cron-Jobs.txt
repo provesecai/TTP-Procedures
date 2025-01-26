@@ -1,0 +1,18 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze Kubernetes Permissions for CronJob Creation]
+    C[Create Malicious Kubernetes CronJob]
+    D[Trigger Execution via Scheduled CronJob]
+
+    A -->|"Access gained via stolen Kubernetes API credentials Corporate Control: Kubernetes API Gateway"| B
+    A -->|"Deploy script to enumerate cluster roles and permissions Corporate Control: Kubernetes RBAC Logs"| B
+    A -->|"Monitor for unauthorized API requests or role enumeration Corporate Control: Kubernetes Audit Logs"| B
+    B -->|"Identify namespaces and service accounts with CronJob permissions Corporate Control: Namespace Configuration"| C
+    B -->|"Focus on permissions granting access to critical workloads Corporate Control: RoleBindings"| C
+    B -->|"Monitor for excessive API activity targeting CronJob APIs Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Create malicious CronJob to execute payloads at scheduled intervals Corporate Control: CronJob YAML Files"| D
+    C -->|"Ensure CronJob configuration mimics legitimate workloads Corporate Control: Namespace Monitoring"| D
+    C -->|"Monitor for unauthorized CronJob creation or updates Corporate Control: SIEM Alerts"| D
+    C -->|"CronJob executes malicious payload on the cluster Corporate Control: Kubernetes Scheduler Logs"| D
+    C -->|"Monitor for unusual workload activity triggered by CronJobs Corporate Control: Cluster Monitoring Tools"| D
+    C -->|"Payload grants attacker control over Kubernetes workloads Corporate Control: Cluster Runtime"| D

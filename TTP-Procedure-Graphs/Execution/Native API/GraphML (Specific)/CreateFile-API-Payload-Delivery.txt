@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateFilePayloadDelivery" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare Malicious Payload for Delivery</data>
+</node>
+<node id="C">
+<data key="label">Write Payload to Target File Using CreateFile API</data>
+</node>
+<node id="D">
+<data key="label">Execute Payload from Target File</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Initial access gained via stolen credentials Corporate Control: Identity Provider</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy lightweight reconnaissance script to enumerate writable directories Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized file enumeration Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious executable or script targeting critical processes Corporate Control: Exploit Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload is obfuscated to evade file scanning Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for suspicious file creation attempts Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Write malicious payload to target file location using CreateFile API Corporate Control: File Write Operations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure payload bypasses runtime monitoring Corporate Control: File Scanning Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized file writes in sensitive directories Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger execution of payload via user action or automated process Corporate Control: File Execution Context</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Payload successfully executes in target environment Corporate Control: Process Runtime</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor for unauthorized execution attempts of newly created files Corporate Control: Behavioral Detection Systems</data>
+</edge>
+</graph>
+</graphml>

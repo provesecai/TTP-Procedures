@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NtCreateThreadExRemoteThread" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Target Process for Injection</data>
+</node>
+<node id="C">
+<data key="label">Allocate Memory and Inject Payload</data>
+</node>
+<node id="D">
+<data key="label">Create Remote Thread Using NtCreateThreadEx</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Initial foothold established via phishing delivering an executable Corporate Control: Email Security Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Reconnaissance performed to identify high-privilege processes Corporate Control: Endpoint Security Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suspicious enumeration of system processes Corporate Control: EDR Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze running processes for weak memory protection policies Corporate Control: Windows Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify processes susceptible to thread injection Corporate Control: Process Manager Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API calls interacting with sensitive processes Corporate Control: SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Allocate memory within the target process using VirtualAllocEx Corporate Control: Process Memory Regions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Write malicious shellcode into allocated memory regions Corporate Control: Memory Write Operations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for memory injection attempts in sensitive processes Corporate Control: Behavioral Analytics Tools</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Invoke NtCreateThreadEx to create and execute a new thread in target process Corporate Control: Thread Execution Context</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger payload execution through newly created remote thread Corporate Control: Process Execution Memory</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in thread creation patterns Corporate Control: EDR Memory Injection Alerts</data>
+</edge>
+</graph>
+</graphml>

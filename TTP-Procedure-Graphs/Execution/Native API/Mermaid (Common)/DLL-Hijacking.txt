@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Discover Application Vulnerable to DLL Hijacking]
+    C[Create Malicious DLL with Matching Name]
+    D[Place Malicious DLL in Target Directory]
+    E[Execution Achieved via Application Load]
+
+    A -->|"Access gained via malicious email attachment Corporate Control: Email Gateway"| B
+    A -->|"Deploy reconnaissance tool to identify applications loading DLLs from insecure paths Corporate Control: Endpoint Monitoring"| B
+    A -->|"Monitor for unauthorized application analysis Corporate Control: SIEM Logs"| B
+    B -->|"Identify applications vulnerable to DLL search order hijacking Corporate Control: Application Configuration Logs"| C
+    B -->|"Focus on applications with elevated privileges Corporate Control: File Integrity Logs"| C
+    B -->|"Monitor for unauthorized access to application directories Corporate Control: Behavioral Monitoring"| C
+    C -->|"Craft DLL to mimic legitimate library with malicious payload Corporate Control: Exploit Development Tools"| D
+    C -->|"Ensure DLL matches expected file name and exports Corporate Control: File Creation Logs"| D
+    C -->|"Monitor for unauthorized creation of DLLs in application directories Corporate Control: File Integrity Monitoring"| D
+    D -->|"Place malicious DLL in the application’s search path Corporate Control: Target Directory"| E
+    D -->|"Monitor for suspicious DLL replacements Corporate Control: SIEM Alerts"| E
+    E -->|"Application loads malicious DLL during runtime, executing payload Corporate Control: Application Runtime"| D
+    E -->|"Detect anomalies in DLL loading patterns Corporate Control: Endpoint Monitoring Tools"| D

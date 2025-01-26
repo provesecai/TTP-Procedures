@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VirtualAllocExMemoryAllocation" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Analyze Running Processes for Exploitation</data>
+</node>
+<node id="C">
+<data key="label">Allocate Memory with VirtualAllocEx</data>
+</node>
+<node id="D">
+<data key="label">Inject Malicious Payload into Allocated Memory</data>
+</node>
+<node id="E">
+<data key="label">Execute Payload via Code Injection</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Foothold gained via compromised remote desktop credentials Corporate Control: RDP Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Perform reconnaissance to identify high-privilege processes Corporate Control: Windows Task Manager Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual access attempts to administrative tools Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate processes with accessible memory and weak protections Corporate Control: Windows Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Select process with elevated permissions (e.g., svchost.exe) Corporate Control: Process Privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized memory-related API calls Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Allocate writable and executable memory in target process using VirtualAllocEx Corporate Control: Process Memory Allocator</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure memory regions are set for payload injection Corporate Control: Memory Protection Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor API usage related to memory allocation Corporate Control: Behavioral Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Inject shellcode or malicious DLL into allocated memory Corporate Control: Process Memory Regions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure payload is obfuscated to bypass runtime detection Corporate Control: Anti-Malware Scanning</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for write actions targeting sensitive memory regions Corporate Control: EDR Systems</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Trigger payload execution by altering thread context Corporate Control: Target Process Thread Execution</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Payload successfully executes in the allocated memory segment Corporate Control: Target Process Runtime</data>
+</edge>
+<edge source="E" target="E">
+<data key="label">Detect anomalies in memory execution flows Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

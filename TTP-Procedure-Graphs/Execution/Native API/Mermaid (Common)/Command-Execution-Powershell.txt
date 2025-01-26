@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Invoke PowerShell API to Execute Commands]
+    C[Deploy Malicious Commands via PowerShell]
+    D[Bypass Script Block Logging]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised RDP credentials Corporate Control: RDP Gateway"| B
+    A -->|"Deploy PowerShell script for initial enumeration Corporate Control: Endpoint Monitoring"| B
+    A -->|"Monitor for unauthorized PowerShell usage Corporate Control: SIEM Systems"| B
+    B -->|"Use PowerShell APIs to execute administrative commands Corporate Control: PowerShell Runtime"| C
+    B -->|"Craft commands to establish C2 connection or download payloads Corporate Control: Malicious Script Logs"| C
+    B -->|"Monitor for abnormal PowerShell invocations Corporate Control: Endpoint Protection Systems"| C
+    C -->|"Bypass PowerShell logging by obfuscating script content Corporate Control: Script Block Logging"| D
+    C -->|"Ensure script avoids detection by runtime analysis Corporate Control: Endpoint Behavioral Monitoring"| D
+    C -->|"Monitor for suspicious obfuscation techniques Corporate Control: SIEM Logs"| D
+    D -->|"Execute payload via PowerShell, achieving attacker objectives Corporate Control: Script Execution Context"| E
+    D -->|"Monitor execution patterns for anomalies Corporate Control: Endpoint Detection Tools"| E
+    D -->|"Payload execution grants attacker control Corporate Control: System Runtime Environment"| E
+    D -->|"Detect anomalies in PowerShell activity Corporate Control: Behavioral Analytics"| E

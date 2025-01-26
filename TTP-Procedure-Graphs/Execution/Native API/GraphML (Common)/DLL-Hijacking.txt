@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DLLHijacking" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Discover Application Vulnerable to DLL Hijacking</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious DLL with Matching Name</data>
+</node>
+<node id="D">
+<data key="label">Place Malicious DLL in Target Directory</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved via Application Load</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious email attachment Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance tool to identify applications loading DLLs from insecure paths Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized application analysis Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify applications vulnerable to DLL search order hijacking Corporate Control: Application Configuration Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on applications with elevated privileges Corporate Control: File Integrity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized access to application directories Corporate Control: Behavioral Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Craft DLL to mimic legitimate library with malicious payload Corporate Control: Exploit Development Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DLL matches expected file name and exports Corporate Control: File Creation Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized creation of DLLs in application directories Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Application loads malicious DLL during runtime, executing payload Corporate Control: Application Runtime</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in DLL loading patterns Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

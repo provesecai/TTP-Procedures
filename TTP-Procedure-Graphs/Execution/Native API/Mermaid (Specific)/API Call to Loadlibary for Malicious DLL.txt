@@ -1,0 +1,19 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate DLLs on Target System]
+    C[Craft Malicious DLL and Load Using LoadLibrary]
+    D[Inject DLL into Target Process]
+    E[DLL Execution Achieved]
+
+    A -->|"Access gained via spear-phishing attack delivering a macro-based payload Corporate Control: Email Gateway"| B
+    A -->|"Initial payload deployed to query system configuration and active processes Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor endpoint telemetry for suspicious executable activity Corporate Control: SIEM Systems"| B
+    B -->|"Identify system DLLs through the Windows System32 directory Corporate Control: Windows File System"| C
+    B -->|"Craft DLL targeting exploitable system functions (e.g., WinAPI) Corporate Control: Development Environment"| C
+    B -->|"Monitor file creation events in DLL paths Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Leverage LoadLibrary API to inject DLL into memory of high-value process Corporate Control: Process Memory Allocations"| D
+    C -->|"Ensure DLL exploits functions commonly invoked by the target process Corporate Control: Process Execution Context"| D
+    C -->|"Monitor API calls to LoadLibrary and associated memory regions Corporate Control: Endpoint Detection Systems (EDR)"| D
+    D -->|"Execute DLL logic to establish reverse shell or process injection Corporate Control: Target Process Context"| E
+    D -->|"Payload execution achieved within target application process Corporate Control: Application Runtime"| E
+    D -->|"Detect anomalies in API call patterns for DLL execution Corporate Control: Behavioral Analytics Tools"| E

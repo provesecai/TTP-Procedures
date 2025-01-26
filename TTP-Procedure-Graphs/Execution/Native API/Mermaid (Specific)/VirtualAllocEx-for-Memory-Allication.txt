@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze Running Processes for Exploitation]
+    C[Allocate Memory with VirtualAllocEx]
+    D[Inject Malicious Payload into Allocated Memory]
+    E[Execute Payload via Code Injection]
+
+    A -->|"Foothold gained via compromised remote desktop credentials Corporate Control: RDP Gateway"| B
+    A -->|"Perform reconnaissance to identify high-privilege processes Corporate Control: Windows Task Manager Logs"| B
+    A -->|"Monitor for unusual access attempts to administrative tools Corporate Control: SIEM Alerts"| B
+    B -->|"Enumerate processes with accessible memory and weak protections Corporate Control: Windows Security Event Logs"| C
+    B -->|"Select process with elevated permissions (e.g., svchost.exe) Corporate Control: Process Privileges"| C
+    B -->|"Monitor for unauthorized memory-related API calls Corporate Control: Endpoint Monitoring Systems"| C
+    C -->|"Allocate writable and executable memory in target process using VirtualAllocEx Corporate Control: Process Memory Allocator"| D
+    C -->|"Ensure memory regions are set for payload injection Corporate Control: Memory Protection Configuration"| D
+    C -->|"Monitor API usage related to memory allocation Corporate Control: Behavioral Detection Tools"| D
+    D -->|"Inject shellcode or malicious DLL into allocated memory Corporate Control: Process Memory Regions"| E
+    D -->|"Ensure payload is obfuscated to bypass runtime detection Corporate Control: Anti-Malware Scanning"| E
+    D -->|"Monitor for write actions targeting sensitive memory regions Corporate Control: EDR Systems"| E
+    E -->|"Trigger payload execution by altering thread context Corporate Control: Target Process Thread Execution"| D
+    E -->|"Payload successfully executes in the allocated memory segment Corporate Control: Target Process Runtime"| D
+    E -->|"Detect anomalies in memory execution flows Corporate Control: SIEM Alerts"| D

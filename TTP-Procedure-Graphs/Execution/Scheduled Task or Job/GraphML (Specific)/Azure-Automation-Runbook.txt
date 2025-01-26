@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AzureAutomationRunbooks" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Automation Account Permissions</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Runbook in Automation Account</data>
+</node>
+<node id="D">
+<data key="label">Trigger Runbook to Execute Malicious Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen Azure credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to enumerate Automation Account configurations Corporate Control: Azure Resource Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual access to Azure services Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify automation accounts with elevated permissions Corporate Control: Azure IAM Roles</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on accounts linked to sensitive workloads Corporate Control: Azure Resource Groups</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized updates to automation configurations Corporate Control: Behavioral Analytics Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create Runbook to execute malicious script Corporate Control: Automation Runbooks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure Runbook mimics legitimate automation tasks Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for Runbook creation with suspicious scripts Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger Runbook execution to deploy malicious payload Corporate Control: Automation Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in Runbook execution patterns Corporate Control: Azure Security Center Alerts</data>
+</edge>
+</graph>
+</graphml>

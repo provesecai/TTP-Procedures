@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Startup Folders and Task Permissions]
+    C[Create Task to Execute on System Startup]
+    D[Trigger Execution via System Boot]
+
+    A -->|"Access gained via phishing delivering executable Corporate Control: Email Gateway"| B
+    A -->|"Deploy script to identify writable startup folders Corporate Control: Startup Folder Permissions"| B
+    A -->|"Monitor for unauthorized access to startup folders Corporate Control: Endpoint Detection Systems"| B
+    B -->|"Analyze Task Scheduler permissions for creating startup tasks Corporate Control: Task Scheduler Logs"| C
+    B -->|"Select writable locations for adding tasks Corporate Control: File System Logs"| C
+    B -->|"Monitor for new task creation attempts Corporate Control: Behavioral Monitoring"| C
+    C -->|"Create task scheduled for execution at system startup Corporate Control: Windows Task Registry"| D
+    C -->|"Ensure task is obfuscated to mimic legitimate processes Corporate Control: File Integrity Monitoring"| D
+    C -->|"Monitor task creation logs for suspicious entries Corporate Control: SIEM Systems"| D
+    C -->|"Task executes malicious payload during system startup Corporate Control: Task Scheduler Execution Logs"| D
+    C -->|"Monitor for anomalies in startup execution behaviors Corporate Control: Endpoint Monitoring Tools"| D

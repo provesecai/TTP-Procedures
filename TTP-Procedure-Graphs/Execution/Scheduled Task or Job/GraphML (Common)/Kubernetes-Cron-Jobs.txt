@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="KubernetesCronJobs" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Analyze Kubernetes Permissions for CronJob Creation</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Kubernetes CronJob</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Scheduled CronJob</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen Kubernetes API credentials Corporate Control: Kubernetes API Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to enumerate cluster roles and permissions Corporate Control: RBAC Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for excessive API requests to CronJob APIs Corporate Control: Kubernetes Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify service accounts with permissions to deploy CronJobs Corporate Control: Namespace RoleBindings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on permissions granting access to critical workloads Corporate Control: Kubernetes Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor namespace activities for unauthorized API calls Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malicious CronJob configured for periodic execution Corporate Control: CronJob YAML Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure CronJob configuration mimics legitimate workloads Corporate Control: Workload Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor CronJob creation for unusual resource consumption Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">CronJob executes malicious payload on the cluster Corporate Control: Kubernetes Scheduler Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in resource usage linked to CronJobs Corporate Control: Cluster Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

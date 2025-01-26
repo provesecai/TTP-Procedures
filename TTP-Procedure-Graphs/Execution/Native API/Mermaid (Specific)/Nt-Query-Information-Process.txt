@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Enumerate Processes Using NtQueryInformationProcess]
+    C[Identify High-Value Processes for Injection]
+    D[Perform Further Reconnaissance via Process Handles]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via stolen credentials Corporate Control: RDP Gateway"| B
+    A -->|"Deploy payload to query system for running processes Corporate Control: Process Activity Logs"| B
+    A -->|"Monitor for anomalous API calls related to process enumeration Corporate Control: Endpoint Monitoring Tools"| B
+    B -->|"Use NtQueryInformationProcess API to enumerate active processes Corporate Control: Windows Process API"| C
+    B -->|"Identify processes with elevated privileges or weak protections Corporate Control: Process Privileges"| C
+    B -->|"Monitor for unauthorized access to sensitive processes Corporate Control: EDR Logs"| C
+    C -->|"Select processes for potential injection or exploitation Corporate Control: Process Handle Permissions"| D
+    C -->|"Identify weak memory protections to prepare for payload injection Corporate Control: Target Memory Segments"| D
+    C -->|"Monitor system for API usage anomalies related to process handles Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Perform injection or other malicious actions via process handles Corporate Control: Process Memory"| E
+    D -->|"Ensure payload is obfuscated to bypass runtime detection Corporate Control: Endpoint Protection Systems"| E
+    D -->|"Detect anomalies in process behavior following injection Corporate Control: SIEM Logs"| E
+    E -->|"Payload execution grants attacker control over critical processes Corporate Control: Target Process Runtime"| D
+    E -->|"Monitor for execution patterns indicative of malicious activity Corporate Control: Endpoint Detection Tools"| D

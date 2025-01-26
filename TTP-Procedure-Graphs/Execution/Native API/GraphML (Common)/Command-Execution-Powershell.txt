@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CommandExecutionPowerShell" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Invoke PowerShell API to Execute Commands</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Commands via PowerShell</data>
+</node>
+<node id="D">
+<data key="label">Bypass Script Block Logging</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised RDP credentials Corporate Control: RDP Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy PowerShell script for initial enumeration Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized PowerShell usage Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use PowerShell APIs to execute administrative commands Corporate Control: PowerShell Runtime</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft commands to establish C2 connection or download payloads Corporate Control: Malicious Script Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for abnormal PowerShell invocations Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass PowerShell logging by obfuscating script content Corporate Control: Script Block Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script avoids detection by runtime analysis Corporate Control: Endpoint Behavioral Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious obfuscation techniques Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload via PowerShell, achieving attacker objectives Corporate Control: Script Execution Context</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor execution patterns for anomalies Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload execution grants attacker control Corporate Control: System Runtime Environment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in PowerShell activity Corporate Control: Behavioral Analytics</data>
+</edge>
+</graph>
+</graphml>

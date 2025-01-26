@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Target Registry Key for Manipulation]
+    C[Craft Malicious Value for Registry Key]
+    D[Modify Registry Key Using RegSetValueEx API]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via malicious attachment Corporate Control: Email Security Gateway"| B
+    A -->|"Perform reconnaissance to identify high-value registry keys Corporate Control: Registry Event Logs"| B
+    A -->|"Monitor for unusual registry access attempts Corporate Control: Endpoint Detection Systems"| B
+    B -->|"Analyze registry for keys linked to autostart or sensitive configurations Corporate Control: Windows Registry Configuration"| C
+    B -->|"Select keys used for execution control (e.g., Run, RunOnce) Corporate Control: Registry Tree Permissions"| C
+    B -->|"Monitor registry access patterns for anomalies Corporate Control: SIEM Monitoring"| C
+    C -->|"Craft malicious registry value pointing to attacker-controlled payload Corporate Control: Payload Path"| D
+    C -->|"Ensure payload bypasses detection by mimicking legitimate values Corporate Control: Registry Integrity Monitoring"| D
+    C -->|"Monitor registry modifications for unauthorized changes Corporate Control: File Integrity Monitoring (FIM)"| D
+    D -->|"Use RegSetValueEx API to inject payload into registry key Corporate Control: Windows API Call Monitoring"| E
+    D -->|"Trigger payload execution via autostart mechanism Corporate Control: Target Execution Context"| E
+    D -->|"Monitor for anomalies in registry-based execution Corporate Control: Endpoint Monitoring Tools"| E
+    E -->|"Payload successfully executed via modified registry key Corporate Control: System Runtime Environment"| D
+    E -->|"Detect anomalies in registry behavior Corporate Control: SIEM Alerts"| D

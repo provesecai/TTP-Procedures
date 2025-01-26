@@ -1,0 +1,18 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Jenkins Build Permissions]
+    C[Create Malicious Build Job in Jenkins]
+    D[Trigger Execution via Scheduled Build]
+
+    A -->|"Access gained via compromised credentials Corporate Control: Jenkins Server"| B
+    A -->|"Deploy reconnaissance script to enumerate Jenkins job permissions Corporate Control: Jenkins Configuration Logs"| B
+    A -->|"Monitor for unauthorized API access to Jenkins Corporate Control: Endpoint Protection Systems"| B
+    B -->|"Identify build jobs with writable configurations Corporate Control: Job Permissions Settings"| C
+    B -->|"Select high-privilege jobs or create new build jobs Corporate Control: Jenkins User Access Logs"| C
+    B -->|"Monitor for unauthorized changes to Jenkins configurations Corporate Control: SIEM Alerts"| C
+    C -->|"Create or modify build job to include malicious commands Corporate Control: Build Configuration Files"| D
+    C -->|"Ensure job appears legitimate to evade detection Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor job creation or updates for suspicious activity Corporate Control: Jenkins Audit Logs"| D
+    C-->|"Trigger scheduled build to execute malicious commands Corporate Control: Build Execution Logs"| D
+    C -->|"Monitor Jenkins build activity for anomalies Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Job executes commands, granting attacker control Corporate Control: Target Environment"| D

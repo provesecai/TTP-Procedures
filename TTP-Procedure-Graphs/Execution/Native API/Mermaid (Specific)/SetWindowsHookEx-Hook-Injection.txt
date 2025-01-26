@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Processes for Hook Injection]
+    C[Inject Malicious Hook into Target Process]
+    D[Trigger Hook to Execute Payload]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering a malicious macro Corporate Control: Email Security Gateway"| B
+    A -->|"Deploy reconnaissance script to identify processes with active user interaction Corporate Control: Windows Task Manager"| B
+    A -->|"Monitor for unauthorized access to Windows user processes Corporate Control: Endpoint Monitoring Tools"| B
+    B -->|"Use EnumWindows API to identify processes with GUI interaction Corporate Control: Windows Event Logs"| C
+    B -->|"Analyze processes capable of handling window messages Corporate Control: Process Privileges and Memory"| C
+    B -->|"Monitor for unauthorized enumeration of GUI-based processes Corporate Control: SIEM Logs"| C
+    C -->|"Inject hook using SetWindowsHookEx targeting message handlers Corporate Control: Hook Injection API"| D
+    C -->|"Ensure payload triggers during user interaction events Corporate Control: Windows Message Handling"| D
+    C -->|"Monitor for anomalies in hook injection API usage Corporate Control: Behavioral Monitoring Systems"| D
+    D -->|"Trigger malicious hook by simulating user input or window events Corporate Control: Target Application Runtime"| E
+    D -->|"Execute payload within the context of the hooked process Corporate Control: Target Process Memory"| E
+    D -->|"Monitor for anomalies in process execution flows Corporate Control: Endpoint Monitoring Tools"| E
+    E -->|"Payload successfully executes, granting attacker control Corporate Control: Application Execution Context"| D
+    E -->|"Detect hook-based anomalies through runtime monitoring Corporate Control: SIEM Systems"| D

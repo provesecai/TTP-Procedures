@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Automation Account Permissions]
+    C[Create Malicious Runbook in Automation Account]
+    D[Trigger Runbook to Execute Malicious Payload]
+
+    A -->|"Access gained via stolen Azure credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Deploy script to enumerate Automation Account configurations Corporate Control: Azure Resource Logs"| B
+    A -->|"Monitor for unusual access to Azure services Corporate Control: Azure Security Center"| B
+    B -->|"Identify automation accounts with elevated permissions Corporate Control: Azure IAM Roles"| C
+    B -->|"Focus on accounts linked to sensitive workloads Corporate Control: Azure Resource Groups"| C
+    B -->|"Monitor for unauthorized updates to automation configurations Corporate Control: Behavioral Analytics Tools"| C
+    C -->|"Create Runbook to execute malicious script Corporate Control: Automation Runbooks"| D
+    C -->|"Ensure Runbook mimics legitimate automation tasks Corporate Control: SIEM Systems"| D
+    C -->|"Monitor for Runbook creation with suspicious scripts Corporate Control: Azure Activity Logs"| D
+    C -->|"Trigger Runbook execution to deploy malicious payload Corporate Control: Automation Execution Logs"| D
+    C -->|"Detect anomalies in Runbook execution patterns Corporate Control: Azure Security Center Alerts"| D

@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ShellCommandExecutionCreateProcess" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare Malicious Command for Execution</data>
+</node>
+<node id="C">
+<data key="label">Call CreateProcess to Execute Command</data>
+</node>
+<node id="D">
+<data key="label">Command Executes in Target Environment</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through spear-phishing Corporate Control: Email Security Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy initial payload to analyze system environment Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized script execution Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Craft malicious command targeting sensitive processes Corporate Control: Command Line Parameters</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure command avoids detection through obfuscation Corporate Control: Anti-Malware Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual command-line parameters Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use CreateProcess API to execute crafted command Corporate Control: Windows API Layer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor API activity for process creation anomalies Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Command executes successfully, granting attacker control Corporate Control: Target System</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor for anomalous execution flows in process hierarchy Corporate Control: Behavioral Analytics</data>
+</edge>
+</graph>
+</graphml>

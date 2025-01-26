@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AWSEventBridgeAutomation" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Analyze EventBridge Rules and Permissions</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Event Rule</data>
+</node>
+<node id="D">
+<data key="label">Trigger Rule to Execute Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised AWS keys Corporate Control: AWS IAM Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy enumeration script to analyze EventBridge configurations Corporate Control: CloudTrail Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API requests targeting EventBridge Corporate Control: AWS Security Hub</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify roles with permissions to create or modify EventBridge rules Corporate Control: IAM Role Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on rules configured to trigger high-privilege functions Corporate Control: EventBridge Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for excessive API activity on EventBridge endpoints Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create malicious rule to invoke Lambda function or EC2 instance Corporate Control: EventBridge Rule Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure rule configuration mimics legitimate automation Corporate Control: CloudWatch Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized rule creation or updates Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger rule to execute malicious payload or modify resources Corporate Control: EventBridge Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in resource activity triggered by EventBridge Corporate Control: AWS Security Hub Alerts</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SystemInformationNativeAPI" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify System Resources Using APIs</data>
+</node>
+<node id="C">
+<data key="label">Gather Data on Processes, Users, and Network Configuration</data>
+</node>
+<node id="D">
+<data key="label">Leverage Information for Further Exploitation</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via drive-by download Corporate Control: Web Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance script targeting system APIs Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API enumeration Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use EnumProcesses and NetUserEnum APIs to gather system data Corporate Control: API Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify sensitive processes, users, and network configurations Corporate Control: Process and Network Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for excessive API calls on sensitive data Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze gathered data to determine high-value targets Corporate Control: Threat Intelligence Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare payloads based on discovered vulnerabilities Corporate Control: Exploit Development Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalous activity based on system enumeration Corporate Control: Behavioral Analytics</data>
+</edge>
+</graph>
+</graphml>

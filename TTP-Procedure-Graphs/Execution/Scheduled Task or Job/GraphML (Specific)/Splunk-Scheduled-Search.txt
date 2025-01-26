@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SplunkScheduledSearches" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Permissions for Splunk Scheduled Searches</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Search Query</data>
+</node>
+<node id="D">
+<data key="label">Trigger Search Query to Execute Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen admin credentials Corporate Control: Splunk Authentication Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to enumerate Splunk configurations and roles Corporate Control: Splunk Role Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual API calls or search activity Corporate Control: Splunk Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify roles with permissions to create or modify scheduled searches Corporate Control: Search Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on searches triggered by high-privilege users Corporate Control: Search Query Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes in scheduled search configurations Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create search query that includes malicious command execution Corporate Control: Query Configuration Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure query appears legitimate to evade detection Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor search query activity for suspicious inputs Corporate Control: Splunk Behavioral Analytics</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger search query to execute payload during its schedule Corporate Control: Search Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor search results for anomalies in output patterns Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

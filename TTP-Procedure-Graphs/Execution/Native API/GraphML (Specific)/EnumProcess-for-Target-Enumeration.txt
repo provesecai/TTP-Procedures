@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EnumProcessesTargetEnumeration" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Processes Using EnumProcesses</data>
+</node>
+<node id="C">
+<data key="label">Identify High-Value Processes for Injection</data>
+</node>
+<node id="D">
+<data key="label">Inject and Execute Payload in Target Process</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious attachment Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to enumerate active processes Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual API usage Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use EnumProcesses API to gather active process details Corporate Control: API Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify processes with elevated privileges Corporate Control: Process Privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized API access to process details Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Select high-value processes for payload injection Corporate Control: Process Tree Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare payload targeting identified process vulnerabilities Corporate Control: Exploit Development Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor injected processes for unauthorized activity Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Execute payload within targeted process Corporate Control: Process Runtime</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in process behavior post-injection Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

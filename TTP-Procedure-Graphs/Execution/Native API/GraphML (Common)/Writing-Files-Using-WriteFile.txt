@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WritingFilesWriteFileAPI" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Prepare Malicious Payload for Delivery</data>
+</node>
+<node id="C">
+<data key="label">Write Payload to Target File Using WriteFile</data>
+</node>
+<node id="D">
+<data key="label">Trigger Payload Execution via File Interaction</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained through phishing campaign Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze target directories for writable paths Corporate Control: File Access Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized file enumeration Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare malicious executable for deployment Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate payload to evade detection Corporate Control: Anti-Virus Scanning</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized file writes to sensitive directories Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Write payload to the target file location using WriteFile API Corporate Control: File Write Operations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure payload is executable in the target environment Corporate Control: File Permissions Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious write actions to critical paths Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger execution via user interaction or scheduled task Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor file interactions for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

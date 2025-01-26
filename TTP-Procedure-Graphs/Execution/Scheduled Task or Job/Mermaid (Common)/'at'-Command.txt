@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze Permissions for `at` Command]
+    C[Create Malicious Job Using `at` Command]
+    D[Trigger Execution via Scheduled Job]
+
+    A -->|"Access gained via drive-by download Corporate Control: Web Gateway"| B
+    A -->|"Deploy enumeration script to identify `at` command permissions Corporate Control: Task Manager Logs"| B
+    A -->|"Monitor for unusual command-line activities Corporate Control: SIEM Logs"| B
+    B -->|"Identify users authorized to schedule tasks via `at` command Corporate Control: Task Scheduling Logs"| C
+    B -->|"Select targets with writable permissions for task creation Corporate Control: File System Monitoring"| C
+    B -->|"Monitor task creation for anomalies Corporate Control: Endpoint Monitoring Tools"| C
+    C -->|"Use `at` command to schedule execution of malicious script Corporate Control: Scheduler Logs"| D
+    C -->|"Ensure script avoids detection through obfuscation Corporate Control: Endpoint Protection"| D
+    C -->|"Monitor for unauthorized task creation attempts Corporate Control: SIEM Systems"| D
+    C -->|"Task executes script as per scheduled time Corporate Control: Task Execution Logs"| D
+    C -->|"Monitor execution logs for unexpected behavior Corporate Control: Behavioral Analytics"| D

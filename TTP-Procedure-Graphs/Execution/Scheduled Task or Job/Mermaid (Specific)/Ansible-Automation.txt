@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Analyze Ansible Playbook Permissions]
+    C[Create Malicious Playbook for Automation]
+    D[Trigger Playbook to Execute Payload]
+
+    A -->|"Access gained via stolen admin SSH keys Corporate Control: Identity Management Logs"| B
+    A -->|"Deploy script to enumerate Ansible inventory and playbook configurations Corporate Control: Ansible Logs"| B
+    A -->|"Monitor for unusual access to Ansible inventory files Corporate Control: File Integrity Monitoring"| B
+    B -->|"Identify writable playbooks with high-privilege tasks Corporate Control: Ansible Configuration"| C
+    B -->|"Focus on tasks with permissions to execute commands on multiple nodes Corporate Control: Host Access Logs"| C
+    B -->|"Monitor for unauthorized changes to playbooks Corporate Control: SIEM Alerts"| C
+    C -->|"Create or modify playbook to include malicious commands Corporate Control: Playbook Configuration"| D
+    C -->|"Ensure playbook changes mimic legitimate configurations Corporate Control: Behavioral Analytics Tools"| D
+    C -->|"Monitor for playbook modifications with suspicious commands Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Execute playbook, deploying payload across nodes Corporate Control: Ansible Execution Logs"| D
+    C -->|"Detect anomalies in playbook execution or command output Corporate Control: Behavioral Analytics"| D

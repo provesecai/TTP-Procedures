@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Writable Systemd Timer Units]
+    C[Create Malicious Systemd Timer File]
+    D[Trigger Execution via Systemd Timer]
+
+    A -->|"Access gained via stolen credentials Corporate Control: Identity Provider"| B
+    A -->|"Deploy reconnaissance script to enumerate writable unit files Corporate Control: Linux File System Logs"| B
+    A -->|"Monitor for unauthorized enumeration of system files Corporate Control: Endpoint Monitoring Tools"| B
+    B -->|"Identify writable systemd timer files with elevated privileges Corporate Control: Systemd Configuration"| C
+    B -->|"Select timer units used for administrative tasks Corporate Control: Timer Logs"| C
+    B -->|"Monitor for unauthorized file access or modifications Corporate Control: File Integrity Monitoring"| C
+    C -->|"Create systemd timer to execute malicious commands Corporate Control: Timer Configuration"| D
+    C -->|"Ensure timer file avoids detection by mimicking legitimate tasks Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor for suspicious timer creation activity Corporate Control: SIEM Alerts"| D
+    C -->|"Timer triggers execution of malicious commands Corporate Control: Timer Execution Logs"| D
+    C -->|"Monitor execution logs for anomalies in systemd activity Corporate Control: Endpoint Detection Systems"| D

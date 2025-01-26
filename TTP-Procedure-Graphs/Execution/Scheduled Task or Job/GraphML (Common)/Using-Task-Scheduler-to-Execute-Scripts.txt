@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TaskSchedulerExecuteScripts" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Identify Task Scheduler Permissions</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious Task in Task Scheduler</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution via Scheduled Task</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering payload Corporate Control: Email Gateway</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy reconnaissance tool to gather user permissions Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual script execution attempts Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze Task Scheduler permissions for current user Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify tasks with elevated privileges available for modification Corporate Control: Task Scheduler Privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor task enumeration activity Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create task to execute malicious script during user inactivity Corporate Control: Scheduled Task Registry</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task obfuscates its purpose to evade detection Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task creation logs for unauthorized entries Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Task executes malicious script during scheduled time Corporate Control: Task Scheduler Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Monitor for anomalies in task execution Corporate Control: Behavioral Analytics Tools</data>
+</edge>
+</graph>
+</graphml>

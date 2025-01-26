@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ApacheAirflowDAGs" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Foothold Gained</data>
+</node>
+<node id="B">
+<data key="label">Analyze DAG Permissions in Airflow Environment</data>
+</node>
+<node id="C">
+<data key="label">Create Malicious DAG for Scheduled Execution</data>
+</node>
+<node id="D">
+<data key="label">Trigger DAG to Execute Payload</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via exposed Airflow web interface Corporate Control: Airflow Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy script to analyze DAG permissions and configurations Corporate Control: Airflow Metadata Database</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API calls to Airflow web service Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable DAGs with scheduled execution privileges Corporate Control: Airflow Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Focus on DAGs running on high-value nodes Corporate Control: Cluster Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to DAG definitions Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create DAG with tasks executing malicious commands Corporate Control: DAG Configuration Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DAG tasks mimic legitimate workloads Corporate Control: Cluster Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Airflow logs for suspicious DAG creation activities Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Trigger DAG execution to deploy malicious payload Corporate Control: Airflow Execution Logs</data>
+</edge>
+<edge source="D" target="D">
+<data key="label">Detect anomalies in DAG execution tasks Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

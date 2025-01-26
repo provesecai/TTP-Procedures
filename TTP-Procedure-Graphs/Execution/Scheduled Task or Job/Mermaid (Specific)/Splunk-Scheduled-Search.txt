@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Permissions for Splunk Scheduled Searches]
+    C[Create Malicious Search Query]
+    D[Trigger Search Query to Execute Payload]
+
+    A -->|"Access gained via stolen admin credentials Corporate Control: Splunk Authentication Logs"| B
+    A -->|"Deploy script to enumerate Splunk configurations and roles Corporate Control: Splunk Role Management"| B
+    A -->|"Monitor for unusual API calls or search activity Corporate Control: Splunk Audit Logs"| B
+    B -->|"Identify roles with permissions to create or modify scheduled searches Corporate Control: Search Permissions"| C
+    B -->|"Focus on searches triggered by high-privilege users Corporate Control: Search Query Logs"| C
+    B -->|"Monitor for unauthorized changes in scheduled search configurations Corporate Control: SIEM Systems"| C
+    C -->|"Create search query that includes malicious command execution Corporate Control: Query Configuration Files"| D
+    C -->|"Ensure query appears legitimate to evade detection Corporate Control: Endpoint Monitoring Tools"| D
+    C -->|"Monitor search query activity for suspicious inputs Corporate Control: Splunk Behavioral Analytics"| D
+    C -->|"Trigger search query to execute payload during its schedule Corporate Control: Search Execution Logs"| D
+    C -->|"Monitor search results for anomalies in output patterns Corporate Control: SIEM Alerts"| D

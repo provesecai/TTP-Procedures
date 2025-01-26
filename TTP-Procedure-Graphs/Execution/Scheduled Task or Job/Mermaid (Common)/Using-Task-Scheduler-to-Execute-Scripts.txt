@@ -1,0 +1,17 @@
+graph TD;
+    A[Initial Foothold Gained]
+    B[Identify Task Scheduler Permissions]
+    C[Create Malicious Task in Task Scheduler]
+    D[Trigger Execution via Scheduled Task]
+
+    A -->|"Access gained via phishing email delivering payload Corporate Control: Email Gateway"| B
+    A -->|"Deploy reconnaissance tool to gather user permissions Corporate Control: Endpoint Monitoring Logs"| B
+    A -->|"Monitor for unusual script execution attempts Corporate Control: SIEM Logs"| B
+    B -->|"Analyze Task Scheduler permissions for current user Corporate Control: Task Scheduler Configuration"| C
+    B -->|"Identify tasks with elevated privileges available for modification Corporate Control: Task Scheduler Privileges"| C
+    B -->|"Monitor for task enumeration activity Corporate Control: Endpoint Detection Systems"| C
+    C -->|"Create task to execute malicious script during user inactivity Corporate Control: Scheduled Task Registry"| D
+    C -->|"Ensure task obfuscates its purpose to evade detection Corporate Control: Endpoint Monitoring Systems"| D
+    C -->|"Monitor task creation logs for unauthorized entries Corporate Control: SIEM Alerts"| D
+    C -->|"Task executes malicious script during scheduled time Corporate Control: Task Scheduler Execution Logs"| D
+    C -->|"Monitor for anomalies in task execution Corporate Control: Behavioral Analytics Tools"| D
