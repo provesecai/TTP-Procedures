@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via compromised SSH credentials Corporate Control: SSH Logs"| B
+    A -->|"Enumerate shared object files (SO files) loaded by applications Corporate Control: Linux Audit Logs"| B
+    A -->|"Scan for writable SO files within the application environment Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unusual file enumeration or access Corporate Control: SIEM Alerts"| B
+    B -->|"Craft a malicious SO file with the same exports as the legitimate shared object Corporate Control: Development Environment"| C
+    B -->|"Validate compatibility with application runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Ensure obfuscation of malicious logic to avoid detection Corporate Control: Runtime Security Tools"| C
+    B -->|"Monitor for unauthorized edits to shared object files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace legitimate shared object files with the crafted malicious version Corporate Control: File System Monitoring"| D
+    C -->|"Verify permissions and access rights to avoid runtime errors Corporate Control: Linux Permissions Logs"| D
+    C -->|"Monitor for unexpected file replacements in application directories Corporate Control: Behavioral Monitoring"| D
+    D -->|"Trigger application to load the modified shared object file Corporate Control: Application Logs"| E
+    D -->|"Detect anomalies in application behavior during execution Corporate Control: Endpoint Detection Systems"| E
+    D -->|"Malicious code embedded in the SO file executes Corporate Control: Process Memory Logs"| E
+    D -->|"Monitor for unauthorized system calls or network activity Corporate Control: SIEM Systems"| E

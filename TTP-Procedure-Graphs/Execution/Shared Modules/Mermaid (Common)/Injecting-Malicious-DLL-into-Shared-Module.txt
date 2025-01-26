@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via phishing email containing macro-based payload Corporate Control: Email Security Gateway"| B
+    A -->|"Enumerate target applications and their shared module dependencies Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor for unauthorized script execution Corporate Control: SIEM Logs"| B
+    A -->|"Detect anomalies in system scanning activities Corporate Control: Behavioral Monitoring"| B
+    B -->|"Craft malicious DLL with identical name and exported functions as the legitimate shared module Corporate Control: Development Environment"| C
+    B -->|"Identify and test paths within the DLL search order of the target application Corporate Control: File System Permissions"| C
+    B -->|"Ensure malicious DLL bypasses runtime integrity checks Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Monitor for unauthorized modifications to DLLs Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious DLL to directories prioritized in the search order Corporate Control: Endpoint Monitoring Systems"| D
+    C -->|"Verify compatibility with the target application during execution Corporate Control: Application Logs"| D
+    C -->|"Monitor file creation events in sensitive directories Corporate Control: SIEM Alerts"| D
+    D -->|"Trigger application to load the malicious DLL during its runtime Corporate Control: Application Configuration"| E
+    D -->|"Detect anomalies in the application’s runtime behavior Corporate Control: Endpoint Protection Logs"| E
+    D -->|"Malicious DLL executes, delivering the intended payload Corporate Control: Application Execution Context"| E
+    D -->|"Monitor for unauthorized API calls originating from the application Corporate Control: Behavioral Analytics"| E

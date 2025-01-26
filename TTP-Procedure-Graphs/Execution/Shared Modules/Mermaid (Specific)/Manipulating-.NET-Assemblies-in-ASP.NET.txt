@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exploiting a misconfigured ASP.NET application Corporate Control: Web Application Firewall Logs"| B
+    A -->|"Enumerate .NET assemblies used by the target application Corporate Control: Application Dependency Files"| B
+    A -->|"Monitor for unauthorized access to .NET libraries Corporate Control: Endpoint Monitoring Tools"| B
+    A -->|"Detect anomalies in assembly loading Corporate Control: Behavioral Analytics"| B
+    B -->|"Inject malicious code into a trusted .NET assembly Corporate Control: Development Environment"| C
+    B -->|"Ensure compatibility with ASP.NET runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Obfuscate injected code to avoid triggering runtime exceptions Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Monitor for unauthorized modifications to assemblies Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified .NET assembly to application directories Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless integration with existing workflows Corporate Control: Test Environment Logs"| D
+    C -->|"Monitor for unusual changes to assembly files Corporate Control: SIEM Systems"| D
+    D -->|"Trigger application execution to load the modified assembly Corporate Control: Application Execution Logs"| E
+    D -->|"Detect anomalies in application behavior during runtime Corporate Control: Behavioral Monitoring"| E
+    D -->|"Payload executes via the modified .NET assembly Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized API calls from the ASP.NET runtime Corporate Control: SIEM Alerts"| E

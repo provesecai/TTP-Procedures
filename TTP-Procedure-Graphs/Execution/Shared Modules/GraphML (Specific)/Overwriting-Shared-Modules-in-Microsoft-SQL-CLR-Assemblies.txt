@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="OverwritingSharedModulesInMicrosoftSQLCLRAssemblies" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via weak SQL authentication Corporate Control: SQL Server Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate CLR assemblies used in the SQL Server Corporate Control: Database Schema Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable assembly files Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized enumeration activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify the CLR assembly to include malicious logic Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with the SQL Server runtime Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate the malicious logic to evade detection Corporate Control: Runtime Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to CLR assemblies Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified CLR assembly to the SQL Server Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate integration of the assembly with the database Corporate Control: Application Test Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies during SQL query execution Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger SQL queries to execute malicious CLR logic Corporate Control: SQL Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in query behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes as part of CLR assembly logic Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized API calls or network traffic Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

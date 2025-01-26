@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via compromised admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate installed Chocolatey packages and repositories Corporate Control: Package Manager Logs"| B
+    A -->|"Identify writable package repositories Corporate Control: Repository Access Permissions"| B
+    A -->|"Monitor for unauthorized package management activities Corporate Control: SIEM Alerts"| B
+    B -->|"Inject malicious payloads into Chocolatey packages Corporate Control: Development Tools"| C
+    B -->|"Embed scripts or binaries in package install commands Corporate Control: Package Configuration Logs"| C
+    B -->|"Test compatibility of modified packages with endpoint environments Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to Chocolatey packages Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified packages to target endpoints Corporate Control: Deployment Logs"| D
+    C -->|"Validate package execution in target environments Corporate Control: Endpoint Monitoring Systems"| D
+    C -->|"Monitor for anomalies during package deployment Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Trigger package installation to execute embedded payload Corporate Control: Installation Logs"| E
+    D -->|"Detect deviations in endpoint behavior during package execution Corporate Control: Execution Logs"| E
+    D -->|"Payload executes successfully as part of package deployment Corporate Control: Process Logs"| E
+    D -->|"Monitor for unauthorized outbound network activity Corporate Control: Network Monitoring Systems"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingGroupPolicyForMaliciousSoftwareDeployment" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via compromised admin credentials Corporate Control: Active Directory Login Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate accessible Group Policy Objects (GPOs) using 'gpresult' Corporate Control: GPO Access Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for excessive enumeration activities targeting GPOs Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable GPOs by analyzing ACLs Corporate Control: Active Directory Permissions Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify startup scripts or scheduled tasks within GPOs to include malicious logic Corporate Control: Group Policy Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed obfuscated PowerShell scripts for stealth Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of malicious scripts with deployed systems Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized GPO modifications Corporate Control: File Integrity Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy the modified GPO to selected endpoints via Active Directory push Corporate Control: GPO Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure changes propagate without triggering endpoint defenses Corporate Control: Endpoint Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in endpoint behavior after policy application Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger execution of the modified GPO scripts upon system reboot Corporate Control: System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect runtime deviations in PowerShell execution Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious payload executes successfully as part of GPO logic Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious outbound network connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

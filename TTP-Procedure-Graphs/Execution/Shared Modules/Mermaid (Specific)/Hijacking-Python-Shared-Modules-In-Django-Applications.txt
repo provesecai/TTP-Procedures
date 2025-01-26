@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via misconfigured Django admin interface Corporate Control: Web Server Logs"| B
+    A -->|"Enumerate Python packages used by the Django application Corporate Control: Application Dependency Files"| B
+    A -->|"Monitor for unauthorized access to the Python environment Corporate Control: Endpoint Monitoring Tools"| B
+    A -->|"Detect unusual package installation activities Corporate Control: SIEM Systems"| B
+    B -->|"Create a malicious Python package with the same module name as a legitimate package Corporate Control: Development Environment"| C
+    B -->|"Validate compatibility of the malicious package with Django runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Ensure payload avoids triggering runtime exceptions Corporate Control: Behavioral Analytics"| C
+    B -->|"Monitor for package tampering in the virtual environment Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace the legitimate package with the crafted malicious module in the virtual environment Corporate Control: File System Logs"| D
+    C -->|"Ensure proper metadata to mimic the original package Corporate Control: Package Metadata Files"| D
+    C -->|"Monitor for anomalies in package modification activities Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Trigger Django application execution to load the malicious module Corporate Control: Application Logs"| E
+    D -->|"Monitor runtime for deviations in module behavior Corporate Control: SIEM Alerts"| E
+    D -->|"Malicious module executes as part of the Django application Corporate Control: Execution Logs"| E
+    D -->|"Detect unexpected API calls originating from the Django runtime Corporate Control: Endpoint Detection Systems"| E

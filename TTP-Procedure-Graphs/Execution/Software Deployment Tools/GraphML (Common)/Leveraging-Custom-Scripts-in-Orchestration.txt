@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingCustomScriptsInOrchestrationTools" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via stolen orchestration credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate custom scripts and associated workflows Corporate Control: Orchestration Configuration Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable script files for modification Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to script repositories Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing scripts to include malicious logic Corporate Control: Script Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed obfuscated payloads into task definitions Corporate Control: Development Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of modified scripts with workflows Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to orchestration configurations Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified scripts to workflows Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task execution integrates seamlessly Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor anomalies in resource usage during execution Corporate Control: System Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger workflows to execute modified scripts Corporate Control: Workflow Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect runtime deviations during task execution Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via orchestration tasks Corporate Control: Process Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound traffic Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

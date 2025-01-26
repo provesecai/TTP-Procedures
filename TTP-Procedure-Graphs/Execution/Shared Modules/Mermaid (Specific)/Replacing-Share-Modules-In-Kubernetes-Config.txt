@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via compromised Kubernetes API credentials Corporate Control: API Gateway Logs"| B
+    A -->|"Enumerate shared libraries and modules used in Kubernetes pods Corporate Control: Pod Configuration Files"| B
+    A -->|"Monitor for unauthorized scans of Kubernetes resources Corporate Control: Kubernetes Audit Logs"| B
+    A -->|"Detect anomalies in cluster activity Corporate Control: SIEM Systems"| B
+    B -->|"Craft malicious modules compatible with Kubernetes container environments Corporate Control: Development Tools"| C
+    B -->|"Inject module paths into pod configurations Corporate Control: Pod Spec Files"| C
+    B -->|"Ensure modules bypass container runtime integrity checks Corporate Control: Endpoint Security Tools"| C
+    B -->|"Monitor for unauthorized edits to Kubernetes configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious modules to replace legitimate ones in containers Corporate Control: Container Registry Logs"| D
+    C -->|"Rebuild and redeploy Kubernetes pods Corporate Control: Orchestration Logs"| D
+    C -->|"Monitor for unauthorized pod deployments Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger Kubernetes pod to execute malicious modules Corporate Control: Pod Execution Logs"| E
+    D -->|"Detect runtime anomalies in container behavior Corporate Control: Kubernetes Security Tools"| E
+    D -->|"Payload executes via malicious shared modules in Kubernetes pods Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unexpected network traffic originating from pods Corporate Control: SIEM Systems"| E

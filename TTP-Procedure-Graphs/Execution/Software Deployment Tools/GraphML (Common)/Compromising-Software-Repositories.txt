@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CompromisingSoftwareRepositories" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen admin credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate software repositories and associated configurations Corporate Control: Repository Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable repositories or deployment pipelines Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized repository access Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious updates into the software repository Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads into source code or precompiled binaries Corporate Control: Repository Commit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test malicious updates for compatibility with target environments Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to repository files Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified updates to target systems via repository pull Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure updates propagate without detection Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor resource usage anomalies during update deployment Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger automatic updates to deploy malicious payloads Corporate Control: Update Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in application behavior post-update Corporate Control: Application Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via update mechanism Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized network traffic Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ReplacingSharedModulesInKubernetesConfigurations" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via exposed Kubernetes API Corporate Control: API Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate shared modules in Kubernetes ConfigMaps Corporate Control: Configuration Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable ConfigMaps Corporate Control: Kubernetes Role Bindings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual Kubernetes API activity Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious logic into a shared module defined in ConfigMaps Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure compatibility with Kubernetes runtime Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate payload to avoid detection Corporate Control: Runtime Security Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to ConfigMaps Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified ConfigMaps to Kubernetes cluster Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate integration with existing pods Corporate Control: Application Test Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected Kubernetes resource consumption Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger Kubernetes pods to load the malicious ConfigMaps Corporate Control: Kubernetes Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in pod runtime behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes as part of Kubernetes workflows Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized network activity originating from pods Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

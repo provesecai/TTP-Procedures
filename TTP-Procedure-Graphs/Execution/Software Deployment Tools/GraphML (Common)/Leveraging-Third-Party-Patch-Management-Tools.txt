@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingThirdPartyPatchManagementTools" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via exploited credentials for patch tools Corporate Control: Identity Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate patch configurations and schedules Corporate Control: Patch Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable repositories or update configurations Corporate Control: Repository Access Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized patch configuration modifications Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify patch configurations to include malicious updates Corporate Control: Patch Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed obfuscated payloads into update packages Corporate Control: Development Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of malicious updates Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to patch files Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malicious patches to endpoints Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate seamless execution of malicious updates Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected resource usage Corporate Control: Patch Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger automated patch updates to execute malicious payloads Corporate Control: Patch Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in endpoint behavior post-patch Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully as part of patch updates Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized network activity originating from endpoints Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

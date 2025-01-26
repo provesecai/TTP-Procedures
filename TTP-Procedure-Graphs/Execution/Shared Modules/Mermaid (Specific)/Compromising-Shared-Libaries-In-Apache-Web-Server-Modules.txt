@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exploiting an insecure Apache module Corporate Control: Web Server Logs"| B
+    A -->|"Enumerate shared libraries loaded by Apache modules Corporate Control: Apache Configuration Files"| B
+    A -->|"Monitor for unauthorized access to Apache directories Corporate Control: SIEM Logs"| B
+    A -->|"Detect anomalies in server activity Corporate Control: Behavioral Monitoring"| B
+    B -->|"Craft malicious shared library with identical exports as legitimate modules Corporate Control: Development Environment"| C
+    B -->|"Ensure compatibility with Apache’s runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Obfuscate malicious code to bypass runtime integrity checks Corporate Control: Endpoint Detection Tools"| C
+    B -->|"Monitor for unauthorized modifications in module files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace legitimate Apache module with malicious shared library Corporate Control: File System Logs"| D
+    C -->|"Validate configuration changes align with Apache runtime Corporate Control: Web Server Logs"| D
+    C -->|"Monitor for unauthorized library changes Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger Apache restart to load malicious module Corporate Control: Apache Error Logs"| E
+    D -->|"Monitor for deviations in Apache runtime behavior Corporate Control: Endpoint Security Systems"| E
+    D -->|"Payload executes within the malicious module’s context Corporate Control: Execution Logs"| E
+    D -->|"Detect unexpected outbound network activity from Apache Corporate Control: SIEM Systems"| E

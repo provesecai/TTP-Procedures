@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via malicious document delivering PowerShell payload Corporate Control: Email Security Logs"| B
+    A -->|"Enumerate MSI packages used in software deployments Corporate Control: Application Inventory Logs"| B
+    A -->|"Identify writable MSI packages for modification Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized access to MSI repositories Corporate Control: SIEM Alerts"| B
+    B -->|"Modify an MSI package to include malicious scripts Corporate Control: MSI Repository Logs"| C
+    B -->|"Embed payloads into custom actions within the MSI Corporate Control: Development Tools"| C
+    B -->|"Test compatibility of modified MSI with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to MSI packages Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified MSI to target systems via deployment tools Corporate Control: Deployment Logs"| D
+    C -->|"Validate silent execution of the modified MSI Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Monitor for anomalies during MSI installation Corporate Control: Installation Logs"| D
+    D -->|"Trigger execution of malicious custom actions during MSI installation Corporate Control: MSI Execution Logs"| E
+    D -->|"Detect deviations in system behavior post-installation Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully via MSI logic Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized API calls or outbound traffic Corporate Control: Network Monitoring Tools"| E

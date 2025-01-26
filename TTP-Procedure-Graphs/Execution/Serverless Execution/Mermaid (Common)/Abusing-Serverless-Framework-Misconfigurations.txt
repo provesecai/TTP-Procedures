@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via stolen credentials or compromised API keys Corporate Control: Identity Management Logs"| B
+    A -->|"Scan for serverless deployments with weak or misconfigured permissions Corporate Control: Serverless Framework Configurations"| B
+    A -->|"Monitor for unauthorized API calls to serverless deployment configurations Corporate Control: SIEM Logs"| B
+    A -->|"Detect anomalies in API activity Corporate Control: Behavioral Analytics"| B
+    B -->|"Modify deployment configuration to include malicious scripts Corporate Control: Deployment Files"| C
+    B -->|"Identify weak IAM roles assigned to serverless resources Corporate Control: Resource Role Bindings"| C
+    B -->|"Ensure malicious code mimics legitimate serverless functions Corporate Control: Endpoint Detection Systems"| C
+    B -->|"Monitor for unauthorized changes in serverless configurations Corporate Control: Audit Logs"| C
+    C -->|"Deploy payload via deployment pipeline or CI/CD integration Corporate Control: CI/CD Pipeline Configurations"| D
+    C -->|"Obfuscate payload to bypass runtime detection Corporate Control: Endpoint Protection Tools"| D
+    C -->|"Monitor for unauthorized resource creation Corporate Control: Cloud Monitoring Tools"| D
+    D -->|"Trigger execution of malicious serverless function Corporate Control: Event Triggers"| E
+    D -->|"Monitor for unexpected runtime activity Corporate Control: Function Execution Logs"| E
+    D -->|"Payload successfully executed within serverless environment Corporate Control: Cloud Security Command Center"| E

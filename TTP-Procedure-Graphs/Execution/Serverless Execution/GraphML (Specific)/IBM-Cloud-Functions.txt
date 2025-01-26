@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="IBMCloudFunctionsForPayloadExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Post Access Preparation</data>
+</node>
+<node id="C">
+<data key="label">Payload Delivery</data>
+</node>
+<node id="D">
+<data key="label">Pre Execution Setup</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised API credentials Corporate Control: IBM Cloud Activity Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate available IBM Cloud Functions Corporate Control: IBM Cloud Resource Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for excessive API calls targeting functions Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized access to function configurations Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify function code to include malicious payload Corporate Control: Function Source Code Repository</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate payload alignment with function triggers (e.g., HTTP, Pub/Sub) Corporate Control: Event Triggers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate payload to evade detection Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to function code Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified function to IBM Cloud Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate function workflows to ensure seamless execution Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor resource consumption for unexpected spikes Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger function execution to deploy the payload Corporate Control: Function Invocation Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect runtime anomalies in execution behavior Corporate Control: IBM Cloud Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executes in function environment Corporate Control: Execution Logs</data>
+</edge>
+</graph>
+</graphml>

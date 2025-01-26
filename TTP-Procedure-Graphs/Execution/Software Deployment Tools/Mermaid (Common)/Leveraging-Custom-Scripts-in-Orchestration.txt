@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via stolen credentials for orchestration tool Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate custom scripts and task definitions Corporate Control: Configuration Logs"| B
+    A -->|"Identify writable script files for modification Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized access to script repositories Corporate Control: SIEM Alerts"| B
+    B -->|"Modify existing scripts to include malicious logic Corporate Control: Script Repository Logs"| C
+    B -->|"Embed obfuscated payloads into task definitions Corporate Control: Development Environment"| C
+    B -->|"Test compatibility of modified scripts with orchestration workflows Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to orchestration configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified scripts to target workflows Corporate Control: Deployment Logs"| D
+    C -->|"Ensure task execution integrates seamlessly into workflows Corporate Control: Behavioral Monitoring Tools"| D
+    C -->|"Monitor resource usage anomalies during task execution Corporate Control: System Monitoring Logs"| D
+    D -->|"Trigger workflows to execute modified scripts Corporate Control: Workflow Execution Logs"| E
+    D -->|"Detect deviations in runtime behavior of orchestrated tasks Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully via orchestration tasks Corporate Control: Process Logs"| E
+    D -->|"Monitor for unauthorized network activity from orchestrated systems Corporate Control: SIEM Systems"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via exposed Chef management server Corporate Control: SIEM Alerts"| B
+    A -->|"Enumerate existing Chef recipes and cookbooks Corporate Control: Chef Configuration Files"| B
+    A -->|"Identify writable recipes targeting critical nodes Corporate Control: Role and Environment Permissions"| B
+    A -->|"Monitor for unauthorized access to Chef configurations Corporate Control: Endpoint Protection Logs"| B
+    B -->|"Modify a Chef recipe to include malicious scripts Corporate Control: Recipe Repository Logs"| C
+    B -->|"Embed obfuscated payloads compatible with target environments Corporate Control: Development Tools"| C
+    B -->|"Test compatibility of modified recipes with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to Chef cookbooks Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified recipes to nodes using Chef client Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless execution of malicious tasks in workflows Corporate Control: Task Execution Logs"| D
+    C -->|"Monitor for anomalies in node behavior after deployment Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Trigger Chef client runs to execute malicious tasks Corporate Control: Client Execution Logs"| E
+    D -->|"Detect deviations in runtime behavior during task execution Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully as part of Chef client workflows Corporate Control: Process Logs"| E
+    D -->|"Monitor for unauthorized network activity originating from nodes Corporate Control: SIEM Systems"| E

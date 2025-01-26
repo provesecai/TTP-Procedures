@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exposed CI/CD pipeline tokens Corporate Control: CI/CD Logs"| B
+    A -->|"Enumerate pipeline stages and permissions Corporate Control: Pipeline Configuration Files"| B
+    A -->|"Monitor for unauthorized access to CI/CD pipelines Corporate Control: SIEM Systems"| B
+    A -->|"Detect anomalies in pipeline activity Corporate Control: Behavioral Analytics"| B
+    B -->|"Inject malicious steps into pipeline configuration Corporate Control: Build Scripts"| C
+    B -->|"Ensure malicious logic mimics legitimate build tasks Corporate Control: Code Review Logs"| C
+    B -->|"Set triggers such as repository commits Corporate Control: CI/CD Webhooks"| C
+    B -->|"Monitor for changes to pipeline configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy payload via automated build tasks Corporate Control: Build Artifacts Logs"| D
+    C -->|"Ensure payload obfuscation for stealth Corporate Control: Endpoint Protection Tools"| D
+    C -->|"Monitor pipeline execution for anomalies Corporate Control: Pipeline Logs"| D
+    D -->|"Trigger execution of malicious build tasks Corporate Control: CI/CD Execution Logs"| E
+    D -->|"Detect runtime anomalies in build task execution Corporate Control: Security Tools"| E
+   

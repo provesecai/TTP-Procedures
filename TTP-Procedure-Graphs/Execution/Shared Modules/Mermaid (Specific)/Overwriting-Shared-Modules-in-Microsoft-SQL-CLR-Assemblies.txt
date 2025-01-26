@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via SQL injection vulnerability Corporate Control: Database Activity Logs"| B
+    A -->|"Enumerate CLR assemblies used in SQL Server database procedures Corporate Control: SQL Server Configuration Files"| B
+    A -->|"Monitor for unauthorized access to assembly storage Corporate Control: SIEM Alerts"| B
+    A -->|"Detect anomalies in database access activity Corporate Control: Behavioral Analytics"| B
+    B -->|"Craft malicious CLR assembly mimicking legitimate database procedures Corporate Control: Development Environment"| C
+    B -->|"Ensure compatibility with SQL Server runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Obfuscate malicious logic to bypass runtime checks Corporate Control: Endpoint Protection Tools"| C
+    B -->|"Monitor for unauthorized modifications to assembly storage Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace legitimate CLR assemblies with malicious ones Corporate Control: SQL Server Logs"| D
+    C -->|"Ensure metadata matches legitimate assemblies Corporate Control: Assembly Metadata Files"| D
+    C -->|"Monitor for anomalies in assembly deployment Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Execute database procedures that load the malicious assembly Corporate Control: Database Execution Logs"| E
+    D -->|"Detect runtime deviations in database behavior Corporate Control: SIEM Systems"| E
+    D -->|"Payload successfully executes via malicious CLR assembly Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unexpected API calls originating from the database Corporate Control: Endpoint Monitoring"| E

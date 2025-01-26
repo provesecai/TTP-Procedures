@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exposed Docker container image Corporate Control: Container Registry Logs"| B
+    A -->|"Enumerate container images for misconfigurations Corporate Control: Container Configuration Logs"| B
+    A -->|"Monitor for unauthorized access to container registries Corporate Control: SIEM Logs"| B
+    A -->|"Detect unusual activity in container environments Corporate Control: Behavioral Monitoring"| B
+    B -->|"Inject malicious code into container images used in serverless workflows Corporate Control: Container Base Images"| C
+    B -->|"Ensure malicious logic integrates seamlessly into existing workflows Corporate Control: Build Configurations"| C
+    B -->|"Monitor for changes in container configurations Corporate Control: Endpoint Monitoring Tools"| C
+    B -->|"Focus on containers linked to automated workflows Corporate Control: Workflow Configurations"| C
+    C -->|"Deploy modified container to serverless runtime Corporate Control: Deployment Logs"| D
+    C -->|"Ensure payload evades detection during runtime Corporate Control: Runtime Protection Systems"| D
+    C -->|"Monitor for unauthorized container deployments Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger execution of serverless workflow using modified container Corporate Control: Workflow Execution Logs"| E
+    D -->|"Monitor runtime behaviors for anomalies Corporate Control: Cloud Monitoring Tools"| E
+    D -->|"Payload successfully executed Corporate Control: Execution Logs"| E

@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exposed API keys Corporate Control: Netlify Audit Logs"| B
+    A -->|"Identify writable Netlify functions in deployments Corporate Control: Function Deployment Configurations"| B
+    A -->|"Monitor for excessive API requests targeting functions Corporate Control: Netlify Security Tools"| B
+    A -->|"Detect unusual access patterns in deployment configurations Corporate Control: Behavioral Analytics"| B
+    B -->|"Inject backdoor logic into function source code Corporate Control: Function Repository"| C
+    B -->|"Ensure backdoor integrates with legitimate function behavior Corporate Control: File Integrity Monitoring"| C
+    B -->|"Set triggers such as HTTP endpoints Corporate Control: Event Triggers"| C
+    B -->|"Monitor for unauthorized script changes Corporate Control: SIEM Systems"| C
+    C -->|"Deploy modified function to production Corporate Control: Netlify Deployment Logs"| D
+    C -->|"Obfuscate payload to evade detection Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Monitor for unauthorized deployments or updates Corporate Control: Netlify Monitoring Tools"| D
+    D -->|"Trigger function execution via HTTP requests Corporate Control: Netlify Invocation Logs"| E
+    D -->|"Detect anomalies in runtime behavior Corporate Control: Cloud Security Monitoring"| E
+    D -->|"Backdoor successfully deployed and accessible Corporate Control: Event Logs"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via exploited credentials for third-party patch tools Corporate Control: Identity Logs"| B
+    A -->|"Enumerate patch configurations and schedules Corporate Control: Patch Management System Logs"| B
+    A -->|"Identify writable patch repositories or update configurations Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized patch configuration modifications Corporate Control: SIEM Systems"| B
+    B -->|"Modify patch configurations to include malicious updates Corporate Control: Patch Repository Logs"| C
+    B -->|"Embed obfuscated payloads into update packages Corporate Control: Development Environment Logs"| C
+    B -->|"Test compatibility of malicious updates with target environments Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to patch files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified patches to managed endpoints Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless execution of malicious updates during patching Corporate Control: Behavioral Monitoring Tools"| D
+    C -->|"Monitor resource usage anomalies during patch deployments Corporate Control: Patch System Logs"| D
+    D -->|"Trigger automatic patch updates to execute malicious tasks Corporate Control: Endpoint Patch Logs"| E
+    D -->|"Detect deviations in endpoint behavior post-patch installation Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes as part of the patch update process Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized network traffic originating from patched systems Corporate Control: SIEM Systems"| E

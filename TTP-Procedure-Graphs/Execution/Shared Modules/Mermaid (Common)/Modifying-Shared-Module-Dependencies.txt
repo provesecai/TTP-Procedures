@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via stolen credentials from a phishing campaign Corporate Control: Email Security Gateway"| B
+    A -->|"Analyze dependencies of target applications Corporate Control: Dependency Graph Logs"| B
+    A -->|"Monitor for unauthorized enumeration activities Corporate Control: Behavioral Analytics"| B
+    A -->|"Detect anomalies in file access patterns Corporate Control: SIEM Alerts"| B
+    B -->|"Craft malicious modules with matching dependency signatures Corporate Control: Development Tools"| C
+    B -->|"Inject module paths into application configurations Corporate Control: Application Dependency Files"| C
+    B -->|"Ensure modified dependencies bypass runtime integrity checks Corporate Control: Endpoint Security Tools"| C
+    B -->|"Monitor for unauthorized changes to dependency files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified modules to overwrite existing dependencies Corporate Control: Deployment Logs"| D
+    C -->|"Validate module compatibility with the target application Corporate Control: Test Environment Logs"| D
+    C -->|"Monitor for unusual resource usage linked to module replacements Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger application execution with modified dependencies Corporate Control: Application Logs"| E
+    D -->|"Detect runtime anomalies during module initialization Corporate Control: Endpoint Protection Systems"| E
+    D -->|"Payload executes within the modified module context Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unexpected API calls originating from the application Corporate Control: SIEM Systems"| E

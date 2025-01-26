@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DeployingPayloadsViaChocolateyPackageManager" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via compromised admin credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate installed Chocolatey packages and repositories Corporate Control: Package Manager Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable package repositories Corporate Control: Repository Access Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized package management activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious payloads into Chocolatey packages Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed scripts or binaries in package install commands Corporate Control: Package Configuration Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of modified packages with endpoint environments Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to Chocolatey packages Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified packages to target endpoints Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate package execution in target environments Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies during package deployment Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger package installation to execute embedded payload Corporate Control: Installation Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in endpoint behavior during package execution Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully as part of package deployment Corporate Control: Process Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound network activity Corporate Control: Network Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

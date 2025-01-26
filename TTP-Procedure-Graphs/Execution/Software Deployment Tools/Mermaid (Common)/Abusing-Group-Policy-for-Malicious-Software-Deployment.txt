@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via compromised admin credentials Corporate Control: Active Directory Login Logs"| B
+    A -->|"Enumerate accessible Group Policy Objects (GPOs) using 'gpresult' Corporate Control: GPO Access Audit Logs"| B
+    A -->|"Monitor for excessive enumeration activities targeting GPOs Corporate Control: SIEM Alerts"| B
+    A -->|"Identify writable GPOs by analyzing ACLs Corporate Control: Active Directory Permissions Logs"| B
+    B -->|"Modify startup scripts or scheduled tasks within GPOs to include malicious logic Corporate Control: Group Policy Management Logs"| C
+    B -->|"Embed obfuscated PowerShell scripts for stealth Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test compatibility of malicious scripts with deployed systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized GPO modifications Corporate Control: File Integrity Monitoring Systems"| C
+    C -->|"Deploy the modified GPO to selected endpoints via Active Directory push Corporate Control: GPO Deployment Logs"| D
+    C -->|"Ensure changes propagate without triggering endpoint defenses Corporate Control: Endpoint Security Logs"| D
+    C -->|"Monitor for anomalies in endpoint behavior after policy application Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger execution of the modified GPO scripts upon system reboot Corporate Control: System Logs"| E
+    D -->|"Detect runtime deviations in PowerShell execution Corporate Control: SIEM Systems"| E
+    D -->|"Malicious payload executes successfully as part of GPO logic Corporate Control: Execution Logs"| E
+    D -->|"Monitor for suspicious outbound network connections Corporate Control: Network Monitoring Tools"| E

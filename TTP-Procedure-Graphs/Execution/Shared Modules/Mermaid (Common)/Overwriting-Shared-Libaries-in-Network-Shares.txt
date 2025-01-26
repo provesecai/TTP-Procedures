@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via lateral movement through misconfigured SMB shares Corporate Control: SMB Audit Logs"| B
+    A -->|"Enumerate shared libraries hosted on network shares Corporate Control: File System Logs"| B
+    A -->|"Scan for writable network directories Corporate Control: Endpoint Detection Logs"| B
+    A -->|"Monitor for unauthorized enumeration of network shares Corporate Control: SIEM Systems"| B
+    B -->|"Craft malicious shared libraries with identical export functions Corporate Control: Development Environment"| C
+    B -->|"Test compatibility with dependent applications Corporate Control: Test Environment Logs"| C
+    B -->|"Ensure obfuscation to avoid runtime detection Corporate Control: Endpoint Protection Tools"| C
+    B -->|"Monitor for unauthorized file modifications on shared libraries Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious libraries to writable network shares Corporate Control: File System Logs"| D
+    C -->|"Ensure permissions match original library to avoid detection Corporate Control: Network Share Permissions"| D
+    C -->|"Monitor for anomalies in file write activities Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger application execution to load the malicious library Corporate Control: Application Logs"| E
+    D -->|"Detect deviations in application behavior at runtime Corporate Control: Endpoint Protection Systems"| E
+    D -->|"Payload successfully executes as part of the shared library Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized network traffic originating from the application Corporate Control: SIEM Systems"| E

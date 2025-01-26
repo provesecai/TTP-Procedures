@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exposed container management API Corporate Control: Container Management Logs"| B
+    A -->|"Enumerate shared libraries loaded by containerized applications Corporate Control: Container File System Logs"| B
+    A -->|"Identify writable library paths within container images Corporate Control: Container Configuration Logs"| B
+    A -->|"Monitor for unauthorized file enumeration within containers Corporate Control: Behavioral Analytics"| B
+    B -->|"Craft malicious shared libraries matching expected dependencies Corporate Control: Development Environment"| C
+    B -->|"Validate compatibility with the container runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Ensure malicious logic avoids detection during runtime Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Monitor for unauthorized changes to containerized libraries Corporate Control: SIEM Systems"| C
+    C -->|"Inject malicious libraries into writable paths within container images Corporate Control: Container Registry Logs"| D
+    C -->|"Rebuild and deploy modified container images Corporate Control: Deployment Logs"| D
+    C -->|"Monitor for anomalies in container image modifications Corporate Control: Container Security Tools"| D
+    D -->|"Trigger execution of the containerized application Corporate Control: Container Orchestration Logs"| E
+    D -->|"Detect runtime anomalies in container behavior Corporate Control: Cloud Monitoring Systems"| E
+    D -->|"Payload successfully executes as part of containerized shared libraries Corporate Control: Container Logs"| E
+    D -->|"Monitor for unauthorized API calls originating from the container Corporate Control: Behavioral Analytics"| E

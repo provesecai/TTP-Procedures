@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via weak Docker registry credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate Docker containers and deployment configurations Corporate Control: Docker Registry Logs"| B
+    A -->|"Identify writable container images or deployment scripts Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized access to container resources Corporate Control: SIEM Alerts"| B
+    B -->|"Inject malicious scripts or binaries into Docker container images Corporate Control: Development Tools"| C
+    B -->|"Embed payloads into Dockerfile RUN commands Corporate Control: Container Build Logs"| C
+    B -->|"Test compatibility of modified images with target environments Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to container configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified images to Docker hosts Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless integration of malicious tasks during container builds Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor resource anomalies during container runtime Corporate Control: Docker Monitoring Tools"| D
+    D -->|"Trigger container execution to deploy malicious payload Corporate Control: Container Logs"| E
+    D -->|"Detect deviations in container behavior during runtime Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes as part of container operations Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized outbound network activity Corporate Control: Network Monitoring Systems"| E

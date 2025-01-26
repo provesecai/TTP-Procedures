@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via compromised local credentials Corporate Control: Identity Provider Logs"| B
+    A -->|"Identify applications using redirection of Dynamic Link Libraries (DLLs) Corporate Control: Application Configuration Files"| B
+    A -->|"Monitor for unauthorized access to DLL directories Corporate Control: Endpoint Monitoring Logs"| B
+    A -->|"Detect anomalies in file access or process enumeration Corporate Control: SIEM Systems"| B
+    B -->|"Craft a malicious DLL with export functions matching legitimate libraries Corporate Control: Development Environment"| C
+    B -->|"Modify application redirection configurations (e.g., app paths or manifests) Corporate Control: Application Configurations"| C
+    B -->|"Ensure redirection logic avoids triggering runtime protections Corporate Control: Behavioral Monitoring"| C
+    B -->|"Monitor for changes in application configuration files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious DLL in directories prioritized by the redirection settings Corporate Control: Endpoint Detection Logs"| D
+    C -->|"Verify application loads the malicious DLL seamlessly Corporate Control: Application Execution Logs"| D
+    C -->|"Monitor for unexpected DLL loads during application startup Corporate Control: SIEM Logs"| D
+    D -->|"Trigger application execution to load the redirected DLL Corporate Control: User Process Logs"| E
+    D -->|"Detect runtime anomalies in application behavior Corporate Control: Behavioral Analytics"| E
+    D -->|"Payload successfully executes through the redirected DLL Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized memory allocations within the process Corporate Control: Endpoint Protection Systems"| E

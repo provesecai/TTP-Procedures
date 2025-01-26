@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via phishing delivering exploit script Corporate Control: Email Gateway"| B
+    A -->|"Enumerate runtime linkers (e.g., ld.so) used by the target application Corporate Control: Linux Audit Logs"| B
+    A -->|"Identify applications relying on runtime linkers for shared module loading Corporate Control: Application Configuration"| B
+    A -->|"Monitor for unauthorized system scanning activities Corporate Control: SIEM Alerts"| B
+    B -->|"Craft a malicious shared module designed to load through runtime linkers Corporate Control: Development Tools"| C
+    B -->|"Inject module paths into linker configuration (e.g., LD_PRELOAD) Corporate Control: Linker Configuration Logs"| C
+    B -->|"Test payload for compatibility with runtime execution Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to linker configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious shared module to target application directories Corporate Control: File System Logs"| D
+    C -->|"Ensure module placement aligns with runtime linker search paths Corporate Control: System Permissions Logs"| D
+    C -->|"Monitor for suspicious file modifications Corporate Control: Endpoint Monitoring Tools"| D
+    D -->|"Trigger application to execute with the modified linker configurations Corporate Control: Application Logs"| E
+    D -->|"Detect deviations in runtime linker behavior Corporate Control: Behavioral Monitoring Systems"| E
+    D -->|"Payload executes as part of the linked shared module Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unexpected network activity originating from the application Corporate Control: SIEM Systems"| E

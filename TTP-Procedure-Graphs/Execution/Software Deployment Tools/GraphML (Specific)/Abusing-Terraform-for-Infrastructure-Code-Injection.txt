@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingTerraformForInfrastructureCodeInjection" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via compromised Terraform workspace credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate existing Terraform configurations Corporate Control: Terraform State Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable configuration files targeting cloud resources Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to Terraform configurations Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Terraform configurations to include malicious scripts Corporate Control: Configuration Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payload into Terraform templates (e.g., provisioners) Corporate Control: Development Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of modified templates with cloud resources Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to Terraform files Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified Terraform configurations to cloud environments Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate seamless integration of malicious tasks into workflows Corporate Control: Cloud Resource Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected cloud resource usage Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger Terraform apply to execute malicious tasks Corporate Control: Terraform Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in resource creation behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully as part of Terraform deployment Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound traffic from cloud resources Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

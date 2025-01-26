@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via compromised repository admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate software repositories and active deployment configurations Corporate Control: Repository Logs"| B
+    A -->|"Identify writable repositories or deployment pipelines Corporate Control: Permissions Logs"| B
+    A -->|"Monitor for unauthorized repository access Corporate Control: SIEM Alerts"| B
+    B -->|"Inject malicious updates into the software repository Corporate Control: Development Tools"| C
+    B -->|"Embed payloads into source code or pre-compiled binaries Corporate Control: Repository Logs"| C
+    B -->|"Test malicious updates for compatibility with target environments Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to repository files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified updates to target systems via repository pull Corporate Control: Deployment Logs"| D
+    C -->|"Ensure updates propagate without detection Corporate Control: Behavioral Analytics"| D
+    C -->|"Monitor resource usage anomalies during update deployment Corporate Control: Endpoint Monitoring Systems"| D
+    D -->|"Trigger automatic updates to deploy malicious payloads Corporate Control: Update Logs"| E
+    D -->|"Detect deviations in application behavior post-update Corporate Control: Application Monitoring Systems"| E
+    D -->|"Payload executes successfully via update mechanism Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized API calls or network activity Corporate Control: Network Monitoring Tools"| E

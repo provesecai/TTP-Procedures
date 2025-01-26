@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via stolen Puppet admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate Puppet manifests and associated node configurations Corporate Control: Puppet Configuration Files"| B
+    A -->|"Monitor for unauthorized access to Puppet environments Corporate Control: SIEM Alerts"| B
+    A -->|"Identify writable manifest files targeting critical systems Corporate Control: File System Permissions"| B
+    B -->|"Modify Puppet manifest to include malicious tasks Corporate Control: Manifest Repositories"| C
+    B -->|"Embed obfuscated shell commands or script references Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Test compatibility of modified manifest with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized modifications to manifest files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified manifest to Puppet agents Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless integration of tasks into Puppet workflows Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Monitor for unusual resource consumption during deployment Corporate Control: SIEM Systems"| D
+    D -->|"Trigger Puppet agent runs to execute malicious tasks Corporate Control: Agent Execution Logs"| E
+    D -->|"Detect runtime deviations in Puppet agent behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully as part of Puppet agent logic Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized outbound connections originating from agents Corporate Control: Network Monitoring Tools"| E

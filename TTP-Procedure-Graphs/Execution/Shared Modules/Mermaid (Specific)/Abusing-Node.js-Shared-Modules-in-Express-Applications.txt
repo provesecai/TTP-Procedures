@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exploiting a vulnerable Express API endpoint Corporate Control: API Gateway Logs"| B
+    A -->|"Enumerate shared modules in the Node.js project Corporate Control: Package.json Files"| B
+    A -->|"Monitor for unauthorized access to project files Corporate Control: SIEM Alerts"| B
+    A -->|"Detect anomalies in npm installation activities Corporate Control: Behavioral Analytics"| B
+    B -->|"Craft a malicious Node.js module mimicking a legitimate dependency Corporate Control: Development Environment"| C
+    B -->|"Validate malicious module’s compatibility with the Express runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Ensure malicious logic avoids triggering runtime exceptions Corporate Control: Endpoint Detection Systems"| C
+    B -->|"Monitor for unauthorized modifications to package dependencies Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace legitimate module with the crafted malicious module in the project Corporate Control: File System Logs"| D
+    C -->|"Ensure metadata mimics the original module Corporate Control: npm Registry Logs"| D
+    C -->|"Monitor for anomalies in dependency updates Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger Express application execution to load the malicious module Corporate Control: Application Logs"| E
+    D -->|"Monitor runtime for unexpected behaviors Corporate Control: SIEM Systems"| E
+    D -->|"Malicious module executes as part of the Express application Corporate Control: Execution Logs"| E
+    D -->|"Detect unauthorized network activity from the Node.js runtime Corporate Control: Behavioral Monitoring"| E

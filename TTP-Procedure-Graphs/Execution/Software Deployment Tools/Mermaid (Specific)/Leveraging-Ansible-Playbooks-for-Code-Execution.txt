@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via compromised Ansible admin account Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate existing playbooks and host inventories Corporate Control: Ansible Configuration Logs"| B
+    A -->|"Monitor for unauthorized access to Ansible management nodes Corporate Control: SIEM Systems"| B
+    A -->|"Identify playbooks deployed to high-value systems Corporate Control: Ansible Task Logs"| B
+    B -->|"Modify an existing playbook to include malicious tasks Corporate Control: Playbook Repository Logs"| C
+    B -->|"Embed obfuscated shell commands for payload execution Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test compatibility of malicious playbook with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to playbooks Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified playbook to target systems using 'ansible-playbook' Corporate Control: Deployment Logs"| D
+    C -->|"Ensure execution of tasks mimics legitimate workflows Corporate Control: Task Scheduling Logs"| D
+    C -->|"Monitor for unusual resource usage during playbook execution Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger execution of malicious playbook tasks on target systems Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior during task execution Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully via Ansible playbook logic Corporate Control: Process Logs"| E
+    D -->|"Monitor for unauthorized network traffic originating from target systems Corporate Control: SIEM Systems"| E

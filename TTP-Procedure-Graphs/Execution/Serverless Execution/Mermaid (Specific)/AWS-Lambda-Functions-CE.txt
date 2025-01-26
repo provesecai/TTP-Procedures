@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Compromised AWS IAM credentials provide access Corporate Control: AWS Identity Access Management"| B
+    A -->|"Enumerate Lambda functions to identify writable or misconfigured functions Corporate Control: AWS Lambda Configurations"| B
+    A -->|"Monitor for unauthorized API calls to Lambda endpoints Corporate Control: AWS CloudTrail Logs"| B
+    A -->|"Detect anomalies in AWS account activity Corporate Control: AWS Security Hub"| B
+    B -->|"Modify or create Lambda function to include malicious commands Corporate Control: Lambda Function Source Code"| C
+    B -->|"Validate function triggers (e.g., API Gateway, S3) to align with execution Corporate Control: Event Triggers"| C
+    B -->|"Ensure payload mimics legitimate Lambda activities Corporate Control: Behavioral Monitoring"| C
+    B -->|"Monitor changes to function code or permissions Corporate Control: AWS Config Rules"| C
+    C -->|"Deliver malicious payload via S3 bucket or API Gateway Corporate Control: AWS Event Sources"| D
+    C -->|"Payload is obfuscated to bypass runtime security tools Corporate Control: Lambda Execution Environment"| D
+    C -->|"Monitor for unauthorized uploads or API activity Corporate Control: SIEM Alerts"| D
+    D -->|"Trigger function via event to execute payload Corporate Control: AWS Lambda Scheduler"| E
+    D -->|"Monitor function runtime for anomalies Corporate Control: AWS Lambda Execution Logs"| E
+    D -->|"Payload successfully executed via compromised Lambda function Corporate Control: Event Processing Logs"| E

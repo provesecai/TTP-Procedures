@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingWindowsAdminCenterExtensions" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised Windows Admin Center credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate installed extensions and deployment configurations Corporate Control: Admin Center Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable extension directories Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to extension files Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify an extension to include malicious scripts Corporate Control: Extension Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payload into extension update files Corporate Control: Development Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of malicious extensions with Admin Center workflows Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to extensions Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified extensions to Admin Center Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate seamless integration of malicious tasks in workflows Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for resource usage anomalies during extension deployment Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger Admin Center workflows to execute malicious extensions Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in workflow behavior post-deployment Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes as part of Admin Center extension logic Corporate Control: Process Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound network activity Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via exposed SAP management interface Corporate Control: SAP Audit Logs"| B
+    A -->|"Enumerate shared libraries loaded by SAP modules Corporate Control: SAP Configuration Files"| B
+    A -->|"Monitor for unauthorized access to SAP directories Corporate Control: SIEM Alerts"| B
+    A -->|"Detect anomalies in SAP module activity Corporate Control: Behavioral Monitoring"| B
+    B -->|"Craft malicious shared library mimicking legitimate SAP dependencies Corporate Control: Development Tools"| C
+    B -->|"Test compatibility with SAP runtime Corporate Control: Test Environment Logs"| C
+    B -->|"Obfuscate malicious code to evade runtime checks Corporate Control: Endpoint Detection Tools"| C
+    B -->|"Monitor for unauthorized changes to SAP libraries Corporate Control: File Integrity Monitoring"| C
+    C -->|"Replace legitimate SAP library files with malicious versions Corporate Control: Deployment Logs"| D
+    C -->|"Ensure proper integration with SAP workflows Corporate Control: SAP Module Logs"| D
+    C -->|"Monitor for unusual library modifications Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger execution of SAP processes to load malicious libraries Corporate Control: SAP Execution Logs"| E
+    D -->|"Detect deviations in SAP runtime behavior Corporate Control: Endpoint Security Tools"| E
+    D -->|"Payload executes within SAP context via malicious libraries Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unexpected network activity originating from SAP Corporate Control: SIEM Systems"| E

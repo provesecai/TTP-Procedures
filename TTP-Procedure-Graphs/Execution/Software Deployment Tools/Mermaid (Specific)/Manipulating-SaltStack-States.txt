@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via exposed Salt Master API Corporate Control: API Gateway Logs"| B
+    A -->|"Enumerate Salt states and associated configurations Corporate Control: SaltStack State Files"| B
+    A -->|"Identify writable states targeting minions Corporate Control: SaltStack Access Control Logs"| B
+    A -->|"Monitor for unauthorized access to Salt configurations Corporate Control: SIEM Alerts"| B
+    B -->|"Modify Salt states to include malicious commands Corporate Control: State Repository Logs"| C
+    B -->|"Embed obfuscated scripts for stealth Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Test compatibility of modified states with target minions Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to state files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified states to target minions via Salt Master Corporate Control: Deployment Logs"| D
+    C -->|"Validate integration of malicious states into Salt workflows Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Monitor for anomalies during state application Corporate Control: SaltStack Job Logs"| D
+    D -->|"Trigger Salt minion execution of the modified states Corporate Control: Minion Logs"| E
+    D -->|"Detect deviations in minion behavior during execution Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully on target systems Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized outbound network activity originating from minions Corporate Control: Network Monitoring Tools"| E

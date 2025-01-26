@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingServerlessFrameworkMisconfigurations" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Post Access Preparation</data>
+</node>
+<node id="C">
+<data key="label">Payload Delivery</data>
+</node>
+<node id="D">
+<data key="label">Pre Execution Setup</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen credentials or compromised API keys Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for serverless deployments with weak or misconfigured permissions Corporate Control: Serverless Framework Configurations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API calls to serverless deployment configurations Corporate Control: SIEM Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in API activity Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify deployment configuration to include malicious scripts Corporate Control: Deployment Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify weak IAM roles assigned to serverless resources Corporate Control: Resource Role Bindings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code mimics legitimate serverless functions Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes in serverless configurations Corporate Control: Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy payload via deployment pipeline or CI/CD integration Corporate Control: CI/CD Pipeline Configurations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate payload to bypass runtime detection Corporate Control: Endpoint Protection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized resource creation Corporate Control: Cloud Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger execution of malicious serverless function Corporate Control: Event Triggers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected runtime activity Corporate Control: Function Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executed Corporate Control: Cloud Security Command Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access obtained via compromised Terraform workspace credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate existing Terraform configurations Corporate Control: Terraform State Files"| B
+    A -->|"Identify writable configuration files targeting cloud resources Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized access to Terraform configurations Corporate Control: SIEM Systems"| B
+    B -->|"Modify Terraform configurations to include malicious scripts Corporate Control: Configuration Repository Logs"| C
+    B -->|"Embed payload into Terraform templates (e.g., provisioners) Corporate Control: Development Tools"| C
+    B -->|"Test compatibility of modified templates with cloud resources Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to Terraform files Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified Terraform configurations to cloud environments Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless integration of malicious tasks into workflows Corporate Control: Cloud Resource Logs"| D
+    C -->|"Monitor for unexpected cloud resource usage Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger Terraform apply to execute malicious tasks Corporate Control: Terraform Execution Logs"| E
+    D -->|"Detect deviations in resource creation behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes successfully as part of Terraform deployment Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized outbound traffic from cloud resources Corporate Control: SIEM Systems"| E

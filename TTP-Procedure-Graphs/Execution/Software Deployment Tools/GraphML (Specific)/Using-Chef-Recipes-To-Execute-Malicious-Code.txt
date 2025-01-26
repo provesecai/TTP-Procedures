@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UsingChefRecipesToExecuteMaliciousCode" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access obtained via exposed Chef management server Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate Chef recipes and cookbooks Corporate Control: Chef Configuration Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable recipes targeting critical nodes Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to Chef configurations Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify an existing recipe to include malicious scripts Corporate Control: Recipe Repository Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed obfuscated payloads for task execution Corporate Control: Development Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test compatibility of modified recipes with target environments Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized modifications to Chef cookbooks Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy modified recipes to target nodes Corporate Control: Deployment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate seamless execution of malicious tasks Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies during recipe execution Corporate Control: Chef Client Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger Chef client runs to execute malicious tasks Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully as part of Chef workflows Corporate Control: Process Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

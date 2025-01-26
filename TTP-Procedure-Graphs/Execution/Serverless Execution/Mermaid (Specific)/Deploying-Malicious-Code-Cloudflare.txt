@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via API token theft or misconfigured permissions Corporate Control: API Gateway Logs"| B
+    A -->|"Scan Cloudflare Workers for writable configurations Corporate Control: Worker Scripts"| B
+    A -->|"Monitor for unauthorized API calls to Cloudflare endpoints Corporate Control: Cloudflare Audit Logs"| B
+    A -->|"Detect anomalies in worker activity Corporate Control: SIEM Systems"| B
+    B -->|"Inject malicious script into worker configurations Corporate Control: Worker Configuration Files"| C
+    B -->|"Modify worker routes to redirect or deliver payloads Corporate Control: Cloudflare Route Management"| C
+    B -->|"Ensure scripts mimic legitimate worker logic Corporate Control: Behavioral Analytics"| C
+    B -->|"Monitor for unauthorized script updates Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy payload via modified worker or redirect Corporate Control: Worker Deployment Logs"| D
+    C -->|"Ensure obfuscation to evade detection Corporate Control: Runtime Protection Tools"| D
+    C -->|"Monitor for unauthorized modifications in worker files Corporate Control: Cloudflare Security Center"| D
+    D -->|"Trigger worker execution by routing traffic Corporate Control: Worker Invocation Logs"| E
+    D -->|"Detect anomalies in worker runtime behaviors Corporate Control: Cloudflare Monitoring"| E
+    D -->|"Payload successfully deployed and executed Corporate Control: Worker Execution Logs"| E

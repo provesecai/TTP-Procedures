@@ -1,0 +1,22 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via compromised Windows Admin Center credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate installed extensions and deployment configurations Corporate Control: Admin Center Audit Logs"| B
+    A -->|"Identify writable extension directories Corporate Control: File System Permissions"| B
+    A -->|"Monitor for unauthorized access to extension files Corporate Control: SIEM Alerts"| B
+    B -->|"Modify an extension to include malicious scripts Corporate Control: Extension Repository Logs"| C
+    B -->|"Embed payload into extension update files Corporate Control: Development Environment"| C
+    B -->|"Test compatibility of malicious extensions with Admin Center workflows Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized modifications to extensions Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy modified extensions to Admin Center Corporate Control: Deployment Logs"| D
+    C -->|"Validate seamless integration of malicious tasks in workflows Corporate Control: Application Logs"| D
+    C -->|"Monitor for resource usage anomalies during extension deployment Corporate Control: Behavioral Monitoring Systems"| D
+    D -->|"Trigger Admin Center workflows to execute malicious extensions Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in workflow behavior post-deployment Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Payload executes as part of Admin Center extension logic Corporate Control: Process Logs"| E
+    D -->|"Monitor for unauthorized outbound network activity Corporate Control: SIEM Systems"| E

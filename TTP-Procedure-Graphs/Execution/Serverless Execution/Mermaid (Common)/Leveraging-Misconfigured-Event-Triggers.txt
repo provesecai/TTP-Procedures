@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via stolen credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Scan for serverless triggers linked to high-value workflows Corporate Control: Event Trigger Logs"| B
+    A -->|"Monitor for unauthorized access to event triggers Corporate Control: SIEM Alerts"| B
+    A -->|"Detect anomalies in event activity Corporate Control: Behavioral Monitoring"| B
+    B -->|"Modify existing triggers or create new ones for malicious workflows Corporate Control: Trigger Configurations"| C
+    B -->|"Focus on high-privilege triggers linked to data processing Corporate Control: Cloud Security Logs"| C
+    B -->|"Ensure malicious triggers mimic legitimate automation Corporate Control: Endpoint Protection Tools"| C
+    B -->|"Monitor for changes in event trigger configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Deploy malicious payload linked to modified triggers Corporate Control: Payload Deployment Logs"| D
+    C -->|"Ensure payload evades detection Corporate Control: Runtime Security Systems"| D
+    C -->|"Monitor for unauthorized resource creation Corporate Control: SIEM Logs"| D
+    D -->|"Trigger serverless function using event-driven trigger Corporate Control: Trigger Execution Logs"| E
+    D -->|"Detect anomalies in event execution Corporate Control: Behavioral Analytics"| E
+    D -->|"Payload successfully executed Corporate Control: Execution Logs"| E

@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Stolen Azure AD credentials allow access to Azure resources Corporate Control: Azure Active Directory Logs"| B
+    A -->|"Enumerate Azure Functions for writable endpoints Corporate Control: Azure Resource Manager"| B
+    A -->|"Monitor for excessive API requests targeting Function Apps Corporate Control: Azure Security Center"| B
+    A -->|"Detect unusual access patterns in Azure AD Corporate Control: SIEM Alerts"| B
+    B -->|"Modify function code to include malicious script Corporate Control: Azure Function App Code Repository"| C
+    B -->|"Set up triggers (e.g., HTTP requests, Blob storage events) Corporate Control: Azure Event Triggers"| C
+    B -->|"Ensure payload avoids detection by obfuscating script content Corporate Control: Endpoint Protection Tools"| C
+    B -->|"Monitor for unauthorized code changes in Function Apps Corporate Control: Azure Monitor"| C
+    C -->|"Deliver payload to Blob Storage or via HTTP POST Corporate Control: Azure Resource Storage Logs"| D
+    C -->|"Payload integrates into existing workflows Corporate Control: Azure Logic Apps"| D
+    C -->|"Monitor for unexpected resource consumption in Function Apps Corporate Control: Behavioral Analytics"| D
+    D -->|"Trigger Azure Function using predefined or manipulated events Corporate Control: Azure Function Scheduler"| E
+    D -->|"Monitor for anomalies in runtime execution Corporate Control: Azure Security Insights"| E
+    D -->|"Payload successfully deployed via Azure Function Corporate Control: Resource Activity Logs"| E

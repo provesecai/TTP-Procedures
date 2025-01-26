@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EmbeddingMaliciousCodeIntoTrustedSharedLibraries" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">InitialAccess</data>
+</node>
+<node id="B">
+<data key="label">PostAccessPreparation</data>
+</node>
+<node id="C">
+<data key="label">PayloadDelivery</data>
+</node>
+<node id="D">
+<data key="label">PreExecutionSetup</data>
+</node>
+<node id="E">
+<data key="label">ExecutionAchieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via spear-phishing attack delivering an exploit document Corporate Control: Email Security Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify shared libraries used by trusted software in the environment Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan file system for writable shared libraries Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suspicious enumeration activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into the source of a shared library Corporate Control: Development Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compile the modified library ensuring compatibility with dependent applications Corporate Control: Build Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test library with benign payload to validate successful injection Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to shared libraries Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy the modified shared library to replace the legitimate one Corporate Control: File System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the replacement goes unnoticed by matching metadata and signatures Corporate Control: Application Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual changes to library metadata Corporate Control: Endpoint Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger application to load the modified shared library Corporate Control: Application Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in the application’s behavior during execution Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malicious code executes as part of the library’s functionality Corporate Control: Process Memory Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unexpected API calls or network activity Corporate Control: SIEM Alerts</data>
+</edge>
+</graph>
+</graphml>

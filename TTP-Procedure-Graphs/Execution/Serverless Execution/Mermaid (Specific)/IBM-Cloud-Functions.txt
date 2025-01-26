@@ -1,0 +1,21 @@
+graph TD;
+    A[InitialAccess]
+    B[PostAccessPreparation]
+    C[PayloadDelivery]
+    D[PreExecutionSetup]
+    E[ExecutionAchieved]
+
+    A -->|"Access gained via API key compromise Corporate Control: IBM Cloud IAM Logs"| B
+    A -->|"Enumerate writable functions in IBM Cloud Functions Corporate Control: Function Configuration Logs"| B
+    A -->|"Monitor for unusual access to function APIs Corporate Control: IBM Cloud Logging"| B
+    A -->|"Detect anomalies in account activity Corporate Control: Behavioral Analytics"| B
+    B -->|"Modify existing functions or create new ones with malicious payload Corporate Control: Function Source Code"| C
+    B -->|"Set triggers such as HTTP POST requests Corporate Control: IBM Cloud Event Triggers"| C
+    B -->|"Ensure malicious script mimics legitimate function logic Corporate Control: Endpoint Protection Tools"| C
+    B -->|"Monitor for unauthorized updates to function configurations Corporate Control: SIEM Systems"| C
+    C -->|"Deploy payload to object storage or HTTP endpoints Corporate Control: Storage Logs"| D
+    C -->|"Obfuscate script to avoid detection Corporate Control: Runtime Security Tools"| D
+    C -->|"Monitor for unauthorized uploads or executions Corporate Control: Cloud Monitoring Tools"| D
+    D -->|"Trigger function execution via predefined triggers Corporate Control: Function Invocation Logs"| E
+    D -->|"Detect runtime anomalies in function behavior Corporate Control: IBM Cloud Monitoring"| E
+    D -->|"Payload successfully executed via IBM Cloud Functions Corporate Control: Execution Logs"| E

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AWSLambdaFunctionsCommandExecution" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Post Access Preparation</data>
+</node>
+<node id="C">
+<data key="label">Payload Delivery</data>
+</node>
+<node id="D">
+<data key="label">Pre Execution Setup</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Compromised AWS IAM credentials provide access Corporate Control: AWS Identity Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate Lambda functions to identify writable or misconfigured functions Corporate Control: AWS Lambda Configurations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized API calls to Lambda endpoints Corporate Control: AWS CloudTrail Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in AWS account activity Corporate Control: AWS Security Hub</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify or create Lambda function to include malicious commands Corporate Control: Lambda Function Source Code</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate function triggers (e.g., API Gateway, S3) to align with execution Corporate Control: Event Triggers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload mimics legitimate Lambda activities Corporate Control: Behavioral Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor changes to function code or permissions Corporate Control: AWS Config Rules</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deliver malicious payload via S3 bucket or API Gateway Corporate Control: AWS Event Sources</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload is obfuscated to bypass runtime security tools Corporate Control: Lambda Execution Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized uploads or API activity Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger function via event to execute payload Corporate Control: AWS Lambda Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor function runtime for anomalies Corporate Control: AWS Lambda Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload successfully executed via compromised Lambda function Corporate Control: Event Processing Logs</data>
+</edge>
+</graph>
+</graphml>
