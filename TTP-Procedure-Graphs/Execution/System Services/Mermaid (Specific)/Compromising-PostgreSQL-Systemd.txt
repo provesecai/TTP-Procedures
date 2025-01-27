@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[PostgreSQL Service Discovery]
+    C[Systemd Service Modification]
+    D[Service Restart]
+    E[Execution Achieved]
+
+    A -->|"Access gained via brute-forced admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate PostgreSQL configurations and systemd services Corporate Control: PostgreSQL Logs"| B
+    A -->|"Identify writable service files for modification Corporate Control: File Permissions Logs"| B
+    A -->|"Monitor unauthorized enumeration of PostgreSQL systemd services Corporate Control: SIEM Systems"| B
+    B -->|"Modify postgresql.service file to include payload commands Corporate Control: File Integrity Monitoring"| C
+    B -->|"Embed obfuscated malicious scripts into ExecStart property Corporate Control: Development Tools"| C
+    B -->|"Test the modified systemd configuration for target compatibility Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized modifications to systemd files Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Restart PostgreSQL service to execute the payload Corporate Control: Systemd Logs"| D
+    C -->|"Monitor anomalies during service restart Corporate Control: Endpoint Monitoring Logs"| D
+    C -->|"Log unauthorized service activity Corporate Control: Process Monitoring Systems"| D
+    D -->|"Payload executes successfully via PostgreSQL startup process Corporate Control: Execution Logs"| E
+    D -->|"Detect unauthorized runtime behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound network activity Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activity for forensic analysis Corporate Control: SIEM Systems"| E

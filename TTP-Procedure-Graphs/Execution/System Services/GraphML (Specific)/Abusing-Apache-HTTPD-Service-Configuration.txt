@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingApacheHTTPDServiceConfiguration" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Apache Service Discovery</data>
+</node>
+<node id="C">
+<data key="label">Configuration Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised SSH credentials Corporate Control: SSH Access Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate Apache HTTPD configurations in /etc/httpd/conf Corporate Control: File System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable configuration files Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to Apache configuration directories Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify httpd.conf to include malicious payload execution Corporate Control: File Integrity Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed payload commands in startup scripts or virtual host configurations Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test the modified configuration file for target compatibility Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to configuration files Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart Apache service to trigger the malicious configuration Corporate Control: Apache Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies during service restart Corporate Control: Process Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized service activities Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via the Apache HTTPD process Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

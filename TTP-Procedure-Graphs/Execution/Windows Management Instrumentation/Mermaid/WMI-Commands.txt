@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Prepare WMI Environment]
+    C[Script Deployment]
+    D[WMI Method Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via stolen domain credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate accessible WMI namespaces and classes Corporate Control: WMI Logs"| B
+    A -->|"Identify writable namespaces for script injection Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized WMI access attempts Corporate Control: SIEM Alerts"| B
+    B -->|"Deploy malicious script to a target WMI namespace Corporate Control: File Integrity Monitoring"| C
+    B -->|"Embed obfuscated payload within the WMI class or method Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test script compatibility with target WMI methods Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized script modifications Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Invoke malicious WMI method to execute script Corporate Control: Execution Logs"| D
+    C -->|"Monitor for anomalies during WMI method invocation Corporate Control: WMI Logs"| D
+    C -->|"Log unauthorized script execution attempts Corporate Control: Endpoint Monitoring Systems"| D
+    D -->|"Payload executes successfully via WMI Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Logs"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

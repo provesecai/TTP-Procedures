@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[System Pod Discovery]
+    C[Pod Configuration Modification]
+    D[Payload Deployment and Pod Restart]
+    E[Execution Achieved]
+
+    A -->|"Access gained via stolen Kubernetes admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate system pods using 'kubectl get pods -n kube-system' Corporate Control: Kubernetes Audit Logs"| B
+    A -->|"Identify writable pod configurations or containers Corporate Control: RBAC Logs"| B
+    A -->|"Monitor unauthorized access to system pods Corporate Control: SIEM Alerts"| B
+    B -->|"Modify pod YAML files to include malicious container or commands Corporate Control: Configuration Repository Logs"| C
+    B -->|"Embed obfuscated scripts or binaries into the pod's init containers Corporate Control: Development Environment Logs"| C
+    B -->|"Test the modified pod configurations in a staging environment Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized modifications to pod configurations Corporate Control: File Integrity Monitoring"| C
+    C -->|"Redeploy or restart the modified pod using 'kubectl apply' Corporate Control: Deployment Logs"| D
+    C -->|"Validate the successful redeployment of the pod Corporate Control: Kubernetes Controller Logs"| D
+    C -->|"Monitor for anomalies during pod startup Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Payload executes as part of the modified system pod Corporate Control: Process Logs"| E
+    D -->|"Detect deviations in pod runtime behavior Corporate Control: Kubernetes Audit Logs"| E
+    D -->|"Monitor unauthorized outbound traffic originating from pods Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log all malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

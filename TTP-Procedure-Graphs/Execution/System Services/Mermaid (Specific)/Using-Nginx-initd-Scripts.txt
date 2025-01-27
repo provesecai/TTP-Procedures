@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Service Script Discovery]
+    C[Script Modification]
+    D[Script Trigger]
+    E[Execution Achieved]
+
+    A -->|"Access gained via SSH brute force attack Corporate Control: SSH Logs"| B
+    A -->|"Enumerate init.d scripts in /etc/init.d targeting Nginx Corporate Control: File System Logs"| B
+    A -->|"Identify writable service scripts Corporate Control: Access Control Logs"| B
+    A -->|"Monitor for unauthorized script enumeration Corporate Control: SIEM Alerts"| B
+    B -->|"Modify nginx init.d script to include payload commands Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed obfuscated shell commands in start() function Corporate Control: Endpoint Protection Systems"| C
+    B -->|"Test modified script for compatibility with Nginx startup Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to init.d scripts Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Restart or execute the modified init.d script Corporate Control: Script Execution Logs"| D
+    C -->|"Monitor for anomalies during script execution Corporate Control: Application Logs"| D
+    C -->|"Log unauthorized script activity Corporate Control: Endpoint Logs"| D
+    D -->|"Payload executes via the modified init.d script Corporate Control: Execution Logs"| E
+    D -->|"Monitor unauthorized runtime behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Detect outbound malicious traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log activities for forensic investigation Corporate Control: SIEM Systems"| E

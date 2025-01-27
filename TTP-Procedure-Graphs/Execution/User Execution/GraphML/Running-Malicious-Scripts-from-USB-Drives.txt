@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RunningMaliciousScriptsFromUSBDrives" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">USB Drive Inserted</data>
+</node>
+<node id="C">
+<data key="label">Script Auto-Executed</data>
+</node>
+<node id="D">
+<data key="label">Payload Delivery</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious USB distribution Corporate Control: Physical Security Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">USB drive contains autorun script Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized USB usage Corporate Control: Device Control Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Auto-run script executes on device insertion Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unauthorized script execution Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for deviations in USB activity Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script downloads and deploys malicious payload Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized payload deployment Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log deviations in script execution Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes, establishing persistence Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

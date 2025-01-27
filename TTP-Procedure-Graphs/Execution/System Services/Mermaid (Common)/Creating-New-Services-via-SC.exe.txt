@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Privilege Verification]
+    C[Service Creation]
+    D[Payload Configuration]
+    E[Execution Achieved]
+
+    A -->|"Access gained via spear-phishing campaign targeting IT staff Corporate Control: Email Gateway Logs"| B
+    A -->|"Enumerate system privileges to confirm admin rights Corporate Control: Privilege Escalation Logs"| B
+    A -->|"Monitor for unauthorized privilege escalation attempts Corporate Control: Endpoint Detection and Response Logs"| B
+    A -->|"Verify the presence of the SC.exe utility Corporate Control: Application Inventory Logs"| B
+    B -->|"Create a new service using the SC.exe utility Corporate Control: Windows Event Logs"| C
+    B -->|"Point the service to execute the malicious payload Corporate Control: Service Configuration Logs"| C
+    B -->|"Set service properties for stealth execution Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Ensure compatibility of the new service with the target system Corporate Control: Test Environment Logs"| C
+    C -->|"Start the malicious service to trigger payload Corporate Control: Service Execution Logs"| D
+    C -->|"Monitor anomalies in service startup behavior Corporate Control: Behavioral Analytics"| D
+    C -->|"Log unauthorized service activity Corporate Control: SIEM Systems"| D
+    D -->|"Payload executes as part of the new service Corporate Control: Process Monitoring Logs"| E
+    D -->|"Monitor unauthorized outbound network traffic Corporate Control: Network Monitoring Systems"| E
+    D -->|"Detect deviations in endpoint behavior Corporate Control: Endpoint Protection Logs"| E

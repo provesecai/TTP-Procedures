@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RunningMaliciousPowerPointFiles" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Email Delivery</data>
+</node>
+<node id="C">
+<data key="label">PowerPoint File Opened</data>
+</node>
+<node id="D">
+<data key="label">Embedded Script Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering PowerPoint file Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">File disguised as legitimate presentation Corporate Control: Content Filtering Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious email attachments Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User opens PowerPoint file Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">File contains malicious embedded script Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log user interaction with malicious files Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embedded script executes, downloading payload Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized script execution Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized activities Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes and establishes persistence Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound connections to malicious infrastructure Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activity for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

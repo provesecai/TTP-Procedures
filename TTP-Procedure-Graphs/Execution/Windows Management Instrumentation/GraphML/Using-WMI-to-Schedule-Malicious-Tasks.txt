@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UsingWMIToScheduleMaliciousTasks" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">WMI Namespace Discovery</data>
+</node>
+<node id="C">
+<data key="label">Task Creation via WMI</data>
+</node>
+<node id="D">
+<data key="label">Trigger Scheduled Task</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering malicious document Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate available WMI namespaces for task scheduling Corporate Control: WMI Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable namespaces for task creation Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized enumeration of WMI namespaces Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a malicious scheduled task via WMI command Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payload in scheduled task action Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test scheduled task compatibility with target environment Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized task creation activities Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger the task manually or wait for the schedule Corporate Control: Task Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor anomalies during task execution Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized task triggers Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via the scheduled task Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

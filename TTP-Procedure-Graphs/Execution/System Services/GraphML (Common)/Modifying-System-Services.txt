@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyingSystemServices" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Service Enumeration</data>
+</node>
+<node id="C">
+<data key="label">Service Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen admin credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate system services to identify writable configurations Corporate Control: Service Configuration Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized access to service management tools Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify privileges to modify service settings Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify service configuration to include malicious execution logic Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed payload into service startup script Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modified service on a non-critical system Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized service configuration changes Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart service to trigger payload execution Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect runtime anomalies during service execution Corporate Control: Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized service activities Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound traffic for data exfiltration Corporate Control: Network Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

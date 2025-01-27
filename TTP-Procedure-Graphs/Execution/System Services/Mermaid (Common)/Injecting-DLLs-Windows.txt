@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[DLL Injection Preparation]
+    C[Service Configuration]
+    D[Payload Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing attack targeting IT staff Corporate Control: Email Security Logs"| B
+    A -->|"Identify services that dynamically load DLLs Corporate Control: Service Configuration Logs"| B
+    A -->|"Enumerate DLL paths and permissions Corporate Control: File System Permissions Logs"| B
+    A -->|"Monitor for unauthorized enumeration of DLL files Corporate Control: SIEM Systems"| B
+    B -->|"Replace targeted DLL with a malicious version Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed obfuscated payloads into the DLL's initialization logic Corporate Control: Endpoint Security Logs"| C
+    B -->|"Validate compatibility of malicious DLL with target service Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized modifications to DLLs Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Restart or trigger the service to load the malicious DLL Corporate Control: Service Activation Logs"| D
+    C -->|"Monitor for anomalies during service startup Corporate Control: Process Logs"| D
+    C -->|"Log unauthorized service activities Corporate Control: SIEM Systems"| D
+    D -->|"Payload executes successfully via the malicious DLL Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in application behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log activities for forensic analysis Corporate Control: SIEM Systems"| E

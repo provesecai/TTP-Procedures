@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[WMI Query Preparation]
+    C[Query Execution]
+    D[Data Collection]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Craft WMI queries to gather system information Corporate Control: Development Environment Logs"| B
+    A -->|"Validate queries for compatibility with WMI classes Corporate Control: Test Environment Logs"| B
+    A -->|"Monitor for unauthorized query preparation Corporate Control: SIEM Alerts"| B
+    B -->|"Execute WMI queries targeting specific namespaces Corporate Control: WMI Logs"| C
+    B -->|"Queries extract details like running processes, services, and hardware specs Corporate Control: System Logs"| C
+    B -->|"Monitor anomalies during query execution Corporate Control: Application Monitoring Logs"| C
+    C -->|"Collected data stored locally or exfiltrated to remote server Corporate Control: File Integrity Monitoring"| D
+    C -->|"Monitor unauthorized data access and transfers Corporate Control: Network Logs"| D
+    C -->|"Log activities for further analysis Corporate Control: Endpoint Protection Logs"| D
+    D -->|"Information used to refine subsequent payload deployment Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log all activities for forensic investigation Corporate Control: SIEM Systems"| E

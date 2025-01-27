@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="InjectingDLLsOnWindows" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Process Enumeration</data>
+</node>
+<node id="C">
+<data key="label">DLL Preparation</data>
+</node>
+<node id="D">
+<data key="label">DLL Injection</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering malicious attachment Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate running processes to identify injection targets Corporate Control: Process Monitoring Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify process privileges for successful DLL injection Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized process enumeration Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prepare malicious DLL for injection Corporate Control: Development Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate DLL to evade detection Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy DLL to target process memory Corporate Control: Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized DLL deployments Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Inject DLL into target process using system API Corporate Control: Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via injected DLL Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized runtime behaviors Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log all malicious activities for forensic investigation Corporate Control: Behavioral Analytics</data>
+</edge>
+</graph>
+</graphml>

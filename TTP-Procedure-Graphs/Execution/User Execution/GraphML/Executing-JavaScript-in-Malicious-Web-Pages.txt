@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ExecutingJavaScriptInMaliciousWebPages" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">User Visits Web Page</data>
+</node>
+<node id="C">
+<data key="label">JavaScript Execution</data>
+</node>
+<node id="D">
+<data key="label">Payload Download</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing link in email Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">User clicks link to visit malicious webpage Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious link-clicking activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">JavaScript on webpage triggers malicious actions Corporate Control: Browser Monitoring Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Script exploits browser vulnerabilities Corporate Control: Vulnerability Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor browser activity for script anomalies Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious script downloads payload to victim machine Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload stored in temporary directory Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized downloads from webpage Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes and establishes persistence Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized process creation Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect outbound connections to C2 server Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic investigation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

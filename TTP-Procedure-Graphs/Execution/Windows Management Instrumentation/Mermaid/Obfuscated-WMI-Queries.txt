@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Prepare Obfuscated WMI Query]
+    C[Deploy Malicious Query]
+    D[Query Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via brute-forced domain credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Craft obfuscated WMI queries to evade detection Corporate Control: Development Logs"| B
+    A -->|"Validate compatibility of queries with WMI classes Corporate Control: Test Environment Logs"| B
+    A -->|"Monitor unauthorized use of obfuscated queries Corporate Control: SIEM Alerts"| B
+    B -->|"Deploy malicious WMI queries to target systems Corporate Control: WMI Logs"| C
+    B -->|"Embed payloads into query logic Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test deployment of queries on non-critical systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized modifications to query logic Corporate Control: Behavioral Analytics"| C
+    C -->|"Execute WMI queries to deploy and execute payload Corporate Control: Execution Logs"| D
+    C -->|"Monitor for anomalies during query execution Corporate Control: Application Logs"| D
+    C -->|"Log unauthorized WMI query executions Corporate Control: Endpoint Monitoring Logs"| D
+    D -->|"Payload executes successfully via obfuscated WMI query Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in process behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

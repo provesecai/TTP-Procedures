@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyingWindowsServiceExecutables" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Service Binary Discovery</data>
+</node>
+<node id="C">
+<data key="label">Binary Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via stolen credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable service binaries on target systems Corporate Control: Service Configuration Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to service binaries Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify compatibility of target binaries with payload Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replace legitimate service binary with malicious payload Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed obfuscated code to evade detection Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized modifications to service binaries Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart modified service to trigger payload execution Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor runtime anomalies during service execution Corporate Control: Process Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized service activities Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized network traffic originating from service Corporate Control: Network Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

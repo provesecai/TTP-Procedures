@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CompromisingPostgreSQLSystemd" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">PostgreSQL Service Discovery</data>
+</node>
+<node id="C">
+<data key="label">Systemd Service Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via brute-forced admin credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate PostgreSQL configurations and systemd services Corporate Control: PostgreSQL Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable service files for modification Corporate Control: File Permissions Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized enumeration of PostgreSQL systemd services Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify postgresql.service file to include payload commands Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed obfuscated malicious scripts into ExecStart property Corporate Control: Development Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test the modified systemd configuration for target compatibility Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized modifications to systemd files Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart PostgreSQL service to execute the payload Corporate Control: Systemd Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies during service restart Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized service activity Corporate Control: Process Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via PostgreSQL startup process Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized runtime behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound network activity Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activity for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

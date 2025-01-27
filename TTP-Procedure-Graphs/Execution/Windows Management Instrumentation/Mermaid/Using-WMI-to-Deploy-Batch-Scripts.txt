@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Batch Script Creation]
+    C[Remote Deployment]
+    D[WMI Command Execution]
+    E[Execution Achieved]
+
+    A -->|"Access gained via brute-forced credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Create batch scripts with malicious commands Corporate Control: Development Environment Logs"| B
+    A -->|"Validate compatibility of scripts with target systems Corporate Control: Test Environment Logs"| B
+    A -->|"Monitor unauthorized script preparation Corporate Control: SIEM Alerts"| B
+    B -->|"Deploy scripts to target systems using WMI commands Corporate Control: WMI Logs"| C
+    B -->|"Scripts copied to writable directories Corporate Control: File Integrity Monitoring"| C
+    B -->|"Monitor for unauthorized script deployments Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Execute batch scripts remotely via WMI methods Corporate Control: Execution Logs"| D
+    C -->|"Monitor for anomalies during script execution Corporate Control: Application Monitoring Logs"| D
+    C -->|"Log unauthorized script execution attempts Corporate Control: Endpoint Protection Logs"| D
+    D -->|"Payload executes successfully via batch script Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

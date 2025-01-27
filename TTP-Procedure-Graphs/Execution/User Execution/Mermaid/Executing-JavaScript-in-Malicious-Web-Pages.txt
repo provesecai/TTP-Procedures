@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Access]
+    B[Malicious Webpage Delivery]
+    C[User Interaction]
+    D[JavaScript Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing link directing to malicious webpage Corporate Control: Email Filtering Logs"| B
+    A -->|"Webpage hosted on compromised server Corporate Control: Web Hosting Logs"| B
+    A -->|"Monitor for suspicious link clicks Corporate Control: Web Proxy Logs"| B
+    A -->|"User directed to a fake login page Corporate Control: SIEM Alerts"| B
+    B -->|"User interaction triggers embedded JavaScript Corporate Control: Browser Logs"| C
+    B -->|"JavaScript downloads and runs malicious payload Corporate Control: Network Logs"| C
+    B -->|"Log unauthorized JavaScript executions Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Payload deployed and stored in browser cache Corporate Control: File Integrity Monitoring"| D
+    C -->|"Monitor browser behavior for anomalies Corporate Control: Behavioral Analytics"| D
+    C -->|"Log unauthorized script activities Corporate Control: Application Logs"| D
+    D -->|"Payload executes, exploiting system vulnerabilities Corporate Control: Execution Logs"| E
+    D -->|"Detect unauthorized connections from browser Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic investigation Corporate Control: SIEM Systems"| E

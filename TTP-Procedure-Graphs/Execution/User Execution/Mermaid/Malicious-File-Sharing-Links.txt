@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Link Delivery via Email]
+    C[User Interaction]
+    D[File Download and Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing email containing file sharing link Corporate Control: Email Gateway Logs"| B
+    A -->|"Link directs user to fake file-sharing service Corporate Control: Web Proxy Logs"| B
+    A -->|"Monitor for suspicious email links Corporate Control: SIEM Alerts"| B
+    A -->|"Email delivered to target users Corporate Control: Endpoint Monitoring Logs"| B
+    B -->|"User clicks link, accessing malicious file-sharing page Corporate Control: Web Proxy Logs"| C
+    B -->|"File-sharing page initiates payload download Corporate Control: Network Logs"| C
+    B -->|"Monitor unauthorized file downloads Corporate Control: Endpoint Protection Logs"| C
+    C -->|"User executes downloaded file on their machine Corporate Control: Endpoint Monitoring Logs"| D
+    C -->|"Log unauthorized file executions Corporate Control: File Integrity Monitoring"| D
+    C -->|"Monitor for anomalies during file interactions Corporate Control: Behavioral Monitoring Systems"| D
+    D -->|"Payload executed and establishes persistence Corporate Control: Execution Logs"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Logs"| E
+    D -->|"Log malicious activities for further analysis Corporate Control: SIEM Systems"| E

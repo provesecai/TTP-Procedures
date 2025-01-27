@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UsingNginxInitDScripts" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Nginx Service Discovery</data>
+</node>
+<node id="C">
+<data key="label">Script Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via SSH brute force attack Corporate Control: SSH Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify Nginx init.d scripts in /etc/init.d/nginx Corporate Control: File System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify writable scripts for modification Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to Nginx service scripts Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify init.d script to include malicious payload Corporate Control: File Integrity Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed payload in the start() function Corporate Control: Development Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test the modified script on staging systems Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to service scripts Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart Nginx service to trigger the payload Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies during service restart Corporate Control: Application Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via Nginx process Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activity for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

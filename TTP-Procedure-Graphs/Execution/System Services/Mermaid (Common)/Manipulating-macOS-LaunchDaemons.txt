@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[LaunchDaemon Discovery]
+    C[Daemon Modification]
+    D[Trigger Daemon Restart]
+    E[Execution Achieved]
+
+    A -->|"Access gained via malicious application download Corporate Control: Application Control Logs"| B
+    A -->|"Enumerate LaunchDaemons in the /Library/LaunchDaemons directory Corporate Control: File System Logs"| B
+    A -->|"Identify writable daemon property lists Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized access to LaunchDaemons Corporate Control: SIEM Systems"| B
+    B -->|"Modify a LaunchDaemon's property list to include payload execution Corporate Control: File Integrity Monitoring"| C
+    B -->|"Embed malicious logic into the ProgramArguments property Corporate Control: Endpoint Monitoring Logs"| C
+    B -->|"Validate compatibility of modified property list with target system Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor for unauthorized changes to daemon configurations Corporate Control: Behavioral Analytics"| C
+    C -->|"Restart the LaunchDaemon to execute the payload Corporate Control: Daemon Logs"| D
+    C -->|"Monitor for anomalies during daemon restart Corporate Control: Process Monitoring Systems"| D
+    C -->|"Log unauthorized daemon activities Corporate Control: Endpoint Logs"| D
+    D -->|"Payload executes successfully via the modified daemon Corporate Control: Execution Logs"| E
+    D -->|"Monitor for unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

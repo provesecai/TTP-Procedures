@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WMICommands" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Command Preparation</data>
+</node>
+<node id="C">
+<data key="label">Deploy WMI Commands</data>
+</node>
+<node id="D">
+<data key="label">Command Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised RDP credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft WMI commands for reconnaissance Corporate Control: Development Environment Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Validate commands for compatibility Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized WMI command preparation Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy crafted WMI commands to target systems Corporate Control: WMI Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Commands target specific namespaces for execution Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor anomalies in WMI command deployments Corporate Control: Behavioral Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute commands to achieve specific goals Corporate Control: Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log deviations during command execution Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized process creation Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Commands successfully execute on target systems Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in runtime behavior Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

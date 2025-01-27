@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CollectingSystemInformationWMIQueries" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">WMI Query Preparation</data>
+</node>
+<node id="C">
+<data key="label">Query Execution</data>
+</node>
+<node id="D">
+<data key="label">Data Collection</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft WMI queries to gather system information Corporate Control: Development Environment Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Validate queries for compatibility with WMI classes Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized query preparation Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute WMI queries targeting specific namespaces Corporate Control: WMI Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Queries extract details like running processes, services, and hardware specs Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor anomalies during query execution Corporate Control: Application Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Collected data stored locally or exfiltrated to remote server Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized data access and transfers Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log activities for further analysis Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Information used to refine subsequent payload deployment Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in system behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log all activities for forensic investigation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

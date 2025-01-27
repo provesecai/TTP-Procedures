@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Email Delivery]
+    C[User Opens Presentation]
+    D[Action Trigger via Mouse Click]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering PowerPoint file Corporate Control: Email Security Logs"| B
+    A -->|"PowerPoint file contains embedded malicious OLE objects Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor suspicious file attachments Corporate Control: SIEM Alerts"| B
+    A -->|"Email delivered to corporate mailbox Corporate Control: Email Gateway Logs"| B
+    B -->|"User opens PowerPoint file in Office Suite Corporate Control: Office Application Logs"| C
+    B -->|"Embedded OLE object triggers download of additional payload Corporate Control: Network Monitoring Logs"| C
+    B -->|"Monitor unauthorized object interactions Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Payload downloaded and prepared for execution Corporate Control: File Integrity Monitoring"| D
+    C -->|"Log interaction with embedded PowerPoint components Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Monitor deviations in PowerPoint behavior Corporate Control: Application Logs"| D
+    D -->|"Payload executed on user machine Corporate Control: Execution Logs"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Systems"| E
+    D -->|"Log all malicious activities for forensic analysis Corporate Control: SIEM Systems"| E
+    D -->|"Trigger alerts for deviations in PowerPoint processes Corporate Control: Endpoint Monitoring Logs"| E

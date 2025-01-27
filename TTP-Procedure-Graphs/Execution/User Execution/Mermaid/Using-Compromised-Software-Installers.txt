@@ -1,0 +1,20 @@
+graph TD;
+    A[Initial Access]
+    B[Compromised Installer Delivery]
+    C[User Downloads Installer]
+    D[Installer Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via tampered software installer Corporate Control: Endpoint Monitoring Logs"| B
+    A -->|"Installer hosted on fake or compromised website Corporate Control: Web Hosting Logs"| B
+    A -->|"Monitor unauthorized installer downloads Corporate Control: Network Proxy Logs"| B
+    A -->|"User downloads compromised installer Corporate Control: Application Logs"| B
+    B -->|"User runs installer, triggering malicious script Corporate Control: Endpoint Monitoring Logs"| C
+    B -->|"Log unauthorized installer executions Corporate Control: File Integrity Monitoring"| C
+    B -->|"Monitor user interactions with installer files Corporate Control: Behavioral Analytics"| C
+    C -->|"Installer deploys and executes malicious payload Corporate Control: Application Logs"| D
+    C -->|"Monitor for anomalies during installation process Corporate Control: Endpoint Monitoring Logs"| D
+    C -->|"Log unexpected behavior during installation Corporate Control: SIEM Systems"| D
+    D -->|"Payload executes and establishes persistence Corporate Control: Execution Logs"| E
+    D -->|"Detect unauthorized connections from payload Corporate Control: Network Monitoring Systems"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

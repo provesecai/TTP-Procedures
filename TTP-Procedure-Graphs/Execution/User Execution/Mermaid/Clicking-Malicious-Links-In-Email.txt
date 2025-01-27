@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Email Delivery]
+    C[User Interaction]
+    D[Link Redirection]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing email containing malicious link Corporate Control: Email Gateway Logs"| B
+    A -->|"Link disguised as legitimate service Corporate Control: Content Filtering Logs"| B
+    A -->|"Monitor for suspicious email links Corporate Control: SIEM Systems"| B
+    A -->|"Email links redirect to payload delivery site Corporate Control: Web Proxy Logs"| B
+    B -->|"User clicks link and lands on malicious webpage Corporate Control: Web Proxy Logs"| C
+    B -->|"Webpage triggers JavaScript to download malicious file Corporate Control: Browser Monitoring Logs"| C
+    B -->|"Monitor unauthorized file downloads Corporate Control: Endpoint Protection Logs"| C
+    C -->|"User executes downloaded payload Corporate Control: Endpoint Monitoring Logs"| D
+    C -->|"Malicious script runs on user device Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Log user interaction with malicious website Corporate Control: Web Filtering Logs"| D
+    D -->|"Payload establishes persistence on victim machine Corporate Control: Execution Logs"| E
+    D -->|"Detect abnormal outbound connections Corporate Control: Network Monitoring Systems"| E
+    D -->|"Monitor deviations in browser behavior Corporate Control: Application Logs"| E
+    D -->|"Log malicious activities for further analysis Corporate Control: SIEM Systems"| E

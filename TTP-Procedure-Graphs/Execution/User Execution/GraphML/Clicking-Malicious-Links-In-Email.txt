@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ClickingMaliciousLinksInEmail" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Email Delivery</data>
+</node>
+<node id="C">
+<data key="label">User Interaction</data>
+</node>
+<node id="D">
+<data key="label">Link Redirection</data>
+</node>
+<node id="E">
+<data key="label">Payload Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email containing malicious link Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Link disguised as legitimate service Corporate Control: Content Filtering Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suspicious email links Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Email links redirect to payload delivery site Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User clicks link and lands on malicious webpage Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Webpage triggers JavaScript to download malicious file Corporate Control: Browser Monitoring Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized file downloads Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User executes downloaded payload Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious script runs on user device Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log user interaction with malicious website Corporate Control: Web Filtering Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload establishes persistence on victim machine Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect abnormal outbound connections Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor deviations in browser behavior Corporate Control: Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for further analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

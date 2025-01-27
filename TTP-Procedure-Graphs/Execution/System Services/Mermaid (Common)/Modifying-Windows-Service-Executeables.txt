@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Service Enumeration]
+    C[Service Modification]
+    D[Restart and Payload Trigger]
+    E[Execution Achieved]
+
+    A -->|"Access gained via stolen admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate existing services using 'sc query' command Corporate Control: System Command Logs"| B
+    A -->|"Identify writable service executables by analyzing ACLs Corporate Control: File System Permissions Logs"| B
+    A -->|"Monitor for unauthorized access to service directories Corporate Control: SIEM Alerts"| B
+    B -->|"Replace service executable with malicious payload Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Modify registry keys associated with the service Corporate Control: Windows Registry Logs"| C
+    B -->|"Embed obfuscated malicious code into the executable Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test payload compatibility with the service execution context Corporate Control: Test Environment Logs"| C
+    C -->|"Restart the service to load the malicious executable Corporate Control: Service Execution Logs"| D
+    C -->|"Monitor service execution for anomalies Corporate Control: Behavioral Monitoring Systems"| D
+    C -->|"Ensure stealthy execution by avoiding endpoint detection Corporate Control: Endpoint Monitoring Logs"| D
+    D -->|"Payload executes as part of the modified service Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in service behavior during runtime Corporate Control: Application Logs"| E
+    D -->|"Monitor for unauthorized outbound traffic originating from the service Corporate Control: Network Monitoring Systems"| E
+    D -->|"Log malicious activities in SIEM for further analysis Corporate Control: SIEM Systems"| E

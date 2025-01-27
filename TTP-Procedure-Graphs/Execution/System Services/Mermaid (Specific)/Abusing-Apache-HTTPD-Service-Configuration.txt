@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Apache Service Discovery]
+    C[Configuration Modification]
+    D[Service Restart]
+    E[Execution Achieved]
+
+    A -->|"Access gained via compromised SSH credentials Corporate Control: SSH Access Logs"| B
+    A -->|"Enumerate Apache HTTPD configurations in /etc/httpd/conf Corporate Control: File System Logs"| B
+    A -->|"Identify writable configuration files Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized access to Apache configuration directories Corporate Control: SIEM Alerts"| B
+    B -->|"Modify httpd.conf to include malicious payload execution Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed payload commands in startup scripts or virtual host configurations Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test the modified configuration file for target compatibility Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to configuration files Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Restart Apache service to trigger the malicious configuration Corporate Control: Apache Logs"| D
+    C -->|"Monitor anomalies during service restart Corporate Control: Process Monitoring Systems"| D
+    C -->|"Log unauthorized service activities Corporate Control: Endpoint Logs"| D
+    D -->|"Payload executes successfully via the Apache HTTPD process Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log activities for forensic analysis Corporate Control: SIEM Systems"| E

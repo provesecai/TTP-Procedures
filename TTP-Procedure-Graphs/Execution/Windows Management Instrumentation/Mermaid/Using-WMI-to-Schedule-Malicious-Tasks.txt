@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[WMI Namespace Discovery]
+    C[Task Creation via WMI]
+    D[Trigger Scheduled Task]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering malicious document Corporate Control: Email Gateway Logs"| B
+    A -->|"Enumerate available WMI namespaces for task scheduling Corporate Control: WMI Logs"| B
+    A -->|"Identify writable namespaces for task creation Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized enumeration of WMI namespaces Corporate Control: SIEM Systems"| B
+    B -->|"Create a malicious scheduled task via WMI command Corporate Control: Task Scheduler Logs"| C
+    B -->|"Embed payload in scheduled task action Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test scheduled task compatibility with target environment Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized task creation activities Corporate Control: Behavioral Analytics"| C
+    C -->|"Trigger the task manually or wait for the schedule Corporate Control: Task Execution Logs"| D
+    C -->|"Monitor anomalies during task execution Corporate Control: Application Logs"| D
+    C -->|"Log unauthorized task triggers Corporate Control: Endpoint Monitoring Systems"| D
+    D -->|"Payload executes successfully via the scheduled task Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Logs"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

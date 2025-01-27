@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MaliciousFileSharingLinks" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Link Clicked</data>
+</node>
+<node id="C">
+<data key="label">File Download</data>
+</node>
+<node id="D">
+<data key="label">Payload Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via shared malicious link on file-sharing platform Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">User clicks link to download shared file Corporate Control: Email Monitoring Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious file-sharing activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User downloads file containing malicious payload Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized file downloads Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unusual download activity Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User opens file, triggering malicious script Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect deviations in process behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized file executions Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes and establishes persistence Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect anomalies in runtime behavior Corporate Control: Application Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for further forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

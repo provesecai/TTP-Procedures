@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="KubernetesSystemPods" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">System Pod Enumeration</data>
+</node>
+<node id="C">
+<data key="label">Pod Configuration Modification</data>
+</node>
+<node id="D">
+<data key="label">Pod Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via compromised Kubernetes credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate system pods using kubectl commands Corporate Control: Kubernetes Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable pods for configuration changes Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized pod enumeration activities Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify pod configurations to include malicious payload Corporate Control: File Integrity Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed payload in environment variables or startup commands Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modified configurations in staging environments Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to pod configurations Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart the modified pod to trigger payload execution Corporate Control: Kubernetes Controller Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies during pod restart Corporate Control: Application Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized activities during runtime Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully within the system pod Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in runtime behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activity for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyingIISWorkerProcesses" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Worker Process Discovery</data>
+</node>
+<node id="C">
+<data key="label">Process Configuration Modification</data>
+</node>
+<node id="D">
+<data key="label">Service Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing attack targeting web admin credentials Corporate Control: Email Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify IIS worker processes using IIS Manager or PowerShell Corporate Control: IIS Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify privileges to modify worker process configurations Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to IIS configuration files Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify worker process settings to include malicious payload Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed payload in application pool configurations Corporate Control: Configuration Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modifications in a non-production environment Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to worker process configurations Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart IIS services to trigger the malicious worker process Corporate Control: IIS Restart Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies during service restart Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully within IIS worker process Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized runtime behaviors Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activity for forensic investigation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingSystemctl" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Task Discovery</data>
+</node>
+<node id="C">
+<data key="label">Task Modification</data>
+</node>
+<node id="D">
+<data key="label">Payload Deployment</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering malicious document Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate existing scheduled tasks using 'schtasks' Corporate Control: System Command Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable tasks with user-specific privileges Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for excessive task enumeration Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify an existing task to execute malicious payload Corporate Control: File Integrity Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed obfuscated payload into task execution command Corporate Control: Endpoint Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test payload compatibility with scheduled task parameters Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to scheduled tasks Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes via the scheduled task Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in application behavior during task execution Corporate Control: Process Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized outbound traffic Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for further investigation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

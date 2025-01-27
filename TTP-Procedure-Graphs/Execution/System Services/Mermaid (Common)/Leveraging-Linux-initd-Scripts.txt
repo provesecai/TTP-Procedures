@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Privilege Escalation]
+    C[Script Deployment]
+    D[Script Trigger]
+    E[Execution Achieved]
+
+    A -->|"Access gained via brute-forced SSH credentials Corporate Control: SSH Access Logs"| B
+    A -->|"Enumerate user privileges and escalate to root Corporate Control: Privilege Escalation Logs"| B
+    A -->|"Monitor for unauthorized privilege escalation attempts Corporate Control: SIEM Alerts"| B
+    A -->|"Identify writable directories in /etc/init.d Corporate Control: File System Permissions"| B
+    B -->|"Create a malicious script in the /etc/init.d directory Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed payload execution commands into the script Corporate Control: Development Environment Logs"| C
+    B -->|"Validate script compatibility with target startup processes Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to init.d scripts Corporate Control: File Integrity Monitoring"| C
+    C -->|"Link the script to system startup via update-rc.d Corporate Control: Script Logs"| D
+    C -->|"Monitor for anomalies during startup configuration changes Corporate Control: SIEM Systems"| D
+    C -->|"Validate successful addition of the script to boot sequence Corporate Control: Behavioral Monitoring Tools"| D
+    D -->|"Payload executes automatically upon system reboot Corporate Control: Process Monitoring Logs"| E
+    D -->|"Monitor deviations in startup behavior Corporate Control: Application Logs"| E
+    D -->|"Detect unauthorized network activity post-reboot Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activity during startup sequence Corporate Control: SIEM Systems"| E

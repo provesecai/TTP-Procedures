@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Event Subscription Creation]
+    C[Payload Delivery]
+    D[Trigger Event Subscription]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing campaign delivering malicious document Corporate Control: Email Security Logs"| B
+    A -->|"Enumerate WMI event classes and subscriptions Corporate Control: WMI Logs"| B
+    A -->|"Identify writable event classes for malicious subscription Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized event subscription creation Corporate Control: SIEM Alerts"| B
+    B -->|"Create malicious event subscription triggering payload Corporate Control: File Integrity Monitoring"| C
+    B -->|"Embed obfuscated script in event action logic Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test event subscription on non-critical systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to event subscriptions Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Trigger event subscription to deploy payload Corporate Control: WMI Event Logs"| D
+    C -->|"Monitor anomalies during event subscription execution Corporate Control: Application Logs"| D
+    C -->|"Log unauthorized event activities Corporate Control: Endpoint Monitoring Logs"| D
+    D -->|"Payload executes via WMI event subscription Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Logs"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

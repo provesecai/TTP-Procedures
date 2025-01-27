@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreatingNewServices" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Privilege Verification</data>
+</node>
+<node id="C">
+<data key="label">Service Creation</data>
+</node>
+<node id="D">
+<data key="label">Payload Configuration</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via spear-phishing campaign targeting IT staff Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate system privileges to confirm admin rights Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized privilege escalation attempts Corporate Control: Endpoint Detection and Response Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify the presence of the SC.exe utility Corporate Control: Application Inventory Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Create a new service using the SC.exe utility Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Point the service to execute the malicious payload Corporate Control: Service Configuration Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Set service properties for stealth execution Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure compatibility of the new service with the target system Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Start the malicious service to trigger payload Corporate Control: Service Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor anomalies in service startup behavior Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log unauthorized service activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes as part of the new service Corporate Control: Process Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound network traffic Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in endpoint behavior Corporate Control: Endpoint Protection Logs</data>
+</edge>
+</graph>
+</graphml>

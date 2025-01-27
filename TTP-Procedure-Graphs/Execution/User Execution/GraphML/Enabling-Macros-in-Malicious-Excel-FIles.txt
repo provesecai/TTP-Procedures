@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EnablingMacrosInMaliciousExcelFiles" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Email Delivery</data>
+</node>
+<node id="C">
+<data key="label">User Opens Excel File</data>
+</node>
+<node id="D">
+<data key="label">Macro Execution</data>
+</node>
+<node id="E">
+<data key="label">Payload Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email delivering Excel file Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Excel file contains obfuscated macro code Corporate Control: Content Filtering Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suspicious email attachments Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Email delivered to employee inbox Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User opens Excel file and enables macros Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Macro prompts user for permission to execute code Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log user interactions with Office applications Corporate Control: Application Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Macro runs malicious script to download payload Corporate Control: Network Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Payload stored in user directory Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor macro activities in Office applications Corporate Control: Behavioral Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes, establishing C2 communication Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor deviations in process behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

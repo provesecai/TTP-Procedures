@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DeployingObfuscatedWMIQueries" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Prepare Obfuscated WMI Query</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Query</data>
+</node>
+<node id="D">
+<data key="label">Query Execution</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via brute-forced domain credentials Corporate Control: Identity Management Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Craft obfuscated WMI queries to evade detection Corporate Control: Development Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Validate compatibility of queries with WMI classes Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized use of obfuscated queries Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious WMI queries to target systems Corporate Control: WMI Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads into query logic Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test deployment of queries on non-critical systems Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized modifications to query logic Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute WMI queries to deploy and execute payload Corporate Control: Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies during query execution Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized WMI query executions Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload executes successfully via obfuscated WMI query Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect deviations in process behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

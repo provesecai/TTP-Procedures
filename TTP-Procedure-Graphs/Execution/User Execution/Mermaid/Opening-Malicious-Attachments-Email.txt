@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Email Delivery]
+    C[Attachment Interaction]
+    D[Macro Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via phishing campaign targeting employees Corporate Control: Email Security Logs"| B
+    A -->|"Deliver phishing email containing a malicious attachment Corporate Control: Email Gateway Logs"| B
+    A -->|"Attachment contains obfuscated macro code Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor for suspicious email activity Corporate Control: SIEM Alerts"| B
+    B -->|"User opens attachment with Office Suite Third Party Control: Office Application Logs"| C
+    B -->|"Macro requests permission to run on user system Corporate Control: Endpoint Behavior Analytics"| C
+    B -->|"Monitor user interaction with malicious document Corporate Control: Application Telemetry"| C
+    B -->|"Detect abnormal activity in Office processes Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Macro executes malicious code, dropping payload Corporate Control: Endpoint Protection Logs"| D
+    C -->|"Establishes connection with command-and-control (C2) server Corporate Control: Network Logs"| D
+    C -->|"Monitor for unexpected macro execution Corporate Control: SIEM Alerts"| D
+    D -->|"Payload executes in the user environment Corporate Control: Process Logs"| E
+    D -->|"Detect deviations in user process behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Traffic Analysis"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

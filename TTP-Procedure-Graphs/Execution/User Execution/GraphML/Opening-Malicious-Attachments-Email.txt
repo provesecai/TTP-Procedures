@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="OpeningMaliciousAttachmentsInEmail" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Email Received</data>
+</node>
+<node id="C">
+<data key="label">Attachment Downloaded</data>
+</node>
+<node id="D">
+<data key="label">Attachment Opened</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via phishing email with malicious attachment Corporate Control: Email Gateway Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Attachment disguised as legitimate document Corporate Control: Content Filtering Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suspicious attachments Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User downloads malicious attachment Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized file downloads Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unusual attachment activity Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User opens attachment, triggering malicious payload Corporate Control: Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor deviations in application behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized executions Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Payload establishes C2 communication Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for further forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

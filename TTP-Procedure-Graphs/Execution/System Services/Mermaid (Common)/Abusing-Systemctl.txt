@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Task Discovery]
+    C[Task Modification]
+    D[Payload Deployment]
+    E[Execution Achieved]
+
+    A -->|"Access gained via phishing email delivering malicious document Corporate Control: Email Gateway Logs"| B
+    A -->|"Enumerate existing scheduled tasks using 'schtasks' Corporate Control: System Command Logs"| B
+    A -->|"Identify writable tasks with user-specific privileges Corporate Control: Task Scheduler Logs"| B
+    A -->|"Monitor for excessive task enumeration Corporate Control: Endpoint Monitoring Logs"| B
+    B -->|"Modify an existing task to execute malicious payload Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed obfuscated payload into task execution command Corporate Control: Endpoint Security Logs"| C
+    B -->|"Test payload compatibility with scheduled task parameters Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to scheduled tasks Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Trigger the modified task manually or wait for the schedule Corporate Control: Task Execution Logs"| D
+    C -->|"Monitor task execution behavior for anomalies Corporate Control: Application Logs"| D
+    C -->|"Ensure stealthy execution without detection Corporate Control: Endpoint Monitoring Systems"| D
+    D -->|"Payload executes via the scheduled task Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in application behavior during task execution Corporate Control: Process Monitoring Logs"| E
+    D -->|"Monitor for unauthorized outbound traffic Corporate Control: Network Monitoring Systems"| E
+    D -->|"Log malicious activities for further investigation Corporate Control: SIEM Systems"| E

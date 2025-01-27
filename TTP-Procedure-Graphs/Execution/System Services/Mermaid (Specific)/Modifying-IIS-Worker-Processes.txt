@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[IIS Process Discovery]
+    C[Configuration Modification]
+    D[Payload Deployment]
+    E[Execution Achieved]
+
+    A -->|"Access gained via spear-phishing attack targeting IT admins Corporate Control: Email Gateway Logs"| B
+    A -->|"Enumerate IIS worker processes using appcmd Corporate Control: IIS Logs"| B
+    A -->|"Identify writable application pools or virtual directories Corporate Control: Access Control Logs"| B
+    A -->|"Monitor for unauthorized access to IIS configurations Corporate Control: SIEM Systems"| B
+    B -->|"Modify web.config file to include malicious execution logic Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed obfuscated payloads into HTTP handlers Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test the compatibility of modified configurations Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to IIS worker processes Corporate Control: Behavioral Monitoring Tools"| C
+    C -->|"Trigger IIS restart to deploy malicious configurations Corporate Control: IIS Execution Logs"| D
+    C -->|"Monitor anomalies during IIS worker process execution Corporate Control: Process Monitoring Logs"| D
+    C -->|"Log unauthorized changes during execution Corporate Control: Endpoint Logs"| D
+    D -->|"Payload executes successfully via IIS worker processes Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in web application behavior Corporate Control: Application Monitoring Tools"| E
+    D -->|"Monitor outbound traffic for data exfiltration Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

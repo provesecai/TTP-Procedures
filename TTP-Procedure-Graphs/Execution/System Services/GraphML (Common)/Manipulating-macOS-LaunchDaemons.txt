@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ManipulatingMacOSLaunchDaemons" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">LaunchDaemon Discovery</data>
+</node>
+<node id="C">
+<data key="label">Plist Modification</data>
+</node>
+<node id="D">
+<data key="label">Daemon Restart</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious download on macOS Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate available LaunchDaemons in /Library/LaunchDaemons Corporate Control: File System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify writable plist files for modification Corporate Control: Access Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to LaunchDaemon directories Corporate Control: SIEM Alerts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify plist file to include malicious script as startup action Corporate Control: File Integrity Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Embed obfuscated payload into plist file for stealth Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modified plist files for compatibility Corporate Control: Test Environment Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized changes to plist files Corporate Control: Behavioral Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart LaunchDaemon to trigger malicious payload Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor runtime anomalies during LaunchDaemon execution Corporate Control: Process Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized network connections Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic analysis Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

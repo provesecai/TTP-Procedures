@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UsingCompromisedSoftwareInstallers" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Initial Access</data>
+</node>
+<node id="B">
+<data key="label">Installer Delivered</data>
+</node>
+<node id="C">
+<data key="label">User Executes Installer</data>
+</node>
+<node id="D">
+<data key="label">Malware Embedded</data>
+</node>
+<node id="E">
+<data key="label">Execution Achieved</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Access gained via malicious software download Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Installer disguised as legitimate application Corporate Control: Content Filtering Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious downloads Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">User executes installer Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unusual user activity Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in installer behavior Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Installer deploys embedded malware Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized deployment Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized installer activities Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware executes, establishing persistence Corporate Control: Execution Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for malicious runtime behaviors Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log malicious activities for forensic investigation Corporate Control: SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

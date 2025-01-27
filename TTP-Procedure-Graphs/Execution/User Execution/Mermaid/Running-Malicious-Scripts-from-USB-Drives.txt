@@ -1,0 +1,21 @@
+graph TD;
+    A[Initial Access]
+    B[Removable Media Usage]
+    C[Script Deployment]
+    D[User Execution]
+    E[Payload Execution Achieved]
+
+    A -->|"Access gained via USB drive drop in target location Corporate Control: Physical Security Logs"| B
+    A -->|"USB contains malicious script disguised as legitimate files Corporate Control: Endpoint Protection Logs"| B
+    A -->|"Monitor for unauthorized USB insertions Corporate Control: Device Control Logs"| B
+    A -->|"User inserts USB into corporate system Third Party Control: Device Usage Logs"| B
+    B -->|"User clicks malicious file, triggering script Corporate Control: Endpoint Monitoring Logs"| C
+    B -->|"Script begins extracting and deploying payload Corporate Control: File Integrity Monitoring"| C
+    B -->|"Monitor for unauthorized file executions Corporate Control: SIEM Systems"| C
+    C -->|"Script executes malicious payload Corporate Control: Process Logs"| D
+    C -->|"Payload connects to C2 server for further commands Corporate Control: Network Logs"| D
+    C -->|"Log unauthorized script execution Corporate Control: Endpoint Monitoring Logs"| D
+    D -->|"Payload establishes execution context Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in process behavior Corporate Control: Behavioral Analytics"| E
+    D -->|"Monitor unauthorized outbound traffic Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log all malicious activities Corporate Control: SIEM Systems"| E

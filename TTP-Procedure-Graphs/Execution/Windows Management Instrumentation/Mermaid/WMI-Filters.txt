@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[WMI Filter Discovery]
+    C[Filter Modification]
+    D[Trigger Modified Filter]
+    E[Execution Achieved]
+
+    A -->|"Access gained via spear-phishing attack targeting IT admin Corporate Control: Email Security Logs"| B
+    A -->|"Enumerate existing WMI filters for modification opportunities Corporate Control: WMI Logs"| B
+    A -->|"Identify writable WMI filters for malicious code injection Corporate Control: Access Control Logs"| B
+    A -->|"Monitor unauthorized enumeration of WMI filters Corporate Control: SIEM Systems"| B
+    B -->|"Modify a WMI filter to include malicious execution logic Corporate Control: File Integrity Monitoring Logs"| C
+    B -->|"Embed obfuscated payloads into filter evaluation conditions Corporate Control: Endpoint Protection Logs"| C
+    B -->|"Test modified filters for compatibility with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized modifications to WMI filters Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Trigger modified filter during normal system events Corporate Control: WMI Event Logs"| D
+    C -->|"Monitor for anomalies during filter evaluation Corporate Control: Application Logs"| D
+    C -->|"Log unauthorized filter activities Corporate Control: Endpoint Monitoring Logs"| D
+    D -->|"Payload executes successfully via modified WMI filter Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Logs"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic analysis Corporate Control: SIEM Systems"| E

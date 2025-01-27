@@ -1,0 +1,22 @@
+graph TD;
+    A[Initial Access]
+    B[Group Policy Discovery]
+    C[Policy Modification]
+    D[Service Update]
+    E[Execution Achieved]
+
+    A -->|"Access gained via stolen Active Directory admin credentials Corporate Control: Identity Management Logs"| B
+    A -->|"Enumerate Group Policy Objects (GPOs) targeting system services Corporate Control: Active Directory Logs"| B
+    A -->|"Identify writable GPOs with privileges to modify services Corporate Control: Group Policy Logs"| B
+    A -->|"Monitor for unauthorized access to GPO configurations Corporate Control: SIEM Alerts"| B
+    B -->|"Modify a GPO to include service configuration changes Corporate Control: Group Policy Repository Logs"| C
+    B -->|"Embed payload commands into service configuration updates Corporate Control: Endpoint Security Logs"| C
+    B -->|"Test the modified GPO's compatibility with target systems Corporate Control: Test Environment Logs"| C
+    B -->|"Monitor unauthorized changes to GPOs Corporate Control: Behavioral Monitoring Systems"| C
+    C -->|"Deploy the modified GPO to target systems via Group Policy Updates Corporate Control: GPO Deployment Logs"| D
+    C -->|"Monitor for anomalies during policy deployment Corporate Control: Endpoint Monitoring Logs"| D
+    C -->|"Validate changes to service configurations Corporate Control: Application Logs"| D
+    D -->|"Payload executes as part of the modified service configuration Corporate Control: Execution Logs"| E
+    D -->|"Detect deviations in system behavior Corporate Control: Endpoint Monitoring Systems"| E
+    D -->|"Monitor unauthorized outbound connections Corporate Control: Network Monitoring Tools"| E
+    D -->|"Log malicious activities for forensic investigation Corporate Control: SIEM Systems"| E
