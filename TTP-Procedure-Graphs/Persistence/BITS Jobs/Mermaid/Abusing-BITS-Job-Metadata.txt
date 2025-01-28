@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Metadata Fields in BITS Jobs]
+    B[Insert Malicious Metadata]
+    C[Monitor Metadata-Driven Execution]
+    D[Conceal Metadata Changes]
+    E[Persistence Achieved via BITS Job Metadata]
+
+    A -->|"Enumerate jobs with editable metadata Corporate Control: BITS Configuration"| B
+    A -->|"Review permissions for modifying metadata fields Corporate Control: Active Directory Policies"| B
+    A -->|"Identify critical metadata used in job execution Corporate Control: BITS Administration"| B
+    A -->|"Analyze monitoring systems for metadata-related alerts Corporate Control: Security Event Logs"| B
+    B -->|"Insert malicious payloads into metadata fields Corporate Control: BITS Metadata Manager"| C
+    B -->|"Configure jobs to use payloads during execution Corporate Control: Task Scheduler"| C
+    B -->|"Validate payloads embedded in metadata Corporate Control: System Testing Logs"| C
+    B -->|"Ensure metadata changes align with legitimate job functions Corporate Control: Job Metadata Review"| C
+    C -->|"Monitor job activity for anomalies related to metadata Corporate Control: System Logs"| D
+    C -->|"Ensure persistence across job updates Corporate Control: Task Scheduler Updates"| D
+    C -->|"Validate stealth in metadata-embedded payloads Corporate Control: Endpoint Monitoring Tools"| D
+    C -->|"Test jobs against detection systems Corporate Control: Security Operations"| D
+    D -->|"Mask metadata changes in logs Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate metadata-related configurations Corporate Control: BITS Job Settings"| E
+    D -->|"Blend metadata with legitimate values Corporate Control: Task Scheduler Metadata"| E
+    D -->|"Continuously monitor metadata-driven jobs Corporate Control: SIEM Tools"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Applications for Shimming Opportunities]
+    B[Create and Deploy Application Shims]
+    C[Monitor Shim Execution]
+    D[Conceal Shim Configurations]
+    E[Persistence Achieved via Application Shimming]
+
+    A -->|"Identify applications vulnerable to shimming Corporate Control: Application Compatibility Manager"| B
+    A -->|"Review permissions for creating shims Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious DLLs or executables Corporate Control: Internal Build Servers"| B
+    A -->|"Evaluate logging for shim creation Corporate Control: SIEM Systems"| B
+    B -->|"Create shims that redirect application execution to malicious payloads Corporate Control: Compatibility Administrator"| C
+    B -->|"Deploy shims to application directories Corporate Control: File Explorer"| C
+    B -->|"Validate shim functionality through testing Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques to shim configurations Corporate Control: Shim Metadata Manager"| C
+    C -->|"Monitor shim activity for anomalies Corporate Control: Event Viewer"| D
+    C -->|"Ensure shims persist through application updates Corporate Control: Application Maintenance Tools"| D
+    C -->|"Validate stealth of shims against detection Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Periodically update shim configurations for evasion Corporate Control: Shim Manager Tools"| D
+    D -->|"Remove evidence of shim creation Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate shim metadata and configuration Corporate Control: Shim Metadata Editor"| E
+    D -->|"Blend malicious shims with legitimate ones Corporate Control: Application Directory"| E
+    D -->|"Continuously monitor shim behavior Corporate Control: Security Operations Center"| E

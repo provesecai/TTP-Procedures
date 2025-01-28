@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Existing_BITS_Jobs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Existing BITS Jobs</data>
+</node>
+<node id="B">
+<data key="label">Modify Legitimate BITS Jobs</data>
+</node>
+<node id="C">
+<data key="label">Maintain Altered BITS Jobs</data>
+</node>
+<node id="D">
+<data key="label">Conceal Job Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Modified BITS Jobs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing BITS jobs Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify jobs with elevated permissions Corporate Control: Active Directory Roles</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select jobs used for recurring operations Corporate Control: BITS Job Queue</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze job configurations and metadata Corporate Control: BITS Administration Tool</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious payloads into legitimate jobs Corporate Control: BITS API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure altered jobs to execute payloads Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure jobs are triggered under standard conditions Corporate Control: Job Triggers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test job execution to avoid detection Corporate Control: Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor altered jobs for functionality Corporate Control: Windows Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through system updates Corporate Control: System Maintenance Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate that altered jobs bypass security mechanisms Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically update job configurations Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of job modifications Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask altered configurations in metadata Corporate Control: BITS Configuration Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend altered jobs with legitimate ones Corporate Control: Task Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor logs for anomalies tied to job execution Corporate Control: Security Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

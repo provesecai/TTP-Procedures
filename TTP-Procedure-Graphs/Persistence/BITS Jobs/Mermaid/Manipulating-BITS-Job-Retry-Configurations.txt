@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Retry Configurations for BITS Jobs]
+    B[Modify Retry Parameters]
+    C[Monitor Retry Behavior]
+    D[Conceal Retry Configuration Changes]
+    E[Persistence Achieved via Retry Configurations]
+
+    A -->|"Review retry settings for existing BITS jobs Corporate Control: Task Scheduler"| B
+    A -->|"Identify jobs with frequent retries Corporate Control: BITS Job Queue"| B
+    A -->|"Assess permissions for modifying retry configurations Corporate Control: Active Directory Policies"| B
+    A -->|"Evaluate logs for detection of retry-related anomalies Corporate Control: Security Event Logs"| B
+    B -->|"Alter retry intervals to trigger malicious payloads Corporate Control: BITS Administration Tools"| C
+    B -->|"Modify retry counts to increase stealth Corporate Control: BITS Job Metadata"| C
+    B -->|"Ensure jobs automatically restart on failure Corporate Control: Task Scheduler"| C
+    B -->|"Embed payloads in retry-triggered events Corporate Control: Script Execution Services"| C
+    C -->|"Monitor retry activity to validate execution Corporate Control: System Logs"| D
+    C -->|"Ensure retry settings persist across system reboots Corporate Control: Job Scheduler Logs"| D
+    C -->|"Validate payload execution during retries Corporate Control: Endpoint Detection Logs"| D
+    C -->|"Test against detection mechanisms during retries Corporate Control: Security Operations Tools"| D
+    D -->|"Mask retry-related changes in logs Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate retry configuration settings Corporate Control: BITS Job Configuration"| E
+    D -->|"Blend retry parameters with standard configurations Corporate Control: Task Scheduler Metadata"| E
+    D -->|"Monitor retries for security alerts Corporate Control: SIEM Tools"| E

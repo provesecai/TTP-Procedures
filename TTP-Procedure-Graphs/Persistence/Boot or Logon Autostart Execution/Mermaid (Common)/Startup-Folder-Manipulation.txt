@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Startup Folder Locations]
+    B[Deploy Malicious Files to Startup Folder]
+    C[Monitor and Maintain Startup Folder Files]
+    D[Conceal Malicious Files]
+    E[Persistence Achieved via Startup Folder Manipulation]
+
+    A -->|"Enumerate system and user-specific startup folder paths Corporate Control: Windows File System"| B
+    A -->|"Identify accounts with access to startup folders Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare executable payloads or scripts Corporate Control: Internal Build Servers"| B
+    A -->|"Analyze logging mechanisms for file changes Corporate Control: Event Viewer"| B
+    B -->|"Copy malicious files to startup folders Corporate Control: File Explorer"| C
+    B -->|"Ensure files execute upon user logon Corporate Control: Startup Configuration"| C
+    B -->|"Test files for functionality and stealth Corporate Control: Task Scheduler"| C
+    B -->|"Apply obfuscation techniques to file names Corporate Control: File Metadata"| C
+    C -->|"Monitor startup folder for unauthorized changes Corporate Control: File Activity Logs"| D
+    C -->|"Ensure files persist across system updates Corporate Control: File Integrity Monitoring"| D
+    C -->|"Validate stealth against detection tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure file attributes periodically Corporate Control: Task Scheduler"| D
+    D -->|"Obfuscate file metadata Corporate Control: File Properties Editor"| E
+    D -->|"Remove logs indicating file placement Corporate Control: Event Viewer"| E
+    D -->|"Blend malicious files with legitimate startup items Corporate Control: Windows Explorer"| E
+    D -->|"Monitor file behavior continuously Corporate Control: SIEM Tools"| E

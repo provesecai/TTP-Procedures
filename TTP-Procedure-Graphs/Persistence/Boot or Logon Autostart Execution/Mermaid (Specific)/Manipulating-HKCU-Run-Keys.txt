@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify HKCU Run Registry Keys]
+    B[Add Malicious Entries to Run Keys]
+    C[Monitor and Maintain Run Key Modifications]
+    D[Conceal Malicious Run Key Entries]
+    E[Persistence Achieved via HKCU Run Keys]
+
+    A -->|"Enumerate HKCU registry paths for Run keys Corporate Control: Windows Registry"| B
+    A -->|"Identify user accounts with permissions to modify Run keys Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious executables for user-specific persistence Corporate Control: Internal File Servers"| B
+    A -->|"Review logging for registry modifications Corporate Control: SIEM Systems"| B
+    B -->|"Insert entries pointing to malicious payloads Corporate Control: Registry Editor"| C
+    B -->|"Ensure keys execute payloads at user logon Corporate Control: Registry Configuration"| C
+    B -->|"Validate functionality of Run key entries Corporate Control: Task Scheduler"| C
+    B -->|"Apply stealth techniques to key values Corporate Control: Registry Metadata Manager"| C
+    C -->|"Monitor Run key activity for anomalies Corporate Control: Security Event Logs"| D
+    C -->|"Ensure persistence of malicious keys through user updates Corporate Control: Registry Configuration Tools"| D
+    C -->|"Validate stealth of entries against detection Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Reconfigure entries periodically for evasion Corporate Control: Registry Editor"| D
+    D -->|"Remove logs showing key modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate malicious entries in the Run key Corporate Control: Registry Metadata Tools"| E
+    D -->|"Blend malicious keys with legitimate ones Corporate Control: Windows Registry"| E
+    D -->|"Continuously monitor key activity Corporate Control: Security Operations Center"| E

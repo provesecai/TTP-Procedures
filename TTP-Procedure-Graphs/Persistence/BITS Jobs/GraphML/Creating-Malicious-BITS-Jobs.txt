@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating_Malicious_BITS_Jobs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious BITS Jobs</data>
+</node>
+<node id="B">
+<data key="label">Schedule Malicious Tasks with BITS</data>
+</node>
+<node id="C">
+<data key="label">Maintain Malicious BITS Jobs</data>
+</node>
+<node id="D">
+<data key="label">Conceal BITS Job Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Malicious BITS Jobs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Identify systems with BITS functionality enabled Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine user accounts with permissions to create BITS jobs Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious payloads for job execution Corporate Control: Internal File Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review logging configurations for BITS-related events Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Schedule BITS jobs to execute malicious payloads Corporate Control: BITS Administration Utility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure triggers for periodic execution Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure jobs operate under minimal privilege accounts Corporate Control: BITS Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply stealth techniques to minimize detection Corporate Control: Job Metadata Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate job execution and payload delivery Corporate Control: Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor BITS services for consistent functionality Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system reboots Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test against automated detection systems Corporate Control: Endpoint Detection Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of malicious job creation Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate payloads in job metadata Corporate Control: BITS Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask job configurations in Task Scheduler Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor job behavior for ongoing stealth Corporate Control: Security Operations</data>
+</edge>
+</graph>
+</graphml>

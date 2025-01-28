@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Login Script Locations]
+    B[Modify or Add Malicious Login Scripts]
+    C[Monitor and Maintain Script Execution]
+    D[Conceal Malicious Login Scripts]
+    E[Persistence Achieved via Login Scripts]
+
+    A -->|"Enumerate login script paths in Active Directory Corporate Control: Active Directory Group Policies"| B
+    A -->|"Identify accounts with access to modify login scripts Corporate Control: Group Policy Management Console"| B
+    A -->|"Prepare malicious scripts for execution Corporate Control: Internal File Servers"| B
+    A -->|"Review logging configurations for script changes Corporate Control: SIEM Systems"| B
+    B -->|"Modify existing scripts or add new ones Corporate Control: Script Editor"| C
+    B -->|"Ensure scripts execute upon user logon Corporate Control: Group Policy Editor"| C
+    B -->|"Validate script functionality through testing Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation to script contents Corporate Control: Script Metadata Editor"| C
+    C -->|"Monitor script activity and execution Corporate Control: Event Viewer"| D
+    C -->|"Ensure scripts persist through group policy updates Corporate Control: Group Policy Update Logs"| D
+    C -->|"Validate stealth against detection mechanisms Corporate Control: Endpoint Protection"| D
+    C -->|"Reconfigure scripts periodically to avoid detection Corporate Control: Group Policy Management"| D
+    D -->|"Remove evidence of script modifications Corporate Control: SIEM Systems"| E
+    D -->|"Obfuscate script metadata and contents Corporate Control: Script Configuration Manager"| E
+    D -->|"Blend malicious scripts with legitimate ones Corporate Control: Group Policy Management Console"| E
+    D -->|"Continuously monitor script execution Corporate Control: Security Operations Center"| E

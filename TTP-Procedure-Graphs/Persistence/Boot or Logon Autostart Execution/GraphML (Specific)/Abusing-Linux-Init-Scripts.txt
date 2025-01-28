@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Linux_Init_Scripts_Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Linux Init Scripts</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious Commands in Init Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Init Script Changes</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Init Scripts</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Linux Init Scripts</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate init scripts under /etc/init.d Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions to modify init scripts Corporate Control: Linux User Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts or commands Corporate Control: Internal Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for init script modifications Corporate Control: Syslog</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious commands into init scripts Corporate Control: Script Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts execute during system boot Corporate Control: Init System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of modified init scripts Corporate Control: Boot Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to script metadata Corporate Control: File Properties</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor init script execution for anomalies Corporate Control: Syslog</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure scripts persist across system updates Corporate Control: Configuration Management Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of modified scripts against detection Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure scripts periodically for evasion Corporate Control: Linux System Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of script modifications Corporate Control: Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate script metadata and commands Corporate Control: Script Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious scripts with legitimate init scripts Corporate Control: File System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor script execution behavior continuously Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

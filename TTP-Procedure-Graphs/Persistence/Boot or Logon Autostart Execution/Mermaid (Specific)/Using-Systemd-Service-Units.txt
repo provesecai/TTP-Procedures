@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Systemd Service Unit Files]
+    B[Create or Modify Service Units with Malicious Commands]
+    C[Monitor and Maintain Systemd Service Units]
+    D[Conceal Malicious Service Unit Modifications]
+    E[Persistence Achieved via Systemd Service Units]
+
+    A -->|"Enumerate existing service unit files Corporate Control: Linux File System"| B
+    A -->|"Identify permissions for modifying service units Corporate Control: Linux User Permissions"| B
+    A -->|"Prepare malicious scripts or executables Corporate Control: Internal Repositories"| B
+    A -->|"Analyze logging for service unit changes Corporate Control: Syslog"| B
+    B -->|"Create or modify service units to execute malicious payloads Corporate Control: Systemd Configuration Tools"| C
+    B -->|"Ensure service units are triggered during system boot Corporate Control: Init System"| C
+    B -->|"Validate functionality of modified service units Corporate Control: Boot Logs"| C
+    B -->|"Apply obfuscation to service unit metadata Corporate Control: Service Unit Properties"| C
+    C -->|"Monitor service unit activity for anomalies Corporate Control: Syslog"| D
+    C -->|"Ensure persistence through system updates Corporate Control: Configuration Management Tools"| D
+    C -->|"Validate stealth of service units against detection Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure service units periodically for evasion Corporate Control: Linux System Services"| D
+    D -->|"Remove evidence of service unit changes Corporate Control: Syslog"| E
+    D -->|"Obfuscate metadata of modified service units Corporate Control: Service Unit Metadata Manager"| E
+    D -->|"Blend malicious units with legitimate ones Corporate Control: Linux File System Logs"| E
+    D -->|"Continuously monitor service unit execution Corporate Control: Security Operations Center"| E

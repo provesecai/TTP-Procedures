@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Task Scheduler Access]
+    B[Create Malicious Scheduled Tasks]
+    C[Monitor and Maintain Tasks]
+    D[Conceal Scheduled Tasks]
+    E[Persistence Achieved via Scheduled Tasks]
+
+    A -->|"List accounts with access to Task Scheduler Corporate Control: Active Directory Policies"| B
+    A -->|"Review existing tasks for potential abuse Corporate Control: Windows Task Scheduler"| B
+    A -->|"Prepare malicious scripts or executables Corporate Control: Internal File Servers"| B
+    A -->|"Analyze logging and monitoring for task changes Corporate Control: Event Viewer"| B
+    B -->|"Create scheduled tasks to execute payloads Corporate Control: Task Scheduler"| C
+    B -->|"Configure tasks to trigger at boot or logon Corporate Control: Task Configuration"| C
+    B -->|"Validate task execution through testing Corporate Control: System Logs"| C
+    B -->|"Apply stealth techniques to task names and triggers Corporate Control: Task Metadata"| C
+    C -->|"Monitor task execution and persistence Corporate Control: Event Logs"| D
+    C -->|"Ensure tasks persist through system updates Corporate Control: System Maintenance Tools"| D
+    C -->|"Validate stealth of tasks against detection Corporate Control: Endpoint Protection"| D
+    C -->|"Reconfigure tasks periodically to avoid detection Corporate Control: Task Scheduler"| D
+    D -->|"Remove logs of task creation and execution Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate task configurations and metadata Corporate Control: Task Scheduler Configuration"| E
+    D -->|"Blend malicious tasks with legitimate ones Corporate Control: System Configuration"| E
+    D -->|"Continuously monitor task activity Corporate Control: Security Operations Center"| E

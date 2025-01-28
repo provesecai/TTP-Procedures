@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Windows_LoadOrder_Group_Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows LoadOrder Group Keys</data>
+</node>
+<node id="B">
+<data key="label">Modify LoadOrder Group Keys</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Modified Keys</data>
+</node>
+<node id="D">
+<data key="label">Conceal LoadOrder Group Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via LoadOrder Group Keys</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate LoadOrder Group registry keys Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions to modify registry keys Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious drivers or DLLs Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for registry key modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify LoadOrder Group keys to include malicious payloads Corporate Control: Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payloads are triggered during system boot Corporate Control: LoadOrder Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of modified LoadOrder keys Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to registry values Corporate Control: Registry Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor LoadOrder keys for unauthorized changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system updates Corporate Control: Registry Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against detection tools Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically reconfigure keys for evasion Corporate Control: Registry Editor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing LoadOrder key changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate malicious LoadOrder configurations Corporate Control: Registry Metadata Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious entries with legitimate configurations Corporate Control: LoadOrder Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor registry activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

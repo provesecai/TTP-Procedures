@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify WMI Event Subscriptions]
+    B[Create Malicious WMI Event Filters]
+    C[Monitor and Maintain WMI Filters]
+    D[Conceal Malicious WMI Configurations]
+    E[Persistence Achieved via WMI Persistence]
+
+    A -->|"Enumerate systems supporting WMI Corporate Control: WMI Management Tools"| B
+    A -->|"Identify accounts with access to WMI configurations Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious scripts for execution Corporate Control: Internal File Servers"| B
+    A -->|"Analyze logging for WMI-related events Corporate Control: SIEM Systems"| B
+    B -->|"Create event filters that trigger payloads Corporate Control: WMI Administration"| C
+    B -->|"Configure actions to execute scripts upon triggers Corporate Control: WMI Event Configuration"| C
+    B -->|"Validate filter functionality and stealth Corporate Control: System Logs"| C
+    B -->|"Ensure filters persist through reboots Corporate Control: WMI Configuration Tools"| C
+    C -->|"Monitor filter activity for anomalies Corporate Control: Event Viewer"| D
+    C -->|"Ensure persistence of filters across system updates Corporate Control: WMI Maintenance Tools"| D
+    C -->|"Test filters against detection mechanisms Corporate Control: Endpoint Protection"| D
+    C -->|"Periodically update filters for stealth Corporate Control: WMI Management Console"| D
+    D -->|"Remove logs showing filter creation Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate filter metadata and configurations Corporate Control: WMI Metadata Manager"| E
+    D -->|"Blend malicious filters with legitimate ones Corporate Control: WMI Administration Console"| E
+    D -->|"Continuously monitor WMI activity Corporate Control: Security Operations Center"| E

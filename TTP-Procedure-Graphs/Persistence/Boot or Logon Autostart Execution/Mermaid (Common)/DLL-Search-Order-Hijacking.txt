@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Applications Susceptible to DLL Hijacking]
+    B[Deploy Malicious DLLs in Search Paths]
+    C[Monitor and Maintain DLL Execution]
+    D[Conceal Malicious DLLs]
+    E[Persistence Achieved via DLL Search Order Hijacking]
+
+    A -->|"Enumerate applications that load DLLs dynamically Corporate Control: Application Logs"| B
+    A -->|"Identify DLL search paths with write permissions Corporate Control: Windows File System"| B
+    A -->|"Prepare malicious DLLs to exploit search order Corporate Control: Internal Build Servers"| B
+    A -->|"Assess logging for DLL activity Corporate Control: SIEM Systems"| B
+    B -->|"Deploy malicious DLLs to writable search paths Corporate Control: File Explorer"| C
+    B -->|"Ensure DLLs are loaded by targeted applications Corporate Control: Application Configuration"| C
+    B -->|"Validate functionality of malicious DLLs Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques to DLL metadata Corporate Control: DLL Metadata Manager"| C
+    C -->|"Monitor DLL activity for unauthorized changes Corporate Control: File Activity Logs"| D
+    C -->|"Ensure DLLs persist through application updates Corporate Control: File Integrity Monitoring"| D
+    C -->|"Validate stealth of DLLs against detection Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Periodically update DLLs to evade detection Corporate Control: DLL Maintenance Tools"| D
+    D -->|"Remove logs showing DLL deployment Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate DLL metadata and properties Corporate Control: File Properties Editor"| E
+    D -->|"Blend malicious DLLs with legitimate ones Corporate Control: Application Directory"| E
+    D -->|"Continuously monitor DLL behavior Corporate Control: Security Operations Center"| E

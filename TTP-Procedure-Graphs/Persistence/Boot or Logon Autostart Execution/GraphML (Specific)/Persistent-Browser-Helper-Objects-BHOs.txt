@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Browser_Helper_Objects_BHOs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Internet Explorer BHO Locations</data>
+</node>
+<node id="B">
+<data key="label">Install Malicious BHOs</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain BHO Configurations</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious BHOs</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Browser Helper Objects</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Locate registry keys associated with BHOs Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions required to install BHOs Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious DLLs for BHO injection Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review logging for BHO-related changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add malicious BHOs to Internet Explorer Corporate Control: BHO Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure BHOs are executed during browser startup Corporate Control: Internet Explorer Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality and stealth of BHOs Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to BHO metadata Corporate Control: Registry Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor BHO activity for anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure BHOs persist through system updates Corporate Control: Registry Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test BHOs against detection tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure BHO entries periodically for evasion Corporate Control: Registry Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of BHO installations Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata for malicious BHOs Corporate Control: BHO Metadata Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious BHOs with legitimate ones Corporate Control: Internet Explorer Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor browser activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

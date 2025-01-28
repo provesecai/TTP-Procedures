@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify RunOnce Registry Key]
+    B[Insert Malicious Payloads into RunOnce Key]
+    C[Monitor and Maintain RunOnce Modifications]
+    D[Conceal RunOnce Changes]
+    E[Persistence Achieved via RunOnce Registry Key]
+
+    A -->|"Locate RunOnce registry paths Corporate Control: Windows Registry"| B
+    A -->|"Identify accounts with permissions to modify RunOnce Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare scripts or executables for single execution Corporate Control: Internal File Servers"| B
+    A -->|"Analyze logging for changes to RunOnce keys Corporate Control: Event Viewer"| B
+    B -->|"Insert entries pointing to malicious payloads Corporate Control: Registry Editor"| C
+    B -->|"Ensure entries execute on next boot Corporate Control: Windows Registry"| C
+    B -->|"Validate functionality through testing Corporate Control: Task Scheduler"| C
+    B -->|"Apply stealth techniques to key configurations Corporate Control: Registry Metadata Tools"| C
+    C -->|"Monitor RunOnce activity for anomalies Corporate Control: Event Viewer"| D
+    C -->|"Ensure malicious entries persist until execution Corporate Control: System Logs"| D
+    C -->|"Test stealth against detection mechanisms Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Reconfigure entries post-execution for re-persistence Corporate Control: Registry Manager"| D
+    D -->|"Obfuscate registry entry values Corporate Control: Registry Metadata Editor"| E
+    D -->|"Remove logs of key modifications Corporate Control: Event Viewer"| E
+    D -->|"Blend entries with legitimate RunOnce configurations Corporate Control: Registry Editor"| E
+    D -->|"Monitor key activity continuously Corporate Control: Security Operations Center"| E

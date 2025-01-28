@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scheduling_Hidden_BITS_Jobs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Opportunities for Hidden BITS Jobs</data>
+</node>
+<node id="B">
+<data key="label">Configure Stealthy BITS Jobs</data>
+</node>
+<node id="C">
+<data key="label">Monitor Hidden Job Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Hidden Job Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Hidden BITS Jobs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate available systems with BITS functionality Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze user permissions for creating hidden jobs Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review existing BITS jobs for potential manipulation Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evaluate monitoring tools for detection of hidden jobs Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new BITS jobs with obfuscated names Corporate Control: BITS Job Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use non-standard triggers for job activation Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed scripts or payloads with stealth features Corporate Control: Script Execution Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure jobs to run during low-activity periods Corporate Control: Time-Based Task Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of hidden jobs Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate payloads are executed as intended Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system updates Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test against automated detection tools Corporate Control: Endpoint Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing hidden job creation Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate job metadata to blend with legitimate tasks Corporate Control: BITS Job Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask job triggers in system configuration Corporate Control: Task Scheduler Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor jobs for detection attempts Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

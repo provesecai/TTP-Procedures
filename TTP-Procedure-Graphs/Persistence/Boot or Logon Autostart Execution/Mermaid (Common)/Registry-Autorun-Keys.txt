@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Registry Autorun Locations]
+    B[Add Malicious Entries to Registry Keys]
+    C[Monitor and Maintain Malicious Entries]
+    D[Conceal Registry Changes]
+    E[Persistence Achieved via Registry Autorun Keys]
+
+    A -->|"Enumerate registry locations used for autorun Corporate Control: Windows Registry"| B
+    A -->|"Identify accounts with permissions to modify registry keys Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious executables or scripts Corporate Control: Internal File Servers"| B
+    A -->|"Analyze security configurations for registry access Corporate Control: Endpoint Protection Logs"| B
+    B -->|"Insert malicious keys pointing to payloads Corporate Control: Registry Editor"| C
+    B -->|"Ensure keys are configured for execution during boot Corporate Control: Registry Hive"| C
+    B -->|"Validate key functionality through testing Corporate Control: Task Scheduler"| C
+    B -->|"Apply obfuscation techniques to key values Corporate Control: Registry Configuration Tools"| C
+    C -->|"Monitor registry for unauthorized changes Corporate Control: Security Logs"| D
+    C -->|"Ensure malicious entries persist through updates Corporate Control: Endpoint Monitoring"| D
+    C -->|"Validate stealth of entries against detection Corporate Control: SIEM Tools"| D
+    C -->|"Reconfigure keys periodically to evade detection Corporate Control: Endpoint Protection"| D
+    D -->|"Obfuscate malicious registry entries Corporate Control: Registry Metadata"| E
+    D -->|"Remove evidence of key creation Corporate Control: Windows Event Viewer"| E
+    D -->|"Blend malicious entries with legitimate keys Corporate Control: Registry Editor"| E
+    D -->|"Continuously monitor registry changes Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HKCU_Run_Keys_Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify HKCU Run Registry Keys</data>
+</node>
+<node id="B">
+<data key="label">Add Malicious Entries to Run Keys</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Run Key Modifications</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Run Key Entries</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via HKCU Run Keys</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate HKCU registry paths for Run keys Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with permissions to modify Run keys Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executables for user-specific persistence Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review logging for registry modifications Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert entries pointing to malicious payloads Corporate Control: Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure keys execute payloads at user logon Corporate Control: Registry Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of Run key entries Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply stealth techniques to key values Corporate Control: Registry Metadata Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Run key activity for anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of malicious keys through user updates Corporate Control: Registry Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of entries against detection Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure entries periodically for evasion Corporate Control: Registry Editor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing key modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate malicious entries in the Run key Corporate Control: Registry Metadata Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious keys with legitimate ones Corporate Control: Windows Registry</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor key activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

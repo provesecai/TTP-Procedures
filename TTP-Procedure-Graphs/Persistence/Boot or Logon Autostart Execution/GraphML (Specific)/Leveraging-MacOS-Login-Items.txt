@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="macOS_Login_Items_Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify macOS Login Items</data>
+</node>
+<node id="B">
+<data key="label">Add Malicious Executables to Login Items</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Login Items</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Login Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via macOS Login Items</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate user accounts and their Login Items Corporate Control: macOS System Preferences</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions for modifying Login Items Corporate Control: System Integrity Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executables or scripts Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review macOS logs for Login Item changes Corporate Control: Unified Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious executables into Login Items Corporate Control: Login Item Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure executables are triggered during user logon Corporate Control: macOS Launch Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of malicious Login Items Corporate Control: Activity Monitor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply stealth techniques to executable names Corporate Control: File Metadata Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Login Items for unauthorized changes Corporate Control: Unified Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through macOS updates Corporate Control: System Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of Login Items against detection Corporate Control: Endpoint Security Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure Login Items periodically for evasion Corporate Control: macOS Configuration Profiles</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of Login Item modifications Corporate Control: System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata of malicious Login Items Corporate Control: File Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Login Items with legitimate ones Corporate Control: System Preferences</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Login Item behavior continuously Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

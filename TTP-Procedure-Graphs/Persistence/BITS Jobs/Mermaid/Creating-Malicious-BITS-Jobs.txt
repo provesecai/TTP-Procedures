@@ -1,0 +1,23 @@
+graph TD;
+    A[Create Malicious BITS Jobs]
+    B[Schedule Malicious Tasks with BITS]
+    C[Maintain Malicious BITS Jobs]
+    D[Conceal BITS Job Configurations]
+    E[Persistence Achieved via Malicious BITS Jobs]
+
+    A -->|"Identify systems with BITS functionality enabled Corporate Control: Windows Task Scheduler"| B
+    A -->|"Determine user accounts with permissions to create BITS jobs Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious payloads for job execution Corporate Control: Internal File Server"| B
+    A -->|"Review logging configurations for BITS-related events Corporate Control: Windows Event Viewer"| B
+    B -->|"Schedule BITS jobs to execute malicious payloads Corporate Control: BITS Administration Utility"| C
+    B -->|"Configure triggers for periodic execution Corporate Control: Task Scheduler"| C
+    B -->|"Ensure jobs operate under minimal privilege accounts Corporate Control: BITS Service"| C
+    B -->|"Apply stealth techniques to minimize detection Corporate Control: Job Metadata Settings"| C
+    C -->|"Validate job execution and payload delivery Corporate Control: Security Logs"| D
+    C -->|"Monitor BITS services for consistent functionality Corporate Control: System Logs"| D
+    C -->|"Ensure persistence across system reboots Corporate Control: Task Scheduler"| D
+    C -->|"Test against automated detection systems Corporate Control: Endpoint Detection Tools"| D
+    D -->|"Remove logs of malicious job creation Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate payloads in job metadata Corporate Control: BITS Configuration"| E
+    D -->|"Mask job configurations in Task Scheduler Corporate Control: Task Scheduler"| E
+    D -->|"Monitor job behavior for ongoing stealth Corporate Control: Security Operations"| E

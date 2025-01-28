@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Service_Binary_Path_Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Services</data>
+</node>
+<node id="B">
+<data key="label">Modify Service Binary Paths</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Malicious Service Paths</data>
+</node>
+<node id="D">
+<data key="label">Conceal Modified Binary Paths</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Service Binary Path Hijacking</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate services with writable binary paths Corporate Control: Windows Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze permissions required to modify service paths Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious payloads for service execution Corporate Control: Internal Build Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess monitoring and logging for service path changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter binary paths to point to malicious executables Corporate Control: Service Control Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure services are triggered during boot Corporate Control: Service Startup Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate service functionality with new paths Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to binary paths Corporate Control: Service Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor services for unauthorized changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious paths persist through updates Corporate Control: Service Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against automated detection Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure paths periodically to avoid detection Corporate Control: Service Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of service modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified service configurations Corporate Control: Service Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious service paths with legitimate configurations Corporate Control: System Configuration Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor service activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_BITS_Job_Triggers_in_Group_Policies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify GPOs Supporting BITS Job Triggers</data>
+</node>
+<node id="B">
+<data key="label">Modify GPOs to Create Malicious BITS Jobs</data>
+</node>
+<node id="C">
+<data key="label">Monitor BITS Jobs Deployed via GPOs</data>
+</node>
+<node id="D">
+<data key="label">Conceal GPO Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BITS Job Triggers in GPOs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate GPOs with BITS functionality Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts with permissions to modify GPOs Corporate Control: Active Directory Roles</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging configurations for GPO changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evaluate existing GPOs for potential abuse Corporate Control: Group Policy Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify GPOs to create malicious BITS jobs Corporate Control: Group Policy Management Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads into jobs triggered by GPOs Corporate Control: Script Execution Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure jobs to execute with minimal detection Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test GPO-triggered jobs for functionality Corporate Control: Endpoint Monitoring Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor GPO changes and job execution Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure jobs persist across GPO updates Corporate Control: Group Policy Update Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate execution of jobs on all domain-joined systems Corporate Control: Domain Controller Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test jobs against automated detection tools Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of GPO modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate GPO-triggered job configurations Corporate Control: Group Policy Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious jobs with legitimate ones Corporate Control: GPO Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor GPO-triggered jobs for anomalies Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_BITS_Job_Retry_Configurations" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Retry Configurations for BITS Jobs</data>
+</node>
+<node id="B">
+<data key="label">Modify Retry Parameters</data>
+</node>
+<node id="C">
+<data key="label">Monitor Retry Behavior</data>
+</node>
+<node id="D">
+<data key="label">Conceal Retry Configuration Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Retry Configurations</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Review retry settings for existing BITS jobs Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify jobs with frequent retries Corporate Control: BITS Job Queue</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess permissions for modifying retry configurations Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evaluate logs for detection of retry-related anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter retry intervals to trigger malicious payloads Corporate Control: BITS Administration Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify retry counts to increase stealth Corporate Control: BITS Job Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure jobs automatically restart on failure Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads in retry-triggered events Corporate Control: Script Execution Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor retry activity to validate execution Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure retry settings persist across system reboots Corporate Control: Job Scheduler Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate payload execution during retries Corporate Control: Endpoint Detection Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test against detection mechanisms during retries Corporate Control: Security Operations Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask retry-related changes in logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate retry configuration settings Corporate Control: BITS Job Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend retry parameters with standard configurations Corporate Control: Task Scheduler Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor retries for security alerts Corporate Control: SIEM Tools</data>
+</edge>
+</graph>
+</graphml>

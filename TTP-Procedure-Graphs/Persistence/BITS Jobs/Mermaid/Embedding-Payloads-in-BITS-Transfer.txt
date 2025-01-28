@@ -1,0 +1,23 @@
+graph TD;
+    A[Prepare Payloads for BITS Transfers]
+    B[Embed Payloads in File Transfers]
+    C[Monitor Payload Delivery]
+    D[Conceal Payload Operations]
+    E[Persistence Achieved via BITS Transfers]
+
+    A -->|"Create malicious payloads for embedding Corporate Control: Development Servers"| B
+    A -->|"Identify systems utilizing BITS transfers Corporate Control: Internal File Servers"| B
+    A -->|"Assess permissions for BITS file transfer configuration Corporate Control: BITS Management"| B
+    A -->|"Verify logging configurations for BITS file activity Corporate Control: Event Viewer"| B
+    B -->|"Embed payloads into files during transfers Corporate Control: File Transfer Systems"| C
+    B -->|"Configure transfer policies to execute payloads Corporate Control: BITS Administration"| C
+    B -->|"Ensure stealth in payload delivery Corporate Control: File Metadata"| C
+    B -->|"Validate transfer integrity and payload execution Corporate Control: System Logs"| C
+    C -->|"Monitor transfer activity for anomalies Corporate Control: Windows Logs"| D
+    C -->|"Ensure persistence across transfer failures Corporate Control: Retry Configuration Tools"| D
+    C -->|"Validate payload execution over time Corporate Control: Endpoint Logs"| D
+    C -->|"Test file transfers against detection tools Corporate Control: Endpoint Detection Systems"| D
+    D -->|"Mask transfer activity in logs Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate payloads in file metadata Corporate Control: BITS Transfer Configuration"| E
+    D -->|"Blend malicious transfers with legitimate activity Corporate Control: System Logs"| E
+    D -->|"Continuously monitor transfer integrity Corporate Control: Security Operations"| E

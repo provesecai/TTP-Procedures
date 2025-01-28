@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze BCD Settings]
+    B[Modify Boot Configuration Data]
+    C[Monitor BCD Changes and Execution]
+    D[Conceal BCD Modifications]
+    E[Persistence Achieved via BCD Manipulation]
+
+    A -->|"Identify systems with accessible BCD configurations Corporate Control: Boot Configuration Tools"| B
+    A -->|"Determine permissions required to modify BCD Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious executables for boot sequence Corporate Control: Internal File Servers"| B
+    A -->|"Analyze security mechanisms for boot integrity Corporate Control: SIEM Systems"| B
+    B -->|"Alter BCD entries to include malicious payloads Corporate Control: BCDedit Utility"| C
+    B -->|"Ensure payloads execute during boot sequence Corporate Control: Boot Manager"| C
+    B -->|"Validate functionality of modified BCD entries Corporate Control: System Logs"| C
+    B -->|"Apply stealth techniques to BCD configurations Corporate Control: Boot Metadata Editor"| C
+    C -->|"Monitor BCD activity for anomalies Corporate Control: Event Viewer"| D
+    C -->|"Ensure persistence of modified BCD entries Corporate Control: Boot Configuration Tools"| D
+    C -->|"Test modified entries against detection tools Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Periodically update BCD configurations for evasion Corporate Control: Boot Manager Tools"| D
+    D -->|"Remove evidence of BCD modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate malicious entries in boot configurations Corporate Control: BCD Metadata Manager"| E
+    D -->|"Blend modified entries with legitimate configurations Corporate Control: Boot Manager"| E
+    D -->|"Continuously monitor boot behavior Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Boot_Configuration_Data_Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze BCD Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify Boot Configuration Data</data>
+</node>
+<node id="C">
+<data key="label">Monitor BCD Changes and Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal BCD Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BCD Manipulation</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Identify systems with accessible BCD configurations Corporate Control: Boot Configuration Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine permissions required to modify BCD Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executables for boot sequence Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security mechanisms for boot integrity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter BCD entries to include malicious payloads Corporate Control: BCDedit Utility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payloads execute during boot sequence Corporate Control: Boot Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of modified BCD entries Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply stealth techniques to BCD configurations Corporate Control: Boot Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor BCD activity for anomalies Corporate Control: Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of modified BCD entries Corporate Control: Boot Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modified entries against detection tools Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically update BCD configurations for evasion Corporate Control: Boot Manager Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of BCD modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate malicious entries in boot configurations Corporate Control: BCD Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend modified entries with legitimate configurations Corporate Control: Boot Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor boot behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

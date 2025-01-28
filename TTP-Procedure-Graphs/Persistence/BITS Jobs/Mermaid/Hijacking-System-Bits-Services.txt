@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify System BITS Service Configurations]
+    B[Modify System-Level BITS Configurations]
+    C[Monitor Modified BITS Service Behavior]
+    D[Conceal System-Level BITS Changes]
+    E[Persistence Achieved via Hijacked BITS Services]
+
+    A -->|"Identify BITS service configurations across systems Corporate Control: System Configuration Manager"| B
+    A -->|"Determine permissions required to modify service settings Corporate Control: Active Directory Policies"| B
+    A -->|"Evaluate system monitoring for BITS-related alerts Corporate Control: Event Viewer"| B
+    A -->|"Review existing BITS services for vulnerabilities Corporate Control: BITS Administration Tools"| B
+    B -->|"Alter BITS services to execute malicious scripts Corporate Control: Service Configuration Manager"| C
+    B -->|"Embed payloads into critical service functions Corporate Control: BITS Metadata Configuration"| C
+    B -->|"Configure services to operate under elevated privileges Corporate Control: Service Account Management"| C
+    B -->|"Test modified services for operational stealth Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Monitor modified services for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure modified services persist across reboots Corporate Control: Task Scheduler Logs"| D
+    C -->|"Validate stealth of modified services during execution Corporate Control: Security Event Logs"| D
+    C -->|"Test against detection tools for modified services Corporate Control: Endpoint Detection Systems"| D
+    D -->|"Mask service configuration changes in logs Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate malicious service behavior Corporate Control: BITS Service Metadata"| E
+    D -->|"Blend modified services with legitimate ones Corporate Control: Service Manager Logs"| E
+    D -->|"Continuously monitor modified services for detection attempts Corporate Control: Security Operations Center"| E

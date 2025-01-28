@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_BITS_Job_Metadata" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Metadata Fields in BITS Jobs</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious Metadata</data>
+</node>
+<node id="C">
+<data key="label">Monitor Metadata-Driven Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Metadata Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BITS Job Metadata</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate jobs with editable metadata Corporate Control: BITS Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review permissions for modifying metadata fields Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical metadata used in job execution Corporate Control: BITS Administration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze monitoring systems for metadata-related alerts Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious payloads into metadata fields Corporate Control: BITS Metadata Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure jobs to use payloads during execution Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate payloads embedded in metadata Corporate Control: System Testing Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure metadata changes align with legitimate job functions Corporate Control: Job Metadata Review</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor job activity for anomalies related to metadata Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across job updates Corporate Control: Task Scheduler Updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth in metadata-embedded payloads Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test jobs against detection systems Corporate Control: Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask metadata changes in logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata-related configurations Corporate Control: BITS Job Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend metadata with legitimate values Corporate Control: Task Scheduler Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor metadata-driven jobs Corporate Control: SIEM Tools</data>
+</edge>
+</graph>
+</graphml>

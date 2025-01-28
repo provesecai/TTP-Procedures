@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Systemd_Service_Units_Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Systemd Service Unit Files</data>
+</node>
+<node id="B">
+<data key="label">Create or Modify Service Units with Malicious Commands</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Systemd Service Units</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Service Unit Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Systemd Service Units</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing service unit files Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions for modifying service units Corporate Control: Linux User Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts or executables Corporate Control: Internal Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for service unit changes Corporate Control: Syslog</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create or modify service units to execute malicious payloads Corporate Control: Systemd Configuration Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure service units are triggered during system boot Corporate Control: Init System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of modified service units Corporate Control: Boot Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to service unit metadata Corporate Control: Service Unit Properties</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor service unit activity for anomalies Corporate Control: Syslog</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through system updates Corporate Control: Configuration Management Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test service units against detection tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure service units periodically for evasion Corporate Control: Linux System Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of service unit changes Corporate Control: Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata of modified service units Corporate Control: Service Unit Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious service units with legitimate ones Corporate Control: Linux File System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor service unit execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

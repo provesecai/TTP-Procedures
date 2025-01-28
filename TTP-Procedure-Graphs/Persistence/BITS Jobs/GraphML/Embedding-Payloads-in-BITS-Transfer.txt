@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_Payloads_in_BITS_Transfer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare Payloads for BITS Transfers</data>
+</node>
+<node id="B">
+<data key="label">Embed Payloads in File Transfers</data>
+</node>
+<node id="C">
+<data key="label">Monitor Payload Delivery</data>
+</node>
+<node id="D">
+<data key="label">Conceal Payload Operations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BITS Transfers</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Create malicious payloads for embedding Corporate Control: Development Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify systems utilizing BITS transfers Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess permissions for BITS file transfer configuration Corporate Control: BITS Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify logging configurations for BITS file activity Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed payloads into files during transfers Corporate Control: File Transfer Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure transfer policies to execute payloads Corporate Control: BITS Administration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure stealth in payload delivery Corporate Control: File Metadata</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate transfer integrity and payload execution Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor transfer activity for anomalies Corporate Control: Windows Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across transfer failures Corporate Control: Retry Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate payload execution over time Corporate Control: Endpoint Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test file transfers against detection tools Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask transfer activity in logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate payloads in file metadata Corporate Control: BITS Transfer Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious transfers with legitimate activity Corporate Control: System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor transfer integrity Corporate Control: Security Operations</data>
+</edge>
+</graph>
+</graphml>

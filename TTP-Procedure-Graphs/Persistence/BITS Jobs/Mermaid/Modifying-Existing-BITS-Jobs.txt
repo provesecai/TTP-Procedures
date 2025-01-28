@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Existing BITS Jobs]
+    B[Modify Legitimate BITS Jobs]
+    C[Maintain Altered BITS Jobs]
+    D[Conceal Job Modifications]
+    E[Persistence Achieved via Modified BITS Jobs]
+
+    A -->|"Enumerate existing BITS jobs Corporate Control: Windows Task Scheduler"| B
+    A -->|"Identify jobs with elevated permissions Corporate Control: Active Directory Roles"| B
+    A -->|"Select jobs used for recurring operations Corporate Control: BITS Job Queue"| B
+    A -->|"Analyze job configurations and metadata Corporate Control: BITS Administration Tool"| B
+    B -->|"Insert malicious payloads into legitimate jobs Corporate Control: BITS API"| C
+    B -->|"Configure altered jobs to execute payloads Corporate Control: Task Scheduler"| C
+    B -->|"Ensure jobs are triggered under standard conditions Corporate Control: Job Triggers"| C
+    B -->|"Test job execution to avoid detection Corporate Control: Security Logs"| C
+    C -->|"Monitor altered jobs for functionality Corporate Control: Windows Logs"| D
+    C -->|"Ensure persistence through system updates Corporate Control: System Maintenance Tools"| D
+    C -->|"Validate that altered jobs bypass security mechanisms Corporate Control: Endpoint Detection Systems"| D
+    C -->|"Periodically update job configurations Corporate Control: Task Scheduler"| D
+    D -->|"Remove evidence of job modifications Corporate Control: Windows Event Viewer"| E
+    D -->|"Mask altered configurations in metadata Corporate Control: BITS Configuration Settings"| E
+    D -->|"Blend altered jobs with legitimate ones Corporate Control: Task Manager"| E
+    D -->|"Monitor logs for anomalies tied to job execution Corporate Control: Security Monitoring Systems"| E

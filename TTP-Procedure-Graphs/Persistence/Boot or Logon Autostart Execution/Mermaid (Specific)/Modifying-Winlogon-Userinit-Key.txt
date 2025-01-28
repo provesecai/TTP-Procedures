@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Winlogon Userinit Registry Key]
+    B[Modify Userinit Key with Malicious Payload]
+    C[Monitor and Maintain Userinit Modifications]
+    D[Conceal Userinit Changes]
+    E[Persistence Achieved via Winlogon Userinit Key]
+
+    A -->|"Enumerate registry paths under Winlogon Corporate Control: Windows Registry"| B
+    A -->|"Identify accounts with permissions to modify Userinit key Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious scripts or executables Corporate Control: Internal File Servers"| B
+    A -->|"Review logging for registry changes Corporate Control: Event Viewer"| B
+    B -->|"Insert malicious executables into the Userinit key Corporate Control: Registry Editor"| C
+    B -->|"Ensure Userinit key points to payloads executed on logon Corporate Control: Windows Registry"| C
+    B -->|"Validate key functionality through testing Corporate Control: Security Logs"| C
+    B -->|"Apply obfuscation to key values Corporate Control: Registry Metadata Tools"| C
+    C -->|"Monitor Userinit activity for unauthorized changes Corporate Control: Event Viewer"| D
+    C -->|"Ensure persistence across system reboots Corporate Control: Windows Task Scheduler"| D
+    C -->|"Validate stealth against detection tools Corporate Control: SIEM Systems"| D
+    C -->|"Periodically reconfigure key to evade detection Corporate Control: Endpoint Security Systems"| D
+    D -->|"Obfuscate malicious key values Corporate Control: Registry Metadata Manager"| E
+    D -->|"Remove logs of Userinit modifications Corporate Control: Event Viewer"| E
+    D -->|"Blend malicious entries with legitimate configurations Corporate Control: Registry Editor"| E
+    D -->|"Continuously monitor key behavior Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DLL_Search_Order_Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Applications Susceptible to DLL Hijacking</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious DLLs in Search Paths</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain DLL Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious DLLs</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DLL Search Order Hijacking</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate applications that load DLLs dynamically Corporate Control: Application Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify DLL search paths with write permissions Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious DLLs to exploit search order Corporate Control: Internal Build Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging for DLL activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious DLLs to writable search paths Corporate Control: File Explorer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure DLLs are loaded by targeted applications Corporate Control: Application Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of malicious DLLs Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to DLL metadata Corporate Control: DLL Metadata Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor DLL activity for unauthorized changes Corporate Control: File Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DLLs persist through application updates Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of DLLs against detection Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically update DLLs to evade detection Corporate Control: DLL Maintenance Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing DLL deployment Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate DLL metadata and properties Corporate Control: File Properties Editor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious DLLs with legitimate ones Corporate Control: Application Directory</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor DLL behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AppInit_DLLs_Abuse" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify AppInit_DLLs Registry Key</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious DLLs into AppInit_DLLs</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain AppInit_DLLs Entries</data>
+</node>
+<node id="D">
+<data key="label">Conceal AppInit_DLLs Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via AppInit_DLLs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate AppInit_DLLs registry key paths Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with access to modify AppInit_DLLs Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious DLLs for injection Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for AppInit_DLLs changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious DLL paths into AppInit_DLLs Corporate Control: Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure DLLs are loaded by all processes Corporate Control: Windows Registry Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate DLL functionality and stealth Corporate Control: Endpoint Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to DLL paths Corporate Control: Registry Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor AppInit_DLLs activity for anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious DLLs persist through system updates Corporate Control: Registry Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test DLLs against detection tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure DLL paths periodically for evasion Corporate Control: Registry Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing AppInit_DLLs changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata for malicious DLL paths Corporate Control: Registry Metadata Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious DLLs with legitimate paths Corporate Control: AppInit_DLLs Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor AppInit_DLLs activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

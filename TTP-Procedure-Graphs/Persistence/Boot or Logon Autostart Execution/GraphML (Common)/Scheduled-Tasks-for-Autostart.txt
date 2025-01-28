@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scheduled_Tasks_for_Autostart" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Task Scheduler Access</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Scheduled Tasks</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Tasks</data>
+</node>
+<node id="D">
+<data key="label">Conceal Scheduled Tasks</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Scheduled Tasks</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">List accounts with access to Task Scheduler Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review existing tasks for potential abuse Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts or executables Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging and monitoring for task changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create scheduled tasks to execute payloads Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure tasks to trigger at boot or logon Corporate Control: Task Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate task execution through testing Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply stealth techniques to task names and triggers Corporate Control: Task Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution and persistence Corporate Control: Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure tasks persist through system updates Corporate Control: System Maintenance Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of tasks against detection Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure tasks periodically to avoid detection Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of task creation and execution Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate task configurations and metadata Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious tasks with legitimate ones Corporate Control: System Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor task activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

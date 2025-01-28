@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WMI_Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WMI Event Subscriptions</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious WMI Event Filters</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain WMI Filters</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious WMI Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WMI Persistence</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate systems supporting WMI Corporate Control: WMI Management Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts with access to WMI configurations Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts for execution Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for WMI-related events Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create event filters that trigger payloads Corporate Control: WMI Administration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure actions to execute scripts upon triggers Corporate Control: WMI Event Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate filter functionality and stealth Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure filters persist through reboots Corporate Control: WMI Configuration Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor filter activity for anomalies Corporate Control: Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of filters across system updates Corporate Control: WMI Maintenance Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test filters against detection mechanisms Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically update filters for stealth Corporate Control: WMI Management Console</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing filter creation Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate filter metadata and configurations Corporate Control: WMI Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious filters with legitimate ones Corporate Control: WMI Administration Console</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor WMI activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

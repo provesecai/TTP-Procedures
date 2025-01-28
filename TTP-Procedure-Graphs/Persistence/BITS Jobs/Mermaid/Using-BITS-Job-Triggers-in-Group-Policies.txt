@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify GPOs Supporting BITS Job Triggers]
+    B[Modify GPOs to Create Malicious BITS Jobs]
+    C[Monitor BITS Jobs Deployed via GPOs]
+    D[Conceal GPO Modifications]
+    E[Persistence Achieved via BITS Job Triggers in GPOs]
+
+    A -->|"Enumerate GPOs with BITS functionality Corporate Control: Group Policy Management Console"| B
+    A -->|"Identify accounts with permissions to modify GPOs Corporate Control: Active Directory Roles"| B
+    A -->|"Analyze logging configurations for GPO changes Corporate Control: Event Viewer"| B
+    A -->|"Evaluate existing GPOs for potential abuse Corporate Control: Group Policy Logs"| B
+    B -->|"Modify GPOs to create malicious BITS jobs Corporate Control: Group Policy Management Editor"| C
+    B -->|"Embed payloads into jobs triggered by GPOs Corporate Control: Script Execution Services"| C
+    B -->|"Configure jobs to execute with minimal detection Corporate Control: Task Scheduler"| C
+    B -->|"Test GPO-triggered jobs for functionality Corporate Control: Endpoint Monitoring Logs"| C
+    C -->|"Monitor GPO changes and job execution Corporate Control: Security Event Logs"| D
+    C -->|"Ensure jobs persist across GPO updates Corporate Control: Group Policy Update Logs"| D
+    C -->|"Validate execution of jobs on all domain-joined systems Corporate Control: Domain Controller Logs"| D
+    C -->|"Test jobs against automated detection tools Corporate Control: SIEM Systems"| D
+    D -->|"Remove logs of GPO modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate GPO-triggered job configurations Corporate Control: Group Policy Metadata"| E
+    D -->|"Blend malicious jobs with legitimate ones Corporate Control: GPO Logs"| E
+    D -->|"Continuously monitor GPO-triggered jobs for anomalies Corporate Control: Security Operations Center"| E

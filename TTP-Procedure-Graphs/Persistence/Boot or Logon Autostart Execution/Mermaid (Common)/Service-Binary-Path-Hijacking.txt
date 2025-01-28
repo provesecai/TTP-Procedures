@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Services]
+    B[Modify Service Binary Paths]
+    C[Monitor and Maintain Malicious Service Paths]
+    D[Conceal Modified Binary Paths]
+    E[Persistence Achieved via Service Binary Path Hijacking]
+
+    A -->|"Enumerate services with writable binary paths Corporate Control: Windows Services"| B
+    A -->|"Analyze permissions required to modify service paths Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious payloads for service execution Corporate Control: Internal Build Servers"| B
+    A -->|"Assess monitoring and logging for service path changes Corporate Control: Event Viewer"| B
+    B -->|"Alter binary paths to point to malicious executables Corporate Control: Service Control Manager"| C
+    B -->|"Ensure services are triggered during boot Corporate Control: Service Startup Configuration"| C
+    B -->|"Validate service functionality with new paths Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques to binary paths Corporate Control: Service Metadata"| C
+    C -->|"Monitor services for unauthorized changes Corporate Control: SIEM Systems"| D
+    C -->|"Ensure malicious paths persist through updates Corporate Control: Service Configuration Tools"| D
+    C -->|"Validate stealth against automated detection Corporate Control: Endpoint Protection"| D
+    C -->|"Reconfigure paths periodically to avoid detection Corporate Control: Service Manager"| D
+    D -->|"Remove logs of service modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate modified service configurations Corporate Control: Service Metadata Manager"| E
+    D -->|"Blend malicious service paths with legitimate configurations Corporate Control: System Configuration Manager"| E
+    D -->|"Continuously monitor service activity Corporate Control: Security Operations Center"| E

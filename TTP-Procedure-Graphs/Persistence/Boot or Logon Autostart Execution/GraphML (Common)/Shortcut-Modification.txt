@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Shortcut_Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Existing Shortcut Files</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Shortcut Targets</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Shortcut Modifications</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Shortcut Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Shortcut Modification</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Scan for shortcut files used in startup locations Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions required to modify shortcut files Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executables or scripts as payloads Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging for file modifications Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate shortcut targets with malicious payloads Corporate Control: File Explorer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure shortcuts are executed during boot or logon Corporate Control: Shortcut Properties</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate functionality of modified shortcuts Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to shortcut metadata Corporate Control: File Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor shortcut files for unauthorized changes Corporate Control: File Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure shortcuts persist across system updates Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of modified shortcuts against detection Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure shortcuts periodically for evasion Corporate Control: File Manager Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of shortcut modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate metadata to blend malicious shortcuts with legitimate ones Corporate Control: File Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask shortcut file locations in system directories Corporate Control: Windows File Explorer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor shortcut behavior continuously Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

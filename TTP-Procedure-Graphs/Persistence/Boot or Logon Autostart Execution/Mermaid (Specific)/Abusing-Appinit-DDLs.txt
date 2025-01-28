@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify AppInit_DLLs Registry Key]
+    B[Insert Malicious DLLs into AppInit_DLLs]
+    C[Monitor and Maintain AppInit_DLLs Entries]
+    D[Conceal AppInit_DLLs Modifications]
+    E[Persistence Achieved via AppInit_DLLs]
+
+    A -->|"Enumerate AppInit_DLLs registry key paths Corporate Control: Windows Registry"| B
+    A -->|"Identify user accounts with access to modify AppInit_DLLs Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious DLLs for injection Corporate Control: Internal File Servers"| B
+    A -->|"Analyze logging for AppInit_DLLs changes Corporate Control: SIEM Systems"| B
+    B -->|"Insert malicious DLL paths into AppInit_DLLs Corporate Control: Registry Editor"| C
+    B -->|"Ensure DLLs are loaded by all processes Corporate Control: Windows Registry Configuration"| C
+    B -->|"Validate DLL functionality and stealth Corporate Control: Endpoint Monitoring Tools"| C
+    B -->|"Apply obfuscation techniques to DLL paths Corporate Control: Registry Metadata Editor"| C
+    C -->|"Monitor AppInit_DLLs activity for anomalies Corporate Control: Security Event Logs"| D
+    C -->|"Ensure malicious DLLs persist through system updates Corporate Control: Registry Configuration Tools"| D
+    C -->|"Test DLLs against detection tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure DLL paths periodically for evasion Corporate Control: Registry Manager"| D
+    D -->|"Remove logs showing AppInit_DLLs changes Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate metadata for malicious DLL paths Corporate Control: Registry Metadata Tools"| E
+    D -->|"Blend malicious DLLs with legitimate paths Corporate Control: AppInit_DLLs Configuration"| E
+    D -->|"Continuously monitor AppInit_DLLs activity Corporate Control: Security Operations Center"| E
