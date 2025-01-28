@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify IAM Policies with Broad Permissions]
+    B[Modify IAM Policies for Persistence]
+    C[Test Policy Changes for Persistence]
+    D[Conceal IAM Policy Modifications]
+    E[Persistence Achieved via IAM Policies]
+
+    A -->|"Enumerate existing IAM policies and roles
+    Corporate Control: AWS IAM Console"| B
+    A -->|"Identify policies with privileges to manage keys or roles
+    Corporate Control: IAM Policy Management"| B
+    A -->|"Check for overly permissive policies
+    Corporate Control: IAM Role Insights"| B
+    A -->|"Assess monitoring configurations for policy changes
+    Corporate Control: AWS CloudTrail Logs"| B
+    B -->|"Modify existing policies to include backdoor permissions
+    Corporate Control: AWS Policy Editor"| C
+    B -->|"Create new roles with elevated privileges
+    Corporate Control: AWS IAM Console"| C
+    B -->|"Attach attacker-controlled policies to critical accounts
+    Corporate Control: IAM Role Manager"| C
+    B -->|"Configure policies to appear legitimate in audits
+    Corporate Control: AWS Policy Formatting"| C
+    C -->|"Execute actions using modified policies
+    Corporate Control: AWS Resource Management"| D
+    C -->|"Test persistence by accessing resources over time
+    Corporate Control: AWS Security Hub"| D
+    C -->|"Validate policy changes are not flagged by alerts
+    Corporate Control: AWS GuardDuty"| D
+    C -->|"Ensure changes survive IAM policy updates
+    Corporate Control: Policy Versioning"| D
+    D -->|"Delete logs showing policy modifications
+    Corporate Control: CloudTrail Logs"| E
+    D -->|"Mask timestamps of policy changes
+    Corporate Control: AWS Config"| E
+    D -->|"Ensure policy changes blend with legitimate configurations
+    Corporate Control: IAM Audit Reports"| E
+    D -->|"Periodically refresh policies to evade detection
+    Corporate Control: IAM Lifecycle Manager"| E

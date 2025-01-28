@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Email Account Management Permissions]
+    B[Create or Alter Email Forwarding Rules]
+    C[Validate Email Forwarding Functionality]
+    D[Conceal Modified Forwarding Rules]
+    E[Persistence Achieved via Email Forwarding Rules]
+
+    A -->|"List users with permissions to create forwarding rules
+    Corporate Control: Email Management Console"| B
+    A -->|"Analyze existing forwarding rules and associated accounts
+    Corporate Control: Email Logs"| B
+    A -->|"Prioritize accounts with access to sensitive communications
+    Corporate Control: Active Directory"| B
+    A -->|"Assess logging and alerting for forwarding rule changes
+    Corporate Control: SIEM Tools"| B
+    B -->|"Create new forwarding rules to redirect emails
+    Corporate Control: Email Rules Engine"| C
+    B -->|"Modify existing rules to include adversary-controlled addresses
+    Corporate Control: Email Client"| C
+    B -->|"Use external email addresses to avoid detection
+    Corporate Control: Third-Party Services"| C
+    B -->|"Set rules to target specific keywords or users
+    Corporate Control: Email Filtering System"| C
+    C -->|"Test rule functionality by sending test emails
+    Corporate Control: Email Delivery Logs"| D
+    C -->|"Verify that emails are successfully redirected
+    Corporate Control: Email Routing Logs"| D
+    C -->|"Monitor communications to refine rule configurations
+    Corporate Control: Email Analytics"| D
+    C -->|"Ensure rules persist across email system updates
+    Corporate Control: Update Management"| D
+    D -->|"Remove logs of rule creation or changes
+    Corporate Control: Email Audit Logs"| E
+    D -->|"Mask rule settings by blending with legitimate configurations
+    Corporate Control: Email Client Interface"| E
+    D -->|"Obfuscate forwarding addresses in system configurations
+    Corporate Control: Email Server Settings"| E
+    D -->|"Prevent detection by disabling email rule alerts
+    Corporate Control: Notification Settings"| E

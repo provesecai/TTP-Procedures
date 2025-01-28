@@ -1,0 +1,39 @@
+graph TD;
+    A[Gain Access to Kerberos Ticket-Granting Ticket KRBTGT]
+    B[Generate and Deploy Golden Tickets]
+    C[Test and Monitor Golden Ticket Functionality]
+    D[Maintain and Conceal Golden Ticket Access]
+    E[Persistence Achieved via Golden Tickets]
+
+    A -->|"Identify KRBTGT account credentials through privilege escalation
+    Corporate Control: Active Directory"| B
+    A -->|"Extract necessary cryptographic material for Golden Ticket generation
+    Corporate Control: Security Database"| B
+    A -->|"Verify access to domain controllers for ticket creation
+    Corporate Control: Domain Controller"| B
+    A -->|"Assess logging and monitoring for Kerberos ticket activity
+    Corporate Control: Event Logs"| B
+    B -->|"Use tools like Mimikatz to generate Golden Tickets
+    Corporate Control: Adversary Toolset"| C
+    B -->|"Customize tickets with extended lifetimes for persistence
+    Corporate Control: Kerberos Authentication Service"| C
+    B -->|"Impersonate high-privilege accounts to maximize access
+    Corporate Control: Privileged Roles"| C
+    B -->|"Deploy tickets on systems requiring privileged access
+    Corporate Control: Domain Resources"| C
+    C -->|"Perform privileged actions using Golden Tickets to validate access
+    Corporate Control: Authentication Logs"| D
+    C -->|"Monitor for expiration or invalidation of issued tickets
+    Corporate Control: Ticket Monitoring Systems"| D
+    C -->|"Verify compatibility with organizational systems and services
+    Corporate Control: Kerberos-Integrated Applications"| D
+    C -->|"Test tickets against system updates and changes
+    Corporate Control: Patch Management Tools"| D
+    D -->|"Clear event logs showing Golden Ticket usage
+    Corporate Control: Event Viewer"| E
+    D -->|"Alter ticket timestamps to avoid detection
+    Corporate Control: Authentication Logs"| E
+    D -->|"Configure tickets to blend with legitimate traffic
+    Corporate Control: Network Monitoring Systems"| E
+    D -->|"Periodically refresh or regenerate tickets to maintain access
+    Corporate Control: Kerberos Ticket System"| E

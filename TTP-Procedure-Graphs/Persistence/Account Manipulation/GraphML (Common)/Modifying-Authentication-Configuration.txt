@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Authentication_Configuration" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Existing Authentication Policies</data>
+</node>
+<node id="B">
+<data key="label">Modify Policies to Facilitate Persistent Access</data>
+</node>
+<node id="C">
+<data key="label">Test Adjusted Authentication for Persistence</data>
+</node>
+<node id="D">
+<data key="label">Hide Changes to Authentication Settings</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Authentication Configurations</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Identify existing authentication policies in the organization Corporate Control: Identity Provider Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review MFA settings and associated exemptions Corporate Control: IAM Policy Documentation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for accounts with permissions to alter authentication policies Corporate Control: Privileged IAM Accounts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine potential weak points in the authentication system Corporate Control: Security Assessment Reports</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable or bypass MFA for targeted accounts Corporate Control: Identity Provider Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Weaken password policies (e.g., reducing complexity requirements) Corporate Control: Authentication Settings Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create exemptions for specific user groups or accounts Corporate Control: IAM Policy Customization</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add new authentication mechanisms controlled by the adversary Corporate Control: External Identity Providers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Attempt access using modified credentials Corporate Control: Authentication Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify if modified policies remain functional over time Corporate Control: Access Log Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check persistence of changes during regular policy reviews Corporate Control: Compliance Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Document observations to refine techniques Corporate Control: Internal Reports</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restore default logs to erase traces of configuration changes Corporate Control: Audit Log System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy obfuscation techniques to hide new policies Corporate Control: Configuration Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter policy timestamps to mimic legitimate updates Corporate Control: Change Management System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish backdoor mechanisms for further changes Corporate Control: IAM Automation Tools</data>
+</edge>
+</graph>
+</graphml>

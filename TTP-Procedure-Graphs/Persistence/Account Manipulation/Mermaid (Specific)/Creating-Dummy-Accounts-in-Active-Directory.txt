@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Privileges for Account Creation]
+    B[Create Low-Visibility Dummy Accounts]
+    C[Test Dummy Account Functionality]
+    D[Conceal Dummy Account Presence]
+    E[Persistence Achieved via Dummy Accounts]
+
+    A -->|"List users with privileges to create Active Directory accounts
+    Corporate Control: Active Directory Console"| B
+    A -->|"Analyze account creation policies for gaps
+    Corporate Control: Active Directory Policies"| B
+    A -->|"Check for logging and alerting on new account creation
+    Corporate Control: Event Viewer"| B
+    A -->|"Prioritize administrative domains for account creation
+    Corporate Control: Active Directory OU Configuration"| B
+    B -->|"Create accounts with low-privilege roles
+    Corporate Control: AD User Creation Tools"| C
+    B -->|"Assign roles that appear legitimate but allow persistence
+    Corporate Control: Role Management Console"| C
+    B -->|"Configure accounts to blend with existing user patterns
+    Corporate Control: Account Naming Standards"| C
+    B -->|"Ensure accounts bypass standard monitoring configurations
+    Corporate Control: Directory Services"| C
+    C -->|"Test login functionality and permissions
+    Corporate Control: Authentication Logs"| D
+    C -->|"Perform benign-looking actions to avoid detection
+    Corporate Control: Active Directory Activity Logs"| D
+    C -->|"Monitor persistence across password rotation cycles
+    Corporate Control: Policy Management Tools"| D
+    C -->|"Validate dummy accounts during directory sync updates
+    Corporate Control: Directory Sync Services"| D
+    D -->|"Delete logs showing dummy account creation
+    Corporate Control: Event Viewer"| E
+    D -->|"Alter timestamps on account creation to mimic legitimate activity
+    Corporate Control: Change Logs"| E
+    D -->|"Ensure accounts are excluded from high-visibility reports
+    Corporate Control: AD Insights Tools"| E
+    D -->|"Periodically refresh account attributes to avoid removal
+    Corporate Control: Directory Maintenance"| E

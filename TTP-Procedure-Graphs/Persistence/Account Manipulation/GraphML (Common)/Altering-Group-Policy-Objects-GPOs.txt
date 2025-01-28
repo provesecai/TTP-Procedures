@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering_Group_Policy_Objects" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Privileges for Modifying GPOs</data>
+</node>
+<node id="B">
+<data key="label">Modify GPOs to Enforce Persistence</data>
+</node>
+<node id="C">
+<data key="label">Test and Validate GPO Modifications</data>
+</node>
+<node id="D">
+<data key="label">Conceal GPO Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via GPO Modifications</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate accounts with GPO editing privileges Corporate Control: Active Directory Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review existing GPO configurations and their application scope Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify GPOs linked to critical organizational units (OUs) Corporate Control: Directory Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging configurations for GPO changes Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add scripts or commands to logon/logoff policies Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify startup scripts to execute adversary-controlled payloads Corporate Control: Startup Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply changes to high-value OUs for maximum persistence Corporate Control: Active Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set permissions to prevent changes by legitimate administrators Corporate Control: GPO Security Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor affected systems to ensure GPO changes are applied Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify that modified GPOs persist through policy refresh cycles Corporate Control: Policy Application Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test modified GPOs for compatibility with target systems Corporate Control: Configuration Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Active Directory updates Corporate Control: Directory Updates</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing unauthorized GPO modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter timestamps on modified GPOs to avoid scrutiny Corporate Control: Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask changes by blending them with legitimate updates Corporate Control: Change Management Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure modified GPOs remain hidden in administrative interfaces Corporate Control: Group Policy Management Console</data>
+</edge>
+</graph>
+</graphml>

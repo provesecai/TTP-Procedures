@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Google Workspace Admin Permissions]
+    B[Delegate App Permissions to Malicious Accounts]
+    C[Test Malicious Delegations]
+    D[Conceal Delegation Activity]
+    E[Persistence Achieved via G Suite Delegations]
+
+    A -->|"Enumerate users with admin permissions in G Suite
+    Corporate Control: Google Admin Console"| B
+    A -->|"Identify apps with privileged access to organizational data
+    Corporate Control: Google OAuth Scopes"| B
+    A -->|"Analyze delegation policies for potential abuse
+    Corporate Control: Google Workspace Policies"| B
+    A -->|"Check alerting configurations for app delegation changes
+    Corporate Control: Google Security Center"| B
+    B -->|"Delegate app permissions to attacker-controlled accounts
+    Corporate Control: Google Admin APIs"| C
+    B -->|"Assign permissions to access Gmail, Drive, or Calendar
+    Corporate Control: Google Services"| C
+    B -->|"Modify delegation scopes to avoid detection
+    Corporate Control: Google App Configuration"| C
+    B -->|"Use innocuous app names to mask malicious activity
+    Corporate Control: G Suite Application Settings"| C
+    C -->|"Access organizational data using delegated permissions
+    Corporate Control: Google Service APIs"| D
+    C -->|"Verify access to sensitive data or accounts
+    Corporate Control: Google Workspace Logs"| D
+    C -->|"Test delegation persistence across policy updates
+    Corporate Control: Google Security Updates"| D
+    C -->|"Validate that delegated accounts bypass MFA
+    Corporate Control: Google Authentication System"| D
+    D -->|"Delete logs showing delegation changes
+    Corporate Control: Google Workspace Audit Logs"| E
+    D -->|"Alter delegation timestamps to evade detection
+    Corporate Control: Google Change History"| E
+    D -->|"Ensure app delegations blend with legitimate configurations
+    Corporate Control: Google Admin Interface"| E
+    D -->|"Monitor delegation activity for long-term persistence
+    Corporate Control: Google Workspace Insights"| E

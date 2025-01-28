@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Privileges for Okta Rule Modification]
+    B[Modify Authentication Rules]
+    C[Test Modified Rules]
+    D[Conceal Rule Changes]
+    E[Persistence Achieved via Okta Rule Manipulation]
+
+    A -->|"Enumerate users with access to Okta administration
+    Corporate Control: Okta Admin Console"| B
+    A -->|"Review authentication rules for gaps or exemptions
+    Corporate Control: Okta Policies"| B
+    A -->|"Identify MFA or SSO configurations that can be abused
+    Corporate Control: Identity Provider Settings"| B
+    A -->|"Assess alerting and logging on policy modifications
+    Corporate Control: Okta System Logs"| B
+    B -->|"Disable or relax MFA requirements for specific accounts
+    Corporate Control: Okta Security Policies"| C
+    B -->|"Add exemptions to authentication flows for attacker-controlled accounts
+    Corporate Control: Okta Policy Editor"| C
+    B -->|"Modify SSO rules to include attacker infrastructure
+    Corporate Control: Okta Integration Settings"| C
+    B -->|"Set policies to prioritize attacker-preferred authentication methods
+    Corporate Control: Okta Policy Manager"| C
+    C -->|"Test authentication using modified rules
+    Corporate Control: Identity Provider Logs"| D
+    C -->|"Validate persistence across rule enforcement updates
+    Corporate Control: Okta Policy Updates"| D
+    C -->|"Ensure rule changes bypass detection tools
+    Corporate Control: Security Monitoring"| D
+    C -->|"Monitor authentication activity for long-term persistence
+    Corporate Control: Okta Threat Detection"| D
+    D -->|"Delete logs showing rule modifications
+    Corporate Control: Okta System Logs"| E
+    D -->|"Mask changes by altering rule timestamps
+    Corporate Control: Change Management"| E
+    D -->|"Blend rule changes with legitimate updates
+    Corporate Control: Okta Administration Interface"| E
+    D -->|"Monitor rule enforcement to ensure persistent access
+    Corporate Control: Okta Insights"| E

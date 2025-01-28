@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Target GitHub User Accounts]
+    B[Add Attacker-Controlled SSH Keys]
+    C[Test SSH Access with New Keys]
+    D[Conceal SSH Key Changes]
+    E[Persistence Achieved via GitHub SSH Keys]
+
+    A -->|"Enumerate user accounts with repository access
+    Corporate Control: GitHub API"| B
+    A -->|"Check for accounts with weak or reused passwords
+    Corporate Control: GitHub Authentication Logs"| B
+    A -->|"Identify accounts with SSH key-based authentication enabled
+    Corporate Control: GitHub Settings"| B
+    A -->|"Assess logging and alerting for SSH key changes
+    Corporate Control: GitHub Audit Logs"| B
+    B -->|"Add new SSH keys to user accounts
+    Corporate Control: GitHub SSH Key Management"| C
+    B -->|"Ensure keys provide write access to critical repositories
+    Corporate Control: GitHub Repository Settings"| C
+    B -->|"Use SSH key descriptions that blend with legitimate keys
+    Corporate Control: GitHub Key Configuration"| C
+    B -->|"Verify added keys bypass MFA requirements
+    Corporate Control: GitHub Authentication Configurations"| C
+    C -->|"Access repositories using the new SSH keys
+    Corporate Control: GitHub Repository Access Logs"| D
+    C -->|"Test repository actions (e.g., cloning, commits)
+    Corporate Control: GitHub Repository APIs"| D
+    C -->|"Ensure keys remain functional after password changes
+    Corporate Control: GitHub Authentication System"| D
+    C -->|"Validate key persistence across account updates
+    Corporate Control: GitHub User Management"| D
+    D -->|"Delete logs showing SSH key addition or usage
+    Corporate Control: GitHub Audit Logs"| E
+    D -->|"Mask keys by modifying metadata (e.g., timestamps)
+    Corporate Control: GitHub Key Metadata Settings"| E
+    D -->|"Ensure new keys are indistinguishable from legitimate ones
+    Corporate Control: GitHub Key List Interface"| E
+    D -->|"Monitor key activity to ensure long-term persistence
+    Corporate Control: GitHub Security Insights"| E

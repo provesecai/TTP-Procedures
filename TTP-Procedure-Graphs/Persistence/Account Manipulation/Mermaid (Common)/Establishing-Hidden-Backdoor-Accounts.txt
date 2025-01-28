@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Privileges for Account Creation]
+    B[Create Hidden or Low-Privilege Accounts]
+    C[Test and Validate Backdoor Account Access]
+    D[Obfuscate Backdoor Account Existence]
+    E[Persistence Achieved via Backdoor Accounts]
+
+    A -->|"List roles and accounts capable of creating new users
+    Corporate Control: IAM System"| B
+    A -->|"Review policies governing account visibility
+    Corporate Control: Directory Services"| B
+    A -->|"Prioritize systems with weak account monitoring
+    Corporate Control: Access Control Reports"| B
+    A -->|"Determine logging and alerting configurations for account creation
+    Corporate Control: Security Monitoring Tools"| B
+    B -->|"Create accounts with low-privilege or non-admin roles
+    Corporate Control: User Management Console"| C
+    B -->|"Assign roles that appear benign but enable persistence
+    Corporate Control: IAM Policies"| C
+    B -->|"Use naming conventions that blend with legitimate accounts
+    Corporate Control: Naming Standards"| C
+    B -->|"Store credentials securely for adversary reuse
+    Corporate Control: Secure Storage Tools"| C
+    C -->|"Test login functionality and permissions of backdoor accounts
+    Corporate Control: Authentication Systems"| D
+    C -->|"Perform privileged actions to validate account effectiveness
+    Corporate Control: Role Testing Tools"| D
+    C -->|"Ensure account remains active during security updates
+    Corporate Control: Policy Enforcement Systems"| D
+    C -->|"Log backdoor account activity for tracking
+    Corporate Control: Internal Monitoring"| D
+    D -->|"Hide account creation logs or alerts
+    Corporate Control: Audit Logs"| E
+    D -->|"Alter account creation timestamps to avoid scrutiny
+    Corporate Control: Time Management Systems"| E
+    D -->|"Remove backdoor accounts from visibility in management consoles
+    Corporate Control: IAM Console"| E
+    D -->|"Implement false justifications for account existence
+    Corporate Control: IT Documentation"| E

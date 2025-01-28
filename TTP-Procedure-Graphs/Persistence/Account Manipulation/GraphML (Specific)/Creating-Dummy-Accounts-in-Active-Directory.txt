@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating_Dummy_Accounts_in_Active_Directory" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Privileges for Account Creation</data>
+</node>
+<node id="B">
+<data key="label">Create Low-Visibility Dummy Accounts</data>
+</node>
+<node id="C">
+<data key="label">Test Dummy Account Functionality</data>
+</node>
+<node id="D">
+<data key="label">Conceal Dummy Account Presence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Dummy Accounts</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">List users with privileges to create Active Directory accounts Corporate Control: Active Directory Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze account creation policies for gaps Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for logging and alerting on new account creation Corporate Control: Event Viewer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize administrative domains for account creation Corporate Control: Active Directory OU Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create accounts with low-privilege roles Corporate Control: AD User Creation Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Assign roles that appear legitimate but allow persistence Corporate Control: Role Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure accounts to blend with existing user patterns Corporate Control: Account Naming Standards</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure accounts bypass standard monitoring configurations Corporate Control: Directory Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test login functionality and permissions Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform benign-looking actions to avoid detection Corporate Control: Active Directory Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor persistence across password rotation cycles Corporate Control: Policy Management Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate dummy accounts during directory sync updates Corporate Control: Directory Sync Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing dummy account creation Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter timestamps on account creation to mimic legitimate activity Corporate Control: Change Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure accounts are excluded from high-visibility reports Corporate Control: AD Insights Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Periodically refresh account attributes to avoid removal Corporate Control: Directory Maintenance</data>
+</edge>
+</graph>
+</graphml>

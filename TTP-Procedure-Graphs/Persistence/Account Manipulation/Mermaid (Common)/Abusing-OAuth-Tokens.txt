@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify OAuth Applications and Permissions]
+    B[Obtain and Abuse OAuth Tokens]
+    C[Validate OAuth Token Functionality]
+    D[Maintain and Conceal OAuth Token Abuse]
+    E[Persistence Achieved via OAuth Tokens]
+
+    A -->|"Enumerate OAuth applications with privileged access
+    Corporate Control: Cloud API Console"| B
+    A -->|"Review scope and permissions associated with OAuth tokens
+    Corporate Control: Application Permissions Dashboard"| B
+    A -->|"Identify users or applications with OAuth tokens for critical resources
+    Corporate Control: Access Control Reports"| B
+    A -->|"Analyze token expiration policies and renewal processes
+    Corporate Control: Identity Provider"| B
+    B -->|"Intercept tokens via phishing or credential compromise
+    Corporate Control: OAuth Authentication Flow"| C
+    B -->|"Leverage stolen tokens to gain access to cloud services
+    Corporate Control: Application APIs"| C
+    B -->|"Create tokens using compromised credentials
+    Corporate Control: Token Generation Service"| C
+    B -->|"Request tokens with extended expiration dates
+    Corporate Control: API Management System"| C
+    C -->|"Use tokens to perform privileged actions
+    Corporate Control: Application Interfaces"| D
+    C -->|"Verify token functionality over time to ensure persistence
+    Corporate Control: API Monitoring"| D
+    C -->|"Revalidate tokens before expiration for continuity
+    Corporate Control: OAuth Renewal Processes"| D
+    C -->|"Test token-based access against security measures
+    Corporate Control: Threat Simulation Tools"| D
+    D -->|"Delete logs showing token activity or misuse
+    Corporate Control: SIEM Tools"| E
+    D -->|"Rotate tokens periodically to evade detection
+    Corporate Control: Token Lifecycle Manager"| E
+    D -->|"Configure tokens to blend with legitimate traffic
+    Corporate Control: Network Monitoring Systems"| E
+    D -->|"Obfuscate token origin or associated accounts
+    Corporate Control: Audit Reports"| E

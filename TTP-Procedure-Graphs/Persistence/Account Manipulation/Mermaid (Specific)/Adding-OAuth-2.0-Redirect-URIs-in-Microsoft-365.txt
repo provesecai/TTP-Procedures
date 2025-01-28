@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify OAuth Applications in Microsoft 365]
+    B[Add Malicious Redirect URIs]
+    C[Test Redirect URI Functionality]
+    D[Conceal Redirect URI Modifications]
+    E[Persistence Achieved via Malicious Redirect URIs]
+
+    A -->|"Enumerate OAuth apps with privileged scopes
+    Corporate Control: Azure AD App Registrations"| B
+    A -->|"Identify applications with insufficient monitoring
+    Corporate Control: Azure AD Permissions Insights"| B
+    A -->|"Check for existing redirect URIs in app configurations
+    Corporate Control: Azure Management Console"| B
+    A -->|"Assess alerting mechanisms for app configuration changes
+    Corporate Control: Azure Security Center"| B
+    B -->|"Add redirect URIs pointing to attacker-controlled servers
+    Corporate Control: OAuth Configuration Manager"| C
+    B -->|"Ensure URIs bypass existing validation mechanisms
+    Corporate Control: App Registration System"| C
+    B -->|"Use benign-looking URIs to avoid detection
+    Corporate Control: URL Configuration Tools"| C
+    B -->|"Set up servers to capture authentication tokens
+    Third Party Control: Attacker Infrastructure"| C
+    C -->|"Test token capture via malicious URIs
+    Corporate Control: Azure Resource Management APIs"| D
+    C -->|"Validate token functionality for persistent access
+    Corporate Control: OAuth Token Management"| D
+    C -->|"Ensure redirection persists across app updates
+    Corporate Control: Application Maintenance"| D
+    C -->|"Monitor token activity for signs of detection
+    Corporate Control: Azure Monitor"| D
+    D -->|"Delete logs showing redirect URI changes
+    Corporate Control: Azure Activity Logs"| E
+    D -->|"Modify timestamps for redirect URI modifications
+    Corporate Control: Azure Change Tracking"| E
+    D -->|"Ensure URIs appear legitimate in app configurations
+    Corporate Control: Azure AD App Registrations"| E
+    D -->|"Monitor redirect URI usage to maintain persistence
+    Corporate Control: Security Insights"| E

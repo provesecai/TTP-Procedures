@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Azure AD Application Permissions]
+    B[Modify Azure AD Application Role Assignments]
+    C[Test Modified Application Roles]
+    D[Conceal Role Modification Activity]
+    E[Persistence Achieved via Azure AD Applications]
+
+    A -->|"Enumerate all applications with permissions to access sensitive data
+    Corporate Control: Azure AD Management Console"| B
+    A -->|"Identify applications where permissions can be altered
+    Corporate Control: Azure Graph API"| B
+    A -->|"List privileged accounts managing application roles
+    Corporate Control: Azure Active Directory"| B
+    A -->|"Assess logging configurations for application permission changes
+    Corporate Control: Azure Activity Logs"| B
+    B -->|"Assign new roles to attacker-controlled accounts
+    Corporate Control: Azure Role Assignment Tool"| C
+    B -->|"Grant elevated permissions to existing roles
+    Corporate Control: Azure Role Definitions"| C
+    B -->|"Ensure permissions allow access to critical data or services
+    Corporate Control: Azure IAM Policies"| C
+    B -->|"Set roles with minimal visibility or logging
+    Corporate Control: Azure Management Interface"| C
+    C -->|"Test application functionality using new permissions
+    Corporate Control: Azure Resource Management"| D
+    C -->|"Ensure permissions persist across application updates
+    Corporate Control: Azure Policy Enforcement"| D
+    C -->|"Validate roles can perform unauthorized actions
+    Corporate Control: Azure Role Testing Tool"| D
+    C -->|"Check for automated alerts triggered by role changes
+    Corporate Control: Azure Security Center"| D
+    D -->|"Remove evidence of role modifications from logs
+    Corporate Control: Azure Activity Logs"| E
+    D -->|"Obfuscate role changes by altering timestamps
+    Corporate Control: Azure Change Tracking"| E
+    D -->|"Blend malicious role configurations with legitimate ones
+    Corporate Control: Azure Role Insights"| E
+    D -->|"Monitor role changes periodically to maintain persistence
+    Corporate Control: Azure Monitor"| E

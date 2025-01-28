@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Email_Forwarding_Rules" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Email Account Management Permissions</data>
+</node>
+<node id="B">
+<data key="label">Create or Alter Email Forwarding Rules</data>
+</node>
+<node id="C">
+<data key="label">Validate Email Forwarding Functionality</data>
+</node>
+<node id="D">
+<data key="label">Conceal Modified Forwarding Rules</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Email Forwarding Rules</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">List users with permissions to create forwarding rules Corporate Control: Email Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing forwarding rules and associated accounts Corporate Control: Email Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize accounts with access to sensitive communications Corporate Control: Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging and alerting for forwarding rule changes Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new forwarding rules to redirect emails Corporate Control: Email Rules Engine</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing rules to include adversary-controlled addresses Corporate Control: Email Client</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use external email addresses to avoid detection Corporate Control: Third-Party Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set rules to target specific keywords or users Corporate Control: Email Filtering System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test rule functionality by sending test emails Corporate Control: Email Delivery Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify that emails are successfully redirected Corporate Control: Email Routing Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor communications to refine rule configurations Corporate Control: Email Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure rules persist across email system updates Corporate Control: Update Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of rule creation or changes Corporate Control: Email Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask rule settings by blending with legitimate configurations Corporate Control: Email Client Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate forwarding addresses in system configurations Corporate Control: Email Server Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection by disabling email rule alerts Corporate Control: Notification Settings</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,39 @@
+graph TD;
+    A[Enumerate Existing Authentication Policies]
+    B[Modify Policies to Facilitate Persistent Access]
+    C[Test Adjusted Authentication for Persistence]
+    D[Hide Changes to Authentication Settings]
+    E[Persistence Achieved via Authentication Configurations]
+
+    A -->|"Identify existing authentication policies in the organization
+    Corporate Control: Identity Provider Console"| B
+    A -->|"Review MFA settings and associated exemptions
+    Corporate Control: IAM Policy Documentation"| B
+    A -->|"Check for accounts with permissions to alter authentication policies
+    Corporate Control: Privileged IAM Accounts"| B
+    A -->|"Determine potential weak points in the authentication system
+    Corporate Control: Security Assessment Reports"| B
+    B -->|"Disable or bypass MFA for targeted accounts
+    Corporate Control: Identity Provider Configuration"| C
+    B -->|"Weaken password policies (e.g., reducing complexity requirements)
+    Corporate Control: Authentication Settings Manager"| C
+    B -->|"Create exemptions for specific user groups or accounts
+    Corporate Control: IAM Policy Customization"| C
+    B -->|"Add new authentication mechanisms controlled by the adversary
+    Corporate Control: External Identity Providers"| C
+    C -->|"Attempt access using modified credentials
+    Corporate Control: Authentication Gateway"| D
+    C -->|"Verify if modified policies remain functional over time
+    Corporate Control: Access Log Monitoring"| D
+    C -->|"Check persistence of changes during regular policy reviews
+    Corporate Control: Compliance Monitoring"| D
+    C -->|"Document observations to refine techniques
+    Corporate Control: Internal Reports"| D
+    D -->|"Restore default logs to erase traces of configuration changes
+    Corporate Control: Audit Log System"| E
+    D -->|"Deploy obfuscation techniques to hide new policies
+    Corporate Control: Configuration Manager"| E
+    D -->|"Alter policy timestamps to mimic legitimate updates
+    Corporate Control: Change Management System"| E
+    D -->|"Establish backdoor mechanisms for further changes
+    Corporate Control: IAM Automation Tools"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Authentication_Rules_in_Okta" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Privileges for Okta Rule Modification</data>
+</node>
+<node id="B">
+<data key="label">Modify Authentication Rules</data>
+</node>
+<node id="C">
+<data key="label">Test Modified Rules</data>
+</node>
+<node id="D">
+<data key="label">Conceal Rule Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Okta Rule Manipulation</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate users with access to Okta administration Corporate Control: Okta Admin Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review authentication rules for gaps or exemptions Corporate Control: Okta Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify MFA or SSO configurations that can be abused Corporate Control: Identity Provider Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess alerting and logging on policy modifications Corporate Control: Okta System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable or relax MFA requirements for specific accounts Corporate Control: Okta Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add exemptions to authentication flows for attacker-controlled accounts Corporate Control: Okta Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify SSO rules to include attacker infrastructure Corporate Control: Okta Integration Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set policies to prioritize attacker-preferred authentication methods Corporate Control: Okta Policy Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test authentication using modified rules Corporate Control: Identity Provider Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate persistence across rule enforcement updates Corporate Control: Okta Policy Updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure rule changes bypass detection tools Corporate Control: Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor authentication activity for long-term persistence Corporate Control: Okta Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing rule modifications Corporate Control: Okta System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask changes by altering rule timestamps Corporate Control: Change Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend rule changes with legitimate updates Corporate Control: Okta Administration Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor rule enforcement to ensure persistent access Corporate Control: Okta Insights</data>
+</edge>
+</graph>
+</graphml>

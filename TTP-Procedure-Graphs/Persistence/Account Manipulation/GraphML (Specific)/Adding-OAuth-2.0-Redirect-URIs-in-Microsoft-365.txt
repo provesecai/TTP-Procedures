@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Adding_OAuth_2.0_Redirect_URIs_in_Microsoft_365" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify OAuth Applications in Microsoft 365</data>
+</node>
+<node id="B">
+<data key="label">Add Malicious Redirect URIs</data>
+</node>
+<node id="C">
+<data key="label">Test Redirect URI Functionality</data>
+</node>
+<node id="D">
+<data key="label">Conceal Redirect URI Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Malicious Redirect URIs</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate OAuth apps with privileged scopes Corporate Control: Azure AD App Registrations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify applications with insufficient monitoring Corporate Control: Azure AD Permissions Insights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for existing redirect URIs in app configurations Corporate Control: Azure Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess alerting mechanisms for app configuration changes Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add redirect URIs pointing to attacker-controlled servers Corporate Control: OAuth Configuration Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure URIs bypass existing validation mechanisms Corporate Control: App Registration System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use benign-looking URIs to avoid detection Corporate Control: URL Configuration Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up servers to capture authentication tokens Third Party Control: Attacker Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test token capture via malicious URIs Corporate Control: Azure Resource Management APIs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate token functionality for persistent access Corporate Control: OAuth Token Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure redirection persists across app updates Corporate Control: Application Maintenance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor token activity for signs of detection Corporate Control: Azure Monitor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing redirect URI changes Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps for redirect URI modifications Corporate Control: Azure Change Tracking</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure URIs appear legitimate in app configurations Corporate Control: Azure AD App Registrations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor redirect URI usage to maintain persistence Corporate Control: Security Insights</data>
+</edge>
+</graph>
+</graphml>

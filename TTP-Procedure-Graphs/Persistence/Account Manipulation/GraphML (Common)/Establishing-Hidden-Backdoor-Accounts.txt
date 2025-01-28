@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Establishing_Hidden_Backdoor_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Privileges for Account Creation</data>
+</node>
+<node id="B">
+<data key="label">Create Hidden or Low-Privilege Accounts</data>
+</node>
+<node id="C">
+<data key="label">Test and Validate Backdoor Account Access</data>
+</node>
+<node id="D">
+<data key="label">Obfuscate Backdoor Account Existence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Backdoor Accounts</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">List roles and accounts capable of creating new users Corporate Control: IAM System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review policies governing account visibility Corporate Control: Directory Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prioritize systems with weak account monitoring Corporate Control: Access Control Reports</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine logging and alerting configurations for account creation Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create accounts with low-privilege or non-admin roles Corporate Control: User Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Assign roles that appear benign but enable persistence Corporate Control: IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use naming conventions that blend with legitimate accounts Corporate Control: Naming Standards</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store credentials securely for adversary reuse Corporate Control: Secure Storage Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test login functionality and permissions of backdoor accounts Corporate Control: Authentication Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform privileged actions to validate account effectiveness Corporate Control: Role Testing Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure account remains active during security updates Corporate Control: Policy Enforcement Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log backdoor account activity for tracking Corporate Control: Internal Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide account creation logs or alerts Corporate Control: Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter account creation timestamps to avoid scrutiny Corporate Control: Time Management Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove backdoor accounts from visibility in management consoles Corporate Control: IAM Console</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement false justifications for account existence Corporate Control: IT Documentation</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_AWS_Identity_and_Access_Management_Policies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify IAM Policies with Broad Permissions</data>
+</node>
+<node id="B">
+<data key="label">Modify IAM Policies for Persistence</data>
+</node>
+<node id="C">
+<data key="label">Test Policy Changes for Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal IAM Policy Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via IAM Policies</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing IAM policies and roles Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify policies with privileges to manage keys or roles Corporate Control: IAM Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for overly permissive policies Corporate Control: IAM Role Insights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess monitoring configurations for policy changes Corporate Control: AWS CloudTrail Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing policies to include backdoor permissions Corporate Control: AWS Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new roles with elevated privileges Corporate Control: AWS IAM Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attach attacker-controlled policies to critical accounts Corporate Control: IAM Role Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure policies to appear legitimate in audits Corporate Control: AWS Policy Formatting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute actions using modified policies Corporate Control: AWS Resource Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test persistence by accessing resources over time Corporate Control: AWS Security Hub</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate policy changes are not flagged by alerts Corporate Control: AWS GuardDuty</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure changes survive IAM policy updates Corporate Control: Policy Versioning</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing policy modifications Corporate Control: CloudTrail Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mask timestamps of policy changes Corporate Control: AWS Config</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure policy changes blend with legitimate configurations Corporate Control: IAM Audit Reports</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Periodically refresh policies to evade detection Corporate Control: IAM Lifecycle Manager</data>
+</edge>
+</graph>
+</graphml>

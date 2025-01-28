@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Deploying_Golden_Tickets_via_Kerberos" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Kerberos Ticket-Granting Ticket KRBTGT</data>
+</node>
+<node id="B">
+<data key="label">Generate and Deploy Golden Tickets</data>
+</node>
+<node id="C">
+<data key="label">Test and Monitor Golden Ticket Functionality</data>
+</node>
+<node id="D">
+<data key="label">Maintain and Conceal Golden Ticket Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Golden Tickets</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Identify KRBTGT account credentials through privilege escalation Corporate Control: Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract necessary cryptographic material for Golden Ticket generation Corporate Control: Security Database</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify access to domain controllers for ticket creation Corporate Control: Domain Controller</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging and monitoring for Kerberos ticket activity Corporate Control: Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use tools like Mimikatz to generate Golden Tickets Corporate Control: Adversary Toolset</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Customize tickets with extended lifetimes for persistence Corporate Control: Kerberos Authentication Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Impersonate high-privilege accounts to maximize access Corporate Control: Privileged Roles</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy tickets on systems requiring privileged access Corporate Control: Domain Resources</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform privileged actions using Golden Tickets to validate access Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for expiration or invalidation of issued tickets Corporate Control: Ticket Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify compatibility with organizational systems and services Corporate Control: Kerberos-Integrated Applications</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test tickets against system updates and changes Corporate Control: Patch Management Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Clear event logs showing Golden Ticket usage Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter ticket timestamps to avoid detection Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure tickets to blend with legitimate traffic Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Periodically refresh or regenerate tickets to maintain access Corporate Control: Kerberos Ticket System</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Privileges for Modifying GPOs]
+    B[Modify GPOs to Enforce Persistence]
+    C[Test and Validate GPO Modifications]
+    D[Conceal GPO Changes]
+    E[Persistence Achieved via GPO Modifications]
+
+    A -->|"Enumerate accounts with GPO editing privileges
+    Corporate Control: Active Directory Console"| B
+    A -->|"Review existing GPO configurations and their application scope
+    Corporate Control: Group Policy Management Console"| B
+    A -->|"Identify GPOs linked to critical organizational units (OUs)
+    Corporate Control: Directory Services"| B
+    A -->|"Assess logging configurations for GPO changes
+    Corporate Control: Event Viewer"| B
+    B -->|"Add scripts or commands to logon/logoff policies
+    Corporate Control: Group Policy Editor"| C
+    B -->|"Modify startup scripts to execute adversary-controlled payloads
+    Corporate Control: Startup Settings"| C
+    B -->|"Apply changes to high-value OUs for maximum persistence
+    Corporate Control: Active Directory"| C
+    B -->|"Set permissions to prevent changes by legitimate administrators
+    Corporate Control: GPO Security Settings"| C
+    C -->|"Monitor affected systems to ensure GPO changes are applied
+    Corporate Control: System Logs"| D
+    C -->|"Verify that modified GPOs persist through policy refresh cycles
+    Corporate Control: Policy Application Tools"| D
+    C -->|"Test modified GPOs for compatibility with target systems
+    Corporate Control: Configuration Testing"| D
+    C -->|"Ensure persistence across Active Directory updates
+    Corporate Control: Directory Updates"| D
+    D -->|"Delete logs showing unauthorized GPO modifications
+    Corporate Control: Event Viewer"| E
+    D -->|"Alter timestamps on modified GPOs to avoid scrutiny
+    Corporate Control: Audit Logs"| E
+    D -->|"Mask changes by blending them with legitimate updates
+    Corporate Control: Change Management Tools"| E
+    D -->|"Ensure modified GPOs remain hidden in administrative interfaces
+    Corporate Control: Group Policy Management Console"| E

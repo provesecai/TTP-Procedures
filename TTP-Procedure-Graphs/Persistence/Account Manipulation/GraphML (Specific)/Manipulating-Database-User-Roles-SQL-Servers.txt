@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_Database_User_Roles_in_SQL_Servers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SQL Server User Roles</data>
+</node>
+<node id="B">
+<data key="label">Modify User Roles to Grant Persistence</data>
+</node>
+<node id="C">
+<data key="label">Test Role Modifications</data>
+</node>
+<node id="D">
+<data key="label">Conceal Role Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Database Role Manipulation</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate users with administrative access to SQL Servers Corporate Control: SQL Management Studio</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review database roles and permissions for gaps Corporate Control: SQL Server Role Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical databases with sensitive data Corporate Control: Database Access Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess monitoring for role modifications Corporate Control: SQL Server Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Grant elevated roles to attacker-controlled accounts Corporate Control: SQL Role Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new database roles with malicious privileges Corporate Control: SQL Role Creation Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing roles to include backdoor permissions Corporate Control: SQL Role Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set permissions to avoid detection during audits Corporate Control: SQL Role Insights</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test database access using modified roles Corporate Control: SQL Query Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate persistence across database updates Corporate Control: SQL Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor role functionality for long-term access Corporate Control: Database Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure modified roles bypass security checks Corporate Control: SQL Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing role modifications Corporate Control: SQL Server Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter role modification timestamps Corporate Control: SQL Change History</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious roles with legitimate configurations Corporate Control: Role Management Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Refresh roles periodically to avoid detection Corporate Control: SQL Role Scheduler</data>
+</edge>
+</graph>
+</graphml>

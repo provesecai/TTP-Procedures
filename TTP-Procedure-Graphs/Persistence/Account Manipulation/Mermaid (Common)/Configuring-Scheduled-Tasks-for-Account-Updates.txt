@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify Privileges for Scheduled Task Creation]
+    B[Create Malicious Scheduled Tasks]
+    C[Verify Scheduled Task Execution]
+    D[Conceal Scheduled Tasks]
+    E[Persistence Achieved via Scheduled Tasks]
+
+    A -->|"Identify accounts capable of creating scheduled tasks
+    Corporate Control: IAM Console"| B
+    A -->|"Assess permissions required for scheduling
+    Corporate Control: Role Management System"| B
+    A -->|"Check logging configurations for task creation
+    Corporate Control: Logging Service"| B
+    A -->|"Prioritize high-privilege accounts for persistence
+    Corporate Control: IAM Roles"| B
+    B -->|"Create tasks with benign-looking names
+    Corporate Control: Task Scheduler"| C
+    B -->|"Set execution triggers to ensure regular updates
+    Corporate Control: System Configuration"| C
+    B -->|"Embed scripts or commands for account updates
+    Corporate Control: Scripting Tools"| C
+    B -->|"Configure tasks to run with elevated privileges
+    Corporate Control: Scheduled Task Manager"| C
+    C -->|"Monitor task execution and logs for successful updates
+    Corporate Control: Task Logs"| D
+    C -->|"Ensure tasks are executed without triggering alerts
+    Corporate Control: Security Monitoring"| D
+    C -->|"Verify persistence by observing account updates
+    Corporate Control: System Activity Reports"| D
+    C -->|"Test redundancy mechanisms for task execution
+    Corporate Control: Automation Framework"| D
+    D -->|"Modify task visibility settings in task manager
+    Corporate Control: Task Scheduler"| E
+    D -->|"Remove or obfuscate logs related to task creation
+    Corporate Control: Logging Service"| E
+    D -->|"Adjust task configurations to avoid detection
+    Corporate Control: Configuration Manager"| E
+    D -->|"Ensure tasks remain functional across system updates
+    Corporate Control: Update Management System"| E

@@ -1,0 +1,39 @@
+graph TD;
+    A[Identify SQL Server User Roles]
+    B[Modify User Roles to Grant Persistence]
+    C[Test Role Modifications]
+    D[Conceal Role Changes]
+    E[Persistence Achieved via Database Role Manipulation]
+
+    A -->|"Enumerate users with administrative access to SQL Servers
+    Corporate Control: SQL Management Studio"| B
+    A -->|"Review database roles and permissions for gaps
+    Corporate Control: SQL Server Role Manager"| B
+    A -->|"Identify critical databases with sensitive data
+    Corporate Control: Database Access Logs"| B
+    A -->|"Assess monitoring for role modifications
+    Corporate Control: SQL Server Audit Logs"| B
+    B -->|"Grant elevated roles to attacker-controlled accounts
+    Corporate Control: SQL Role Configuration"| C
+    B -->|"Create new database roles with malicious privileges
+    Corporate Control: SQL Role Creation Tools"| C
+    B -->|"Modify existing roles to include backdoor permissions
+    Corporate Control: SQL Role Manager"| C
+    B -->|"Set permissions to avoid detection during audits
+    Corporate Control: SQL Role Insights"| C
+    C -->|"Test database access using modified roles
+    Corporate Control: SQL Query Logs"| D
+    C -->|"Validate persistence across database updates
+    Corporate Control: SQL Update Management"| D
+    C -->|"Monitor role functionality for long-term access
+    Corporate Control: Database Monitoring Tools"| D
+    C -->|"Ensure modified roles bypass security checks
+    Corporate Control: SQL Threat Detection"| D
+    D -->|"Delete logs showing role modifications
+    Corporate Control: SQL Server Audit Logs"| E
+    D -->|"Alter role modification timestamps
+    Corporate Control: SQL Change History"| E
+    D -->|"Blend malicious roles with legitimate configurations
+    Corporate Control: Role Management Tools"| E
+    D -->|"Refresh roles periodically to avoid detection
+    Corporate Control: SQL Role Scheduler"| E

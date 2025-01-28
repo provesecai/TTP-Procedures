@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_OAuth_Tokens" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify OAuth Applications and Permissions</data>
+</node>
+<node id="B">
+<data key="label">Obtain and Abuse OAuth Tokens</data>
+</node>
+<node id="C">
+<data key="label">Validate OAuth Token Functionality</data>
+</node>
+<node id="D">
+<data key="label">Maintain and Conceal OAuth Token Abuse</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via OAuth Tokens</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate OAuth applications with privileged access Corporate Control: Cloud API Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review scope and permissions associated with OAuth tokens Corporate Control: Application Permissions Dashboard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify users or applications with OAuth tokens for critical resources Corporate Control: Access Control Reports</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze token expiration policies and renewal processes Corporate Control: Identity Provider</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept tokens via phishing or credential compromise Corporate Control: OAuth Authentication Flow</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage stolen tokens to gain access to cloud services Corporate Control: Application APIs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create tokens using compromised credentials Corporate Control: Token Generation Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Request tokens with extended expiration dates Corporate Control: API Management System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use tokens to perform privileged actions Corporate Control: Application Interfaces</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify token functionality over time to ensure persistence Corporate Control: API Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Revalidate tokens before expiration for continuity Corporate Control: OAuth Renewal Processes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test token-based access against security measures Corporate Control: Threat Simulation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing token activity or misuse Corporate Control: SIEM Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Rotate tokens periodically to evade detection Corporate Control: Token Lifecycle Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Configure tokens to blend with legitimate traffic Corporate Control: Network Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate token origin or associated accounts Corporate Control: Audit Reports</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating_Malicious_G_Suite_App_Delegations" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Google Workspace Admin Permissions</data>
+</node>
+<node id="B">
+<data key="label">Delegate App Permissions to Malicious Accounts</data>
+</node>
+<node id="C">
+<data key="label">Test Malicious Delegations</data>
+</node>
+<node id="D">
+<data key="label">Conceal Delegation Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via G Suite Delegations</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate users with admin permissions in G Suite Corporate Control: Google Admin Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify apps with privileged access to organizational data Corporate Control: Google OAuth Scopes</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze delegation policies for potential abuse Corporate Control: Google Workspace Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check alerting configurations for app delegation changes Corporate Control: Google Security Center</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Delegate app permissions to attacker-controlled accounts Corporate Control: Google Admin APIs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Assign permissions to access Gmail, Drive, or Calendar Corporate Control: Google Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify delegation scopes to avoid detection Corporate Control: Google App Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use innocuous app names to mask malicious activity Corporate Control: G Suite Application Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Access organizational data using delegated permissions Corporate Control: Google Service APIs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify access to sensitive data or accounts Corporate Control: Google Workspace Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test delegation persistence across policy updates Corporate Control: Google Security Updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate that delegated accounts bypass MFA Corporate Control: Google Authentication System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete logs showing delegation changes Corporate Control: Google Workspace Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter delegation timestamps to evade detection Corporate Control: Google Change History</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure app delegations blend with legitimate configurations Corporate Control: Google Admin Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor delegation activity for long-term persistence Corporate Control: Google Workspace Insights</data>
+</edge>
+</graph>
+</graphml>

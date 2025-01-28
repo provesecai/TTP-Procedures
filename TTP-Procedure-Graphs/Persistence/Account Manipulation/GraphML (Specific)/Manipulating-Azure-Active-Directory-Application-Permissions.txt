@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_Azure_Active_Directory_Application_Permissions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Azure AD Application Permissions</data>
+</node>
+<node id="B">
+<data key="label">Modify Azure AD Application Role Assignments</data>
+</node>
+<node id="C">
+<data key="label">Test Modified Application Roles</data>
+</node>
+<node id="D">
+<data key="label">Conceal Role Modification Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Azure AD Applications</data>
+</node>
+<!--  Edges  -->
+<edge source="A" target="B">
+<data key="label">Enumerate all applications with permissions to access sensitive data Corporate Control: Azure AD Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify applications where permissions can be altered Corporate Control: Azure Graph API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">List privileged accounts managing application roles Corporate Control: Azure Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging configurations for application permission changes Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Assign new roles to attacker-controlled accounts Corporate Control: Azure Role Assignment Tool</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Grant elevated permissions to existing roles Corporate Control: Azure Role Definitions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure permissions allow access to critical data or services Corporate Control: Azure IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set roles with minimal visibility or logging Corporate Control: Azure Management Interface</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test application functionality using new permissions Corporate Control: Azure Resource Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure permissions persist across application updates Corporate Control: Azure Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate roles can perform unauthorized actions Corporate Control: Azure Role Testing Tool</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for automated alerts triggered by role changes Corporate Control: Azure Security Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of role modifications from logs Corporate Control: Azure Activity Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate role changes by altering timestamps Corporate Control: Azure Change Tracking</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious role configurations with legitimate ones Corporate Control: Azure Role Insights</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor role changes periodically to maintain persistence Corporate Control: Azure Monitor</data>
+</edge>
+</graph>
+</graphml>
