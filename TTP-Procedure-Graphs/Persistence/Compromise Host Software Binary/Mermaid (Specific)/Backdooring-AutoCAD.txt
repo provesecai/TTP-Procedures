@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify AutoCAD Startup Script Locations]
+    B[Modify or Replace `acad.lsp` and `acaddoc.lsp` Files]
+    C[Monitor and Maintain Persistence via AutoCAD]
+    D[Conceal Malicious AutoCAD Script Modifications]
+    E[Persistence Achieved via AutoCAD Startup Script Hijacking]
+
+    A -->|"Locate AutoCAD startup scripts in user profiles (`%AppData%\Autodesk\AutoCAD\RXX.X\enu\Support\`) Corporate Control: Windows File System"| B
+    A -->|"Identify writable AutoCAD Lisp scripts used for automation Corporate Control: AutoCAD Configuration"| B
+    A -->|"Prepare attacker-modified Lisp scripts for execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze AutoCAD logs for script execution tracking Corporate Control: AutoCAD Event Logs"| B
+    B -->|"Replace `acad.lsp` and `acaddoc.lsp` with attacker-modified versions Corporate Control: AutoCAD Script Engine"| C
+    B -->|"Ensure execution by loading the scripts during AutoCAD startup Corporate Control: AutoCAD Startup Process"| C
+    B -->|"Validate execution by simulating AutoCAD project loads Corporate Control: AutoCAD Debug Console"| C
+    B -->|"Apply obfuscation techniques (Lisp function encryption, script hiding) Corporate Control: AutoCAD Lisp Editor"| C
+    C -->|"Monitor script execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across AutoCAD software updates Corporate Control: AutoCAD Update Mechanism"| D
+    C -->|"Validate stealth against AutoCAD security tools Corporate Control: Autodesk Security Features"| D
+    C -->|"Modify script file attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized script modifications Corporate Control: AutoCAD Log Files"| E
+    D -->|"Obfuscate AutoCAD script metadata Corporate Control: AutoCAD Configuration Settings"| E
+    D -->|"Blend malicious script modifications with legitimate AutoCAD customizations Corporate Control: AutoCAD User Preferences"| E
+    D -->|"Continuously monitor AutoCAD script execution Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_JavaScript_into_Chrome_Extension" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Installed Chrome Extensions</data>
+</node>
+<node id="B">
+<data key="label">Modify Extension Code to Inject Malicious JavaScript</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Injected JavaScript Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Extension Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Injected Chrome Extension JavaScript</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed extensions in Chrome directory (C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data\Default\Extensions) Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable extension folders based on user permissions Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select an extension with weak validation or large codebase Corporate Control: Chrome Extension Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging configurations for extension changes Corporate Control: Windows Defender Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing JavaScript files inside the extension folder Corporate Control: Chrome Extension API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject payloads into background scripts (background.js) Corporate Control: Extension Background Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution at browser startup via content scripts Corporate Control: Chrome WebRequest API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (minification, hex encoding) Corporate Control: Extension Source Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor extension behavior for anomalies Corporate Control: Browser Developer Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through extension auto-updates Corporate Control: Chrome Extension Store</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Chrome security features Corporate Control: Google Safe Browsing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify extension manifest to prevent easy removal Corporate Control: Chrome Manifest.json</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of extension modifications Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified JavaScript and extension metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious changes with legitimate extension updates Corporate Control: Chrome Extension Update Mechanism</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor extension execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

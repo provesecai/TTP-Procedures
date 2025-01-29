@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify VM Guest Additions Binaries]
+    B[Modify or Replace Guest Addition Executables]
+    C[Monitor and Maintain Persistence via Guest Additions]
+    D[Conceal Guest Additions Modifications]
+    E[Persistence Achieved via VM Guest Additions]
+
+    A -->|"Enumerate VMware Tools/VirtualBox Guest Additions binaries Corporate Control: Virtualization Software"| B
+    A -->|"Identify writable binaries loaded during VM startup Corporate Control: Virtual Machine File System"| B
+    A -->|"Prepare attacker-modified version of VM Guest Additions Corporate Control: Internal Virtual Machine Repositories"| B
+    A -->|"Analyze system logs for VM Guest Additions execution tracking Corporate Control: Virtualization Event Logs"| B
+    B -->|"Replace legitimate VM Guest Additions binary with attacker-modified version Corporate Control: VM File System"| C
+    B -->|"Ensure execution on every VM startup Corporate Control: Virtual Machine Boot Process"| C
+    B -->|"Validate execution through process monitoring Corporate Control: Virtual Machine Logs"| C
+    B -->|"Apply obfuscation techniques (process name spoofing, hidden execution) Corporate Control: File System Metadata"| C
+    C -->|"Monitor Guest Additions execution for anomalies Corporate Control: Virtual Machine Audit Logs"| D
+    C -->|"Ensure persistence across VM snapshots and clones Corporate Control: VM Management System"| D
+    C -->|"Validate stealth against security monitoring tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized VM Guest Additions modifications Corporate Control: Virtualization Event Logs"| E
+    D -->|"Obfuscate modified binary metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate Guest Additions updates Corporate Control: VM Update System"| E
+    D -->|"Continuously monitor VM Guest Additions execution Corporate Control: Security Operations Center"| E

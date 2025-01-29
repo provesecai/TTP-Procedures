@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging_Linux_Cron_Reboot_Jobs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Linux Cron Job Configuration</data>
+</node>
+<node id="B">
+<data key="label">Create or Modify @reboot Cron Jobs</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Cron Job Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Cron Job Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Linux Cron @reboot Jobs</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">List existing cron jobs for user/system Corporate Control: Linux Cron Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify users with cron job modification permissions Corporate Control: User Privilege Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious script for execution on system startup Corporate Control: Internal File Servers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for cron job modifications Corporate Control: Syslog and Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert @reboot cron jobs to execute payload Corporate Control: Crontab Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by setting periodic execution intervals Corporate Control: Linux Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate script execution after system reboots Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (base64 encoding, indirect execution) Corporate Control: Linux Shell Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor cron job executions for unauthorized activity Corporate Control: System Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure cron job persistence across user and system updates Corporate Control: Crontab Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of malicious cron jobs against security tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure cron jobs periodically to avoid detection Corporate Control: System Update Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of cron job modifications Corporate Control: Syslog and Journalctl</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate cron job metadata and script execution Corporate Control: File System Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious cron jobs with legitimate scheduled tasks Corporate Control: Linux Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor cron execution activities Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

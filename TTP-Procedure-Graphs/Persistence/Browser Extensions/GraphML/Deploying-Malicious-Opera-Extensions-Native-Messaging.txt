@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Deploying_Malicious_Opera_Extensions_Native_Messaging" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Opera Extension Native Messaging Hosts</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Native Messaging Host for Opera</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Opera Native Messaging Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Opera Extension</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Opera Native Messaging</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate Opera extension directories (~/Library/Application Support/com.operasoftware.Opera/) Corporate Control: macOS File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify users with permissions to modify Native Messaging Hosts Corporate Control: Opera Configuration Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious Native Messaging Host for deployment Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for extension modifications Corporate Control: Unified Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious Native Messaging Host to execute scripts Corporate Control: Opera Extensions API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of scripts via background script communication Corporate Control: Opera Background Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Opera Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (script encryption, message obfuscation) Corporate Control: Opera Configuration System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Native Messaging execution for unauthorized modifications Corporate Control: macOS System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Opera updates Corporate Control: Opera Auto-Update System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Opera security monitoring Corporate Control: Opera Safe Browsing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Native Messaging settings periodically to evade detection Corporate Control: Opera Extension Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized extension execution Corporate Control: Unified Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate Native Messaging metadata Corporate Control: Opera Preferences File</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Native Messaging Hosts with legitimate ones Corporate Control: Opera Extension Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Opera extension behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

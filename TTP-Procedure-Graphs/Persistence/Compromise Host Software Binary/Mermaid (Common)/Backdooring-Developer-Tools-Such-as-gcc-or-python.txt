@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Developer Tools Used on Target System]
+    B[Modify or Replace Developer Tool Executables]
+    C[Monitor and Maintain Persistence via Compromised Dev Tools]
+    D[Conceal Developer Tool Modifications]
+    E[Persistence Achieved via Compromised Development Tools]
+
+    A -->|"Enumerate developer tools installed (gcc, python, node.js) Corporate Control: Software Management System"| B
+    A -->|"Identify writable executable files and configurations Corporate Control: File System Permissions"| B
+    A -->|"Prepare attacker-modified versions of development tools Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze system logs for developer tool execution tracking Corporate Control: System Activity Logs"| B
+    B -->|"Replace legitimate development tool binary with attacker-modified version Corporate Control: Linux/Windows File System"| C
+    B -->|"Ensure execution on every developer tool invocation Corporate Control: System Path Manipulation"| C
+    B -->|"Validate execution through developer interaction Corporate Control: Terminal / Command Logs"| C
+    B -->|"Apply obfuscation techniques (code wrapping, delayed execution) Corporate Control: File System Metadata"| C
+    C -->|"Monitor developer tool executions for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across tool updates Corporate Control: Package Managers (apt, yum, chocolatey)"| D
+    C -->|"Validate stealth against security tools Corporate Control: Endpoint Security Solutions"| D
+    C -->|"Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized developer tool modifications Corporate Control: Event Viewer / Syslog"| E
+    D -->|"Obfuscate modified tool metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate tool updates Corporate Control: Software Update System"| E
+    D -->|"Continuously monitor developer tool activity Corporate Control: Security Operations Center"| E

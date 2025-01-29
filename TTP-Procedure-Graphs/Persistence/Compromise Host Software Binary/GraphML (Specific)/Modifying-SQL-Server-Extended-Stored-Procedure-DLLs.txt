@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_SQL_Server_Extended_Stored_Procedure_DLLs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SQL Server Extended Stored Procedure DLLs</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Extended Stored Procedure DLLs</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via SQL Server</data>
+</node>
+<node id="D">
+<data key="label">Conceal SQL Server DLL Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SQL Server Extended Stored Procedures</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify Extended Stored Procedure DLLs (e.g., xp_cmdshell) Corporate Control: SQL Server Installation Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts with permissions to modify DLLs Corporate Control: SQL Server Role-Based Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious DLL with backdoor functionality Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze SQL logs for DLL execution tracking Corporate Control: SQL Server Error Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace Extended Stored Procedure DLLs with malicious versions Corporate Control: SQL Server File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution via stored procedure calls Corporate Control: SQL Query Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by testing stored procedure behavior Corporate Control: SQL Server Management Studio (SSMS)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (function hooking, encrypted payloads) Corporate Control: SQL Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SQL procedure execution for anomalies Corporate Control: Database Activity Monitoring (DAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across SQL Server updates Corporate Control: SQL Server Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against SQL security monitoring Corporate Control: Database Activity Monitoring (DAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DLL attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized DLL modifications Corporate Control: SQL Server Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate DLL metadata and execution paths Corporate Control: SQL Server File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious stored procedures with legitimate queries Corporate Control: SQL Server Query Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor SQL Server procedure executions Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

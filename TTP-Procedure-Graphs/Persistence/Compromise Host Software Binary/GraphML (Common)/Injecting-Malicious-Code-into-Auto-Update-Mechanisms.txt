@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_Code_into_Auto_Update_Mechanisms" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Auto-Update Mechanisms in Software</data>
+</node>
+<node id="B">
+<data key="label">Modify Update Process to Deploy Malicious Binaries</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Auto-Updates</data>
+</node>
+<node id="D">
+<data key="label">Conceal Auto-Update Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Auto-Update Mechanism Exploitation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify software with auto-update functionality (e.g., Chrome, Notepad++, Adobe) Corporate Control: Software Management System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine writable update-related files and configurations Corporate Control: Windows/Linux/macOS File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified update package Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze update logs for tracking software updates Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify update server or local package source Corporate Control: Software Update Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure attacker-modified binary replaces legitimate software Corporate Control: Auto-Update Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by simulating a software update Corporate Control: System Process Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (tampering with update signatures) Corporate Control: Digital Signature Spoofing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor update execution for unauthorized modifications Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across software version updates Corporate Control: Application Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security tools Corporate Control: Endpoint Security Software</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify update files periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized update modifications Corporate Control: Event Viewer / Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate update package metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious updates with legitimate patches Corporate Control: Software Update System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor auto-update activities Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

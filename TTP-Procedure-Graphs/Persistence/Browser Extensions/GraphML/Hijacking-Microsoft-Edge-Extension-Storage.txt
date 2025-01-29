@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking_Microsoft_Edge_Extension_Storage" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Microsoft Edge Extension Storage Paths</data>
+</node>
+<node id="B">
+<data key="label">Modify Extension Storage to Execute Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Extension Storage</data>
+</node>
+<node id="D">
+<data key="label">Conceal Edge Extension Storage Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Edge Extension Storage Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed Edge extensions in (C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\User Data\Default\Extensions) Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with permissions to modify Edge extensions Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze storage.json files for modification Corporate Control: Edge WebExtensions API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for extension execution events Corporate Control: Microsoft Defender Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious scripts into extension storage.json Corporate Control: Edge Extension Storage System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts execute on Edge startup Corporate Control: Edge Background Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Edge Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (encrypted payloads, storage key manipulation) Corporate Control: Edge Storage API</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor extension storage for unauthorized modifications Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Edge browser updates Corporate Control: Microsoft Update Service</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of extension modifications against security tools Corporate Control: Microsoft SmartScreen</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify storage periodically to evade detection Corporate Control: Edge Extension Update Mechanism</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized extension modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate extension storage metadata Corporate Control: Windows File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Edge storage modifications with legitimate data Corporate Control: Edge Configuration System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Edge extension storage for anomalies Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

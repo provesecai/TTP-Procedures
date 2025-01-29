@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify macOS Launch Daemon Executables]
+    B[Modify or Replace Launch Daemon Binaries with Malicious Code]
+    C[Monitor and Maintain Persistence via Launch Daemon Execution]
+    D[Conceal Malicious Launch Daemon Modifications]
+    E[Persistence Achieved via macOS Launch Daemon Infection]
+
+    A -->|"Enumerate Launch Daemons in /Library/LaunchDaemons Corporate Control: macOS File System"| B
+    A -->|"Identify Launch Daemon binaries writable by compromised accounts Corporate Control: System Integrity Protection (SIP)"| B
+    A -->|"Prepare malicious version of targeted Launch Daemon Corporate Control: Internal macOS File Repositories"| B
+    A -->|"Analyze system logs for Launch Daemon execution tracking Corporate Control: Unified Logs"| B
+    B -->|"Replace legitimate Launch Daemon binary with attacker-modified executable Corporate Control: macOS File System"| C
+    B -->|"Ensure daemon auto-starts on boot via launchctl Corporate Control: LaunchDaemon Configuration"| C
+    B -->|"Validate execution through macOS Console Logs Corporate Control: Activity Monitor"| C
+    B -->|"Apply obfuscation techniques (code signing, plist modification) Corporate Control: macOS File Metadata"| C
+    C -->|"Monitor daemon execution for anomalies Corporate Control: System Integrity Monitoring"| D
+    C -->|"Ensure persistence across macOS updates Corporate Control: macOS Update Management"| D
+    C -->|"Validate stealth against security tools Corporate Control: macOS Gatekeeper, XProtect"| D
+    C -->|"Modify Launch Daemon metadata periodically to evade detection Corporate Control: File System Monitoring"| D
+    D -->|"Remove logs of unauthorized Launch Daemon modifications Corporate Control: Unified Logs"| E
+    D -->|"Obfuscate modified binary metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious Launch Daemon modifications with legitimate services Corporate Control: macOS System Services"| E
+    D -->|"Continuously monitor Launch Daemon executions Corporate Control: Security Operations Center"| E

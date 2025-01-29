@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify SAP Kernel Executables]
+    B[Modify or Replace SAP Kernel Binaries]
+    C[Monitor and Maintain Persistence via SAP Kernel Execution]
+    D[Conceal SAP Kernel Modifications]
+    E[Persistence Achieved via SAP Kernel Binary Hijacking]
+
+    A -->|"Locate SAP Kernel binaries (`disp+work`, `msg_server`) in `/usr/sap/SID/SYS/exe/` Corporate Control: SAP File System"| B
+    A -->|"Identify permissions required to modify SAP Kernel Corporate Control: SAP System User Privileges"| B
+    A -->|"Prepare attacker-modified kernel binaries with embedded backdoors Corporate Control: Internal SAP File Repositories"| B
+    A -->|"Analyze SAP logs for kernel execution tracking Corporate Control: SAP Security Audit Logs"| B
+    B -->|"Replace legitimate SAP Kernel binaries with attacker-modified versions Corporate Control: SAP System Files"| C
+    B -->|"Ensure execution via SAP Instance Startup Corporate Control: SAP Startup Process"| C
+    B -->|"Validate execution through SAP Management Console Corporate Control: SAP Monitoring Tools"| C
+    B -->|"Apply obfuscation techniques (code injection, digital signature spoofing) Corporate Control: SAP Kernel Update System"| C
+    C -->|"Monitor SAP Kernel execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across SAP Kernel updates Corporate Control: SAP Update Manager"| D
+    C -->|"Validate stealth against SAP security monitoring Corporate Control: SAP Security Patch Management"| D
+    C -->|"Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized SAP Kernel modifications Corporate Control: SAP System Logs"| E
+    D -->|"Obfuscate SAP Kernel binary metadata and execution paths Corporate Control: SAP File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate SAP updates Corporate Control: SAP Configuration Management"| E
+    D -->|"Continuously monitor SAP Kernel execution Corporate Control: Security Operations Center"| E

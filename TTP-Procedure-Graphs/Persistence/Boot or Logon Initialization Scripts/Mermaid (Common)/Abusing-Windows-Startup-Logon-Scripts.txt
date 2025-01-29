@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Startup Logon Script Locations]
+    B[Modify or Create Malicious Logon Scripts]
+    C[Monitor and Maintain Logon Script Execution]
+    D[Conceal Logon Script Modifications]
+    E[Persistence Achieved via Windows Startup Logon Scripts]
+
+    A -->|"Enumerate startup logon script locations (C:\Windows\System32\GroupPolicy\User\Scripts\Logon) Corporate Control: Windows File System"| B
+    A -->|"Identify accounts with permissions to modify startup logon scripts Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare attacker-controlled scripts for execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze security policies monitoring startup logon execution Corporate Control: Event Viewer"| B
+    B -->|"Modify startup logon scripts to execute payload Corporate Control: Group Policy Management Console"| C
+    B -->|"Ensure scripts execute during every user logon Corporate Control: Windows Startup Configuration"| C
+    B -->|"Validate execution through test user sessions Corporate Control: Logon Activity Logs"| C
+    B -->|"Apply obfuscation techniques (VBScript encoding, PowerShell obfuscation) Corporate Control: Windows Scripting Host"| C
+    C -->|"Monitor startup script activity for unauthorized modifications Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence through Group Policy updates Corporate Control: Policy Management Tools"| D
+    C -->|"Validate stealth of script execution against endpoint security Corporate Control: Windows Defender, SIEM Logs"| D
+    C -->|"Periodically modify script metadata to evade detection Corporate Control: File System Logs"| D
+    D -->|"Remove logs of script modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate script contents and file attributes Corporate Control: File Metadata Editor"| E
+    D -->|"Blend malicious startup scripts with legitimate configurations Corporate Control: Group Policy Management"| E
+    D -->|"Continuously monitor startup script execution Corporate Control: Security Operations Center"| E

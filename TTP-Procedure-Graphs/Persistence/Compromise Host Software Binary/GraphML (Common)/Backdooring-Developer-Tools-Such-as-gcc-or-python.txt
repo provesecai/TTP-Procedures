@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdooring_Developer_Tools_Such_as_gcc_or_python" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Developer Tools Used on Target System</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Developer Tool Executables</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Compromised Dev Tools</data>
+</node>
+<node id="D">
+<data key="label">Conceal Developer Tool Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Compromised Development Tools</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate developer tools installed (gcc, python, node.js) Corporate Control: Software Management System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable executable files and configurations Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified versions of development tools Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for developer tool execution tracking Corporate Control: System Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate development tool binary with attacker-modified version Corporate Control: Linux/Windows File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution on every developer tool invocation Corporate Control: System Path Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through developer interaction Corporate Control: Terminal / Command Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (code wrapping, delayed execution) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor developer tool executions for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across tool updates Corporate Control: Package Managers (apt, yum, chocolatey)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security tools Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized developer tool modifications Corporate Control: Event Viewer / Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified tool metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate tool updates Corporate Control: Software Update System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor developer tool activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

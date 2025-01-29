@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Edge WebView2-Based Browser Extensions]
+    B[Modify WebView2 Execution Flow to Inject Malicious Scripts]
+    C[Monitor and Maintain Persistence via WebView2 Extensions]
+    D[Conceal WebView2-Based Extension Modifications]
+    E[Persistence Achieved via WebView2-Based Extensions]
+
+    A -->|"Enumerate installed Edge extensions utilizing WebView2 Corporate Control: Edge Developer Console"| B
+    A -->|"Identify user permissions needed to modify WebView2 execution flows Corporate Control: Windows Security Policies"| B
+    A -->|"Analyze WebView2 execution structure for modifying script injections Corporate Control: WebView2 API"| B
+    A -->|"Review browser logs for WebView2 execution activity Corporate Control: Microsoft Defender Logs"| B
+    B -->|"Modify Edge extension's WebView2 execution flow to inject malicious scripts Corporate Control: Edge Extension JavaScript"| C
+    B -->|"Ensure execution of scripts via WebView2 process callbacks Corporate Control: WebView2 Background Services"| C
+    B -->|"Validate execution through browser debugging tools Corporate Control: Web Developer Console"| C
+    B -->|"Apply obfuscation techniques (script encryption, disguised execution paths) Corporate Control: WebExtension Source Code"| C
+    C -->|"Monitor WebView2 execution activity for anomalies Corporate Control: Security Event Logs"| D
+    C -->|"Ensure persistence across Edge browser updates Corporate Control: Edge Auto-Update System"| D
+    C -->|"Validate stealth against Edge security monitoring Corporate Control: Microsoft SmartScreen"| D
+    C -->|"Modify WebView2 settings periodically to evade detection Corporate Control: Edge Extension Store"| D
+    D -->|"Remove logs of unauthorized WebView2 modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate WebView2 extension metadata and configurations Corporate Control: Windows File System"| E
+    D -->|"Blend malicious WebView2 modifications with legitimate Edge extension updates Corporate Control: Edge Update Policies"| E
+    D -->|"Continuously monitor WebView2 extension behavior Corporate Control: Security Operations Center"| E

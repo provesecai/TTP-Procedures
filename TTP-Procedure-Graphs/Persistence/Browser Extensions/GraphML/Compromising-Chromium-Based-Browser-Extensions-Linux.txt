@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Chromium_Based_Browser_Extensions_Linux" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Chromium Extension Directories</data>
+</node>
+<node id="B">
+<data key="label">Modify Extension Preferences to Execute Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Chromium Extensions</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Chromium Extension</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Chromium Extensions on Linux</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed Chromium extensions in ~/.config/chromium/ Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable extension preference files based on user permissions Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze extension manifest and permissions for exploitation Corporate Control: WebExtensions API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for extension execution events Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify extension preference files to inject payload Corporate Control: Chromium Configuration Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of scripts at browser startup Corporate Control: Chromium Background Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Chromium Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (encryption, disguised permissions) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor extension execution and updates Corporate Control: System Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Chromium browser updates Corporate Control: Chromium Auto-Update System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security monitoring Corporate Control: Linux Safe Browsing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify extension settings periodically to evade detection Corporate Control: Chromium Extension Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized extension modifications Corporate Control: System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate extension metadata and configuration settings Corporate Control: Chromium Preferences File</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious extension modifications with legitimate updates Corporate Control: Chromium Update Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Chromium extension execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

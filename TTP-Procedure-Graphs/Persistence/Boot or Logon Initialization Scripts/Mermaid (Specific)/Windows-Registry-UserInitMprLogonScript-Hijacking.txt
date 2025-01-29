@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify UserInitMprLogonScript Registry Key]
+    B[Modify UserInitMprLogonScript for Malicious Execution]
+    C[Monitor and Maintain Logon Script Execution]
+    D[Conceal Logon Script Registry Modifications]
+    E[Persistence Achieved via UserInitMprLogonScript Hijacking]
+
+    A -->|"Locate UserInitMprLogonScript in Windows Registry (HKCU\Environment\UserInitMprLogonScript) Corporate Control: Windows Registry"| B
+    A -->|"Identify accounts with permissions to modify registry key Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious script or executable for execution on login Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging for registry modifications Corporate Control: Windows Event Viewer"| B
+    B -->|"Modify UserInitMprLogonScript registry entry Corporate Control: Registry Editor"| C
+    B -->|"Ensure script execution during every user logon Corporate Control: Windows Logon Process"| C
+    B -->|"Validate execution by simulating user logon sessions Corporate Control: User Activity Logs"| C
+    B -->|"Apply obfuscation techniques (PowerShell obfuscation, script encryption) Corporate Control: Windows Scripting Host"| C
+    C -->|"Monitor registry activity for unauthorized modifications Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across Windows updates Corporate Control: Registry Configuration Tools"| D
+    C -->|"Validate stealth of registry changes against detection Corporate Control: Windows Defender, SIEM Logs"| D
+    C -->|"Reconfigure registry settings periodically to avoid detection Corporate Control: System Update Management"| D
+    D -->|"Remove logs of registry modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate registry key values and execution paths Corporate Control: Registry Metadata Editor"| E
+    D -->|"Blend malicious logon script modifications with legitimate configurations Corporate Control: Group Policy Management"| E
+    D -->|"Continuously monitor logon script execution Corporate Control: Security Operations Center"| E

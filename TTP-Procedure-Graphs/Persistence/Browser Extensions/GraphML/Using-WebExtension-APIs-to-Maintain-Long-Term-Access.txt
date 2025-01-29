@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_WebExtension_APIs_to_Maintain_Long_Term_Access" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WebExtension API Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious WebExtension API Calls</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via WebExtension APIs</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious WebExtension Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebExtension APIs</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed extensions utilizing WebExtension APIs Corporate Control: Browser Extension Store</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user permissions needed to modify WebExtension scripts Corporate Control: Browser Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze API permissions for persistent background execution Corporate Control: WebExtensions API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for API execution activity Corporate Control: Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify extension JavaScript to execute persistent API calls Corporate Control: WebExtension Background Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure API calls maintain active background processes Corporate Control: WebExtension Persistent Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Web Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (encrypted API requests, script disguising) Corporate Control: WebExtension Source Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor API execution and background script behavior Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across browser updates Corporate Control: Browser Extension Auto-Update</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against browser security monitoring Corporate Control: Browser Safe Browsing Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify API execution periodically to evade detection Corporate Control: WebExtension Policy Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized API calls Corporate Control: Browser Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate API request metadata and configurations Corporate Control: WebExtension Preferences File</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious API calls with legitimate background processes Corporate Control: WebExtension Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor WebExtension API activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

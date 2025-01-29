@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Trojanizing_Docker_Daemon_Binaries_for_Persistent_Container_Access" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Docker Daemon Binary Locations</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Docker Daemon Executables</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Docker Daemon</data>
+</node>
+<node id="D">
+<data key="label">Conceal Docker Daemon Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Compromised Docker Daemon</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate Docker daemon binaries in /usr/bin/dockerd Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions required to modify Docker binaries Corporate Control: Docker User Roles</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of Docker daemon binary Corporate Control: Internal Containerized Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Docker logs for daemon execution tracking Corporate Control: Docker Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace Docker daemon binary with attacker-modified version Corporate Control: Linux System Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution through container startup Corporate Control: Docker Daemon Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by monitoring container behavior Corporate Control: Docker Container Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (binary packing, altered process names) Corporate Control: Linux File Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Docker daemon execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across container updates Corporate Control: Docker Image Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against container security monitoring Corporate Control: Kubernetes/Docker Security Scanners</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized Docker daemon modifications Corporate Control: Syslog and Journalctl</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate Docker binary metadata and execution paths Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Docker modifications with legitimate containerized processes Corporate Control: Docker Update System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Docker daemon execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

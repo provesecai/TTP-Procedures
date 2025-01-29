@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Docker Daemon Binary Locations]
+    B[Modify or Replace Docker Daemon Executables]
+    C[Monitor and Maintain Persistence via Docker Daemon]
+    D[Conceal Docker Daemon Modifications]
+    E[Persistence Achieved via Docker Daemon Hijacking]
+
+    A -->|"Locate Docker daemon binaries in `/usr/bin/dockerd` Corporate Control: Linux File System"| B
+    A -->|"Identify writable Docker binaries based on permissions Corporate Control: Linux User Privileges"| B
+    A -->|"Prepare attacker-modified version of Docker daemon binary Corporate Control: Internal Containerized Repositories"| B
+    A -->|"Analyze container logs for daemon execution tracking Corporate Control: Docker Logs"| B
+    B -->|"Replace Docker daemon binary with attacker-modified version Corporate Control: Linux System Files"| C
+    B -->|"Ensure execution through container startup Corporate Control: Docker Daemon Process"| C
+    B -->|"Validate execution by monitoring container behavior Corporate Control: Docker Container Logs"| C
+    B -->|"Apply obfuscation techniques (binary packing, altered process names) Corporate Control: Linux File Metadata"| C
+    C -->|"Monitor daemon execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across container updates Corporate Control: Docker Image Management"| D
+    C -->|"Validate stealth against container security monitoring Corporate Control: Kubernetes/Docker Security Scanners"| D
+    C -->|"Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized Docker daemon modifications Corporate Control: Syslog and Journalctl"| E
+    D -->|"Obfuscate Docker binary metadata and execution paths Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate Docker updates Corporate Control: Docker Update System"| E
+    D -->|"Continuously monitor Docker daemon execution Corporate Control: Security Operations Center"| E

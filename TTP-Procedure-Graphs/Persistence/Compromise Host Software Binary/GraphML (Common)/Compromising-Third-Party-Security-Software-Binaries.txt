@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Third_Party_Security_Software_Binaries" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Trusted Security Software Binaries</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Security Software Executables</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Security Software</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Security Software Binary Compromise</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate security software binaries in Program Files Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable security software executables Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of security software executable Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security logs for software execution tracking Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate security software binary with attacker-modified version Corporate Control: Windows File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution through auto-start mechanisms Corporate Control: Windows Startup Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through user interactions Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (code signing, process injection) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor software execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across software updates Corporate Control: Security Software Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security tools Corporate Control: Windows Defender, EDR Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify file attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized binary modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate security software binary metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate software updates Corporate Control: Security Software Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor compromised software execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

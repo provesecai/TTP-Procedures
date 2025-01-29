@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Opera Extension Native Messaging Hosts]
+    B[Deploy Malicious Native Messaging Host for Opera]
+    C[Monitor and Maintain Opera Native Messaging Persistence]
+    D[Conceal Malicious Opera Extension]
+    E[Persistence Achieved via Opera Native Messaging]
+
+    A -->|"Enumerate Opera extension directories (~/Library/Application Support/com.operasoftware.Opera/) Corporate Control: macOS File System"| B
+    A -->|"Identify users with permissions to modify Native Messaging Hosts Corporate Control: Opera Configuration Settings"| B
+    A -->|"Prepare malicious Native Messaging Host for deployment Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging for extension modifications Corporate Control: Unified Logs"| B
+    B -->|"Deploy malicious Native Messaging Host to execute scripts Corporate Control: Opera Extensions API"| C
+    B -->|"Ensure execution of scripts via background script communication Corporate Control: Opera Background Services"| C
+    B -->|"Validate execution through browser debugging tools Corporate Control: Opera Developer Console"| C
+    B -->|"Apply obfuscation techniques (script encryption, message obfuscation) Corporate Control: Opera Configuration System"| C
+    C -->|"Monitor Native Messaging execution for unauthorized modifications Corporate Control: macOS System Logs"| D
+    C -->|"Ensure persistence across Opera updates Corporate Control: Opera Auto-Update System"| D
+    C -->|"Validate stealth against Opera security monitoring Corporate Control: Opera Safe Browsing"| D
+    C -->|"Modify Native Messaging settings periodically to evade detection Corporate Control: Opera Extension Policies"| D
+    D -->|"Remove logs of unauthorized extension execution Corporate Control: Unified Logs"| E
+    D -->|"Obfuscate Native Messaging metadata Corporate Control: Opera Preferences File"| E
+    D -->|"Blend malicious Native Messaging Hosts with legitimate ones Corporate Control: Opera Extension Store"| E
+    D -->|"Continuously monitor Opera extension behavior Corporate Control: Security Operations Center"| E

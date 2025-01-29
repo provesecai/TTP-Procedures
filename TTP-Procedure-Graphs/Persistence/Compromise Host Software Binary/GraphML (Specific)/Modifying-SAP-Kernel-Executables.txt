@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_SAP_Kernel_Executables" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SAP Kernel Executables</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace SAP Kernel Binaries</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via SAP Kernel Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal SAP Kernel Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SAP Kernel Binary Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate SAP Kernel binaries in /usr/sap/SID/SYS/exe/ Corporate Control: SAP File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions required to modify SAP Kernel Corporate Control: SAP System User Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified kernel binaries with embedded backdoors Corporate Control: Internal SAP File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze SAP logs for kernel execution tracking Corporate Control: SAP Security Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate SAP Kernel binaries with attacker-modified versions Corporate Control: SAP System Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution via SAP Instance Startup Corporate Control: SAP Startup Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through SAP Management Console Corporate Control: SAP Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (code injection, digital signature spoofing) Corporate Control: SAP Kernel Update System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SAP Kernel execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across SAP Kernel updates Corporate Control: SAP Update Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against SAP security monitoring Corporate Control: SAP Security Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized SAP Kernel modifications Corporate Control: SAP System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SAP Kernel binary metadata and execution paths Corporate Control: SAP File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate SAP updates Corporate Control: SAP Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor SAP Kernel execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify High-Use Linux System Binaries]
+    B[Replace or Modify System Binaries with Malicious Versions]
+    C[Monitor and Maintain Persistence via Trojanized Binaries]
+    D[Conceal Binary Modifications]
+    E[Persistence Achieved via Trojanized System Binaries]
+
+    A -->|"Enumerate critical system binaries (e.g., ls, cat, ps) in /usr/bin Corporate Control: Linux File System"| B
+    A -->|"Identify binaries writable by compromised accounts Corporate Control: Linux User Permissions"| B
+    A -->|"Prepare attacker-modified versions of system utilities Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze system logs for binary execution tracking Corporate Control: Syslog, Auditd"| B
+    B -->|"Replace legitimate system binaries with attacker-modified versions Corporate Control: Linux File System"| C
+    B -->|"Ensure malicious binaries maintain original functionality Corporate Control: Binary Wrapper Techniques"| C
+    B -->|"Validate execution by monitoring user interactions Corporate Control: System Command Logs"| C
+    B -->|"Apply obfuscation techniques (binary packing, process masquerading) Corporate Control: File Metadata"| C
+    C -->|"Monitor system command executions for anomalies Corporate Control: Linux Audit Framework"| D
+    C -->|"Ensure persistence across OS updates Corporate Control: System Package Manager"| D
+    C -->|"Validate stealth against security monitoring tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized binary modifications Corporate Control: Syslog and Journalctl"| E
+    D -->|"Obfuscate modified binary metadata and execution paths Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious binaries with legitimate system files Corporate Control: Linux File System"| E
+    D -->|"Continuously monitor system binary executions Corporate Control: Security Operations Center"| E

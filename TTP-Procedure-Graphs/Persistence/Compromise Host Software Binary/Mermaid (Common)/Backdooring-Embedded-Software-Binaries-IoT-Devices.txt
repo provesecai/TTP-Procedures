@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify IoT Firmware Binaries]
+    B[Modify or Replace IoT Software for Persistence]
+    C[Monitor and Maintain Persistence via IoT Software]
+    D[Conceal Malicious IoT Binary Modifications]
+    E[Persistence Achieved via IoT Firmware Backdooring]
+
+    A -->|"Identify IoT software binaries stored in firmware Corporate Control: Embedded Device Storage"| B
+    A -->|"Determine writable binaries based on firmware permissions Corporate Control: IoT File System"| B
+    A -->|"Prepare attacker-modified version of embedded software Corporate Control: Internal Firmware Repositories"| B
+    A -->|"Analyze system logs for IoT software execution tracking Corporate Control: IoT Security Logs"| B
+    B -->|"Modify firmware binaries to include backdoor functionality Corporate Control: Embedded Software Updates"| C
+    B -->|"Ensure persistence through device reboots Corporate Control: IoT Boot Configuration"| C
+    B -->|"Validate execution through real-world IoT device interactions Corporate Control: Device Telemetry Logs"| C
+    B -->|"Apply obfuscation techniques (firmware encryption, function disguising) Corporate Control: IoT Firmware Security"| C
+    C -->|"Monitor firmware execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across firmware updates Corporate Control: OTA (Over-the-Air) Update Mechanisms"| D
+    C -->|"Validate stealth against IoT security monitoring Corporate Control: Embedded EDR Solutions"| D
+    C -->|"Modify firmware attributes periodically to evade detection Corporate Control: Device Update Management"| D
+    D -->|"Remove logs of unauthorized firmware modifications Corporate Control: Device Event Logs"| E
+    D -->|"Obfuscate firmware metadata and execution paths Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate firmware Corporate Control: IoT Device Policies"| E
+    D -->|"Continuously monitor IoT software behavior Corporate Control: Security Operations Center"| E

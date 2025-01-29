@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_OpenSSH_authorized_keys" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify OpenSSH Authorized Keys Configuration</data>
+</node>
+<node id="B">
+<data key="label">Insert Forced Commands into Authorized Keys</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain SSH Forced Command Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious SSH Key Configurations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via OpenSSH Authorized Keys</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate SSH authorized_keys files (~/.ssh/authorized_keys) Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with permissions to modify SSH keys Corporate Control: Linux User Groups</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-controlled public SSH keys for forced command execution Corporate Control: Internal Key Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for SSH key modifications Corporate Control: Syslog and SSH Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious forced commands into authorized_keys Corporate Control: OpenSSH Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of forced commands upon user SSH login Corporate Control: Linux SSH Daemon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate forced command execution through test SSH logins Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (command aliasing, script redirection) Corporate Control: Linux Shell Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SSH key modifications for unauthorized changes Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across SSH configuration updates Corporate Control: OpenSSH Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of SSH key modifications against security tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure SSH key settings periodically to evade detection Corporate Control: System Update Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing SSH key modifications Corporate Control: Syslog and Journalctl</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SSH key entries and execution paths Corporate Control: File System Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious SSH keys with legitimate user keys Corporate Control: SSH Key Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor SSH login activity Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

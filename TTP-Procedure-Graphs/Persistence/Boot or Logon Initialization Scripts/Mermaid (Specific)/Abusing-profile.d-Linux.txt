@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify /etc/profile.d/ Scripts]
+    B[Insert Malicious Commands in Profile Scripts]
+    C[Monitor and Maintain Profile Script Execution]
+    D[Conceal Malicious Profile Script Changes]
+    E[Persistence Achieved via Linux Profile Scripts]
+
+    A -->|"Enumerate system-wide profile scripts in /etc/profile.d/ Corporate Control: Linux File System"| B
+    A -->|"Identify users with access to modify profile scripts Corporate Control: Linux User Groups"| B
+    A -->|"Prepare malicious commands for execution during login Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging configurations for profile script modifications Corporate Control: System Audit Logs"| B
+    B -->|"Modify existing scripts or create new ones Corporate Control: Text Editor (vi/nano)"| C
+    B -->|"Ensure scripts execute during every user login Corporate Control: Bash/Zsh Configuration"| C
+    B -->|"Test modifications for execution reliability Corporate Control: User Session Logs"| C
+    B -->|"Apply obfuscation techniques (alias masking, base64 encoding) Corporate Control: Linux Configuration Files"| C
+    C -->|"Monitor profile script executions for unauthorized changes Corporate Control: Linux File Integrity Monitoring"| D
+    C -->|"Ensure persistence across system-wide environment changes Corporate Control: Profile Configuration Management"| D
+    C -->|"Validate stealth of modified profile scripts against security tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure profile scripts periodically to avoid detection Corporate Control: System Update Management"| D
+    D -->|"Remove logs showing script modifications Corporate Control: Syslog and Journalctl"| E
+    D -->|"Obfuscate modified profile file contents Corporate Control: File Metadata Manager"| E
+    D -->|"Blend malicious profile changes with legitimate ones Corporate Control: User Shell Configuration"| E
+    D -->|"Continuously monitor user login activities Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_Persistent_WebSocket_Connections" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Extensions with WebSocket Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Modify WebSocket Implementation for Persistence</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistent WebSocket Connections</data>
+</node>
+<node id="D">
+<data key="label">Conceal WebSocket Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebSocket-Enabled Extensions</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed extensions utilizing WebSocket APIs Corporate Control: Browser Developer Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user permissions needed to modify WebSocket scripts Corporate Control: Browser Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze API capabilities for maintaining persistent WebSocket connections Corporate Control: WebSockets API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for WebSocket execution activity Corporate Control: Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify extension JavaScript to embed persistent WebSocket callbacks Corporate Control: WebExtension Background Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure WebSocket connections persist across browser sessions Corporate Control: WebSocket Background Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Web Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (encrypted WebSocket communication, traffic disguising) Corporate Control: WebExtension Source Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WebSocket connection activity for anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across browser updates Corporate Control: Browser Extension Auto-Update</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against browser security monitoring Corporate Control: Browser Safe Browsing Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify WebSocket callback settings periodically to evade detection Corporate Control: WebExtension Policy Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized WebSocket activity Corporate Control: Browser Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate WebSocket metadata and configurations Corporate Control: WebExtension Preferences File</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious WebSocket connections with legitimate traffic Corporate Control: WebSocket Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor WebSocket extension behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

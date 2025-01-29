@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Adding_Malicious_Scripts_to_Linux_Profile_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Linux Profile Files</data>
+</node>
+<node id="B">
+<data key="label">Insert Malicious Commands in Profile Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Profile Script Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Profile Script Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Linux Profile Scripts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate profile files (~/.bashrc, ~/.profile, /etc/profile) Corporate Control: Linux User Shell</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with permission to modify profile files Corporate Control: Linux User Groups</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious commands for execution on login Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess logging mechanisms for profile file modifications Corporate Control: System Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify existing profile scripts with payloads Corporate Control: Text Editor (vi/nano)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts execute during user login sessions Corporate Control: Bash/Zsh Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test modifications for execution reliability Corporate Control: User Session Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (alias masking, base64 encoding) Corporate Control: Linux Configuration Files</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor profile script executions for unauthorized changes Corporate Control: Linux File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across user environment changes Corporate Control: Profile Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of modified profile scripts against security tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure profile scripts periodically to avoid detection Corporate Control: System Update Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs showing script modifications Corporate Control: Syslog and Journalctl</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified profile file contents Corporate Control: File Metadata Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious profile changes with legitimate ones Corporate Control: User Shell Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor user login activities Corporate Control: Security Operations Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence across system reboots Corporate Control: Linux Startup Configuration</data>
+</edge>
+</graph>
+</graphml>

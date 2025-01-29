@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdooring_AutoCAD" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify AutoCAD Startup Script Locations</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace acad.lsp and acaddoc.lsp Files</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via AutoCAD</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious AutoCAD Script Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via AutoCAD Startup Script Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate AutoCAD startup scripts in user profiles (%AppData%\Autodesk\AutoCAD\RXX.X\enu\Support\) Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable AutoCAD Lisp scripts used for automation Corporate Control: AutoCAD Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified Lisp scripts for execution Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze AutoCAD logs for script execution tracking Corporate Control: AutoCAD Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace acad.lsp and acaddoc.lsp with attacker-modified versions Corporate Control: AutoCAD Script Engine</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution by loading the scripts during AutoCAD startup Corporate Control: AutoCAD Startup Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by simulating AutoCAD project loads Corporate Control: AutoCAD Debug Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (Lisp function encryption, script hiding) Corporate Control: AutoCAD Lisp Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor script execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across AutoCAD software updates Corporate Control: AutoCAD Update Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against AutoCAD security tools Corporate Control: Autodesk Security Features</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify script file attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized script modifications Corporate Control: AutoCAD Log Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate AutoCAD script metadata Corporate Control: AutoCAD Configuration Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious script modifications with legitimate AutoCAD customizations Corporate Control: AutoCAD User Preferences</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor AutoCAD script execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

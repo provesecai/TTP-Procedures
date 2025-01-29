@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering_Edge_WebView2_Based_Extensions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Edge WebView2-Based Browser Extensions</data>
+</node>
+<node id="B">
+<data key="label">Modify WebView2 Execution Flow to Inject Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via WebView2 Extensions</data>
+</node>
+<node id="D">
+<data key="label">Conceal WebView2-Based Extension Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebView2-Based Extensions</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed Edge extensions utilizing WebView2 Corporate Control: Edge Developer Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user permissions needed to modify WebView2 execution flows Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze WebView2 execution structure for modifying script injections Corporate Control: WebView2 API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for WebView2 execution activity Corporate Control: Microsoft Defender Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Edge extension's WebView2 execution flow to inject malicious scripts Corporate Control: Edge Extension JavaScript</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of scripts via WebView2 process callbacks Corporate Control: WebView2 Background Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through browser debugging tools Corporate Control: Web Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (script encryption, disguised execution paths) Corporate Control: WebExtension Source Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WebView2 execution activity for anomalies Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Edge browser updates Corporate Control: Edge Auto-Update System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Edge security monitoring Corporate Control: Microsoft SmartScreen</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify WebView2 settings periodically to evade detection Corporate Control: Edge Extension Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized WebView2 modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate WebView2 extension metadata and configurations Corporate Control: Windows File System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious WebView2 modifications with legitimate Edge extension updates Corporate Control: Edge Update Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor WebView2 extension behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

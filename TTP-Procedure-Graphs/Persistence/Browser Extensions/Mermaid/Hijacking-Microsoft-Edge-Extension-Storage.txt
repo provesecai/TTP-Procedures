@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Microsoft Edge Extension Storage Paths]
+    B[Modify Extension Storage to Execute Malicious Scripts]
+    C[Monitor and Maintain Persistence via Extension Storage]
+    D[Conceal Edge Extension Storage Modifications]
+    E[Persistence Achieved via Edge Extension Hijacking]
+
+    A -->|"Enumerate installed Edge extensions in (C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\User Data\Default\Extensions) Corporate Control: Windows File System"| B
+    A -->|"Identify user accounts with permissions to modify Edge extensions Corporate Control: Active Directory Group Policies"| B
+    A -->|"Analyze storage.json files for modification Corporate Control: Edge WebExtensions API"| B
+    A -->|"Review browser logs for extension execution events Corporate Control: Microsoft Defender Logs"| B
+    B -->|"Inject malicious scripts into extension storage.json Corporate Control: Edge Extension Storage System"| C
+    B -->|"Ensure scripts execute on Edge startup Corporate Control: Edge Background Service"| C
+    B -->|"Validate execution through browser debugging tools Corporate Control: Edge Developer Console"| C
+    B -->|"Apply obfuscation techniques (encrypted payloads, storage key manipulation) Corporate Control: Edge Storage API"| C
+    C -->|"Monitor extension storage for unauthorized modifications Corporate Control: Windows Event Logs"| D
+    C -->|"Ensure persistence across Edge browser updates Corporate Control: Microsoft Update Service"| D
+    C -->|"Validate stealth of extension modifications against security tools Corporate Control: Microsoft SmartScreen"| D
+    C -->|"Modify storage periodically to evade detection Corporate Control: Edge Extension Update Mechanism"| D
+    D -->|"Remove logs of unauthorized extension modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate extension storage metadata Corporate Control: Windows File System Attributes"| E
+    D -->|"Blend malicious Edge storage modifications with legitimate data Corporate Control: Edge Configuration System"| E
+    D -->|"Continuously monitor Edge extension storage for anomalies Corporate Control: Security Operations Center"| E

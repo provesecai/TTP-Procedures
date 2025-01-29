@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdooring_Embedded_Software_Binaries_IoT_Devices" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify IoT Firmware Binaries</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace IoT Software for Persistence</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via IoT Software</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious IoT Binary Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via IoT Firmware Backdooring</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify IoT software binaries stored in firmware Corporate Control: Embedded Device Storage</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine writable binaries based on firmware permissions Corporate Control: IoT File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of embedded software Corporate Control: Internal Firmware Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for IoT software execution tracking Corporate Control: IoT Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify firmware binaries to include backdoor functionality Corporate Control: Embedded Software Updates</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence through device reboots Corporate Control: IoT Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through real-world IoT device interactions Corporate Control: Device Telemetry Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (firmware encryption, function disguising) Corporate Control: IoT Firmware Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor firmware execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across firmware updates Corporate Control: OTA (Over-the-Air) Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against IoT security monitoring Corporate Control: Embedded EDR Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify firmware attributes periodically to evade detection Corporate Control: Device Update Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized firmware modifications Corporate Control: Device Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate firmware metadata and execution paths Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate firmware Corporate Control: IoT Device Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor IoT software behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

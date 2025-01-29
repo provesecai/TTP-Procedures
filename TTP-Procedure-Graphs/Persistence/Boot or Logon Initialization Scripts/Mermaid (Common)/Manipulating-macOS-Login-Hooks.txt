@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify macOS Login Hook Configurations]
+    B[Modify Login Hooks to Execute Malicious Scripts]
+    C[Monitor and Maintain Login Hook Execution]
+    D[Conceal Login Hook Modifications]
+    E[Persistence Achieved via macOS Login Hooks]
+
+    A -->|"Locate login hook configurations (/Library/Preferences/com.apple.loginwindow.plist) Corporate Control: macOS Configuration Files"| B
+    A -->|"Identify user accounts with permissions to modify login hooks Corporate Control: System Integrity Protection (SIP)"| B
+    A -->|"Prepare malicious scripts for execution on login Corporate Control: Internal macOS File Repository"| B
+    A -->|"Analyze security configurations monitoring login hooks Corporate Control: Unified Logs"| B
+    B -->|"Modify login hook configuration to execute payload Corporate Control: macOS Terminal (defaults command)"| C
+    B -->|"Ensure scripts trigger upon user login Corporate Control: Login Hook Configuration"| C
+    B -->|"Validate script execution through multiple login attempts Corporate Control: macOS User Activity Logs"| C
+    B -->|"Apply obfuscation techniques (hidden file paths, encrypted scripts) Corporate Control: macOS File Metadata"| C
+    C -->|"Monitor login hook activity for unauthorized modifications Corporate Control: macOS Audit Logs"| D
+    C -->|"Ensure persistence across macOS updates Corporate Control: System Integrity Configuration"| D
+    C -->|"Validate stealth against macOS security tools Corporate Control: Endpoint Protection Systems"| D
+    C -->|"Reconfigure login hook periodically to avoid detection Corporate Control: Configuration Profiles"| D
+    D -->|"Remove evidence of login hook modifications Corporate Control: Unified Logs"| E
+    D -->|"Obfuscate login script metadata Corporate Control: File Properties Manager"| E
+    D -->|"Blend malicious login hook scripts with legitimate ones Corporate Control: macOS User Configuration"| E
+    D -->|"Monitor login activity continuously Corporate Control: Security Operations Center"| E

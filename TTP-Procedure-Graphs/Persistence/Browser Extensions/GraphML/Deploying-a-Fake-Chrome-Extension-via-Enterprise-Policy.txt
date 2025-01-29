@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Deploying_a_Fake_Chrome_Extension_via_Enterprise_Policy" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Chrome Enterprise Policy Deployment Mechanism</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Extension via Group Policy</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Extension Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Extension in Enterprise Policy</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Fake Chrome Extension</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze Chrome Enterprise policies in Windows Registry (HKLM\SOFTWARE\Policies\Google\Chrome) Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify administrative accounts with Group Policy modification access Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious extension package for deployment Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze browser logging mechanisms for extension installation Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy extension via Group Policy Object (GPO) Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure extension installs silently without user interaction Corporate Control: Chrome Extension Force-Install Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution of extension scripts on browser startup Corporate Control: Chrome Browser Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (manifest alterations, disguised permissions) Corporate Control: Chrome Manifest.json</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor extension execution and updates Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Chrome browser updates Corporate Control: Chrome Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Chrome security mechanisms Corporate Control: Google Safe Browsing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify extension auto-update settings to prevent easy removal Corporate Control: Chrome Extension Update Service</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized extension deployment Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate extension metadata and registry keys Corporate Control: Windows Registry Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious extension with legitimate corporate policies Corporate Control: Group Policy Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor extension execution for anomalies Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

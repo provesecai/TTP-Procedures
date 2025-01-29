@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Trusted Security Software Binaries]
+    B[Modify or Replace Security Software Executables]
+    C[Monitor and Maintain Persistence via Security Software]
+    D[Conceal Malicious Modifications]
+    E[Persistence Achieved via Security Software Binary Compromise]
+
+    A -->|"Enumerate security software binaries in Program Files Corporate Control: Windows File System"| B
+    A -->|"Identify writable security software executables Corporate Control: File System Permissions"| B
+    A -->|"Prepare attacker-modified version of security software executable Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze security logs for software execution tracking Corporate Control: Windows Event Viewer"| B
+    B -->|"Replace legitimate security software binary with attacker-modified version Corporate Control: Windows File System"| C
+    B -->|"Ensure execution through auto-start mechanisms Corporate Control: Windows Startup Configuration"| C
+    B -->|"Validate execution through user interactions Corporate Control: Application Logs"| C
+    B -->|"Apply obfuscation techniques (code signing, process injection) Corporate Control: File System Metadata"| C
+    C -->|"Monitor software execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across software updates Corporate Control: Security Software Update Mechanisms"| D
+    C -->|"Validate stealth against security tools Corporate Control: Windows Defender, EDR Solutions"| D
+    C -->|"Modify file attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized binary modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate security software binary metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate software updates Corporate Control: Security Software Policies"| E
+    D -->|"Continuously monitor compromised software execution Corporate Control: Security Operations Center"| E

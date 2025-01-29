@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Autoexec.bat on Windows]
+    B[Modify Autoexec.bat to Execute Malicious Payloads]
+    C[Monitor and Maintain Autoexec.bat Execution]
+    D[Conceal Autoexec.bat Modifications]
+    E[Persistence Achieved via Autoexec.bat Hijacking]
+
+    A -->|"Identify systems using Autoexec.bat (Windows 9x/NT-based legacy systems) Corporate Control: Windows Boot Configuration"| B
+    A -->|"Determine user accounts with permissions to modify Autoexec.bat Corporate Control: Local Administrator Accounts"| B
+    A -->|"Prepare batch script payloads for persistent execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging for Autoexec.bat modifications Corporate Control: Event Viewer"| B
+    B -->|"Modify Autoexec.bat to include malicious commands Corporate Control: Windows File Explorer"| C
+    B -->|"Ensure Autoexec.bat executes during system boot Corporate Control: Windows Boot Manager"| C
+    B -->|"Validate script execution through test reboots Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques (command chaining, hidden execution) Corporate Control: File System Attributes"| C
+    C -->|"Monitor Autoexec.bat modifications for unauthorized changes Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across system updates Corporate Control: Windows Configuration Management"| D
+    C -->|"Validate stealth of Autoexec.bat changes against security tools Corporate Control: Windows Defender, Endpoint Protection"| D
+    C -->|"Reconfigure Autoexec.bat periodically to avoid detection Corporate Control: System Update Management"| D
+    D -->|"Remove logs of Autoexec.bat modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate script execution paths Corporate Control: Windows Hidden File Attributes"| E
+    D -->|"Blend malicious Autoexec.bat modifications with legitimate startup scripts Corporate Control: System Boot Settings"| E
+    D -->|"Continuously monitor Autoexec.bat script execution Corporate Control: Security Operations Center"| E

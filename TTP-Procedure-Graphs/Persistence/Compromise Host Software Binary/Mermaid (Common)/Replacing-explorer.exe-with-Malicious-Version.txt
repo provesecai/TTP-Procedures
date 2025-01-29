@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Explorer Executable]
+    B[Replace `explorer.exe` with Attacker-Modified Version]
+    C[Monitor and Maintain Persistence via Explorer.exe]
+    D[Conceal Explorer.exe Modifications]
+    E[Persistence Achieved via Compromised Windows Shell]
+
+    A -->|"Locate `explorer.exe` in System32 directory Corporate Control: Windows File System"| B
+    A -->|"Identify writable `explorer.exe` based on user privileges Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare attacker-modified version of `explorer.exe` Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze security logs for Explorer execution tracking Corporate Control: Windows Event Viewer"| B
+    B -->|"Replace legitimate `explorer.exe` with attacker-modified version Corporate Control: Windows System32 Directory"| C
+    B -->|"Ensure execution via auto-start on user login Corporate Control: Windows Startup Process"| C
+    B -->|"Validate execution through process monitoring Corporate Control: Task Manager Logs"| C
+    B -->|"Apply obfuscation techniques (file name spoofing, code injection) Corporate Control: File System Metadata"| C
+    C -->|"Monitor process execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across Windows updates Corporate Control: Windows Update Policies"| D
+    C -->|"Validate stealth against security tools Corporate Control: Windows Defender, AMSI"| D
+    C -->|"Modify file attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized binary modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate Explorer binary metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate updates Corporate Control: Windows Update System"| E
+    D -->|"Continuously monitor Explorer execution Corporate Control: Security Operations Center"| E

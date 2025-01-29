@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Linux Cron Job Configuration]
+    B[Create or Modify @reboot Cron Jobs]
+    C[Monitor and Maintain Cron Job Execution]
+    D[Conceal Malicious Cron Job Configurations]
+    E[Persistence Achieved via Linux Cron @reboot Jobs]
+
+    A -->|"Enumerate user crontab entries (crontab -l, /etc/crontab) Corporate Control: Linux Cron Service"| B
+    A -->|"Identify users with cron job modification permissions Corporate Control: User Privilege Management"| B
+    A -->|"Prepare malicious script for execution on system startup Corporate Control: Internal File Servers"| B
+    A -->|"Analyze logging for cron job modifications Corporate Control: Syslog and Audit Logs"| B
+    B -->|"Insert @reboot cron jobs to execute payload Corporate Control: Crontab Configuration"| C
+    B -->|"Ensure persistence by setting periodic execution intervals Corporate Control: Linux Scheduler"| C
+    B -->|"Validate script execution after system reboots Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques (base64 encoding, indirect execution) Corporate Control: Linux Shell Configuration"| C
+    C -->|"Monitor cron job executions for unauthorized activity Corporate Control: System Audit Logs"| D
+    C -->|"Ensure cron job persistence across user and system updates Corporate Control: Crontab Management"| D
+    C -->|"Validate stealth of malicious cron jobs against security tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure cron jobs periodically to avoid detection Corporate Control: System Update Policies"| D
+    D -->|"Remove logs of cron job modifications Corporate Control: Syslog and Journalctl"| E
+    D -->|"Obfuscate cron job metadata and script execution Corporate Control: File System Metadata"| E
+    D -->|"Blend malicious cron jobs with legitimate scheduled tasks Corporate Control: Linux Task Scheduler"| E
+    D -->|"Continuously monitor cron execution activities Corporate Control: Security Operations Center"| E

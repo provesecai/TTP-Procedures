@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking_Windows_Autoexec_bat" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Autoexec.bat File</data>
+</node>
+<node id="B">
+<data key="label">Modify Autoexec.bat to Execute Malicious Payloads</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Autoexec.bat Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Autoexec.bat Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Autoexec.bat Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate Autoexec.bat in System32 directory Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable Autoexec.bat based on user privileges Corporate Control: Local Administrator Accounts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare batch script payloads for persistent execution Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging for Autoexec.bat modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Autoexec.bat to include malicious commands Corporate Control: Windows File Explorer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure Autoexec.bat executes during system boot Corporate Control: Windows Boot Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate script execution through test reboots Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (command chaining, hidden execution) Corporate Control: File System Attributes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Autoexec.bat modifications for unauthorized changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system updates Corporate Control: Windows Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of Autoexec.bat changes against security tools Corporate Control: Windows Defender, Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure Autoexec.bat periodically to avoid detection Corporate Control: System Update Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of Autoexec.bat modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate script execution paths Corporate Control: Windows Hidden File Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Autoexec.bat modifications with legitimate startup scripts Corporate Control: System Boot Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Autoexec.bat script execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

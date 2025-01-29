@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Chrome Enterprise Policy Deployment Mechanism]
+    B[Deploy Malicious Extension via Group Policy]
+    C[Monitor and Maintain Extension Execution]
+    D[Conceal Malicious Extension in Enterprise Policy]
+    E[Persistence Achieved via Fake Chrome Extension]
+
+    A -->|"Analyze Chrome Enterprise policies in Windows Registry (HKLM\SOFTWARE\Policies\Google\Chrome) Corporate Control: Windows Registry"| B
+    A -->|"Identify administrative accounts with Group Policy modification access Corporate Control: Active Directory Group Policies"| B
+    A -->|"Prepare malicious extension package for deployment Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze browser logging mechanisms for extension installation Corporate Control: Windows Event Viewer"| B
+    B -->|"Deploy extension via Group Policy Object (GPO) Corporate Control: Group Policy Management Console"| C
+    B -->|"Ensure extension installs silently without user interaction Corporate Control: Chrome Extension Force-Install Policy"| C
+    B -->|"Validate execution of extension scripts on startup Corporate Control: Chrome Browser Logs"| C
+    B -->|"Apply obfuscation techniques (manifest alterations, disguised permissions) Corporate Control: Chrome Manifest.json"| C
+    C -->|"Monitor extension execution and updates Corporate Control: Security Event Logs"| D
+    C -->|"Ensure persistence across Chrome browser updates Corporate Control: Chrome Policy Enforcement"| D
+    C -->|"Validate stealth against Chrome security mechanisms Corporate Control: Google Safe Browsing"| D
+    C -->|"Modify extension auto-update settings to prevent easy removal Corporate Control: Chrome Extension Update Service"| D
+    D -->|"Remove logs of unauthorized extension deployment Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate extension metadata and registry keys Corporate Control: Windows Registry Policies"| E
+    D -->|"Blend malicious extension with legitimate corporate policies Corporate Control: Group Policy Management"| E
+    D -->|"Continuously monitor extension execution for anomalies Corporate Control: Security Operations Center"| E

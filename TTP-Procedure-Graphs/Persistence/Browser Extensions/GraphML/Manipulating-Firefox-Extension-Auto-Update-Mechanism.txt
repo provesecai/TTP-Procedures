@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_Firefox_Extension_Auto_Update_Mechanism" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Firefox Extension Auto-Update Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify Update URLs to Inject Malicious Payloads</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Auto-Update</data>
+</node>
+<node id="D">
+<data key="label">Conceal Auto-Update Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Firefox Extension Auto-Update Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate installed Firefox extensions in user profile directory (~/.mozilla/firefox/Profiles/) Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable extension directories based on user permissions Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze extension update.json files for modification Corporate Control: Firefox Add-on Update Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review browser logs for extension update activity Corporate Control: Firefox Developer Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify update.json to point to malicious update server Corporate Control: Firefox Extension Update Mechanism</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure automatic retrieval of malicious updates Corporate Control: Mozilla Update Manifest</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through extension background scripts Corporate Control: WebExtensions API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (code signing, delay execution) Corporate Control: Extension Source Code</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor extension update cycles for unauthorized changes Corporate Control: Firefox Telemetry Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Firefox browser updates Corporate Control: Mozilla Update Preferences</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of extension modifications against security tools Corporate Control: Mozilla Safe Browsing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure update URLs periodically to evade detection Corporate Control: Firefox Update Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized extension updates Corporate Control: Browser History Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate extension update metadata Corporate Control: Firefox Configuration Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious extension updates with legitimate updates Corporate Control: Firefox Extension Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor extension auto-updates Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

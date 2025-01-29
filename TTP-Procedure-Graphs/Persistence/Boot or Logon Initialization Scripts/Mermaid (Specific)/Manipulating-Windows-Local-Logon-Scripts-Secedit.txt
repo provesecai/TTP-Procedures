@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Secedit-Managed Local Logon Scripts]
+    B[Modify or Deploy Malicious Secedit Logon Scripts]
+    C[Monitor and Maintain Secedit Logon Script Execution]
+    D[Conceal Secedit Logon Script Modifications]
+    E[Persistence Achieved via Secedit Logon Scripts]
+
+    A -->|"Identify logon scripts managed via Secedit (C:\Windows\System32\Secedit.sdb) Corporate Control: Windows Security Configuration Database"| B
+    A -->|"Determine administrative users with permissions to modify Secedit scripts Corporate Control: Local Group Policy Editor"| B
+    A -->|"Prepare PowerShell or Batch scripts for persistent execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze Secedit policy settings for script modification tracking Corporate Control: Windows Event Viewer"| B
+    B -->|"Deploy malicious logon scripts through Secedit command-line configurations Corporate Control: Secedit Configuration Manager"| C
+    B -->|"Ensure scripts execute during local user logins Corporate Control: Windows Logon Process"| C
+    B -->|"Validate script execution by simulating local user logins Corporate Control: System Audit Logs"| C
+    B -->|"Apply obfuscation techniques (fileless execution, PowerShell encoding) Corporate Control: Windows Scripting Host"| C
+    C -->|"Monitor Secedit logon script executions for unauthorized modifications Corporate Control: Windows Security Logs"| D
+    C -->|"Ensure persistence through Group Policy or Secedit policy updates Corporate Control: Secedit Task Scheduling"| D
+    C -->|"Validate stealth of logon scripts against security tools Corporate Control: Windows Defender, SIEM Logs"| D
+    C -->|"Reconfigure Secedit policies periodically to avoid detection Corporate Control: Security Policy Management"| D
+    D -->|"Remove logs of Secedit logon script modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate Secedit logon script configurations Corporate Control: Windows Registry (HKLM\Software\Microsoft\Secedit)"| E
+    D -->|"Blend malicious logon scripts with legitimate Secedit policies Corporate Control: Secedit System Configuration"| E
+    D -->|"Continuously monitor Secedit script execution Corporate Control: Security Operations Center"| E

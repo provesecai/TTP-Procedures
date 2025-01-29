@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Replacing_Citrix_NetScaler_Gateway_Plugin" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Citrix NetScaler Gateway Plugin Executables</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Citrix NetScaler Plugin Binaries</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Access via Citrix NetScaler Plugin</data>
+</node>
+<node id="D">
+<data key="label">Conceal Citrix NetScaler Plugin Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Citrix NetScaler Gateway Plugin Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify plugin executables in Citrix NetScaler Gateway directory Corporate Control: Citrix File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify plugins writable by administrative accounts Corporate Control: Active Directory Roles</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious version of Citrix plugin with embedded payloads Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Citrix logs for plugin execution tracking Corporate Control: Citrix Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate Citrix NetScaler plugin with attacker-modified version Corporate Control: Citrix Plugin Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution through Citrix Gateway logon Corporate Control: Citrix Logon Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by simulating remote VPN logins Corporate Control: Citrix Logon Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (binary packing, hidden execution) Corporate Control: Citrix Plugin Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Citrix NetScaler plugin for unauthorized activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Citrix NetScaler updates Corporate Control: Citrix Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Citrix security tools Corporate Control: Citrix Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure Citrix plugin periodically to evade detection Corporate Control: Citrix Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized plugin modifications Corporate Control: Citrix Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate plugin binary metadata Corporate Control: Citrix File System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate Citrix updates Corporate Control: Citrix Plugin Store</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Citrix NetScaler plugin behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

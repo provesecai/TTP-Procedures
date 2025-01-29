@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_macOS_Login_Hooks" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify macOS Login Hook Configurations</data>
+</node>
+<node id="B">
+<data key="label">Modify Login Hooks to Execute Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Login Hook Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Login Hook Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via macOS Login Hooks</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate login hook configurations (/Library/Preferences/com.apple.loginwindow.plist) Corporate Control: macOS Configuration Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user accounts with permissions to modify login hooks Corporate Control: System Integrity Protection (SIP)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts for execution on login Corporate Control: Internal macOS File Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security configurations monitoring login hooks Corporate Control: Unified Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify login hook configuration to execute payload Corporate Control: macOS Terminal (defaults command)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts trigger upon user login Corporate Control: Login Hook Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate script execution through multiple login attempts Corporate Control: macOS User Activity Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (hidden file paths, encrypted scripts) Corporate Control: macOS File Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor login hook activity for unauthorized modifications Corporate Control: macOS Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across macOS updates Corporate Control: System Integrity Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against macOS security tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure login hook periodically to avoid detection Corporate Control: Configuration Profiles</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of login hook modifications Corporate Control: Unified Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate login script metadata Corporate Control: File Properties Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious login hook scripts with legitimate ones Corporate Control: macOS User Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor login activity continuously Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

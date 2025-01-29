@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Firefox Extension Auto-Update Settings]
+    B[Modify Update URLs to Inject Malicious Payloads]
+    C[Monitor and Maintain Persistence via Auto-Update]
+    D[Conceal Auto-Update Modifications]
+    E[Persistence Achieved via Firefox Extension Auto-Update Hijacking]
+
+    A -->|"Enumerate installed Firefox extensions in user profile directory (~/.mozilla/firefox/Profiles/) Corporate Control: Linux File System"| B
+    A -->|"Identify writable extension directories based on user permissions Corporate Control: Active Directory Policies"| B
+    A -->|"Analyze extension update.json files for modification Corporate Control: Firefox Add-on Update Service"| B
+    A -->|"Review browser logs for extension update activity Corporate Control: Firefox Developer Console"| B
+    B -->|"Modify update.json to point to malicious update server Corporate Control: Firefox Extension Update Mechanism"| C
+    B -->|"Ensure automatic retrieval of malicious updates Corporate Control: Mozilla Update Manifest"| C
+    B -->|"Validate execution through extension background scripts Corporate Control: WebExtensions API"| C
+    B -->|"Apply obfuscation techniques (code signing, delay execution) Corporate Control: Extension Source Code"| C
+    C -->|"Monitor extension update cycles for unauthorized changes Corporate Control: Firefox Telemetry Logs"| D
+    C -->|"Ensure persistence across Firefox browser updates Corporate Control: Mozilla Update Preferences"| D
+    C -->|"Validate stealth of extension modifications against security tools Corporate Control: Mozilla Safe Browsing"| D
+    C -->|"Reconfigure update URLs periodically to evade detection Corporate Control: Firefox Update Settings"| D
+    D -->|"Remove logs of unauthorized extension updates Corporate Control: Browser History Logs"| E
+    D -->|"Obfuscate extension update metadata Corporate Control: Firefox Configuration Files"| E
+    D -->|"Blend malicious extension updates with legitimate updates Corporate Control: Firefox Extension Store"| E
+    D -->|"Continuously monitor extension auto-updates Corporate Control: Security Operations Center"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Netlogon Script Locations]
+    B[Modify or Add Malicious Netlogon Scripts]
+    C[Monitor and Maintain Netlogon Script Execution]
+    D[Conceal Netlogon Script Modifications]
+    E[Persistence Achieved via Windows Netlogon Scripts]
+
+    A -->|"Enumerate Netlogon script locations (\\DOMAIN\netlogon\scripts) Corporate Control: Active Directory"| B
+    A -->|"Identify accounts with permissions to modify Netlogon scripts Corporate Control: Group Policy Management Console"| B
+    A -->|"Prepare malicious scripts for domain-wide execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging configurations for Netlogon script modifications Corporate Control: SIEM Systems"| B
+    B -->|"Modify existing scripts or add new ones Corporate Control: Script Editor"| C
+    B -->|"Ensure scripts execute on every domain user logon Corporate Control: Windows Logon Process"| C
+    B -->|"Validate script functionality through testing Corporate Control: Domain Controller Logs"| C
+    B -->|"Apply obfuscation to script contents Corporate Control: Script Metadata Editor"| C
+    C -->|"Monitor Netlogon script execution for unauthorized modifications Corporate Control: Event Viewer"| D
+    C -->|"Ensure persistence across domain-wide updates Corporate Control: Active Directory Configuration"| D
+    C -->|"Validate stealth against detection mechanisms Corporate Control: Endpoint Protection"| D
+    C -->|"Reconfigure scripts periodically to avoid detection Corporate Control: Group Policy Management"| D
+    D -->|"Remove evidence of Netlogon script modifications Corporate Control: SIEM Systems"| E
+    D -->|"Obfuscate Netlogon script metadata and contents Corporate Control: Script Configuration Manager"| E
+    D -->|"Blend malicious Netlogon scripts with legitimate ones Corporate Control: Group Policy Management Console"| E
+    D -->|"Continuously monitor Netlogon script execution Corporate Control: Security Operations Center"| E

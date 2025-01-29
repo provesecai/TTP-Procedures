@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Trojanizing_Linux_System_Binaries" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify High-Use Linux System Binaries</data>
+</node>
+<node id="B">
+<data key="label">Replace or Modify System Binaries with Malicious Versions</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Trojanized Binaries</data>
+</node>
+<node id="D">
+<data key="label">Conceal Binary Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Trojanized System Binaries</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate critical system binaries (e.g., ls, cat, ps) in /usr/bin Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify binaries writable by compromised accounts Corporate Control: Linux User Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified versions of system utilities Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for binary execution tracking Corporate Control: Syslog, Auditd</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate system binaries with attacker-modified versions Corporate Control: Linux File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious binaries maintain original functionality Corporate Control: Binary Wrapper Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by monitoring user interactions Corporate Control: System Command Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (binary packing, process masquerading) Corporate Control: File Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system command executions for anomalies Corporate Control: Linux Audit Framework</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across OS updates Corporate Control: System Package Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security monitoring tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized binary modifications Corporate Control: Syslog and Journalctl</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified binary metadata and execution paths Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious binaries with legitimate system files Corporate Control: Linux File System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor system binary executions Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Infecting_macOS_Launch_Daemons_Malicious_Binaries" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify macOS Launch Daemon Executables</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Launch Daemon Binaries with Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Launch Daemon Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Launch Daemon Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via macOS Launch Daemon Infection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate Launch Daemons in /Library/LaunchDaemons Corporate Control: macOS File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify Launch Daemon binaries writable by compromised accounts Corporate Control: System Integrity Protection (SIP)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious version of targeted Launch Daemon Corporate Control: Internal macOS File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for Launch Daemon execution tracking Corporate Control: Unified Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate Launch Daemon binary with attacker-modified executable Corporate Control: macOS File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure daemon auto-starts on boot via launchctl Corporate Control: LaunchDaemon Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through macOS Console Logs Corporate Control: Activity Monitor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (code signing, plist modification) Corporate Control: macOS File Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor daemon execution for anomalies Corporate Control: System Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across macOS updates Corporate Control: macOS Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security tools Corporate Control: macOS Gatekeeper, XProtect</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Launch Daemon metadata periodically to evade detection Corporate Control: File System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized Launch Daemon modifications Corporate Control: Unified Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified binary metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Launch Daemon modifications with legitimate services Corporate Control: macOS System Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Launch Daemon executions Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

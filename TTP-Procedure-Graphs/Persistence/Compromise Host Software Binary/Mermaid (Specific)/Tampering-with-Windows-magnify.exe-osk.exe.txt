@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Accessibility Executables]
+    B[Replace Accessibility Executables with Malicious Versions]
+    C[Monitor and Maintain Persistence via Accessibility Tools]
+    D[Conceal Accessibility Tool Modifications]
+    E[Persistence Achieved via Modified Accessibility Tools]
+
+    A -->|"Enumerate Windows accessibility executables (`magnify.exe`, `osk.exe`) Corporate Control: Windows System32"| B
+    A -->|"Identify users with privileges to modify accessibility executables Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare attacker-modified versions of accessibility executables Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze system logs for accessibility tool usage tracking Corporate Control: Windows Event Viewer"| B
+    B -->|"Replace legitimate accessibility tool binaries with attacker-modified versions Corporate Control: Windows System32 Directory"| C
+    B -->|"Ensure execution through Windows accessibility shortcut mechanisms Corporate Control: Windows Logon Process"| C
+    B -->|"Validate execution through remote and local login attempts Corporate Control: Authentication Logs"| C
+    B -->|"Apply obfuscation techniques (file version spoofing, metadata manipulation) Corporate Control: File System Metadata"| C
+    C -->|"Monitor accessibility tool execution for anomalies Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across Windows updates Corporate Control: Windows Update Policies"| D
+    C -->|"Validate stealth against security tools Corporate Control: Windows Defender, AMSI"| D
+    C -->|"Modify file attributes periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized binary modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate accessibility tool binary metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious modifications with legitimate Windows system files Corporate Control: Windows System Policies"| E
+    D -->|"Continuously monitor accessibility tool executions Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_Code_into_Adobe_Acrobat_Reader_Plugins" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Adobe Acrobat Reader Plugin Binaries</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace .api Plugin Files with Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Adobe Acrobat</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Plugin Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Adobe Acrobat Plugin Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate Acrobat Reader plugin directory (C:\Program Files\Adobe\Acrobat\Reader\plug_ins\) Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify plugin .api files writable by user accounts Corporate Control: Windows User Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of plugin with embedded malware Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Acrobat logs for plugin execution tracking Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate .api plugin files with attacker-modified versions Corporate Control: Adobe Plugin System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution by loading the plugin during PDF opening Corporate Control: Adobe Acrobat Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by monitoring Acrobat Reader startup Corporate Control: Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (plugin version spoofing, function name cloaking) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor plugin execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Acrobat Reader updates Corporate Control: Adobe Auto-Update System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security monitoring tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify plugin attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized plugin modifications Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate plugin metadata and execution paths Corporate Control: Adobe Configuration Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious plugin modifications with legitimate Adobe updates Corporate Control: Adobe Update System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Adobe Acrobat plugin execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

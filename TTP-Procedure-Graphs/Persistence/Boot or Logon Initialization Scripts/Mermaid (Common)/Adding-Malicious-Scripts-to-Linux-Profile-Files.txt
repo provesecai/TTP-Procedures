@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Linux Profile Files]
+    B[Insert Malicious Commands in Profile Scripts]
+    C[Monitor and Maintain Profile File Modifications]
+    D[Conceal Profile Script Changes]
+    E[Persistence Achieved via Linux Profile Scripts]
+
+    A -->|"Enumerate profile files (~/.bashrc, ~/.profile, /etc/profile) Corporate Control: Linux User Shell"| B
+    A -->|"Identify user accounts with permission to modify profile files Corporate Control: Linux User Groups"| B
+    A -->|"Prepare malicious commands for execution on login Corporate Control: Internal File Repositories"| B
+    A -->|"Assess logging mechanisms for profile file modifications Corporate Control: System Audit Logs"| B
+    B -->|"Modify existing profile scripts with payloads Corporate Control: Text Editor (vi/nano)"| C
+    B -->|"Ensure scripts execute during user login sessions Corporate Control: Bash/Zsh Configuration"| C
+    B -->|"Test modifications for execution reliability Corporate Control: User Session Logs"| C
+    B -->|"Apply obfuscation techniques (base64 encoding, alias usage) Corporate Control: Linux Configuration Files"| C
+    C -->|"Monitor profile file activity for unauthorized changes Corporate Control: Linux File Integrity Monitoring"| D
+    C -->|"Ensure persistence across user environment changes Corporate Control: Profile Configuration Management"| D
+    C -->|"Validate stealth of script modifications against security tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure profile scripts periodically to evade detection Corporate Control: System Update Management"| D
+    D -->|"Remove logs showing script modifications Corporate Control: Syslog and Journalctl"| E
+    D -->|"Obfuscate modified profile file contents Corporate Control: File Metadata Manager"| E
+    D -->|"Blend malicious profile changes with legitimate ones Corporate Control: User Shell Configuration"| E
+    D -->|"Continuously monitor user login activities Corporate Control: Security Operations Center"| E

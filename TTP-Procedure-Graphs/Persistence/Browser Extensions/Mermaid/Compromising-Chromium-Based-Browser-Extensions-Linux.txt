@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Chromium Extension Directories]
+    B[Modify Extension Preferences to Execute Malicious Scripts]
+    C[Monitor and Maintain Persistence via Chromium Extensions]
+    D[Conceal Malicious Chromium Extension]
+    E[Persistence Achieved via Chromium Extensions on Linux]
+
+    A -->|"Enumerate installed Chromium extensions in ~/.config/chromium/ Corporate Control: Linux File System"| B
+    A -->|"Identify writable extension preference files based on user permissions Corporate Control: Active Directory Policies"| B
+    A -->|"Analyze extension manifest and permissions for exploitation Corporate Control: WebExtensions API"| B
+    A -->|"Review browser logs for extension execution events Corporate Control: System Logs"| B
+    B -->|"Modify extension preference files to inject payload Corporate Control: Chromium Configuration Files"| C
+    B -->|"Ensure execution of scripts at browser startup Corporate Control: Chromium Background Services"| C
+    B -->|"Validate execution through browser debugging tools Corporate Control: Chromium Developer Console"| C
+    B -->|"Apply obfuscation techniques (encryption, disguised permissions) Corporate Control: File System Metadata"| C
+    C -->|"Monitor extension execution and updates Corporate Control: System Event Logs"| D
+    C -->|"Ensure persistence across Chromium browser updates Corporate Control: Chromium Auto-Update System"| D
+    C -->|"Validate stealth against security monitoring Corporate Control: Linux Safe Browsing"| D
+    C -->|"Modify extension settings periodically to evade detection Corporate Control: Chromium Extension Store"| D
+    D -->|"Remove logs of unauthorized extension modifications Corporate Control: System Logs"| E
+    D -->|"Obfuscate extension metadata and configuration settings Corporate Control: Chromium Preferences File"| E
+    D -->|"Blend malicious extension modifications with legitimate updates Corporate Control: Chromium Update Policies"| E
+    D -->|"Continuously monitor Chromium extension execution Corporate Control: Security Operations Center"| E

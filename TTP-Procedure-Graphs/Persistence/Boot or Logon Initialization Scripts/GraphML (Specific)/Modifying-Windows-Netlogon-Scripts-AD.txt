@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Windows_Netlogon_Scripts_AD" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Netlogon Script Locations</data>
+</node>
+<node id="B">
+<data key="label">Modify or Add Malicious Netlogon Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Netlogon Script Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Netlogon Script Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Windows Netlogon Scripts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate Netlogon script locations (\\DOMAIN\netlogon\scripts) Corporate Control: Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts with permissions to modify Netlogon scripts Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious scripts for domain-wide execution Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze logging configurations for Netlogon script changes Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing scripts or add new ones Corporate Control: Script Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure scripts execute upon user logon Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate script functionality through testing Corporate Control: Domain Controller Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to script contents Corporate Control: Script Metadata Editor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Netlogon script execution for unauthorized modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure scripts persist through group policy updates Corporate Control: Group Policy Update Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against detection mechanisms Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure scripts periodically to avoid detection Corporate Control: Group Policy Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of script modifications Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate script metadata and contents Corporate Control: Script Configuration Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious scripts with legitimate ones Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor script execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

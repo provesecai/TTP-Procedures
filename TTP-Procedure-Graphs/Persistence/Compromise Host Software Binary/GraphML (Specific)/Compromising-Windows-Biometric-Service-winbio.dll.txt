@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Windows_Biometric_Service_winbio.dll" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Biometric Service DLLs</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace WinBio DLLs for Persistent Execution</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Biometric Service</data>
+</node>
+<node id="D">
+<data key="label">Conceal WinBio Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Windows Biometric Service Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate winbio.dll in C:\Windows\System32\ Corporate Control: Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify biometric DLLs writable by user accounts Corporate Control: Windows User Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of biometric service DLL Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze biometric logs for authentication tracking Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace winbio.dll with attacker-modified version Corporate Control: Windows System32 Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution by biometric authentication services Corporate Control: Windows Biometric Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by simulating biometric logins Corporate Control: Authentication Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (stealth API hooking, process injection) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor biometric service execution for anomalies Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Windows updates Corporate Control: Windows Update Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against Windows security tools Corporate Control: Windows Defender, AMSI</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DLL attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized DLL modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate biometric service binary metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate Windows biometric services Corporate Control: Windows Biometric Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor biometric authentication behavior Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

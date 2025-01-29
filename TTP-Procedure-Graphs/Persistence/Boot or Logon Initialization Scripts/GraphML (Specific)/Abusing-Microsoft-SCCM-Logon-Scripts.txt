@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_Microsoft_SCCM_Logon_Scripts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SCCM Logon Script Locations</data>
+</node>
+<node id="B">
+<data key="label">Modify or Deploy Malicious SCCM Logon Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain SCCM Logon Script Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal SCCM Logon Script Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SCCM Logon Scripts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify SCCM-managed logon scripts (Configuration Manager Client) Corporate Control: Microsoft SCCM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine SCCM administrative roles with script modification access Corporate Control: SCCM Role-Based Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious extension package for deployment Corporate Control: Internal SCCM File Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze SCCM logging for script modification tracking Corporate Control: SCCM Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy script via Group Policy Object (GPO) Corporate Control: SCCM Client Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script installs silently without user interaction Corporate Control: SCCM Task Sequences</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution of script on startup Corporate Control: SCCM Deployment Reports</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (log cleansing, script manipulation) Corporate Control: SCCM Compliance Baselines</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SCCM script execution logs for unauthorized changes Corporate Control: SCCM Compliance Reports</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through SCCM policy updates Corporate Control: Configuration Baseline Evaluations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth of SCCM script execution against endpoint security Corporate Control: Windows Defender, SIEM Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure SCCM logon scripts periodically to avoid detection Corporate Control: SCCM Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of SCCM logon script modifications Corporate Control: SCCM Site Server Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SCCM script paths and configurations Corporate Control: SCCM Client Cache</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious SCCM scripts with legitimate deployment tasks Corporate Control: SCCM Configuration Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor SCCM client script execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

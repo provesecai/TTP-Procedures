@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Group Policy Startup Script Locations]
+    B[Modify or Add Malicious Startup Scripts]
+    C[Monitor and Maintain Startup Script Execution]
+    D[Conceal Startup Script Modifications]
+    E[Persistence Achieved via Group Policy Startup Scripts]
+
+    A -->|"Enumerate Group Policy startup script locations (C:\Windows\System32\GroupPolicy\Scripts\Startup) Corporate Control: Windows File System"| B
+    A -->|"Identify users with access to modify startup scripts Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare malicious script for execution during system boot Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze logging for startup script modifications Corporate Control: Windows Event Viewer"| B
+    B -->|"Modify startup script configuration in Group Policy Corporate Control: Group Policy Management Console"| C
+    B -->|"Ensure execution of scripts at every system boot Corporate Control: Windows Startup Configuration"| C
+    B -->|"Validate functionality through test system reboots Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques (hidden execution, script obfuscation) Corporate Control: Windows Scripting Host"| C
+    C -->|"Monitor startup script execution for anomalies Corporate Control: Security Event Logs"| D
+    C -->|"Ensure script persistence across system updates Corporate Control: Group Policy Updates"| D
+    C -->|"Validate stealth of script execution against detection Corporate Control: SIEM Systems"| D
+    C -->|"Reconfigure script execution periodically to evade detection Corporate Control: Windows Update Management"| D
+    D -->|"Remove logs of startup script modifications Corporate Control: Event Viewer"| E
+    D -->|"Obfuscate script execution paths and metadata Corporate Control: Windows File Explorer"| E
+    D -->|"Blend malicious scripts with legitimate Group Policy settings Corporate Control: Group Policy Editor"| E
+    D -->|"Continuously monitor startup script execution Corporate Control: Security Operations Center"| E

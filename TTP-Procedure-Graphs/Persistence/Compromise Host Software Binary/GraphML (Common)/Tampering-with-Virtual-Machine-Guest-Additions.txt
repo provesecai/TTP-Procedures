@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Tampering_with_Virtual_Machine_Guest_Additions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify VM Guest Additions Binaries</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Guest Addition Executables</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Persistence via Guest Additions</data>
+</node>
+<node id="D">
+<data key="label">Conceal Guest Additions Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via VM Guest Additions</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate VMware Tools/VirtualBox Guest Additions binaries Corporate Control: Virtualization Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable binaries loaded during VM startup Corporate Control: Virtual Machine File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare attacker-modified version of VM Guest Additions Corporate Control: Internal Virtual Machine Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for VM Guest Additions execution tracking Corporate Control: Virtualization Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace VM Guest Additions binary with attacker-modified version Corporate Control: Linux/Windows File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution on every VM startup Corporate Control: Virtual Machine Boot Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution through process monitoring Corporate Control: Virtual Machine Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (process name spoofing, hidden execution) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor VM Guest Additions execution for anomalies Corporate Control: Virtual Machine Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across VM snapshots and clones Corporate Control: VM Management System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against security tools Corporate Control: VM Security Scanner</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify binary attributes periodically to evade detection Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove logs of unauthorized VM Guest Additions modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified binary metadata Corporate Control: File System Attributes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious modifications with legitimate Guest Additions updates Corporate Control: VM Update Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Guest Additions execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify IBM AS/400 Startup Program Locations]
+    B[Modify or Deploy Malicious Startup Programs]
+    C[Monitor and Maintain Startup Program Execution]
+    D[Conceal Startup Program Modifications]
+    E[Persistence Achieved via IBM AS/400 Startup Programs]
+
+    A -->|"Identify AS/400 startup program configurations (QSTRUP) Corporate Control: IBM iSeries System Services"| B
+    A -->|"Determine administrators with access to modify startup programs Corporate Control: AS/400 Role-Based Access Control"| B
+    A -->|"Prepare CL commands or RPG scripts for persistent execution Corporate Control: Internal AS/400 Code Repository"| B
+    A -->|"Analyze logging for startup program modifications Corporate Control: AS/400 Job Logs"| B
+    B -->|"Modify QSTRUP or user-specific startup CL programs Corporate Control: IBM iSeries Command Line"| C
+    B -->|"Ensure execution during AS/400 system IPL (Initial Program Load) Corporate Control: System Startup Process"| C
+    B -->|"Validate execution through test system IPL cycles Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques (encrypted parameters, script hiding) Corporate Control: AS/400 Configuration Manager"| C
+    C -->|"Monitor AS/400 startup program execution for unauthorized modifications Corporate Control: System Audit Logs"| D
+    C -->|"Ensure persistence across system updates Corporate Control: AS/400 Configuration Baselines"| D
+    C -->|"Validate stealth against IBM security monitoring tools Corporate Control: AS/400 Endpoint Security"| D
+    C -->|"Reconfigure startup program execution periodically Corporate Control: System Profile Update Management"| D
+    D -->|"Remove logs of AS/400 startup modifications Corporate Control: Job Logs and Audit Trails"| E
+    D -->|"Obfuscate startup configurations Corporate Control: System Properties Manager"| E
+    D -->|"Blend malicious startup programs with legitimate system programs Corporate Control: AS/400 System Policies"| E
+    D -->|"Continuously monitor startup execution Corporate Control: Security Operations Center"| E

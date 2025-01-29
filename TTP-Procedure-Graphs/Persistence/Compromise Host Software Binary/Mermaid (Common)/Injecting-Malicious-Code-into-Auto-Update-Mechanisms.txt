@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Auto-Update Mechanisms in Software]
+    B[Modify Update Process to Deploy Malicious Binaries]
+    C[Monitor and Maintain Persistence via Auto-Updates]
+    D[Conceal Auto-Update Modifications]
+    E[Persistence Achieved via Auto-Update Mechanism Exploitation]
+
+    A -->|"Identify software with auto-update functionality (e.g., Chrome, Notepad++, Adobe) Corporate Control: Software Management System"| B
+    A -->|"Determine writable update-related files and configurations Corporate Control: Windows/Linux/macOS File System"| B
+    A -->|"Prepare attacker-modified update package Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze update logs for tracking software updates Corporate Control: Application Logs"| B
+    B -->|"Modify update server or local package source Corporate Control: Software Update Configuration"| C
+    B -->|"Ensure attacker-modified binary replaces legitimate software Corporate Control: Auto-Update Service"| C
+    B -->|"Validate execution by simulating a software update Corporate Control: System Process Logs"| C
+    B -->|"Apply obfuscation techniques (tampering with update signatures) Corporate Control: Digital Signature Spoofing"| C
+    C -->|"Monitor update execution for unauthorized modifications Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence across software version updates Corporate Control: Application Update Mechanisms"| D
+    C -->|"Validate stealth against security tools Corporate Control: Endpoint Security Software"| D
+    C -->|"Modify update files periodically to evade detection Corporate Control: File Integrity Monitoring"| D
+    D -->|"Remove logs of unauthorized update modifications Corporate Control: Event Viewer / Syslog"| E
+    D -->|"Obfuscate update package metadata Corporate Control: File System Attributes"| E
+    D -->|"Blend malicious updates with legitimate patches Corporate Control: Software Update System"| E
+    D -->|"Continuously monitor auto-update activities Corporate Control: Security Operations Center"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_macOS_rc_common" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify macOS /etc/rc.common Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify rc.common to Execute Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain rc.common Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious rc.common Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via macOS rc.common</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Locate /etc/rc.common system startup configuration Corporate Control: macOS File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify users with permission to modify rc.common Corporate Control: System Integrity Protection (SIP)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious shell scripts for execution Corporate Control: Internal File Repositories</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security policies monitoring startup scripts Corporate Control: Unified Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify rc.common to execute attacker-controlled payloads Corporate Control: macOS Terminal (vi, nano)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence through system boot execution Corporate Control: macOS Startup Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate execution by simulating system reboots Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (hidden execution paths, encrypted scripts) Corporate Control: File System Metadata</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor rc.common execution for unauthorized modifications Corporate Control: Unified Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across macOS updates Corporate Control: Configuration Management Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate stealth against macOS security tools Corporate Control: Endpoint Security Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure rc.common periodically to avoid detection Corporate Control: macOS System Preferences</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of rc.common modifications Corporate Control: Unified Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate modified script contents and execution paths Corporate Control: File System Metadata</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious rc.common modifications with legitimate configurations Corporate Control: macOS User Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor rc.common script execution Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

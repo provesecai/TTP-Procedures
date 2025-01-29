@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify macOS /etc/rc.common Configuration]
+    B[Modify rc.common to Execute Malicious Scripts]
+    C[Monitor and Maintain rc.common Execution]
+    D[Conceal Malicious rc.common Modifications]
+    E[Persistence Achieved via macOS rc.common]
+
+    A -->|"Locate /etc/rc.common system startup configuration Corporate Control: macOS File System"| B
+    A -->|"Identify users with permission to modify rc.common Corporate Control: System Integrity Protection (SIP)"| B
+    A -->|"Prepare malicious shell scripts for execution Corporate Control: Internal File Repositories"| B
+    A -->|"Analyze security policies monitoring startup scripts Corporate Control: Unified Logs"| B
+    B -->|"Modify rc.common to execute attacker-controlled payloads Corporate Control: macOS Terminal (vi, nano)"| C
+    B -->|"Ensure persistence through system boot execution Corporate Control: macOS Startup Process"| C
+    B -->|"Validate execution by simulating system reboots Corporate Control: System Logs"| C
+    B -->|"Apply obfuscation techniques (hidden execution paths, encrypted scripts) Corporate Control: File System Metadata"| C
+    C -->|"Monitor rc.common execution for unauthorized modifications Corporate Control: Unified Logs"| D
+    C -->|"Ensure persistence across macOS updates Corporate Control: Configuration Management Tools"| D
+    C -->|"Validate stealth against macOS security tools Corporate Control: Endpoint Security Systems"| D
+    C -->|"Reconfigure rc.common periodically to avoid detection Corporate Control: macOS System Preferences"| D
+    D -->|"Remove evidence of rc.common modifications Corporate Control: Unified Logs"| E
+    D -->|"Obfuscate modified script contents and execution paths Corporate Control: File System Metadata"| E
+    D -->|"Blend malicious rc.common modifications with legitimate configurations Corporate Control: macOS User Configuration"| E
+    D -->|"Continuously monitor rc.common script execution Corporate Control: Security Operations Center"| E

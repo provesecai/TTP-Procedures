@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Extensions with WebSocket Capabilities]
+    B[Modify WebSocket Implementation for Persistence]
+    C[Monitor and Maintain Persistent WebSocket Connections]
+    D[Conceal WebSocket Activity]
+    E[Persistence Achieved via WebSocket-Enabled Extensions]
+
+    A -->|"Enumerate installed extensions utilizing WebSocket APIs Corporate Control: Browser Developer Console"| B
+    A -->|"Identify user permissions needed to modify WebSocket scripts Corporate Control: Browser Security Policies"| B
+    A -->|"Analyze API capabilities for maintaining persistent WebSocket connections Corporate Control: WebSockets API"| B
+    A -->|"Review browser logs for WebSocket execution activity Corporate Control: Security Logs"| B
+    B -->|"Modify extension JavaScript to embed persistent WebSocket callbacks Corporate Control: WebExtension Background Scripts"| C
+    B -->|"Ensure WebSocket connections persist across browser sessions Corporate Control: WebSocket Background Services"| C
+    B -->|"Validate execution through browser debugging tools Corporate Control: Web Developer Console"| C
+    B -->|"Apply obfuscation techniques (encrypted WebSocket communication, traffic disguising) Corporate Control: WebExtension Source Code"| C
+    C -->|"Monitor WebSocket connection activity for anomalies Corporate Control: Security Event Logs"| D
+    C -->|"Ensure persistence across browser updates Corporate Control: Browser Extension Auto-Update"| D
+    C -->|"Validate stealth against browser security monitoring Corporate Control: Browser Safe Browsing Systems"| D
+    C -->|"Modify WebSocket callback settings periodically to evade detection Corporate Control: WebExtension Policy Settings"| D
+    D -->|"Remove logs of unauthorized WebSocket activity Corporate Control: Browser Logs"| E
+    D -->|"Obfuscate WebSocket metadata and configurations Corporate Control: WebExtension Preferences File"| E
+    D -->|"Blend malicious WebSocket connections with legitimate traffic Corporate Control: WebSocket Services"| E
+    D -->|"Continuously monitor WebSocket extension behavior Corporate Control: Security Operations Center"| E
