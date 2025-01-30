@@ -1,0 +1,23 @@
+graph TD;
+    A[Prepare to Modify Process via Scheduled Task]
+    B[Create Scheduled Task to Launch Malicious Process]
+    C[Ensure Task-Driven Process Persistence]
+    D[Conceal Task and Process Modifications]
+    E[Persistence Achieved via Scheduled Task]
+
+    A -->|"Gain administrative privileges to modify scheduled tasks Corporate Control: Task Scheduler Permissions"| B
+    A -->|"Identify the appropriate task scheduling intervals for process execution Corporate Control: Task Scheduler Configuration"| B
+    A -->|"Prepare the malicious process or script for execution Corporate Control: Script Editor or Process Execution Tools"| B
+    A -->|"Monitor scheduled task executions Corporate Control: Task Scheduler Logs"| B
+    B -->|"Create a new scheduled task to execute the malicious process Corporate Control: Task Scheduler Management"| C
+    B -->|"Set the task to run on system startup or after user logon Corporate Control: Task Scheduler Configuration"| C
+    B -->|"Ensure task persists even after system updates Corporate Control: System Task Logs"| C
+    B -->|"Apply obfuscation techniques (change task names, hide from task list) Corporate Control: Task Scheduler UI"| C
+    C -->|"Monitor task execution to ensure continuity Corporate Control: System Process Logs"| D
+    C -->|"Ensure the process starts on reboot Corporate Control: Task Scheduler Policies"| D
+    C -->|"Validate task persistence after system reboot Corporate Control: Task Scheduler Recovery Options"| D
+    C -->|"Reconfigure task to recover from failures Corporate Control: Task Scheduler Triggers"| D
+    D -->|"Conceal task execution from standard process monitoring tools Corporate Control: Windows Event Logs"| E
+    D -->|"Blend malicious task with legitimate system maintenance tasks Corporate Control: Task Scheduler Policies"| E
+    D -->|"Ensure task is hidden from normal task listings Corporate Control: Task Scheduler Configuration"| E
+    D -->|"Continuously monitor task health Corporate Control: Windows Monitoring Tools"| E

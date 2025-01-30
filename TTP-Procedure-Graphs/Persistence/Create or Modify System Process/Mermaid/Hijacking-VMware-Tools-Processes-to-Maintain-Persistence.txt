@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Modify VMware Tools Process]
+    B[Modify VMware Process to Launch Malicious Code]
+    C[Ensure VMware Process Persistence]
+    D[Conceal VMware Tools Process Modifications]
+    E[Persistence Achieved via VMware Tools Process Hijacking]
+
+    A -->|"Gain administrative privileges to access VMware Tools settings Corporate Control: VMware Management Console"| B
+    A -->|"Identify VMware process running on the system Corporate Control: VMware Tools Processes"| B
+    A -->|"Prepare malicious code to be injected into VMware Tools process Corporate Control: Process Manipulation Tools"| B
+    A -->|"Monitor existing VMware tools processes for hijacking opportunities Corporate Control: VMware Log Management"| B
+    B -->|"Inject malicious code into VMware Tools process Corporate Control: VMware Tools Binary Injection"| C
+    B -->|"Set process to execute on every VMware service start Corporate Control: VMware Auto-Start Configuration"| C
+    B -->|"Ensure persistence of the malicious VMware process Corporate Control: VMware Tools Configuration"| C
+    B -->|"Apply obfuscation techniques (disguise process name, file attributes) Corporate Control: VMware Process Management"| C
+    C -->|"Monitor the modified VMware process for abnormal activity Corporate Control: VMware Logs, SIEM Tools"| D
+    C -->|"Ensure process starts automatically with VMware services Corporate Control: VMware Service Integration"| D
+    D -->|"Hide VMware Tools process from normal monitoring tools Corporate Control: VMware Logs and Task Manager"| E
+    D -->|"Blend malicious process with legitimate VMware services Corporate Control: VMware Service Manager"| E
+    D -->|"Conceal process from system administrators and AV tools Corporate Control: Antivirus Evasion Techniques"| E
+    D -->|"Monitor VMware Tools activity to ensure persistence Corporate Control: VMware Security Operations"| E

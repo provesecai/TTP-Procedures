@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateAdminViaDC" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Administrative Privileges to Domain Controllers</data>
+</node>
+<node id="B">
+<data key="label">Create Admin User Account on Domain Controller</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Domain Admin Account Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Admin Account Creation Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Domain Admin Account</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain full administrative access to Domain Controller Corporate Control: Domain Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access Active Directory Users and Computers Console Corporate Control: Active Directory Admin Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create new user account in Active Directory Corporate Control: Active Directory Users and Computers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for changes to AD account policies Corporate Control: AD Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set appropriate privileges for the newly created user Corporate Control: AD Security Groups</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure account persists across domain controller replication Corporate Control: AD Sync Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to account name and group settings Corporate Control: AD Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor user login activity Corporate Control: AD User Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure account maintains admin privileges Corporate Control: Group Policy Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal AD user account from normal directory listings Corporate Control: AD Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend user activity with legitimate domain users Corporate Control: AD Group Memberships</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="StealthCustomShellUser" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare for User Account Creation with Custom Shell</data>
+</node>
+<node id="B">
+<data key="label">Create User with Custom Shell in Environment Variables</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Access via Custom Shell</data>
+</node>
+<node id="D">
+<data key="label">Conceal Custom Shell and User Account</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Custom Shell User</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify system variables Corporate Control: System Environment Variables</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure user account creation is allowed Corporate Control: Windows User Account Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create new user account with custom shell assigned Corporate Control: User Profile Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for user creation logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set user shell to a custom script or reverse shell Corporate Control: Shell Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure user persists across system reboots Corporate Control: User Profile Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to prevent detection of shell Corporate Control: Script Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor new user activity Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure account is hidden from user accounts listing Corporate Control: User Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide custom shell configuration from user accounts listing Corporate Control: File System Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend user activity with normal system tasks Corporate Control: Group Policy Configuration</data>
+</edge>
+</graph>
+</graphml>

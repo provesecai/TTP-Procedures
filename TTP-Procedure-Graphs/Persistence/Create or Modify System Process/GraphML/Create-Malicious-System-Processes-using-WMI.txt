@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateMaliciousWMIProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use WMI for Process Creation</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Process via WMI Commands</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain WMI-Based Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal WMI Process Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WMI-Driven Process</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to access WMI Corporate Control: WMI Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure WMI settings for remote command execution Corporate Control: WMI Security Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system processes vulnerable to WMI manipulation Corporate Control: WMI Scripting Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor WMI event logs for potential process creation Corporate Control: WMI Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use WMI to create or modify system processes Corporate Control: WMI Command Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the process persists across reboots Corporate Control: WMI Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify WMI class configurations to maintain access Corporate Control: WMI Scripting Tool</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (modify WMI classes, hide process) Corporate Control: WMI Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for any unauthorized WMI activities Corporate Control: WMI Event Viewer, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system and WMI updates Corporate Control: System Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal WMI process creation from normal logs Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend WMI process actions with regular administrative tasks Corporate Control: Task Scheduling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure WMI-based process actions blend with standard operations Corporate Control: Admin User Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor for WMI-based persistence Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

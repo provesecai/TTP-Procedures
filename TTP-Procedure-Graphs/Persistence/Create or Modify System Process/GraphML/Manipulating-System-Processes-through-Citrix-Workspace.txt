@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyCitrixProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Citrix Workspace Process</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Citrix Workspace Process</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Citrix Workspace Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Citrix Workspace Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Citrix Workspace Process Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to Citrix Workspace process Corporate Control: Citrix Administrator Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify Citrix Workspace processes for modification Corporate Control: Citrix Workspace Process List</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code or process for injection into Citrix Workspace Corporate Control: Citrix Configuration Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Citrix Workspace logs for hijacking opportunities Corporate Control: Citrix Logs Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into Citrix Workspace process Corporate Control: Citrix Process Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code runs with appropriate privileges Corporate Control: Citrix Workspace Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set Citrix Workspace to restart on session login Corporate Control: Citrix Workspace Auto-Start Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection Corporate Control: Citrix Security Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor injected Citrix Workspace process for stability Corporate Control: Citrix Session Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across Citrix Workspace updates Corporate Control: Citrix Update Service</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate execution of malicious code during Citrix Workspace logins Corporate Control: Citrix Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal Citrix Workspace process from session monitoring tools Corporate Control: Citrix Log Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend Citrix Workspace malicious activity with legitimate tasks Corporate Control: Citrix User Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the malicious process is undetected by security tools Corporate Control: Antivirus, Endpoint Security Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Citrix Workspace persistence Corporate Control: Citrix Management Console</data>
+</edge>
+</graph>
+</graphml>

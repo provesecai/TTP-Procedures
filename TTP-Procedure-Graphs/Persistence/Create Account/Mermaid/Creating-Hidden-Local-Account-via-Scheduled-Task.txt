@@ -1,0 +1,19 @@
+graph TD;
+    A[Prepare Scheduled Task for Persistence]
+    B[Create Scheduled Task to Add Hidden Local Account]
+    C[Ensure Persistence through Scheduled Task]
+    D[Conceal Scheduled Task and New Account]
+    E[Persistence Achieved via Hidden Scheduled Task Account Creation]
+
+    A -->|"Gain administrative privileges to create scheduled tasks Corporate Control: Task Scheduler Management"| B
+    A -->|"Review system configurations for allowed tasks Corporate Control: Task Scheduler Settings"| B
+    A -->|"Prepare scheduled task to run user creation command Corporate Control: Task Scheduler Configuration"| B
+    A -->|"Monitor scheduled task logs for modifications Corporate Control: Task Scheduler Logs"| B
+    B -->|"Create a hidden task to create a local user account Corporate Control: Task Scheduler Executions"| C
+    B -->|"Set task to run on system startup or at user logon Corporate Control: Task Scheduler Trigger Settings"| C
+    B -->|"Ensure task is hidden from normal task listings Corporate Control: Task Scheduler UI"| C
+    B -->|"Apply obfuscation techniques (rename task, change task attributes) Corporate Control: Task Scheduler Policies"| C
+    C -->|"Monitor for any scheduled task execution logs Corporate Control: SIEM Systems"| D
+    C -->|"Ensure task persists after system restarts Corporate Control: Task Scheduling Policies"| D
+    D -->|"Conceal the scheduled task and new user account Corporate Control: System Event Logs"| E
+    D -->|"Ensure the new account is hidden from task manager Corporate Control: User Permissions and Task View Configuration"| E

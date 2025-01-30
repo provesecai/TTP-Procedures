@@ -1,0 +1,19 @@
+graph TD;
+    A[Prepare PowerShell Environment for Persistence]
+    B[Create New User Account via PowerShell]
+    C[Ensure Persistence via PowerShell Account Creation]
+    D[Conceal Newly Created User]
+    E[Persistence Achieved via PowerShell User Creation]
+
+    A -->|"Gain administrative privileges to run PowerShell with full access Corporate Control: Admin Rights"| B
+    A -->|"Configure PowerShell to allow script execution Corporate Control: Execution Policies, Group Policy"| B
+    A -->|"Prepare the PowerShell script to create a new user Corporate Control: PowerShell Scripting Environment"| B
+    A -->|"Monitor PowerShell execution logs Corporate Control: PowerShell Logs, Event Viewer"| B
+    B -->|"Execute PowerShell command to create user account Corporate Control: PowerShell Execution"| C
+    B -->|"Set user privileges to administrator or remote access Corporate Control: PowerShell Cmdlets"| C
+    B -->|"Ensure new account persists across reboots Corporate Control: User Profile Settings"| C
+    B -->|"Apply obfuscation techniques to hide user account creation Corporate Control: PowerShell Obfuscation"| C
+    C -->|"Monitor for any suspicious activity from the new user Corporate Control: Event Viewer, SIEM Systems"| D
+    C -->|"Ensure account is hidden from user account control tools Corporate Control: User Account Management"| D
+    D -->|"Obfuscate new user from standard system listings Corporate Control: User Group Settings"| E
+    D -->|"Blend new user activity with normal system tasks Corporate Control: System Task Scheduling"| E

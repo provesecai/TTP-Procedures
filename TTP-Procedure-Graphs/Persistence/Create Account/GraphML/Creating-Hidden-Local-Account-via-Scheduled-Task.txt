@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HiddenLocalAccount_ScheduledTask" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare Scheduled Task for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create Scheduled Task to Add Hidden Local Account</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence through Scheduled Task</data>
+</node>
+<node id="D">
+<data key="label">Conceal Scheduled Task and New Account</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Hidden Scheduled Task Account Creation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to create scheduled tasks Corporate Control: Task Scheduler Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review system configurations for allowed tasks Corporate Control: Task Scheduler Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare scheduled task to run user creation command Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor scheduled task logs for modifications Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a hidden task to create a local user account Corporate Control: Task Scheduler Executions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run on system startup or at user logon Corporate Control: Task Scheduler Trigger Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task is hidden from normal task listings Corporate Control: Task Scheduler UI</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (rename task, change task attributes) Corporate Control: Task Scheduler Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for any scheduled task execution logs Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task persists after system restarts Corporate Control: Task Scheduling Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal the scheduled task and new user account Corporate Control: System Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the new account is hidden from task manager Corporate Control: User Permissions and Task View Configuration</data>
+</edge>
+</graph>
+</graphml>

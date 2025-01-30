@@ -1,0 +1,17 @@
+graph TD;
+    A[Gain Administrative Privileges to Domain Controllers]
+    B[Create Admin User Account on Domain Controller]
+    C[Monitor and Maintain Domain Admin Account Access]
+    D[Conceal Admin Account Creation Activity]
+    E[Persistence Achieved via Domain Admin Account]
+
+    A -->|"Gain full administrative access to Domain Controller Corporate Control: Domain Admin Rights"| B
+    A -->|"Access Active Directory Users and Computers Console Corporate Control: Active Directory Admin Tools"| B
+    A -->|"Create new admin user account in AD for persistence Corporate Control: Active Directory Users and Computers"| B
+    B -->|"Assign necessary admin privileges and replication rights Corporate Control: AD Rights Management"| C
+    B -->|"Ensure new admin account persists across domain controllers Corporate Control: AD Synchronization"| C
+    B -->|"Apply obfuscation techniques (name changes, hide account from listings) Corporate Control: Active Directory Policies"| C
+    C -->|"Monitor the new admin account activity Corporate Control: Active Directory Event Logs"| D
+    C -->|"Ensure new account remains hidden from general AD views Corporate Control: AD Security Auditing"| D
+    D -->|"Blend new admin account activity with regular domain administrator tasks Corporate Control: Domain Admin Activities"| E
+    D -->|"Continuously monitor and protect the admin account against detection Corporate Control: Security Operations Center"| E

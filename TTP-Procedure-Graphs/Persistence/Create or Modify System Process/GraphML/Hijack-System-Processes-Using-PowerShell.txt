@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackPowerShellProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack System Process with PowerShell</data>
+</node>
+<node id="B">
+<data key="label">Use PowerShell to Modify or Create System Processes</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain PowerShell-Based Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal PowerShell Process Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PowerShell Hijacked Process</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to execute PowerShell scripts Corporate Control: Administrative User Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure PowerShell script execution policies are bypassed Corporate Control: Group Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system processes vulnerable to hijacking Corporate Control: Task Manager, Process Explorer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system processes for potential hijacking opportunities Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use PowerShell commands to modify or create system processes Corporate Control: PowerShell Command Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure hijacked process persists after reboot Corporate Control: Windows Startup Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set process to start automatically via PowerShell command Corporate Control: PowerShell Script Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to PowerShell scripts Corporate Control: Script Encryption, Obfuscation Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor PowerShell script execution for stability Corporate Control: PowerShell Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system updates Corporate Control: Update Mechanisms, PowerShell Remoting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal PowerShell command execution in logs Corporate Control: Windows Event Logs, SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend process hijacking with legitimate system tasks Corporate Control: Windows Admin Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure process remains hidden from security tools Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor the PowerShell script execution in real-time Corporate Control: Real-Time Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

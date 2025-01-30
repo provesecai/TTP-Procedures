@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyDefenderProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Windows Defender Process</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Windows Defender Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Defender Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Defender Process Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Modified Windows Defender Process</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to Windows Defender settings Corporate Control: Windows Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable Windows Defender processes (e.g., MsMpEng.exe) Corporate Control: Task Manager, Process Explorer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to inject into Windows Defender process Corporate Control: Windows Process Injection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Windows Defender process for vulnerabilities Corporate Control: Defender Process Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into Windows Defender process Corporate Control: Windows Defender Process Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code executes with Windows Defender privileges Corporate Control: Windows Defender Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set process to run during each Windows Defender scan Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection by Defender Corporate Control: File Integrity Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Windows Defender process for abnormal behavior Corporate Control: Defender Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process persists across Defender updates Corporate Control: Defender Update Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate execution of malicious code during every Defender scan Corporate Control: Defender Process Health</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal modified process from Defender activity logs Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious process with legitimate Defender processes Corporate Control: Defender Configuration Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure process remains undetected by other security tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Defender process to ensure persistence Corporate Control: Defender System Monitoring</data>
+</edge>
+</graph>
+</graphml>

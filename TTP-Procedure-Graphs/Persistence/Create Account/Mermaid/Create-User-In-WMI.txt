@@ -1,0 +1,19 @@
+graph TD;
+    A[Prepare WMI for Account Creation]
+    B[Create User Account via WMI Command]
+    C[Monitor WMI-Driven Persistence]
+    D[Conceal WMI Account Creation Activity]
+    E[Persistence Achieved via WMI User Account Creation]
+
+    A -->|"Gain access to WMI with administrative privileges Corporate Control: WMI Permissions"| B
+    A -->|"Ensure WMI scripting is enabled and accessible Corporate Control: WMI Security Policies"| B
+    A -->|"Prepare WMI script to create a user account Corporate Control: WMI Script Console"| B
+    A -->|"Monitor WMI execution logs Corporate Control: WMI Event Logs"| B
+    B -->|"Execute WMI command to create user account Corporate Control: WMI Command Execution"| C
+    B -->|"Set the necessary user privileges (admin or remote access) Corporate Control: WMI Scripting Interface"| C
+    B -->|"Ensure account persists across system reboots Corporate Control: User Profile Settings"| C
+    B -->|"Apply obfuscation techniques to hide WMI operations Corporate Control: WMI Event Logs"| C
+    C -->|"Monitor WMI execution logs for unauthorized activity Corporate Control: SIEM Systems"| D
+    C -->|"Ensure persistence via WMI scripts across reboots Corporate Control: Windows WMI Services"| D
+    D -->|"Blend WMI account creation logs with legitimate activity Corporate Control: WMI Event Monitoring"| E
+    D -->|"Obfuscate WMI activity to prevent detection Corporate Control: Security Event Logs"| E

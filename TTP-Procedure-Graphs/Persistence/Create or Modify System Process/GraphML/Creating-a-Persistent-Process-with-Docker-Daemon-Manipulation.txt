@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateDockerDaemonProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Docker Daemon for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Process into Docker Daemon</data>
+</node>
+<node id="C">
+<data key="label">Monitor Docker Daemon Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Docker Daemon Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Docker Daemon Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to Docker Daemon Corporate Control: Docker Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable Docker processes for hijacking Corporate Control: Docker Process List</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious process or code to be injected into Docker Daemon Corporate Control: Docker Configuration Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Docker Daemon logs for process injection opportunities Corporate Control: Docker Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into Docker Daemon process Corporate Control: Docker Process Injection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the malicious process is executed with Docker container privileges Corporate Control: Docker Service Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set Docker Daemon to restart and maintain control over containers Corporate Control: Docker Auto-Start Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to Docker Daemon process Corporate Control: Docker Log Evasion</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Docker Daemon execution for consistency Corporate Control: Docker Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence after Docker service restarts Corporate Control: Docker Configuration Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate that the malicious process runs with every new Docker container Corporate Control: Container Management Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal modified Docker Daemon from container list Corporate Control: Docker Container Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious Docker Daemon actions with legitimate service activities Corporate Control: Docker Service Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure Docker Daemon remains undetected by security solutions Corporate Control: Docker Security Scanners</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor Docker Daemon processes for integrity Corporate Control: Docker Security Operations</data>
+</edge>
+</graph>
+</graphml>

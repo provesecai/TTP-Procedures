@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateScheduledTask" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Process via Scheduled Task</data>
+</node>
+<node id="B">
+<data key="label">Create Scheduled Task to Launch Malicious Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task-Driven Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task and Process Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Scheduled Task</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to modify scheduled tasks Corporate Control: Task Scheduler Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify the appropriate task scheduling intervals for process execution Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare the malicious process or script for execution Corporate Control: Script Editor or Process Execution Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor scheduled task executions Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a new scheduled task to execute the malicious process Corporate Control: Task Scheduler Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the task to run on system startup or after user logon Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task persists even after system updates Corporate Control: System Task Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (change task names, hide from task list) Corporate Control: Task Scheduler UI</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution to ensure continuity Corporate Control: System Process Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the process starts on reboot Corporate Control: Task Scheduler Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate task persistence after system reboot Corporate Control: Task Scheduler Recovery Options</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reconfigure task to recover from failures Corporate Control: Task Scheduler Triggers</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal task execution from standard process monitoring tools Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious task with legitimate system maintenance tasks Corporate Control: Task Scheduler Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task is hidden from normal task listings Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor task health Corporate Control: Windows Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Microsoft Edge Process]
+    B[Inject Malicious Code into Microsoft Edge Process]
+    C[Ensure Microsoft Edge Process Persistence]
+    D[Conceal Malicious Edge Process Modifications]
+    E[Persistence Achieved via Edge Process Hijacking]
+
+    A -->|"Gain access to Microsoft Edge processes Corporate Control: Windows User Account Control"| B
+    A -->|"Identify key processes related to Microsoft Edge Corporate Control: Task Manager, Edge Task List"| B
+    A -->|"Prepare malicious executable or script to inject into Edge process Corporate Control: Windows Script Editor"| B
+    A -->|"Monitor Edge process logs for hijacking opportunities Corporate Control: Event Viewer, Microsoft Edge Logs"| B
+    B -->|"Inject malicious code into Edge process (e.g., msedge.exe) Corporate Control: Process Injection Tools"| C
+    B -->|"Ensure malicious process executes on browser start Corporate Control: Windows Startup Tools"| C
+    B -->|"Set the hijacked process to run on every Edge launch Corporate Control: Edge Settings, Process Management"| C
+    B -->|"Apply obfuscation techniques to avoid detection (rename process, spoof execution) Corporate Control: Process Monitoring Tools"| C
+    C -->|"Monitor Edge process execution to ensure persistence Corporate Control: Edge Activity Logs, SIEM Tools"| D
+    C -->|"Ensure process persists across Edge updates Corporate Control: Microsoft Edge Update Mechanisms"| D
+    C -->|"Reapply hijacked process during browser restarts Corporate Control: Edge Browser Settings"| D
+    D -->|"Conceal hijacked Edge process from standard process explorers Corporate Control: Task Manager Settings"| E
+    D -->|"Blend malicious process activity with normal Edge behavior Corporate Control: Edge Service Logs"| E
+    D -->|"Ensure the process remains hidden from security tools Corporate Control: Antivirus and EDR Systems"| E
+    D -->|"Monitor Edge process health and persistence Corporate Control: Edge Security Operations"| E

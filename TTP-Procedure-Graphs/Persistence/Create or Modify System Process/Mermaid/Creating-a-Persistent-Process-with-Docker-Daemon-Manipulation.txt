@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify Docker Daemon for Persistence]
+    B[Inject Malicious Process into Docker Daemon]
+    C[Monitor Docker Daemon Process Persistence]
+    D[Conceal Docker Daemon Modifications]
+    E[Persistence Achieved via Docker Daemon Hijacking]
+
+    A -->|"Gain administrative access to Docker Daemon Corporate Control: Docker Admin Rights"| B
+    A -->|"Identify vulnerable Docker processes for hijacking Corporate Control: Docker Process List"| B
+    A -->|"Prepare malicious process or code to be injected into Docker Daemon Corporate Control: Docker Configuration Tools"| B
+    A -->|"Monitor Docker Daemon logs for process injection opportunities Corporate Control: Docker Logs"| B
+    B -->|"Inject malicious code into Docker Daemon process Corporate Control: Docker Process Injection"| C
+    B -->|"Ensure the malicious process is executed with Docker container privileges Corporate Control: Docker Service Configuration"| C
+    B -->|"Set Docker Daemon to restart and maintain control over containers Corporate Control: Docker Auto-Start Policies"| C
+    B -->|"Apply obfuscation techniques to Docker Daemon process Corporate Control: Docker Log Evasion"| C
+    C -->|"Monitor Docker Daemon execution for consistency Corporate Control: Docker Monitoring Tools"| D
+    C -->|"Ensure persistence after Docker service restarts Corporate Control: Docker Configuration Settings"| D
+    C -->|"Validate that the malicious process runs with every new Docker container Corporate Control: Container Management Tools"| D
+    D -->|"Conceal modified Docker Daemon from container list Corporate Control: Docker Container Management"| E
+    D -->|"Blend malicious Docker Daemon actions with legitimate service activities Corporate Control: Docker Service Configuration"| E
+    D -->|"Ensure Docker Daemon remains undetected by security solutions Corporate Control: Docker Security Scanners"| E
+    D -->|"Continuously monitor Docker Daemon processes for integrity Corporate Control: Docker Security Operations"| E

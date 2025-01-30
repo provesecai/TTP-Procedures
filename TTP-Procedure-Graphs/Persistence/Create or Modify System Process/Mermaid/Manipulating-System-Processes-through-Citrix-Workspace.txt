@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify Citrix Workspace Process]
+    B[Inject Malicious Code into Citrix Workspace Process]
+    C[Monitor and Maintain Citrix Workspace Persistence]
+    D[Conceal Citrix Workspace Modifications]
+    E[Persistence Achieved via Citrix Workspace Process Hijacking]
+
+    A -->|"Gain administrative access to Citrix Workspace process Corporate Control: Citrix Administrator Rights"| B
+    A -->|"Identify Citrix Workspace processes for modification Corporate Control: Citrix Workspace Process List"| B
+    A -->|"Prepare malicious code or process for injection into Citrix Workspace Corporate Control: Citrix Configuration Tools"| B
+    A -->|"Monitor Citrix Workspace logs for hijacking opportunities Corporate Control: Citrix Logs Management"| B
+    B -->|"Inject malicious code into Citrix Workspace process Corporate Control: Citrix Process Management"| C
+    B -->|"Ensure malicious code runs with appropriate privileges Corporate Control: Citrix Workspace Configuration"| C
+    B -->|"Set Citrix Workspace to restart on session login Corporate Control: Citrix Workspace Auto-Start Settings"| C
+    B -->|"Apply obfuscation techniques to avoid detection Corporate Control: Citrix Security Configuration"| C
+    C -->|"Monitor injected Citrix Workspace process for stability Corporate Control: Citrix Session Logs"| D
+    C -->|"Ensure persistence across Citrix Workspace updates Corporate Control: Citrix Update Service"| D
+    C -->|"Validate execution of malicious code during Citrix Workspace logins Corporate Control: Citrix Event Logs"| D
+    D -->|"Conceal Citrix Workspace process from session monitoring tools Corporate Control: Citrix Log Monitoring"| E
+    D -->|"Blend Citrix Workspace malicious activity with legitimate tasks Corporate Control: Citrix User Management"| E
+    D -->|"Hide injected code from security tools Corporate Control: Antivirus, Endpoint Security Tools"| E
+    D -->|"Continuously monitor Citrix Workspace persistence Corporate Control: Citrix Management Console"| E

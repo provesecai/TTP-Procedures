@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateNewUsers_PowerShell" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare PowerShell Environment for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create New User Account via PowerShell</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence via PowerShell Account Creation</data>
+</node>
+<node id="D">
+<data key="label">Conceal Newly Created User</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PowerShell User Creation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to run PowerShell with full access Corporate Control: Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure PowerShell to allow script execution Corporate Control: Execution Policies, Group Policy</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare the PowerShell script to create a new user Corporate Control: PowerShell Scripting Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PowerShell execution logs Corporate Control: PowerShell Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute PowerShell command to create user account Corporate Control: PowerShell Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set user privileges to administrator or remote access Corporate Control: PowerShell Cmdlets</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure new account persists across reboots Corporate Control: User Profile Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide user account creation Corporate Control: PowerShell Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for any suspicious activity from the new user Corporate Control: Event Viewer, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure account is hidden from user account control tools Corporate Control: User Account Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate new user from standard system listings Corporate Control: User Group Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend new user activity with normal system tasks Corporate Control: System Task Scheduling</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="InjectCode_svchost" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Inject Code into svchost.exe Process</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into svchost.exe</data>
+</node>
+<node id="C">
+<data key="label">Monitor svchost.exe Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal svchost.exe Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via svchost.exe Process Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to modify svchost.exe Corporate Control: Windows Admin Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify running svchost.exe processes for hijacking Corporate Control: Task Manager, Process Explorer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to inject into svchost.exe Corporate Control: Code Injection Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system processes for hijacking opportunities Corporate Control: Windows Process Monitor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into svchost.exe process Corporate Control: Windows Service Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code executes with system privileges Corporate Control: svchost.exe Process Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set svchost.exe to start on boot using Windows Registry Corporate Control: Windows Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide injected process Corporate Control: File Integrity Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor svchost.exe process for abnormal behavior Corporate Control: Windows Event Logs, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process persists across system restarts Corporate Control: Windows Startup Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide svchost.exe process from user account control tools Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious process activity with legitimate system tasks Corporate Control: Service Configuration Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure process continues to execute undetected Corporate Control: Antivirus, Endpoint Security Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor svchost.exe process to ensure persistence Corporate Control: Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

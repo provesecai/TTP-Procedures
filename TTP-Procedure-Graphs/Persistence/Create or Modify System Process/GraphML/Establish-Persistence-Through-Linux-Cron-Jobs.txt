@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateCronJob_Linux" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Persistent Cron Job</data>
+</node>
+<node id="B">
+<data key="label">Create Cron Job to Launch Malicious Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Cron Job Persistence on Reboot</data>
+</node>
+<node id="D">
+<data key="label">Conceal Cron Job Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Cron Job</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to modify cron jobs Corporate Control: Root Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify cron job locations for user and system-level jobs Corporate Control: /etc/crontab, /etc/cron.d</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious command to run periodically via cron job Corporate Control: Linux File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor existing cron jobs for vulnerabilities Corporate Control: Cron Job Management Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a cron job to execute malicious process Corporate Control: Cron Job Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set cron job to run on reboot and at scheduled intervals Corporate Control: Cron Daemon Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure cron job executes without user intervention Corporate Control: User Cron Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide cron job from user listing Corporate Control: Cron Job Directory Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor cron job for failures or deviations Corporate Control: System Logs, Cron Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure cron job persists across system updates Corporate Control: Cron Job Scheduler Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply cron job if removed or altered Corporate Control: Cron Job Recovery Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide cron job from user access Corporate Control: File Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend cron job with legitimate system tasks Corporate Control: System Cron Tasks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure cron job is undetectable by standard cron listing commands Corporate Control: Cron Job Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor cron job activity without detection Corporate Control: Linux Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

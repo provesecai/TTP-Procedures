@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify System Processes via Registry]
+    B[Modify Registry to Create or Alter Processes]
+    C[Monitor and Maintain Registry-Based Process Persistence]
+    D[Conceal Registry Modifications for Persistence]
+    E[Persistence Achieved via Registry-Modified Processes]
+
+    A -->|"Gain administrative privileges to access Windows Registry Corporate Control: Admin User Account"| B
+    A -->|"Locate relevant registry keys controlling process startup (e.g., Run, Services) Corporate Control: Registry Editor"| B
+    A -->|"Prepare the malicious process path or executable for registry injection Corporate Control: File System Permissions"| B
+    A -->|"Monitor registry changes for detection of unauthorized modifications Corporate Control: Registry Monitoring Tools"| B
+    B -->|"Modify registry keys to point to malicious executable Corporate Control: Windows Registry Settings"| C
+    B -->|"Set the process to run at system startup using registry keys Corporate Control: System Boot Configuration"| C
+    B -->|"Ensure registry settings persist after reboot Corporate Control: Registry Persistence Mechanisms"| C
+    B -->|"Apply obfuscation techniques to registry modifications Corporate Control: File System Attributes"| C
+    C -->|"Monitor process creation via registry triggers Corporate Control: Process Execution Logs"| D
+    C -->|"Ensure the process is re-executed on reboot Corporate Control: Windows Startup Process"| D
+    C -->|"Modify registry periodically to ensure persistence Corporate Control: Task Scheduler Integration"| D
+    D -->|"Conceal modified registry keys from common security tools Corporate Control: Antivirus, Windows Defender"| E
+    D -->|"Blend malicious registry modifications with legitimate registry entries Corporate Control: System Monitoring Logs"| E
+    D -->|"Hide execution from user and system logs Corporate Control: Windows Event Viewer"| E
+    D -->|"Ensure stealth against automated detection systems Corporate Control: SIEM Tools"| E

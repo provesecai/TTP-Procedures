@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreatePersistentService_Windows" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Persistent Service</data>
+</node>
+<node id="B">
+<data key="label">Create New Windows Service</data>
+</node>
+<node id="C">
+<data key="label">Ensure Service Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Service Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via New Windows Service</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to modify service configuration Corporate Control: Administrative Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure Windows service management tool access Corporate Control: Service Manager Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine system services available for modification Corporate Control: Service Configuration Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor existing system services for potential hijacking Corporate Control: Service Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a new service with persistence options via Service Manager Corporate Control: Windows Service Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the service to start automatically on system reboot Corporate Control: Service Startup Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the service executes at the desired intervals Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (rename service, disguised executable) Corporate Control: Windows File System</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor service execution for continuity Corporate Control: System Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service runs after every system reboot Corporate Control: Windows Startup Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate service by simulating failure or error conditions Corporate Control: Service Health Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply the service if interrupted Corporate Control: Service Recovery Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide service activity from user monitoring tools Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend service with legitimate system services Corporate Control: Windows Service Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the service is unnoticed by standard detection tools Corporate Control: Antivirus and IDS Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor the service’s resource usage to avoid suspicion Corporate Control: System Resource Monitoring</data>
+</edge>
+</graph>
+</graphml>

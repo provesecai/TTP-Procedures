@@ -1,0 +1,19 @@
+graph TD;
+    A[Prepare to Modify Group Policy for Persistence]
+    B[Create Local Administrator Account via Group Policy]
+    C[Ensure Persistence via Local Account]
+    D[Conceal New Account to Avoid Detection]
+    E[Persistence Achieved via Local Administrator Account]
+
+    A -->|"Gain administrative rights to modify Group Policy Corporate Control: Windows Group Policy Editor"| B
+    A -->|"Review system restrictions for local account creation Corporate Control: Active Directory Policies"| B
+    A -->|"Prepare the system for local account creation Corporate Control: Group Policy Management Console"| B
+    A -->|"Monitor changes to Group Policy settings Corporate Control: Event Viewer, Group Policy Logs"| B
+    B -->|"Create a new local administrator account Corporate Control: Group Policy Management Console"| C
+    B -->|"Set appropriate privileges for the new local account Corporate Control: User Account Settings"| C
+    B -->|"Ensure new account persists across system reboots Corporate Control: Local User Settings"| C
+    B -->|"Apply account obfuscation (modify name, hide in Group Policy)" Corporate Control: User Group Management"| C
+    C -->|"Monitor for system logs showing new account activity Corporate Control: Windows Event Logs"| D
+    C -->|"Ensure new account can access the system after updates Corporate Control: User Profile Settings"| D
+    D -->|"Hide new account from standard system monitoring tools Corporate Control: Group Policy Configuration"| E
+    D -->|"Blend malicious account with legitimate system users Corporate Control: User Permissions, Group Policies"| E

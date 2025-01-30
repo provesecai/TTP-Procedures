@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack svchost.exe Process]
+    B[Inject Malicious Code into svchost.exe]
+    C[Ensure svchost.exe Persistence]
+    D[Conceal svchost.exe Modifications]
+    E[Persistence Achieved via svchost.exe Process Injection]
+
+    A -->|"Gain administrative privileges to modify svchost.exe Corporate Control: Windows Admin Tools"| B
+    A -->|"Identify running svchost.exe processes for hijacking Corporate Control: Task Manager, Process Explorer"| B
+    A -->|"Prepare malicious code to inject into svchost.exe Corporate Control: Code Injection Tools"| B
+    A -->|"Monitor system processes for svchost.exe vulnerabilities Corporate Control: Windows Process Monitor"| B
+    B -->|"Inject malicious code into svchost.exe process Corporate Control: Windows Service Manager"| C
+    B -->|"Ensure malicious code is executed with system privileges Corporate Control: svchost.exe Process Configuration"| C
+    B -->|"Set svchost.exe to start on boot using Windows Registry Corporate Control: Windows Registry Editor"| C
+    B -->|"Apply obfuscation techniques to avoid detection (DLL injection, name masking) Corporate Control: File Integrity Tools"| C
+    C -->|"Monitor the svchost.exe process for abnormal behavior Corporate Control: Windows Event Logs, SIEM Systems"| D
+    C -->|"Ensure process persists across system restarts Corporate Control: Windows Startup Management"| D
+    C -->|"Maintain control over injected svchost.exe process Corporate Control: System Resource Management"| D
+    D -->|"Hide svchost.exe process from user account control tools Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Blend malicious process activity with legitimate system tasks Corporate Control: Service Configuration Logs"| E
+    D -->|"Ensure svchost.exe remains undetected by AV and EDR tools Corporate Control: Endpoint Security Tools"| E
+    D -->|"Monitor process health and ensure persistence Corporate Control: Security Operations Center"| E

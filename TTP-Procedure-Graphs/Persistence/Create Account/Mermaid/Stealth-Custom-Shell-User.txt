@@ -1,0 +1,18 @@
+graph TD;
+    A[Prepare for User Account Creation with Custom Shell]
+    B[Create User with Custom Shell in Environment Variables]
+    C[Monitor and Maintain Access via Custom Shell]
+    D[Conceal Custom Shell and User Account]
+    E[Persistence Achieved via Custom Shell User]
+
+    A -->|"Gain administrative rights to modify system variables Corporate Control: System Environment Variables"| B
+    A -->|"Ensure user account creation is allowed Corporate Control: Windows User Account Settings"| B
+    A -->|"Create new user account with custom shell assigned Corporate Control: User Profile Management"| B
+    A -->|"Monitor for user creation logs Corporate Control: Event Viewer"| B
+    B -->|"Set user shell to a custom script or reverse shell Corporate Control: Shell Configuration"| C
+    B -->|"Ensure user persists across system reboots Corporate Control: User Profile Settings"| C
+    B -->|"Apply obfuscation techniques to prevent detection of shell Corporate Control: Script Obfuscation"| C
+    C -->|"Monitor new user activity Corporate Control: Security Event Logs"| D
+    C -->|"Verify user remains active even after system reboots Corporate Control: Security Operations Center"| D
+    D -->|"Hide custom shell configuration from user accounts listing Corporate Control: File System Permissions"| E
+    D -->|"Blend user activity with other legitimate system accounts Corporate Control: Group Policy Configuration"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifySQLProcess_Stealth" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify SQL Server Processes</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious SQL Server Process</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain SQL Server Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal SQL Server Process Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SQL Server Process Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to SQL Server with admin privileges Corporate Control: SQL Server Management Studio</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical SQL Server processes (e.g., sqlservr.exe) Corporate Control: Task Manager, Process Explorer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executable to replace SQL Server process Corporate Control: SQL Server Binary Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system processes for SQL Server hijacking opportunities Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace sqlservr.exe with malicious executable Corporate Control: Windows File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the SQL Server process restarts after reboot Corporate Control: SQL Server Service Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set malicious process to run at scheduled intervals Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hijacked process Corporate Control: Binary Manipulation Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor hijacked SQL process for execution stability Corporate Control: SQL Server Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SQL Server process persists across updates Corporate Control: SQL Server Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain control over SQL process during failover or replication Corporate Control: SQL Server Cluster Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal process activity in system logs Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend hijacked process with legitimate SQL activities Corporate Control: SQL Server Query Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure process continues to execute undetected Corporate Control: Antivirus and EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor SQL Server logs to ensure uninterrupted access Corporate Control: Database Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

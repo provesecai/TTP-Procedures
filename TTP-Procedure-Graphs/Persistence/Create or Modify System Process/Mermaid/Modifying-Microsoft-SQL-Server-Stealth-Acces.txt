@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify SQL Server Processes]
+    B[Create Malicious SQL Server Process]
+    C[Monitor and Maintain SQL Server Persistence]
+    D[Conceal SQL Server Process Modifications]
+    E[Persistence Achieved via SQL Server Process Hijacking]
+
+    A -->|"Gain access to SQL Server with admin privileges Corporate Control: SQL Server Management Studio"| B
+    A -->|"Identify critical SQL Server processes (e.g., sqlservr.exe) Corporate Control: Task Manager, Process Explorer"| B
+    A -->|"Prepare malicious executable to replace SQL Server process Corporate Control: SQL Server Binary Files"| B
+    A -->|"Monitor system processes for SQL Server hijacking opportunities Corporate Control: Process Monitoring Tools"| B
+    B -->|"Replace sqlservr.exe with malicious executable Corporate Control: Windows File System"| C
+    B -->|"Ensure the SQL Server process restarts after reboot Corporate Control: SQL Server Service Settings"| C
+    B -->|"Set malicious process to run at scheduled intervals Corporate Control: Task Scheduler Integration"| C
+    B -->|"Apply obfuscation techniques to hijacked process Corporate Control: Binary Manipulation Tools"| C
+    C -->|"Monitor hijacked SQL process for execution stability Corporate Control: SQL Server Monitoring Tools"| D
+    C -->|"Ensure SQL Server process persists across updates Corporate Control: SQL Server Update Management"| D
+    C -->|"Maintain control over SQL process during failover or replication Corporate Control: SQL Server Cluster Management"| D
+    D -->|"Conceal process activity in system logs Corporate Control: Windows Event Logs"| E
+    D -->|"Blend hijacked process with legitimate SQL activities Corporate Control: SQL Server Query Logs"| E
+    D -->|"Ensure process continues to execute undetected Corporate Control: Antivirus and EDR Systems"| E
+    D -->|"Monitor SQL Server logs to ensure uninterrupted access Corporate Control: Database Security Monitoring"| E

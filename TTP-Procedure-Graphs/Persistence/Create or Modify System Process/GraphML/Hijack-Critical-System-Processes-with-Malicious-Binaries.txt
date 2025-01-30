@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackCriticalProcesses_Binaries" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Critical System Processes</data>
+</node>
+<node id="B">
+<data key="label">Hijack System Processes with Malicious Binaries</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Process Hijacking Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Hijacked Processes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Hijacked System Processes</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to critical system processes Corporate Control: Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system processes susceptible to hijacking (e.g., svchost.exe) Corporate Control: Process Explorer, Task Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious binary to replace legitimate system executable Corporate Control: File System Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor critical system process execution for hijacking opportunities Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate binary with attacker-controlled process Corporate Control: Windows System32 Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the hijacked process executes on system startup Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set hijacked process to run in parallel with legitimate services Corporate Control: Process Management Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection of the hijacked process Corporate Control: Process Name Spoofing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor hijacked process for abnormal activity Corporate Control: SIEM Systems, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process is executed on every reboot Corporate Control: Windows Startup Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor the process for stealth and persistence Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide hijacked process from common process explorers Corporate Control: Task Manager, Process Explorer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious process with legitimate system tasks Corporate Control: System Administration Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal hijacked process logs from event viewers Corporate Control: Event Viewer, Windows Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure hijacked process remains undetected by security tools Corporate Control: Antivirus, Endpoint Security Systems</data>
+</edge>
+</graph>
+</graphml>

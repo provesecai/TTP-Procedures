@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateLocalAdministratorAccount_LGP" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Group Policy for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create Local Administrator Account via Group Policy</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence via Local Account</data>
+</node>
+<node id="D">
+<data key="label">Conceal New Account to Avoid Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Local Administrator Account</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify Group Policy Corporate Control: Windows Group Policy Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Review system restrictions for local account creation Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare the system for local account creation Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor changes to Group Policy settings Corporate Control: Event Viewer, Group Policy Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a new local administrator account Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set appropriate privileges for the new local account Corporate Control: User Account Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure new account persists across system reboots Corporate Control: Local User Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply account obfuscation (modify name, hide in Group Policy) Corporate Control: User Group Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for system logs showing new account activity Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure new account can access the system after updates Corporate Control: User Profile Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide new account from standard system monitoring tools Corporate Control: Group Policy Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious account with legitimate system users Corporate Control: User Permissions, Group Policies</data>
+</edge>
+</graph>
+</graphml>

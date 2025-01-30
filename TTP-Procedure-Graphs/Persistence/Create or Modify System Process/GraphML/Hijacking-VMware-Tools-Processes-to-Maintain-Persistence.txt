@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackVMwareProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack VMware Tools Process</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into VMware Process</data>
+</node>
+<node id="C">
+<data key="label">Monitor VMware Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal VMware Tools Process Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via VMware Tools Process Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to access VMware Tools settings Corporate Control: VMware Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify VMware process running on the system Corporate Control: VMware Tools Processes</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to be injected into VMware Tools process Corporate Control: Process Manipulation Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor existing VMware tools processes for hijacking opportunities Corporate Control: VMware Log Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into VMware Tools process Corporate Control: VMware Tools Binary Injection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set process to execute on every VMware service start Corporate Control: VMware Auto-Start Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence of the malicious VMware process Corporate Control: VMware Tools Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques (disguise process name, file attributes) Corporate Control: VMware Process Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor VMware process execution for abnormal activity Corporate Control: VMware Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process starts automatically with VMware services Corporate Control: VMware Service Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain control over injected VMware process Corporate Control: System Resource Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide VMware Tools process from container list Corporate Control: VMware Container Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious process with legitimate VMware services Corporate Control: VMware Service Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure VMware Tools process remains undetected by security solutions Corporate Control: VMware Security Scanners</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor VMware Tools activity for integrity Corporate Control: VMware Security Operations</data>
+</edge>
+</graph>
+</graphml>

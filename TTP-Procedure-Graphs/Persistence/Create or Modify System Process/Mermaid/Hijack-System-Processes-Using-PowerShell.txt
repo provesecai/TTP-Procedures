@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Hijack System Process with PowerShell]
+    B[Use PowerShell to Modify or Create System Processes]
+    C[Monitor and Maintain PowerShell-Based Persistence]
+    D[Conceal PowerShell Process Hijacking]
+    E[Persistence Achieved via PowerShell Hijacked Process]
+
+    A -->|"Gain administrative privileges to execute PowerShell scripts Corporate Control: Administrative User Rights"| B
+    A -->|"Ensure PowerShell script execution policies are bypassed Corporate Control: Group Policy Management"| B
+    A -->|"Identify system processes vulnerable to hijacking Corporate Control: Task Manager, Process Explorer"| B
+    A -->|"Monitor system processes for potential hijacking opportunities Corporate Control: Process Monitoring Tools"| B
+    B -->|"Use PowerShell commands to modify or create system processes Corporate Control: PowerShell Command Execution"| C
+    B -->|"Ensure hijacked process persists after reboot Corporate Control: Windows Startup Process"| C
+    B -->|"Set process to start automatically via PowerShell command Corporate Control: PowerShell Script Scheduler"| C
+    B -->|"Apply obfuscation techniques to PowerShell scripts Corporate Control: Script Encryption, Obfuscation Tools"| C
+    C -->|"Monitor PowerShell script execution for stability Corporate Control: PowerShell Logging"| D
+    C -->|"Ensure persistence across system updates Corporate Control: Update Mechanisms, PowerShell Remoting"| D
+    D -->|"Conceal PowerShell command execution in logs Corporate Control: Windows Event Logs, SIEM Systems"| E
+    D -->|"Blend process hijacking with legitimate system tasks Corporate Control: Windows Admin Tools"| E
+    D -->|"Ensure hijacked process is indistinguishable from standard processes Corporate Control: Task Scheduling"| E
+    D -->|"Monitor the PowerShell script execution in real-time Corporate Control: Real-Time Monitoring Systems"| E

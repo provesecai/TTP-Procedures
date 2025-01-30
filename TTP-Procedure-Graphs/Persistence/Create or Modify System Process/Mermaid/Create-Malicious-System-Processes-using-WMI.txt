@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Use WMI for Process Creation]
+    B[Create Malicious Process via WMI Commands]
+    C[Monitor and Maintain WMI-Based Process Persistence]
+    D[Conceal WMI Process Activity]
+    E[Persistence Achieved via WMI-Driven Process]
+
+    A -->|"Gain administrative rights to access WMI Corporate Control: WMI Permissions"| B
+    A -->|"Configure WMI settings for remote command execution Corporate Control: WMI Security Configuration"| B
+    A -->|"Identify system processes vulnerable to WMI manipulation Corporate Control: WMI Scripting Interface"| B
+    A -->|"Monitor WMI event logs for potential process creation Corporate Control: WMI Event Logs"| B
+    B -->|"Use WMI to create or modify system processes Corporate Control: WMI Command Execution"| C
+    B -->|"Ensure the process persists across reboots Corporate Control: WMI Event Monitoring"| C
+    B -->|"Modify WMI class configurations to maintain access Corporate Control: WMI Scripting Tool"| C
+    B -->|"Apply obfuscation techniques (modify WMI classes, hide process) Corporate Control: WMI Configuration"| C
+    C -->|"Monitor for any unauthorized WMI activities Corporate Control: WMI Event Viewer, SIEM Systems"| D
+    C -->|"Ensure persistence across system and WMI updates Corporate Control: System Monitoring Tools"| D
+    D -->|"Conceal WMI process creation from normal logs Corporate Control: Windows Event Viewer"| E
+    D -->|"Blend WMI process actions with regular administrative tasks Corporate Control: Task Scheduling"| E
+    D -->|"Ensure WMI-based process actions blend with standard operations Corporate Control: Admin User Logs"| E
+    D -->|"Continuously monitor for WMI-based persistence Corporate Control: Security Operations Center"| E

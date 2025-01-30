@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Create Persistent Cron Job]
+    B[Create Cron Job to Launch Malicious Process]
+    C[Ensure Cron Job Persistence on Reboot]
+    D[Conceal Cron Job Activity]
+    E[Persistence Achieved via Cron Job]
+
+    A -->|"Gain administrative privileges to modify cron jobs Corporate Control: Root Access"| B
+    A -->|"Identify cron job locations for user and system-level jobs Corporate Control: /etc/crontab, /etc/cron.d"| B
+    A -->|"Prepare malicious command to run periodically via cron job Corporate Control: Linux File System"| B
+    A -->|"Monitor existing cron jobs for vulnerabilities Corporate Control: Cron Job Management Tools"| B
+    B -->|"Create a cron job to execute malicious process Corporate Control: Cron Job Editor"| C
+    B -->|"Set cron job to run on reboot and at scheduled intervals Corporate Control: Cron Daemon Configuration"| C
+    B -->|"Ensure cron job executes without user intervention Corporate Control: User Cron Management"| C
+    B -->|"Apply obfuscation techniques to hide cron job from user listing Corporate Control: Cron Job Directory Permissions"| C
+    C -->|"Monitor cron job for failures or deviations Corporate Control: System Logs, Cron Logs"| D
+    C -->|"Ensure cron job persists across system updates Corporate Control: Cron Job Scheduler Configuration"| D
+    C -->|"Reapply cron job if removed or altered Corporate Control: Cron Job Recovery Settings"| D
+    D -->|"Hide cron job from user access Corporate Control: File Permissions"| E
+    D -->|"Blend cron job with legitimate system tasks Corporate Control: System Cron Tasks"| E
+    D -->|"Ensure cron job is undetectable by standard cron listing commands Corporate Control: Cron Job Obfuscation"| E
+    D -->|"Monitor cron job activity without detection Corporate Control: Linux Monitoring Tools"| E

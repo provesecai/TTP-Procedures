@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Critical System Processes]
+    B[Hijack System Processes with Malicious Binaries]
+    C[Monitor and Maintain Process Hijacking Persistence]
+    D[Conceal Hijacked Processes]
+    E[Persistence Achieved via Hijacked System Processes]
+
+    A -->|"Gain administrative access to critical system processes Corporate Control: Admin Rights"| B
+    A -->|"Identify system processes susceptible to hijacking (e.g., svchost.exe) Corporate Control: Process Explorer, Task Manager"| B
+    A -->|"Prepare malicious binary to replace legitimate system executable Corporate Control: File System Management"| B
+    A -->|"Monitor critical system process execution for hijacking opportunities Corporate Control: Process Monitoring Tools"| B
+    B -->|"Replace legitimate binary with attacker-controlled process Corporate Control: Windows System32 Directory"| C
+    B -->|"Ensure the hijacked process executes on system startup Corporate Control: Task Scheduler Integration"| C
+    B -->|"Set hijacked process to run in parallel with legitimate services Corporate Control: Process Management Tools"| C
+    B -->|"Apply obfuscation techniques to avoid detection of the hijacked process Corporate Control: Process Name Spoofing"| C
+    C -->|"Monitor hijacked process for abnormal activity Corporate Control: SIEM Systems, Event Logs"| D
+    C -->|"Ensure process is executed on every reboot Corporate Control: Windows Startup Configuration"| D
+    C -->|"Monitor the process for stealth and persistence Corporate Control: Process Monitoring Tools"| D
+    D -->|"Hide hijacked process from common process explorers Corporate Control: Task Manager, Process Explorer"| E
+    D -->|"Blend malicious process with legitimate system tasks Corporate Control: System Administration Tools"| E
+    D -->|"Conceal hijacked process logs from event viewers Corporate Control: Event Viewer, Windows Logs"| E
+    D -->|"Ensure hijacked process remains undetected by security tools Corporate Control: Antivirus, Endpoint Security Systems"| E

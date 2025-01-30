@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyProcess_Registry" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify System Processes via Registry</data>
+</node>
+<node id="B">
+<data key="label">Modify Registry to Create or Alter Processes</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Registry-Based Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Registry Modifications for Persistence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Registry-Modified Processes</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to access Windows Registry Corporate Control: Admin User Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Locate relevant registry keys controlling process startup (e.g., Run, Services) Corporate Control: Registry Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare the malicious process path or executable for registry injection Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor registry changes for detection of unauthorized modifications Corporate Control: Registry Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry keys to point to malicious executable Corporate Control: Windows Registry Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the process to run at system startup using registry keys Corporate Control: System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure registry settings persist after reboot Corporate Control: Registry Persistence Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to registry modifications Corporate Control: File System Attributes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process creation via registry triggers Corporate Control: Process Execution Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the process is re-executed on reboot Corporate Control: Windows Startup Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry periodically to ensure persistence Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal modified registry keys from common security tools Corporate Control: Antivirus, Windows Defender</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious registry modifications with legitimate registry entries Corporate Control: System Monitoring Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide execution from user and system logs Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure stealth against automated detection systems Corporate Control: SIEM Tools</data>
+</edge>
+</graph>
+</graphml>

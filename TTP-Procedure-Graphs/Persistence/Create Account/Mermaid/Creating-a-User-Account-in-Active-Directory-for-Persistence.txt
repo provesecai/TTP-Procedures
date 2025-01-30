@@ -1,0 +1,18 @@
+graph TD;
+    A[Prepare Active Directory for Account Creation]
+    B[Create User Account in AD for Persistence]
+    C[Monitor and Maintain AD User Persistence]
+    D[Conceal AD Account Modifications]
+    E[Persistence Achieved via Active Directory User Account]
+
+    A -->|"Gain administrative access to Active Directory Corporate Control: AD User Permissions"| B
+    A -->|"Access AD Users and Computers Management Console Corporate Control: Active Directory Admin Tools"| B
+    A -->|"Create new user account in Active Directory Corporate Control: Active Directory Users and Computers"| B
+    A -->|"Monitor for changes to AD account policies Corporate Control: AD Event Logs"| B
+    B -->|"Set appropriate privileges for the newly created user Corporate Control: AD Security Groups"| C
+    B -->|"Ensure account persists across domain controller replication Corporate Control: AD Sync Service"| C
+    B -->|"Apply obfuscation to account name and group settings Corporate Control: AD Security Policies"| C
+    C -->|"Monitor user login activity Corporate Control: AD User Auditing"| D
+    C -->|"Ensure account maintains admin privileges Corporate Control: Group Policy Management"| D
+    D -->|"Conceal AD user account from normal directory listings Corporate Control: AD Permissions"| E
+    D -->|"Blend user activity with legitimate domain users Corporate Control: AD Group Memberships"| E

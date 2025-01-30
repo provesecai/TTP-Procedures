@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify Windows Defender Process]
+    B[Inject Malicious Code into Windows Defender Process]
+    C[Ensure Defender Process Persistence]
+    D[Conceal Defender Process Modifications]
+    E[Persistence Achieved via Modified Windows Defender Process]
+
+    A -->|"Gain administrative access to Windows Defender settings Corporate Control: Windows Admin Rights"| B
+    A -->|"Identify vulnerable Windows Defender processes (e.g., MsMpEng.exe) Corporate Control: Task Manager, Process Explorer"| B
+    A -->|"Prepare malicious code to inject into Windows Defender process Corporate Control: Windows Process Injection"| B
+    A -->|"Monitor Windows Defender process for vulnerabilities Corporate Control: Defender Process Logs"| B
+    B -->|"Inject malicious code into Windows Defender process Corporate Control: Windows Defender Process Management"| C
+    B -->|"Ensure malicious code executes with Windows Defender privileges Corporate Control: Windows Defender Configuration"| C
+    B -->|"Set process to run during each Windows Defender scan Corporate Control: Task Scheduler Integration"| C
+    B -->|"Apply obfuscation techniques to avoid detection by Defender Corporate Control: File Integrity Tools"| C
+    C -->|"Monitor Windows Defender process for abnormal behavior Corporate Control: Defender Monitoring Tools"| D
+    C -->|"Ensure process persists across Defender updates Corporate Control: Defender Update Settings"| D
+    C -->|"Validate execution of malicious code during every Defender scan Corporate Control: Defender Process Health"| D
+    D -->|"Conceal modified process from Defender activity logs Corporate Control: Windows Event Logs"| E
+    D -->|"Blend malicious process with legitimate Defender processes Corporate Control: Defender Configuration Logs"| E
+    D -->|"Ensure process remains undetected by other security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor Defender process to ensure persistence Corporate Control: Defender System Monitoring"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyEdgeProcess_Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Microsoft Edge Process</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Microsoft Edge Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Microsoft Edge Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Edge Process Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Edge Process Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to Microsoft Edge processes Corporate Control: Windows User Account Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify key processes related to Microsoft Edge Corporate Control: Task Manager, Edge Task List</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious executable or script to inject into Edge process Corporate Control: Windows Script Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Edge process logs for hijacking opportunities Corporate Control: Event Viewer, Microsoft Edge Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into Edge process (e.g., msedge.exe) Corporate Control: Process Injection Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious process executes on browser start Corporate Control: Windows Startup Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the hijacked process to run on every Edge launch Corporate Control: Edge Settings, Process Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection (rename process, spoof execution) Corporate Control: Process Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Edge process execution to ensure persistence Corporate Control: Edge Activity Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process persists across Edge updates Corporate Control: Microsoft Edge Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply hijacked process during browser restarts Corporate Control: Edge Browser Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal hijacked Edge process from standard process explorers Corporate Control: Task Manager Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious process activity with normal Edge behavior Corporate Control: Edge Service Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the process remains hidden from security tools Corporate Control: Antivirus and EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Edge process health and persistence Corporate Control: Edge Security Operations</data>
+</edge>
+</graph>
+</graphml>

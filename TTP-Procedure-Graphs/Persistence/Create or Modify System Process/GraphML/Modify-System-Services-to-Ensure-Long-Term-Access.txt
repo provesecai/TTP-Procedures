@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifySystemServices_LongTermAccess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify System Services</data>
+</node>
+<node id="B">
+<data key="label">Modify System Service to Maintain Access</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Maintain Service-Driven Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Service Modification</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Modified System Service</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify system services Corporate Control: Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system services that can be hijacked Corporate Control: Service Management Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious binary or script to replace service executable Corporate Control: Windows Service Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor service execution logs for modifications Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace service binary with malicious code Corporate Control: Windows Service Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the service to auto-start at system boot Corporate Control: Service Configuration Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious service executes on reboot Corporate Control: Windows Registry and Startup Programs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide modified service Corporate Control: File Integrity Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor service for persistence Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service runs after every system reboot Corporate Control: Windows Startup Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate service by simulating failure or error conditions Corporate Control: Service Health Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply the service if interrupted Corporate Control: Service Recovery Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide modified service from monitoring systems Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious service with legitimate system services Corporate Control: Service Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the service is unnoticed by standard detection tools Corporate Control: Antivirus and IDS Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor the service’s resource usage to avoid suspicion Corporate Control: System Resource Monitoring</data>
+</edge>
+</graph>
+</graphml>

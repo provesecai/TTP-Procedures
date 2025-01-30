@@ -1,0 +1,23 @@
+graph TD;
+    A[Prepare to Modify System Services]
+    B[Modify System Service to Maintain Access]
+    C[Monitor and Maintain Service-Driven Persistence]
+    D[Conceal Service Modification]
+    E[Persistence Achieved via Modified System Service]
+
+    A -->|"Gain administrative access to modify system services Corporate Control: Admin Rights"| B
+    A -->|"Identify system services that can be hijacked Corporate Control: Service Management Tools"| B
+    A -->|"Prepare malicious binary or script to replace service executable Corporate Control: Windows Service Directory"| B
+    A -->|"Monitor service execution logs for modifications Corporate Control: System Logs"| B
+    B -->|"Replace service binary with malicious code Corporate Control: Windows Service Manager"| C
+    B -->|"Set the service to auto-start at system boot Corporate Control: Service Configuration Tools"| C
+    B -->|"Ensure malicious service executes on reboot Corporate Control: Windows Registry and Startup Programs"| C
+    B -->|"Apply obfuscation techniques to hide modified service Corporate Control: File Integrity Monitoring Tools"| C
+    C -->|"Monitor service for persistence Corporate Control: Windows Event Logs"| D
+    C -->|"Ensure service runs after every system reboot Corporate Control: Windows Startup Process"| D
+    C -->|"Validate service by simulating failure or error conditions Corporate Control: Service Health Monitoring"| D
+    C -->|"Reapply the service if interrupted Corporate Control: Service Recovery Configuration"| D
+    D -->|"Hide modified service from monitoring systems Corporate Control: Security Event Logs"| E
+    D -->|"Blend malicious service with legitimate system services Corporate Control: Service Configuration Management"| E
+    D -->|"Ensure the service is unnoticed by standard detection tools Corporate Control: Antivirus and IDS Systems"| E
+    D -->|"Monitor the service’s resource usage to avoid suspicion Corporate Control: System Resource Monitoring"| E

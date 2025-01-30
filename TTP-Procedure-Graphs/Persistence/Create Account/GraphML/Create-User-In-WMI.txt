@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateUser_WMI" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare WMI for Account Creation</data>
+</node>
+<node id="B">
+<data key="label">Create User Account via WMI Command</data>
+</node>
+<node id="C">
+<data key="label">Monitor WMI-Driven Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal WMI Account Creation Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WMI User Account Creation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to WMI with administrative privileges Corporate Control: WMI Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure WMI scripting is enabled and accessible Corporate Control: WMI Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare WMI script to create a user account Corporate Control: WMI Script Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor WMI execution logs Corporate Control: WMI Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute WMI command to create user account Corporate Control: WMI Command Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the necessary user privileges (admin or remote access) Corporate Control: WMI Scripting Interface</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure account persists across system reboots Corporate Control: User Profile Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide WMI operations Corporate Control: WMI Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WMI execution logs for unauthorized activity Corporate Control: SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence via WMI scripts across reboots Corporate Control: Windows WMI Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend WMI account creation logs with legitimate activity Corporate Control: WMI Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate WMI activity to prevent detection Corporate Control: Security Event Logs</data>
+</edge>
+</graph>
+</graphml>
