@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SettingUpVPNAccess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Establish Persistent VPN Access</data>
+</node>
+<node id="B">
+<data key="label">Configure VPN for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent VPN Connection</data>
+</node>
+<node id="D">
+<data key="label">Conceal VPN Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via VPN Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to VPN server settings Corporate Control: Admin Rights, VPN Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Install and configure VPN server for persistent access Corporate Control: VPN Server Management, OpenVPN</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Generate and configure VPN credentials for remote access Corporate Control: VPN User Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor VPN logs for successful configuration Corporate Control: VPN Service Logs, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set VPN to auto-connect on system reboot Corporate Control: VPN Client Configuration, System Startup Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure VPN credentials are securely stored for future access Corporate Control: VPN Credential Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enable continuous connection retries for VPN persistence Corporate Control: VPN Client Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify that VPN service remains active after updates Corporate Control: VPN Client and Server Integration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor VPN connection to ensure continuous remote access Corporate Control: VPN Logs, Connection Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure VPN connection is not disrupted by system reboots Corporate Control: VPN Service Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply VPN connection configurations if interrupted Corporate Control: VPN Service Recovery Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate VPN connection logs to avoid detection Corporate Control: VPN Client Logs, Event Viewer Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure VPN access is undetectable by system security tools Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide VPN connection from administrative view Corporate Control: Network Access Controls, VPN Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor VPN connection for stability Corporate Control: Security Operations Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RemoteDesktopGatewayPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use Remote Desktop Gateway (RDG) for Access</data>
+</node>
+<node id="B">
+<data key="label">Configure RDG for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure RDG Connection Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal RDG Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RDG</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to configure RDG Corporate Control: RDG Server Configuration, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Install and configure RDG for external access Corporate Control: RDG Setup, Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure RDG to allow automatic connection and session persistence Corporate Control: RDG Settings, Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor RDG service logs for successful setup Corporate Control: RDG Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up user access with elevated privileges for RDG Corporate Control: RDG User Configuration, Active Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure RDG connection persists even after system reboots Corporate Control: RDG Auto-Reconnect Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enable persistent access with minimum downtime Corporate Control: RDG Client Configuration, Network Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate RDG connection logs from detection Corporate Control: Log Management, Network Traffic Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor RDG connections for continued access Corporate Control: RDG Connection Logs, Network Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure RDG session persists after system maintenance Corporate Control: RDG Service Monitoring, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply RDG configurations if interrupted Corporate Control: RDG Configuration, System Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide RDG connection activity from user access Corporate Control: Task Manager, Event Viewer, Network Traffic Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend RDG activity with normal network traffic Corporate Control: Network Traffic Analysis, VPN Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure RDG access remains undetected by endpoint security tools Corporate Control: Antivirus, EDR Solutions, SIEM Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor RDG activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Tools</data>
+</edge>
+</graph>
+</graphml>

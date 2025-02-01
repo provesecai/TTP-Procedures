@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingExternalFTPForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use External FTP for Persistent Access</data>
+</node>
+<node id="B">
+<data key="label">Configure FTP Server for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure FTP Access Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal FTP Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via FTP</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to FTP server settings Corporate Control: FTP Service Configuration, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Install and configure FTP server for persistent access Corporate Control: FTP Server Setup, Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure FTP server is accessible remotely and via secured connections Corporate Control: FTP Settings, Firewall Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor FTP service logs for successful configuration Corporate Control: FTP Log Monitoring, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up a persistent FTP connection to re-establish after disconnections Corporate Control: FTP Client, Network Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure FTP connection triggers automatically at login Corporate Control: System Boot, Task Scheduler Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply static IP and port forwarding to bypass network restrictions Corporate Control: Router/Firewall Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure FTP persists even after system restarts Corporate Control: FTP Auto-Reconnect Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor FTP service for reliable access Corporate Control: FTP Logs, Event Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure FTP remains available even after reboots Corporate Control: FTP Auto-Start Configuration, Group Policy Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply FTP configurations if disrupted Corporate Control: FTP Configuration, File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide FTP access activity from normal logs Corporate Control: Log Filtering, FTP Logs Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend FTP traffic with legitimate network activity Corporate Control: Traffic Analysis, Firewall Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetected FTP connection from network security tools Corporate Control: IDS/IPS, Firewalls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor FTP activity for stealth Corporate Control: SIEM Systems, Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

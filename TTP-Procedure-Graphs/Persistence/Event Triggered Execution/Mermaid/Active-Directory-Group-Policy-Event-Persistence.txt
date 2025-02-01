@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use AD Group Policy for Event Triggered Execution]
+    B[Modify Group Policy to Create Event-Triggered Task]
+    C[Ensure Task Persistence Across Reboots]
+    D[Conceal Event-Triggered Task Modifications]
+    E[Persistence Achieved via Group Policy Triggered Task]
+
+    A -->|"Gain administrative access to Group Policy Editor Corporate Control: Windows Administrator Rights"| B
+    A -->|"Identify system events that can trigger tasks via AD Group Policy Corporate Control: Group Policy Management Console"| B
+    A -->|"Prepare malicious task to be triggered via AD Group Policy Corporate Control: Windows Group Policy Settings"| B
+    A -->|"Monitor for event triggers in AD logs Corporate Control: Active Directory Monitoring Tools"| B
+    B -->|"Create event-triggered task within Group Policy Corporate Control: Group Policy Management Console"| C
+    B -->|"Set task to execute on specific event in AD Corporate Control: Event Log Integration with GPO"| C
+    B -->|"Ensure task persists even after reboot Corporate Control: System Startup Configuration via GPO"| C
+    B -->|"Apply obfuscation techniques to hide task in event logs Corporate Control: Group Policy Configuration"| C
+    C -->|"Monitor task execution after event trigger Corporate Control: SIEM Tools, AD Event Logs"| D
+    C -->|"Ensure task triggers on subsequent event occurrences Corporate Control: Task Scheduler Integration"| D
+    C -->|"Maintain task by validating it after system updates Corporate Control: GPO Update Settings"| D
+    D -->|"Hide event-triggered task from normal monitoring Corporate Control: Event Viewer, AD Logs"| E
+    D -->|"Blend event-triggered task with normal system events Corporate Control: Event Log Configuration"| E
+    D -->|"Ensure task is concealed from security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor task continuity for uninterrupted access Corporate Control: Security Operations Center (SOC)"| E

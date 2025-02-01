@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingUserLoginEvent" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Leverage User Login Events for Persistent Backdoor Creation</data>
+</node>
+<node id="B">
+<data key="label">Create Task Triggered by User Logon/Logoff Event</data>
+</node>
+<node id="C">
+<data key="label">Ensure Logon/Logoff Event Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Logon/Logoff Event Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Logon/Logoff Event Trigger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify logon/logoff triggers Corporate Control: Admin Rights, Group Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify logon/logoff events that can trigger code execution Corporate Control: Event Logs, User Logon Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code or executable to be triggered Corporate Control: Task Scheduler, PowerShell Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for user logon/logoff event triggers Corporate Control: Event Log Management, Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create task triggered by logon/logoff event Corporate Control: Task Scheduler Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run malicious code during logon/logoff Corporate Control: Event Log Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task persists across system reboots Corporate Control: System Boot Configuration, Task Scheduler Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide event-triggered tasks Corporate Control: Event Log Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution after event trigger Corporate Control: Task Scheduler Logs, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of task after logon/logoff Corporate Control: Task Scheduler, Event Log Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply task if interrupted Corporate Control: Task Scheduler Recovery, Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide event-triggered task from user interface Corporate Control: Event Viewer, Task Scheduler Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend task with normal system events Corporate Control: Event Log Configuration, System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task is undetectable by security tools Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task activity for undetected access Corporate Control: SIEM Tools, SOC</data>
+</edge>
+</graph>
+</graphml>

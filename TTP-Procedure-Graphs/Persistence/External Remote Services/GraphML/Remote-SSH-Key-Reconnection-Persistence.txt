@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PersistentSSHKeyForReconnection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Persistent SSH Key for Access</data>
+</node>
+<node id="B">
+<data key="label">Generate and Configure Persistent SSH Key</data>
+</node>
+<node id="C">
+<data key="label">Ensure SSH Key Persistence Across Reboots</data>
+</node>
+<node id="D">
+<data key="label">Conceal SSH Key Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Persistent SSH Key</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to configure SSH Corporate Control: SSH Daemon Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Generate SSH key pair for persistent remote access Corporate Control: SSH Key Generation Tools, User Account Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Add SSH public key to authorized_keys for login Corporate Control: SSH Directory Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SSH service and logs for successful configuration Corporate Control: SSH Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH key is added to remote systems Corporate Control: SSH Key Distribution, Configuration Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set SSH configuration to persist even after reboots Corporate Control: SSH Daemon Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH access remains available through reboots Corporate Control: SSH Service Settings, Auto-Start Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH key remains valid across reboots Corporate Control: System Boot Settings, Key Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SSH connection for reliability Corporate Control: SSH Logs, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SSH key access remains undetected by admins Corporate Control: SSH Configuration, System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply SSH key settings if interrupted Corporate Control: SSH Configuration, User Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SSH key access from standard user views Corporate Control: File Permissions, SSH Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend SSH key access with normal user activities Corporate Control: User Account Management, Log Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SSH key remains undetected by security tools Corporate Control: Endpoint Security, Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor SSH access logs for stealth Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

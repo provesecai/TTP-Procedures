@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use External FTP for Persistent Access]
+    B[Configure FTP Server for Remote Access]
+    C[Ensure FTP Access Persistence]
+    D[Conceal FTP Access]
+    E[Persistence Achieved via FTP]
+
+    A -->|"Gain administrative access to configure FTP service Corporate Control: FTP Service Configuration, Admin Rights"| B
+    A -->|"Install and configure FTP server on target system Corporate Control: FTP Server Setup, Windows Configuration"| B
+    A -->|"Ensure FTP server is accessible remotely and via secured connections Corporate Control: FTP Settings, Firewall Management"| B
+    A -->|"Monitor FTP server logs for successful access Corporate Control: FTP Log Monitoring, Event Viewer"| B
+    B -->|"Configure FTP to run automatically on system reboot Corporate Control: Task Scheduler, Windows Startup Settings"| C
+    B -->|"Create persistent FTP account with elevated privileges Corporate Control: FTP User Configuration, Account Management"| C
+    B -->|"Set up secure file transfer for ongoing communication Corporate Control: SFTP, FTP Permissions"| C
+    B -->|"Ensure FTP server persists even after updates or reboots Corporate Control: Service Configuration, Auto-Reconnect Settings"| C
+    C -->|"Monitor FTP server for reliable access Corporate Control: FTP Logs, Event Logs, SIEM Tools"| D
+    C -->|"Ensure FTP connection remains uninterrupted across reboots Corporate Control: FTP Auto-Start Configuration"| D
+    C -->|"Reapply FTP configurations if disrupted Corporate Control: FTP Client Management, Service Recovery"| D
+    D -->|"Hide FTP server logs and user activity Corporate Control: File Permissions, Log Obfuscation"| E
+    D -->|"Blend FTP traffic with legitimate network traffic Corporate Control: Network Monitoring Tools, Firewall Rules"| E
+    D -->|"Ensure FTP connection remains undetected by security solutions Corporate Control: Antivirus, EDR Systems, Firewall Evasion"| E
+    D -->|"Monitor FTP activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Systems"| E

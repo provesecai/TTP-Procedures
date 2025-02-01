@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Establish Persistent Remote PowerShell Access]
+    B[Configure Remote PowerShell for Access]
+    C[Ensure Remote PowerShell Persistence]
+    D[Conceal Remote PowerShell Access]
+    E[Persistence Achieved via PowerShell Access]
+
+    A -->|"Gain administrative access to modify PowerShell remoting settings Corporate Control: Admin Rights, PowerShell Remoting Configuration"| B
+    A -->|"Enable PowerShell remoting for remote access Corporate Control: PowerShell Remoting Enablement"| B
+    A -->|"Configure firewall and network settings for remote PowerShell access Corporate Control: Windows Firewall, Network Configuration"| B
+    A -->|"Monitor PowerShell execution logs for remote connection opportunities Corporate Control: PowerShell Logs, Event Viewer"| B
+    B -->|"Set up persistent PowerShell access via remote sessions Corporate Control: PowerShell Remoting, Windows Firewall"| C
+    B -->|"Ensure remote PowerShell access is available after each reboot Corporate Control: Task Scheduler Integration, Group Policy Management"| C
+    B -->|"Configure PowerShell access with elevated privileges Corporate Control: User Account Control (UAC)"| C
+    B -->|"Store remote access credentials securely for future use Corporate Control: Windows Credential Management"| C
+    C -->|"Monitor PowerShell session logs to ensure continuity Corporate Control: Event Logs, PowerShell Logging"| D
+    C -->|"Ensure PowerShell access remains undetected by security solutions Corporate Control: PowerShell Security Policies, EDR Tools"| D
+    C -->|"Maintain remote PowerShell access by verifying availability after reboot Corporate Control: Task Scheduler, PowerShell Profiles"| D
+    D -->|"Conceal remote PowerShell access from administrative view Corporate Control: Event Logs, PowerShell Console"| E
+    D -->|"Blend PowerShell session activities with legitimate processes Corporate Control: Process Management, PowerShell Script Logs"| E
+    D -->|"Ensure access remains undetectable by security tools Corporate Control: Antivirus, Endpoint Security Solutions"| E
+    D -->|"Monitor access for any signs of detection Corporate Control: SIEM Tools, Security Operations Center (SOC)"| E

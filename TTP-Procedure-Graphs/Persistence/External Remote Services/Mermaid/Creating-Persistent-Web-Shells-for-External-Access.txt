@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Deploy Persistent Web Shell]
+    B[Create Web Shell for External Access]
+    C[Ensure Persistence via Web Shell]
+    D[Conceal Web Shell Access]
+    E[Persistence Achieved via Web Shell]
+
+    A -->|"Gain administrative access to web server Corporate Control: Admin Rights, Web Server Configuration"| B
+    A -->|"Identify vulnerabilities in web application to exploit for shell upload Corporate Control: Web Application Firewall (WAF), Application Logs"| B
+    A -->|"Prepare and upload web shell to the server Corporate Control: File Upload Mechanisms, FTP, WebDAV"| B
+    A -->|"Monitor server logs to identify potential exploit points Corporate Control: Web Server Logs, SIEM Systems"| B
+    B -->|"Place web shell in accessible directory with execution permissions Corporate Control: File Permissions, Web Server Configuration"| C
+    B -->|"Ensure web shell can execute commands on demand Corporate Control: Web Server Configuration, PHP/ASP Scripting"| C
+    B -->|"Set up persistent backdoor via web shell in common locations Corporate Control: Web Application Configurations"| C
+    B -->|"Ensure web shell survives server restarts Corporate Control: System Startup Configuration, File Integrity Monitoring"| C
+    C -->|"Monitor web shell execution to ensure continued access Corporate Control: Web Server Logs, Monitoring Tools"| D
+    C -->|"Ensure shell remains operational after updates Corporate Control: File System Monitoring, Web Server Configuration"| D
+    C -->|"Maintain persistence by re-uploading shell if detected Corporate Control: Web File Management Tools"| D
+    D -->|"Conceal web shell from standard file browsing and access Corporate Control: File Permissions, Web Application Firewall (WAF)"| E
+    D -->|"Blend web shell traffic with legitimate application traffic Corporate Control: Application Layer Protocols, WAF Logs"| E
+    D -->|"Ensure web shell access remains undetected by endpoint detection systems Corporate Control: Antivirus, Web Application Firewall (WAF)"| E
+    D -->|"Continuously monitor web shell activity for stealth Corporate Control: Security Operations Center (SOC)"| E

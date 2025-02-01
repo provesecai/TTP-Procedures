@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Install Remote Access Tool (RAT)]
+    B[Install and Configure RAT for Remote Access]
+    C[Ensure Persistence Through RAT Access]
+    D[Conceal RAT Activity]
+    E[Persistence Achieved via RAT Access]
+
+    A -->|"Gain access to install RAT on target machine Corporate Control: Admin Rights, Software Installation"| B
+    A -->|"Download and install RAT tool for remote access Corporate Control: Remote Access Tool, System File Configuration"| B
+    A -->|"Configure RAT to maintain control over target system Corporate Control: RAT Configuration, Persistence Settings"| B
+    A -->|"Monitor system logs for successful RAT connection Corporate Control: RAT Logs, Event Viewer"| B
+    B -->|"Set RAT to run on system startup Corporate Control: Task Scheduler, Auto-Start Configuration"| C
+    B -->|"Ensure RAT can be accessed remotely Corporate Control: RAT Configuration, Network Settings"| C
+    B -->|"Apply persistence mechanisms to ensure RAT survives reboots Corporate Control: System Boot Configuration, File Integrity Monitoring"| C
+    B -->|"Obfuscate RAT traffic and operations to avoid detection Corporate Control: Network Configuration, Traffic Obfuscation"| C
+    C -->|"Monitor RAT connection for uninterrupted access Corporate Control: RAT Monitoring Tools, Event Logs"| D
+    C -->|"Ensure RAT session persists across system and software updates Corporate Control: RAT Recovery Settings, OS Configuration"| D
+    C -->|"Reapply RAT settings if interrupted Corporate Control: RAT Configuration, System Monitoring"| D
+    D -->|"Hide RAT traffic from security tools Corporate Control: Antivirus, IDS/IPS Systems"| E
+    D -->|"Blend RAT operations with legitimate traffic Corporate Control: Network Traffic Monitoring, File Permissions"| E
+    D -->|"Ensure undetected access through RAT Corporate Control: Endpoint Security, Antivirus, EDR Systems"| E
+    D -->|"Monitor RAT access logs for stealth Corporate Control: SOC, Security Monitoring Tools"| E

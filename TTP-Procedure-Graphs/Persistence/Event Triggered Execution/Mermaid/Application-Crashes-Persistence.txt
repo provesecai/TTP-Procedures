@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Create Task Triggered by Application Crash]
+    B[Create Task Triggered by Application Crash]
+    C[Ensure Task Persistence After Application Failure]
+    D[Conceal Task and Trigger Mechanism]
+    E[Persistence Achieved via Application Crash Triggered Task]
+
+    A -->|"Gain administrative privileges to create scheduled tasks Corporate Control: Task Scheduler Permissions"| B
+    A -->|"Identify applications prone to crashes that can trigger tasks Corporate Control: Application Logs, System Monitoring Tools"| B
+    A -->|"Prepare malicious task to run after application crash Corporate Control: Task Scheduler Management Console"| B
+    A -->|"Monitor system for application crashes that trigger tasks Corporate Control: Crash Reports, Event Viewer"| B
+    B -->|"Create task to execute malicious code after application failure Corporate Control: Task Scheduler Configuration"| C
+    B -->|"Set task to run at specific crash points Corporate Control: Windows Event Log Management"| C
+    B -->|"Ensure task runs after application crashes during the user session Corporate Control: Task Scheduling Tools"| C
+    B -->|"Apply obfuscation techniques to disguise task Corporate Control: Task Scheduler Logs"| C
+    C -->|"Monitor task execution to ensure stability Corporate Control: Windows Event Viewer, SIEM Tools"| D
+    C -->|"Ensure task triggers on all application crashes Corporate Control: Windows Event Logs"| D
+    C -->|"Maintain task persistence if interrupted Corporate Control: Task Scheduler Policies"| D
+    D -->|"Conceal crash-triggered task from user and system logs Corporate Control: Windows Event Logs, Task Manager"| E
+    D -->|"Blend crash-triggered task with system maintenance tasks Corporate Control: Task Scheduler UI, System Logs"| E
+    D -->|"Ensure task is undetectable by security solutions Corporate Control: Endpoint Detection and Response (EDR)"| E
+    D -->|"Monitor task activity to avoid detection Corporate Control: Security Operations Center (SOC)"| E

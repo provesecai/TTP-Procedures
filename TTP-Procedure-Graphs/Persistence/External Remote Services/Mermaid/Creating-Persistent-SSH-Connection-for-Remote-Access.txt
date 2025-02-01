@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Establish Persistent SSH Connection]
+    B[Configure SSH for Remote Access]
+    C[Ensure Persistent SSH Connection]
+    D[Conceal SSH Access]
+    E[Persistence Achieved via SSH Access]
+
+    A -->|"Gain administrative access to modify SSH configuration Corporate Control: SSH Server Configuration"| B
+    A -->|"Install OpenSSH Server if not already present Corporate Control: SSH Daemon Installation"| B
+    A -->|"Configure SSH to allow passwordless authentication Corporate Control: SSH Key Pair Configuration"| B
+    A -->|"Monitor SSH logs for successful configuration Corporate Control: Event Logs, SSH Logs"| B
+    B -->|"Enable remote login on SSH with appropriate privileges Corporate Control: SSH Configuration File, User Management"| C
+    B -->|"Create backdoor user with SSH key for persistence Corporate Control: User Account Management"| C
+    B -->|"Configure system to allow SSH access at boot Corporate Control: System Boot Configuration"| C
+    B -->|"Ensure SSH key pair is added to authorized keys file Corporate Control: File Management, SSH Keys"| C
+    C -->|"Monitor SSH connection for integrity and continuity Corporate Control: SSH Logs, System Monitoring Tools"| D
+    C -->|"Ensure remote access works after reboots Corporate Control: SSH Service Configuration"| D
+    C -->|"Reapply configuration if interrupted Corporate Control: SSH Configuration, File Integrity Monitoring"| D
+    D -->|"Obfuscate SSH configuration changes from normal view Corporate Control: SSH Logs Obfuscation, File Permissions"| E
+    D -->|"Hide SSH access from common system monitoring tools Corporate Control: File Permissions, SSH Service Logs"| E
+    D -->|"Ensure undetected SSH access from endpoint security Corporate Control: Endpoint Protection, Antivirus Tools"| E
+    D -->|"Continuously monitor SSH service for uninterrupted access Corporate Control: Security Operations Center (SOC)"| E

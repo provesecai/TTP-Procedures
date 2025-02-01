@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Create Persistent SSH Key for Access]
+    B[Generate and Configure Persistent SSH Key]
+    C[Ensure SSH Key Persistence Across Reboots]
+    D[Conceal SSH Key Access]
+    E[Persistence Achieved via Persistent SSH Key]
+
+    A -->|"Gain administrative privileges to configure SSH Corporate Control: SSH Configuration, Admin Rights"| B
+    A -->|"Generate SSH key pair for persistent remote access Corporate Control: SSH Key Generation Tools, User Account Settings"| B
+    A -->|"Add SSH public key to authorized_keys for login Corporate Control: SSH Directory Configuration"| B
+    A -->|"Monitor SSH service and logs for successful configuration Corporate Control: SSH Logs, Event Viewer"| B
+    B -->|"Ensure SSH key is added to remote systems Corporate Control: SSH Key Distribution, Configuration Management"| C
+    B -->|"Set SSH configuration to persist even after reboots Corporate Control: SSH Daemon Configuration"| C
+    B -->|"Ensure SSH access remains available through reboots Corporate Control: SSH Service Settings, Auto-Start Configuration"| C
+    B -->|"Apply obfuscation techniques to SSH key access Corporate Control: Key Management, File System Permissions"| C
+    C -->|"Monitor SSH connection for reliability Corporate Control: SSH Monitoring, Event Logs"| D
+    C -->|"Ensure SSH key remains active and undetected by admins Corporate Control: SSH Key Management, System Logs"| D
+    C -->|"Reapply SSH key settings if disrupted Corporate Control: SSH Configuration Files, User Permissions"| D
+    D -->|"Hide SSH access from standard user views Corporate Control: File Permissions, SSH Config Obfuscation"| E
+    D -->|"Blend SSH key access with legitimate user activities Corporate Control: User Account Management, Log Configuration"| E
+    D -->|"Ensure SSH key remains undetected by security tools Corporate Control: Endpoint Security, Antivirus, EDR Systems"| E
+    D -->|"Monitor SSH access logs for stealth Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use AppCrash Event for Malicious Execution]
+    B[Create Event Subscription for AppCrash Trigger]
+    C[Ensure Process Persistence from AppCrash Event]
+    D[Conceal AppCrash Event and Trigger Mechanism]
+    E[Persistence Achieved via AppCrash Event Trigger]
+
+    A -->|"Gain administrative rights to configure system crash handling Corporate Control: Admin Rights, Windows Error Reporting (WER)"| B
+    A -->|"Identify AppCrash events that can trigger malicious execution Corporate Control: Event Viewer, WER Logs"| B
+    A -->|"Prepare malicious script or executable for execution on AppCrash event Corporate Control: PowerShell, Script Management"| B
+    A -->|"Monitor system logs for AppCrash events triggering code execution Corporate Control: Event Log Management, SIEM Tools"| B
+    B -->|"Create event subscription for AppCrash event to execute malicious code Corporate Control: Event Log Subscription Tools"| C
+    B -->|"Set event subscription to trigger process when application crashes Corporate Control: Windows Error Reporting Configuration"| C
+    B -->|"Ensure event-triggered process persists after each system restart Corporate Control: Task Scheduler, Event Log Configuration"| C
+    B -->|"Apply obfuscation techniques to prevent detection of AppCrash event trigger Corporate Control: File System Evasion, Log Obfuscation"| C
+    C -->|"Monitor the event-triggered process for execution stability Corporate Control: Windows Event Logs, SIEM Tools"| D
+    C -->|"Ensure process runs every time the application crashes Corporate Control: Task Scheduler Integration, System Logs"| D
+    C -->|"Validate persistence of the triggered task even after system reboot Corporate Control: Windows Startup Configuration"| D
+    D -->|"Hide AppCrash event trigger from normal system log viewing Corporate Control: Event Viewer, Windows Logs"| E
+    D -->|"Blend malicious AppCrash event with legitimate system crash logs Corporate Control: Windows Error Reporting, Event Management Tools"| E
+    D -->|"Ensure event subscription remains undetected by security solutions Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor for anomalies in event-based task executions Corporate Control: SIEM, SOC Monitoring"| E

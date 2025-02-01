@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Create Event-Triggered Services]
+    B[Create Persistent Service Triggered by Specific Event]
+    C[Monitor Service Persistence After Event Trigger]
+    D[Conceal Service Modifications to Avoid Detection]
+    E[Persistence Achieved via Event-Triggered Service]
+
+    A -->|"Gain administrative access to system services Corporate Control: Windows Administrator Rights"| B
+    A -->|"Identify system events to trigger service creation Corporate Control: Event Viewer, Windows Task Scheduler"| B
+    A -->|"Prepare malicious service to run upon event trigger Corporate Control: Windows Service Management, PowerShell Scripting"| B
+    A -->|"Monitor system for suitable event triggers Corporate Control: Event Logs, Task Scheduler Monitoring"| B
+    B -->|"Create new service with a trigger event in system logs Corporate Control: Windows Service Manager, Event Subscription"| C
+    B -->|"Set the service to restart automatically based on specific events Corporate Control: Service Configuration, Task Scheduler Policies"| C
+    B -->|"Ensure malicious service persists after every system reboot Corporate Control: System Boot Management, Task Scheduler Settings"| C
+    B -->|"Apply obfuscation techniques to avoid detection by admins Corporate Control: Service Binary Hiding, Log Management"| C
+    C -->|"Monitor triggered event execution to ensure process continuity Corporate Control: Service Monitoring, Event Logs"| D
+    C -->|"Ensure malicious service runs after every event trigger Corporate Control: Windows Event Log Settings"| D
+    C -->|"Reapply service in case of interruptions Corporate Control: Service Recovery Tools, Task Scheduler Settings"| D
+    D -->|"Hide event-triggered service from standard task management tools Corporate Control: Task Scheduler, System Service Management"| E
+    D -->|"Blend event-triggered service with normal system services Corporate Control: Windows Service Management, Event Logs"| E
+    D -->|"Ensure the service remains undetectable by endpoint detection Corporate Control: Antivirus Evasion, EDR Tools"| E
+    D -->|"Continuously monitor service logs to ensure uninterrupted access Corporate Control: SIEM Systems, Event Viewer"| E

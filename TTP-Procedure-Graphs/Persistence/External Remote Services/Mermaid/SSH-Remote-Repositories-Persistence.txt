@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Set Up SSH for Persistent Remote Access]
+    B[Configure SSH for Remote Access via Repositories]
+    C[Ensure Persistence with SSH Access]
+    D[Conceal SSH Access]
+    E[Persistence Achieved via SSH Access]
+
+    A -->|"Gain administrative access to SSH configuration Corporate Control: SSH Daemon Configuration, Admin Rights"| B
+    A -->|"Configure SSH service to allow remote access Corporate Control: SSH Service Management, Configuration Tools"| B
+    A -->|"Create SSH key pairs for access authentication Corporate Control: SSH Key Pair Management"| B
+    A -->|"Monitor SSH access logs for successful configuration Corporate Control: SSH Log Files, Event Viewer"| B
+    B -->|"Ensure SSH access persists by configuring remote repositories Corporate Control: GitHub, GitLab, SSH Server Configuration"| C
+    B -->|"Add SSH key to remote repository for continuous access Corporate Control: Remote Repository Configuration"| C
+    B -->|"Set up persistent remote repository pull or push tasks Corporate Control: Git Configuration, SSH Key Management"| C
+    B -->|"Apply obfuscation techniques to SSH access logs Corporate Control: Log Management, SSH Log Obfuscation"| C
+    C -->|"Monitor SSH activity for reliability Corporate Control: SSH Monitoring Tools, Event Logs"| D
+    C -->|"Ensure SSH key remains valid across reboots Corporate Control: System Boot Settings, Key Management"| D
+    C -->|"Reapply SSH key configurations if interrupted Corporate Control: SSH Configuration, Key Pair Management"| D
+    D -->|"Hide SSH access activity from standard system monitoring tools Corporate Control: Task Manager, Log Obfuscation"| E
+    D -->|"Blend SSH access with normal system operations Corporate Control: Process Management, Network Traffic Analysis"| E
+    D -->|"Ensure undetectable SSH access from endpoint security tools Corporate Control: Antivirus, EDR Solutions, SIEM Tools"| E
+    D -->|"Monitor SSH session for uninterrupted access Corporate Control: Security Operations Center (SOC), SIEM Monitoring"| E

@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Use Event Subscription for Malicious Code Injection]
+    B[Create Event Subscription to Inject Code]
+    C[Monitor Event-Triggered Process Persistence]
+    D[Conceal Event Subscription for Stealth]
+    E[Persistence Achieved via Event Subscription]
+
+    A -->|"Gain administrative access to configure event subscriptions Corporate Control: Windows Admin Rights"| B
+    A -->|"Identify system events capable of triggering code execution Corporate Control: Event Viewer, Event Log Management"| B
+    A -->|"Prepare malicious code or executable to be triggered by event Corporate Control: PowerShell, Script Editor"| B
+    A -->|"Monitor for suitable event triggers to execute code Corporate Control: Event Log Management, SIEM Tools"| B
+    B -->|"Create event subscription to inject malicious code Corporate Control: Event Log Management"| C
+    B -->|"Ensure malicious code runs every time the event is triggered Corporate Control: Task Scheduler Integration"| C
+    B -->|"Ensure persistence across system reboots Corporate Control: Windows Event Log Settings"| C
+    B -->|"Apply obfuscation techniques to avoid detection Corporate Control: Script Obfuscation, Event Log Evasion"| C
+    C -->|"Monitor event-triggered code execution for stability Corporate Control: Event Viewer, SIEM Systems"| D
+    C -->|"Ensure persistence even after Windows updates Corporate Control: Windows Update Settings, Event Logs"| D
+    D -->|"Conceal event subscription from user access Corporate Control: Event Log Directory Permissions"| E
+    D -->|"Blend malicious event activity with normal system tasks Corporate Control: Event Log Configuration"| E
+    D -->|"Ensure event subscription remains undetectable by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor for changes in event logs Corporate Control: Security Monitoring Tools"| E

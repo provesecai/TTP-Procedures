@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AppCrashEventPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use AppCrash Event for Malicious Execution</data>
+</node>
+<node id="B">
+<data key="label">Create Event Subscription for AppCrash Trigger</data>
+</node>
+<node id="C">
+<data key="label">Ensure Process Persistence from AppCrash Event</data>
+</node>
+<node id="D">
+<data key="label">Conceal AppCrash Event and Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via AppCrash Event Trigger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to configure system crash handling Corporate Control: Admin Rights, Windows Error Reporting (WER)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify AppCrash events that can trigger malicious execution Corporate Control: Event Viewer, WER Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious script or executable for execution on AppCrash event Corporate Control: PowerShell, Script Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for AppCrash events triggering code execution Corporate Control: Event Log Management, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create event subscription for AppCrash event to execute malicious code Corporate Control: Event Log Subscription Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set event subscription to trigger process when application crashes Corporate Control: Windows Error Reporting Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure event-triggered process persists after each system restart Corporate Control: Task Scheduler, Event Log Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to prevent detection of AppCrash event trigger Corporate Control: File System Evasion, Log Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor the event-triggered process for execution stability Corporate Control: Windows Event Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process runs every time the application crashes Corporate Control: Task Scheduler Integration, System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate persistence of the triggered task even after system reboot Corporate Control: Windows Startup Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide AppCrash event trigger from normal system log viewing Corporate Control: Event Viewer, Windows Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious AppCrash event with legitimate system crash logs Corporate Control: Windows Error Reporting, Event Management Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure event subscription remains undetected by security solutions Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in event-based task executions Corporate Control: SIEM, SOC Monitoring</data>
+</edge>
+</graph>
+</graphml>

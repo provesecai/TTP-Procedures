@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="FileChangeEventsPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use File Change Events for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create File System Event to Trigger Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure File System Event-Triggered Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal File System Event Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via File System Event Triggered Execution</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to configure file system events Corporate Control: File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify file system events (e.g., file creation, modification) that can trigger execution Corporate Control: Windows File Explorer, File System Monitoring Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute on file system event trigger Corporate Control: Scripting Tools, File Management Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for file system events that trigger malicious execution Corporate Control: File Monitoring Software, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create file system event to trigger malicious process on file changes Corporate Control: File Event Subscription Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up event to execute process when a file is modified, created, or deleted Corporate Control: Task Scheduler, Event Log Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by configuring event trigger to run on reboot Corporate Control: Windows Startup Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide the event trigger Corporate Control: File System Attributes, Event Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor file system event execution to ensure persistence Corporate Control: File Integrity Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process runs every time the specific event is triggered Corporate Control: Event Log Configuration, Task Scheduling</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence by modifying file event rules if interrupted Corporate Control: File Monitoring Tools, Event Trigger Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide event-triggered process from file system monitoring tools Corporate Control: File System Monitoring, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend file system event activities with legitimate file operations Corporate Control: File Audit Logging, Task Scheduler Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence by security solutions Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor file system changes for abnormal activities Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

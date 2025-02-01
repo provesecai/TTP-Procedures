@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RDPBackdoorAccessPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Establish Persistent RDP Access</data>
+</node>
+<node id="B">
+<data key="label">Configure RDP for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent RDP Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal RDP Access and Activities</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RDP Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to configure RDP settings Corporate Control: Admin Rights, RDP Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enable RDP on the system for remote management Corporate Control: RDP Service Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure Windows Firewall to allow RDP traffic Corporate Control: Windows Firewall Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create new administrator account for RDP access Corporate Control: User Account Management, Active Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure RDP session persists across reboots Corporate Control: RDP Auto-Start Configuration, Group Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up RDP to auto-reconnect if session is lost Corporate Control: RDP Client Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply static IP and port forwarding to bypass network restrictions Corporate Control: Router/Firewall Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor RDP logs for access attempts Corporate Control: Windows Event Logs, RDP Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor RDP session for stability Corporate Control: Event Viewer, Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure that RDP access is re-established after reboots Corporate Control: System Boot Settings, Group Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply RDP configurations if disrupted Corporate Control: RDP Settings, User Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide RDP session activity from user interface Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal RDP access and session logs Corporate Control: Security Monitoring Tools, Windows Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure RDP session remains undetected by security solutions Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor RDP connections for uninterrupted access Corporate Control: SIEM Systems, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

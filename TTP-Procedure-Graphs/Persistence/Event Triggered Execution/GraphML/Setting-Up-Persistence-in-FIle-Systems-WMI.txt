@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SetPersistenceInFileSystemsWMI" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use WMI for File System Event Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create WMI Event Subscription for File Change</data>
+</node>
+<node id="C">
+<data key="label">Ensure File System Event Persistence Through WMI</data>
+</node>
+<node id="D">
+<data key="label">Conceal WMI Event Trigger and File Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WMI File Event</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to configure WMI Corporate Control: WMI Permissions, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify relevant WMI events for file changes Corporate Control: WMI Query Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute upon file change event Corporate Control: Script Management, File Access Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor WMI logs for file event triggers Corporate Control: WMI Event Viewer, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create WMI event subscription for file changes Corporate Control: WMI Event Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set file system event to execute malicious code on change Corporate Control: Windows Event Trigger, WMI</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure WMI event persists across system reboots Corporate Control: System Boot Configuration, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide WMI events Corporate Control: WMI Logs, File Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor event-triggered file changes for execution Corporate Control: WMI Event Logs, File System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure WMI event triggers consistently Corporate Control: WMI Event Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain WMI event-triggered process after reboots Corporate Control: WMI Settings, Event Log Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal WMI event access from standard users Corporate Control: Event Log Permissions, File Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend file system changes with legitimate WMI events Corporate Control: WMI Event Configuration, File Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent access remains undetected Corporate Control: EDR Tools, Antivirus</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor WMI events to ensure undetected persistence Corporate Control: SIEM Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

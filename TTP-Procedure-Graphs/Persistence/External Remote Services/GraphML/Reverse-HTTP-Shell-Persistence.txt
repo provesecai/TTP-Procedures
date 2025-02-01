@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ReverseHTTPShellPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Set Up Reverse Shell via HTTP</data>
+</node>
+<node id="B">
+<data key="label">Configure Reverse Shell to Connect via HTTP</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence of Reverse Shell Connection</data>
+</node>
+<node id="D">
+<data key="label">Conceal Reverse Shell Connection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Reverse Shell</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to web server with elevated privileges Corporate Control: Web Server Admin Rights, HTTP Server Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure HTTP server to allow reverse shell communication Corporate Control: Web Server Configuration, Proxy Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious script or executable to connect back Corporate Control: Script Management, HTTP Requests</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor web server logs for reverse shell connectivity Corporate Control: Web Server Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up reverse shell to connect back to attacker's server Corporate Control: Web Server Management Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure reverse shell reconnects on system reboot Corporate Control: System Boot Configuration, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain access through HTTP-based reverse shell Corporate Control: Network Configuration, HTTP Proxy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide reverse shell traffic Corporate Control: HTTP Logging, Traffic Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor reverse shell connections for consistency Corporate Control: Network Traffic Monitoring, Web Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure reverse shell persists across server restarts Corporate Control: HTTP Server, Auto-Reconnect Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply reverse shell configurations if interrupted Corporate Control: Server Configuration Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal reverse shell traffic from user monitoring tools Corporate Control: Network Traffic Filters, Proxy Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend reverse shell communication with legitimate HTTP traffic Corporate Control: HTTP Request Headers, Web Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure reverse shell remains undetected by network security tools Corporate Control: IDS/IPS Systems, Network Firewalls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor reverse shell activity for undetected access Corporate Control: Network Monitoring Systems, SOC Systems</data>
+</edge>
+</graph>
+</graphml>

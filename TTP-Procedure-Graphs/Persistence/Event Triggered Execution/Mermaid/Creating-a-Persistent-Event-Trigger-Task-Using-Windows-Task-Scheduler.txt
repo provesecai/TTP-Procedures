@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Create Event-Triggered Scheduled Task]
+    B[Create Scheduled Task Triggered by Event]
+    C[Ensure Task Persistence Through Reboots]
+    D[Conceal Scheduled Task and Event Trigger]
+    E[Persistence Achieved via Event-Triggered Scheduled Task]
+
+    A -->|"Gain administrative privileges to access Task Scheduler Corporate Control: Windows Administrator Account"| B
+    A -->|"Identify system events that can trigger tasks Corporate Control: Event Viewer, Windows Logs"| B
+    A -->|"Prepare a malicious task to execute on event trigger Corporate Control: Windows Task Scheduler"| B
+    A -->|"Monitor system logs for event-triggered task opportunities Corporate Control: Security Monitoring, Event Logs"| B
+    B -->|"Create scheduled task triggered by a specific event Corporate Control: Task Scheduler Management Console"| C
+    B -->|"Set task to run after system reboot Corporate Control: Windows Startup Task Settings"| C
+    B -->|"Ensure task persists even after system updates Corporate Control: Task Scheduler Policies"| C
+    B -->|"Apply obfuscation techniques to hide task details Corporate Control: Task Scheduler UI Configuration"| C
+    C -->|"Monitor task execution to ensure stability Corporate Control: Windows Logs, SIEM Systems"| D
+    C -->|"Ensure task triggers on subsequent system reboots Corporate Control: Task Scheduler Integration with Startup"| D
+    C -->|"Maintain the task by verifying its execution Corporate Control: Task Scheduler Logs, System Monitoring"| D
+    D -->|"Hide scheduled task from user interface Corporate Control: Task Scheduler Logs Management"| E
+    D -->|"Blend event-triggered task with legitimate scheduled tasks Corporate Control: System Task Scheduling and Log Review"| E
+    D -->|"Conceal task from monitoring tools Corporate Control: Windows Event Viewer, SIEM Systems, Antivirus Software"| E
+    D -->|"Ensure task is undetectable by endpoint security systems Corporate Control: Antivirus, EDR Tools, Security Operations Center (SOC)"| E

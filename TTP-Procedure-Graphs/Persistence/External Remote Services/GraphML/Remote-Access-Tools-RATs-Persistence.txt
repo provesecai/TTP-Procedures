@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RATForContinuousAccess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Install Remote Access Tool (RAT)</data>
+</node>
+<node id="B">
+<data key="label">Install and Configure RAT for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence Through RAT Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal RAT Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RAT Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to install RAT on target machine Corporate Control: Admin Rights, Software Installation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Download and install RAT tool for remote access Corporate Control: Remote Access Tool, System File Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure RAT to maintain control over target system Corporate Control: RAT Configuration, Persistence Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for successful RAT connection Corporate Control: RAT Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set RAT to run on system startup Corporate Control: Task Scheduler, Auto-Start Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure RAT is accessible remotely Corporate Control: Network Configuration, RAT Client Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply persistence mechanisms to ensure RAT survives reboots Corporate Control: System Boot Configuration, File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure RAT traffic is undetected by security tools Corporate Control: Traffic Obfuscation, Network Security Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor RAT connections for reliability Corporate Control: RAT Logs, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure RAT session remains uninterrupted Corporate Control: Network Configuration, System Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply RAT settings if interrupted Corporate Control: RAT Recovery Settings, OS Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide RAT traffic from security tools Corporate Control: Network Monitoring, IDS/IPS</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend RAT operations with legitimate network activity Corporate Control: Network Traffic Analysis, Web Proxy Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure RAT remains undetected by endpoint detection systems Corporate Control: Endpoint Security, Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor RAT activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PersistentServiceTriggeredByEvents" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Event-Triggered Services</data>
+</node>
+<node id="B">
+<data key="label">Create Persistent Service Triggered by Specific Event</data>
+</node>
+<node id="C">
+<data key="label">Monitor Service Persistence After Event Trigger</data>
+</node>
+<node id="D">
+<data key="label">Conceal Service Modifications to Avoid Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Event-Triggered Service</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to system services Corporate Control: Windows Administrator Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system events to trigger service creation Corporate Control: Event Viewer, Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious service to run upon event trigger Corporate Control: Windows Service Management, PowerShell Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for suitable event triggers Corporate Control: Event Logs, Task Scheduler Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new service with a trigger event in system logs Corporate Control: Windows Service Manager, Event Subscription</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set the service to restart automatically based on specific events Corporate Control: Service Configuration, Task Scheduler Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious service persists after every system reboot Corporate Control: System Boot Management, Task Scheduler Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection by admins Corporate Control: Service Binary Hiding, Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor triggered event execution to ensure process continuity Corporate Control: Service Monitoring, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious service runs after every event trigger Corporate Control: Windows Event Log Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply service in case of interruptions Corporate Control: Service Recovery Tools, Task Scheduler Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide event-triggered service from standard task management tools Corporate Control: Task Scheduler, System Service Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend event-triggered service with normal system services Corporate Control: Windows Service Management, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the service remains undetectable by endpoint detection Corporate Control: Antivirus Evasion, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor service logs to ensure uninterrupted access Corporate Control: SIEM Systems, Event Viewer</data>
+</edge>
+</graph>
+</graphml>

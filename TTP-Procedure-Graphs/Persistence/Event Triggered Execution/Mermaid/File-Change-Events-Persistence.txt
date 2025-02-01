@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use File Change Events for Persistence]
+    B[Create File System Event to Trigger Malicious Code]
+    C[Ensure File System Event-Triggered Process Persistence]
+    D[Conceal File System Event Trigger Mechanism]
+    E[Persistence Achieved via File System Event Triggered Execution]
+
+    A -->|"Gain administrative rights to configure file system events Corporate Control: File System Permissions"| B
+    A -->|"Identify file system events (e.g., file creation, modification) that can trigger execution Corporate Control: Windows File Explorer, File System Monitoring Tools"| B
+    A -->|"Prepare malicious code to execute on file system event trigger Corporate Control: Scripting Tools, File Management Tools"| B
+    A -->|"Monitor for file system events that trigger malicious execution Corporate Control: File Monitoring Software, Event Viewer"| B
+    B -->|"Create file system event to trigger malicious process on file changes Corporate Control: File Event Subscription Management"| C
+    B -->|"Set up event to execute process when a file is modified, created, or deleted Corporate Control: Task Scheduler, Event Log Integration"| C
+    B -->|"Ensure persistence by configuring event trigger to run on reboot Corporate Control: Windows Startup Settings, Task Scheduler"| C
+    B -->|"Apply obfuscation techniques to hide the event trigger Corporate Control: File System Attributes, Event Log Management"| C
+    C -->|"Monitor file system event execution to ensure persistence Corporate Control: File Integrity Monitoring Tools"| D
+    C -->|"Ensure process runs every time the specific event is triggered Corporate Control: Event Log Configuration, Task Scheduling"| D
+    C -->|"Maintain persistence by modifying file event rules if interrupted Corporate Control: File Monitoring Tools, Event Trigger Management"| D
+    D -->|"Hide event-triggered process from file system monitoring tools Corporate Control: File System Monitoring, Event Viewer"| E
+    D -->|"Blend file system event activities with legitimate file operations Corporate Control: File Audit Logging, Task Scheduler Logs"| E
+    D -->|"Ensure undetectable persistence by security solutions Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor file system changes for abnormal activities Corporate Control: Security Operations Center (SOC)"| E

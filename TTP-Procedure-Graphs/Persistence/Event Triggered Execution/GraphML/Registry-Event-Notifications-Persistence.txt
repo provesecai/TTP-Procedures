@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RegistryEventNotificationsPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use Registry Event Notifications for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Create Registry Event Subscription for Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence via Registry Event Trigger</data>
+</node>
+<node id="D">
+<data key="label">Conceal Registry Event Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Registry Event Trigger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify Windows Registry Corporate Control: Registry Permissions, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify registry keys that can trigger events Corporate Control: Windows Registry Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to run when registry key is modified Corporate Control: PowerShell, Script Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system registry for modification events Corporate Control: Windows Event Logs, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create registry event to execute malicious code on change Corporate Control: Windows Event Logs, Registry Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set registry event to trigger malicious task Corporate Control: Registry Settings, Event Trigger Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs after registry modification event Corporate Control: Task Scheduler, Event Log Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide registry event Corporate Control: Registry Monitoring Tools, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor event execution to ensure continuity Corporate Control: Windows Event Logs, SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure event-triggered task persists after reboots Corporate Control: System Startup Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply registry event if interrupted Corporate Control: Registry Key Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal registry event modifications from normal monitoring Corporate Control: Event Log, Registry Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend registry event tasks with legitimate events Corporate Control: Event Log Configuration, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence remains undetected by security solutions Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor registry access for undetected persistence Corporate Control: SIEM, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

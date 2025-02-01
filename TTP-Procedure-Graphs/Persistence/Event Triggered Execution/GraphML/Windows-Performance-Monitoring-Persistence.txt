@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsPerformanceMonitoringPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use Windows Performance Monitoring for Execution</data>
+</node>
+<node id="B">
+<data key="label">Create Trigger Using Performance Monitor to Execute Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Process Persistence Through Performance Monitor</data>
+</node>
+<node id="D">
+<data key="label">Conceal Performance Monitoring Trigger and Process</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Performance Monitor Execution Trigger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to configure performance monitoring Corporate Control: Admin Rights, Performance Monitoring Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify performance metrics that can trigger malicious execution Corporate Control: Windows Performance Monitor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute based on performance data Corporate Control: Performance Metrics, PowerShell Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor performance logs to identify trigger points Corporate Control: Event Viewer, Performance Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create performance monitoring rule to execute malicious process Corporate Control: Performance Monitor Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up process to be triggered when performance thresholds are met Corporate Control: Windows Event Triggers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious process persists after every performance trigger Corporate Control: Task Scheduler, Event Log Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection Corporate Control: Script Obfuscation, Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor performance triggers to ensure continuous process execution Corporate Control: Windows Performance Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure event-triggered execution is undetected by security tools Corporate Control: EDR, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence by checking for abnormal performance triggers Corporate Control: Event Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal performance trigger from regular monitoring tools Corporate Control: System Monitoring Tools, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious execution with legitimate system performance events Corporate Control: Performance Data Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure malicious process remains hidden from automated detection tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor event-triggered execution for ongoing persistence Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

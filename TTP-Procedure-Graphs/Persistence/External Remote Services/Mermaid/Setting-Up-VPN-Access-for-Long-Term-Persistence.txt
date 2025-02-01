@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Establish Persistent VPN Access]
+    B[Configure VPN for Remote Access]
+    C[Ensure Persistent VPN Connection]
+    D[Conceal VPN Access]
+    E[Persistence Achieved via VPN Access]
+
+    A -->|"Gain administrative access to VPN server settings Corporate Control: Admin Rights, VPN Configuration"| B
+    A -->|"Install and configure VPN server for persistent access Corporate Control: VPN Server Management, OpenVPN"| B
+    A -->|"Generate and configure VPN credentials for remote access Corporate Control: VPN User Configuration"| B
+    A -->|"Monitor VPN logs for successful configuration Corporate Control: VPN Service Logs, SIEM Tools"| B
+    B -->|"Set VPN to auto-connect on system reboot Corporate Control: VPN Client Configuration, System Startup Settings"| C
+    B -->|"Ensure VPN credentials are securely stored for future access Corporate Control: VPN Credential Management"| C
+    B -->|"Enable continuous connection retries for VPN persistence Corporate Control: VPN Client Configuration"| C
+    B -->|"Verify that VPN service remains active after updates Corporate Control: VPN Client and Server Integration"| C
+    C -->|"Monitor VPN connection to ensure continuous remote access Corporate Control: VPN Logs, Connection Monitoring Tools"| D
+    C -->|"Ensure VPN connection is not disrupted by system reboots Corporate Control: VPN Service Settings"| D
+    C -->|"Reapply VPN connection configurations if interrupted Corporate Control: VPN Service Recovery Settings"| D
+    D -->|"Obfuscate VPN connection logs to avoid detection Corporate Control: VPN Client Logs, Event Viewer Configuration"| E
+    D -->|"Ensure VPN access is undetectable by system security tools Corporate Control: Antivirus, EDR Tools"| E
+    D -->|"Hide VPN connection from administrative view Corporate Control: Network Access Controls, VPN Logs"| E
+    D -->|"Continuously monitor VPN connection for stability Corporate Control: Security Operations Monitoring"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ActiveDirectoryGroupPolicyEventPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use AD Group Policy for Event Triggered Execution</data>
+</node>
+<node id="B">
+<data key="label">Modify Group Policy to Create Event-Triggered Task</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Persistence Across Reboots</data>
+</node>
+<node id="D">
+<data key="label">Conceal Event-Triggered Task Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Group Policy Triggered Task</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to Group Policy Editor Corporate Control: Windows Administrator Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system events that can trigger tasks via AD Group Policy Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious task to be triggered via AD Group Policy Corporate Control: Windows Group Policy Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for event triggers in AD logs Corporate Control: Active Directory Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create event-triggered task within Group Policy Corporate Control: Group Policy Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to execute on specific event in AD Corporate Control: Event Log Integration with GPO</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task persists even after reboot Corporate Control: System Startup Configuration via GPO</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide task in event logs Corporate Control: Group Policy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution after event trigger Corporate Control: SIEM Tools, AD Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task triggers on subsequent event occurrences Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain task by validating it after system updates Corporate Control: GPO Update Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide event-triggered task from normal monitoring Corporate Control: Event Viewer, AD Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend event-triggered task with normal system events Corporate Control: Event Log Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task is concealed from security tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task continuity for uninterrupted access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

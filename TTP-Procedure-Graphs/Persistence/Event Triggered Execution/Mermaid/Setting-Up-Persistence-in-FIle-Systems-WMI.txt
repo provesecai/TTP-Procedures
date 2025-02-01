@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use File System Events for Persistence]
+    B[Create WMI Event Subscription for File System Changes]
+    C[Monitor and Maintain Persistence Through File Events]
+    D[Conceal WMI Event Subscription and File System Modifications]
+    E[Persistence Achieved via File System Events with WMI]
+
+    A -->|"Gain administrative access to WMI Corporate Control: WMI Permissions"| B
+    A -->|"Identify system file events that can trigger malicious code Corporate Control: WMI Scripting Interface"| B
+    A -->|"Prepare malicious executable or script for event trigger Corporate Control: File System Management Tools"| B
+    A -->|"Monitor WMI event logs for potential malicious execution Corporate Control: WMI Event Logs, SIEM Tools"| B
+    B -->|"Create WMI event subscription to trigger malicious code on file changes Corporate Control: WMI Event Subscription"| C
+    B -->|"Ensure malicious code runs on every relevant file change Corporate Control: WMI Event Management"| C
+    B -->|"Set event subscription to persist across system reboots Corporate Control: WMI Event Log Configuration"| C
+    B -->|"Apply obfuscation techniques to hide the event subscription Corporate Control: WMI Configuration Management"| C
+    C -->|"Monitor WMI logs to ensure continuous file system event monitoring Corporate Control: WMI Logs, SIEM Systems"| D
+    C -->|"Ensure the event subscription remains active after updates Corporate Control: WMI Event Management"| D
+    C -->|"Validate execution of malicious process triggered by file system changes Corporate Control: Windows Event Management"| D
+    D -->|"Hide WMI event subscription from standard user access Corporate Control: WMI Directory Permissions"| E
+    D -->|"Blend malicious event actions with legitimate system events Corporate Control: WMI Event Logs, Windows Logs"| E
+    D -->|"Ensure event subscription remains undetectable by security tools Corporate Control: Antivirus, EDR Tools"| E
+    D -->|"Monitor file system for abnormal activity Corporate Control: File Integrity Monitoring Tools"| E

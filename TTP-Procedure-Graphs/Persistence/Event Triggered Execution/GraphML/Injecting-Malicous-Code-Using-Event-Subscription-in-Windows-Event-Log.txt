@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EventSubscriptionMaliciousCode" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use Event Subscription for Malicious Code Injection</data>
+</node>
+<node id="B">
+<data key="label">Create Event Subscription to Inject Code</data>
+</node>
+<node id="C">
+<data key="label">Monitor Event-Triggered Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Event Subscription for Stealth</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Event Subscription</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to configure event subscriptions Corporate Control: Windows Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system events capable of triggering code execution Corporate Control: Event Viewer, Event Log Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code or executable to be triggered by event Corporate Control: PowerShell, Script Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for suitable event triggers to execute code Corporate Control: Event Log Management, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create event subscription to inject malicious code Corporate Control: Event Log Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code runs every time the event is triggered Corporate Control: Task Scheduler Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence across system reboots Corporate Control: Windows Event Log Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to avoid detection Corporate Control: Script Obfuscation, Event Log Evasion</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor event-triggered code execution for stability Corporate Control: Event Viewer, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence even after Windows updates Corporate Control: Windows Update Settings, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal event subscription from user access Corporate Control: Event Log Directory Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious event activity with normal system tasks Corporate Control: Event Log Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure event subscription remains undetectable by security tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for changes in event logs Corporate Control: Security Monitoring Tools</data>
+</edge>
+</graph>
+</graphml>

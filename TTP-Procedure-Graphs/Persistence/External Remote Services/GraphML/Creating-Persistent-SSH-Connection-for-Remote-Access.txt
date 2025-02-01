@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PersistentSSHConnectionForAccess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Establish Persistent SSH Connection</data>
+</node>
+<node id="B">
+<data key="label">Configure SSH for Remote Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent SSH Connection</data>
+</node>
+<node id="D">
+<data key="label">Conceal SSH Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSH Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify SSH configuration Corporate Control: SSH Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Install OpenSSH Server if not already present Corporate Control: SSH Daemon Installation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure SSH to allow passwordless authentication Corporate Control: SSH Key Pair Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SSH logs for successful configuration Corporate Control: Event Logs, SSH Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enable remote login on SSH with appropriate privileges Corporate Control: SSH Configuration File, User Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create backdoor user with SSH key for persistence Corporate Control: User Account Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure system to allow SSH access at boot Corporate Control: System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH key pair is added to authorized keys file Corporate Control: File Management, SSH Keys</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SSH connection for integrity and continuity Corporate Control: SSH Logs, System Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure remote access works after reboots Corporate Control: SSH Service Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply configuration if interrupted Corporate Control: SSH Configuration, File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SSH configuration changes from normal view Corporate Control: SSH Logs Obfuscation, File Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide SSH access from common system monitoring tools Corporate Control: File Permissions, SSH Service Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetected SSH access from endpoint security Corporate Control: Endpoint Protection, Antivirus Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Continuously monitor SSH service for uninterrupted access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreatePersistentTaskUsingScheduler" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Event-Triggered Scheduled Task</data>
+</node>
+<node id="B">
+<data key="label">Create Scheduled Task Triggered by Event</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Persistence Through Reboots</data>
+</node>
+<node id="D">
+<data key="label">Conceal Scheduled Task and Event Trigger</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Event-Triggered Scheduled Task</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to access Task Scheduler Corporate Control: Windows Administrator Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system events that can trigger tasks Corporate Control: Event Viewer, Windows Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare a malicious task to execute on event trigger Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for event-triggered task opportunities Corporate Control: Security Monitoring, Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create scheduled task triggered by a specific event Corporate Control: Task Scheduler Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run after system reboot Corporate Control: Windows Startup Task Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task persists even after system updates Corporate Control: Task Scheduler Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide task details Corporate Control: Task Scheduler UI Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution to ensure stability Corporate Control: Windows Logs, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task triggers on subsequent system reboots Corporate Control: Task Scheduler Integration with Startup</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain the task by verifying its execution Corporate Control: Task Scheduler Logs, System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide scheduled task from user interface Corporate Control: Task Scheduler Logs Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend event-triggered task with legitimate scheduled tasks Corporate Control: System Task Scheduling and Log Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal task from monitoring tools Corporate Control: Windows Event Viewer, SIEM Systems, Antivirus Software</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task is undetectable by endpoint security systems Corporate Control: Antivirus, EDR Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

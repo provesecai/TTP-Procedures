@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Set Up Reverse Shell via HTTP]
+    B[Configure Reverse Shell to Connect via HTTP]
+    C[Ensure Persistence of Reverse Shell Connection]
+    D[Conceal Reverse Shell Connection]
+    E[Persistence Achieved via Reverse Shell]
+
+    A -->|"Gain access to web server with elevated privileges Corporate Control: Web Server Admin Rights, HTTP Server Management"| B
+    A -->|"Configure HTTP server to allow reverse shell communication Corporate Control: Web Server Configuration, Proxy Settings"| B
+    A -->|"Prepare malicious script or executable to connect back Corporate Control: Script Management, HTTP Requests"| B
+    A -->|"Monitor web server logs for reverse shell connectivity Corporate Control: Web Server Logs, Event Viewer"| B
+    B -->|"Set up reverse shell to connect back to attacker's server Corporate Control: Web Server Management Tools"| C
+    B -->|"Ensure reverse shell reconnects on system reboot Corporate Control: System Boot Configuration, Task Scheduler"| C
+    B -->|"Maintain access through HTTP-based reverse shell Corporate Control: Network Configuration, HTTP Proxy"| C
+    B -->|"Apply obfuscation techniques to hide reverse shell traffic Corporate Control: HTTP Logging, Traffic Obfuscation"| C
+    C -->|"Monitor reverse shell connections for consistency Corporate Control: Network Traffic Monitoring, Web Logs"| D
+    C -->|"Ensure reverse shell persists across server restarts Corporate Control: HTTP Server, Auto-Reconnect Settings"| D
+    C -->|"Reapply reverse shell configurations if interrupted Corporate Control: Server Configuration Files"| D
+    D -->|"Conceal reverse shell traffic from user monitoring tools Corporate Control: Network Traffic Filters, Proxy Logs"| E
+    D -->|"Blend reverse shell communication with legitimate HTTP traffic Corporate Control: HTTP Request Headers, Web Application Logs"| E
+    D -->|"Ensure reverse shell remains undetected by network security tools Corporate Control: IDS/IPS Systems, Network Firewalls"| E
+    D -->|"Monitor reverse shell activity for undetected access Corporate Control: Network Monitoring Systems, SOC Systems"| E

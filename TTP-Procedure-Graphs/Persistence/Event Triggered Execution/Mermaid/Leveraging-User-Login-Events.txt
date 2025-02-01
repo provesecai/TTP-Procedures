@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Leverage User Login Events]
+    B[Create Task Triggered by User Login Event]
+    C[Ensure Process Persistence During Logins]
+    D[Conceal Login Triggered Event Process]
+    E[Persistence Achieved via Login Event Trigger]
+
+    A -->|"Gain administrative privileges to modify system settings Corporate Control: Admin Rights (Windows User Account Control)"| B
+    A -->|"Identify login events that can trigger malicious code Corporate Control: Event Logs, User Logon Auditing"| B
+    A -->|"Prepare malicious script or executable to be triggered Corporate Control: Script Management Tools, PowerShell Scripting"| B
+    A -->|"Monitor Windows Event Logs for login event triggers Corporate Control: Windows Event Viewer, Security Auditing"| B
+    B -->|"Create task or script to run upon user login event Corporate Control: Task Scheduler Management Console, Logon Event Monitoring"| C
+    B -->|"Set process to run with the required privileges during login Corporate Control: Windows User Account Control (UAC)"| C
+    B -->|"Ensure process starts on every login event Corporate Control: Windows Task Scheduler, User Logon Events"| C
+    B -->|"Apply obfuscation techniques to ensure undetectability Corporate Control: Script Encryption, Obfuscation Tools"| C
+    C -->|"Monitor user login process to ensure continuous execution Corporate Control: User Profile Management, Task Scheduling"| D
+    C -->|"Ensure process runs after every login session Corporate Control: System Boot Configuration, Task Scheduler Integration"| D
+    C -->|"Maintain persistence by verifying that process runs with login Corporate Control: Logon Scripts, User Configuration Management"| D
+    D -->|"Hide login-triggered malicious activity from standard process monitoring tools Corporate Control: Event Logs, Task Manager, Anti-malware"| E
+    D -->|"Blend malicious login event task with standard logon actions Corporate Control: User Activity Logs, Windows Admin Tools"| E
+    D -->|"Ensure task is concealed from AV/EDR detections Corporate Control: Antivirus Evasion, Endpoint Detection Systems (EDR)"| E
+    D -->|"Monitor for changes in user logon behavior Corporate Control: Security Operations Center (SOC), Windows Event Viewer"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SSHRemoteRepositoriesPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Set Up SSH for Persistent Remote Access</data>
+</node>
+<node id="B">
+<data key="label">Configure SSH for Remote Access via Repositories</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence with SSH Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal SSH Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSH Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to SSH configuration Corporate Control: SSH Daemon Configuration, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure SSH service to allow remote access Corporate Control: SSH Service Management, Configuration Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create SSH key pairs for access authentication Corporate Control: SSH Key Pair Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SSH access logs for successful configuration Corporate Control: SSH Log Files, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH access persists by configuring remote repositories Corporate Control: GitHub, GitLab, SSH Server Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Add SSH key to remote repository for continuous access Corporate Control: Remote Repository Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up persistent remote repository pull or push tasks Corporate Control: Git Configuration, SSH Key Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to SSH access logs Corporate Control: Log Management, SSH Log Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SSH activity for reliability Corporate Control: SSH Monitoring Tools, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SSH key remains valid across reboots Corporate Control: System Boot Settings, Key Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply SSH key configurations if interrupted Corporate Control: SSH Configuration, Key Pair Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide SSH access activity from standard system monitoring tools Corporate Control: Task Manager, Log Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend SSH access with normal system operations Corporate Control: Process Management, Network Traffic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable SSH access from endpoint security tools Corporate Control: Antivirus, EDR Solutions, SIEM Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor SSH session for uninterrupted access Corporate Control: Security Operations Center (SOC), SIEM Monitoring</data>
+</edge>
+</graph>
+</graphml>

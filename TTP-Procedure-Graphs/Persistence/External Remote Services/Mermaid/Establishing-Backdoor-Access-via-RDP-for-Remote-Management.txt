@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Establish Persistent RDP Access]
+    B[Configure RDP for Remote Access]
+    C[Ensure Persistent RDP Access]
+    D[Conceal RDP Access and Activities]
+    E[Persistence Achieved via RDP Access]
+
+    A -->|"Gain administrative rights to configure RDP settings Corporate Control: Admin Rights, RDP Configuration"| B
+    A -->|"Enable RDP on the system for remote management Corporate Control: RDP Service Settings"| B
+    A -->|"Configure Windows Firewall to allow RDP traffic Corporate Control: Windows Firewall Management"| B
+    A -->|"Create new administrator account for RDP access Corporate Control: User Account Management, Active Directory"| B
+    B -->|"Ensure RDP session persists across reboots Corporate Control: RDP Auto-Start Configuration, Group Policies"| C
+    B -->|"Set up RDP to auto-reconnect if session is lost Corporate Control: RDP Client Configuration"| C
+    B -->|"Apply static IP and port forwarding to bypass network restrictions Corporate Control: Router/Firewall Configuration"| C
+    B -->|"Monitor RDP logs for access attempts Corporate Control: Windows Event Logs, RDP Logs"| C
+    C -->|"Monitor RDP session for stability Corporate Control: Event Viewer, Task Scheduler"| D
+    C -->|"Ensure that RDP access is re-established after reboots Corporate Control: System Boot Settings, Group Policies"| D
+    C -->|"Reapply RDP configurations if disrupted Corporate Control: RDP Settings, User Configuration"| D
+    D -->|"Hide RDP session activity from user interface Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Conceal RDP access and session logs Corporate Control: Security Monitoring Tools, Windows Logs"| E
+    D -->|"Ensure RDP session remains undetected by security solutions Corporate Control: Antivirus, EDR Tools"| E
+    D -->|"Continuously monitor RDP connections for uninterrupted access Corporate Control: SIEM Systems, Security Operations Center (SOC)"| E

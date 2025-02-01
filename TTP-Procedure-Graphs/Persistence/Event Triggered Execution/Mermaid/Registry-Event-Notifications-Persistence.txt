@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use Registry Event Notifications]
+    B[Modify Registry to Trigger Malicious Execution]
+    C[Ensure Persistence via Registry Events]
+    D[Conceal Registry Event Trigger Mechanism]
+    E[Persistence Achieved via Registry Event Trigger]
+
+    A -->|"Gain access to Windows Registry with admin privileges Corporate Control: Registry Editor, Admin Rights"| B
+    A -->|"Identify registry keys that can trigger events for malicious execution Corporate Control: Windows Registry Settings"| B
+    A -->|"Prepare malicious code to execute when registry is modified Corporate Control: Windows Scripting Tools"| B
+    A -->|"Monitor registry changes that can be exploited for event triggers Corporate Control: Windows Event Viewer"| B
+    B -->|"Modify registry keys to launch malicious process on event trigger Corporate Control: Registry Settings, Windows Registry"| C
+    B -->|"Set registry key to trigger task upon modification Corporate Control: Windows Event Log Configuration"| C
+    B -->|"Ensure event-triggered process persists across system reboots Corporate Control: Windows Registry Persistence"| C
+    B -->|"Apply obfuscation techniques to hide malicious registry modifications Corporate Control: File System Permissions, Registry Monitoring"| C
+    C -->|"Monitor registry event triggers to ensure continuous execution Corporate Control: Windows Event Logs, SIEM Tools"| D
+    C -->|"Ensure registry-based event triggers are undetected by security software Corporate Control: Antivirus, Endpoint Security Systems"| D
+    C -->|"Maintain persistence through registry event modification Corporate Control: Windows Task Scheduler, Group Policy Management"| D
+    D -->|"Conceal registry modifications from user and admin views Corporate Control: Windows Event Viewer, Registry Monitoring Tools"| E
+    D -->|"Blend registry event triggers with legitimate system events Corporate Control: Windows System Logs"| E
+    D -->|"Ensure the process launched via registry events remains stealthy Corporate Control: Security Operations Monitoring"| E
+    D -->|"Monitor event-triggered process for uninterrupted access Corporate Control: Security Operations Center (SOC)"| E

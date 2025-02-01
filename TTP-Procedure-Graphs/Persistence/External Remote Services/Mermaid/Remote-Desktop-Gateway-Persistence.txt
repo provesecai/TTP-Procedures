@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Use Remote Desktop Gateway (RDG) for Access]
+    B[Configure RDG for Remote Access]
+    C[Ensure RDG Connection Persistence]
+    D[Conceal RDG Access]
+    E[Persistence Achieved via RDG]
+
+    A -->|"Gain administrative rights to configure RDG Corporate Control: RDG Server Configuration, Admin Rights"| B
+    A -->|"Install and configure RDG for external access Corporate Control: RDG Setup, Network Configuration"| B
+    A -->|"Configure RDG to allow automatic connection and session persistence Corporate Control: RDG Settings, Network Configuration"| B
+    A -->|"Monitor RDG service logs for successful setup Corporate Control: RDG Logs, Event Viewer"| B
+    B -->|"Set up user access with elevated privileges for RDG Corporate Control: RDG User Configuration, Active Directory"| C
+    B -->|"Ensure RDG connection persists even after system reboots Corporate Control: RDG Auto-Reconnect Settings, Task Scheduler"| C
+    B -->|"Enable persistent access with minimum downtime Corporate Control: RDG Client Configuration, Network Management"| C
+    B -->|"Obfuscate RDG connection logs from detection Corporate Control: Log Management, Network Traffic Obfuscation"| C
+    C -->|"Monitor RDG connections for continued access Corporate Control: RDG Connection Logs, Network Monitoring Tools"| D
+    C -->|"Ensure RDG session persists after system maintenance Corporate Control: RDG Service Monitoring, Event Logs"| D
+    C -->|"Reapply RDG configurations if interrupted Corporate Control: RDG Configuration, System Recovery"| D
+    D -->|"Hide RDG connection activity from user access Corporate Control: Task Manager, Event Viewer, Network Traffic Monitoring"| E
+    D -->|"Blend RDG activity with normal network traffic Corporate Control: Network Traffic Analysis, VPN Logs"| E
+    D -->|"Ensure RDG access remains undetected by endpoint security tools Corporate Control: Antivirus, EDR Solutions, SIEM Systems"| E
+    D -->|"Monitor RDG activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Tools"| E

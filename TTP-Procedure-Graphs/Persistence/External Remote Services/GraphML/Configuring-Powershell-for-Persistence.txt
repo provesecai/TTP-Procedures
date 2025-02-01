@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ConfigurePowerShellForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Establish Persistent Remote PowerShell Access</data>
+</node>
+<node id="B">
+<data key="label">Configure Remote PowerShell for Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Remote PowerShell Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Remote PowerShell Access</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PowerShell Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify PowerShell remoting settings Corporate Control: Admin Rights, PowerShell Remoting Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enable PowerShell remoting for remote access Corporate Control: PowerShell Remoting Enablement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configure firewall and network settings for remote PowerShell access Corporate Control: Windows Firewall, Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PowerShell execution logs for remote connection opportunities Corporate Control: PowerShell Logs, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set up persistent PowerShell access via remote sessions Corporate Control: PowerShell Remoting, Windows Firewall</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure remote PowerShell access is available after each reboot Corporate Control: Task Scheduler Integration, Group Policy Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure PowerShell access with elevated privileges Corporate Control: User Account Control (UAC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store remote access credentials securely for future use Corporate Control: Windows Credential Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor PowerShell session logs to ensure continuity Corporate Control: Event Logs, PowerShell Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure PowerShell access remains undetected by security solutions Corporate Control: PowerShell Security Policies, EDR Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain remote PowerShell access by verifying availability after reboot Corporate Control: Task Scheduler, PowerShell Profiles</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal remote PowerShell access from administrative view Corporate Control: Event Logs, PowerShell Console</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend PowerShell session activities with legitimate processes Corporate Control: Process Management, PowerShell Script Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure access remains undetectable by security tools Corporate Control: Antivirus, Endpoint Security Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor access for any signs of detection Corporate Control: SIEM Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

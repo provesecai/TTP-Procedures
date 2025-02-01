@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ApplicationCrashesPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Create Task Triggered by Application Crash</data>
+</node>
+<node id="B">
+<data key="label">Create Task Triggered by Application Crash</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Persistence After Application Failure</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task and Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Application Crash Triggered Task</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges to create scheduled tasks Corporate Control: Task Scheduler Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify applications prone to crashes that can trigger tasks Corporate Control: Application Logs, System Monitoring Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious task to run after application crash Corporate Control: Task Scheduler Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for application crashes that trigger tasks Corporate Control: Crash Reports, Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create task to execute malicious code after application failure Corporate Control: Task Scheduler Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run at specific crash points Corporate Control: Windows Event Log Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs after application crashes during the user session Corporate Control: Task Scheduling Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to disguise task Corporate Control: Task Scheduler Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution to ensure stability Corporate Control: Windows Event Viewer, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task triggers on all application crashes Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain task persistence if interrupted Corporate Control: Task Scheduler Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal crash-triggered task from user and system logs Corporate Control: Windows Event Logs, Task Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend crash-triggered task with system maintenance tasks Corporate Control: Task Scheduler UI, System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task is undetectable by security solutions Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task activity to avoid detection Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SystemRebootPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Use System Reboots for Triggered Execution</data>
+</node>
+<node id="B">
+<data key="label">Create Process Triggered by System Reboot</data>
+</node>
+<node id="C">
+<data key="label">Ensure Process Execution After Reboot</data>
+</node>
+<node id="D">
+<data key="label">Conceal Reboot Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Reboot-Triggered Execution</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify system startup settings Corporate Control: Admin Rights, Windows Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare process to be triggered by system reboot Corporate Control: Task Scheduler, Windows Startup Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify processes that need to execute after reboot Corporate Control: System Event Logs, Windows Startup Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system boot to ensure correct task trigger Corporate Control: Task Scheduler, System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create scheduled task or registry key to trigger process on reboot Corporate Control: Task Scheduler Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious process starts with system boot Corporate Control: Windows Startup Process, Registry Key Modification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to execute process without user intervention Corporate Control: Windows Task Scheduling Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide startup task Corporate Control: System File Management, Task Scheduler Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process to ensure it executes on every reboot Corporate Control: System Monitoring Tools, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process persists across system reboots Corporate Control: Windows Registry, System Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide reboot-triggered process from task manager Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend reboot-triggered process with legitimate system startup tasks Corporate Control: System Logs, Admin Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure the process remains undetected by security software Corporate Control: Endpoint Security, Antivirus Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalies in reboot-triggered tasks Corporate Control: SIEM Tools, Windows Event Viewer</data>
+</edge>
+</graph>
+</graphml>

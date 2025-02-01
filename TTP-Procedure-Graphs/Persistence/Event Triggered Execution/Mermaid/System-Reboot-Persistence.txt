@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Use System Reboots for Triggered Execution]
+    B[Create Process Triggered by System Reboot]
+    C[Ensure Process Execution After Reboot]
+    D[Conceal Reboot Trigger Mechanism]
+    E[Persistence Achieved via Reboot-Triggered Execution]
+
+    A -->|"Gain administrative access to modify system startup settings Corporate Control: Admin Rights, Windows Settings"| B
+    A -->|"Prepare process to be triggered by system reboot Corporate Control: Task Scheduler, Windows Startup Configuration"| B
+    A -->|"Identify processes that need to execute after reboot Corporate Control: System Event Logs, Windows Startup Logs"| B
+    A -->|"Monitor system boot to ensure correct task trigger Corporate Control: Task Scheduler, System Logs"| B
+    B -->|"Create scheduled task or registry key to trigger process on reboot Corporate Control: Task Scheduler Management Console"| C
+    B -->|"Ensure malicious process starts with system boot Corporate Control: Windows Startup Process, Registry Key Modification"| C
+    B -->|"Set task to execute process without user intervention Corporate Control: Windows Task Scheduling Policies"| C
+    B -->|"Apply obfuscation techniques to hide startup task Corporate Control: System File Management, Task Scheduler Settings"| C
+    C -->|"Monitor process to ensure it executes on every reboot Corporate Control: System Monitoring Tools, Event Logs"| D
+    C -->|"Ensure process persists across system reboots Corporate Control: Windows Registry, System Configuration"| D
+    D -->|"Hide reboot-triggered process from task manager Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Blend reboot-triggered process with legitimate system startup tasks Corporate Control: System Logs, Admin Tools"| E
+    D -->|"Ensure the process remains undetected by security software Corporate Control: Endpoint Security, Antivirus Tools"| E
+    D -->|"Monitor for anomalies in reboot-triggered tasks Corporate Control: SIEM Tools, Windows Event Viewer"| E
