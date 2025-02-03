@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Inject Malicious Code into AMI]
+    B[Inject Malicious Code into AMI Configuration]
+    C[Ensure AMI Persistence]
+    D[Conceal AMI Injection Activity]
+    E[Persistence Achieved via AMI Malicious Code]
+
+    A -->|"Gain access to modify AMI configuration Corporate Control: Admin Rights, AWS Console"| B
+    A -->|"Select AMI to inject malicious code into Corporate Control: Image Selection, AWS EC2 Console"| B
+    A -->|"Inject malicious code into selected AMI Corporate Control: EC2 Image Management, Script Automation"| B
+    A -->|"Monitor AMI deployment logs for successful injection Corporate Control: CloudTrail, EC2 Logs"| B
+    B -->|"Modify AMI configuration to persist malicious payload Corporate Control: EC2 Instance Settings, Boot Configuration"| C
+    B -->|"Ensure malicious payload executes during instance launch Corporate Control: EC2 Instance Configuration, UserData Settings"| C
+    B -->|"Reapply malicious configuration if AMI is redeployed Corporate Control: AMI Management, Instance Configuration"| C
+    B -->|"Apply obfuscation to conceal injected payload Corporate Control: EC2 Logs, Image Management Console"| C
+    C -->|"Monitor AMI launch logs to ensure code execution Corporate Control: EC2 Logs, AWS CloudWatch"| D
+    C -->|"Ensure persistent access across multiple EC2 instance reboots Corporate Control: EC2 Auto-Scaling, Instance Recovery"| D
+    C -->|"Reapply configuration after instance redeploys Corporate Control: Instance Configuration, EC2 Monitoring"| D
+    D -->|"Conceal malicious code execution from admin views Corporate Control: EC2 Logs, AWS CloudTrail"| E
+    D -->|"Blend malicious code execution with regular EC2 tasks Corporate Control: AWS Monitoring, Instance Metrics"| E
+    D -->|"Ensure persistence remains undetected by security tools Corporate Control: Security Groups, Network Monitoring"| E
+    D -->|"Monitor for signs of AMI injection detection Corporate Control: SIEM, SOC Tools"| E

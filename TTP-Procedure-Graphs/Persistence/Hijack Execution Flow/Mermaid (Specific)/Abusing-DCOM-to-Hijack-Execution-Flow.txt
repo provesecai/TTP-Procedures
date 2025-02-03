@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack DCOM for Persistent Execution]
+    B[Hijack DCOM for Remote Execution]
+    C[Ensure DCOM Execution Persistence]
+    D[Conceal DCOM Activity]
+    E[Persistence Achieved via DCOM Hijack]
+
+    A -->|"Gain administrative access to DCOM configuration Corporate Control: Admin Rights, DCOM Management"| B
+    A -->|"Identify DCOM objects and methods vulnerable to hijacking Corporate Control: DCOM Configuration, Event Viewer"| B
+    A -->|"Prepare malicious payload to execute via DCOM calls Corporate Control: DCOM Configuration, PowerShell Scripting"| B
+    A -->|"Monitor DCOM communication for exploitation opportunities Corporate Control: Event Logs, SIEM Tools"| B
+    B -->|"Hijack DCOM process for remote code execution Corporate Control: DCOM Configuration, Remote Desktop Management"| C
+    B -->|"Set malicious payload to execute during DCOM communication Corporate Control: Task Scheduler, Remote Execution Settings"| C
+    B -->|"Ensure persistence of DCOM hijacking after system reboot Corporate Control: System Boot Settings, Task Scheduler"| C
+    B -->|"Apply obfuscation to DCOM execution logs Corporate Control: Event Log Management, DCOM Monitoring"| C
+    C -->|"Monitor DCOM execution for persistence Corporate Control: Remote Desktop Monitoring, Event Logs"| D
+    C -->|"Ensure hijacked DCOM process survives reboots Corporate Control: Task Scheduler, System Recovery Settings"| D
+    C -->|"Reapply DCOM hijack if interrupted Corporate Control: Remote Process Monitoring, System Configuration"| D
+    D -->|"Hide DCOM hijacking activity from system monitoring tools Corporate Control: Event Logs, DCOM Logs"| E
+    D -->|"Blend DCOM activity with legitimate process execution Corporate Control: Remote Access Logs, Event Viewer"| E
+    D -->|"Ensure DCOM execution remains undetected by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor DCOM hijacking for signs of detection Corporate Control: SIEM Tools, SOC Monitoring"| E

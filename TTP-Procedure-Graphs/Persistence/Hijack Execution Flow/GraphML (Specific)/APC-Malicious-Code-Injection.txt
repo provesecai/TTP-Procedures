@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="APCMaliciousCodeInjectionForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Inject Malicious Code via APC</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code Using APCs</data>
+</node>
+<node id="C">
+<data key="label">Ensure APC Injection Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal APC Injection Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via APC Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to target system with elevated privileges Corporate Control: Admin Rights, Process Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify target process to inject malicious code using APCs Corporate Control: Process Management, Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to be injected into target process Corporate Control: PowerShell, Scripting Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for available APC injection points Corporate Control: Event Viewer, Process Management Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into target process via APC Corporate Control: Memory Injection, Process Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set injected code to execute in response to an APC Corporate Control: Event Logs, System Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence of the injected code across system reboots Corporate Control: Task Scheduler, Process Recovery Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide APC injection Corporate Control: Event Logs, Process Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor injected code to ensure persistence Corporate Control: Task Scheduler, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure process continues to trigger injected code on reboot Corporate Control: System Startup Settings, Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply APC injection if disrupted Corporate Control: Process Management, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide injected code execution from task manager Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious code with legitimate process activity Corporate Control: Process Management, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure injected code is undetectable by security tools Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for any detection of malicious APC behavior Corporate Control: SIEM Systems, SOC Tools</data>
+</edge>
+</graph>
+</graphml>

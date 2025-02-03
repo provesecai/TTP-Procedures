@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Windows Error Reporting for Persistence]
+    B[Modify WER for Event-Triggered Task]
+    C[Ensure WER Task Persistence]
+    D[Conceal WER Event Trigger]
+    E[Persistence Achieved via WER Hijack]
+
+    A -->|"Gain administrative access to modify WER settings Corporate Control: WER Configuration Tools"| B
+    A -->|"Identify specific errors that can trigger malicious code Corporate Control: Event Viewer, WER Logs"| B
+    A -->|"Prepare malicious code to execute upon error occurrence Corporate Control: Script Management, Error Handling"| B
+    A -->|"Monitor WER logs for potential exploitation Corporate Control: WER Logs, System Monitoring"| B
+    B -->|"Modify WER settings to execute malicious code on error Corporate Control: WER Configuration, Task Scheduler"| C
+    B -->|"Set up WER to re-trigger process after system reboot Corporate Control: System Configuration, WER Recovery Settings"| C
+    B -->|"Ensure task is launched on error trigger Corporate Control: Event Subscription, Task Scheduler"| C
+    B -->|"Apply obfuscation techniques to hide WER logs Corporate Control: Log Management, Event Viewer"| C
+    C -->|"Monitor WER task execution for reliability Corporate Control: Event Logs, Task Scheduler Logs"| D
+    C -->|"Ensure process persists even after reboots Corporate Control: Task Scheduler, System Boot Configuration"| D
+    C -->|"Reapply WER configuration after system updates Corporate Control: System Recovery, WER Resetting"| D
+    D -->|"Hide WER event trigger from admin view Corporate Control: Event Viewer, Log Obfuscation"| E
+    D -->|"Blend WER-triggered processes with legitimate system events Corporate Control: Event Log Management, Task Scheduler"| E
+    D -->|"Ensure persistence remains undetected by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor WER logs for undetected task execution Corporate Control: SIEM, Event Viewer Monitoring"| E

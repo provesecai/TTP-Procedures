@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackingSCMForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Windows Service Control Manager (SCM) for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Modify SCM to Hijack Service Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Service Hijacking Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal SCM Hijacking Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SCM Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify SCM settings Corporate Control: Admin Rights, Service Control Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable services to hijack via SCM Corporate Control: Service Control Manager, Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify service configurations to execute malicious code Corporate Control: Service Configuration, Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor service logs for hijacking opportunities Corporate Control: Event Logs, Service Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack service execution flow for malicious payload Corporate Control: Service Control, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure service continues execution even after reboot Corporate Control: Task Scheduler, Service Recovery Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reapply service hijack if service restarts Corporate Control: Service Management, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to conceal service hijack activity Corporate Control: Event Log Management, Service Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor service hijacking execution for persistence Corporate Control: Task Scheduler, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service hijacking survives reboots Corporate Control: Task Scheduler, System Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply service configuration if disrupted Corporate Control: Service Configuration, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide hijacked service from user view Corporate Control: Task Manager, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend hijacked service with legitimate services Corporate Control: Event Logs, Service Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence via service hijacking Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor service hijacking for detection Corporate Control: SIEM Systems, SOC Tools</data>
+</edge>
+</graph>
+</graphml>

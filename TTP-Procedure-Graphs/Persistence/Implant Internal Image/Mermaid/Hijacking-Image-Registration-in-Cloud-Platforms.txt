@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Image Registration in Cloud Platforms]
+    B[Hijack Image Registration in Cloud Infrastructure]
+    C[Ensure Persistence in Cloud Image Registration]
+    D[Conceal Hijacked Image Registration]
+    E[Persistence Achieved via Hijacked Image Registration]
+
+    A -->|"Gain admin access to cloud platform image registry Corporate Control: Cloud Console, Admin Rights"| B
+    A -->|"Identify vulnerable cloud image registration points Corporate Control: Image Management, Cloud Deployment Console"| B
+    A -->|"Modify image registration details to include malicious payload Corporate Control: Cloud API, Deployment Settings"| B
+    A -->|"Monitor cloud platform for successful image registration modification Corporate Control: Cloud Logs, Cloud Monitoring"| B
+    B -->|"Hijack image registration to run malicious code on deployment Corporate Control: Image Registry, Cloud Deployment Tools"| C
+    B -->|"Ensure hijacked registration persists across cloud redeployments Corporate Control: Cloud Instance Management, Image Repository"| C
+    B -->|"Reapply hijacked registration if disrupted Corporate Control: Cloud Deployment, Image Configuration"| C
+    B -->|"Apply obfuscation to hide image modification in cloud logs Corporate Control: Cloud Monitoring, Log Filtering"| C
+    C -->|"Monitor cloud instance deployment logs to ensure persistence Corporate Control: Cloud Monitoring, SIEM Systems"| D
+    C -->|"Ensure malicious cloud image remains active after reboots Corporate Control: Cloud Auto-Scaling, Cloud Deployment Tools"| D
+    C -->|"Reapply image modifications if cloud platform updates disrupt Corporate Control: Cloud Resource Management, Deployment Automation"| D
+    D -->|"Hide hijacked image registration from cloud admin logs Corporate Control: Cloud Activity Logs, SIEM Tools"| E
+    D -->|"Blend hijacked image deployment with legitimate system activity Corporate Control: Network Monitoring, Resource Access Logs"| E
+    D -->|"Ensure undetected persistence through hijacked registration Corporate Control: Cloud Security, EDR Systems"| E
+    D -->|"Monitor cloud platform for signs of detection Corporate Control: SOC, Cloud SIEM Monitoring"| E

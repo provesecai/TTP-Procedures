@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Event Execution via Task Scheduler]
+    B[Create Task for Event-Triggered Execution]
+    C[Ensure Task Persistence After Event Trigger]
+    D[Conceal Task Trigger Mechanism]
+    E[Persistence Achieved via Event-Triggered Task]
+
+    A -->|"Gain administrative access to Task Scheduler Corporate Control: Admin Rights, Task Scheduler Settings"| B
+    A -->|"Identify system events that can trigger tasks Corporate Control: Task Scheduler, Event Logs"| B
+    A -->|"Create task to execute malicious code when specific events occur Corporate Control: Task Scheduler, Event Log Management"| B
+    A -->|"Monitor system for relevant event triggers Corporate Control: Event Logs, SIEM Tools"| B
+    B -->|"Create task triggered by system events for code execution Corporate Control: Task Scheduler Console, Event Logs"| C
+    B -->|"Set event trigger to re-run task on system reboot Corporate Control: Task Scheduler, System Boot Settings"| C
+    B -->|"Ensure malicious code is executed each time event occurs Corporate Control: Task Scheduling, Process Execution"| C
+    B -->|"Apply obfuscation techniques to hide task execution logs Corporate Control: Task Scheduler, Event Logs Obfuscation"| C
+    C -->|"Monitor task execution for continued access Corporate Control: Task Scheduler Logs, Event Viewer"| D
+    C -->|"Ensure task remains persistent across system reboots Corporate Control: Task Scheduler Configuration, System Startup Settings"| D
+    C -->|"Reapply task configuration if disrupted Corporate Control: Task Scheduler Recovery, System Monitoring"| D
+    D -->|"Hide task from user interface Corporate Control: Task Manager, Event Logs"| E
+    D -->|"Blend event-triggered task with normal system tasks Corporate Control: System Logs, Event Log Management"| E
+    D -->|"Ensure task remains undetected by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor task activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Tools"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Inject Malicious Code into Windows Startup]
+    B[Create Malicious Startup Task]
+    C[Ensure Startup Task Persistence]
+    D[Conceal Startup Task]
+    E[Persistence Achieved via Malicious Startup Task]
+
+    A -->|"Gain access to configure system startup settings Corporate Control: Admin Rights, Startup Management"| B
+    A -->|"Configure Windows Startup to run malicious code Corporate Control: Task Scheduler, Registry Settings"| B
+    A -->|"Identify appropriate startup locations for persistence Corporate Control: Task Scheduler, Windows Registry"| B
+    A -->|"Monitor system logs for successful task creation Corporate Control: Event Viewer, System Logs"| B
+    B -->|"Set malicious task to run on system startup Corporate Control: Task Scheduler, System Boot Settings"| C
+    B -->|"Ensure malicious task is triggered automatically after reboot Corporate Control: Task Scheduler, System Boot Configuration"| C
+    B -->|"Reapply malicious task if disrupted Corporate Control: Task Scheduler Recovery Settings"| C
+    B -->|"Apply obfuscation to hide startup task in system logs Corporate Control: Log Obfuscation, Event Viewer"| C
+    C -->|"Monitor startup task execution for continuity Corporate Control: Task Scheduler Logs, Event Viewer"| D
+    C -->|"Ensure malicious task persists after reboots Corporate Control: Task Scheduler, Windows Registry Configuration"| D
+    C -->|"Maintain persistence by checking startup configurations Corporate Control: System Configuration, Event Monitoring"| D
+    D -->|"Hide task from user view in Task Manager Corporate Control: Task Manager, Startup Configuration"| E
+    D -->|"Blend malicious task with legitimate startup processes Corporate Control: Task Scheduler, Event Log Monitoring"| E
+    D -->|"Ensure persistence remains undetected by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor startup task logs for stealth Corporate Control: SIEM, Security Operations Center (SOC)"| E

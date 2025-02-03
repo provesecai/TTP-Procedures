@@ -1,0 +1,21 @@
+graph TD;
+    A[Prepare to Hijack Windows Service Control Manager (SCM) for Persistence]
+    B[Modify SCM to Hijack Service Execution]
+    C[Ensure SCM Hijacking Persistence]
+    D[Conceal SCM Hijacking Mechanism]
+    E[Persistence Achieved via SCM Hijacking]
+
+    A -->|"Gain administrative access to modify SCM Corporate Control: Admin Rights, Service Configuration Tools"| B
+    A -->|"Identify target services for hijacking via SCM Corporate Control: Service Control Manager, Event Logs"| B
+    A -->|"Modify service configurations to execute malicious code Corporate Control: Service Configuration, Task Scheduler"| B
+    A -->|"Monitor service logs for hijacking opportunities Corporate Control: Event Viewer, Service Monitoring Tools"| B
+    B -->|"Hijack SCM to launch malicious service upon event trigger Corporate Control: Task Scheduler, Service Control Settings"| C
+    B -->|"Ensure malicious task persists after reboot Corporate Control: Task Scheduler, Windows Service Management"| C
+    B -->|"Reapply service hijack if disrupted Corporate Control: Service Configuration, System Monitoring"| C
+    B -->|"Apply obfuscation to service hijacking configuration Corporate Control: Event Log Management, Service Management"| C
+    C -->|"Monitor service hijacking for persistence Corporate Control: Service Logs, Event Viewer"| D
+    C -->|"Ensure service hijacking is undetectable by security tools Corporate Control: Antivirus, EDR Tools"| D
+    C -->|"Reapply service hijacking if interrupted Corporate Control: Service Recovery, System Configuration"| D
+    D -->|"Conceal service hijacking from task manager Corporate Control: Task Manager, Event Viewer Logs"| E
+    D -->|"Blend service hijacking with legitimate services Corporate Control: Service Logs, Event Management"| E
+    D -->|"Ensure persistence through undetected service hijacking Corporate Control: SIEM Tools, Security Operations Center"| E

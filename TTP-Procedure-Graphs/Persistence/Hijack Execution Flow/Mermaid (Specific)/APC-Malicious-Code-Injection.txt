@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Inject Malicious Code via APC]
+    B[Inject Malicious Code Using APCs]
+    C[Ensure APC Injection Persistence]
+    D[Conceal APC Injection Mechanism]
+    E[Persistence Achieved via APC Injection]
+
+    A -->|"Gain access to target system with elevated privileges Corporate Control: Admin Rights, Process Management"| B
+    A -->|"Identify target process to inject malicious code using APCs Corporate Control: Process Management, Event Logs"| B
+    A -->|"Prepare malicious code to be injected into target process Corporate Control: PowerShell, Scripting Tools"| B
+    A -->|"Monitor system for available APC injection points Corporate Control: Event Viewer, Process Management Tools"| B
+    B -->|"Inject malicious code into target process via APC Corporate Control: Memory Injection, Process Control"| C
+    B -->|"Set injected code to execute in response to an APC Corporate Control: Event Logs, System Monitoring Tools"| C
+    B -->|"Ensure persistence of the injected code across system reboots Corporate Control: Task Scheduler, Process Recovery Tools"| C
+    B -->|"Apply obfuscation techniques to hide APC injection Corporate Control: Event Logs, Process Logging"| C
+    C -->|"Monitor injected code to ensure persistence Corporate Control: Task Scheduler, Event Logs"| D
+    C -->|"Ensure process continues to trigger injected code on reboot Corporate Control: System Startup Settings, Task Scheduler"| D
+    C -->|"Reapply APC injection if disrupted Corporate Control: Process Management, Task Scheduler"| D
+    D -->|"Hide injected code execution from task manager Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Blend malicious code with legitimate process activity Corporate Control: Process Management, Event Logs"| E
+    D -->|"Ensure injected code is undetectable by security tools Corporate Control: Antivirus, EDR Solutions"| E
+    D -->|"Monitor for any detection of malicious APC behavior Corporate Control: SIEM Systems, SOC Tools"| E

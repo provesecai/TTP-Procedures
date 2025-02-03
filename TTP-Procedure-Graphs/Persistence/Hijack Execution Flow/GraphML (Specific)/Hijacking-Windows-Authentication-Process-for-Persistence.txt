@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackingWindowsAuthenticationForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Windows Authentication Process</data>
+</node>
+<node id="B">
+<data key="label">Modify Authentication Process for Malicious Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Authentication Process Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Authentication Hijacking Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Hijacked Authentication</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify authentication process Corporate Control: Admin Rights, Authentication Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable authentication points to hijack Corporate Control: Logon Process, Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute during authentication process Corporate Control: Logon Script, PowerShell</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for vulnerable authentication triggers Corporate Control: Event Logs, System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into Windows authentication flow Corporate Control: Logon Process, Authentication Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set hijacked authentication to trigger on logon events Corporate Control: Logon Event Subscription, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure hijacked process persists across system reboot Corporate Control: System Boot Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide hijacked authentication process Corporate Control: Event Logs, Logon Script Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor authentication process for continued access Corporate Control: Event Logs, Logon Auditing Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure hijacked process persists after system reboots Corporate Control: Task Scheduler, Logon Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply hijacked authentication if disrupted Corporate Control: Logon Script, System Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide hijacked authentication process from user interface Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious code with legitimate authentication tasks Corporate Control: Logon Script, Event Viewer Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through hijacked authentication Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor hijacked authentication for detection Corporate Control: SIEM, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="InjectingMaliciousCodeIntoAMIsForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify AMI for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into AMI</data>
+</node>
+<node id="C">
+<data key="label">Ensure AMI Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious AMI Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Malicious AMI</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to AMI configuration Corporate Control: Admin Rights, AWS Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select AMI to modify for persistence Corporate Control: EC2 Image Selection, Configuration Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into the AMI Corporate Control: EC2 Image Management, Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor AMI deployment logs for successful modification Corporate Control: CloudTrail, EC2 Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify AMI configuration to execute malicious code on VM launch Corporate Control: EC2 Instance Settings, UserData</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure AMI persists after cloud redeployment Corporate Control: Cloud Image Management, Auto-Scaling</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious payload runs during VM boot Corporate Control: EC2 Boot Settings, System Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide malicious code in AMI Corporate Control: Cloud Image Monitoring, Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor VM deployment logs to ensure persistent access Corporate Control: EC2 Logs, GCP Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious AMI is accessible even after redeployment Corporate Control: VM Recovery, Image Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply malicious AMI if cloud instance is redeployed Corporate Control: Cloud Instance Configuration, Resource Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious AMI from administrative logs Corporate Control: Cloud Activity Logs, Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious AMI modification with regular cloud operations Corporate Control: Cloud Traffic, Image Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent access remains undetected Corporate Control: Cloud Security, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of detection via cloud services Corporate Control: SIEM, SOC Tools</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Windows Performance Monitor for Persistence]
+    B[Create Performance Monitor Rule for Malicious Execution]
+    C[Ensure Persistence of Performance Monitor Task]
+    D[Conceal Performance Trigger]
+    E[Persistence Achieved via Performance Monitor]
+
+    A -->|"Gain access to modify Windows Performance Monitor settings Corporate Control: Admin Rights, Performance Monitoring Tools"| B
+    A -->|"Identify performance metrics that can trigger code execution Corporate Control: Performance Data, Event Monitoring"| B
+    A -->|"Create rule to execute malicious code upon performance threshold trigger Corporate Control: Performance Rules, Task Scheduler"| B
+    A -->|"Monitor performance data to identify exploitable events Corporate Control: Event Viewer, SIEM Tools"| B
+    B -->|"Set performance metric to trigger malicious process Corporate Control: Performance Logs, Task Scheduler Integration"| C
+    B -->|"Configure rule to trigger process even after reboot Corporate Control: System Boot Configuration, Task Scheduler"| C
+    B -->|"Ensure malicious task is triggered on performance events Corporate Control: Performance Monitoring Tools, Process Scheduling"| C
+    B -->|"Apply obfuscation to hide performance event triggers Corporate Control: Log Obfuscation, Event Management"| C
+    C -->|"Monitor performance data to ensure persistence Corporate Control: Performance Logs, Network Monitoring"| D
+    C -->|"Ensure process persists across reboots and system updates Corporate Control: Task Scheduler, System Boot Settings"| D
+    C -->|"Reapply settings if performance event triggers are disrupted Corporate Control: Performance Configuration, Task Management"| D
+    D -->|"Conceal performance task from standard admin tools Corporate Control: Task Manager, Event Viewer Monitoring"| E
+    D -->|"Blend performance events with regular system metrics Corporate Control: Performance Monitor Logs, Network Traffic Monitoring"| E
+    D -->|"Ensure undetectable persistence through performance monitoring Corporate Control: Antivirus, EDR Solutions"| E
+    D -->|"Monitor performance event logs for stealth Corporate Control: SIEM, Event Management Systems"| E

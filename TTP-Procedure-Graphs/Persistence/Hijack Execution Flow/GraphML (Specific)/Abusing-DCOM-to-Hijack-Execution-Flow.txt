@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingDCOMForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack DCOM for Persistent Execution</data>
+</node>
+<node id="B">
+<data key="label">Hijack DCOM for Remote Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure DCOM Execution Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal DCOM Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DCOM Hijack</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to DCOM configuration Corporate Control: Admin Rights, DCOM Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify DCOM objects and methods vulnerable to hijacking Corporate Control: DCOM Configuration, Event Viewer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious payload to execute via DCOM calls Corporate Control: DCOM Configuration, PowerShell Scripting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor DCOM communication for exploitation opportunities Corporate Control: Event Logs, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack DCOM process for remote code execution Corporate Control: DCOM Configuration, Remote Desktop Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set malicious payload to execute during DCOM communication Corporate Control: Task Scheduler, Remote Execution Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence of DCOM hijacking after system reboot Corporate Control: System Boot Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to DCOM execution logs Corporate Control: Event Log Management, DCOM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor DCOM execution for persistence Corporate Control: Remote Desktop Monitoring, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure hijacked DCOM process survives reboots Corporate Control: Task Scheduler, System Recovery Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply DCOM hijack if interrupted Corporate Control: Remote Process Monitoring, System Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide DCOM hijacking activity from system monitoring tools Corporate Control: Event Logs, DCOM Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend DCOM activity with legitimate process execution Corporate Control: Remote Access Logs, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure DCOM execution remains undetected by security tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor DCOM hijacking for signs of detection Corporate Control: SIEM Tools, SOC Monitoring</data>
+</edge>
+</graph>
+</graphml>

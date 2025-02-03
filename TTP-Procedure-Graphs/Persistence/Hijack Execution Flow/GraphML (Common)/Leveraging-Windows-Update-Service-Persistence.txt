@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingWindowsUpdateForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Leverage Windows Update Service for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Hijack Windows Update Service to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure Windows Update Service Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Windows Update Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Windows Update Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify Windows Update Service Corporate Control: Admin Rights, Update Service Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerabilities in Windows Update service for hijacking Corporate Control: Update Service, Event Viewer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute on Windows Update Corporate Control: PowerShell, Update Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Windows Update service logs for hijacking opportunities Corporate Control: Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Windows Update service configuration for malicious execution Corporate Control: Update Service, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure hijacked Windows Update persists after reboots Corporate Control: Task Scheduler, System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reapply hijacking configuration if Windows Update is reset Corporate Control: Service Recovery, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide Windows Update task from logs Corporate Control: Event Log Management, Log Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Windows Update service execution for persistence Corporate Control: Event Logs, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence even after Windows Update service restarts Corporate Control: Update Service, Auto-Recovery Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply task if hijacked update process is disrupted Corporate Control: Task Scheduler, System Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious Windows Update tasks from admin logs Corporate Control: Event Viewer, Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious code execution with legitimate Windows Update Corporate Control: Event Logs, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through Windows Update Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection of Windows Update hijacking Corporate Control: SIEM, SOC Tools</data>
+</edge>
+</graph>
+</graphml>

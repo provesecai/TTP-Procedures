@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Manipulate ISO Image for Persistence]
+    B[Inject Malicious Code into ISO Image Files]
+    C[Ensure ISO Image Persistence]
+    D[Conceal ISO Image Modifications]
+    E[Persistence Achieved via ISO Image Manipulation]
+
+    A -->|"Gain administrative access to modify ISO image files Corporate Control: ISO Management Tools, File System Access"| B
+    A -->|"Identify appropriate files for ISO image manipulation Corporate Control: ISO Directory, File Integrity Tools"| B
+    A -->|"Inject malicious code into ISO image files Corporate Control: ISO Image Editing, Boot Configuration"| B
+    A -->|"Monitor ISO image logs for successful manipulation Corporate Control: ISO Management, File System Logs"| B
+    B -->|"Modify ISO image to ensure malicious code executes on system install Corporate Control: Boot Configuration, Installation Files"| C
+    B -->|"Ensure ISO image persists as bootable device with malicious code Corporate Control: Boot Configuration, ISO Distribution"| C
+    B -->|"Apply settings to ensure malicious code executes on installation Corporate Control: Installation Scripts, Boot Sequence"| C
+    B -->|"Apply obfuscation to hide malicious changes in ISO image Corporate Control: Log Management, ISO Integrity"| C
+    C -->|"Monitor ISO image deployment to ensure malicious code execution Corporate Control: Installation Logs, System Monitoring"| D
+    C -->|"Ensure persistence after system installation Corporate Control: Boot Settings, Task Scheduler"| D
+    C -->|"Reapply malicious configuration if ISO image is disrupted Corporate Control: ISO Image Management, File Integrity"| D
+    D -->|"Conceal malicious changes to ISO files from user Corporate Control: ISO Logs, Event Viewer"| E
+    D -->|"Blend malicious code execution with legitimate install tasks Corporate Control: Boot Logs, ISO Logs"| E
+    D -->|"Ensure persistence remains undetected by security solutions Corporate Control: Antivirus, EDR Solutions"| E
+    D -->|"Monitor for detection of ISO image tampering Corporate Control: SIEM Tools, Security Operations Center (SOC)"| E

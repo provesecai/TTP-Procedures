@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Windows Authentication Process]
+    B[Modify Authentication Process for Malicious Execution]
+    C[Ensure Authentication Process Persistence]
+    D[Conceal Authentication Hijack Mechanism]
+    E[Persistence Achieved via Hijacked Authentication]
+
+    A -->|"Gain administrative access to Windows authentication process Corporate Control: Admin Rights, Authentication Management"| B
+    A -->|"Identify vulnerable authentication points to hijack Corporate Control: Logon Process, Event Logs"| B
+    A -->|"Prepare malicious code to execute during authentication process Corporate Control: Logon Script, PowerShell"| B
+    A -->|"Monitor for vulnerable authentication triggers Corporate Control: Event Viewer, System Logs"| B
+    B -->|"Inject malicious code into Windows authentication flow Corporate Control: Logon Process, Authentication Configuration"| C
+    B -->|"Set hijacked authentication to trigger on specific logon events Corporate Control: Logon Event Subscription, Task Scheduler"| C
+    B -->|"Ensure hijacked process persists across system reboots Corporate Control: System Boot Settings, Task Scheduler"| C
+    B -->|"Apply obfuscation to hide hijacked authentication process Corporate Control: Event Logs, Logon Script Obfuscation"| C
+    C -->|"Monitor authentication process for continuous access Corporate Control: Event Logs, Logon Auditing Tools"| D
+    C -->|"Ensure hijacked process persists after system reboots Corporate Control: Task Scheduler, System Boot Configuration"| D
+    C -->|"Reapply hijacked authentication if disrupted Corporate Control: Logon Script, System Monitoring Tools"| D
+    D -->|"Hide hijacked authentication process from user interface Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Blend malicious code with legitimate authentication tasks Corporate Control: Logon Script, Event Viewer Logs"| E
+    D -->|"Ensure hijacked authentication remains undetected by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor for detection of hijacked authentication Corporate Control: SIEM Systems, Security Operations Center (SOC)"| E

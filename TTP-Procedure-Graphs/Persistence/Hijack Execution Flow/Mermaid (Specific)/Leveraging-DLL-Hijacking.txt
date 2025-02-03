@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Execution via DLL Hijacking]
+    B[Modify DLL to Hijack Execution Flow]
+    C[Ensure DLL Hijacking Persistence]
+    D[Conceal DLL Hijacking Mechanism]
+    E[Persistence Achieved via DLL Hijacking]
+
+    A -->|"Gain access to modify target application's DLLs Corporate Control: Admin Rights, Application Directory Access"| B
+    A -->|"Identify vulnerable DLL files to hijack Corporate Control: File System Access, Application Configuration"| B
+    A -->|"Prepare malicious DLL to replace legitimate DLL Corporate Control: DLL Management, File System Monitoring"| B
+    A -->|"Monitor application execution for DLL hijacking opportunities Corporate Control: Event Logs, Application Logs"| B
+    B -->|"Replace legitimate DLL with malicious DLL for execution flow hijack Corporate Control: DLL Configuration, File Management"| C
+    B -->|"Ensure DLL hijacking persists after reboot Corporate Control: Task Scheduler, System Boot Configuration"| C
+    B -->|"Reapply DLL hijacking if disrupted Corporate Control: File System Recovery, DLL Management"| C
+    B -->|"Apply obfuscation to conceal DLL hijacking Corporate Control: File System Obfuscation, Event Log Filtering"| C
+    C -->|"Monitor execution for continuous DLL hijacking Corporate Control: Application Logs, SIEM Tools"| D
+    C -->|"Ensure DLL hijacking survives system reboots Corporate Control: Task Scheduler, System Boot Settings"| D
+    C -->|"Reapply DLL configuration if interrupted Corporate Control: File Integrity Management, File Recovery"| D
+    D -->|"Hide DLL hijacking activities from normal system monitoring Corporate Control: Event Viewer, Application Logs"| E
+    D -->|"Blend malicious DLL usage with legitimate application activities Corporate Control: Application Logs, File Monitoring"| E
+    D -->|"Ensure undetectable DLL hijacking by security tools Corporate Control: Antivirus, EDR Solutions"| E
+    D -->|"Monitor DLL hijacking for stealth Corporate Control: SIEM Systems, Security Operations Center (SOC)"| E

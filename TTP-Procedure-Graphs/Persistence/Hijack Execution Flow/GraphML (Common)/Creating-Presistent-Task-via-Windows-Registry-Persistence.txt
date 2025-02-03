@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreatePersistentTaskWindowsRegistry" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Windows Registry for Event-Triggered Execution</data>
+</node>
+<node id="B">
+<data key="label">Create Registry Entry for Event Triggered Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Registry-Triggered Execution Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Registry Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Registry Event Trigger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify registry settings Corporate Control: Admin Rights, Registry Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify registry keys that trigger specific system events Corporate Control: Registry Management, Event Log Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute when event is triggered Corporate Control: PowerShell, Scripting Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for registry changes that could trigger malicious code Corporate Control: Event Viewer, Registry Monitor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry to create event trigger for malicious process Corporate Control: Registry Key Modification, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure event-triggered code executes after reboot Corporate Control: System Startup Configuration, Registry Key Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure registry-triggered task persists across system restarts Corporate Control: Task Scheduler, Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide registry event trigger Corporate Control: Log Management, Registry Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor registry-triggered task execution for stability Corporate Control: Task Scheduler, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure event triggers task consistently Corporate Control: Windows Logs, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply registry settings if disrupted Corporate Control: Registry Key Management, Task Scheduler Settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide event-triggered task from user interface Corporate Control: Event Manager, Registry Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend registry event tasks with legitimate system tasks Corporate Control: Task Scheduler, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure registry-triggered task remains undetected by security solutions Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor registry-triggered task for stealth Corporate Control: SIEM Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

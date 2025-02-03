@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackingProcessExecutionFlowForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Process Execution Flow for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Target Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure Process Execution Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Process Injection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Process Execution Flow Hijack</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify processes Corporate Control: Admin Rights, Process Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify target processes vulnerable to injection Corporate Control: Process Management, Event Viewer</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute within target process Corporate Control: PowerShell, Scripting Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for target processes Corporate Control: Event Logs, Process Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into target process memory Corporate Control: Memory Injection, Process Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code is executed during process runtime Corporate Control: Task Scheduler, Process Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence of injected process after reboot Corporate Control: Task Scheduler, System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate injected code to avoid detection Corporate Control: Event Log Filtering, Memory Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor injected code execution for persistence Corporate Control: Process Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure injected code survives reboots Corporate Control: Task Scheduler, System Recovery</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply injected code if process is disrupted Corporate Control: Task Scheduler, Process Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide injected code from task manager and event viewer Corporate Control: Task Manager, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious code execution with legitimate system processes Corporate Control: Process Management, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetected persistence via injected process Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection of malicious process flow Corporate Control: SIEM Systems, Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

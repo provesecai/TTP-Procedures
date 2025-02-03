@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LeveragingDLLHijackingForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Execution via DLL Hijacking</data>
+</node>
+<node id="B">
+<data key="label">Modify DLL to Hijack Execution Flow</data>
+</node>
+<node id="C">
+<data key="label">Ensure DLL Hijacking Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal DLL Hijacking Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DLL Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify target application's DLLs Corporate Control: Admin Rights, Application Directory Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable DLL files to hijack Corporate Control: File System Access, Application Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious DLL to replace legitimate DLL Corporate Control: DLL Management, File System Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor application execution for DLL hijacking opportunities Corporate Control: Event Logs, Application Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate DLL with malicious DLL for execution flow hijack Corporate Control: DLL Configuration, File Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure DLL hijacking persists after reboot Corporate Control: Task Scheduler, System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reapply DLL hijacking if disrupted Corporate Control: File System Recovery, DLL Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to conceal DLL hijacking Corporate Control: File System Obfuscation, Event Log Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution for continuous DLL hijacking Corporate Control: Application Logs, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DLL hijacking survives system reboots Corporate Control: Task Scheduler, System Boot Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply DLL configuration if interrupted Corporate Control: File Integrity Management, File Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide DLL hijacking activities from normal system monitoring Corporate Control: Event Viewer, Application Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious DLL usage with legitimate application activities Corporate Control: Application Logs, File Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable DLL hijacking by security tools Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor DLL hijacking for stealth Corporate Control: SIEM Systems, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify IaaS Image for Persistent Access]
+    B[Inject Malicious Code into IaaS Image Configuration]
+    C[Ensure IaaS Image Persistence]
+    D[Conceal IaaS Image Modifications]
+    E[Persistence Achieved via IaaS Image]
+
+    A -->|"Gain access to modify IaaS configuration Corporate Control: Admin Rights, Cloud Console"| B
+    A -->|"Choose target IaaS image to modify Corporate Control: IaaS Console, VM Configuration"| B
+    A -->|"Inject malicious payload into IaaS image configuration Corporate Control: Cloud Deployment Scripts, Cloud API"| B
+    A -->|"Monitor deployment logs for successful modification Corporate Control: Cloud Logs, CloudTrail"| B
+    B -->|"Modify IaaS image to ensure malicious code execution on VM launch Corporate Control: Cloud VM Configuration, System Settings"| C
+    B -->|"Ensure malicious image persists after cloud instance reboots Corporate Control: Cloud Resource Management, Auto-Scaling"| C
+    B -->|"Ensure image persists even across cloud redeployments Corporate Control: Image Configuration, Cloud Monitoring Tools"| C
+    B -->|"Apply obfuscation to hide malicious activity within IaaS logs Corporate Control: Cloud Monitoring, Activity Logs"| C
+    C -->|"Monitor cloud resource to ensure image remains active Corporate Control: Cloud Management, Cloud Monitor"| D
+    C -->|"Ensure persistent access across IaaS deployments Corporate Control: Cloud Automation, Cloud Recovery"| D
+    C -->|"Reapply configuration if cloud instance is disrupted Corporate Control: Cloud Instance Management, Deployment Automation"| D
+    D -->|"Hide IaaS image activity from cloud monitoring tools Corporate Control: Cloud Security, Resource Access Logs"| E
+    D -->|"Blend malicious image activity with legitimate cloud resources Corporate Control: Network Logs, Cloud Traffic"| E
+    D -->|"Ensure persistent access remains undetected by security tools Corporate Control: Cloud Security, EDR Systems"| E
+    D -->|"Monitor image deployment for stealth Corporate Control: SIEM Tools, SOC Tools"| E

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare for Fileless Payload Execution via Process Hijacking]
+    B[Inject Fileless Payload into Memory]
+    C[Ensure Fileless Payload Persistence]
+    D[Conceal Fileless Payload Execution]
+    E[Persistence Achieved via Fileless Execution]
+
+    A -->|"Gain access to target system with elevated privileges Corporate Control: Admin Rights, Memory Access"| B
+    A -->|"Identify vulnerable processes for memory injection Corporate Control: Process Management, Memory Scanning Tools"| B
+    A -->|"Prepare fileless payload to execute directly in memory Corporate Control: PowerShell, Reflective DLL Injection"| B
+    A -->|"Monitor for vulnerable execution points in memory Corporate Control: Event Logs, Memory Forensics"| B
+    B -->|"Inject fileless payload into target process memory Corporate Control: Process Injection, Memory Scanning Tools"| C
+    B -->|"Ensure payload is executed without writing to disk Corporate Control: Reflection Injection, Memory Modification"| C
+    B -->|"Ensure persistence by maintaining control over injected memory Corporate Control: Memory Persistence Tools"| C
+    B -->|"Apply obfuscation to fileless payload to avoid detection Corporate Control: PowerShell, Memory Forensics Obfuscation"| C
+    C -->|"Monitor injected payload for reliable execution Corporate Control: Memory Forensics, Event Viewer"| D
+    C -->|"Ensure payload survives system restarts Corporate Control: Memory Configuration, Task Scheduler"| D
+    C -->|"Reapply payload execution if interrupted Corporate Control: Task Scheduler, System Monitoring"| D
+    D -->|"Hide memory injection activities from monitoring tools Corporate Control: EDR, Antivirus, Memory Analysis Tools"| E
+    D -->|"Blend payload execution with legitimate system processes Corporate Control: Task Manager, System Process Management"| E
+    D -->|"Ensure undetectable persistence in memory Corporate Control: Fileless Execution, Memory Integrity Monitoring"| E
+    D -->|"Monitor for any changes in memory or process behavior Corporate Control: SIEM Systems, SOC Tools"| E

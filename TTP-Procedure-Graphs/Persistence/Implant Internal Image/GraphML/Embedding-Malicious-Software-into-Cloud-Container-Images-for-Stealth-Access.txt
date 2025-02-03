@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EmbeddingMalwareInContainerImages" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Embed Malware into Cloud Container Images</data>
+</node>
+<node id="B">
+<data key="label">Inject Malware into Cloud Container Image</data>
+</node>
+<node id="C">
+<data key="label">Ensure Container Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malware Embedded in Container Image</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Container Image</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to cloud container image configuration Corporate Control: Admin Rights, Container Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select container image to inject malware into Corporate Control: Docker Image, Container Repository</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious software into container image layers Corporate Control: Dockerfile, CI/CD Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor image build process for successful malware injection Corporate Control: CI/CD Pipeline, Image Build Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify container image to persist malicious execution Corporate Control: Kubernetes, Docker Image Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malware persists across container redeployments Corporate Control: Container Orchestration, Persistent Volumes</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reapply container image configuration if disrupted Corporate Control: Container Registry, Image Rebuild</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate malware embedded in container image layers Corporate Control: Container Logs, Image Scanning</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor container logs to ensure malware execution Corporate Control: Container Monitoring, SIEM Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistent access across multiple container restarts Corporate Control: Kubernetes, Docker Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply malware if container environment is reset Corporate Control: Kubernetes, Task Scheduling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malware from container monitoring tools Corporate Control: Log Obfuscation, Container Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malware activity with legitimate container tasks Corporate Control: Container Logs, Task Scheduling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetected persistence through container image manipulation Corporate Control: SIEM Systems, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor malware persistence within container environments Corporate Control: SIEM Tools, Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

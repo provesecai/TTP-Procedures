@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackingWERForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Windows Error Reporting (WER)</data>
+</node>
+<node id="B">
+<data key="label">Modify WER to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure WER Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal WER Hijacking Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Hijacked WER</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify WER settings Corporate Control: Admin Rights, Event Subscription Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify error events that can trigger malicious code Corporate Control: Event Logs, Error Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute when WER event is triggered Corporate Control: PowerShell, Script Automation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system error logs for potential WER exploitation Corporate Control: Event Viewer, WER Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify WER configuration to execute malicious code upon error Corporate Control: WER Settings, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure WER task persists even after system reboot Corporate Control: Task Scheduler, System Boot Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure that WER continues to trigger malicious code Corporate Control: Event Subscription, Task Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide WER execution Corporate Control: Event Log Management, Log Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WER execution for successful persistence Corporate Control: WER Logs, SIEM Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure WER execution survives reboots Corporate Control: Task Scheduler, System Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply WER hijacking if disrupted Corporate Control: Event Management, Task Scheduling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide WER execution logs from administrators Corporate Control: Event Viewer, Task Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend WER-triggered activities with legitimate system tasks Corporate Control: Task Scheduler, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through WER Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection of WER hijacking Corporate Control: SIEM Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

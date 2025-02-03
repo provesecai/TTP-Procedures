@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HijackingTaskSchedulerForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Hijack Event Execution via Task Scheduler</data>
+</node>
+<node id="B">
+<data key="label">Create Task for Event-Triggered Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Persistence After Event Trigger</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task Trigger Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Event-Triggered Task</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to Task Scheduler Corporate Control: Admin Rights, Task Scheduler Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify system events that can trigger tasks Corporate Control: Task Scheduler, Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Create task to execute malicious code when specific events occur Corporate Control: Task Scheduler, Event Log Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for relevant event triggers Corporate Control: Event Logs, SIEM Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create task triggered by system events for code execution Corporate Control: Task Scheduler Console, Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set event trigger to re-run task on system reboot Corporate Control: Task Scheduler, System Boot Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code is executed each time event occurs Corporate Control: Task Scheduling, Process Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation techniques to hide task execution logs Corporate Control: Task Scheduler, Event Logs Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution for continued access Corporate Control: Task Scheduler Logs, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task remains persistent across system reboots Corporate Control: Task Scheduler Configuration, System Startup Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply task configuration if disrupted Corporate Control: Task Scheduler Recovery, System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide task from user interface Corporate Control: Task Manager, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend event-triggered task with normal system tasks Corporate Control: System Logs, Event Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure task remains undetected by security tools Corporate Control: Antivirus, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor task activity for stealth Corporate Control: Security Operations Center (SOC), SIEM Tools</data>
+</edge>
+</graph>
+</graphml>

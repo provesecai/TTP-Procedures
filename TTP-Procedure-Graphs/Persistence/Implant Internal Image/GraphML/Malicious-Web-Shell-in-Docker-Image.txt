@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MaliciousWebShellInDockerImage" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare Docker Image for Web Shell Injection</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Web Shell into Docker Image</data>
+</node>
+<node id="C">
+<data key="label">Ensure Docker Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Web Shell in Docker Image</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Docker Web Shell</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to Docker image configuration Corporate Control: Docker CLI, Image Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select vulnerable image layers for injection Corporate Control: Docker Images, Vulnerability Scanning</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject web shell payload into Docker image layer Corporate Control: Image Editing, Web Shell Creation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Docker build logs for successful injection Corporate Control: Docker Build, CI/CD Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Build Docker image with malicious web shell embedded Corporate Control: Docker Build, Dockerfile Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure image persists with web shell execution on startup Corporate Control: Docker Run Command, Container Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test web shell functionality within container Corporate Control: Docker Test, Web Shell Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to avoid detection during Docker image scanning Corporate Control: Docker Scan, Web Shell Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor container logs to ensure web shell is accessible Corporate Control: Docker Logs, Container Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across container restarts Corporate Control: Docker Restart Policies, Docker Volumes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply configuration after container image is disrupted Corporate Control: Dockerfile, Image Repository Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide web shell from container process listing Corporate Control: Docker Process Management, Container Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend web shell access with legitimate container traffic Corporate Control: Docker Logs, Network Traffic Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through Docker corporate firewalls Corporate Control: Docker Networking, Firewall Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor web shell for stealth and continued access Corporate Control: SIEM Tools, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

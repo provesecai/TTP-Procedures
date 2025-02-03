@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Event Subscription for Persistence]
+    B[Create Event Subscription to Trigger Malicious Code]
+    C[Ensure Persistence Through Event Subscription]
+    D[Conceal Event Subscription Mechanism]
+    E[Persistence Achieved via Event Subscription Hijack]
+
+    A -->|"Gain admin access to configure event subscriptions Corporate Control: Admin Rights, Event Subscription Tools"| B
+    A -->|"Identify system events to trigger malicious code Corporate Control: Event Logs, Event Subscription Management"| B
+    A -->|"Prepare malicious code for execution on event trigger Corporate Control: Task Scheduler, PowerShell Scripting"| B
+    A -->|"Monitor event logs for triggering events Corporate Control: Event Viewer, SIEM Tools"| B
+    B -->|"Create event subscription for specific system events Corporate Control: Event Subscription Manager, Task Scheduler"| C
+    B -->|"Set event to trigger malicious process after system event Corporate Control: Event Log Configuration, Task Scheduling"| C
+    B -->|"Ensure event subscription persists across reboots Corporate Control: Task Scheduler, System Configuration"| C
+    B -->|"Apply obfuscation to hide event subscription logs Corporate Control: Log Management, Event Viewer"| C
+    C -->|"Monitor event subscription execution for continuity Corporate Control: Task Scheduler, Event Logs"| D
+    C -->|"Ensure task is triggered on system event every time Corporate Control: Event Management, Process Scheduling"| D
+    C -->|"Maintain persistence by reapplying event subscription if interrupted Corporate Control: Event Subscription Settings"| D
+    D -->|"Conceal event subscription from normal monitoring tools Corporate Control: Event Viewer, Task Manager"| E
+    D -->|"Blend event subscription tasks with legitimate event logs Corporate Control: Event Logs, Task Scheduler"| E
+    D -->|"Ensure event subscription remains undetectable by security tools Corporate Control: Antivirus, EDR Systems"| E
+    D -->|"Monitor event subscription for stealth Corporate Control: SIEM Tools, Security Operations Center (SOC)"| E

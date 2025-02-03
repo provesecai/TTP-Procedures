@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Hijack Windows Update Service for Persistence]
+    B[Modify Windows Update Service to Trigger Malicious Task]
+    C[Ensure Persistence via Windows Update]
+    D[Conceal Windows Update Trigger]
+    E[Persistence Achieved via Windows Update Hijack]
+
+    A -->|"Gain administrative rights to configure Windows Update Service Corporate Control: Admin Rights, Windows Update Management"| B
+    A -->|"Configure Windows Update to trigger malicious task on service start Corporate Control: Windows Update Settings, Task Scheduler"| B
+    A -->|"Modify Windows Update service settings to execute payload Corporate Control: Service Configuration, Windows Task Scheduler"| B
+    A -->|"Monitor update logs for successful task execution Corporate Control: Event Viewer, Update Logs"| B
+    B -->|"Set Windows Update service to trigger malicious process on reboot Corporate Control: System Configuration, Update Service Settings"| C
+    B -->|"Ensure task persists across system reboots Corporate Control: Task Scheduler, System Boot Configuration"| C
+    B -->|"Reapply configuration if Windows Update task is interrupted Corporate Control: System Recovery, Service Restart Settings"| C
+    B -->|"Obfuscate Windows Update logs and event triggers Corporate Control: Event Log Management, Log Obfuscation"| C
+    C -->|"Monitor Windows Update task execution for consistency Corporate Control: Event Logs, SIEM Monitoring"| D
+    C -->|"Ensure task runs after every system reboot Corporate Control: Windows Startup Settings, Task Scheduler"| D
+    C -->|"Maintain persistence by reconfiguring task if interrupted Corporate Control: Task Scheduler, Windows Update Settings"| D
+    D -->|"Hide Windows Update event triggers from administrative view Corporate Control: Task Manager, Event Viewer"| E
+    D -->|"Blend Windows Update events with legitimate service tasks Corporate Control: Event Logs, Update Service Configuration"| E
+    D -->|"Ensure persistence remains undetected by security tools Corporate Control: Antivirus, EDR Solutions"| E
+    D -->|"Monitor Windows Update task for stealth Corporate Control: SIEM Tools, Security Operations Center (SOC)"| E

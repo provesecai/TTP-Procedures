@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Embed Malware into Cloud Container Images]
+    B[Inject Malware into Cloud Container Image]
+    C[Ensure Container Image Persistence]
+    D[Conceal Malware Embedded in Container Image]
+    E[Persistence Achieved via Container Image]
+
+    A -->|"Gain access to cloud container image configuration Corporate Control: Admin Rights, Container Configuration"| B
+    A -->|"Select container image to inject malware into Corporate Control: Docker Image, Container Repository"| B
+    A -->|"Inject malicious software into container image layers Corporate Control: Dockerfile, CI/CD Tools"| B
+    A -->|"Monitor image build process for successful malware injection Corporate Control: CI/CD Pipeline, Image Build Logs"| B
+    B -->|"Modify container image to persist malicious execution Corporate Control: Kubernetes, Docker Image Settings"| C
+    B -->|"Ensure malware persists across container redeployments Corporate Control: Container Orchestration, Persistent Volumes"| C
+    B -->|"Reapply container image configuration if disrupted Corporate Control: Container Registry, Image Rebuild"| C
+    B -->|"Obfuscate malware embedded in container image layers Corporate Control: Container Logs, Image Scanning"| C
+    C -->|"Monitor container logs to ensure malware execution Corporate Control: Container Monitoring, SIEM Tools"| D
+    C -->|"Ensure persistent access across multiple container restarts Corporate Control: Kubernetes, Docker Management"| D
+    C -->|"Reapply malware if container environment is reset Corporate Control: Kubernetes, Task Scheduling"| D
+    D -->|"Hide malware from container monitoring tools Corporate Control: Log Obfuscation, Container Security Monitoring"| E
+    D -->|"Blend malware activity with legitimate container tasks Corporate Control: Container Logs, Task Scheduling"| E
+    D -->|"Ensure undetected persistence through container image manipulation Corporate Control: SIEM Systems, EDR Solutions"| E
+    D -->|"Monitor malware persistence within container environments Corporate Control: SIEM Tools, Security Operations Center"| E

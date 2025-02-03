@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BackdooringKubernetesContainerImages" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Backdoor Kubernetes Container Images</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Container Image</data>
+</node>
+<node id="C">
+<data key="label">Ensure Container Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Code in Container</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Container Image Backdoor</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to Kubernetes image configuration Corporate Control: Kubernetes Admin Rights, Container Registry Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select container images to backdoor Corporate Control: Docker Registry, Container Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into container image Corporate Control: Image Build Tools, Dockerfile Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor container image creation logs for successful injection Corporate Control: Kubernetes Logs, CI/CD Pipeline</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify image configuration to execute malicious code on container start Corporate Control: Kubernetes Deployment, Dockerfile Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious image persists across container restarts Corporate Control: Kubernetes Replicas, StatefulSets</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure container image is deployed with backdoor Corporate Control: Kubernetes Deployment Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to container configuration to hide malicious code Corporate Control: Container Log Obfuscation, Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor container logs to ensure backdoor access Corporate Control: Kubernetes Logs, Container Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious container backdoor survives re-deployments Corporate Control: Persistent Storage, Kubernetes Config</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply malicious container image if disrupted Corporate Control: Kubernetes Pod Management, Container Registry</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide container backdoor from administrative view Corporate Control: Container Logs, Kubernetes Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend backdoor activity with regular container workloads Corporate Control: Network Traffic, Log Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence remains undetected by security tools Corporate Control: Network Security, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor backdoor container for stealth Corporate Control: SIEM Systems, SOC Monitoring</data>
+</edge>
+</graph>
+</graphml>

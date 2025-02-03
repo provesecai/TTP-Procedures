@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingIaaSImageConfigurationForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify IaaS Image for Persistent Access</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into IaaS Image Configuration</data>
+</node>
+<node id="C">
+<data key="label">Ensure IaaS Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal IaaS Image Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via IaaS Image</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify IaaS configuration Corporate Control: Admin Rights, Cloud Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Choose target IaaS image to modify Corporate Control: IaaS Console, VM Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious payload into IaaS image configuration Corporate Control: Cloud Deployment Scripts, Cloud API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor deployment logs for successful modification Corporate Control: Cloud Logs, CloudTrail</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify IaaS image to ensure malicious code execution on VM launch Corporate Control: Cloud VM Configuration, System Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious image persists after cloud instance reboots Corporate Control: Cloud Resource Management, Auto-Scaling</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure image persists even across cloud redeployments Corporate Control: Image Configuration, Cloud Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide malicious activity within IaaS logs Corporate Control: Cloud Monitoring, Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor cloud resource to ensure image remains active Corporate Control: Cloud Management, Cloud Monitor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistent access across IaaS deployments Corporate Control: Cloud Automation, Cloud Recovery</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply configuration if cloud instance is disrupted Corporate Control: Cloud Instance Management, Deployment Automation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide IaaS image activity from cloud monitoring tools Corporate Control: Cloud Security, Resource Access Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious image activity with legitimate cloud resources Corporate Control: Network Logs, Cloud Traffic</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent access remains undetected by security tools Corporate Control: Cloud Security, EDR Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor image deployment for stealth Corporate Control: SIEM Tools, SOC Tools</data>
+</edge>
+</graph>
+</graphml>

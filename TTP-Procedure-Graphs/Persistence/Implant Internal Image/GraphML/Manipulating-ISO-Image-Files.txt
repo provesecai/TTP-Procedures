@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ManipulatingISOImageForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify ISO Image for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into ISO Image</data>
+</node>
+<node id="C">
+<data key="label">Ensure ISO Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal ISO Image Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via ISO Image Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify ISO image files Corporate Control: Admin Rights, File System Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify files in the ISO image for malicious code injection Corporate Control: ISO Image Configuration, File System Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into ISO files Corporate Control: ISO Editing, Script Automation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor image creation process for successful injection Corporate Control: ISO Build Logs, Script Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code executes upon installation from ISO Corporate Control: Boot Configuration, Installation Setup</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure ISO image persists for system installation Corporate Control: Installation Media, Deployment Automation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious payload executes during system bootup Corporate Control: BIOS Settings, Boot Sequence Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide malicious payload within ISO image Corporate Control: ISO Security, File Integrity Checks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor ISO deployment to ensure successful execution Corporate Control: Installation Logs, System Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence even after system installation Corporate Control: System Configuration, Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply malicious configuration if image is reset Corporate Control: ISO Rebuild, System Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious changes in the ISO image from system view Corporate Control: ISO Logs, Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious execution with legitimate installation activities Corporate Control: Event Logs, Task Scheduling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence via ISO manipulation Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor ISO manipulation for stealth Corporate Control: SIEM Tools, Security Operations Center</data>
+</edge>
+</graph>
+</graphml>

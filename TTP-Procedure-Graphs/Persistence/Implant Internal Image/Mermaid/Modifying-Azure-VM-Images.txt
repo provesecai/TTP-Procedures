@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify Azure VM Image for Persistence]
+    B[Inject Malicious Code into Azure VM Image]
+    C[Ensure Azure VM Image Persistence]
+    D[Conceal Azure VM Image Modifications]
+    E[Persistence Achieved via Azure VM Image]
+
+    A -->|"Gain administrative access to modify Azure VM images Corporate Control: Azure Console, Admin Rights"| B
+    A -->|"Select the Azure VM image to inject malicious code Corporate Control: Azure Image Repository, VM Management"| B
+    A -->|"Inject code into the selected Azure VM image Corporate Control: PowerShell, VM Configuration Tools"| B
+    A -->|"Monitor for successful code injection within Azure VM logs Corporate Control: Azure Monitor, Event Logs"| B
+    B -->|"Modify the VM image to execute malicious code on bootup Corporate Control: VM Boot Settings, Azure Image Configuration"| C
+    B -->|"Ensure malicious code runs during VM instantiation Corporate Control: Azure VM Configuration, UserData Scripts"| C
+    B -->|"Ensure persistence across multiple VM reboots Corporate Control: VM Restart Policies, Persistent Disks"| C
+    B -->|"Apply obfuscation to hide malicious code execution Corporate Control: Azure Log Management, Script Obfuscation"| C
+    C -->|"Monitor VM logs to ensure persistent execution Corporate Control: Azure Monitor, Logs"| D
+    C -->|"Ensure access remains after Azure VM redeployments Corporate Control: Azure Resource Management, Deployment Automation"| D
+    C -->|"Reapply image settings if instance restart fails Corporate Control: Azure VM Settings, Instance Management"| D
+    D -->|"Hide injected code execution from Azure administrators Corporate Control: Azure Activity Logs, VM Monitoring"| E
+    D -->|"Blend malicious activity with legitimate Azure services Corporate Control: Azure Network Traffic, VM Logs"| E
+    D -->|"Ensure undetectable persistence by security monitoring tools Corporate Control: Security Monitoring, Firewalls"| E
+    D -->|"Monitor for any alerts or detections in Azure Cloud Services Corporate Control: SOC, SIEM Systems"| E

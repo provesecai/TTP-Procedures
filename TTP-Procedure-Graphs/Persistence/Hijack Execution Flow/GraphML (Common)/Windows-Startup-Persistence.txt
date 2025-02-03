@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WindowsStartupPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Windows Startup for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Modify Windows Startup to Launch Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure Malicious Startup Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Startup Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Malicious Startup</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative rights to modify Windows startup settings Corporate Control: Admin Rights, Startup Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable startup points for malicious code injection Corporate Control: Task Scheduler, Startup Folders</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code to execute during Windows startup Corporate Control: Registry Editor, PowerShell</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for startup task execution triggers Corporate Control: Event Logs, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set startup task to execute malicious code on system boot Corporate Control: Task Scheduler, Registry Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious task runs persistently on reboot Corporate Control: Task Scheduler, System Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reapply malicious task after system restarts Corporate Control: Task Scheduler, Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide malicious startup task Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor malicious task execution for persistence Corporate Control: Task Scheduler Logs, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure task remains active after reboot Corporate Control: Task Scheduling, Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply task configuration if disrupted Corporate Control: Task Scheduler, System Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious startup task from user view Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious startup task with legitimate system tasks Corporate Control: Task Scheduler, System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through startup tasks Corporate Control: Antivirus, EDR Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection of malicious startup Corporate Control: SIEM Systems, Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,22 @@
+graph TD;
+    A[Prepare to Modify Windows Registry for Event-Triggered Execution]
+    B[Create Registry Entry for Event Triggered Execution]
+    C[Ensure Registry-Triggered Execution Persistence]
+    D[Conceal Registry Modifications]
+    E[Persistence Achieved via Registry Event Trigger]
+
+    A -->|"Gain administrative access to modify registry settings Corporate Control: Admin Rights, Registry Editor"| B
+    A -->|"Identify registry keys that trigger specific system events Corporate Control: Registry Management, Event Log Configuration"| B
+    A -->|"Prepare malicious code to execute when event is triggered Corporate Control: PowerShell, Scripting Tools"| B
+    A -->|"Monitor system for registry changes that could trigger malicious code Corporate Control: Event Viewer, Registry Monitor"| B
+    B -->|"Modify registry to create event trigger for malicious process Corporate Control: Registry Key Modification, Task Scheduler"| C
+    B -->|"Ensure event-triggered code executes after reboot Corporate Control: System Startup Configuration, Registry Key Settings"| C
+    B -->|"Ensure registry-triggered task persists across system restarts Corporate Control: Task Scheduler, Registry Editor"| C
+    B -->|"Apply obfuscation techniques to hide registry event trigger Corporate Control: Log Management, Registry Monitoring"| C
+    C -->|"Monitor registry-triggered task execution for stability Corporate Control: Task Scheduler, Event Logs"| D
+    C -->|"Ensure event triggers task consistently Corporate Control: Windows Logs, Event Viewer"| D
+    C -->|"Reapply registry settings if disrupted Corporate Control: Registry Key Management, Task Scheduler Settings"| D
+    D -->|"Hide event-triggered task from user interface Corporate Control: Event Manager, Registry Monitoring"| E
+    D -->|"Blend registry event tasks with legitimate system tasks Corporate Control: Task Scheduler, Event Viewer"| E
+    D -->|"Ensure registry-triggered task remains undetected by security solutions Corporate Control: Antivirus, EDR Tools"| E
+    D -->|"Monitor registry-triggered task for stealth Corporate Control: SIEM Tools, Security Operations Center (SOC)"| E

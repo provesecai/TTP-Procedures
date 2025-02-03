@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyingWindowsPerformanceMonitorForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Windows Performance Monitor for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Modify Performance Monitor to Trigger Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure Performance Monitor Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Performance Triggering</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Performance Monitor Modification</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to modify Windows Performance Monitor settings Corporate Control: Admin Rights, Performance Monitor Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify performance metrics for malicious triggering Corporate Control: Performance Monitoring, Event Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prepare malicious code to execute based on performance metrics Corporate Control: PowerShell, Performance Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system for performance triggers Corporate Control: Event Viewer, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create performance rule to trigger malicious process Corporate Control: Task Scheduler, Performance Monitor Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task is triggered based on performance metric Corporate Control: System Configuration, Performance Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious task persists across reboots Corporate Control: Task Scheduler, System Boot Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply obfuscation to hide task in performance logs Corporate Control: Event Log Filtering, Performance Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution for continued access Corporate Control: Event Logs, Performance Monitor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure performance-based task survives system restarts Corporate Control: Task Scheduler, System Boot Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply configuration after system restarts Corporate Control: Performance Configuration, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious task from user and admin views Corporate Control: Task Manager, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend performance-based task with regular system tasks Corporate Control: Event Viewer, Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through performance metrics Corporate Control: SIEM, Security Operations Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for detection of performance task Corporate Control: SIEM Tools, Event Log Monitoring</data>
+</edge>
+</graph>
+</graphml>

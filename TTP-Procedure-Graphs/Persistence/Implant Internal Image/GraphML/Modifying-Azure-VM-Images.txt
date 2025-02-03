@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifyingAzureVMImagesForPersistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare to Modify Azure VM Image for Persistence</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Azure VM Image</data>
+</node>
+<node id="C">
+<data key="label">Ensure Azure VM Image Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Azure VM Image Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Azure VM Image</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain administrative access to modify Azure VM image Corporate Control: Azure Console, Admin Rights</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Select target Azure VM image for modification Corporate Control: Azure Console, VM Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious code into Azure VM image layers Corporate Control: VM Configuration, Cloud Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor image creation process for successful modification Corporate Control: Azure Logs, Cloud Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Azure VM image to execute malicious code during VM launch Corporate Control: Azure VM Configuration, UserData Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious payload persists across reboots Corporate Control: Azure Auto-Scaling, Persistent Disks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious payload executes during VM bootup Corporate Control: Azure Resource Manager, VM Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate malicious changes in VM image Corporate Control: Azure Activity Logs, VM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor VM deployment to ensure malicious payload execution Corporate Control: VM Logs, Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of malicious payload across VM redeployments Corporate Control: Azure Recovery, Image Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reapply malicious code if VM image is reset Corporate Control: VM Configuration, Deployment Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide malicious VM image activity from administrators Corporate Control: Azure Logs, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious VM image activity with legitimate Azure tasks Corporate Control: Azure Task Manager, Network Traffic</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure undetectable persistence through image modification Corporate Control: Antivirus, EDR Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor VM image activity for stealth Corporate Control: SIEM Systems, SOC Tools</data>
+</edge>
+</graph>
+</graphml>
