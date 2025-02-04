@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="OneNote-Add-In-Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify OneNote Add-In Loading Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious OneNote Add-In</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence via Auto-Execution</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection and Monitoring</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via OneNote Add-In Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Locate OneNote add-in directory Corporate Control: Microsoft OneNote, User's AppData</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing add-ins for modification Corporate Control: Windows File System, Add-In Loader</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best way to deploy a rogue OneNote add-in Corporate Control: Add-In Configuration, COM Objects</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized add-in modifications Corporate Control: File Integrity Monitoring (FIM), SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious OneNote add-in into add-in directory Corporate Control: Office Add-In Loader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify add-in settings to ensure execution on launch Corporate Control: OneNote Startup Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure add-in persists across software updates Corporate Control: Office Patch Management, Update Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized add-in execution Corporate Control: Endpoint Security, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying file permissions Corporate Control: NTFS Permissions, Office Group Policy</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure redundant add-in deployments for persistence Corporate Control: Alternate OneNote Add-In Locations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify OneNote logging behavior to avoid detection Corporate Control: Windows Event Logs, Office Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor OneNote activity for suspicious behavior Corporate Control: Security Operations Center (SOC), SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt add-in payloads to evade detection Corporate Control: Code Obfuscation, File Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove traces of add-in execution Corporate Control: Windows Event Logs, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple add-in modifications for redundancy Corporate Control: Alternate COM Objects</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors OneNote add-in activity Corporate Control: SIEM, Security Operations</data>
+</edge>
+</graph>
+</graphml>

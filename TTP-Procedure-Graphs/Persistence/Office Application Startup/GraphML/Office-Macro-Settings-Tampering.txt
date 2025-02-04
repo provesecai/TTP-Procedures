@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Office-Macro-Settings-Tampering" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Office Macro Security Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify Macro Execution Policies to Allow Persistence</data>
+</node>
+<node id="C">
+<data key="label">Ensure Macros Execute Without User Interaction</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection by Hiding Policy Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Macro Settings Tampering</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify default macro security settings Corporate Control: Office Trust Center</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze how macro policies are enforced Corporate Control: Windows Group Policy, Registry Keys</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method to bypass macro execution warnings Corporate Control: Office Macro Engine, GPO</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to macro settings Corporate Control: Security Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry and policy settings to allow macros Corporate Control: Windows Registry Editor, Office GPO</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure all macros execute without security prompts Corporate Control: Office Trust Center Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prevent macro execution settings from being reset Corporate Control: Office Policy Enforcements</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor Office macro behavior for anomalies Corporate Control: Threat Intelligence, Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence by locking macro settings Corporate Control: Windows Registry, Group Policy Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure alternative persistence mechanisms exist Corporate Control: Multiple Macro Execution Methods</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event logging to prevent detection Corporate Control: Event Log Tampering, Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor policy enforcement changes Corporate Control: SIEM, SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt macro settings modification scripts Corporate Control: Code Obfuscation, Registry Key Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove traces of unauthorized macro settings changes Corporate Control: Windows Event Logs, Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant macro policy modifications for persistence Corporate Control: Multiple Macro Settings Hijacks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Office macro execution behavior Corporate Control: Security Operations, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

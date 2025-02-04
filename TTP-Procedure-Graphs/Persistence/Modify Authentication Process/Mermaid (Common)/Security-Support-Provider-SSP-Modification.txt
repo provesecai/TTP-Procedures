@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Security Support Provider (SSP) Mechanism]
+    B[Inject Malicious SSP Module]
+    C[Intercept and Manipulate Authentication Requests]
+    D[Conceal Malicious SSP from Detection]
+    E[Persistence Achieved via SSP Modification]
+
+    A -->|"Analyze existing SSP modules and their role Corporate Control: LSASS, Windows Security Subsystem"| B
+    A -->|"Determine the best method to inject a custom SSP Corporate Control: Windows Registry, Authentication Flow"| B
+    A -->|"Modify SSP list to include the attacker's module Corporate Control: Windows API Hooking"| B
+    A -->|"Monitor system changes to SSP configuration Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Deploy rogue SSP to intercept authentication requests Corporate Control: LSASS Process"| C
+    B -->|"Modify authentication responses to accept attacker credentials Corporate Control: Windows Authentication Flow"| C
+    B -->|"Ensure persistence via system reboots Corporate Control: Registry Persistence, System Boot Settings"| C
+    B -->|"Monitor for unauthorized SSP modifications Corporate Control: Security Event Logs, Endpoint Security"| C
+    C -->|"Capture and reuse credentials to maintain access Corporate Control: Windows Authentication Modules"| D
+    C -->|"Prevent SSP removal by modifying registry permissions Corporate Control: Group Policy, Access Control Lists (ACLs)"| D
+    C -->|"Hide modified SSP from detection tools Corporate Control: Process Obfuscation, Windows API Tampering"| D
+    C -->|"Monitor for unauthorized authentication behavior Corporate Control: Threat Detection, Security Operations"| D
+    D -->|"Encrypt and pack rogue SSP to evade detection Corporate Control: Code Packing, File Encryption"| E
+    D -->|"Modify system logs to remove evidence of injection Corporate Control: Windows Event Logs, Security Analytics"| E
+    D -->|"Deploy redundant SSP modifications for resilience Corporate Control: Multiple SSP Hooks"| E
+    D -->|"Incident response team monitors authentication anomalies Corporate Control: SOC, EDR"| E

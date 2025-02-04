@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Office Macro Security Settings]
+    B[Modify Macro Execution Policies to Allow Persistence]
+    C[Ensure Macros Execute Without User Interaction]
+    D[Evade Detection by Hiding Policy Changes]
+    E[Persistence Achieved via Macro Settings Tampering]
+
+    A -->|"Identify default macro security settings Corporate Control: Office Trust Center"| B
+    A -->|"Analyze how macro policies are enforced Corporate Control: Windows Group Policy, Registry Keys"| B
+    A -->|"Determine method to bypass macro execution warnings Corporate Control: Office Macro Engine, GPO"| B
+    A -->|"Monitor unauthorized modifications to macro settings Corporate Control: Security Event Logs, SIEM"| B
+    B -->|"Modify registry and policy settings to allow macros Corporate Control: Windows Registry Editor, Office GPO"| C
+    B -->|"Ensure all macros execute without security prompts Corporate Control: Office Trust Center Settings"| C
+    B -->|"Prevent macro execution settings from being reset Corporate Control: Office Policy Enforcements"| C
+    B -->|"Monitor Office macro behavior for anomalies Corporate Control: Threat Intelligence, Endpoint Security"| C
+    C -->|"Maintain persistence by locking macro settings Corporate Control: Windows Registry, Group Policy Restrictions"| D
+    C -->|"Ensure alternative persistence mechanisms exist Corporate Control: Multiple Macro Execution Methods"| D
+    C -->|"Modify event logging to prevent detection Corporate Control: Event Log Tampering, Security Policies"| D
+    C -->|"Monitor policy enforcement changes Corporate Control: SIEM, SOC"| D
+    D -->|"Encrypt macro settings modification scripts Corporate Control: Code Obfuscation, Registry Key Encryption"| E
+    D -->|"Modify logs to remove traces of unauthorized macro settings changes Corporate Control: Windows Event Logs, Security Monitoring"| E
+    D -->|"Deploy redundant macro policy modifications for persistence Corporate Control: Multiple Macro Settings Hijacks"| E
+    D -->|"SOC continuously monitors Office macro execution behavior Corporate Control: Security Operations, Threat Hunting"| E

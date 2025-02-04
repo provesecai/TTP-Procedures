@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze NTLM Authentication Workflow]
+    B[Modify NTLM Response Mechanism]
+    C[Ensure Persistent Unauthorized Logins]
+    D[Prevent NTLM Detection and Monitoring]
+    E[Persistence Achieved via NTLM Manipulation]
+
+    A -->|"Identify NTLM challenge-response process Corporate Control: Windows Authentication Stack"| B
+    A -->|"Analyze NTLM security mechanisms Corporate Control: LSASS, NTLM Protocol"| B
+    A -->|"Determine method to alter NTLM responses Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor NTLM logs for anomalous behavior Corporate Control: SIEM, Event Logs"| B
+    B -->|"Modify NTLM hash response validation Corporate Control: Network Authentication Mechanisms"| C
+    B -->|"Inject fake NTLM responses for backdoor access Corporate Control: NTLM Challenge-Response Handling"| C
+    B -->|"Ensure manipulated NTLM authentication persists Corporate Control: Windows Registry, Policy Modifications"| C
+    B -->|"Monitor network authentication traffic for NTLM anomalies Corporate Control: Network Security Monitoring"| C
+    C -->|"Utilize modified NTLM flows for persistent access Corporate Control: Domain Authentication Services"| D
+    C -->|"Prevent NTLM remediation via registry hooks Corporate Control: Windows Registry, Policy Enforcement"| D
+    C -->|"Ensure NTLM modifications persist across reboots Corporate Control: Scheduled Tasks, GPO Manipulation"| D
+    C -->|"Monitor authentication logs for unauthorized changes Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Encrypt and obfuscate NTLM manipulation code Corporate Control: Code Packing, Obfuscation"| E
+    D -->|"Modify system logs to hide NTLM tampering Corporate Control: Windows Event Logs, Log Scrubbing"| E
+    D -->|"Deploy multiple NTLM authentication modifications Corporate Control: Backup Credential Injection Methods"| E
+    D -->|"SOC team monitors NTLM authentication attempts Corporate Control: Security Operations, Threat Hunting"| E

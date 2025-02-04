@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify SSO Mechanisms and Token Usage]
+    B[Inject Rogue Token Generator]
+    C[Reuse Stolen Tokens for Persistent Access]
+    D[Prevent Token Expiry and Conceal Modifications]
+    E[Persistence Achieved via SSO Token Hijacking]
+
+    A -->|"Analyze authentication flow of SSO Corporate Control: Active Directory Federation Services (ADFS)"| B
+    A -->|"Identify token generation process Corporate Control: OAuth, SAML, Kerberos"| B
+    A -->|"Determine method for injecting rogue tokens Corporate Control: Identity Management System"| B
+    A -->|"Monitor authentication logs for abnormal token activity Corporate Control: SIEM, Security Logging"| B
+    B -->|"Deploy rogue authentication token generator Corporate Control: Windows Security Subsystem"| C
+    B -->|"Modify authentication flow to accept forged tokens Corporate Control: SSO Authentication Module"| C
+    B -->|"Ensure persistent access across SSO sessions Corporate Control: Identity Federation, Token Replay"| C
+    B -->|"Monitor token issuance process for anomalies Corporate Control: Security Event Monitoring"| C
+    C -->|"Automatically refresh stolen tokens to prevent expiry Corporate Control: Kerberos, OAuth Refresh Tokens"| D
+    C -->|"Modify logs to remove token hijacking traces Corporate Control: Windows Event Logs, SIEM"| D
+    C -->|"Ensure multiple fallback authentication mechanisms Corporate Control: Backup Credentials, Shadow Accounts"| D
+    C -->|"Monitor for repeated access from unauthorized tokens Corporate Control: Security Operations Center"| D
+    D -->|"Encrypt stolen tokens to evade detection Corporate Control: Token Obfuscation, Encrypted Storage"| E
+    D -->|"Modify system authentication records to allow rogue tokens Corporate Control: Identity Management System"| E
+    D -->|"Deploy additional token hijacking techniques Corporate Control: Credential Injection, Browser Session Hijack"| E
+    D -->|"SOC analysts review unauthorized token access attempts Corporate Control: Threat Intelligence, SIEM"| E

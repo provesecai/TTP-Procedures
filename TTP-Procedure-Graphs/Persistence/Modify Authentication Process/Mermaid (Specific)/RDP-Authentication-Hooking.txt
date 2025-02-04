@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify RDP Authentication Mechanisms]
+    B[Hook RDP Authentication to Allow Unauthorized Logins]
+    C[Maintain Persistent RDP Access]
+    D[Evade RDP Security Controls]
+    E[Persistence Achieved via RDP Authentication Hook]
+
+    A -->|"Analyze RDP authentication stack Corporate Control: Windows Remote Desktop Services"| B
+    A -->|"Identify RDP authentication hooks Corporate Control: Terminal Services DLLs"| B
+    A -->|"Determine the best method for injecting authentication hooks Corporate Control: LSASS, Windows API"| B
+    A -->|"Monitor RDP logs for anomalies Corporate Control: Event Logs, SIEM"| B
+    B -->|"Inject custom authentication hooks into RDP process Corporate Control: Windows Authentication API"| C
+    B -->|"Modify RDP logon flow to bypass credentials Corporate Control: Remote Desktop Security Policies"| C
+    B -->|"Ensure persistence across reboots Corporate Control: Windows Registry, Task Scheduler"| C
+    B -->|"Monitor RDP authentication flow for anomalies Corporate Control: Threat Intelligence, Endpoint Security"| C
+    C -->|"Use hooked authentication to maintain RDP persistence Corporate Control: Remote Desktop Session Host (RDSH)"| D
+    C -->|"Prevent detection by modifying logging behavior Corporate Control: Windows Event Logs"| D
+    C -->|"Ensure RDP authentication bypass survives updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor suspicious RDP activity Corporate Control: SOC, Security Operations"| D
+    D -->|"Encrypt malicious RDP hooks to evade detection Corporate Control: Code Obfuscation, DLL Packing"| E
+    D -->|"Modify security logs to remove traces of RDP tampering Corporate Control: Windows Event Logs, SIEM"| E
+    D -->|"Deploy multiple authentication bypass techniques Corporate Control: Alternate Credential Hooks"| E
+    D -->|"SOC monitors unauthorized RDP logins Corporate Control: Threat Intelligence, SIEM"| E

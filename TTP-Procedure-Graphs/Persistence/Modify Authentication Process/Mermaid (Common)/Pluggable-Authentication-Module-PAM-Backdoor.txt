@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Linux PAM Authentication Modules]
+    B[Deploy Malicious PAM Module]
+    C[Modify Authentication Flow to Maintain Access]
+    D[Conceal Rogue PAM from Detection]
+    E[Persistence Achieved via PAM Backdoor]
+
+    A -->|"Identify critical PAM modules used in authentication Corporate Control: Linux PAM Configuration"| B
+    A -->|"Determine method to insert malicious module Corporate Control: System Authentication Policies"| B
+    A -->|"Analyze SSH and system authentication flow Corporate Control: SSHD, Login Process"| B
+    A -->|"Monitor PAM logs for unauthorized modifications Corporate Control: SIEM, Log Monitoring"| B
+    B -->|"Inject custom PAM module to accept backdoor credentials Corporate Control: Linux Authentication Mechanism"| C
+    B -->|"Modify PAM stack to redirect authentication requests Corporate Control: PAM Configuration Files"| C
+    B -->|"Ensure module loads at system startup Corporate Control: System Services, Init Scripts"| C
+    B -->|"Monitor PAM module changes Corporate Control: File Integrity Monitoring (FIM), Security Policies"| C
+    C -->|"Enable persistence through patched PAM functionality Corporate Control: SSH, System Logins"| D
+    C -->|"Modify logs to remove traces of unauthorized authentication Corporate Control: Logrotate, Auditd"| D
+    C -->|"Prevent administrator removal of rogue PAM module Corporate Control: File Permissions, Security Policy Hardening"| D
+    C -->|"Detect anomalies in authentication logs Corporate Control: Threat Intelligence, Security Analytics"| D
+    D -->|"Encrypt or obfuscate module to evade security tools Corporate Control: PAM Module Hardening, Code Packing"| E
+    D -->|"Remove security audit traces of module injection Corporate Control: System Logs, Authentication History"| E
+    D -->|"Deploy redundant backdoor mechanisms via PAM chaining Corporate Control: Alternate Login Modules"| E
+    D -->|"SOC team monitors unusual authentication patterns Corporate Control: Security Operations, Intrusion Detection"| E

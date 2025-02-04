@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SSO-Token-Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SSO Mechanisms and Token Usage</data>
+</node>
+<node id="B">
+<data key="label">Inject Rogue Token Generator</data>
+</node>
+<node id="C">
+<data key="label">Reuse Stolen Tokens for Persistent Access</data>
+</node>
+<node id="D">
+<data key="label">Prevent Token Expiry and Conceal Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSO Token Hijacking</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze authentication flow of SSO Corporate Control: Active Directory Federation Services (ADFS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify token generation process Corporate Control: OAuth, SAML, Kerberos</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method for injecting rogue tokens Corporate Control: Identity Management System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor authentication logs for abnormal token activity Corporate Control: SIEM, Security Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy rogue authentication token generator Corporate Control: Windows Security Subsystem</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication flow to accept forged tokens Corporate Control: SSO Authentication Module</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistent access across SSO sessions Corporate Control: Identity Federation, Token Replay</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor token issuance process for anomalies Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automatically refresh stolen tokens to prevent expiry Corporate Control: Kerberos, OAuth Refresh Tokens</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to remove token hijacking traces Corporate Control: Windows Event Logs, SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure multiple fallback authentication mechanisms Corporate Control: Backup Credentials, Shadow Accounts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for repeated access from unauthorized tokens Corporate Control: Security Operations Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt stolen tokens to evade detection Corporate Control: Token Obfuscation, Encrypted Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system authentication records to allow rogue tokens Corporate Control: Identity Management System</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional token hijacking techniques Corporate Control: Credential Injection, Browser Session Hijack</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC analysts review unauthorized token access attempts Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+</graph>
+</graphml>

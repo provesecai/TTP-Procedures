@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Kerberos-Privilege-Attribute-Certificate-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Kerberos PAC Structure</data>
+</node>
+<node id="B">
+<data key="label">Modify Kerberos PAC to Grant Persistent Privileges</data>
+</node>
+<node id="C">
+<data key="label">Ensure PAC Persistence Across Sessions</data>
+</node>
+<node id="D">
+<data key="label">Evade Kerberos Security Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Kerberos PAC Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify how Kerberos PAC stores user privileges Corporate Control: Active Directory, Key Distribution Center (KDC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing PAC verification mechanisms Corporate Control: Kerberos Authentication Workflow</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method for injecting forged PAC data Corporate Control: Windows Kerberos API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Kerberos ticket issuance logs Corporate Control: SIEM, KDC Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue PAC to escalate privileges Corporate Control: Kerberos Ticket-Granting Ticket (TGT)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Kerberos PAC validation process Corporate Control: Kerberos Authentication Protocol</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure PAC modifications persist beyond reboots Corporate Control: Active Directory Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized PAC modifications Corporate Control: Security Event Logs, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Utilize modified PAC for persistent privileged access Corporate Control: Domain Authentication Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent PAC revocation by modifying Active Directory Policies Corporate Control: Group Policy, Authentication Rules</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure multiple fallback authentication methods exist Corporate Control: Credential Injection, Token Forgery</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized authentication attempts Corporate Control: SOC, EDR</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt PAC modifications to evade detection Corporate Control: Ticket Encryption, Code Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to remove traces of PAC tampering Corporate Control: Windows Event Logs, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple Kerberos modifications for redundancy Corporate Control: Alternate Authentication Injection Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC monitors anomalous Kerberos PAC activity Corporate Control: SIEM, Security Operations</data>
+</edge>
+</graph>
+</graphml>

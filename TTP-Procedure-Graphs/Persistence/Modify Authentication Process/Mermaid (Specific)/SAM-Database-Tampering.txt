@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Windows Security Account Manager (SAM) Database]
+    B[Modify SAM Database to Create Backdoor Accounts]
+    C[Ensure Backdoor Accounts Persist]
+    D[Conceal Unauthorized SAM Database Changes]
+    E[Persistence Achieved via SAM Tampering]
+
+    A -->|"Identify SAM database storage locations Corporate Control: Windows Registry"| B
+    A -->|"Determine modification techniques Corporate Control: LSASS, System Boot Policies"| B
+    A -->|"Analyze existing SAM authentication rules Corporate Control: Local Authentication Mechanisms"| B
+    A -->|"Monitor SAM access logs for anomalies Corporate Control: SIEM, File Integrity Monitoring"| B
+    B -->|"Inject rogue administrator accounts into SAM database Corporate Control: Windows Registry, Local User Management"| C
+    B -->|"Modify existing accounts to include unauthorized privileges Corporate Control: Security Account Policies"| C
+    B -->|"Ensure SAM modifications persist across reboots Corporate Control: Registry Hooks, Boot Configuration"| C
+    B -->|"Monitor for unauthorized SAM modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Use modified accounts for persistent access Corporate Control: Windows Authentication Stack"| D
+    C -->|"Prevent SAM rollback using security policy hooks Corporate Control: GPO, System Protection Policies"| D
+    C -->|"Ensure continuous control over SAM database Corporate Control: File System Access Restrictions"| D
+    C -->|"Monitor login attempts from rogue accounts Corporate Control: Security Operations, Event Logs"| D
+    D -->|"Obfuscate SAM database changes to evade detection Corporate Control: Data Encryption, File Packing"| E
+    D -->|"Modify security logs to remove traces of SAM tampering Corporate Control: Event Log Scrubbing, Threat Monitoring"| E
+    D -->|"Deploy redundant backdoor accounts for resilience Corporate Control: Alternate User Accounts"| E
+    D -->|"SOC team monitors for unexpected account creation Corporate Control: Identity Management, Security Analytics"| E

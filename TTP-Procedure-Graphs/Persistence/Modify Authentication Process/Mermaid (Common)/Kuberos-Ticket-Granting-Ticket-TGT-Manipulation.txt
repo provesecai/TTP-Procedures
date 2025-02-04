@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Kerberos Authentication Process]
+    B[Forge or Steal Ticket Granting Ticket (TGT)]
+    C[Utilize Forged TGT for Persistent Access]
+    D[Evade Detection and Maintain Access]
+    E[Persistence Achieved via Kerberos Manipulation]
+
+    A -->|"Identify Kerberos authentication workflow Corporate Control: Active Directory, Domain Controller"| B
+    A -->|"Analyze Ticket Granting Ticket (TGT) handling Corporate Control: Windows Security Mechanism"| B
+    A -->|"Determine TGT injection or forging methods Corporate Control: Mimikatz, Rubeus"| B
+    A -->|"Monitor KDC logs for suspicious TGT issuance Corporate Control: SIEM, Security Event Logs"| B
+    B -->|"Create or steal TGT from memory Corporate Control: LSASS Process"| C
+    B -->|"Modify session authentication to recognize forged tickets Corporate Control: Windows Kerberos API"| C
+    B -->|"Ensure TGT remains valid beyond expiration Corporate Control: Kerberos Ticket Lifetime Extensions"| C
+    B -->|"Monitor domain controller activity for forged tickets Corporate Control: Security Auditing, Threat Detection"| C
+    C -->|"Reuse stolen TGT for authentication bypass Corporate Control: Windows Authentication Services"| D
+    C -->|"Modify logs to prevent detection Corporate Control: Event Log Tampering, Security Policies"| D
+    C -->|"Ensure persistence across reboots Corporate Control: Scheduled Task, Ticket Renewal"| D
+    C -->|"Monitor unauthorized authentication attempts Corporate Control: Threat Intelligence, EDR"| D
+    D -->|"Obfuscate ticket details to prevent forensic analysis Corporate Control: Ticket Encryption, Code Packing"| E
+    D -->|"Modify security settings to prevent ticket revocation Corporate Control: Active Directory Policies, Authentication Rules"| E
+    D -->|"Deploy multiple forged TGTs for redundancy Corporate Control: Alternate Credential Injection Methods"| E
+    D -->|"SOC monitors anomalous Kerberos activity Corporate Control: SIEM, Security Operations"| E

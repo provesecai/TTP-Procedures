@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Outlook-VBA-Macro-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Outlook VBA Macro Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious VBA Code into Outlook Macros</data>
+</node>
+<node id="C">
+<data key="label">Ensure Macro Execution on Email Events</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection via Macro Obfuscation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Outlook VBA Macros</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify where Outlook macros are stored Corporate Control: User's AppData, Outlook Profile</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze default Outlook macro behavior Corporate Control: Outlook Macro Editor, Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best method to insert rogue VBA macros Corporate Control: Office Trust Center, Macro Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized macro injections Corporate Control: File Integrity Monitoring, Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Outlook macro settings to auto-execute Corporate Control: VBA Editor, Outlook Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Attach macro execution to common Outlook events Corporate Control: New Mail Rule, Calendar Events</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence across Outlook restarts Corporate Control: Outlook Startup Behavior</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor abnormal macro execution behavior Corporate Control: Endpoint Detection and Response (EDR), SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent macro removal by modifying Outlook permissions Corporate Control: Windows Registry, Group Policy</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event handling to bypass security prompts Corporate Control: Office Automation APIs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure multiple persistence methods exist Corporate Control: Alternate Macro Locations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized Outlook macro executions Corporate Control: Security Operations Center (SOC), Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate VBA macro code to prevent detection Corporate Control: Code Packing, Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to hide Outlook macro execution Corporate Control: Windows Event Logs, Office Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple redundant macro mechanisms for persistence Corporate Control: Alternate Email Automation Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC monitors Outlook event-based macro execution Corporate Control: SIEM, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

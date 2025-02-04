@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Excel Add-In Mechanisms]
+    B[Deploy Malicious XLL or XLAM File]
+    C[Maintain Persistence via Auto-Loading Add-In]
+    D[Prevent Detection and Monitoring]
+    E[Persistence Achieved via Excel Add-In Hijacking]
+
+    A -->|"Identify Excel add-in startup folders Corporate Control: Microsoft Excel, User's AppData"| B
+    A -->|"Analyze existing add-ins for modification Corporate Control: Excel Add-In Manager, Windows File System"| B
+    A -->|"Determine optimal method to introduce a rogue add-in Corporate Control: Office Macro Security, Windows Registry"| B
+    A -->|"Monitor unauthorized changes to Excel add-ins Corporate Control: File Integrity Monitoring, SIEM"| B
+    B -->|"Place malicious XLL or XLAM file in auto-load directory Corporate Control: Excel Add-In Loader"| C
+    B -->|"Ensure add-in execution occurs at every Excel startup Corporate Control: Excel Macro Engine, VBA Execution"| C
+    B -->|"Modify execution flow to prevent add-in removal Corporate Control: Windows Registry, Group Policy"| C
+    B -->|"Monitor for suspicious Excel behavior Corporate Control: Security Operations, Threat Intelligence"| C
+    C -->|"Maintain add-in persistence through software updates Corporate Control: Office Patch Management, Update Policies"| D
+    C -->|"Ensure alternate persistence mechanisms exist in case of removal Corporate Control: Alternate Startup Hooks"| D
+    C -->|"Modify add-in metadata to prevent visibility in UI Corporate Control: Office Add-In Management, GPO"| D
+    C -->|"Monitor for unauthorized changes in add-in settings Corporate Control: Endpoint Security, SIEM"| D
+    D -->|"Obfuscate XLL/XLAM code to evade detection Corporate Control: Code Packing, Encryption"| E
+    D -->|"Modify security logs to hide malicious add-in installation Corporate Control: Windows Event Logs, Office Logs"| E
+    D -->|"Ensure redundant add-in deployments for persistence Corporate Control: Multiple Auto-Load Locations"| E
+    D -->|"SOC continuously monitors Excel add-in activity Corporate Control: SIEM, Threat Intelligence"| E

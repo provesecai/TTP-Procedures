@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Security-Support-Provider-SSP-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Security Support Provider (SSP) Mechanism</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious SSP Module</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Manipulate Authentication Requests</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious SSP from Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSP Modification</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze existing SSP modules and their role Corporate Control: LSASS, Windows Security Subsystem</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine the best method to inject a custom SSP Corporate Control: Windows Registry, Authentication Flow</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify SSP list to include the attacker's module Corporate Control: Windows API Hooking</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system changes to SSP configuration Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy rogue SSP to intercept authentication requests Corporate Control: LSASS Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication responses to accept attacker credentials Corporate Control: Windows Authentication Flow</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence via system reboots Corporate Control: Registry Persistence, System Boot Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized SSP modifications Corporate Control: Security Event Logs, Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture and reuse credentials to maintain access Corporate Control: Windows Authentication Modules</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent SSP removal by modifying registry permissions Corporate Control: Group Policy, Access Control Lists (ACLs)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide modified SSP from detection tools Corporate Control: Process Obfuscation, Windows API Tampering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized authentication behavior Corporate Control: Threat Detection, Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt and pack rogue SSP to evade detection Corporate Control: Code Packing, File Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove evidence of injection Corporate Control: Windows Event Logs, Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant SSP modifications for resilience Corporate Control: Multiple SSP Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Incident response team monitors authentication anomalies Corporate Control: SOC, EDR</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Excel-Add-In-Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Excel Add-In Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious XLL or XLAM File</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistence via Auto-Loading Add-In</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection and Monitoring</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Excel Add-In Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Excel add-in startup folders Corporate Control: Microsoft Excel, User's AppData</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing add-ins for modification Corporate Control: Excel Add-In Manager, Windows File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine optimal method to introduce a rogue add-in Corporate Control: Office Macro Security, Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized changes to Excel add-ins Corporate Control: File Integrity Monitoring, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Place malicious XLL or XLAM file in auto-load directory Corporate Control: Excel Add-In Loader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure add-in execution occurs at every Excel startup Corporate Control: Excel Macro Engine, VBA Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution flow to prevent add-in removal Corporate Control: Windows Registry, Group Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for suspicious Excel behavior Corporate Control: Security Operations, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain add-in persistence through software updates Corporate Control: Office Patch Management, Update Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure alternate persistence mechanisms exist in case of removal Corporate Control: Alternate Startup Hooks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify add-in metadata to prevent visibility in UI Corporate Control: Office Add-In Management, GPO</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized changes in add-in settings Corporate Control: Endpoint Security, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate XLL/XLAM code to evade detection Corporate Control: Code Packing, Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to hide malicious add-in installation Corporate Control: Windows Event Logs, Office Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure redundant add-in deployments for persistence Corporate Control: Multiple Auto-Load Locations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Excel add-in activity Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze AD CS Authentication Workflow]
+    B[Modify AD CS to Issue Rogue Certificates]
+    C[Use Forged Certificates for Persistent Access]
+    D[Conceal Unauthorized Certificate Issuance]
+    E[Persistence Achieved via AD CS Manipulation]
+
+    A -->|"Identify how AD CS handles authentication Corporate Control: Active Directory Certificate Services (AD CS)"| B
+    A -->|"Analyze certificate issuance and validation processes Corporate Control: Windows Public Key Infrastructure (PKI)"| B
+    A -->|"Determine attack vectors for modifying AD CS Corporate Control: Certificate Templates, Enrollment Services"| B
+    A -->|"Monitor AD CS logs for unauthorized certificate issuance Corporate Control: SIEM, Security Event Logs"| B
+    B -->|"Modify AD CS policies to allow rogue certificate requests Corporate Control: Active Directory Policies, Group Policy"| C
+    B -->|"Generate malicious authentication certificates Corporate Control: Certificate Authority (CA), PKI Infrastructure"| C
+    B -->|"Ensure certificates remain valid despite revocation attempts Corporate Control: Certificate Revocation Lists (CRLs), OCSP"| C
+    B -->|"Monitor for unauthorized AD CS modifications Corporate Control: Security Monitoring, Event Logs"| C
+    C -->|"Use forged certificates for authentication bypass Corporate Control: Windows Authentication Services"| D
+    C -->|"Modify system authentication mechanisms to trust rogue certificates Corporate Control: Key Distribution Center (KDC), Domain Authentication"| D
+    C -->|"Prevent removal of rogue certificates by altering AD CS policies Corporate Control: Access Control Lists (ACLs), Group Policy Objects (GPOs)"| D
+    C -->|"Monitor certificate-based authentication logs for anomalies Corporate Control: SOC, Threat Intelligence"| D
+    D -->|"Encrypt malicious certificates to evade detection Corporate Control: Cryptographic Obfuscation, Key Manipulation"| E
+    D -->|"Modify system logs to hide evidence of rogue certificate issuance Corporate Control: Windows Event Logs, SIEM"| E
+    D -->|"Deploy multiple authentication certificates as redundancy Corporate Control: Alternate Certificate Authorities"| E
+    D -->|"SOC team monitors AD CS activity for unauthorized certificate issuance Corporate Control: Security Operations, Threat Hunting"| E

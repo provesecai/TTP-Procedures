@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze COM Add-In Mechanisms]
+    B[Deploy Malicious COM Object for Office Applications]
+    C[Maintain Persistence via Auto-Loading COM Add-In]
+    D[Prevent Detection and Monitoring]
+    E[Persistence Achieved via COM Add-In Hijacking]
+
+    A -->|"Identify COM Add-In locations Corporate Control: Windows Registry, Office Configuration"| B
+    A -->|"Analyze existing COM add-ins Corporate Control: Windows COM API, Office COM Registry Keys"| B
+    A -->|"Determine best way to register a malicious COM add-in Corporate Control: COM Object Creation, Office Add-In Manager"| B
+    A -->|"Monitor registry modifications for unauthorized COM add-ins Corporate Control: SIEM, Registry Event Logs"| B
+    B -->|"Register malicious COM object for Office auto-execution Corporate Control: Windows COM Infrastructure"| C
+    B -->|"Ensure add-in is loaded on every Office startup Corporate Control: Office Add-In Loader"| C
+    B -->|"Modify execution flow to evade security controls Corporate Control: Office Macro Security, GPO"| C
+    B -->|"Monitor Office COM execution behavior Corporate Control: Threat Intelligence, Endpoint Security"| C
+    C -->|"Maintain COM add-in persistence across software updates Corporate Control: Patch Management, Registry Persistence"| D
+    C -->|"Ensure redundant COM objects exist in case of removal Corporate Control: Alternate COM Registration"| D
+    C -->|"Modify add-in properties to prevent user visibility Corporate Control: Office Add-In Management UI"| D
+    C -->|"Monitor COM interactions for anomalies Corporate Control: Security Operations, Threat Intelligence"| D
+    D -->|"Encrypt COM object properties to avoid detection Corporate Control: Code Obfuscation, File Encryption"| E
+    D -->|"Modify security logs to hide unauthorized COM modifications Corporate Control: Windows Event Logs, Office Logs"| E
+    D -->|"Deploy additional persistence mechanisms as fallback Corporate Control: Multiple COM Object Registrations"| E
+    D -->|"SOC continuously monitors Office COM interactions Corporate Control: SIEM, Threat Hunting"| E

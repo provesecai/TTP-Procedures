@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NTLM-Authentication-Flow-Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze NTLM Authentication Workflow</data>
+</node>
+<node id="B">
+<data key="label">Modify NTLM Response Mechanism</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Unauthorized Logins</data>
+</node>
+<node id="D">
+<data key="label">Prevent NTLM Detection and Monitoring</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via NTLM Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify NTLM challenge-response process Corporate Control: Windows Authentication Stack</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze NTLM security mechanisms Corporate Control: LSASS, NTLM Protocol</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method to alter NTLM responses Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor NTLM logs for anomalous behavior Corporate Control: SIEM, Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify NTLM hash response validation Corporate Control: Network Authentication Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject fake NTLM responses for backdoor access Corporate Control: NTLM Challenge-Response Handling</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure manipulated NTLM authentication persists Corporate Control: Windows Registry, Policy Modifications</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network authentication traffic for NTLM anomalies Corporate Control: Network Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Utilize modified NTLM flows for persistent access Corporate Control: Domain Authentication Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent NTLM remediation via registry hooks Corporate Control: Windows Registry, Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure NTLM modifications persist across reboots Corporate Control: Scheduled Tasks, GPO Manipulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor authentication logs for unauthorized changes Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt and obfuscate NTLM manipulation code Corporate Control: Code Packing, Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to hide NTLM tampering Corporate Control: Windows Event Logs, Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple NTLM authentication modifications Corporate Control: Backup Credential Injection Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team monitors NTLM authentication attempts Corporate Control: Security Operations, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Domain Controller Authentication Mechanisms]
+    B[Patch LSASS Process]
+    C[Maintain Backdoor Access]
+    D[Conceal Authentication Modifications]
+    E[Persistence Achieved via Domain Controller Backdoor]
+
+    A -->|"Analyze domain authentication structure Corporate Control: Active Directory"| B
+    A -->|"Identify LSASS role in handling authentication Corporate Control: Windows Kernel Security"| B
+    A -->|"Determine method to modify LSASS without detection Corporate Control: Local Security Authority Subsystem (LSASS)"| B
+    A -->|"Monitor domain controller logs for unexpected changes Corporate Control: SIEM, Event Logs"| B
+    B -->|"Inject code to modify LSASS allowing unauthorized logins Corporate Control: LSASS Process"| C
+    B -->|"Modify authentication policies to accept backdoor credentials Corporate Control: Group Policy, Windows Security Settings"| C
+    B -->|"Ensure changes persist after reboots Corporate Control: Scheduled Tasks, System Registry"| C
+    B -->|"Monitor memory manipulations in LSASS Corporate Control: Endpoint Detection and Response (EDR), Threat Monitoring"| C
+    C -->|"Test backdoor for persistent authentication Corporate Control: Windows Authentication Mechanism"| D
+    C -->|"Modify system configurations to prevent detection Corporate Control: Active Directory Group Policies"| D
+    C -->|"Ensure modifications remain through security patches Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor for unauthorized access attempts Corporate Control: Security Operations Center (SOC), SIEM"| D
+    D -->|"Clear logs to hide evidence of authentication changes Corporate Control: Windows Event Logs, SIEM"| E
+    D -->|"Prevent detection through obfuscation techniques Corporate Control: Windows API Hooking, Process Injection"| E
+    D -->|"Deploy redundant persistence mechanisms Corporate Control: Alternate Credential Providers, NTLM Overwrite"| E
+    D -->|"Incident response monitoring for unauthorized LSASS modifications Corporate Control: Threat Hunting, Security Hardening"| E

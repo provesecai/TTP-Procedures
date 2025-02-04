@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Outlook VBA Macro Capabilities]
+    B[Inject Malicious VBA Code into Outlook Macros]
+    C[Ensure Macro Execution on Email Events]
+    D[Evade Detection via Macro Obfuscation]
+    E[Persistence Achieved via Outlook VBA Macros]
+
+    A -->|"Identify where Outlook macros are stored Corporate Control: User's AppData, Outlook Profile"| B
+    A -->|"Analyze default Outlook macro behavior Corporate Control: Outlook Macro Editor, Windows Security Policies"| B
+    A -->|"Determine best method to insert rogue VBA macros Corporate Control: Office Trust Center, Macro Settings"| B
+    A -->|"Monitor for unauthorized macro injections Corporate Control: File Integrity Monitoring, Security Event Logs"| B
+    B -->|"Modify Outlook macro settings to auto-execute Corporate Control: VBA Editor, Outlook Rules"| C
+    B -->|"Attach macro execution to common Outlook events Corporate Control: New Mail Rule, Calendar Events"| C
+    B -->|"Ensure persistence across Outlook restarts Corporate Control: Outlook Startup Behavior"| C
+    B -->|"Monitor abnormal macro execution behavior Corporate Control: Endpoint Detection and Response (EDR), SIEM"| C
+    C -->|"Prevent macro removal by modifying Outlook permissions Corporate Control: Windows Registry, Group Policy"| D
+    C -->|"Modify event handling to bypass security prompts Corporate Control: Office Automation APIs"| D
+    C -->|"Ensure multiple persistence methods exist Corporate Control: Alternate Macro Locations"| D
+    C -->|"Monitor for unauthorized Outlook macro executions Corporate Control: Security Operations Center (SOC), Threat Intelligence"| D
+    D -->|"Obfuscate VBA macro code to prevent detection Corporate Control: Code Packing, Encryption"| E
+    D -->|"Modify security logs to hide Outlook macro execution Corporate Control: Windows Event Logs, Office Logs"| E
+    D -->|"Deploy multiple redundant macro mechanisms for persistence Corporate Control: Alternate Email Automation Hooks"| E
+    D -->|"SOC monitors Outlook event-based macro execution Corporate Control: SIEM, Threat Hunting"| E

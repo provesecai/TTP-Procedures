@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Word's Normal.dotm Template]
+    B[Inject Malicious VBA Macros]
+    C[Maintain Persistence Across Word Sessions]
+    D[Obfuscate Malicious Template Modifications]
+    E[Persistence Achieved via Normal.dotm Hijacking]
+
+    A -->|"Locate Normal.dotm template in Office startup directory Corporate Control: Microsoft Word, User's AppData"| B
+    A -->|"Analyze existing macros and user permissions Corporate Control: Windows File System, Office Security Policies"| B
+    A -->|"Determine method for modifying Normal.dotm without detection Corporate Control: Windows API, VBA Editor"| B
+    A -->|"Monitor unauthorized modifications to Normal.dotm Corporate Control: File Integrity Monitoring, SIEM"| B
+    B -->|"Inject malicious macros to execute upon Word startup Corporate Control: Microsoft Office VBA Engine"| C
+    B -->|"Modify macro execution policies to avoid security warnings Corporate Control: Office Trust Center, Macro Security Settings"| C
+    B -->|"Ensure macros execute automatically across all sessions Corporate Control: Word Startup Configuration"| C
+    B -->|"Monitor for unauthorized macro changes Corporate Control: Endpoint Security, Group Policy Restrictions"| C
+    C -->|"Prevent accidental overwrites of Normal.dotm Corporate Control: File Permissions, Registry Persistence"| D
+    C -->|"Ensure persistence through Office updates Corporate Control: Patch Management, Office Update Mechanisms"| D
+    C -->|"Modify logging mechanisms to prevent detection Corporate Control: Windows Event Logs, Threat Intelligence"| D
+    C -->|"Monitor for abnormal Word startup behavior Corporate Control: Security Operations Center (SOC), SIEM"| D
+    D -->|"Obfuscate VBA macro code to evade detection Corporate Control: Code Packing, Encryption Techniques"| E
+    D -->|"Modify Office startup logs to remove traces Corporate Control: Event Log Tampering, Security Analytics"| E
+    D -->|"Deploy additional persistence mechanisms in case of remediation Corporate Control: Alternate Startup Macros"| E
+    D -->|"SOC team continuously monitors Office template modifications Corporate Control: Threat Hunting, Security Operations"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Office Click-to-Run (C2R) Configuration]
+    B[Modify C2R Settings to Deploy Malicious Components]
+    C[Ensure Persistent Execution of Malicious Office Components]
+    D[Evade Detection by Altering Configuration Logs]
+    E[Persistence Achieved via Click-to-Run Manipulation]
+
+    A -->|"Identify how Office C2R manages application updates Corporate Control: Office Deployment Tool, Windows Registry"| B
+    A -->|"Analyze C2R configuration for possible modification Corporate Control: Office Click-to-Run Service"| B
+    A -->|"Determine best method to alter update channels Corporate Control: Group Policy, Update Configuration"| B
+    A -->|"Monitor unauthorized modifications to C2R settings Corporate Control: Registry Event Logs, SIEM"| B
+    B -->|"Inject malicious payloads into Office Click-to-Run updates Corporate Control: Office Deployment Tool, Windows Installer"| C
+    B -->|"Modify update paths to fetch compromised Office builds Corporate Control: Network Proxy, GPO"| C
+    B -->|"Ensure malicious updates persist across reboots Corporate Control: Scheduled Office Updates, Configuration Persistence"| C
+    B -->|"Monitor for unauthorized changes to Office update mechanisms Corporate Control: Security Monitoring, Endpoint Protection"| C
+    C -->|"Prevent administrators from reverting C2R modifications Corporate Control: Windows Registry, Group Policy Restrictions"| D
+    C -->|"Ensure alternative persistence mechanisms if reverted Corporate Control: Multiple Update Channel Manipulations"| D
+    C -->|"Modify logging behavior to prevent detection Corporate Control: Event Log Tampering, Security Policies"| D
+    C -->|"Monitor Office updates for anomalies Corporate Control: SOC, Threat Intelligence"| D
+    D -->|"Encrypt modified C2R settings to evade detection Corporate Control: Registry Key Encryption, Obfuscation"| E
+    D -->|"Modify logs to remove traces of unauthorized Click-to-Run changes Corporate Control: Windows Event Logs, Security Policies"| E
+    D -->|"Deploy multiple update configuration hijacks for persistence Corporate Control: Alternate C2R Configurations"| E
+    D -->|"SOC continuously monitors Office Click-to-Run activity Corporate Control: Security Operations, Threat Hunting"| E

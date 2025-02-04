@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Office-Click-to-Run-Configuration-Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Office Click-to-Run (C2R) Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify C2R Settings to Deploy Malicious Components</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Execution of Malicious Office Components</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection by Altering Configuration Logs</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Click-to-Run Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify how Office C2R manages application updates Corporate Control: Office Deployment Tool, Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze C2R configuration for possible modification Corporate Control: Office Click-to-Run Service</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best method to alter update channels Corporate Control: Group Policy, Update Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to C2R settings Corporate Control: Registry Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious payloads into Office Click-to-Run updates Corporate Control: Office Deployment Tool, Windows Installer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify update paths to fetch compromised Office builds Corporate Control: Network Proxy, GPO</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious updates persist across reboots Corporate Control: Scheduled Office Updates, Configuration Persistence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to Office update mechanisms Corporate Control: Security Monitoring, Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent administrators from reverting C2R modifications Corporate Control: Windows Registry, Group Policy Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure alternative persistence mechanisms if reverted Corporate Control: Multiple Update Channel Manipulations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging behavior to prevent detection Corporate Control: Event Log Tampering, Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Office updates for anomalies Corporate Control: SOC, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt modified C2R settings to evade detection Corporate Control: Registry Key Encryption, Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove traces of unauthorized Click-to-Run changes Corporate Control: Windows Event Logs, Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple update configuration hijacks for persistence Corporate Control: Alternate C2R Configurations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Office Click-to-Run activity Corporate Control: Security Operations, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

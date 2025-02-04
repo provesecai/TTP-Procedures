@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Linux SSH Authentication via PAM]
+    B[Modify PAM Configuration for Backdoor Access]
+    C[Maintain Unauthorized SSH Access]
+    D[Conceal Malicious PAM Modifications]
+    E[Persistence Achieved via PAM Backdoor]
+
+    A -->|"Identify SSH authentication flow using PAM Corporate Control: Linux PAM Stack"| B
+    A -->|"Analyze existing PAM configurations Corporate Control: SSHD Configuration Files"| B
+    A -->|"Determine the best injection method Corporate Control: Pluggable Authentication Module (PAM)"| B
+    A -->|"Monitor PAM logs for unauthorized modifications Corporate Control: Syslog, Linux Audit Logs"| B
+    B -->|"Modify SSH PAM module to allow unauthorized logins Corporate Control: PAM.d Configuration Files"| C
+    B -->|"Inject backdoor credentials for persistence Corporate Control: PAM Authentication Stack"| C
+    B -->|"Ensure SSH access remains post-reboot Corporate Control: SystemD, Init Scripts"| C
+    B -->|"Monitor for PAM modifications Corporate Control: File Integrity Monitoring (FIM), Security Logs"| C
+    C -->|"Use modified PAM module to maintain backdoor SSH access Corporate Control: OpenSSH, Linux User Authentication"| D
+    C -->|"Prevent PAM rollback using filesystem permissions Corporate Control: Sudoers File, Access Control Lists (ACLs)"| D
+    C -->|"Ensure PAM hooks persist through updates Corporate Control: Linux Patch Management"| D
+    C -->|"Monitor unauthorized SSH logins Corporate Control: SOC, Threat Intelligence"| D
+    D -->|"Encrypt PAM modifications to evade detection Corporate Control: PAM Module Hardening, Code Obfuscation"| E
+    D -->|"Modify security logs to remove traces of PAM tampering Corporate Control: Syslog, Log Scrubbing"| E
+    D -->|"Deploy multiple SSH authentication modifications for redundancy Corporate Control: Alternate Authentication Modules"| E
+    D -->|"SOC team monitors PAM authentication anomalies Corporate Control: SIEM, Threat Hunting"| E

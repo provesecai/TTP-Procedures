@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Microsoft-SSPI-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Windows SSPI Authentication Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Inject Rogue Security Support Provider (SSP)</data>
+</node>
+<node id="C">
+<data key="label">Modify SSPI Authentication Process for Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious SSPI Modification</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSPI Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify core Windows SSPI components Corporate Control: Windows Security Stack</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine optimal method to inject rogue SSP Corporate Control: LSASS, Authentication Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze legitimate authentication flows Corporate Control: Windows Authentication API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SSPI logs for unauthorized modifications Corporate Control: Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy custom SSP to intercept authentication requests Corporate Control: LSASS, Security Stack</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify SSPI responses to accept unauthorized logins Corporate Control: Kerberos, NTLM Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistent authentication bypass Corporate Control: System Services, Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor memory modifications in SSPI processes Corporate Control: EDR, Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept and manipulate credentials for persistence Corporate Control: Authentication API</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security policies to prevent removal Corporate Control: GPO, Security Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SSPI modifications persist through system updates Corporate Control: Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor authentication flows for anomalies Corporate Control: Threat Intelligence, SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt malicious SSP data to evade detection Corporate Control: Code Obfuscation, DLL Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove traces of SSPI tampering Corporate Control: Windows Event Logs, Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple SSPI modifications as fallback Corporate Control: Alternate Security Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Incident response team monitors unauthorized SSPI changes Corporate Control: Threat Detection, SIEM</data>
+</edge>
+</graph>
+</graphml>

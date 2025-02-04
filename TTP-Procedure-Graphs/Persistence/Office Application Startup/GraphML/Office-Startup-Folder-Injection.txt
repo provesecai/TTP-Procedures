@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Office-Startup-Folder-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Office Startup Folder Locations</data>
+</node>
+<node id="B">
+<data key="label">Place Malicious Office File in Startup Directory</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence via Automatic Execution</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection via File Hiding and Obfuscation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Office Startup Folder Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Office startup folder paths Corporate Control: User's AppData, ProgramData</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze common file types executed at startup Corporate Control: .lnk, .docm, .xlsm, .pptm</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best method to drop a malicious file Corporate Control: File System Permissions, GPO</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized file modifications in startup folders Corporate Control: File Integrity Monitoring (FIM), SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malicious macro-enabled document in startup folder Corporate Control: Microsoft Word, Excel, PowerPoint</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file properties to ensure execution Corporate Control: Office Auto-Load Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure file is executed silently at every Office launch Corporate Control: Office Execution Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor Office startup folder activity Corporate Control: Endpoint Security, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying file permissions Corporate Control: NTFS Permissions, Registry Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure alternative persistence mechanisms in case of remediation Corporate Control: Alternate Startup Directories</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify file attributes to hide from users Corporate Control: Windows Hidden File Attributes, Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor startup directory for unexpected additions Corporate Control: SOC, Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt file contents to avoid signature-based detection Corporate Control: Code Packing, File Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to erase traces of unauthorized file placement Corporate Control: Windows Event Logs, Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure multiple startup file placements for redundancy Corporate Control: Alternate Office Startup Locations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Office startup folder activity Corporate Control: SIEM, Security Operations</data>
+</edge>
+</graph>
+</graphml>

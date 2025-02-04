@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Normal-Template-Hijacking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Word's Normal.dotm Template</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious VBA Macros</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistence Across Word Sessions</data>
+</node>
+<node id="D">
+<data key="label">Obfuscate Malicious Template Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Normal.dotm Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Locate Normal.dotm template in Office startup directory Corporate Control: Microsoft Word, User's AppData</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing macros and user permissions Corporate Control: Windows File System, Office Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method for modifying Normal.dotm without detection Corporate Control: Windows API, VBA Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to Normal.dotm Corporate Control: File Integrity Monitoring, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious macros to execute upon Word startup Corporate Control: Microsoft Office VBA Engine</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify macro execution policies to avoid security warnings Corporate Control: Office Trust Center, Macro Security Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure macros execute automatically across all sessions Corporate Control: Word Startup Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized macro changes Corporate Control: Endpoint Security, Group Policy Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent accidental overwrites of Normal.dotm Corporate Control: File Permissions, Registry Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through Office updates Corporate Control: Patch Management, Office Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging mechanisms to prevent detection Corporate Control: Windows Event Logs, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal Word startup behavior Corporate Control: Security Operations Center (SOC), SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate VBA macro code to evade detection Corporate Control: Code Packing, Encryption Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify Office startup logs to remove traces Corporate Control: Event Log Tampering, Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional persistence mechanisms in case of remediation Corporate Control: Alternate Startup Macros</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team continuously monitors Office template modifications Corporate Control: Threat Hunting, Security Operations</data>
+</edge>
+</graph>
+</graphml>

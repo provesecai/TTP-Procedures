@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze ADFS Authentication Mechanisms]
+    B[Modify or Inject Malicious ADFS Tokens]
+    C[Maintain Persistent Access via Token Forgery]
+    D[Prevent Token Expiry and Conceal Activity]
+    E[Persistence Achieved via ADFS Token Manipulation]
+
+    A -->|"Identify how ADFS handles authentication tokens Corporate Control: Active Directory Federation Services"| B
+    A -->|"Determine attack vectors for ADFS token manipulation Corporate Control: OAuth, SAML, JWT"| B
+    A -->|"Analyze authentication logs for token activity Corporate Control: SIEM, Security Monitoring"| B
+    A -->|"Monitor ADFS configurations for unauthorized changes Corporate Control: Identity Management System"| B
+    B -->|"Inject rogue authentication tokens Corporate Control: ADFS Token Signing Certificates"| C
+    B -->|"Modify token validation rules to accept backdoor tokens Corporate Control: SAML, OAuth Protocols"| C
+    B -->|"Ensure persistence through token refreshes Corporate Control: JWT Refresh Mechanism, ADFS Configuration"| C
+    B -->|"Monitor for unauthorized token issuance Corporate Control: Security Event Logs, Threat Intelligence"| C
+    C -->|"Use manipulated tokens to access systems persistently Corporate Control: Identity Federation Services"| D
+    C -->|"Modify logs to prevent detection Corporate Control: Security Audit Logs, Event Monitoring"| D
+    C -->|"Prevent revocation of rogue tokens Corporate Control: Certificate Authority, Authentication Policies"| D
+    C -->|"Monitor for suspicious authentication activity Corporate Control: SOC, EDR"| D
+    D -->|"Encrypt and obfuscate token data to evade detection Corporate Control: Cryptographic Signing, Key Injection"| E
+    D -->|"Modify system logs to remove evidence of token manipulation Corporate Control: Security Policies, Threat Intelligence"| E
+    D -->|"Deploy additional persistence methods via federation abuse Corporate Control: Alternate Credential Injection"| E
+    D -->|"SOC team monitors federated authentication logs for anomalies Corporate Control: SIEM, Threat Hunting"| E

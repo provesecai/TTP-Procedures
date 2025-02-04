@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Office-Registry-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Office Registry Keys for Startup Behavior</data>
+</node>
+<node id="B">
+<data key="label">Modify Registry to Auto-Execute Malicious Payload</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistence via Registry Hooks</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection Using Registry Obfuscation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Office Registry Persistence</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify registry paths related to Office startup Corporate Control: Windows Registry (HKCU/HKLM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze how registry keys control Office execution Corporate Control: Office Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best method to modify Office startup registry keys Corporate Control: Group Policy, Registry Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized registry modifications Corporate Control: Registry Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject auto-executing payload in Office registry key Corporate Control: Windows Registry Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution path to bypass security warnings Corporate Control: Office Trust Center, GPO</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload execution on every Office startup Corporate Control: Registry Persistence, Auto-Execution Keys</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor registry changes to detect unauthorized modifications Corporate Control: Endpoint Security, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying registry key permissions Corporate Control: NTFS Permissions, Access Control Lists (ACLs)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure alternative persistence mechanisms via multiple registry entries Corporate Control: Redundant Registry Keys</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry values dynamically to avoid detection Corporate Control: Registry Obfuscation, Encrypted Keys</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor registry anomalies in Office startup settings Corporate Control: SIEM, SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt registry values to prevent signature-based detection Corporate Control: Code Obfuscation, Encoding</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to erase traces of registry modifications Corporate Control: Windows Event Logs, Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant registry-based persistence mechanisms Corporate Control: Multiple Auto-Execution Registry Keys</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors registry interactions related to Office Corporate Control: SIEM, Security Operations</data>
+</edge>
+</graph>
+</graphml>

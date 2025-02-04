@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Kerberos PAC Structure]
+    B[Modify Kerberos PAC to Grant Persistent Privileges]
+    C[Ensure PAC Persistence Across Sessions]
+    D[Evade Kerberos Security Mechanisms]
+    E[Persistence Achieved via Kerberos PAC Injection]
+
+    A -->|"Identify how Kerberos PAC stores user privileges Corporate Control: Active Directory, Key Distribution Center (KDC)"| B
+    A -->|"Analyze existing PAC verification mechanisms Corporate Control: Kerberos Authentication Workflow"| B
+    A -->|"Determine method for injecting forged PAC data Corporate Control: Windows Kerberos API"| B
+    A -->|"Monitor Kerberos ticket issuance logs Corporate Control: SIEM, KDC Event Logs"| B
+    B -->|"Inject rogue PAC to escalate privileges Corporate Control: Kerberos Ticket-Granting Ticket (TGT)"| C
+    B -->|"Modify Kerberos PAC validation process Corporate Control: Kerberos Authentication Protocol"| C
+    B -->|"Ensure PAC modifications persist beyond reboots Corporate Control: Active Directory Policies"| C
+    B -->|"Monitor unauthorized PAC modifications Corporate Control: Security Event Logs, Threat Intelligence"| C
+    C -->|"Utilize modified PAC for persistent privileged access Corporate Control: Domain Authentication Services"| D
+    C -->|"Prevent PAC revocation by modifying Active Directory Policies Corporate Control: Group Policy, Authentication Rules"| D
+    C -->|"Ensure multiple fallback authentication methods exist Corporate Control: Credential Injection, Token Forgery"| D
+    C -->|"Monitor unauthorized authentication attempts Corporate Control: SOC, EDR"| D
+    D -->|"Encrypt PAC modifications to evade detection Corporate Control: Ticket Encryption, Code Packing"| E
+    D -->|"Modify security logs to remove traces of PAC tampering Corporate Control: Windows Event Logs, Threat Intelligence"| E
+    D -->|"Deploy multiple Kerberos modifications for redundancy Corporate Control: Alternate Authentication Injection Methods"| E
+    D -->|"SOC monitors anomalous Kerberos PAC activity Corporate Control: SIEM, Security Operations"| E

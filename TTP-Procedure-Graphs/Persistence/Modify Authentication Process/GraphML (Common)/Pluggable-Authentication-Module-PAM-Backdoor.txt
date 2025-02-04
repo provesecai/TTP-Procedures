@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Pluggable-Authentication-Module-PAM-Backdoor" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Linux PAM Authentication Modules</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious PAM Module</data>
+</node>
+<node id="C">
+<data key="label">Modify Authentication Flow to Maintain Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Rogue PAM from Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PAM Backdoor</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify critical PAM modules used in authentication Corporate Control: Linux PAM Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method to insert malicious module Corporate Control: System Authentication Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze SSH and system authentication flow Corporate Control: SSHD, Login Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PAM logs for unauthorized modifications Corporate Control: SIEM, Log Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject custom PAM module to accept backdoor credentials Corporate Control: Linux Authentication Mechanism</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify PAM stack to redirect authentication requests Corporate Control: PAM Configuration Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure module loads at system startup Corporate Control: System Services, Init Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor PAM module changes Corporate Control: File Integrity Monitoring (FIM), Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Enable persistence through patched PAM functionality Corporate Control: SSH, System Logins</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to remove traces of unauthorized authentication Corporate Control: Logrotate, Auditd</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent administrator removal of rogue PAM module Corporate Control: File Permissions, Security Policy Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in authentication logs Corporate Control: Threat Intelligence, Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt or obfuscate module to evade security tools Corporate Control: PAM Module Hardening, Code Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove security audit traces of module injection Corporate Control: System Logs, Authentication History</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant backdoor mechanisms via PAM chaining Corporate Control: Alternate Login Modules</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team monitors unusual authentication patterns Corporate Control: Security Operations, Intrusion Detection</data>
+</edge>
+</graph>
+</graphml>

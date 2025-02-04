@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Domain-Controller-Authentication-Backdoor" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Domain Controller Authentication Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Patch LSASS Process</data>
+</node>
+<node id="C">
+<data key="label">Maintain Backdoor Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Authentication Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Domain Controller Backdoor</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze domain authentication structure Corporate Control: Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify LSASS role in handling authentication Corporate Control: Windows Kernel Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method to modify LSASS without detection Corporate Control: Local Security Authority Subsystem (LSASS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor domain controller logs for unexpected changes Corporate Control: SIEM, Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject code to modify LSASS allowing unauthorized logins Corporate Control: LSASS Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication policies to accept backdoor credentials Corporate Control: Group Policy, Windows Security Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure changes persist after reboots Corporate Control: Scheduled Tasks, System Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor memory manipulations in LSASS Corporate Control: Endpoint Detection and Response (EDR), Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test backdoor for persistent authentication Corporate Control: Windows Authentication Mechanism</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system configurations to prevent detection Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure modifications remain through security patches Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized access attempts Corporate Control: Security Operations Center (SOC), SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Clear logs to hide evidence of authentication changes Corporate Control: Windows Event Logs, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection through obfuscation techniques Corporate Control: Windows API Hooking, Process Injection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant persistence mechanisms Corporate Control: Alternate Credential Providers, NTLM Overwrite</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Incident response monitoring for unauthorized LSASS modifications Corporate Control: Threat Hunting, Security Hardening</data>
+</edge>
+</graph>
+</graphml>

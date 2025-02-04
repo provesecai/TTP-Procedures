@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SAM-Database-Tampering" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Windows Security Account Manager (SAM) Database</data>
+</node>
+<node id="B">
+<data key="label">Modify SAM Database to Create Backdoor Accounts</data>
+</node>
+<node id="C">
+<data key="label">Ensure Backdoor Accounts Persist</data>
+</node>
+<node id="D">
+<data key="label">Conceal Unauthorized SAM Database Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SAM Tampering</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify SAM database storage locations Corporate Control: Windows Registry</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine modification techniques Corporate Control: LSASS, System Boot Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing SAM authentication rules Corporate Control: Local Authentication Mechanisms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SAM access logs for anomalies Corporate Control: SIEM, File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue administrator accounts into SAM database Corporate Control: Windows Registry, Local User Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify existing accounts to include unauthorized privileges Corporate Control: Security Account Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SAM modifications persist across reboots Corporate Control: Registry Hooks, Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized SAM modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use modified accounts for persistent access Corporate Control: Windows Authentication Stack</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent SAM rollback using security policy hooks Corporate Control: GPO, System Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continuous control over SAM database Corporate Control: File System Access Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor login attempts from rogue accounts Corporate Control: Security Operations, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate SAM database changes to evade detection Corporate Control: Data Encryption, File Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to remove traces of SAM tampering Corporate Control: Event Log Scrubbing, Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant backdoor accounts for resilience Corporate Control: Alternate User Accounts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team monitors for unexpected account creation Corporate Control: Identity Management, Security Analytics</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Authentication-Package-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Authentication Packages</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Authentication Package</data>
+</node>
+<node id="C">
+<data key="label">Manipulate Credentials for Persistence</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Package</data>
+</node>
+<node id="E">
+<data key="label">Authentication Package Persistence Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze how authentication packages interact Corporate Control: LSASS Process</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable authentication packages Corporate Control: Windows Security Mechanism</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine optimal injection method Corporate Control: DLL Injection, Memory Manipulation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor Windows security logs for anomalies Corporate Control: SIEM, Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject custom authentication package into LSASS Corporate Control: Process Injection, Windows API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication flow to allow unauthorized logins Corporate Control: NTLM, Kerberos</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence through system reboots Corporate Control: Windows Registry, Scheduled Tasks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor authentication package integrity Corporate Control: Endpoint Security, File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automatically validate credentials via backdoor Corporate Control: Windows Authentication API</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent package removal by modifying permissions Corporate Control: Group Policy, Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system behavior to prevent detection Corporate Control: Event Log Tampering, Memory Injection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for modifications in authentication packages Corporate Control: Threat Hunting, Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt malicious package to evade antivirus Corporate Control: Code Obfuscation, Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove evidence of authentication manipulation Corporate Control: Windows Event Logs, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure redundancy through multiple authentication hooks Corporate Control: NTLM Overwrite, Alternate LSA Modules</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Incident response monitoring for suspicious authentication activity Corporate Control: SOC, EDR</data>
+</edge>
+</graph>
+</graphml>

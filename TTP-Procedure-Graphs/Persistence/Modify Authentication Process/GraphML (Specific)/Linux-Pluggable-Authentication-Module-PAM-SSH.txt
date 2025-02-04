@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Linux-Pluggable-Authentication-Module-PAM-SSH" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Linux SSH Authentication via PAM</data>
+</node>
+<node id="B">
+<data key="label">Modify PAM Configuration for Backdoor Access</data>
+</node>
+<node id="C">
+<data key="label">Maintain Unauthorized SSH Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious PAM Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PAM Backdoor</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify SSH authentication flow using PAM Corporate Control: Linux PAM Stack</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze existing PAM configurations Corporate Control: SSHD Configuration Files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine the best injection method Corporate Control: Pluggable Authentication Module (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PAM logs for unauthorized modifications Corporate Control: Syslog, Linux Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify SSH PAM module to allow unauthorized logins Corporate Control: PAM.d Configuration Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject backdoor credentials for persistence Corporate Control: PAM Authentication Stack</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SSH access remains post-reboot Corporate Control: SystemD, Init Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for PAM modifications Corporate Control: File Integrity Monitoring (FIM), Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use modified PAM module to maintain backdoor SSH access Corporate Control: OpenSSH, Linux User Authentication</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent PAM rollback using filesystem permissions Corporate Control: Sudoers File, Access Control Lists (ACLs)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure PAM hooks persist through updates Corporate Control: Linux Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized SSH logins Corporate Control: SOC, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt PAM modifications to evade detection Corporate Control: PAM Module Hardening, Code Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to remove traces of PAM tampering Corporate Control: Syslog, Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple SSH authentication modifications for redundancy Corporate Control: Alternate Authentication Modules</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team monitors PAM authentication anomalies Corporate Control: SIEM, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

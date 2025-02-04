@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify OneNote Add-In Loading Mechanisms]
+    B[Deploy Malicious OneNote Add-In]
+    C[Ensure Persistence via Auto-Execution]
+    D[Prevent Detection and Monitoring]
+    E[Persistence Achieved via OneNote Add-In Hijacking]
+
+    A -->|"Locate OneNote add-in directory Corporate Control: Microsoft OneNote, User's AppData"| B
+    A -->|"Analyze existing add-ins for modification Corporate Control: Windows File System, Add-In Loader"| B
+    A -->|"Determine best way to deploy a rogue OneNote add-in Corporate Control: Add-In Configuration, COM Objects"| B
+    A -->|"Monitor unauthorized add-in modifications Corporate Control: File Integrity Monitoring (FIM), SIEM"| B
+    B -->|"Inject malicious OneNote add-in into add-in directory Corporate Control: Office Add-In Loader"| C
+    B -->|"Modify add-in settings to ensure execution on launch Corporate Control: OneNote Startup Configuration"| C
+    B -->|"Ensure add-in persists across software updates Corporate Control: Office Patch Management, Update Policies"| C
+    B -->|"Monitor for unauthorized add-in execution Corporate Control: Endpoint Security, Threat Intelligence"| C
+    C -->|"Prevent removal by modifying file permissions Corporate Control: NTFS Permissions, Office Group Policy"| D
+    C -->|"Ensure redundant add-in deployments for persistence Corporate Control: Alternate OneNote Add-In Locations"| D
+    C -->|"Modify OneNote logging behavior to avoid detection Corporate Control: Windows Event Logs, Office Logs"| D
+    C -->|"Monitor OneNote activity for suspicious behavior Corporate Control: Security Operations Center (SOC), SIEM"| D
+    D -->|"Encrypt add-in payloads to evade detection Corporate Control: Code Obfuscation, File Encryption"| E
+    D -->|"Modify logs to remove traces of add-in execution Corporate Control: Windows Event Logs, Threat Intelligence"| E
+    D -->|"Deploy multiple add-in modifications for redundancy Corporate Control: Alternate COM Objects"| E
+    D -->|"SOC continuously monitors OneNote add-in activity Corporate Control: SIEM, Security Operations"| E

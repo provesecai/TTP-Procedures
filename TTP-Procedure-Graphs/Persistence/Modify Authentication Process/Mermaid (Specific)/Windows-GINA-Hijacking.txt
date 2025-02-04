@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows GINA DLL Path]
+    B[Deploy Malicious GINA DLL]
+    C[Intercept and Modify User Authentication]
+    D[Conceal Unauthorized GINA Modification]
+    E[Persistence Achieved via GINA Hijacking]
+
+    A -->|"Locate and analyze existing GINA DLL Corporate Control: Windows Authentication Services"| B
+    A -->|"Identify how GINA interacts with user authentication Corporate Control: Windows Logon Process"| B
+    A -->|"Determine optimal method to replace GINA DLL Corporate Control: System File Permissions"| B
+    A -->|"Monitor registry changes affecting GINA Corporate Control: Windows Registry, Event Logs"| B
+    B -->|"Replace GINA DLL with a modified version Corporate Control: System32 Files, Winlogon Process"| C
+    B -->|"Ensure DLL loads at every authentication attempt Corporate Control: Windows Logon Process"| C
+    B -->|"Modify authentication mechanism to allow backdoor logins Corporate Control: Credential Provider Hooks"| C
+    B -->|"Monitor unauthorized GINA modifications Corporate Control: File Integrity Monitoring (FIM), EDR"| C
+    C -->|"Capture user credentials in cleartext Corporate Control: Windows Authentication Modules"| D
+    C -->|"Modify authentication responses to grant unauthorized access Corporate Control: Windows Logon Process"| D
+    C -->|"Prevent removal of rogue GINA DLL Corporate Control: System Permissions, Registry Persistence"| D
+    C -->|"Detect anomalies in user logins Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Obfuscate GINA DLL to prevent detection Corporate Control: DLL Packing, Code Encryption"| E
+    D -->|"Modify event logs to remove traces of GINA modification Corporate Control: Event Log Tampering, Security Hardening"| E
+    D -->|"Deploy redundant backdoors in case of remediation Corporate Control: Alternate Authentication DLLs"| E
+    D -->|"SOC team monitors unexpected GINA behavior Corporate Control: Security Operations, SIEM"| E

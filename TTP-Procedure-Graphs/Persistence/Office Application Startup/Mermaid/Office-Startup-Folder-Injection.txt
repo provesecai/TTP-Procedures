@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Office Startup Folder Locations]
+    B[Place Malicious Office File in Startup Directory]
+    C[Ensure Persistence via Automatic Execution]
+    D[Evade Detection via File Hiding and Obfuscation]
+    E[Persistence Achieved via Office Startup Folder Injection]
+
+    A -->|"Identify Office startup folder paths Corporate Control: User's AppData, ProgramData"| B
+    A -->|"Analyze common file types executed at startup Corporate Control: .lnk, .docm, .xlsm, .pptm"| B
+    A -->|"Determine best method to drop a malicious file Corporate Control: File System Permissions, GPO"| B
+    A -->|"Monitor unauthorized file modifications in startup folders Corporate Control: File Integrity Monitoring (FIM), SIEM"| B
+    B -->|"Deploy malicious macro-enabled document in startup folder Corporate Control: Microsoft Word, Excel, PowerPoint"| C
+    B -->|"Modify file properties to ensure execution Corporate Control: Office Auto-Load Mechanisms"| C
+    B -->|"Ensure file is executed silently at every Office launch Corporate Control: Office Execution Policies"| C
+    B -->|"Monitor Office startup folder activity Corporate Control: Endpoint Security, Threat Intelligence"| C
+    C -->|"Prevent removal by modifying file permissions Corporate Control: NTFS Permissions, Registry Policies"| D
+    C -->|"Ensure alternative persistence mechanisms in case of remediation Corporate Control: Alternate Startup Directories"| D
+    C -->|"Modify file attributes to hide from users Corporate Control: Windows Hidden File Attributes, Obfuscation"| D
+    C -->|"Monitor startup directory for unexpected additions Corporate Control: SOC, Threat Hunting"| D
+    D -->|"Encrypt file contents to avoid signature-based detection Corporate Control: Code Packing, File Encryption"| E
+    D -->|"Modify logs to erase traces of unauthorized file placement Corporate Control: Windows Event Logs, Security Monitoring"| E
+    D -->|"Ensure multiple startup file placements for redundancy Corporate Control: Alternate Office Startup Locations"| E
+    D -->|"SOC continuously monitors Office startup folder activity Corporate Control: SIEM, Security Operations"| E

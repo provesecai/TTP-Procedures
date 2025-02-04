@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AD-Certificate-Services-Authentication-Backdoor" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze AD CS Authentication Workflow</data>
+</node>
+<node id="B">
+<data key="label">Modify AD CS to Issue Rogue Certificates</data>
+</node>
+<node id="C">
+<data key="label">Use Forged Certificates for Persistent Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Unauthorized Certificate Issuance</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via AD CS Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify how AD CS handles authentication Corporate Control: Active Directory Certificate Services (AD CS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze certificate issuance and validation processes Corporate Control: Windows Public Key Infrastructure (PKI)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine attack vectors for modifying AD CS Corporate Control: Certificate Templates, Enrollment Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor AD CS logs for unauthorized certificate issuance Corporate Control: SIEM, Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify AD CS policies to allow rogue certificate requests Corporate Control: Active Directory Policies, Group Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate malicious authentication certificates Corporate Control: Certificate Authority (CA), PKI Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure certificates remain valid despite revocation attempts Corporate Control: Certificate Revocation Lists (CRLs), OCSP</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized AD CS modifications Corporate Control: Security Monitoring, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use forged certificates for authentication bypass Corporate Control: Windows Authentication Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system authentication mechanisms to trust rogue certificates Corporate Control: Key Distribution Center (KDC), Domain Authentication</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal of rogue certificates by altering AD CS policies Corporate Control: Access Control Lists (ACLs), Group Policy Objects (GPOs)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor certificate-based authentication logs for anomalies Corporate Control: SOC, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt malicious certificates to evade detection Corporate Control: Cryptographic Obfuscation, Key Manipulation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to hide evidence of rogue certificate issuance Corporate Control: Windows Event Logs, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple authentication certificates as redundancy Corporate Control: Alternate Certificate Authorities</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC team monitors AD CS activity for unauthorized certificate issuance Corporate Control: Security Operations, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

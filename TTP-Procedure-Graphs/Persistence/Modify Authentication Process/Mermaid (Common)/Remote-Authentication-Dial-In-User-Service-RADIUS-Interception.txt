@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze RADIUS Authentication Flow]
+    B[Modify or Intercept RADIUS Authentication Requests]
+    C[Maintain Persistent RADIUS Access]
+    D[Evade Detection and Maintain Control]
+    E[Persistence Achieved via RADIUS Interception]
+
+    A -->|"Identify critical RADIUS authentication mechanisms Corporate Control: Network Access Servers, RADIUS Server"| B
+    A -->|"Determine method to intercept or modify authentication Corporate Control: Firewall, Network Policies"| B
+    A -->|"Analyze RADIUS authentication logging Corporate Control: SIEM, Security Event Logging"| B
+    A -->|"Monitor access policies for unauthorized changes Corporate Control: Identity Management System"| B
+    B -->|"Modify RADIUS configuration to accept unauthorized logins Corporate Control: Authentication Policy Management"| C
+    B -->|"Inject rogue authentication responses Corporate Control: Network Policy Server (NPS), FreeRADIUS"| C
+    B -->|"Ensure persistence through redundant modifications Corporate Control: Network Security Groups, Firewall Rules"| C
+    B -->|"Monitor for unauthorized modifications in authentication logs Corporate Control: SIEM, Threat Intelligence"| C
+    C -->|"Maintain control over authentication flow Corporate Control: RADIUS Proxy, Identity Provider"| D
+    C -->|"Prevent detection by modifying security logs Corporate Control: Event Log Tampering, Security Hardening"| D
+    C -->|"Ensure access remains post-security updates Corporate Control: Backup Configuration, Credential Injection"| D
+    C -->|"Monitor RADIUS authentication anomalies Corporate Control: Threat Hunting, SOC"| D
+    D -->|"Encrypt rogue authentication responses Corporate Control: Secure Channel Manipulation, Encryption"| E
+    D -->|"Modify logs to remove evidence of manipulation Corporate Control: Log Scrubbing, Security Policies"| E
+    D -->|"Deploy additional RADIUS modifications for redundancy Corporate Control: Alternate Authentication Mechanisms"| E
+    D -->|"SOC monitors RADIUS logs for unusual authentication patterns Corporate Control: Security Operations, SIEM"| E

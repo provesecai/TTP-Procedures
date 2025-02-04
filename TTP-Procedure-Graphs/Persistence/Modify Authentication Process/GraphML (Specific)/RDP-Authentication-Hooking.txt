@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RDP-Authentication-Hooking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify RDP Authentication Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Hook RDP Authentication to Allow Unauthorized Logins</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistent RDP Access</data>
+</node>
+<node id="D">
+<data key="label">Evade RDP Security Controls</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RDP Authentication Hook</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze RDP authentication stack Corporate Control: Windows Remote Desktop Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify RDP authentication hooks Corporate Control: Terminal Services DLLs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine the best method for injecting authentication hooks Corporate Control: LSASS, Windows API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor RDP logs for anomalies Corporate Control: Event Logs, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject custom authentication hooks into RDP process Corporate Control: Windows Authentication API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify RDP logon flow to bypass credentials Corporate Control: Remote Desktop Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence across reboots Corporate Control: Windows Registry, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor RDP authentication flow for anomalies Corporate Control: Threat Intelligence, Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use hooked authentication to maintain RDP persistence Corporate Control: Remote Desktop Session Host (RDSH)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by modifying logging behavior Corporate Control: Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure RDP authentication bypass survives updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor suspicious RDP activity Corporate Control: SOC, Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt malicious RDP hooks to evade detection Corporate Control: Code Obfuscation, DLL Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to remove traces of RDP tampering Corporate Control: Windows Event Logs, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple authentication bypass techniques Corporate Control: Alternate Credential Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC monitors unauthorized RDP logins Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+</graph>
+</graphml>

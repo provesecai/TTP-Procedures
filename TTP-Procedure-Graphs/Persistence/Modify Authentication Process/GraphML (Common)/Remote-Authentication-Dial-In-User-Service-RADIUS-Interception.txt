@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Remote-Authentication-Dial-In-User-Service-RADIUS-Interception" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze RADIUS Authentication Flow</data>
+</node>
+<node id="B">
+<data key="label">Modify or Intercept RADIUS Authentication Requests</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistent RADIUS Access</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection and Maintain Control</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RADIUS Interception</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify critical RADIUS authentication mechanisms Corporate Control: Network Access Servers, RADIUS Server</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine method to intercept or modify authentication Corporate Control: Firewall, Network Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze RADIUS authentication logging Corporate Control: SIEM, Security Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor access policies for unauthorized changes Corporate Control: Identity Management System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify RADIUS configuration to accept unauthorized logins Corporate Control: Authentication Policy Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue authentication responses Corporate Control: Network Policy Server (NPS), FreeRADIUS</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence through redundant modifications Corporate Control: Network Security Groups, Firewall Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications in authentication logs Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain control over authentication flow Corporate Control: RADIUS Proxy, Identity Provider</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by modifying security logs Corporate Control: Event Log Tampering, Security Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure access remains post-security updates Corporate Control: Backup Configuration, Credential Injection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor RADIUS authentication anomalies Corporate Control: Threat Hunting, SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt rogue authentication responses Corporate Control: Secure Channel Manipulation, Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove evidence of manipulation Corporate Control: Log Scrubbing, Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional RADIUS modifications for redundancy Corporate Control: Alternate Authentication Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC monitors RADIUS logs for unusual authentication patterns Corporate Control: Security Operations, SIEM</data>
+</edge>
+</graph>
+</graphml>

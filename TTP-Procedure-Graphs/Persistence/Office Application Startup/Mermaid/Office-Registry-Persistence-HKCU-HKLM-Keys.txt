@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Office Registry Keys for Startup Behavior]
+    B[Modify Registry to Auto-Execute Malicious Payload]
+    C[Maintain Persistence via Registry Hooks]
+    D[Evade Detection Using Registry Obfuscation]
+    E[Persistence Achieved via Office Registry Persistence]
+
+    A -->|"Identify registry paths related to Office startup Corporate Control: Windows Registry (HKCU/HKLM)"| B
+    A -->|"Analyze how registry keys control Office execution Corporate Control: Office Execution Policies"| B
+    A -->|"Determine best method to modify Office startup registry keys Corporate Control: Group Policy, Registry Permissions"| B
+    A -->|"Monitor unauthorized registry modifications Corporate Control: Registry Event Logs, SIEM"| B
+    B -->|"Inject auto-executing payload in Office registry key Corporate Control: Windows Registry Editor"| C
+    B -->|"Modify execution path to bypass security warnings Corporate Control: Office Trust Center, GPO"| C
+    B -->|"Ensure payload execution on every Office startup Corporate Control: Registry Persistence, Auto-Execution Keys"| C
+    B -->|"Monitor registry changes to detect unauthorized modifications Corporate Control: Endpoint Security, Threat Intelligence"| C
+    C -->|"Prevent removal by modifying registry key permissions Corporate Control: NTFS Permissions, Access Control Lists (ACLs)"| D
+    C -->|"Ensure alternative persistence mechanisms via multiple registry entries Corporate Control: Redundant Registry Keys"| D
+    C -->|"Modify registry values dynamically to avoid detection Corporate Control: Registry Obfuscation, Encrypted Keys"| D
+    C -->|"Monitor registry anomalies in Office startup settings Corporate Control: SIEM, SOC"| D
+    D -->|"Encrypt registry values to prevent signature-based detection Corporate Control: Code Obfuscation, Encoding"| E
+    D -->|"Modify system logs to erase traces of registry modifications Corporate Control: Windows Event Logs, Security Policies"| E
+    D -->|"Deploy redundant registry-based persistence mechanisms Corporate Control: Multiple Auto-Execution Registry Keys"| E
+    D -->|"SOC continuously monitors registry interactions related to Office Corporate Control: SIEM, Security Operations"| E
