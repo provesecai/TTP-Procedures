@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VBR-Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Volume Boot Record (VBR) Storage</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into VBR</data>
+</node>
+<node id="C">
+<data key="label">Ensure Execution Before OS Boot</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of VBR Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via VBR Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze Volume Boot Record (VBR) storage on disk Corporate Control: Disk Partitioning</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods for modifying VBR Corporate Control: Disk Administrator Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify boot security mechanisms restricting VBR modifications Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor file system changes for unauthorized VBR modifications Corporate Control: Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into VBR Corporate Control: Master Boot Record (MBR) / UEFI</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify VBR entries to execute attacker-controlled bootloaders Corporate Control: Disk Bootloader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by preventing VBR restoration Corporate Control: Disk Recovery Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized VBR changes Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Control system startup to maintain persistence Corporate Control: Boot Sequence Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify boot verification mechanisms to avoid detection Corporate Control: OS Integrity Checking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through OS reinstalls Corporate Control: Recovery Partition Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected VBR modifications Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase traces of VBR modifications Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encrypted storage to conceal boot record changes Corporate Control: Bootloader Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple VBR modifications for redundancy Corporate Control: Hidden Boot Partitions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors disk integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

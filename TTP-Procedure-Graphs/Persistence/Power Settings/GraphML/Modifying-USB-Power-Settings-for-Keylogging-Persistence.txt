@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-USB-Power-Settings-for-Keylogging-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify USB Power Management Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify USB Ports to Remain Powered in Standby</data>
+</node>
+<node id="C">
+<data key="label">Ensure Keylogger Captures Keystrokes Persistently</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of USB Power Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via USB Power Exploitation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Review USB power settings in device manager Corporate Control: Windows Device Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify keyboard and HID device power policies Corporate Control: Hardware Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine best method for altering USB power settings Corporate Control: Windows Power Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to USB settings Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable USB power-saving settings to keep devices active Corporate Control: Device Manager, Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure HID devices remain powered in sleep mode Corporate Control: BIOS/UEFI Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify group policies to enforce new USB settings Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor USB power consumption logs Corporate Control: SIEM, Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture keystrokes persistently via connected keylogger Corporate Control: Hardware Keylogger, Software Keystroke Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system from powering down USB devices Corporate Control: Power Policies, Registry Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying firmware settings Corporate Control: BIOS, UEFI</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected USB activity Corporate Control: Network Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of USB power setting modifications Corporate Control: Log Scrubbing, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use firmware-level obfuscation to prevent detection Corporate Control: Rootkits, Firmware Exploits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify USB enumeration logs Corporate Control: Device Manager Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors USB device activity Corporate Control: Threat Intelligence, Security Operations</data>
+</edge>
+</graph>
+</graphml>

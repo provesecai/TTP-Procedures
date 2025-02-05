@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Active Power Plan Settings]
+    B[Modify Power Plan to Prevent Sleep/Hibernation]
+    C[Ensure Continuous Execution of Malicious Code]
+    D[Evade Detection of Power Plan Modifications]
+    E[Persistence Achieved via Power Plan Modification]
+
+    A -->|"Determine active power plan configurations Corporate Control: Windows Power Management"| B
+    A -->|"Analyze system-wide sleep, hibernate, and screen-off settings Corporate Control: Power Configuration (Powercfg.exe)"| B
+    A -->|"Identify privilege escalation points to alter power plans Corporate Control: User Permissions, Group Policies"| B
+    A -->|"Monitor system logs for power plan modifications Corporate Control: Event Viewer"| B
+    B -->|"Modify active power plan to disable sleep states Corporate Control: Windows Registry, Power Configuration"| C
+    B -->|"Override group policy restrictions on power settings Corporate Control: Group Policy Editor"| C
+    B -->|"Persist changes by modifying administrative policies Corporate Control: Windows Management Instrumentation (WMI)"| C
+    B -->|"Monitor unauthorized modifications to power plans Corporate Control: SIEM, Security Event Logs"| C
+    C -->|"Ensure system remains active for continuous malicious activity Corporate Control: System Uptime Policies"| D
+    C -->|"Prevent automatic shutdowns triggered by inactivity Corporate Control: Hardware Abstraction Layer"| D
+    C -->|"Monitor system performance metrics to adjust tactics Corporate Control: Windows Performance Monitor"| D
+    C -->|"Track unauthorized user attempts to change power settings Corporate Control: SOC, Threat Intelligence"| D
+    D -->|"Remove power plan modifications from logs Corporate Control: Log Tampering, Event Viewer"| E
+    D -->|"Use obfuscation to prevent detection Corporate Control: Encrypted Configuration Files"| E
+    D -->|"Deploy redundant power plan modifications Corporate Control: Multiple Registry Hooks"| E
+    D -->|"SOC continuously monitors power plan changes Corporate Control: Security Operations, Threat Hunting"| E

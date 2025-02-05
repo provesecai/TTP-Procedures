@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="System-Firmware-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify System Firmware Vulnerabilities</data>
+</node>
+<node id="B">
+<data key="label">Modify BIOS/UEFI Firmware</data>
+</node>
+<node id="C">
+<data key="label">Maintain Control Over Boot Process</data>
+</node>
+<node id="D">
+<data key="label">Conceal Firmware Alterations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Firmware Modification</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze system firmware versions for vulnerabilities Corporate Control: UEFI/BIOS Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify access control weaknesses in firmware update mechanisms Corporate Control: Firmware Update Utilities</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine necessary privileges for modifying firmware Corporate Control: Administrative Access</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor firmware integrity checks for unauthorized changes Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Flash modified firmware to embed malicious code Corporate Control: UEFI/BIOS Flash Utility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter boot process to ensure execution of malicious payload Corporate Control: Boot Configuration Data (BCD)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Persist changes by disabling firmware rollback protections Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected firmware updates Corporate Control: Firmware Integrity Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malware execution before OS loads Corporate Control: Boot Process</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable security features such as Secure Boot Corporate Control: Firmware Security Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by interfering with OS boot logs Corporate Control: Event Viewer, Kernel Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in boot sequence Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of firmware modification from system logs Corporate Control: Firmware Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use stealth techniques such as rootkits to hide firmware changes Corporate Control: Low-Level Hardware Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence through system updates by modifying firmware updater Corporate Control: UEFI/BIOS Update Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Security teams continuously monitor firmware integrity Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+</graph>
+</graphml>

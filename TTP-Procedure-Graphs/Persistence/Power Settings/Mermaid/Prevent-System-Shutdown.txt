@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify System Shutdown Mechanisms]
+    B[Block Shutdown and Restart Commands]
+    C[Ensure System Uptime for Persistent Access]
+    D[Conceal Shutdown Prevention Methods]
+    E[Persistence Achieved via Prevented System Shutdown]
+
+    A -->|"Analyze system shutdown and restart triggers Corporate Control: Windows Shutdown Policies"| B
+    A -->|"Identify OS-level shutdown mechanisms (e.g., shutdown.exe, power options) Corporate Control: System Configuration"| B
+    A -->|"Examine user privilege levels to control shutdown Corporate Control: User Permissions"| B
+    A -->|"Monitor shutdown requests via system logs Corporate Control: Event Viewer"| B
+    B -->|"Intercept shutdown commands using process hooks Corporate Control: Windows API Hooking"| C
+    B -->|"Modify registry keys to disable shutdown options Corporate Control: Windows Registry"| C
+    B -->|"Implement group policy restrictions to remove shutdown access Corporate Control: Group Policy Editor"| C
+    B -->|"Monitor registry changes and GPO modifications Corporate Control: Security Event Logs, SIEM"| C
+    C -->|"Ensure persistence by preventing system reboots Corporate Control: System Availability Policies"| D
+    C -->|"Maintain malicious tasks by ensuring system uptime Corporate Control: Task Scheduler"| D
+    C -->|"Disable security updates that require restarts Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor for manual shutdown attempts Corporate Control: Security Operations Center (SOC)"| D
+    D -->|"Remove shutdown attempts from logs Corporate Control: Event Log Tampering"| E
+    D -->|"Use stealth techniques to hide shutdown prevention Corporate Control: Kernel Hooks, Rootkits"| E
+    D -->|"Bypass administrator intervention using elevated privileges Corporate Control: Access Control Lists (ACLs)"| E
+    D -->|"Security teams continuously monitor system uptime anomalies Corporate Control: SIEM, Threat Intelligence"| E

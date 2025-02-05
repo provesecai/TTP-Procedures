@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze TPM Key Storage and Boot Integrity]
+    B[Extract or Replace TPM Keys for Malicious Use]
+    C[Modify Boot Process to Bypass Integrity Verification]
+    D[Prevent Detection of TPM Key Manipulation]
+    E[Persistence Achieved via TPM Key Extraction]
+
+    A -->|"Identify TPM-protected boot integrity mechanisms Corporate Control: Trusted Platform Module (TPM)"| B
+    A -->|"Analyze TPM key storage and decryption processes Corporate Control: Windows/Linux TPM Stack"| B
+    A -->|"Determine privilege escalation methods to access TPM Corporate Control: OS Security Policies"| B
+    A -->|"Monitor TPM key usage logs Corporate Control: Security Information and Event Management (SIEM)"| B
+    B -->|"Extract TPM keys to modify OS boot integrity checks Corporate Control: TPM Security Logs"| C
+    B -->|"Inject unauthorized keys to disable Secure Boot Corporate Control: BIOS/UEFI Secure Boot Configuration"| C
+    B -->|"Ensure persistence by preventing TPM re-initialization Corporate Control: Group Policy Settings"| C
+    B -->|"Monitor unauthorized modifications to TPM Corporate Control: Security Event Logs"| C
+    C -->|"Modify OS boot sequence to accept compromised TPM keys Corporate Control: Bootloader Configuration"| D
+    C -->|"Prevent system from detecting altered integrity measurements Corporate Control: OS Integrity Checking"| D
+    C -->|"Ensure persistence through firmware and OS updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor unexpected TPM key usage Corporate Control: Endpoint Detection and Response (EDR)"| D
+    D -->|"Erase TPM key modification traces Corporate Control: Secure Audit Logs, Log Scrubbing"| E
+    D -->|"Use encryption and obfuscation to avoid detection Corporate Control: TPM Key Encryption Methods"| E
+    D -->|"Deploy multiple persistence techniques as fallback Corporate Control: Alternate Key Injection Methods"| E
+    D -->|"SOC continuously monitors TPM security failures Corporate Control: Security Operations Center (SOC)"| E

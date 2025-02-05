@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GRUB-Bootloader-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze GRUB Bootloader Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify GRUB to Execute Malicious Kernel</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Control Over Linux Boot Process</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of GRUB Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via GRUB Bootloader Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify GRUB bootloader configuration files Corporate Control: /boot/grub/grub.cfg</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods to modify GRUB Corporate Control: Linux Administrative Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze OS security settings restricting bootloader changes Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor logs for unauthorized GRUB modifications Corporate Control: Linux System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify GRUB configuration to execute attacker-controlled kernel Corporate Control: GRUB Bootloader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject additional boot parameters to disable security controls Corporate Control: Kernel Boot Parameters</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying GRUB boot order Corporate Control: BIOS/UEFI Boot Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized GRUB changes Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent restoration of original GRUB settings Corporate Control: System Recovery Procedures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security settings to prevent GRUB repair Corporate Control: Linux Security Modules (LSM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across OS updates Corporate Control: Kernel Update Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor boot integrity for anomalies Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase modification traces from logs Corporate Control: Log Scrubbing, Linux Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encrypted configurations to hide boot modifications Corporate Control: GRUB Encryption Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant GRUB modifications for persistence Corporate Control: Multiple Boot Configurations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors GRUB integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extend-Screen-Timeout" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Assess Screen Timeout Settings</data>
+</node>
+<node id="B">
+<data key="label">Prolong Screen Timeout Duration</data>
+</node>
+<node id="C">
+<data key="label">Maintain Active Session</data>
+</node>
+<node id="D">
+<data key="label">Hide Configuration Alterations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Extended Screen Timeout</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Review current screen timeout configurations Corporate Control: Display Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user inactivity thresholds Corporate Control: User Preferences</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access control panel or settings application Corporate Control: System Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log access to display settings Corporate Control: Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Increase screen timeout to prevent lock screen activation Corporate Control: Display Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Apply changes through system settings or registry edits Corporate Control: Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implement policies to enforce new timeout values Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track modifications to screen timeout settings Corporate Control: Configuration Management Database (CMDB)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Keep user session active to allow ongoing malicious activity Corporate Control: User Session Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid triggering security measures tied to inactivity Corporate Control: Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence of malicious processes Corporate Control: Process Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor user activity to adjust tactics Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove evidence of screen timeout changes Corporate Control: Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use obfuscation techniques to mask alterations Corporate Control: Obfuscation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypass security tools detecting configuration changes Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conduct regular audits of display settings Corporate Control: IT Audit Team</data>
+</edge>
+</graph>
+</graphml>

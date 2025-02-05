@@ -1,0 +1,23 @@
+graph TD;
+    A[Assess System Wake Timer Configurations]
+    B[Modify Wake Timers for Scheduled Execution]
+    C[Ensure Malicious Task Activation]
+    D[Prevent Detection of Wake Timer Changes]
+    E[Persistence Achieved via Modified Wake Timers]
+
+    A -->|"Identify active wake timers on system Corporate Control: Windows Power Management"| B
+    A -->|"Analyze scheduled wake-up events Corporate Control: Task Scheduler"| B
+    A -->|"Determine modification points for wake timers Corporate Control: BIOS, OS Power Settings"| B
+    A -->|"Monitor system wake-up logs Corporate Control: Event Viewer"| B
+    B -->|"Alter wake timers to ensure execution of malicious tasks Corporate Control: Powercfg.exe, Task Scheduler"| C
+    B -->|"Modify BIOS settings to override system sleep states Corporate Control: UEFI/BIOS Firmware"| C
+    B -->|"Ensure persistent wake-ups at set intervals Corporate Control: Power Management System"| C
+    B -->|"Monitor unauthorized wake timer modifications Corporate Control: Security Event Logs, SIEM"| C
+    C -->|"Keep malware active by preventing deep sleep Corporate Control: Hardware Abstraction Layer"| D
+    C -->|"Ensure wake-up settings persist across system reboots Corporate Control: Registry Persistence, Firmware Settings"| D
+    C -->|"Prevent system from entering full shutdown Corporate Control: Power Policies"| D
+    C -->|"Monitor unexpected wake-ups Corporate Control: Network Intrusion Detection System (NIDS)"| D
+    D -->|"Erase evidence of wake timer modifications Corporate Control: Log Scrubbing, Event Logs"| E
+    D -->|"Use kernel hooks to prevent detection Corporate Control: Kernel Mode Rootkits"| E
+    D -->|"Modify scheduled task visibility settings Corporate Control: Task Scheduler Permissions"| E
+    D -->|"SOC monitors abnormal system wake-up patterns Corporate Control: Threat Hunting, SIEM"| E

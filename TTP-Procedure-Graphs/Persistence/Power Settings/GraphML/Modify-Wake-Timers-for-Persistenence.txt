@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modify-Wake-Timers-for-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Assess System Wake Timer Configurations</data>
+</node>
+<node id="B">
+<data key="label">Modify Wake Timers for Scheduled Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Malicious Task Activation</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Wake Timer Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Modified Wake Timers</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify active wake timers on system Corporate Control: Windows Power Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze scheduled wake-up events Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine modification points for wake timers Corporate Control: BIOS, OS Power Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system wake-up logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter wake timers to ensure execution of malicious tasks Corporate Control: Powercfg.exe, Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify BIOS settings to override system sleep states Corporate Control: UEFI/BIOS Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistent wake-ups at set intervals Corporate Control: Power Management System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized wake timer modifications Corporate Control: Security Event Logs, SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Keep malware active by preventing deep sleep Corporate Control: Hardware Abstraction Layer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure wake-up settings persist across system reboots Corporate Control: Registry Persistence, Firmware Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system from entering full shutdown Corporate Control: Power Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected wake-ups Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase evidence of wake timer modifications Corporate Control: Log Scrubbing, Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use kernel hooks to prevent detection Corporate Control: Kernel Mode Rootkits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify scheduled task visibility settings Corporate Control: Task Scheduler Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC monitors abnormal system wake-up patterns Corporate Control: Threat Hunting, SIEM</data>
+</edge>
+</graph>
+</graphml>

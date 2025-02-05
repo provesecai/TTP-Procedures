@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disable-Sleep-Mode" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify System Power Policies</data>
+</node>
+<node id="B">
+<data key="label">Disable Sleep Mode</data>
+</node>
+<node id="C">
+<data key="label">Ensure Continuous Operation</data>
+</node>
+<node id="D">
+<data key="label">Conceal Power Setting Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Disabled Sleep Mode</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Examine current power policies to determine sleep settings Corporate Control: Windows Power Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access power configuration tools (e.g., powercfg) Corporate Control: Command-Line Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess user activity patterns to time changes Corporate Control: User Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for power setting modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute commands to disable sleep mode Corporate Control: Power Configuration Utility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry entries related to power settings Corporate Control: Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy scripts to enforce new power policies Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Audit changes to power settings Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain system in active state to support malicious processes Corporate Control: System Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system from entering low-power states Corporate Control: Hardware Abstraction Layer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious tasks continue uninterrupted Corporate Control: Process Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system performance for anomalies Corporate Control: Performance Monitor</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter logs to hide power setting changes Corporate Control: Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use rootkits to obscure modifications Corporate Control: Kernel Modules</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Employ stealth techniques to avoid detection Corporate Control: Anti-Malware Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Regularly review security policies for unauthorized changes Corporate Control: Group Policy Management</data>
+</edge>
+</graph>
+</graphml>

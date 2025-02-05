@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Disk Encryption Configuration]
+    B[Modify Pre-Boot Authentication Mechanisms]
+    C[Intercept and Manipulate Boot Decryption Process]
+    D[Prevent Detection of Encryption Tampering]
+    E[Persistence Achieved via Disk Encryption Tampering]
+
+    A -->|"Identify active disk encryption solutions (BitLocker, LUKS) Corporate Control: Endpoint Security Policies"| B
+    A -->|"Analyze how pre-boot authentication is enforced Corporate Control: Trusted Platform Module (TPM) Security"| B
+    A -->|"Determine privilege escalation paths to modify encryption settings Corporate Control: OS Security Management"| B
+    A -->|"Monitor disk encryption integrity for unauthorized changes Corporate Control: Disk Integrity Verification"| B
+    B -->|"Inject malicious code into the pre-boot authentication phase Corporate Control: OS Bootloader"| C
+    B -->|"Modify encryption policies to allow attacker access Corporate Control: TPM Key Management"| C
+    B -->|"Ensure persistence by redirecting decryption keys Corporate Control: BIOS/UEFI Security Settings"| C
+    B -->|"Monitor unauthorized access to encryption key storage Corporate Control: Security Event Logs, SIEM"| C
+    C -->|"Maintain persistent control over encrypted disk contents Corporate Control: Volume Management Services"| D
+    C -->|"Prevent rollback of malicious encryption modifications Corporate Control: Group Policy, Security Policies"| D
+    C -->|"Ensure continued attacker access even if encryption settings are modified Corporate Control: Bootloader Configuration"| D
+    C -->|"Monitor pre-boot authentication logs for anomalies Corporate Control: Endpoint Detection and Response (EDR)"| D
+    D -->|"Erase encryption modification logs to avoid forensic detection Corporate Control: Log Scrubbing, Secure Boot Logs"| E
+    D -->|"Use cryptographic obfuscation techniques to hide encryption key changes Corporate Control: Secure Key Storage"| E
+    D -->|"Deploy redundant encryption bypass methods to ensure fallback Corporate Control: Alternate Key Injection"| E
+    D -->|"SOC continuously monitors encryption behavior for irregularities Corporate Control: Security Operations Center (SOC)"| E

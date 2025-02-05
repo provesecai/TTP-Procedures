@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Prevent-System-Shutdown" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify System Shutdown Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Block Shutdown and Restart Commands</data>
+</node>
+<node id="C">
+<data key="label">Ensure System Uptime for Persistent Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Shutdown Prevention Methods</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Prevented System Shutdown</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze system shutdown and restart triggers Corporate Control: Windows Shutdown Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify OS-level shutdown mechanisms (e.g., shutdown.exe, power options) Corporate Control: System Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Examine user privilege levels to control shutdown Corporate Control: User Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor shutdown requests via system logs Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept shutdown commands using process hooks Corporate Control: Windows API Hooking</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry keys to disable shutdown options Corporate Control: Windows Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implement group policy restrictions to remove shutdown access Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor registry changes and GPO modifications Corporate Control: Security Event Logs, SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by preventing system reboots Corporate Control: System Availability Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain malicious tasks by ensuring system uptime Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable security updates that require restarts Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for manual shutdown attempts Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove shutdown attempts from logs Corporate Control: Event Log Tampering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use stealth techniques to hide shutdown prevention Corporate Control: Kernel Hooks, Rootkits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypass administrator intervention using elevated privileges Corporate Control: Access Control Lists (ACLs)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Security teams continuously monitor system uptime anomalies Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

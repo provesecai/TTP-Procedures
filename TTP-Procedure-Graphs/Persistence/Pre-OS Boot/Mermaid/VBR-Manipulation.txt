@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Volume Boot Record (VBR) Storage]
+    B[Inject Malicious Code into VBR]
+    C[Ensure Execution Before OS Boot]
+    D[Prevent Detection of VBR Modifications]
+    E[Persistence Achieved via VBR Manipulation]
+
+    A -->|"Analyze Volume Boot Record (VBR) storage on disk Corporate Control: Disk Partitioning"| B
+    A -->|"Determine privilege escalation methods for modifying VBR Corporate Control: Disk Administrator Privileges"| B
+    A -->|"Identify boot security mechanisms restricting VBR modifications Corporate Control: Secure Boot Policies"| B
+    A -->|"Monitor file system changes for unauthorized VBR modifications Corporate Control: Security Logs"| B
+    B -->|"Inject malicious code into VBR to execute before OS loads Corporate Control: Master Boot Record (MBR) / UEFI"| C
+    B -->|"Modify VBR entries to execute attacker-controlled bootloaders Corporate Control: Disk Bootloader"| C
+    B -->|"Ensure persistence by preventing VBR restoration Corporate Control: Disk Recovery Policies"| C
+    B -->|"Monitor unauthorized VBR changes Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Control system startup to maintain persistence Corporate Control: Boot Sequence Control"| D
+    C -->|"Modify boot verification mechanisms to avoid detection Corporate Control: OS Integrity Checking"| D
+    C -->|"Ensure persistence through OS reinstalls Corporate Control: Recovery Partition Configuration"| D
+    C -->|"Monitor unexpected VBR modifications Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Erase traces of VBR modifications Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Use encrypted storage to conceal boot record changes Corporate Control: Bootloader Encryption"| E
+    D -->|"Deploy multiple VBR modifications for redundancy Corporate Control: Hidden Boot Partitions"| E
+    D -->|"SOC continuously monitors disk integrity Corporate Control: Security Operations Center (SOC)"| E

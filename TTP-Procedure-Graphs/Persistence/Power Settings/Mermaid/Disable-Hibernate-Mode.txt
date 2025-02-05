@@ -1,0 +1,23 @@
+graph TD;
+    A[Evaluate Hibernate Configuration]
+    B[Turn Off Hibernate Functionality]
+    C[Ensure System Remains Active]
+    D[Mask Hibernate Setting Changes]
+    E[Persistence Achieved via Disabled Hibernate Mode]
+
+    A -->|"Check if hibernate is enabled on the system Corporate Control: Power Options"| B
+    A -->|"Identify hibernation file (hiberfil.sys) presence Corporate Control: File System"| B
+    A -->|"Use command-line tools to query hibernate status Corporate Control: Command-Line Interface"| B
+    A -->|"Log queries related to hibernate settings Corporate Control: System Logs"| B
+    B -->|"Execute commands to disable hibernation (e.g., powercfg -h off) Corporate Control: Power Configuration Utility"| C
+    B -->|"Delete hibernation file to free space and prevent use Corporate Control: File System"| C
+    B -->|"Modify system settings to remove hibernate option Corporate Control: Control Panel"| C
+    B -->|"Monitor for unauthorized changes to hibernate settings Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Keep system fully operational to support malicious activities Corporate Control: System Services"| D
+    C -->|"Prevent interruptions caused by hibernation Corporate Control: Power Management"| D
+    C -->|"Ensure background processes continue running Corporate Control: Task Manager"| D
+    C -->|"Track system uptime and performance Corporate Control: System Monitoring Tools"| D
+    D -->|"Clear logs of hibernate setting modifications Corporate Control: Event Viewer"| E
+    D -->|"Employ techniques to hide setting changes from users Corporate Control: User Interface"| E
+    D -->|"Avoid detection by security software monitoring power settings Corporate Control: Security Software"| E
+    D -->|"Regularly review power settings for unauthorized changes Corporate Control: IT Security Team"| E

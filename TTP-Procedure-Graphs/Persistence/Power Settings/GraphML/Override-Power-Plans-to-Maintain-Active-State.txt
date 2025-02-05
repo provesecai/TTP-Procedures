@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Override-Power-Plans-to-Maintain-Active-State" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Power Plan Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify Power Plan to Prevent Sleep/Hibernation</data>
+</node>
+<node id="C">
+<data key="label">Ensure Continuous Execution of Malicious Code</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Power Plan Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Power Plan Modification</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Determine active power plan configurations Corporate Control: Windows Power Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system-wide sleep, hibernate, and screen-off settings Corporate Control: Power Configuration (Powercfg.exe)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify privilege escalation points to alter power plans Corporate Control: User Permissions, Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for power plan modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify active power plan to disable sleep states Corporate Control: Windows Registry, Power Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Override group policy restrictions on power settings Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Persist changes by modifying administrative policies Corporate Control: Windows Management Instrumentation (WMI)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized modifications to power plans Corporate Control: SIEM, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure system remains active for continuous malicious activity Corporate Control: System Uptime Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent automatic shutdowns triggered by inactivity Corporate Control: Hardware Abstraction Layer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system performance metrics to adjust tactics Corporate Control: Windows Performance Monitor</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track unauthorized user attempts to change power settings Corporate Control: SOC, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove power plan modifications from logs Corporate Control: Log Tampering, Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use obfuscation to prevent detection Corporate Control: Encrypted Configuration Files</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant power plan modifications Corporate Control: Multiple Registry Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors power plan changes Corporate Control: Security Operations, Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

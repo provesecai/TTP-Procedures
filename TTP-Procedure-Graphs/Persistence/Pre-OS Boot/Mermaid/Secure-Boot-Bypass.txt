@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Secure Boot Configuration]
+    B[Modify Secure Boot Policies]
+    C[Load Unauthorized Boot Components]
+    D[Prevent Secure Boot Verification]
+    E[Persistence Achieved via Secure Boot Bypass]
+
+    A -->|"Identify Secure Boot enforcement policies Corporate Control: BIOS/UEFI Security"| B
+    A -->|"Analyze OS and firmware interactions with Secure Boot Corporate Control: Windows/Linux Boot Manager"| B
+    A -->|"Determine privilege requirements for disabling Secure Boot Corporate Control: Firmware Update Utilities"| B
+    A -->|"Monitor system logs for Secure Boot policy changes Corporate Control: Security Information and Event Management (SIEM)"| B
+    B -->|"Modify Secure Boot settings to allow unsigned bootloaders Corporate Control: UEFI Firmware Configuration"| C
+    B -->|"Replace Secure Boot keys to load malicious components Corporate Control: Key Management Infrastructure"| C
+    B -->|"Ensure malicious bootloaders persist across firmware updates Corporate Control: Boot Configuration Data (BCD)"| C
+    B -->|"Monitor unauthorized Secure Boot key modifications Corporate Control: TPM Security Logs"| C
+    C -->|"Ensure pre-OS execution of attacker-controlled components Corporate Control: Boot Manager"| D
+    C -->|"Modify kernel verification routines to bypass OS integrity checks Corporate Control: OS Security Policies"| D
+    C -->|"Prevent rollback by disabling security alerts Corporate Control: Firmware Integrity Settings"| D
+    C -->|"Monitor Secure Boot status for anomalies Corporate Control: BIOS/UEFI Security Logs"| D
+    D -->|"Remove traces of Secure Boot modifications Corporate Control: Event Log Scrubbing"| E
+    D -->|"Use cryptographic obfuscation to evade detection Corporate Control: Encrypted Key Storage"| E
+    D -->|"Deploy multiple Secure Boot bypass methods for redundancy Corporate Control: Alternate Key Injections"| E
+    D -->|"SOC continuously monitors Secure Boot verification failures Corporate Control: Security Operations Center (SOC)"| E

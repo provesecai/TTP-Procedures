@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify System Firmware Vulnerabilities]
+    B[Modify BIOS/UEFI Firmware]
+    C[Maintain Control Over Boot Process]
+    D[Conceal Firmware Alterations]
+    E[Persistence Achieved via Firmware Modification]
+
+    A -->|"Analyze system firmware versions for vulnerabilities Corporate Control: UEFI/BIOS Firmware"| B
+    A -->|"Identify access control weaknesses in firmware update mechanisms Corporate Control: Firmware Update Utilities"| B
+    A -->|"Determine necessary privileges for modifying firmware Corporate Control: Administrative Access"| B
+    A -->|"Monitor firmware integrity checks for unauthorized changes Corporate Control: Security Monitoring Tools"| B
+    B -->|"Flash modified firmware to embed malicious code Corporate Control: UEFI/BIOS Flash Utility"| C
+    B -->|"Alter boot process to ensure execution of malicious payload Corporate Control: Boot Configuration Data (BCD)"| C
+    B -->|"Persist changes by disabling firmware rollback protections Corporate Control: Secure Boot Policies"| C
+    B -->|"Monitor for unexpected firmware updates Corporate Control: Firmware Integrity Verification"| C
+    C -->|"Ensure malware execution before OS loads Corporate Control: Boot Process"| D
+    C -->|"Disable security features such as Secure Boot Corporate Control: Firmware Security Settings"| D
+    C -->|"Prevent detection by interfering with OS boot logs Corporate Control: Event Viewer, Kernel Logs"| D
+    C -->|"Monitor for anomalies in boot sequence Corporate Control: Security Information and Event Management (SIEM)"| D
+    D -->|"Remove traces of firmware modification from system logs Corporate Control: Firmware Logs"| E
+    D -->|"Use stealth techniques such as rootkits to hide firmware changes Corporate Control: Low-Level Hardware Hooks"| E
+    D -->|"Ensure persistence through system updates by modifying firmware updater Corporate Control: UEFI/BIOS Update Mechanisms"| E
+    D -->|"Security teams continuously monitor firmware integrity Corporate Control: Endpoint Detection and Response (EDR)"| E

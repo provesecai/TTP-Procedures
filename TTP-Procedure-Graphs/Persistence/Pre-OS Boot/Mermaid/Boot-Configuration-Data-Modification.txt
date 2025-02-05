@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Boot Configuration Data (BCD) Settings]
+    B[Modify BCD Entries to Execute Malicious Code]
+    C[Ensure Persistent Control Over Boot Sequence]
+    D[Prevent Detection of BCD Manipulation]
+    E[Persistence Achieved via BCD Modification]
+
+    A -->|"Analyze Windows Boot Configuration Data (BCD) for modifiable entries Corporate Control: Windows Boot Manager"| B
+    A -->|"Identify security policies restricting BCD modifications Corporate Control: Group Policy Editor"| B
+    A -->|"Determine privilege escalation methods to modify BCD Corporate Control: Administrative Privileges"| B
+    A -->|"Monitor system logs for unauthorized BCD changes Corporate Control: Event Viewer, SIEM"| B
+    B -->|"Inject malicious bootloader entry into BCD Corporate Control: Windows Boot Configuration Data"| C
+    B -->|"Modify boot options to execute attacker-controlled kernel Corporate Control: Windows Boot Manager"| C
+    B -->|"Ensure persistence by locking BCD changes Corporate Control: Secure Boot Policies"| C
+    B -->|"Monitor unauthorized BCD modifications Corporate Control: Boot Integrity Verification"| C
+    C -->|"Prevent restoration of original BCD settings Corporate Control: System Recovery Environment"| D
+    C -->|"Modify Windows Recovery Environment (WinRE) to disable integrity checks Corporate Control: Windows Recovery Settings"| D
+    C -->|"Ensure persistence through OS updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor boot-related changes for unauthorized activity Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Remove traces of BCD modifications from system logs Corporate Control: Windows Event Log Scrubbing"| E
+    D -->|"Use obfuscation techniques to prevent detection Corporate Control: Encrypted Bootloader Entries"| E
+    D -->|"Deploy multiple persistence techniques for redundancy Corporate Control: Alternate BCD Modifications"| E
+    D -->|"SOC continuously monitors BCD integrity Corporate Control: Security Operations Center (SOC)"| E

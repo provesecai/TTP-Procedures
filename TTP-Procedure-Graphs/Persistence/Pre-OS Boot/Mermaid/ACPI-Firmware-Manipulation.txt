@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify ACPI Firmware Components]
+    B[Modify ACPI Tables to Trigger Malicious Execution]
+    C[Ensure Persistent Code Execution on Power Events]
+    D[Prevent Detection of ACPI Manipulation]
+    E[Persistence Achieved via ACPI Firmware Manipulation]
+
+    A -->|"Analyze Advanced Configuration and Power Interface (ACPI) tables Corporate Control: BIOS/UEFI Firmware"| B
+    A -->|"Identify power state transitions (e.g., wake-from-sleep) Corporate Control: ACPI Power Management"| B
+    A -->|"Determine privilege escalation methods to modify ACPI tables Corporate Control: Firmware Update Utilities"| B
+    A -->|"Monitor firmware integrity checks Corporate Control: Security Monitoring Tools"| B
+    B -->|"Inject malicious scripts into ACPI table routines Corporate Control: ACPI System Firmware"| C
+    B -->|"Modify ACPI event handlers to execute unauthorized code Corporate Control: Power State Transition Hooks"| C
+    B -->|"Ensure persistence by preventing ACPI rollback Corporate Control: UEFI Secure Boot"| C
+    B -->|"Monitor firmware updates for unauthorized modifications Corporate Control: Firmware Integrity Verification"| C
+    C -->|"Trigger malicious execution during system power transitions Corporate Control: System Wake Events"| D
+    C -->|"Prevent firmware reinstallation to remove persistence Corporate Control: BIOS/UEFI Lock Mechanisms"| D
+    C -->|"Modify system security logs to prevent detection Corporate Control: Windows Event Viewer, Linux Syslog"| D
+    C -->|"Monitor abnormal power state transitions Corporate Control: Endpoint Detection and Response (EDR)"| D
+    D -->|"Erase evidence of ACPI modification Corporate Control: Firmware Logs, Security Event Scrubbing"| E
+    D -->|"Use obfuscation techniques to hide firmware changes Corporate Control: ACPI Encryption Methods"| E
+    D -->|"Deploy redundant ACPI manipulations for resilience Corporate Control: Multiple Power Event Hooks"| E
+    D -->|"SOC teams continuously monitor ACPI activity for anomalies Corporate Control: Security Operations Center (SOC)"| E

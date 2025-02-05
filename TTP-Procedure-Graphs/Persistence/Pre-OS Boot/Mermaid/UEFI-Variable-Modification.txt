@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze UEFI Variable Storage]
+    B[Modify UEFI Variables to Persist in Firmware]
+    C[Ensure Execution of Malicious Code at Boot]
+    D[Prevent Detection of UEFI Variable Manipulation]
+    E[Persistence Achieved via UEFI Variable Modification]
+
+    A -->|"Identify modifiable UEFI variables Corporate Control: UEFI Firmware"| B
+    A -->|"Analyze security mechanisms protecting UEFI variables Corporate Control: Secure Boot Policies"| B
+    A -->|"Determine privilege escalation methods for modifying UEFI Corporate Control: Firmware Update Utilities"| B
+    A -->|"Monitor firmware logs for unauthorized UEFI changes Corporate Control: Security Information and Event Management (SIEM)"| B
+    B -->|"Inject malicious UEFI variable entries to execute attacker-controlled code Corporate Control: UEFI Variable Storage"| C
+    B -->|"Modify boot order variables to prioritize attacker-controlled firmware Corporate Control: BIOS Boot Configuration"| C
+    B -->|"Ensure persistence by preventing variable resets Corporate Control: Firmware Lock Mechanisms"| C
+    B -->|"Monitor unauthorized UEFI modifications Corporate Control: Boot Integrity Verification"| C
+    C -->|"Prevent reinstallation of original UEFI settings Corporate Control: BIOS/UEFI Recovery"| D
+    C -->|"Modify security policies to prevent firmware integrity checks Corporate Control: Trusted Platform Module (TPM) Logs"| D
+    C -->|"Ensure persistence through firmware updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor boot security for anomalies Corporate Control: Endpoint Detection and Response (EDR)"| D
+    D -->|"Remove traces of UEFI variable modifications Corporate Control: Firmware Log Scrubbing"| E
+    D -->|"Use encryption and obfuscation to hide modifications Corporate Control: UEFI Secure Storage"| E
+    D -->|"Deploy multiple UEFI variable modifications for resilience Corporate Control: Multiple Firmware Injections"| E
+    D -->|"SOC continuously monitors UEFI boot integrity Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TPM-Key-Extraction-for-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze TPM Key Storage and Boot Integrity</data>
+</node>
+<node id="B">
+<data key="label">Extract or Replace TPM Keys for Malicious Use</data>
+</node>
+<node id="C">
+<data key="label">Modify Boot Process to Bypass Integrity Verification</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of TPM Key Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via TPM Key Extraction</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify TPM-protected boot integrity mechanisms Corporate Control: Trusted Platform Module (TPM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze TPM key storage and decryption processes Corporate Control: Windows/Linux TPM Stack</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods to access TPM Corporate Control: OS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor TPM key usage logs Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract TPM keys to modify OS boot integrity checks Corporate Control: TPM Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject unauthorized keys to disable Secure Boot Corporate Control: BIOS/UEFI Secure Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by preventing TPM re-initialization Corporate Control: Group Policy Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized modifications to TPM Corporate Control: Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify OS boot sequence to accept compromised TPM keys Corporate Control: Bootloader Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system from detecting altered integrity measurements Corporate Control: OS Integrity Checking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through firmware and OS updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected TPM key usage Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase TPM key modification traces Corporate Control: Secure Audit Logs, Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encryption and obfuscation to avoid detection Corporate Control: TPM Key Encryption Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple persistence techniques as fallback Corporate Control: Alternate Key Injection Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors TPM security failures Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

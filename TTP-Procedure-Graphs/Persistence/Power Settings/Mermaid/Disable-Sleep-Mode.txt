@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify System Power Policies]
+    B[Disable Sleep Mode]
+    C[Ensure Continuous Operation]
+    D[Conceal Power Setting Changes]
+    E[Persistence Achieved via Disabled Sleep Mode]
+
+    A -->|"Examine current power policies to determine sleep settings Corporate Control: Windows Power Management"| B
+    A -->|"Access power configuration tools (e.g., powercfg) Corporate Control: Command-Line Interface"| B
+    A -->|"Assess user activity patterns to time changes Corporate Control: User Behavior Analysis"| B
+    A -->|"Monitor system logs for power setting modifications Corporate Control: Event Viewer"| B
+    B -->|"Execute commands to disable sleep mode Corporate Control: Power Configuration Utility"| C
+    B -->|"Modify registry entries related to power settings Corporate Control: Windows Registry"| C
+    B -->|"Deploy scripts to enforce new power policies Corporate Control: Task Scheduler"| C
+    B -->|"Audit changes to power settings Corporate Control: Security Information and Event Management (SIEM)"| C
+    C -->|"Maintain system in active state to support malicious processes Corporate Control: System Services"| D
+    C -->|"Prevent system from entering low-power states Corporate Control: Hardware Abstraction Layer"| D
+    C -->|"Ensure malicious tasks continue uninterrupted Corporate Control: Process Management"| D
+    C -->|"Monitor system performance for anomalies Corporate Control: Performance Monitor"| D
+    D -->|"Alter logs to hide power setting changes Corporate Control: Log Management"| E
+    D -->|"Use rootkits to obscure modifications Corporate Control: Kernel Modules"| E
+    D -->|"Employ stealth techniques to avoid detection Corporate Control: Anti-Malware Solutions"| E
+    D -->|"Regularly review security policies for unauthorized changes Corporate Control: Group Policy Management"| E

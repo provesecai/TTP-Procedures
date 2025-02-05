@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disk-Encryption-Tampering" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Disk Encryption Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify Pre-Boot Authentication Mechanisms</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Manipulate Boot Decryption Process</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Encryption Tampering</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Disk Encryption Tampering</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify active disk encryption solutions (BitLocker, LUKS) Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze how pre-boot authentication is enforced Corporate Control: Trusted Platform Module (TPM) Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation paths to modify encryption settings Corporate Control: OS Security Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor disk encryption integrity for unauthorized changes Corporate Control: Disk Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into the pre-boot authentication phase Corporate Control: OS Bootloader</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify encryption policies to allow attacker access Corporate Control: TPM Key Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by redirecting decryption keys Corporate Control: BIOS/UEFI Security Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to encryption key storage Corporate Control: Security Event Logs, SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistent control over encrypted disk contents Corporate Control: Volume Management Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback of malicious encryption modifications Corporate Control: Group Policy, Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continued attacker access even if encryption settings are modified Corporate Control: Bootloader Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor pre-boot authentication logs for anomalies Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase encryption modification logs to avoid forensic detection Corporate Control: Log Scrubbing, Secure Boot Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cryptographic obfuscation techniques to hide encryption key changes Corporate Control: Secure Key Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant encryption bypass methods to ensure fallback Corporate Control: Alternate Key Injection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors encryption behavior for irregularities Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

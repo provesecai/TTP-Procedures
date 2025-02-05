@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Option-ROM-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Option ROM Vulnerabilities</data>
+</node>
+<node id="B">
+<data key="label">Modify Firmware in Peripheral Devices</data>
+</node>
+<node id="C">
+<data key="label">Ensure Execution During Pre-OS Boot</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious Firmware</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Option ROM Modification</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze PCI and peripheral device firmware Corporate Control: PCI Option ROMs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify update mechanisms for embedded firmware Corporate Control: Vendor Update Utilities</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privileges required to modify device firmware Corporate Control: Firmware Flashing Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor firmware integrity checks Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into option ROM of network adapters, GPUs Corporate Control: Hardware Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution routines to ensure early-stage payload execution Corporate Control: Peripheral Device BIOS</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence across reboots by locking firmware changes Corporate Control: UEFI Secure Boot</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized firmware changes Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious firmware executes before OS loads Corporate Control: Peripheral Boot Processes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback by modifying firmware update protections Corporate Control: Device Firmware Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence by disabling security verification Corporate Control: BIOS/UEFI Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor device firmware logs for anomalies Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of firmware modification Corporate Control: Event Logs, Firmware Update History</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encrypted payloads to hide firmware changes Corporate Control: Obfuscated Firmware Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant firmware modifications to ensure fallback Corporate Control: Secondary Option ROMs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC teams continuously monitor firmware integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

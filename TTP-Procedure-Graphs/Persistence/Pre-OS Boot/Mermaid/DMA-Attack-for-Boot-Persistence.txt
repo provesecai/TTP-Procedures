@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify DMA-Capable Hardware]
+    B[Exploit DMA to Modify Boot Process]
+    C[Maintain Pre-OS Control via DMA Attacks]
+    D[Conceal DMA Manipulations]
+    E[Persistence Achieved via DMA Boot Exploit]
+
+    A -->|"Identify Thunderbolt, PCIe, or FireWire devices with DMA access Corporate Control: Hardware Security"| B
+    A -->|"Analyze kernel memory protections against DMA attacks Corporate Control: OS Kernel Security"| B
+    A -->|"Determine DMA injection points for boot process manipulation Corporate Control: Memory Access Interfaces"| B
+    A -->|"Monitor for unauthorized DMA activity Corporate Control: SIEM, Memory Monitoring"| B
+    B -->|"Inject malicious code into system memory via DMA Corporate Control: PCIe Device Firmware"| C
+    B -->|"Modify boot loader using direct memory access Corporate Control: UEFI/BIOS Memory Regions"| C
+    B -->|"Ensure persistence by altering kernel execution at boot Corporate Control: Low-Level OS Interfaces"| C
+    B -->|"Monitor for unexpected DMA access patterns Corporate Control: Memory Access Auditing"| C
+    C -->|"Maintain control over system memory before OS initializes Corporate Control: Pre-Boot Environment"| D
+    C -->|"Prevent OS from detecting DMA-induced changes Corporate Control: Kernel Memory Protections"| D
+    C -->|"Ensure continuous access by modifying PCIe device settings Corporate Control: Firmware-Level DMA Configuration"| D
+    C -->|"Monitor for memory integrity violations Corporate Control: Trusted Execution Environment (TEE)"| D
+    D -->|"Remove traces of DMA interactions from system logs Corporate Control: Log Scrubbing, Memory Encryption"| E
+    D -->|"Use encrypted payloads to avoid DMA-based forensic analysis Corporate Control: Hardware Encryption"| E
+    D -->|"Deploy secondary persistence mechanisms in case of hardware reset Corporate Control: Alternate DMA Injection"| E
+    D -->|"SOC teams continuously monitor unexpected DMA operations Corporate Control: Security Operations Center (SOC)"| E

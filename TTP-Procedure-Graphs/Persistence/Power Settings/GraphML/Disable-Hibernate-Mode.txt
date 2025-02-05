@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disable-Hibernate-Mode" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Evaluate Hibernate Configuration</data>
+</node>
+<node id="B">
+<data key="label">Turn Off Hibernate Functionality</data>
+</node>
+<node id="C">
+<data key="label">Ensure System Remains Active</data>
+</node>
+<node id="D">
+<data key="label">Mask Hibernate Setting Changes</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Disabled Hibernate Mode</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Check if hibernate is enabled on the system Corporate Control: Power Options</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify hibernation file (hiberfil.sys) presence Corporate Control: File System</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use command-line tools to query hibernate status Corporate Control: Command-Line Interface</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log queries related to hibernate settings Corporate Control: System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute commands to disable hibernation (e.g., powercfg -h off) Corporate Control: Power Configuration Utility</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Delete hibernation file to free space and prevent use Corporate Control: File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system settings to remove hibernate option Corporate Control: Control Panel</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to hibernate settings Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Keep system fully operational to support malicious activities Corporate Control: System Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent interruptions caused by hibernation Corporate Control: Power Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure background processes continue running Corporate Control: Task Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track system uptime and performance Corporate Control: System Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Clear logs of hibernate setting modifications Corporate Control: Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Employ techniques to hide setting changes from users Corporate Control: User Interface</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by security software monitoring power settings Corporate Control: Security Software</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Regularly review power settings for unauthorized changes Corporate Control: IT Security Team</data>
+</edge>
+</graph>
+</graphml>

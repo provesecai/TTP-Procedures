@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Boot Process for Weaknesses]
+    B[Install Bootkit in MBR/UEFI]
+    C[Ensure Bootkit Execution Before OS Loads]
+    D[Obfuscate Bootkit Presence]
+    E[Persistence Achieved via Bootkit]
+
+    A -->|"Identify boot sequence vulnerabilities Corporate Control: Master Boot Record (MBR) / UEFI"| B
+    A -->|"Determine access methods for modifying bootloader Corporate Control: Windows/Linux Bootloader"| B
+    A -->|"Assess security policies restricting bootloader changes Corporate Control: Secure Boot, OS Security"| B
+    A -->|"Monitor boot logs for unexpected modifications Corporate Control: Event Viewer, System Logs"| B
+    B -->|"Inject malicious code into MBR/UEFI to hijack boot process Corporate Control: Bootloader Configuration"| C
+    B -->|"Modify bootloader to load unauthorized kernel modules Corporate Control: Windows/Linux Kernel Boot Process"| C
+    B -->|"Ensure execution of malicious payload before OS defenses activate Corporate Control: Kernel-Level Execution"| C
+    B -->|"Monitor for unauthorized bootloader changes Corporate Control: Boot Integrity Checks"| C
+    C -->|"Control system startup to maintain persistence Corporate Control: Early Boot Environment"| D
+    C -->|"Modify boot order to prioritize malicious bootkits Corporate Control: Firmware Configuration"| D
+    C -->|"Ensure persistence by disabling secure boot Corporate Control: BIOS/UEFI Security Settings"| D
+    C -->|"Monitor boot logs for anomalies Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Remove traces of bootkit from disk logs Corporate Control: File System Logs, Boot Records"| E
+    D -->|"Deploy anti-forensic techniques to prevent analysis Corporate Control: Memory-Based Bootkit Storage"| E
+    D -->|"Modify system integrity checks to ignore bootkit presence Corporate Control: Secure Boot Bypass"| E
+    D -->|"SOC continuously monitors system boot behavior Corporate Control: Security Operations Center (SOC)"| E

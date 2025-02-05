@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Secure-Boot-Bypass" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Secure Boot Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify Secure Boot Policies</data>
+</node>
+<node id="C">
+<data key="label">Load Unauthorized Boot Components</data>
+</node>
+<node id="D">
+<data key="label">Prevent Secure Boot Verification</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Secure Boot Bypass</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Secure Boot enforcement policies Corporate Control: BIOS/UEFI Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze OS and firmware interactions with Secure Boot Corporate Control: Windows/Linux Boot Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege requirements for disabling Secure Boot Corporate Control: Firmware Update Utilities</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for Secure Boot policy changes Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Secure Boot settings to allow unsigned bootloaders Corporate Control: UEFI Firmware Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace Secure Boot keys to load malicious components Corporate Control: Key Management Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious bootloaders persist across firmware updates Corporate Control: Boot Configuration Data (BCD)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized Secure Boot key modifications Corporate Control: TPM Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure pre-OS execution of attacker-controlled components Corporate Control: Boot Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify kernel verification routines to bypass OS integrity checks Corporate Control: OS Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback by disabling security alerts Corporate Control: Firmware Integrity Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor Secure Boot status for anomalies Corporate Control: BIOS/UEFI Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of Secure Boot modifications Corporate Control: Event Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cryptographic obfuscation to evade detection Corporate Control: Encrypted Key Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple Secure Boot bypass methods for redundancy Corporate Control: Alternate Key Injections</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Secure Boot verification failures Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

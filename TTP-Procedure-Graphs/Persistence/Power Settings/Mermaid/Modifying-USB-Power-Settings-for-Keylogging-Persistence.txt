@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify USB Power Management Settings]
+    B[Modify USB Ports to Remain Powered in Standby]
+    C[Ensure Keylogger Captures Keystrokes Persistently]
+    D[Prevent Detection of USB Power Modifications]
+    E[Persistence Achieved via USB Power Exploitation]
+
+    A -->|"Review USB power settings in device manager Corporate Control: Windows Device Manager"| B
+    A -->|"Identify keyboard and HID device power policies Corporate Control: Hardware Management"| B
+    A -->|"Determine best method for altering USB power settings Corporate Control: Windows Power Management"| B
+    A -->|"Monitor unauthorized modifications to USB settings Corporate Control: Event Viewer"| B
+    B -->|"Disable USB power-saving settings to keep devices active Corporate Control: Device Manager, Windows Registry"| C
+    B -->|"Ensure HID devices remain powered in sleep mode Corporate Control: BIOS/UEFI Firmware"| C
+    B -->|"Modify group policies to enforce new USB settings Corporate Control: Group Policy Editor"| C
+    B -->|"Monitor USB power consumption logs Corporate Control: SIEM, Security Logs"| C
+    C -->|"Capture keystrokes persistently via connected keylogger Corporate Control: Hardware Keylogger, Software Keystroke Logging"| D
+    C -->|"Prevent system from powering down USB devices Corporate Control: Power Policies, Registry Settings"| D
+    C -->|"Ensure persistence by modifying firmware settings Corporate Control: BIOS, UEFI"| D
+    C -->|"Monitor unexpected USB activity Corporate Control: Network Security Monitoring"| D
+    D -->|"Remove traces of USB power setting modifications Corporate Control: Log Scrubbing, Event Logs"| E
+    D -->|"Use firmware-level obfuscation to prevent detection Corporate Control: Rootkits, Firmware Exploits"| E
+    D -->|"Modify USB enumeration logs Corporate Control: Device Manager Logs"| E
+    D -->|"SOC continuously monitors USB device activity Corporate Control: Threat Intelligence, Security Operations"| E

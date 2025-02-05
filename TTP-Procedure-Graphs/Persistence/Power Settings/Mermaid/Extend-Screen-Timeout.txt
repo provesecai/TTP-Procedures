@@ -1,0 +1,23 @@
+graph TD;
+    A[Assess Screen Timeout Settings]
+    B[Prolong Screen Timeout Duration]
+    C[Maintain Active Session]
+    D[Hide Configuration Alterations]
+    E[Persistence Achieved via Extended Screen Timeout]
+
+    A -->|"Review current screen timeout configurations Corporate Control: Display Settings"| B
+    A -->|"Identify user inactivity thresholds Corporate Control: User Preferences"| B
+    A -->|"Access control panel or settings application Corporate Control: System Interface"| B
+    A -->|"Log access to display settings Corporate Control: Audit Logs"| B
+    B -->|"Increase screen timeout to prevent lock screen activation Corporate Control: Display Configuration"| C
+    B -->|"Apply changes through system settings or registry edits Corporate Control: Windows Registry"| C
+    B -->|"Implement policies to enforce new timeout values Corporate Control: Group Policy Editor"| C
+    B -->|"Track modifications to screen timeout settings Corporate Control: Configuration Management Database (CMDB)"| C
+    C -->|"Keep user session active to allow ongoing malicious activity Corporate Control: User Session Management"| D
+    C -->|"Avoid triggering security measures tied to inactivity Corporate Control: Security Policies"| D
+    C -->|"Ensure persistence of malicious processes Corporate Control: Process Scheduler"| D
+    C -->|"Monitor user activity to adjust tactics Corporate Control: User Behavior Analytics (UBA)"| D
+    D -->|"Remove evidence of screen timeout changes Corporate Control: Event Logs"| E
+    D -->|"Use obfuscation techniques to mask alterations Corporate Control: Obfuscation Tools"| E
+    D -->|"Bypass security tools detecting configuration changes Corporate Control: Endpoint Detection and Response (EDR)"| E
+    D -->|"Conduct regular audits of display settings Corporate Control: IT Audit Team"| E

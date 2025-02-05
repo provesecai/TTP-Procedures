@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Bootloader Security Measures]
+    B[Replace Bootloader with Malicious Version]
+    C[Modify Boot Process to Load Unauthorized Components]
+    D[Prevent Detection of Bootloader Modification]
+    E[Persistence Achieved via Bootloader Replacement]
+
+    A -->|"Analyze Windows/Linux bootloader configurations Corporate Control: Boot Manager"| B
+    A -->|"Determine methods to bypass bootloader integrity checks Corporate Control: Secure Boot Policies"| B
+    A -->|"Identify bootloader storage locations Corporate Control: EFI Partition, Boot Sector"| B
+    A -->|"Monitor system logs for unauthorized bootloader changes Corporate Control: Event Viewer, System Logs"| B
+    B -->|"Replace legitimate bootloader with attacker-controlled version Corporate Control: Bootloader Configuration"| C
+    B -->|"Ensure execution of modified bootloader before OS loads Corporate Control: Pre-Boot Environment"| C
+    B -->|"Modify security policies to disable integrity checks Corporate Control: Windows/Linux Security Policies"| C
+    B -->|"Monitor for unauthorized modifications to bootloader Corporate Control: Boot Integrity Verification"| C
+    C -->|"Maintain persistent access by preventing bootloader restoration Corporate Control: Secure Boot Policies"| D
+    C -->|"Control system boot flow to ensure malicious payload execution Corporate Control: Boot Sequence Configuration"| D
+    C -->|"Ensure attacker access is preserved after system updates Corporate Control: Patch Management"| D
+    C -->|"Monitor bootloader integrity for unexpected changes Corporate Control: Firmware Security Logs"| D
+    D -->|"Remove forensic traces of bootloader replacement Corporate Control: Event Log Tampering"| E
+    D -->|"Use encrypted storage for bootloader modifications Corporate Control: Encrypted Bootloader Partition"| E
+    D -->|"Deploy secondary persistence mechanisms in case of rollback Corporate Control: Hidden Backup Bootloader"| E
+    D -->|"SOC teams continuously monitor bootloader integrity Corporate Control: Endpoint Detection and Response (EDR)"| E

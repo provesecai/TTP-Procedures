@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DMA-Attack-for-Boot-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify DMA-Capable Hardware</data>
+</node>
+<node id="B">
+<data key="label">Exploit DMA to Modify Boot Process</data>
+</node>
+<node id="C">
+<data key="label">Maintain Pre-OS Control via DMA Attacks</data>
+</node>
+<node id="D">
+<data key="label">Conceal DMA Manipulations</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DMA Boot Exploit</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Thunderbolt, PCIe, or FireWire devices with DMA access Corporate Control: Hardware Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze kernel memory protections against DMA attacks Corporate Control: OS Kernel Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine DMA injection points for boot process manipulation Corporate Control: Memory Access Interfaces</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized DMA activity Corporate Control: SIEM, Memory Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into system memory via DMA Corporate Control: PCIe Device Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify boot loader using direct memory access Corporate Control: UEFI/BIOS Memory Regions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by altering kernel execution at boot Corporate Control: Low-Level OS Interfaces</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected DMA access patterns Corporate Control: Memory Access Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain control over system memory before OS initializes Corporate Control: Pre-Boot Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent OS from detecting DMA-induced changes Corporate Control: Kernel Memory Protections</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continuous access by modifying PCIe device settings Corporate Control: Firmware-Level DMA Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for memory integrity violations Corporate Control: Trusted Execution Environment (TEE)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of DMA interactions from system logs Corporate Control: Log Scrubbing, Memory Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encrypted payloads to avoid DMA-based forensic analysis Corporate Control: Hardware Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy secondary persistence mechanisms in case of hardware reset Corporate Control: Alternate DMA Injection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC teams continuously monitor unexpected DMA operations Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

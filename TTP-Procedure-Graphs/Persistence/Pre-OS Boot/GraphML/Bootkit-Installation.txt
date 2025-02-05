@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Bootkit-Installation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Boot Process for Weaknesses</data>
+</node>
+<node id="B">
+<data key="label">Install Bootkit in MBR/UEFI</data>
+</node>
+<node id="C">
+<data key="label">Ensure Bootkit Execution Before OS Loads</data>
+</node>
+<node id="D">
+<data key="label">Obfuscate Bootkit Presence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Bootkit</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify boot sequence vulnerabilities Corporate Control: Master Boot Record (MBR) / UEFI</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods for modifying bootloader Corporate Control: Windows/Linux Bootloader</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess security policies restricting bootloader changes Corporate Control: Secure Boot, OS Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor boot logs for unexpected modifications Corporate Control: Event Viewer, System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into MBR/UEFI to hijack boot process Corporate Control: Bootloader Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify bootloader to load unauthorized kernel modules Corporate Control: Windows/Linux Kernel Boot Process</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of malicious payload before OS defenses activate Corporate Control: Kernel-Level Execution</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized bootloader changes Corporate Control: Boot Integrity Checks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Control system startup to maintain persistence Corporate Control: Early Boot Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify boot order to prioritize malicious bootkits Corporate Control: Firmware Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by disabling secure boot Corporate Control: BIOS/UEFI Security Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor boot logs for anomalies Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of bootkit from disk logs Corporate Control: File System Logs, Boot Records</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy anti-forensic techniques to prevent analysis Corporate Control: Memory-Based Bootkit Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system integrity checks to ignore bootkit presence Corporate Control: Secure Boot Bypass</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors system boot behavior Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

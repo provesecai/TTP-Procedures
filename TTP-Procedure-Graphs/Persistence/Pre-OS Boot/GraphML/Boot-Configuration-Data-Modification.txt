@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Boot-Configuration-Data-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Boot Configuration Data (BCD) Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify BCD Entries to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Control Over Boot Sequence</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of BCD Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BCD Modification</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze BCD for modifiable entries Corporate Control: Windows Boot Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify security policies restricting BCD modifications Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods Corporate Control: Administrative Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for unauthorized changes Corporate Control: Event Viewer, SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious bootloader entry Corporate Control: Windows Boot Configuration Data</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify boot options Corporate Control: Windows Boot Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by locking BCD changes Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized modifications Corporate Control: Boot Integrity Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent restoration of original settings Corporate Control: System Recovery Environment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Windows Recovery Environment Corporate Control: Windows Recovery Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through OS updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized boot-related changes Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of modifications from logs Corporate Control: Windows Event Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use obfuscation techniques Corporate Control: Encrypted Bootloader Entries</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple persistence techniques Corporate Control: Alternate BCD Modifications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors BCD integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

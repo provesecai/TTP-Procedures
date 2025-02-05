@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="UEFI-Variable-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze UEFI Variable Storage</data>
+</node>
+<node id="B">
+<data key="label">Modify UEFI Variables to Persist in Firmware</data>
+</node>
+<node id="C">
+<data key="label">Ensure Execution of Malicious Code at Boot</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of UEFI Variable Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via UEFI Variable Modification</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify modifiable UEFI variables Corporate Control: UEFI Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security mechanisms protecting UEFI variables Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods for modifying UEFI Corporate Control: Firmware Update Utilities</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor firmware logs for unauthorized UEFI changes Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious UEFI variable entries Corporate Control: UEFI Variable Storage</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify boot order variables Corporate Control: BIOS Boot Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by preventing variable resets Corporate Control: Firmware Lock Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized UEFI modifications Corporate Control: Boot Integrity Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent reinstallation of original UEFI settings Corporate Control: BIOS/UEFI Recovery</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security policies to prevent firmware integrity checks Corporate Control: Trusted Platform Module (TPM) Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through firmware updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor boot security for anomalies Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of UEFI variable modifications Corporate Control: Firmware Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encryption and obfuscation Corporate Control: UEFI Secure Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple UEFI variable modifications Corporate Control: Multiple Firmware Injections</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors UEFI boot integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

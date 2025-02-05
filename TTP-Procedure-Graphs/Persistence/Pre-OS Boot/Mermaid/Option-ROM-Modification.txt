@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Option ROM Vulnerabilities]
+    B[Modify Firmware in Peripheral Devices]
+    C[Ensure Execution During Pre-OS Boot]
+    D[Prevent Detection of Malicious Firmware]
+    E[Persistence Achieved via Option ROM Modification]
+
+    A -->|"Analyze PCI and peripheral device firmware Corporate Control: PCI Option ROMs"| B
+    A -->|"Identify update mechanisms for embedded firmware Corporate Control: Vendor Update Utilities"| B
+    A -->|"Determine privileges required to modify device firmware Corporate Control: Firmware Flashing Tools"| B
+    A -->|"Monitor firmware integrity checks Corporate Control: Security Monitoring Tools"| B
+    B -->|"Inject malicious code into option ROM of network adapters, GPUs Corporate Control: Hardware Firmware"| C
+    B -->|"Modify execution routines to ensure early-stage payload execution Corporate Control: Peripheral Device BIOS"| C
+    B -->|"Ensure persistence across reboots by locking firmware changes Corporate Control: UEFI Secure Boot"| C
+    B -->|"Monitor for unauthorized firmware changes Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Ensure malicious firmware executes before OS loads Corporate Control: Peripheral Boot Processes"| D
+    C -->|"Prevent rollback by modifying firmware update protections Corporate Control: Device Firmware Security"| D
+    C -->|"Maintain persistence by disabling security verification Corporate Control: BIOS/UEFI Security Policies"| D
+    C -->|"Monitor device firmware logs for anomalies Corporate Control: Security Information and Event Management (SIEM)"| D
+    D -->|"Remove traces of firmware modification Corporate Control: Event Logs, Firmware Update History"| E
+    D -->|"Use encrypted payloads to hide firmware changes Corporate Control: Obfuscated Firmware Encryption"| E
+    D -->|"Deploy redundant firmware modifications to ensure fallback Corporate Control: Secondary Option ROMs"| E
+    D -->|"SOC teams continuously monitor firmware integrity Corporate Control: Security Operations Center (SOC)"| E

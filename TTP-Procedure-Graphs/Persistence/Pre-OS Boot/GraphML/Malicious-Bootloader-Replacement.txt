@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Bootloader-Replacement" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Bootloader Security Measures</data>
+</node>
+<node id="B">
+<data key="label">Replace Bootloader with Malicious Version</data>
+</node>
+<node id="C">
+<data key="label">Modify Boot Process to Load Unauthorized Components</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Bootloader Modification</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Bootloader Replacement</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze Windows/Linux bootloader configurations Corporate Control: Boot Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine methods to bypass bootloader integrity checks Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify bootloader storage locations Corporate Control: EFI Partition, Boot Sector</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system logs for unauthorized bootloader changes Corporate Control: Event Viewer, System Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate bootloader with attacker-controlled version Corporate Control: Bootloader Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution of modified bootloader before OS loads Corporate Control: Pre-Boot Environment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security policies to disable integrity checks Corporate Control: Windows/Linux Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to bootloader Corporate Control: Boot Integrity Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistent access by preventing bootloader restoration Corporate Control: Secure Boot Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Control system boot flow to ensure malicious payload execution Corporate Control: Boot Sequence Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure attacker access is preserved after system updates Corporate Control: Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor bootloader integrity for unexpected changes Corporate Control: Firmware Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove forensic traces of bootloader replacement Corporate Control: Event Log Tampering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encrypted storage for bootloader modifications Corporate Control: Encrypted Bootloader Partition</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy secondary persistence mechanisms in case of rollback Corporate Control: Hidden Backup Bootloader</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC teams continuously monitor bootloader integrity Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ACPI-Firmware-Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify ACPI Firmware Components</data>
+</node>
+<node id="B">
+<data key="label">Modify ACPI Tables to Trigger Malicious Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Code Execution on Power Events</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of ACPI Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via ACPI Firmware Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze ACPI tables Corporate Control: BIOS/UEFI Firmware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify power state transitions Corporate Control: ACPI Power Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods Corporate Control: Firmware Update Utilities</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor firmware integrity checks Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious scripts into ACPI routines Corporate Control: ACPI System Firmware</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify ACPI event handlers Corporate Control: Power State Transition Hooks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by preventing ACPI rollback Corporate Control: UEFI Secure Boot</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor firmware updates Corporate Control: Firmware Integrity Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution during power transitions Corporate Control: System Wake Events</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent firmware reinstallation Corporate Control: BIOS/UEFI Lock Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system security logs Corporate Control: Windows Event Viewer, Linux Syslog</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor abnormal power state transitions Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase evidence of ACPI modification Corporate Control: Firmware Logs, Security Event Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use obfuscation techniques Corporate Control: ACPI Encryption Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant ACPI manipulations Corporate Control: Multiple Power Event Hooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC teams monitor ACPI activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>
