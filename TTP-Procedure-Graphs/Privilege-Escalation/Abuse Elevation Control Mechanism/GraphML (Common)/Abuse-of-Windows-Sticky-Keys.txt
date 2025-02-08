@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abuse-of-Windows-Sticky-Keys" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Sticky Keys Binary Path</data>
+</node>
+<node id="B">
+<data key="label">Replace sethc.exe with Malicious Executable</data>
+</node>
+<node id="C">
+<data key="label">Trigger Sticky Keys to Gain Elevated Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Sticky Keys Exploitation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Sticky Keys Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Locate sethc.exe in System32 directory Corporate Control: Windows File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable paths where execution replacement is possible Corporate Control: NTFS Access Control Lists (ACLs)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for registry settings that override Sticky Keys execution Corporate Control: Windows Registry Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system file modifications Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace sethc.exe with a malicious command shell Corporate Control: Windows User Access Control (UAC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure modified executable runs under SYSTEM privileges Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution permissions to ensure persistence Corporate Control: Windows File Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to system binaries Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger Sticky Keys by pressing Shift five times Corporate Control: Windows Accessibility Features</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM-level access obtained Corporate Control: Privilege Escalation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the method remains persistent after reboots Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor accessibility feature execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove evidence of Sticky Keys exploitation Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy backup persistence techniques in case of removal Corporate Control: Windows Scheduled Tasks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure method remains effective even after security updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unusual accessibility feature use Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

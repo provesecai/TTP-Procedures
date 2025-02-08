@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Weak Accessibility Features]
+    B[Replace Sticky Keys Executable with Command Prompt]
+    C[Validate SYSTEM-Level Privileges]
+    D[Conceal Privilege Escalation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Determine if accessibility tools are enabled before login Corporate Control: Windows Group Policy Settings"| B
+    A -->|"Identify writeable paths for sethc.exe or Utilman.exe Corporate Control: NTFS File System Permissions"| B
+    A -->|"Check if Safe Mode restrictions are in place Corporate Control: Windows Recovery Mode Security"| B
+    A -->|"Monitor for unauthorized modifications to accessibility executables Corporate Control: SIEM, Windows Defender Logs"| B
+    B -->|"Replace Sticky Keys binary with cmd.exe to spawn SYSTEM shell Corporate Control: Windows System File Protection"| C
+    B -->|"Modify registry keys to execute an administrative shell pre-login Corporate Control: Windows Registry Hardening"| C
+    B -->|"Ensure the replacement persists across system restarts Corporate Control: Windows Boot Configuration Policies"| C
+    B -->|"Monitor for unauthorized replacements of system executables Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Verify SYSTEM privileges by executing privileged commands Corporate Control: Access Control Lists (ACLs)"| D
+    C -->|"Test persistence by rebooting and re-triggering accessibility tool Corporate Control: System Recovery Mechanisms"| D
+    C -->|"Ensure unrestricted access to critical OS components Corporate Control: Endpoint Privilege Management"| D
+    C -->|"Monitor for unauthorized SYSTEM process executions Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify Windows Event Logs to remove traces of privilege escalation Corporate Control: Log Scrubbing, Event Log Management"| E
+    D -->|"Deploy multiple privilege escalation mechanisms for redundancy Corporate Control: Alternate Accessibility Tool Modifications"| E
+    D -->|"Ensure continued SYSTEM access by modifying boot policies Corporate Control: Secure Boot Policies"| E
+    D -->|"SOC continuously monitors for unauthorized system-level shell access Corporate Control: Security Operations Center (SOC)"| E

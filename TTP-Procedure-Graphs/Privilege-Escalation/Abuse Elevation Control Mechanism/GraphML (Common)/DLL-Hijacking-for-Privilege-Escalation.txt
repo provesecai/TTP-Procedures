@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DLL-Hijacking-for-Privilege-Escalation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable DLL Search Order</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious DLL into Application Execution</data>
+</node>
+<node id="C">
+<data key="label">Escalate Privileges via Compromised DLL</data>
+</node>
+<node id="D">
+<data key="label">Conceal DLL Hijacking Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DLL Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze executable dependencies to identify missing or replaceable DLLs Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check default DLL search paths for writable directories Corporate Control: Windows DLL Load Order Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate processes vulnerable to DLL hijacking Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modification of system libraries Corporate Control: SIEM, File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace legitimate DLL with a malicious version Corporate Control: NTFS File Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution by targeting auto-loaded DLLs Corporate Control: Windows Auto-Elevation Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify DLL properties to ensure persistence Corporate Control: Windows Registry Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor process injections for unauthorized DLL loads Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM or administrator privileges gained Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DLL execution to evade detection Corporate Control: Dynamic Code Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across reboots by modifying registry settings Corporate Control: Windows Startup Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized changes to system DLLs Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to erase traces of DLL hijacking Corporate Control: Log Scrubbing, Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional persistence techniques via DLL side-loading Corporate Control: Multiple System Exploits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued execution of hijacked DLLs Corporate Control: Process Hollowing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors DLL execution behaviors Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

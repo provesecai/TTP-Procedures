@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-Debugger-for-Auto-Elevated-Applications" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Auto-Elevated Applications</data>
+</node>
+<node id="B">
+<data key="label">Modify Debugger Registry Keys</data>
+</node>
+<node id="C">
+<data key="label">Execute Malicious Payload via Debugger Hijacking</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Debugger Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Debugger Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Windows auto-elevated applications Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate applications that allow debugger attachment Corporate Control: Windows Application Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes in debugger settings Corporate Control: SIEM, Windows Registry Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry debugger key to launch a malicious payload Corporate Control: Windows Registry Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload executes with SYSTEM privileges Corporate Control: Process Integrity Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage hijacked debugger for privilege escalation Corporate Control: Windows Debugging Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized debugger modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM-level privileges by executing administrative commands Corporate Control: User Privilege Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying startup configuration Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify debugger logs to erase traces of hijacking Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process execution for unauthorized debugger hijacking Corporate Control: SIEM, Windows Process Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant persistence mechanisms via debugger hijacking Corporate Control: Alternate Debugger Hijacking Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SYSTEM privileges persist across system updates Corporate Control: Windows Group Policy Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized debugger hijacks Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using-Named-Pipe-Impersonation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Privileged Named Pipes</data>
+</node>
+<node id="B">
+<data key="label">Create Rogue Named Pipe to Capture SYSTEM Token</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM Privileges via Token Impersonation</data>
+</node>
+<node id="D">
+<data key="label">Conceal Named Pipe Exploitation</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate available named pipes for privileged processes Corporate Control: Windows Object Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured named pipes allowing impersonation Corporate Control: Windows Security Descriptors</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of injecting rogue named pipe handlers Corporate Control: Windows Access Token Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized named pipe operations Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create rogue named pipe to intercept SYSTEM token Corporate Control: Windows Inter-Process Communication (IPC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Impersonate SYSTEM user via stolen token Corporate Control: Windows API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges persist across process executions Corporate Control: Windows Session Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized privilege escalations via named pipes Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying security tokens Corporate Control: Windows Security Token Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system processes to evade detection Corporate Control: Process Masquerading</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privileged command executions Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of named pipe token theft Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple token impersonation vectors for redundancy Corporate Control: Alternate Named Pipe Exploitation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying process tokens Corporate Control: Windows Kernel Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized named pipe activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating-Process-with-Stolen-Token-CreateProcessWithTokenW" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Privileged Access Token</data>
+</node>
+<node id="B">
+<data key="label">Use CreateProcessWithTokenW to Launch SYSTEM Process</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM-Level Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal Token-Based Process Execution</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Identify running privileged processes Corporate Control: Windows Task Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Steal access token from privileged process using OpenProcessToken Corporate Control: Windows API Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for SeImpersonatePrivilege to manipulate tokens Corporate Control: Windows Access Token Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized OpenProcessToken API calls Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use CreateProcessWithTokenW API to launch SYSTEM process Corporate Control: Windows Process Execution Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure new process inherits stolen token Corporate Control: NTFS Security Descriptors</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify process integrity level to SYSTEM Corporate Control: Windows Kernel Privilege Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized high-privilege process creations Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM privileges by executing administrative commands Corporate Control: Privileged Process Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure token remains persistent across sessions Corporate Control: Windows Session Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify process settings to evade detection Corporate Control: Windows Process Masking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for token manipulation within process creation Corporate Control: SIEM, Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of token abuse Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional token-based privilege escalation techniques Corporate Control: Alternate Token Manipulation Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying process security policies Corporate Control: Windows Group Policy Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized high-privilege process execution Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

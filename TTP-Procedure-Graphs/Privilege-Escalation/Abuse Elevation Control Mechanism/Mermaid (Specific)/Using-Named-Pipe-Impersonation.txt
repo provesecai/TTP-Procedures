@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Privileged Named Pipes]
+    B[Create Rogue Named Pipe to Capture SYSTEM Token]
+    C[Validate SYSTEM Privileges via Token Impersonation]
+    D[Conceal Named Pipe Exploitation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate available named pipes for privileged processes Corporate Control: Windows Object Manager"| B
+    A -->|"Identify misconfigured named pipes allowing impersonation Corporate Control: Windows Security Descriptors"| B
+    A -->|"Determine feasibility of injecting rogue named pipe handlers Corporate Control: Windows Access Token Policies"| B
+    A -->|"Monitor for unauthorized named pipe operations Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Create rogue named pipe to intercept SYSTEM token Corporate Control: Windows Inter-Process Communication (IPC)"| C
+    B -->|"Impersonate SYSTEM user via stolen token Corporate Control: Windows API Security"| C
+    B -->|"Ensure SYSTEM privileges persist across process executions Corporate Control: Windows Session Management"| C
+    B -->|"Monitor for unauthorized privilege escalations via named pipes Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying security tokens Corporate Control: Windows Security Token Management"| D
+    C -->|"Modify system processes to evade detection Corporate Control: Process Masquerading"| D
+    C -->|"Monitor for unauthorized privileged command executions Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of named pipe token theft Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple token impersonation vectors for redundancy Corporate Control: Alternate Named Pipe Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying process tokens Corporate Control: Windows Kernel Security"| E
+    D -->|"SOC continuously monitors for unauthorized named pipe activity Corporate Control: Security Operations Center (SOC)"| E

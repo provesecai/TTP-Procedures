@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Token-Privilege-Manipulation-with-AdjustTokenPrivileges" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Process Handle with Token Modification Rights</data>
+</node>
+<node id="B">
+<data key="label">Enable Privileged Token Capabilities Using AdjustTokenPrivileges</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM-Level Token Privileges</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Privilege Adjustment</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Identify processes with modifiable tokens Corporate Control: Windows Process Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain handle to process using OpenProcessToken Corporate Control: Windows API Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for SeDebugPrivilege or SeAssignPrimaryTokenPrivilege Corporate Control: Windows Security Descriptors</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to process tokens Corporate Control: SIEM, Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use AdjustTokenPrivileges API to enable SYSTEM-level privileges Corporate Control: Windows Token Manipulation Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure privileges remain enabled across process execution Corporate Control: Windows Kernel Privilege Escalation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify token attributes to enable SeTcbPrivilege and SeImpersonatePrivilege Corporate Control: NTFS Security Descriptors</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for privilege modification attempts Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to remove traces of privilege escalation Corporate Control: Log Scrubbing, Security Event Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Token Manipulation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continued SYSTEM access by modifying authentication session policies Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">SOC continuously monitors for unauthorized privilege modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

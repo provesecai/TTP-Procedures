@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Misconfigured Sudo Privileges]
+    B[Exploit Sudo Misconfigurations]
+    C[Validate Root-Level Access]
+    D[Conceal Sudo Privilege Escalation]
+    E[Root Privileges Achieved]
+
+    A -->|"Enumerate user sudo permissions using 'sudo -l' Corporate Control: Linux Privilege Management"| B
+    A -->|"Identify commands that can be executed without a password Corporate Control: System Hardening Policies"| B
+    A -->|"Check for unsafe environment variables in sudo configuration Corporate Control: Linux Security Modules (LSM)"| B
+    A -->|"Monitor for unauthorized sudo privilege listing Corporate Control: SIEM, Linux Audit Logs"| B
+    B -->|"Exploit misconfigured sudo command to execute arbitrary code Corporate Control: Unix Command Execution Policies"| C
+    B -->|"Use 'sudoedit' or environmental variable manipulation for privilege escalation Corporate Control: Secure Shell (SSH) and PAM Modules"| C
+    B -->|"Leverage unrestricted binary execution (e.g., 'sudo bash') Corporate Control: Sudoers File Configuration"| C
+    B -->|"Monitor for unauthorized sudo command executions Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Validate root access by executing privileged system modifications Corporate Control: File System Permissions"| D
+    C -->|"Ensure ability to modify sensitive security configurations Corporate Control: Kernel Security Policies"| D
+    C -->|"Maintain elevated privileges across system sessions Corporate Control: Linux Account Session Policies"| D
+    C -->|"Detect unauthorized root actions in real-time Corporate Control: Security Operations Center (SOC)"| D
+    D -->|"Modify system logs to remove traces of sudo exploitation Corporate Control: Log Scrubbing, Linux Syslog"| E
+    D -->|"Prevent privilege rollback by modifying sudoers file integrity Corporate Control: Mandatory Access Controls (MAC)"| E
+    D -->|"Deploy secondary persistence mechanisms (e.g., cron jobs, SSH keys) Corporate Control: Linux Process Management"| E
+    D -->|"SOC continuously monitors for unauthorized sudo privilege escalations Corporate Control: Threat Intelligence and SIEM"| E

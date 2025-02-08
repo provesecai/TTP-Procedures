@@ -1,0 +1,23 @@
+graph TD;
+    A[Enumerate Secondary Logon Service Configurations]
+    B[Exploit Weak Configurations in RunAs]
+    C[Validate Elevated Access]
+    D[Conceal Privilege Escalation]
+    E[Administrator Privileges Achieved]
+
+    A -->|"Identify accounts with RunAs permissions Corporate Control: Windows User Account Policies"| B
+    A -->|"Determine if saved credentials can be exploited Corporate Control: Credential Storage Management"| B
+    A -->|"Analyze misconfigurations allowing bypass of authentication prompts Corporate Control: Windows Security Group Policies"| B
+    A -->|"Monitor for unauthorized RunAs activity Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Use saved credentials or pass-the-hash techniques to execute commands as admin Corporate Control: Windows Authentication Mechanisms"| C
+    B -->|"Modify registry settings to remove password prompts for RunAs Corporate Control: Windows Registry Hardening"| C
+    B -->|"Ensure administrator privileges remain persistent Corporate Control: Windows User Privilege Management"| C
+    B -->|"Monitor for unauthorized execution of RunAs commands Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify administrator access by executing privileged tasks Corporate Control: Windows Privilege Validation Logs"| D
+    C -->|"Modify user group memberships for sustained access Corporate Control: Active Directory Group Policies"| D
+    C -->|"Ensure privileged session persists across logouts Corporate Control: Windows Session Management"| D
+    C -->|"Detect unauthorized modifications to user group permissions Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to erase traces of RunAs privilege escalation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Multiple Privilege Persistence Methods"| E
+    D -->|"Ensure continued access by modifying user authentication policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for suspicious secondary logon activity Corporate Control: Security Operations Center (SOC)"| E

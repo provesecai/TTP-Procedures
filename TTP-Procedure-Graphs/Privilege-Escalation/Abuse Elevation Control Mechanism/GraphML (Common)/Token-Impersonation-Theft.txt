@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Token-Impersonation-Theft" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify User Access Tokens</data>
+</node>
+<node id="B">
+<data key="label">Steal or Forge High-Privilege Tokens</data>
+</node>
+<node id="C">
+<data key="label">Impersonate User or SYSTEM Account</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Token Impersonation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Token Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate available tokens using token listing tools Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify high-privilege tokens accessible to the attacker Corporate Control: Access Control Lists (ACLs)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized token enumeration Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use token theft techniques (e.g., Mimikatz) Corporate Control: Credential Theft Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Forge SYSTEM or administrator tokens Corporate Control: Windows Security Token Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying token privileges Corporate Control: Token Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized token manipulation Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to erase traces of token impersonation Corporate Control: Log Scrubbing, Windows Security Audits</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by injecting forged tokens into system processes Corporate Control: Process Injection Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by modifying system memory allocation Corporate Control: Memory Protection Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal security token activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple impersonation techniques for redundancy Corporate Control: Multi-Stage Persistence Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SYSTEM privileges persist across sessions Corporate Control: User Session Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized security token modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

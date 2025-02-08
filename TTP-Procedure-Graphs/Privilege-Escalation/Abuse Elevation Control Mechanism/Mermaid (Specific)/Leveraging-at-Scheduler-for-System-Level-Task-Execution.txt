@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Legacy Task Scheduler Configurations]
+    B[Schedule SYSTEM-Level Task Using 'at' Command]
+    C[Validate SYSTEM Privileges]
+    D[Conceal Privilege Escalation via Task Scheduler]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Check if 'at' command is enabled on the target system Corporate Control: Windows Task Scheduler Policies"| B
+    A -->|"Identify permissions assigned to scheduled tasks Corporate Control: Windows Security Group Policies"| B
+    A -->|"Determine feasibility of scheduling arbitrary commands Corporate Control: Windows User Account Privileges"| B
+    A -->|"Monitor for unauthorized scheduled tasks Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Schedule a SYSTEM-level task using the 'at' command Corporate Control: Windows Legacy Task Scheduler"| C
+    B -->|"Modify scheduled task settings to run malicious payload Corporate Control: NTFS File Execution Policies"| C
+    B -->|"Ensure persistence by configuring the task to run at startup Corporate Control: Windows Boot Configuration"| C
+    B -->|"Monitor for unauthorized modifications to scheduled tasks Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative tasks Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure elevated access persists across system reboots Corporate Control: Windows Startup Services"| D
+    C -->|"Modify system environment variables to evade detection Corporate Control: Windows API Execution Policies"| D
+    C -->|"Monitor for unexpected scheduled task executions Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of scheduled task execution Corporate Control: Log Scrubbing, Windows Event Log Management"| E
+    D -->|"Deploy multiple scheduled task persistence techniques for redundancy Corporate Control: Alternate Task Scheduler Exploits"| E
+    D -->|"Ensure continued SYSTEM access by modifying execution policies Corporate Control: Windows Execution Control"| E
+    D -->|"SOC continuously monitors for unauthorized task scheduling activities Corporate Control: Security Operations Center (SOC)"| E

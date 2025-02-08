@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Applications with Auto-Elevation]
+    B[Modify Debugger to Redirect Execution]
+    C[Validate Administrative Privileges]
+    D[Conceal Debugger Manipulation]
+    E[Administrator Privileges Achieved]
+
+    A -->|"Enumerate Windows applications with auto-elevated privileges Corporate Control: Windows Application Control"| B
+    A -->|"Identify applications allowing debugger modification Corporate Control: Registry Hardening Policies"| B
+    A -->|"Analyze feasibility of modifying Image File Execution Options Corporate Control: NTFS File Permissions"| B
+    A -->|"Monitor for unauthorized modifications to debugger settings Corporate Control: SIEM, Windows Registry Logs"| B
+    B -->|"Modify Debugger key to point to malicious payload Corporate Control: Windows Registry Configuration"| C
+    B -->|"Trigger execution of modified application to escalate privileges Corporate Control: Windows API Execution Policies"| C
+    B -->|"Ensure debugger modification persists across reboots Corporate Control: Windows Boot Configuration"| C
+    B -->|"Monitor for unauthorized debugger modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify administrative privileges by executing system commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure stability of elevated session across logins Corporate Control: Windows Session Management"| D
+    C -->|"Modify registry permissions to prevent rollback Corporate Control: Registry Integrity Monitoring"| D
+    C -->|"Monitor for unauthorized privileged command executions Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of debugger hijacking Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple debugger modifications for redundancy Corporate Control: Alternate Image File Execution Manipulation"| E
+    D -->|"Ensure continued administrator access by modifying registry policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized debugger modifications Corporate Control: Security Operations Center (SOC)"| E

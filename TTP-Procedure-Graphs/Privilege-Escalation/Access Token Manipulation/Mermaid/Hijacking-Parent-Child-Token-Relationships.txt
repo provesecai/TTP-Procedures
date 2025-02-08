@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Parent Process with SYSTEM Token]
+    B[Modify Child Process to Inherit SYSTEM Token]
+    C[Validate SYSTEM Privileges via Inherited Token]
+    D[Evade Detection of Token Inheritance Manipulation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate parent processes running with SYSTEM privileges Corporate Control: Windows Process Monitoring"| B
+    A -->|"Identify child processes that can inherit privileged tokens Corporate Control: Windows API Security"| B
+    A -->|"Check for weak permissions allowing token inheritance modification Corporate Control: NTFS Security Descriptors"| B
+    A -->|"Monitor for unauthorized process token manipulations Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Modify process creation settings to force SYSTEM token inheritance Corporate Control: Windows Kernel Process Management"| C
+    B -->|"Attach child process to SYSTEM parent using job objects Corporate Control: Windows Security Token Management"| C
+    B -->|"Ensure new process executes commands with inherited SYSTEM token Corporate Control: Windows API Execution Policies"| C
+    B -->|"Monitor for unauthorized privilege escalations through token inheritance Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying session management policies Corporate Control: Windows Session Authentication"| D
+    C -->|"Modify execution settings to evade detection Corporate Control: Process Masking Techniques"| D
+    C -->|"Monitor for unexpected parent-child process relationships Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of token inheritance Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple token inheritance techniques for redundancy Corporate Control: Alternate Process Token Manipulation"| E
+    D -->|"Ensure continued SYSTEM access by modifying token security policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized parent-child process token manipulation Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Kerberos-Ticket-Tokens" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Extract and Analyze Kerberos Tickets</data>
+</node>
+<node id="B">
+<data key="label">Modify Kerberos Ticket for Privilege Escalation</data>
+</node>
+<node id="C">
+<data key="label">Impersonate SYSTEM User via Kerberos Ticket</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Kerberos Token Modification</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Extract Kerberos tickets from system memory Corporate Control: Windows Kerberos Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify modifiable tickets allowing unauthorized access Corporate Control: Windows Authentication Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized Kerberos ticket extraction Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify ticket attributes to escalate privileges Corporate Control: Windows Kerberos Token Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject modified Kerberos ticket into authentication process Corporate Control: Windows API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges persist via Kerberos impersonation Corporate Control: Windows Domain Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized Kerberos ticket modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing privileged commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event logs to erase traces of Kerberos exploitation Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying domain authentication Corporate Control: Windows Active Directory Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized Kerberos ticket modifications Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple Kerberos impersonation techniques for redundancy Corporate Control: Alternate Kerberos Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying domain authentication Corporate Control: Windows Group Policy Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Kerberos impersonation Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

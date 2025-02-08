@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging-at-Scheduler-for-System-Level-Task-Execution" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows at Scheduler Privileges</data>
+</node>
+<node id="B">
+<data key="label">Schedule Malicious Task via at Command</data>
+</node>
+<node id="C">
+<data key="label">Execute System-Level Task</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of at Scheduler Abuse</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Task Execution</data>
+</node
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify non-admin users with permission to use at scheduler Corporate Control: Windows Task Scheduler Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate scheduled tasks for misconfigurations Corporate Control: Windows Scheduled Task Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized task scheduling Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use at scheduler to execute SYSTEM-level commands Corporate Control: Windows System Task Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure tasks persist beyond session logouts Corporate Control: Windows Task Scheduler Persistence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify task properties to avoid detection Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized scheduled task execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to remove evidence of at scheduler abuse Corporate Control: Log Scrubbing, Windows Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SYSTEM privileges persist beyond reboots Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by modifying task execution properties Corporate Control: Windows Scheduled Task Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor scheduled task modification attempts Corporate Control: SIEM, Windows Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple scheduled tasks for redundancy Corporate Control: Task Scheduler Exploitation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SYSTEM access remains persistent Corporate Control: Windows Privilege Escalation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized task execution Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

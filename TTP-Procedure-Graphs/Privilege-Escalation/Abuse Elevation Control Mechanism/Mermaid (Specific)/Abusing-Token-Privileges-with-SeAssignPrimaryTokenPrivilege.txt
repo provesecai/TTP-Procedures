@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Privileged Token Operations]
+    B[Exploit SeAssignPrimaryTokenPrivilege]
+    C[Validate SYSTEM Token Access]
+    D[Conceal Token Manipulation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate processes with assignable tokens Corporate Control: Windows Privilege Access Management"| B
+    A -->|"Identify user accounts with SeAssignPrimaryTokenPrivilege Corporate Control: Group Policy & Security Policies"| B
+    A -->|"Analyze feasibility of creating and assigning privileged tokens Corporate Control: Windows Access Token Control"| B
+    A -->|"Monitor for unauthorized token modifications Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Create a new SYSTEM token and assign it to a new process Corporate Control: Windows API Token Manipulation"| C
+    B -->|"Ensure process execution inherits SYSTEM privileges Corporate Control: Process Integrity Levels"| C
+    B -->|"Modify system environment variables to leverage token impersonation Corporate Control: NTFS File Permissions"| C
+    B -->|"Monitor for unauthorized token assignment operations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative tasks Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure token persists across session logouts Corporate Control: Windows Security Session Policies"| D
+    C -->|"Modify privilege escalation mechanisms for long-term access Corporate Control: Access Control Lists (ACLs)"| D
+    C -->|"Monitor for unauthorized security token modifications Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify security logs to remove traces of token manipulation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate Token Manipulation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying session policies Corporate Control: Windows Group Policy Configuration"| E
+    D -->|"SOC continuously monitors for privilege escalation via token manipulation Corporate Control: Security Operations Center (SOC)"| E

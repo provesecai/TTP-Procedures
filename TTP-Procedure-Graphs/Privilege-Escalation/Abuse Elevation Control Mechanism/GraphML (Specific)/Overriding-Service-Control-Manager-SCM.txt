@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Overriding-Service-Control-Manager-SCM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Modifiable Windows Services</data>
+</node>
+<node id="B">
+<data key="label">Modify Service Parameters via SCM</data>
+</node>
+<node id="C">
+<data key="label">Restart Modified Service to Gain SYSTEM Privileges</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of SCM Exploitation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Service Control Manager Override</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate services with weak permissions Corporate Control: Windows Service Management Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable service paths allowing execution modification Corporate Control: Windows Service ACLs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to service configurations Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify ImagePath registry entry to point to a malicious executable Corporate Control: Windows Registry Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure modified service restarts with SYSTEM privileges Corporate Control: Windows Service Recovery Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage service dependency manipulation for privilege escalation Corporate Control: Windows Dependency Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized service modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing administrative commands Corporate Control: User Privilege Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying service start-up behavior Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify service logs to erase traces of modification Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized service restarts Corporate Control: SIEM, Windows Process Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional SCM persistence techniques Corporate Control: Alternate Service Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure long-term SYSTEM access via modified services Corporate Control: Windows Service Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized service modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

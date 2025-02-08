@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Windows-Error-Reporting-WER-for-System-Privileges" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Error Reporting (WER) Vulnerabilities</data>
+</node>
+<node id="B">
+<data key="label">Modify WER Crash Handlers for SYSTEM Execution</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM Privileges via WER Exploit</data>
+</node>
+<node id="D">
+<data key="label">Conceal Privilege Escalation via WER Abuse</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate Windows Error Reporting (WER) crash handlers Corporate Control: Windows System Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable paths in WER registry settings Corporate Control: Windows Registry Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying error reporting behavior Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to WER settings Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify WER to execute a malicious process instead of default handler Corporate Control: Windows Registry Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure payload execution occurs under SYSTEM privileges Corporate Control: Windows Kernel Debugging Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage unpatched WER vulnerabilities to bypass security controls Corporate Control: Endpoint Security Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized system crash reports triggering privilege escalation Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying WER registry keys Corporate Control: Windows Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent security tools from flagging modified WER behavior Corporate Control: Windows API Execution Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized modifications to WER handlers Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of WER exploitation Corporate Control: Log Scrubbing, Windows Event Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple WER-based privilege escalation techniques for redundancy Corporate Control: Alternate WER Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying Windows crash handling policies Corporate Control: Windows Error Reporting Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized WER modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

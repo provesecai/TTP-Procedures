@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cloning-Tokens-from-Suspended-Processes" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Suspended Processes with SYSTEM Tokens</data>
+</node>
+<node id="B">
+<data key="label">Extract and Clone SYSTEM Token</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM Privileges</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Token Cloning</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate suspended processes with privileged tokens Corporate Control: Windows Task Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check if process allows token extraction Corporate Control: Windows API Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of cloning token without detection Corporate Control: Windows Security Descriptors</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized token cloning attempts Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract SYSTEM token from suspended process Corporate Control: Windows Token Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Clone extracted token for new privileged session Corporate Control: Windows Kernel Privilege Escalation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure cloned token remains valid for execution Corporate Control: NTFS Security Descriptors</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized token cloning activity Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying authentication session policies Corporate Control: Windows Authentication Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security descriptor attributes to evade detection Corporate Control: Process Security Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected cloned token usage Corporate Control: SIEM, Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of token cloning Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate Token Cloning Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying session privileges Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized token cloning activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

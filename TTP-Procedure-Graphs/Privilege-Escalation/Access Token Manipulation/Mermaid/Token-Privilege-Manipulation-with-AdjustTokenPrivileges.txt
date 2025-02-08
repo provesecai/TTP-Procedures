@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Process Handle with Token Modification Rights]
+    B[Enable Privileged Token Capabilities Using AdjustTokenPrivileges]
+    C[Validate SYSTEM-Level Token Privileges]
+    D[Evade Detection of Privilege Adjustment]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Identify processes with modifiable tokens Corporate Control: Windows Process Management"| B
+    A -->|"Obtain handle to process using OpenProcessToken Corporate Control: Windows API Security Policies"| B
+    A -->|"Check for SeDebugPrivilege or SeAssignPrimaryTokenPrivilege Corporate Control: Windows Security Descriptors"| B
+    A -->|"Monitor for unauthorized access to process tokens Corporate Control: SIEM, Security Event Logs"| B
+    B -->|"Use AdjustTokenPrivileges API to enable SYSTEM-level privileges Corporate Control: Windows Token Manipulation Policies"| C
+    B -->|"Ensure privileges remain enabled across process execution Corporate Control: Windows Kernel Privilege Escalation"| C
+    B -->|"Modify token attributes to enable SeTcbPrivilege and SeImpersonatePrivilege Corporate Control: NTFS Security Descriptors"| C
+    B -->|"Monitor for privilege modification attempts Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying security token attributes Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify security log configurations to evade detection Corporate Control: Windows Security Event Auditing"| D
+    C -->|"Monitor for unauthorized security token modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of privilege escalation Corporate Control: Log Scrubbing, Security Event Log Management"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Token Manipulation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying authentication session policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized privilege modifications Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Container-Escape-to-Host-Privilege-Escalation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Misconfigured Container Runtime</data>
+</node>
+<node id="B">
+<data key="label">Exploit Container Vulnerability for Escape</data>
+</node>
+<node id="C">
+<data key="label">Escalate Privileges on Host System</data>
+</node>
+<node id="D">
+<data key="label">Conceal Container Escape Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Container Escape</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate container capabilities and security settings Corporate Control: Container Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify privileged containers with host access Corporate Control: Kubernetes RBAC Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for exposed host directories mounted inside container Corporate Control: Docker Volume Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to container runtime Corporate Control: SIEM, Container Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit misconfigured container runtime (Docker, Kubernetes) Corporate Control: Namespace Isolation Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Escape into host system by exploiting capabilities Corporate Control: Privileged Mode Exploitation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify containerized system files affecting host Corporate Control: Kernel Namespaces and Control Groups</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized execution of host-level commands Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate root-level access on host Corporate Control: Linux Kernel Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to erase container escape traces Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy additional persistence techniques Corporate Control: Host-Level Rootkits</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor host-level process execution for anomalies Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy persistence techniques across multiple containers Corporate Control: Distributed Container Exploits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence through system reboots Corporate Control: Kernel-Based Persistence Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors container security events Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

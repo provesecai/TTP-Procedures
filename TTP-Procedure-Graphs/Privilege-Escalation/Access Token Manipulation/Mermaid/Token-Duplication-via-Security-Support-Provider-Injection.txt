@@ -1,0 +1,23 @@
+graph TD;
+    A[Inject Custom Security Support Provider into LSASS]
+    B[Intercept and Duplicate SYSTEM Token]
+    C[Validate SYSTEM Privileges via Token Injection]
+    D[Evade Detection of SSP Injection]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Load custom SSP into LSASS to capture authentication tokens Corporate Control: Windows Authentication Policies"| B
+    A -->|"Modify registry settings to allow unauthorized SSP injection Corporate Control: Windows Registry Protection"| B
+    A -->|"Ensure LSASS executes modified SSP on system startup Corporate Control: Windows Boot Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to authentication mechanisms Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Intercept authentication requests to duplicate SYSTEM token Corporate Control: Windows Token Management"| C
+    B -->|"Use captured token to execute privileged commands Corporate Control: Windows API Execution Policies"| C
+    B -->|"Ensure SYSTEM privileges remain persistent Corporate Control: Windows Session Management"| C
+    B -->|"Monitor for unauthorized authentication token modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying authentication session policies Corporate Control: Windows Access Token Policies"| D
+    C -->|"Modify security descriptor attributes to evade detection Corporate Control: Process Security Hardening"| D
+    C -->|"Monitor for unexpected SSP modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of SSP injection Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate SSP Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying session security policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized SSP modifications Corporate Control: Security Operations Center (SOC)"| E

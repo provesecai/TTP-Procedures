@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Secure-Attention-Sequence-SAS-to-Inject-Commands" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SAS Interception Vulnerability</data>
+</node>
+<node id="B">
+<data key="label">Modify Secure Attention Sequence Handling</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM-Level Command Execution</data>
+</node>
+<node id="D">
+<data key="label">Conceal SAS Exploitation</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze Secure Attention Sequence (Ctrl+Alt+Del) behavior Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check if SAS handling can be modified Corporate Control: Windows Group Policy Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine if SAS can be intercepted before authentication Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to SAS settings Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry keys to redirect SAS to execute a SYSTEM shell Corporate Control: Windows Registry Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject custom GINA (Graphical Identification and Authentication) module Corporate Control: Windows Authentication Framework</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM shell spawns on Secure Attention Sequence Corporate Control: Windows Logon UI</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to authentication mechanisms Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing privileged tasks Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying login security settings Corporate Control: Windows Authentication Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Windows UI settings to prevent security alerts Corporate Control: Windows User Interface Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected Secure Attention Sequence interactions Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of SAS modification Corporate Control: Log Scrubbing, Windows Event Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate SAS Exploitation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying login hooks Corporate Control: Windows Login Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unexpected Secure Attention Sequence events Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

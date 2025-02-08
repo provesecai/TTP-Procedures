@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging-Group-Policy-Update-Mechanisms" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Group Policy Update Mechanisms</data>
+</node>
+<node id="B">
+<data key="label">Modify Group Policy to Inject Malicious Scripts</data>
+</node>
+<node id="C">
+<data key="label">Trigger Group Policy Update for Execution</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Group Policy Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Group Policy Update</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate group policies that allow script execution Corporate Control: Group Policy Management Console (GPMC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable policies for non-admin users Corporate Control: Windows Group Policy Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to Group Policy Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious PowerShell or batch script into policy settings Corporate Control: Windows Script Execution Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify login or startup scripts to execute payload Corporate Control: Windows Logon Scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by applying policy update globally Corporate Control: Active Directory Group Policy Updates</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized policy execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM privileges gained via policy update Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event logs to erase evidence of policy execution Corporate Control: Log Scrubbing, Windows Event Viewer</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying group policy refresh rates Corporate Control: Group Policy Auto-Refresh Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor policy enforcement attempts Corporate Control: SIEM, Active Directory Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple Group Policy exploits for redundancy Corporate Control: Multi-Stage Policy Exploits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure long-term SYSTEM access via persistent policy changes Corporate Control: Windows Privilege Escalation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Group Policy modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

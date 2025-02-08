@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-Parent-Child-Token-Relationships" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Processes with Inheritable Tokens</data>
+</node>
+<node id="B">
+<data key="label">Modify Child Process to Inherit SYSTEM Token</data>
+</node>
+<node id="C">
+<data key="label">Gain SYSTEM Privileges via Parent Token Hijacking</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Parent-Child Token Hijacking</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate parent processes with high-privilege tokens Corporate Control: Windows Token Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine if child processes inherit parent tokens Corporate Control: Windows Process Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized process token modifications Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify child process attributes to inherit SYSTEM privileges Corporate Control: Windows API Token Inheritance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges persist across executions Corporate Control: Windows Privilege Escalation Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify NTFS security attributes to maintain access Corporate Control: Windows Security Descriptors</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to process inheritance Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing privileged tasks Corporate Control: Privilege Execution Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify process security logs to erase evidence Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying security token inheritance Corporate Control: Windows Security Group Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected parent-child token modifications Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple process inheritance techniques for redundancy Corporate Control: Alternate Token Hijacking Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying privilege escalation mechanisms Corporate Control: Windows Kernel Token Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized process token inheritance Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

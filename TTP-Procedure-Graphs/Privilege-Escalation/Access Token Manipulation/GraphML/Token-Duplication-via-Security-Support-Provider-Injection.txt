@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Token-Duplication-via-Security-Support-Provider-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Security Support Provider (SSP) Injection Points</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious SSP to Capture and Duplicate Tokens</data>
+</node>
+<node id="C">
+<data key="label">Use Duplicated Token for Privilege Escalation</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of SSP Injection</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved via Token Duplication</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate registered Security Support Providers Corporate Control: Windows Authentication Mechanisms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured SSPs allowing injection Corporate Control: Windows Security Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to SSP registry settings Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue SSP into LSA process to capture authentication tokens Corporate Control: Windows Authentication API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Duplicate SYSTEM tokens for lateral movement Corporate Control: Windows Token Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying LSA registry entries Corporate Control: Windows Local Security Authority (LSA) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized SSP injections Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing privileged tasks Corporate Control: Privileged Process Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to erase traces of SSP injection Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying Windows authentication configuration Corporate Control: Windows Group Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized SSP registry modifications Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple token duplication techniques for redundancy Corporate Control: Alternate Token Duplication Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying privilege escalation mechanisms Corporate Control: Windows Kernel Token Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Security Support Provider modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

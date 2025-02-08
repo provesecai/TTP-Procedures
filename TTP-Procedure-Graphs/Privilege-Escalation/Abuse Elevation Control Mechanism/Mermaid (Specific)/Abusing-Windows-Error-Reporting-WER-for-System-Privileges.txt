@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Error Reporting (WER) Vulnerabilities]
+    B[Modify WER Crash Handlers for SYSTEM Execution]
+    C[Validate SYSTEM Privileges via WER Exploit]
+    D[Conceal Privilege Escalation via WER Abuse]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate Windows Error Reporting (WER) crash handlers Corporate Control: Windows System Configuration"| B
+    A -->|"Identify writable paths in WER registry settings Corporate Control: Windows Registry Access Control"| B
+    A -->|"Determine feasibility of modifying error reporting behavior Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to WER settings Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Modify WER to execute a malicious process instead of default handler Corporate Control: Windows Registry Hardening"| C
+    B -->|"Ensure payload execution occurs under SYSTEM privileges Corporate Control: Windows Kernel Debugging Policies"| C
+    B -->|"Leverage unpatched WER vulnerabilities to bypass security controls Corporate Control: Endpoint Security Configuration"| C
+    B -->|"Monitor for unauthorized system crash reports triggering privilege escalation Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying WER registry keys Corporate Control: Windows Configuration Management"| D
+    C -->|"Prevent security tools from flagging modified WER behavior Corporate Control: Windows API Execution Policies"| D
+    C -->|"Monitor for unauthorized modifications to WER handlers Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of WER exploitation Corporate Control: Log Scrubbing, Windows Event Log Management"| E
+    D -->|"Deploy multiple WER-based privilege escalation techniques for redundancy Corporate Control: Alternate WER Exploitation Methods"| E
+    D -->|"Ensure continued SYSTEM access by modifying Windows crash handling policies Corporate Control: Windows Error Reporting Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized WER modifications Corporate Control: Security Operations Center (SOC)"| E

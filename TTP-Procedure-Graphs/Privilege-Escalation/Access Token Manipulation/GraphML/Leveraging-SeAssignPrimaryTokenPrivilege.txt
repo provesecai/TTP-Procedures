@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain SeAssignPrimaryTokenPrivilege]
+    B[Assign SYSTEM Token to New Process]
+    C[Validate SYSTEM-Level Execution]
+    D[Evade Detection of Token Manipulation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Identify user accounts with SeAssignPrimaryTokenPrivilege Corporate Control: Windows Privilege Access Management"| B
+    A -->|"Enumerate processes that allow token assignment Corporate Control: Windows API Security Policies"| B
+    A -->|"Check for writable services or scheduled tasks Corporate Control: Windows Task Scheduler Configuration"| B
+    A -->|"Monitor for unauthorized SeAssignPrimaryTokenPrivilege usage Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Assign SYSTEM token to new privileged process Corporate Control: Windows Process Security"| C
+    B -->|"Modify process token settings to ensure SYSTEM-level execution Corporate Control: NTFS Security Descriptors"| C
+    B -->|"Ensure token remains assigned across reboots Corporate Control: Windows Session Management"| C
+    B -->|"Monitor for unauthorized privilege escalation attempts Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying authentication session policies Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify token descriptor attributes to evade detection Corporate Control: Process Security Hardening"| D
+    C -->|"Monitor for unauthorized security token modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of token assignment Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple token manipulation methods for redundancy Corporate Control: Alternate SeAssignPrimaryTokenPrivilege Exploits"| E
+    D -->|"Ensure continued SYSTEM access by modifying session security policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized token assignment activity Corporate Control: Security Operations Center (SOC)"| E

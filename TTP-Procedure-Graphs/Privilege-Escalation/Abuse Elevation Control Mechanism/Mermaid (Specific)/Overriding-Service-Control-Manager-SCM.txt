@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Writable Services in SCM]
+    B[Modify Service Configuration for SYSTEM Execution]
+    C[Validate SYSTEM-Level Privileges]
+    D[Conceal SCM Exploitation]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate services with weak permissions Corporate Control: Windows Service Hardening Policies"| B
+    A -->|"Identify services running with SYSTEM privileges Corporate Control: NTFS File Permissions"| B
+    A -->|"Analyze if service allows executable path modifications Corporate Control: Windows Registry Protection"| B
+    A -->|"Monitor for unauthorized service modifications Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify service ImagePath to execute malicious binary Corporate Control: Windows Service Control Manager (SCM)"| C
+    B -->|"Ensure service auto-starts on reboot for persistence Corporate Control: Windows Boot Policies"| C
+    B -->|"Restart modified service to execute payload under SYSTEM Corporate Control: Process Execution Policies"| C
+    B -->|"Monitor for unauthorized modifications to Windows services Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure ability to modify protected system settings Corporate Control: Group Policy Enforcement"| D
+    C -->|"Maintain SYSTEM access across multiple reboots Corporate Control: Windows Task Scheduler"| D
+    C -->|"Detect unauthorized modifications to service configurations Corporate Control: SIEM, Behavioral Analytics"| D
+    D -->|"Modify system logs to remove traces of SCM abuse Corporate Control: Log Scrubbing, Windows Event Log Management"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate SCM Exploitation Methods"| E
+    D -->|"Ensure continued access by modifying service recovery options Corporate Control: Windows Security Auditing"| E
+    D -->|"SOC continuously monitors unauthorized service modifications Corporate Control: Security Operations Center (SOC)"| E

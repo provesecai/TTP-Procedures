@@ -1,0 +1,22 @@
+graph TD;
+    A[Create Rogue Named Pipe for Token Capture]
+    B[Intercept SYSTEM Token via Named Pipe]
+    C[Validate SYSTEM-Level Token Access]
+    D[Evade Detection of Named Pipe Token Theft]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Create named pipe to intercept privileged authentication Corporate Control: Windows Named Pipe Security Policies"| B
+    A -->|"Modify pipe permissions to allow SYSTEM-level access Corporate Control: Windows NTFS Security Descriptors"| B
+    A -->|"Monitor for unauthorized named pipe creation Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Steal privileged token from SYSTEM authentication process Corporate Control: Windows Inter-Process Communication (IPC)"| C
+    B -->|"Use stolen token to execute commands as SYSTEM Corporate Control: Windows API Execution Policies"| C
+    B -->|"Ensure process inherits SYSTEM token for sustained privileges Corporate Control: Windows Token Management"| C
+    B -->|"Monitor for unauthorized named pipe token interceptions Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative tasks Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying session token settings Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify named pipe attributes to evade security monitoring Corporate Control: Process Security Hardening"| D
+    C -->|"Monitor for unexpected named pipe security descriptor modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of named pipe token theft Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional named pipe privilege escalation methods for redundancy Corporate Control: Alternate Named Pipe Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying authentication mechanisms Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized named pipe activity Corporate Control: Security Operations Center (SOC)"| E

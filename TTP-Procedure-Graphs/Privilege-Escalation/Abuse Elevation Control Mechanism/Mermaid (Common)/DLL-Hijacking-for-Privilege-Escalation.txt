@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable DLL Search Paths]
+    B[Inject Malicious DLL into Trusted Process]
+    C[Validate Administrative Privileges]
+    D[Conceal DLL Hijacking]
+    E[Administrator Privileges Achieved]
+
+    A -->|"Enumerate DLL search order hijacking opportunities Corporate Control: Windows File System Permissions"| B
+    A -->|"Identify processes that load missing or writable DLLs Corporate Control: Process Injection Detection"| B
+    A -->|"Ensure DLL execution occurs under privileged user context Corporate Control: Windows API Execution Policies"| B
+    A -->|"Monitor for unauthorized DLL loading attempts Corporate Control: SIEM, Windows Defender"| B
+    B -->|"Create and inject malicious DLL into trusted system process Corporate Control: Windows Kernel Protection"| C
+    B -->|"Ensure DLL executes on process startup Corporate Control: Windows Session Initialization"| C
+    B -->|"Modify existing DLL path entries in system registry Corporate Control: Windows Registry Hardening"| C
+    B -->|"Monitor unauthorized modifications to DLL files Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Verify administrative access by executing privileged commands Corporate Control: User Privilege Monitoring"| D
+    C -->|"Ensure elevated access persists across system reboots Corporate Control: Startup Configuration Policies"| D
+    C -->|"Prevent antivirus detection by modifying DLL signatures Corporate Control: Application Whitelisting"| D
+    C -->|"Monitor for suspicious DLL activity Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of DLL execution Corporate Control: Log Scrubbing, Event Logs"| E
+    D -->|"Ensure persistence by deploying multiple DLL hijacking techniques Corporate Control: Process Injection Variants"| E
+    D -->|"Obfuscate DLL names to evade security tools Corporate Control: File System Encryption"| E
+    D -->|"SOC continuously monitors DLL execution anomalies Corporate Control: Security Operations Center (SOC)"| E

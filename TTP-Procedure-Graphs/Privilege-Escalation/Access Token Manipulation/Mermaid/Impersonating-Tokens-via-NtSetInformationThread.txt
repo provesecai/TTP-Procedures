@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify High-Privilege Token in Running Process]
+    B[Manipulate Thread Token Using NtSetInformationThread]
+    C[Validate SYSTEM Privileges]
+    D[Evade Detection by Security Monitoring]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Identify processes running with SYSTEM or admin privileges Corporate Control: Windows Process Security Policies"| B
+    A -->|"Enumerate process threads and associated tokens Corporate Control: Windows API Security"| B
+    A -->|"Check for thread impersonation privileges Corporate Control: Windows Privilege Access Management"| B
+    A -->|"Monitor for unauthorized thread token modifications Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Use NtSetInformationThread API to assign SYSTEM token to low-privilege thread Corporate Control: Windows Kernel Execution Policies"| C
+    B -->|"Modify thread security descriptor to enable token impersonation Corporate Control: Windows Process Security Descriptors"| C
+    B -->|"Ensure elevated privileges persist within current session Corporate Control: Windows Session Management"| C
+    B -->|"Monitor for unauthorized thread privilege escalations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying authentication session settings Corporate Control: Windows Access Token Policies"| D
+    C -->|"Modify thread attributes to evade detection Corporate Control: Process Security Hardening"| D
+    C -->|"Monitor for unexpected thread security descriptor modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of thread token manipulation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate Thread Token Manipulation Methods"| E
+    D -->|"Ensure continued SYSTEM access by modifying session privileges Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized thread impersonation activity Corporate Control: Security Operations Center (SOC)"| E

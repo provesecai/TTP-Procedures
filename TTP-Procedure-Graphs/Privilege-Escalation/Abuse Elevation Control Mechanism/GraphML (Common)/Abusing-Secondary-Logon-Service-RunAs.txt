@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Secondary-Logon-Service-RunAs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Secondary Logon (RunAs) Service</data>
+</node>
+<node id="B">
+<data key="label">Exploit RunAs for Privilege Escalation</data>
+</node>
+<node id="C">
+<data key="label">Validate Administrative Privileges</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of RunAs Abuse</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via RunAs Exploitation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify user accounts with 'RunAs' privileges Corporate Control: Windows Account Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security policies that allow privilege elevation Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor 'RunAs' execution requests Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'RunAs' to execute privileged commands Corporate Control: Windows Security Token Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract stored credentials or impersonate user Corporate Control: Credential Manager Exploitation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure administrative privileges are obtained Corporate Control: User Privilege Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized 'RunAs' command execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to remove traces of 'RunAs' execution Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by creating scheduled tasks as an admin Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by modifying security logs Corporate Control: Windows Event Log Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal privilege escalation activities Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant privilege escalation techniques Corporate Control: Multi-Vector Persistence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure administrator access remains persistent Corporate Control: Windows User Group Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for abuse of 'RunAs' service Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

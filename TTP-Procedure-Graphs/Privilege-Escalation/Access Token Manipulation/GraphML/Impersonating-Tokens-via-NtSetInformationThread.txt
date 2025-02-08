@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Impersonating-Tokens-via-NtSetInformationThread" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Threads with Privileged Tokens</data>
+</node>
+<node id="B">
+<data key="label">Modify Thread Token Using NtSetInformationThread</data>
+</node>
+<node id="C">
+<data key="label">Execute Code Under SYSTEM Context</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Token Impersonation</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate running threads with high-privilege tokens Corporate Control: Windows API Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify processes where token impersonation is allowed Corporate Control: Windows Privilege Escalation Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized token modification attempts Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify thread token using NtSetInformationThread API Corporate Control: Windows Kernel API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges are inherited by the thread Corporate Control: Windows Session Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security descriptors to maintain privilege elevation Corporate Control: NTFS Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized thread token modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing administrative commands Corporate Control: Privileged Process Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to erase traces of token manipulation Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying privilege inheritance Corporate Control: Windows Security Group Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected token impersonation Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple impersonation techniques for redundancy Corporate Control: Alternate Token Impersonation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying privilege escalation Corporate Control: Windows Token Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized thread token impersonation Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Writable Group Policy Objects (GPOs)]
+    B[Modify GPO to Execute Commands with SYSTEM Privileges]
+    C[Validate SYSTEM-Level Execution]
+    D[Conceal Privilege Escalation via GPO Abuse]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate accessible Group Policy Objects (GPOs) Corporate Control: Active Directory Group Policy Management"| B
+    A -->|"Analyze GPO configurations for misconfigurations Corporate Control: Windows Security Policies"| B
+    A -->|"Determine feasibility of modifying GPO scripts or registry settings Corporate Control: Access Control Lists (ACLs)"| B
+    A -->|"Monitor for unauthorized GPO modifications Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify GPO to execute malicious commands as SYSTEM Corporate Control: Windows Group Policy Processing"| C
+    B -->|"Leverage GPO startup scripts to execute privileged payload Corporate Control: Windows Registry Configuration"| C
+    B -->|"Ensure persistence by configuring GPO updates at every login Corporate Control: Active Directory GPO Enforcement"| C
+    B -->|"Monitor for unauthorized GPO script modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure elevated access persists across multiple GPO refresh cycles Corporate Control: Windows Startup Policies"| D
+    C -->|"Modify Active Directory event logs to remove traces Corporate Control: Windows AD Log Monitoring"| D
+    C -->|"Monitor for unexpected GPO privilege modifications Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify system logs to remove traces of GPO abuse Corporate Control: Log Scrubbing, Windows Security Auditing"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate GPO Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying Group Policy refresh intervals Corporate Control: Windows Group Policy Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Group Policy modifications Corporate Control: Security Operations Center (SOC)"| E

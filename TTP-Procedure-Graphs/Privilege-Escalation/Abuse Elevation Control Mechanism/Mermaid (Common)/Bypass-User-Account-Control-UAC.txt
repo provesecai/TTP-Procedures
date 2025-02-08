@@ -1,0 +1,23 @@
+graph TD;
+    A[Initial Access Privileges]
+    B[Exploitation for Privilege Escalation]
+    C[Privilege Validation]
+    D[Privilege Concealment]
+    E[Privilege Escalation Achieved]
+
+    A -->|"Identify low-privileged user account Corporate Control: User Account Management"| B
+    A -->|"Determine UAC enforcement level Corporate Control: Windows Security Policies"| B
+    A -->|"Assess feasibility of UAC bypass techniques Corporate Control: Endpoint Security Configuration"| B
+    A -->|"Monitor for unauthorized UAC elevation attempts Corporate Control: SIEM, Event Logs"| B
+    B -->|"Execute UAC bypass via trusted process injection Corporate Control: Windows System Binaries"| C
+    B -->|"Leverage DLL hijacking or COM interface abuse Corporate Control: Windows Registry Manipulation"| C
+    B -->|"Obtain administrator privileges without triggering UAC prompts Corporate Control: Process Execution"| C
+    B -->|"Monitor system for UAC bypass attempts Corporate Control: Intrusion Detection Systems"| C
+    C -->|"Validate administrative access by executing privileged commands Corporate Control: Access Control Policies"| D
+    C -->|"Confirm persistence of elevated session Corporate Control: Session Management"| D
+    C -->|"Ensure access to system-critical operations Corporate Control: Privileged API Calls"| D
+    C -->|"Detect unauthorized process privilege elevations Corporate Control: SIEM, User Behavior Analytics"| D
+    D -->|"Modify system logs to remove traces of UAC bypass Corporate Control: Log Scrubbing"| E
+    D -->|"Use process hollowing techniques to blend with legitimate processes Corporate Control: Process Masquerading"| E
+    D -->|"Ensure continued elevated access by modifying startup settings Corporate Control: System Startup Services"| E
+    D -->|"SOC continuously monitors privilege escalations Corporate Control: Security Operations Center (SOC)"| E

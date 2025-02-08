@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Suspended Processes with SYSTEM Tokens]
+    B[Extract and Clone SYSTEM Token]
+    C[Validate SYSTEM Privileges]
+    D[Evade Detection of Token Cloning]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate suspended processes with privileged tokens Corporate Control: Windows Task Manager"| B
+    A -->|"Check if process allows token extraction Corporate Control: Windows API Security Policies"| B
+    A -->|"Determine feasibility of cloning token without detection Corporate Control: Windows Security Descriptors"| B
+    A -->|"Monitor for unauthorized token cloning attempts Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Extract SYSTEM token from suspended process Corporate Control: Windows Token Management"| C
+    B -->|"Clone extracted token for new privileged session Corporate Control: Windows Kernel Privilege Escalation"| C
+    B -->|"Ensure cloned token remains valid for execution Corporate Control: NTFS Security Descriptors"| C
+    B -->|"Monitor for unauthorized token cloning activity Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying authentication session policies Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify security descriptor attributes to evade detection Corporate Control: Process Security Hardening"| D
+    C -->|"Monitor for unexpected cloned token usage Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of token cloning Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate Token Cloning Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying session privileges Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized token cloning activity Corporate Control: Security Operations Center (SOC)"| E

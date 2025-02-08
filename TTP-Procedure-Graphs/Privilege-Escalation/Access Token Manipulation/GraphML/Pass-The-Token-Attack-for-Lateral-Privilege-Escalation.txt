@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Pass-The-Token-Attack-for-Lateral-Privilege-Escalation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cached Authentication Tokens on Target System</data>
+</node>
+<node id="B">
+<data key="label">Extract and Reuse Token for Lateral Movement</data>
+</node>
+<node id="C">
+<data key="label">Authenticate to Remote System Using Stolen Token</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Token Reuse</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved via Token Impersonation</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate cached authentication tokens in memory Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify tokens that allow remote authentication Corporate Control: Windows Authentication Mechanisms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized access to authentication tokens Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen token to authenticate on a remote machine Corporate Control: Windows Kerberos Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure token maintains access across session logouts Corporate Control: Windows Privilege Escalation Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security attributes to keep token usable Corporate Control: Windows Security Group Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized authentication using stolen tokens Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access on remote system by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event logs to erase traces of token-based authentication Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying remote access policies Corporate Control: Windows Group Policy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected lateral movement via token-based authentication Corporate Control: SIEM, Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple token impersonation techniques for redundancy Corporate Control: Alternate Pass-The-Token Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access across multiple systems Corporate Control: Windows Active Directory Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized token-based authentication Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

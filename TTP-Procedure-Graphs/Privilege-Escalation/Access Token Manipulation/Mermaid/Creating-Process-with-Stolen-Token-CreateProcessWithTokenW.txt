@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Privileged Access Token]
+    B[Use CreateProcessWithTokenW to Launch SYSTEM Process]
+    C[Validate SYSTEM-Level Execution]
+    D[Conceal Token-Based Process Execution]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Identify running privileged processes Corporate Control: Windows Task Manager"| B
+    A -->|"Steal access token from privileged process using OpenProcessToken Corporate Control: Windows API Security"| B
+    A -->|"Check for SeImpersonatePrivilege to manipulate tokens Corporate Control: Windows Access Token Policies"| B
+    A -->|"Monitor for unauthorized OpenProcessToken API calls Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Use CreateProcessWithTokenW API to launch SYSTEM process Corporate Control: Windows Process Execution Policies"| C
+    B -->|"Ensure new process inherits stolen token Corporate Control: NTFS Security Descriptors"| C
+    B -->|"Modify process integrity level to SYSTEM Corporate Control: Windows Kernel Privilege Management"| C
+    B -->|"Monitor for unauthorized high-privilege process creations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM privileges by executing administrative commands Corporate Control: Privileged Process Validation"| D
+    C -->|"Ensure token remains persistent across sessions Corporate Control: Windows Session Management"| D
+    C -->|"Modify process settings to evade detection Corporate Control: Windows Process Masking"| D
+    C -->|"Monitor for token manipulation within process creation Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of token abuse Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional token-based privilege escalation techniques Corporate Control: Alternate Token Manipulation Strategies"| E
+    D -->|"Ensure continued SYSTEM access by modifying process security policies Corporate Control: Windows Group Policy Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized high-privilege process execution Corporate Control: Security Operations Center (SOC)"| E

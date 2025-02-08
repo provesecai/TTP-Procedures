@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abuse-of-Sudo-Rights-in-Linux" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Misconfigured Sudo Privileges</data>
+</node>
+<node id="B">
+<data key="label">Exploit Sudo Misconfigurations</data>
+</node>
+<node id="C">
+<data key="label">Validate Root-Level Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Sudo Privilege Escalation</data>
+</node>
+<node id="E">
+<data key="label">Root Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate user sudo permissions using 'sudo -l' Corporate Control: Linux Privilege Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify commands that can be executed without a password Corporate Control: System Hardening Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for unsafe environment variables in sudo configuration Corporate Control: Linux Security Modules (LSM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized sudo privilege listing Corporate Control: SIEM, Linux Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit misconfigured sudo command to execute arbitrary code Corporate Control: Unix Command Execution Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'sudoedit' or environmental variable manipulation for privilege escalation Corporate Control: Secure Shell (SSH) and PAM Modules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage unrestricted binary execution (e.g., 'sudo bash') Corporate Control: Sudoers File Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized sudo command executions Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate root access by executing privileged system modifications Corporate Control: File System Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure ability to modify sensitive security configurations Corporate Control: Kernel Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain elevated privileges across system sessions Corporate Control: Linux Account Session Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized root actions in real-time Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of sudo exploitation Corporate Control: Log Scrubbing, Linux Syslog</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent privilege rollback by modifying sudoers file integrity Corporate Control: Mandatory Access Controls (MAC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy secondary persistence mechanisms (e.g., cron jobs, SSH keys) Corporate Control: Linux Process Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized sudo privilege escalations Corporate Control: Threat Intelligence and SIEM</data>
+</edge>
+</graph>
+</graphml>

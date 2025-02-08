@@ -1,0 +1,70 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Bypass-User-Account-Control-UAC" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable UAC Configuration</data>
+</node>
+<node id="B">
+<data key="label">Execute UAC Bypass Technique</data>
+</node>
+<node id="C">
+<data key="label">Escalate Privileges to Administrator</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of UAC Bypass</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via UAC Bypass</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Check UAC settings to determine security level Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify executables that auto-elevate without user consent Corporate Control: Windows Auto-Elevation Mechanism</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check registry settings for modifiable execution paths Corporate Control: Windows Registry Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for changes in UAC settings Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Launch a trusted Windows executable to bypass UAC Corporate Control: Windows Privilege Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into an elevated process Corporate Control: Process Injection Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry settings to auto-launch payload with elevation Corporate Control: Windows Run Keys</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized elevation of privileges Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate Administrator access by executing privileged commands Corporate Control: Privilege Escalation Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across reboots by modifying startup scripts Corporate Control: Windows Boot Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent detection by disabling security logs Corporate Control: Log Redaction and Modification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor user privilege escalations Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security logs to erase traces of UAC bypass Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant privilege escalation techniques Corporate Control: Multi-Vector Persistence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence through user account control modifications Corporate Control: Windows User Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors privilege escalation attempts Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>
+ 

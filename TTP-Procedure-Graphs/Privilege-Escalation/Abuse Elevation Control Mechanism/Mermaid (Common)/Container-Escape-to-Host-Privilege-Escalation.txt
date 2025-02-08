@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Container Escape Vectors]
+    B[Exploit Misconfigured Container Privileges]
+    C[Validate Root Access on Host]
+    D[Conceal Container Escape Activity]
+    E[Host-Level Root Privileges Achieved]
+
+    A -->|"Enumerate running containers and their privilege levels Corporate Control: Kubernetes & Docker Security Policies"| B
+    A -->|"Identify containers running with '--privileged' or mounted host directories Corporate Control: Container Runtime Hardening"| B
+    A -->|"Analyze container escape vulnerabilities Corporate Control: Kernel Security Modules (LSM)"| B
+    A -->|"Monitor for suspicious container privilege modifications Corporate Control: SIEM, Container Security Logs"| B
+    B -->|"Exploit misconfigured container runtime settings to access host Corporate Control: Docker Engine & Kubernetes RBAC"| C
+    B -->|"Modify containerized processes to break into host namespace Corporate Control: Linux Kernel Namespace Isolation"| C
+    B -->|"Leverage privileged containers to modify system files on the host Corporate Control: Seccomp & AppArmor Profiles"| C
+    B -->|"Monitor for unauthorized container-to-host privilege escalations Corporate Control: EDR, Kubernetes Audit Logs"| C
+    C -->|"Validate root access by executing administrative commands on host Corporate Control: Host-Based Access Controls"| D
+    C -->|"Modify host-level configurations to maintain escalated privileges Corporate Control: System Boot Configurations"| D
+    C -->|"Ensure persistent access by creating a root user on the host Corporate Control: User Account Management"| D
+    C -->|"Monitor for unauthorized user privilege modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify container runtime logs to remove traces of escape Corporate Control: Log Scrubbing, Container Security Monitoring"| E
+    D -->|"Deploy hidden backdoors within the host to maintain access Corporate Control: SSH Key Injection & Scheduled Tasks"| E
+    D -->|"Ensure host persistence by modifying kernel runtime settings Corporate Control: Kernel Hardening Policies"| E
+    D -->|"SOC continuously monitors for unexpected privilege escalations from containers Corporate Control: Security Operations Center (SOC)"| E
