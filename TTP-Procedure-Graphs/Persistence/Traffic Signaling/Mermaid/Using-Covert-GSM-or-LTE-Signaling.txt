@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify GSM/LTE-Enabled Devices for Covert Communication]
+    B[Deploy Malware to Signal via Cellular Networks]
+    C[Ensure Persistent C2 Communication Over GSM/LTE]
+    D[Prevent Detection of Covert Cellular Traffic]
+    E[Persistence Achieved via GSM/LTE Signaling]
+
+    A -->|"Identify target devices with active GSM/LTE connectivity Corporate Control: Mobile Network Security Policies"| B
+    A -->|"Analyze SIM card authentication mechanisms for manipulation Corporate Control: Cellular Network Access Controls"| B
+    A -->|"Determine access methods to exploit cellular signaling Corporate Control: Baseband Firmware Configuration"| B
+    A -->|"Monitor for unauthorized use of mobile network access Corporate Control: SIEM, Telecom Provider Logs"| B
+    B -->|"Deploy malware that establishes persistent GSM/LTE communication Corporate Control: Mobile Device Modem"| C
+    B -->|"Modify network settings to send periodic beacons over cellular networks Corporate Control: Carrier Network Configuration"| C
+    B -->|"Ensure malware reconnects automatically to attacker-controlled nodes Corporate Control: SIM Profile Manipulation"| C
+    B -->|"Monitor for unauthorized mobile network activity Corporate Control: Telecom Security Monitoring"| C
+    C -->|"Encrypt cellular traffic to evade security monitoring Corporate Control: End-to-End Cellular Encryption"| D
+    C -->|"Use multiple mobile networks for redundancy Corporate Control: Multi-Carrier SIM Profiles"| D
+    C -->|"Ensure persistence by modifying SIM authentication settings Corporate Control: Telecom Authentication and Key Agreement (AKA) Protocol"| D
+    C -->|"Monitor for anomalies in GSM/LTE network traffic Corporate Control: Threat Intelligence, Telecom SOC"| D
+    D -->|"Modify system logs to remove traces of GSM/LTE signaling Corporate Control: Log Scrubbing, Carrier Network Logs"| E
+    D -->|"Deploy multiple cellular signaling techniques for redundancy Corporate Control: Multi-Channel Communication"| E
+    D -->|"Ensure persistent mobile access by modifying network identifiers Corporate Control: International Mobile Subscriber Identity (IMSI) Spoofing"| E
+    D -->|"SOC continuously monitors for unexpected mobile signaling anomalies Corporate Control: Security Operations Center (SOC)"| E

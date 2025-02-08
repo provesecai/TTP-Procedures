@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Exploiting-WebSockets-for-Encrypted-Traffic-Beaconing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WebSocket Services on Target Server</data>
+</node>
+<node id="B">
+<data key="label">Modify WebSocket Handlers to Relay C2 Traffic</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent WebSocket-Based Beaconing</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of WebSocket-Based Covert Communication</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebSocket Beaconing</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze WebSocket endpoints for vulnerabilities Corporate Control: API Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify WebSocket event handlers for C2 traffic forwarding Corporate Control: Web Application Middleware</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure traffic blends in with normal WebSocket interactions Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized WebSocket traffic Corporate Control: SIEM, API Gateway Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy WebSocket handlers that relay encrypted C2 commands Corporate Control: WebSocket Secure (WSS) Protocol</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify WebSocket headers to disguise C2 traffic Corporate Control: HTTP Header Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure WebSocket-based persistence across application updates Corporate Control: Web Application Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized WebSocket session persistence Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt WebSocket messages to evade security inspection Corporate Control: TLS Encrypted WebSockets</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging systems to hide WebSocket C2 connections Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure WebSocket traffic remains persistent Corporate Control: Load Balancing & Redundancy</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WebSocket traffic for irregular session behavior Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple WebSocket backdoors across API endpoints Corporate Control: Distributed WebSocket Deployment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure WebSocket C2 communication remains undetected Corporate Control: Web Traffic Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors WebSocket communication patterns Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

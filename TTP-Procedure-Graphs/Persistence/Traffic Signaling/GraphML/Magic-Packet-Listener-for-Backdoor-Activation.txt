@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Magic-Packet-Listener-for-Backdoor-Activation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Malware to Listen for Magic Packets</data>
+</node>
+<node id="B">
+<data key="label">Deploy Hidden Network Listener for Backdoor Activation</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Backdoor Activation via Magic Packets</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Magic Packet Listener</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Magic Packet Listener</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify system networking stack to listen for specific magic packets Corporate Control: Network Interface Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure network listener is stealthily integrated into normal traffic Corporate Control: Firewall Bypass Techniques</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify system services to automatically restart network listener Corporate Control: System Boot Persistence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized packet sniffing Corporate Control: SIEM, Network IDS</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistent listening daemon for magic packet triggers Corporate Control: Kernel-Level Packet Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure backdoor activation only occurs on pre-defined network conditions Corporate Control: Network Signature Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify wake-on-LAN configurations to integrate magic packets Corporate Control: Network Adapter Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network packet logs for unauthorized wake signals Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt network packet payloads to evade detection Corporate Control: Secure Packet Transmission</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify network traffic analysis settings to suppress anomaly alerts Corporate Control: Traffic Obfuscation Methods</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across system restarts Corporate Control: System Boot Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in network traffic logs Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of magic packet activation Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple magic packet listeners for redundancy Corporate Control: Multi-Device Deployment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent magic packet triggers across network changes Corporate Control: Dynamic IP Address Handling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in network traffic patterns Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

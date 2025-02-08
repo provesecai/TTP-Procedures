@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Covert-Signaling-via-Tor-Hidden-Services" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Configure Malware to Communicate with Tor Hidden Services</data>
+</node>
+<node id="B">
+<data key="label">Deploy Persistent Connection to Tor-Based C2</data>
+</node>
+<node id="C">
+<data key="label">Ensure Continuous and Untraceable Traffic Signaling</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Tor-Based Traffic Signaling</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Tor Hidden Service Communication</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify malware networking stack to use Tor as a communication channel Corporate Control: Malware Network Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure malware connects exclusively to .onion domains Corporate Control: Tor Proxy Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify firewall settings to allow outbound Tor connections Corporate Control: Network Firewall Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized use of Tor exit nodes Corporate Control: SIEM, Network Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish an encrypted, persistent connection to an attacker-controlled hidden service Corporate Control: Tor Hidden Service Routing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malware can reconnect automatically to different Tor nodes Corporate Control: Dynamic Node Selection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify traffic patterns to blend with legitimate Tor browsing Corporate Control: Tor Bridge Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected Tor usage originating from enterprise systems Corporate Control: Deep Packet Inspection (DPI)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt all traffic sent over Tor to prevent DPI-based detection Corporate Control: End-to-End Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Rotate hidden service addresses dynamically to avoid blocking Corporate Control: Hidden Service Key Rotation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying system startup scripts Corporate Control: System Boot Process Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outgoing connections for signs of unauthorized Tor traffic Corporate Control: Network Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of Tor connections Corporate Control: Log Scrubbing, System Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple Tor exit nodes as backup routes Corporate Control: Distributed Onion Routing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use traffic masking techniques to disguise Tor packets Corporate Control: Tor Pluggable Transport Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unexpected Tor traffic anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

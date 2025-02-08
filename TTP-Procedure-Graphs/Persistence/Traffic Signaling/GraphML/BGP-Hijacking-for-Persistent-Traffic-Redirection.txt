@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BGP-Hijacking-for-Persistent-Traffic-Redirection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Border Gateway Protocol (BGP) Routing Tables</data>
+</node>
+<node id="B">
+<data key="label">Manipulate BGP Announcements to Redirect Traffic</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistent Traffic Flow Through Attacker Infrastructure</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of BGP Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via BGP Traffic Redirection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify target autonomous systems (AS) for traffic redirection Corporate Control: ISP Routing Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze BGP peering relationships for exploitable routes Corporate Control: Network Backbone Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods to inject rogue BGP announcements Corporate Control: ISP Border Routers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized BGP route changes Corporate Control: SIEM, Network Flow Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Announce attacker-controlled prefixes to reroute victim traffic Corporate Control: BGP Route Injection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying AS path attributes Corporate Control: BGP Route Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify routing tables to avoid detection Corporate Control: ISP Traffic Filtering Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected changes in network route paths Corporate Control: Network Security Operations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Periodically update BGP advertisements to evade tracking Corporate Control: Dynamic Route Adjustments</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use route flapping techniques to disguise malicious BGP activity Corporate Control: Traffic Load Balancing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback by manipulating route propagation Corporate Control: Multi-Homed Network Configurations</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in network route tables Corporate Control: Threat Intelligence and BGP Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify routing logs to remove traces of BGP hijacking Corporate Control: Log Scrubbing, ISP Network Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple BGP route hijacking techniques for redundancy Corporate Control: Distributed Routing Manipulation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent traffic control through indirect routing strategies Corporate Control: Multi-Hop Routing Exploits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized BGP announcements Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

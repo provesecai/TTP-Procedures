@@ -1,0 +1,23 @@
+graph TD;
+    A[Modify DNS Query Handling for Stealth Communication]
+    B[Deploy Malware Using DNS Requests for Signaling]
+    C[Maintain Persistent C2 Communication via DNS Queries]
+    D[Prevent Detection of Covert DNS Signaling]
+    E[Persistence Achieved via DNS Query Signaling]
+
+    A -->|"Identify DNS resolver settings on target system Corporate Control: Network Configuration Policies"| B
+    A -->|"Modify host file or local DNS settings to route queries stealthily Corporate Control: DNS Forwarding Rules"| B
+    A -->|"Ensure DNS queries blend in with legitimate domain requests Corporate Control: Domain Name System Logs"| B
+    A -->|"Monitor for unauthorized modifications to DNS configurations Corporate Control: Intrusion Detection Systems (IDS)"| B
+    B -->|"Deploy malware that encodes C2 commands within DNS queries Corporate Control: Malware Implant Techniques"| C
+    B -->|"Ensure DNS queries are sent at regular intervals to avoid detection Corporate Control: DNS Request Rate-Limiting"| C
+    B -->|"Modify firewall policies to allow outbound DNS requests Corporate Control: Network Firewall ACLs"| C
+    B -->|"Monitor for unauthorized DNS traffic originating from endpoints Corporate Control: DNS Traffic Analysis"| C
+    C -->|"Rotate DNS query patterns to evade detection Corporate Control: Dynamic DNS Query Generation"| D
+    C -->|"Prevent removal by modifying local DNS resolution settings Corporate Control: DNS Cache Poisoning"| D
+    C -->|"Ensure persistence across system reboots Corporate Control: Network Configuration Persistence"| D
+    C -->|"Monitor DNS queries for unusual domain patterns Corporate Control: Threat Intelligence Monitoring"| D
+    D -->|"Encrypt DNS payloads to prevent signature-based detection Corporate Control: DNS-over-HTTPS (DoH) Implementation"| E
+    D -->|"Modify system logs to remove traces of DNS-based signaling Corporate Control: DNS Log Scrubbing"| E
+    D -->|"Deploy multiple DNS signaling mechanisms for redundancy Corporate Control: Multiple DNS C2 Domains"| E
+    D -->|"SOC continuously monitors for unusual DNS query behavior Corporate Control: Security Operations Center (SOC)"| E

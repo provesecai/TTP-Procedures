@@ -1,0 +1,23 @@
+graph TD;
+    A[Configure SSH Client for Persistent Reverse Proxy]
+    B[Deploy SSH Tunnel to Attacker-Controlled Server]
+    C[Ensure Continuous SSH Beaconing and Traffic Relay]
+    D[Prevent Detection of Reverse SSH Tunneling]
+    E[Persistence Achieved via SSH Reverse Proxy]
+
+    A -->|"Modify SSH client settings to maintain an active reverse tunnel Corporate Control: SSH Configuration Files"| B
+    A -->|"Ensure SSH connections blend with normal traffic Corporate Control: Network Traffic Analysis"| B
+    A -->|"Modify firewall rules to allow outbound SSH connections Corporate Control: Firewall Access Control Lists (ACLs)"| B
+    A -->|"Monitor for unauthorized SSH tunneling activities Corporate Control: SIEM, Network Intrusion Detection Systems (NIDS)"| B
+    B -->|"Establish an SSH reverse proxy to an attacker-controlled system Corporate Control: SSH Reverse Port Forwarding"| C
+    B -->|"Ensure SSH tunnel auto-reconnects if disconnected Corporate Control: AutoSSH, Systemd Service"| C
+    B -->|"Modify authentication settings to allow persistent access Corporate Control: SSH Authorized Keys"| C
+    B -->|"Monitor for unexpected SSH connections from compromised systems Corporate Control: Deep Packet Inspection (DPI)"| C
+    C -->|"Encrypt SSH traffic to evade packet inspection Corporate Control: SSH Tunnel Encryption"| D
+    C -->|"Modify process names to disguise the SSH client as a legitimate service Corporate Control: Process Masquerading"| D
+    C -->|"Ensure persistence by modifying system startup scripts Corporate Control: Systemd, Crontab Configuration"| D
+    C -->|"Monitor outgoing SSH traffic for anomalies Corporate Control: Threat Intelligence, Network Monitoring"| D
+    D -->|"Modify system logs to remove traces of SSH tunneling Corporate Control: Log Scrubbing Techniques"| E
+    D -->|"Deploy multiple reverse SSH proxies across different network paths Corporate Control: Distributed SSH Proxy Chains"| E
+    D -->|"Ensure redundancy by configuring multiple attacker-controlled SSH endpoints Corporate Control: Rotating SSH Host Keys"| E
+    D -->|"SOC continuously monitors for persistent reverse SSH tunnels Corporate Control: Security Operations Center (SOC)"| E

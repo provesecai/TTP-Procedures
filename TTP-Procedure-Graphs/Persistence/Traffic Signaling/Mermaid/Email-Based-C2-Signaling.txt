@@ -1,0 +1,23 @@
+graph TD;
+    A[Modify Malware to Use Email for Command and Control]
+    B[Deploy Email-Based Signaling via SMTP/IMAP/POP3]
+    C[Ensure Continuous and Encrypted C2 Communication]
+    D[Prevent Detection of Email-Based Traffic Signaling]
+    E[Persistence Achieved via Email C2 Signaling]
+
+    A -->|"Modify malware to send and receive encoded email messages Corporate Control: Email Security Policies"| B
+    A -->|"Ensure email subject and content blend with legitimate communications Corporate Control: Email Traffic Analysis"| B
+    A -->|"Modify email client settings to route through attacker-controlled SMTP servers Corporate Control: Outbound Email Routing Policies"| B
+    A -->|"Monitor for unauthorized SMTP/IMAP access from internal hosts Corporate Control: SIEM, Mail Server Logs"| B
+    B -->|"Establish persistent email-based C2 by embedding commands in email metadata Corporate Control: MIME Headers, Message Encoding"| C
+    B -->|"Ensure email polling intervals align with normal email usage patterns Corporate Control: Mailbox Access Controls"| C
+    B -->|"Modify spam filter rules to allow attacker emails Corporate Control: Email Filtering & Security Gateway"| C
+    B -->|"Monitor for unexpected email activity from compromised accounts Corporate Control: Email Behavior Analytics"| C
+    C -->|"Encrypt email payloads to prevent signature detection Corporate Control: PGP, S/MIME Encryption"| D
+    C -->|"Modify mail client logs to remove traces of attacker communication Corporate Control: Log Scrubbing, Email Archive Alteration"| D
+    C -->|"Ensure persistence across email account changes Corporate Control: Email Auto-Forwarding Rules"| D
+    C -->|"Monitor email traffic for signs of encoded command instructions Corporate Control: Threat Intelligence, SOC"| D
+    D -->|"Modify system logs to remove traces of email communication Corporate Control: Email Log Management"| E
+    D -->|"Deploy multiple email-based persistence methods for redundancy Corporate Control: Multiple Email Accounts"| E
+    D -->|"Ensure encrypted email traffic remains undetected Corporate Control: Email Traffic Obfuscation"| E
+    D -->|"SOC continuously monitors for anomalies in outbound email traffic Corporate Control: Security Operations Center (SOC)"| E

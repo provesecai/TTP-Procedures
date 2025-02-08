@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Email-Based-C2-Signaling" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Malware to Use Email for Covert Signaling</data>
+</node>
+<node id="B">
+<data key="label">Deploy Email-Based C2 Infrastructure</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Email Communication</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Email-Based C2</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Email C2 Signaling</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify malware to embed commands within email subjects Corporate Control: Email Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure email traffic mimics legitimate communication Corporate Control: Email Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify SMTP settings to route messages through attacker-controlled mail servers Corporate Control: Email Relay Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous email content Corporate Control: SIEM, Email Filtering Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistent email-based signaling using encrypted attachments Corporate Control: Email Content Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure email polling intervals blend with normal behavior Corporate Control: Email Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify spam filters to allow outbound C2 messages Corporate Control: Spam Filtering Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized email relay usage Corporate Control: Email Gateway Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt email payloads to prevent scanning Corporate Control: Email Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify email metadata to hide sender identity Corporate Control: Email Header Manipulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through email forwarding rules Corporate Control: Email Auto-Forwarding Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor email traffic for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple email-based persistence techniques Corporate Control: Multiple Email Accounts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure email traffic remains undetected by security tools Corporate Control: Email Traffic Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in email traffic Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Configure Malware to Communicate with Tor Hidden Services]
+    B[Deploy Persistent Connection to Tor-Based C2]
+    C[Ensure Continuous and Untraceable Traffic Signaling]
+    D[Prevent Detection of Tor-Based Traffic Signaling]
+    E[Persistence Achieved via Tor Hidden Service Communication]
+
+    A -->|"Modify malware networking stack to use Tor as a communication channel Corporate Control: Malware Network Configuration"| B
+    A -->|"Ensure malware connects exclusively to .onion domains Corporate Control: Tor Proxy Configuration"| B
+    A -->|"Modify firewall settings to allow outbound Tor connections Corporate Control: Network Firewall Rules"| B
+    A -->|"Monitor for unauthorized use of Tor exit nodes Corporate Control: SIEM, Network Anomaly Detection"| B
+    B -->|"Establish an encrypted, persistent connection to an attacker-controlled hidden service Corporate Control: Tor Hidden Service Routing"| C
+    B -->|"Ensure malware can reconnect automatically to different Tor nodes Corporate Control: Dynamic Node Selection"| C
+    B -->|"Modify traffic patterns to blend with legitimate Tor browsing Corporate Control: Tor Bridge Obfuscation"| C
+    B -->|"Monitor for unexpected Tor usage originating from enterprise systems Corporate Control: Deep Packet Inspection (DPI)"| C
+    C -->|"Encrypt all traffic sent over Tor to prevent DPI-based detection Corporate Control: End-to-End Encryption Policies"| D
+    C -->|"Rotate hidden service addresses dynamically to avoid blocking Corporate Control: Hidden Service Key Rotation"| D
+    C -->|"Ensure persistence by modifying system startup scripts Corporate Control: System Boot Process Configuration"| D
+    C -->|"Monitor outgoing connections for signs of unauthorized Tor traffic Corporate Control: Network Security Monitoring"| D
+    D -->|"Modify system logs to remove traces of Tor connections Corporate Control: Log Scrubbing, System Logs"| E
+    D -->|"Deploy multiple Tor exit nodes as backup routes Corporate Control: Distributed Onion Routing"| E
+    D -->|"Use traffic masking techniques to disguise Tor packets Corporate Control: Tor Pluggable Transport Mechanisms"| E
+    D -->|"SOC continuously monitors for unexpected Tor traffic anomalies Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Port-Knocking-for-Backdoor-Activation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Configure Port Knocking Sequence</data>
+</node>
+<node id="B">
+<data key="label">Deploy Backdoor Triggered by Port Sequence</data>
+</node>
+<node id="C">
+<data key="label">Maintain Backdoor Accessibility</data>
+</node>
+<node id="D">
+<data key="label">Conceal Port Knocking Mechanism</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Port Knocking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Define a specific sequence of closed ports to be accessed in order Corporate Control: Firewall Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Implement a listener to monitor the defined port sequence Corporate Control: Network Monitoring Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure the sequence is complex enough to avoid accidental activation Corporate Control: Security Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to port configurations Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy a backdoor that activates upon receiving the correct port sequence Corporate Control: Server Application</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Integrate the backdoor with existing services to avoid detection Corporate Control: Application Layer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Test the backdoor to confirm it activates only upon the correct sequence Corporate Control: Quality Assurance Processes</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual application behavior Corporate Control: Application Performance Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Regularly update the port sequence to prevent discovery Corporate Control: Change Management Procedures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the backdoor remains functional after system updates Corporate Control: Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain access to the system through the backdoor Corporate Control: Access Control Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized access attempts Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate the backdoor code to evade detection Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of port knocking attempts Corporate Control: Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encryption to hide the backdoor's network traffic Corporate Control: Network Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of obfuscation or encryption misuse Corporate Control: Security Audits</data>
+</edge>
+</graph>
+</graphml>

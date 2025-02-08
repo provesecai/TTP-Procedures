@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using-Covert-GSM-or-LTE-Signaling" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify GSM/LTE Communication Channels</data>
+</node>
+<node id="B">
+<data key="label">Modify Mobile Signaling Mechanisms for Covert Data Exchange</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Covert Communication via GSM/LTE</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Covert GSM/LTE Signaling</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via GSM/LTE-Based Communication</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze cellular network protocols (GSM, LTE) for exploitable signaling Corporate Control: Mobile Network Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access points for modifying mobile communication settings Corporate Control: Baseband Firmware Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure communication patterns blend with legitimate cellular traffic Corporate Control: Cellular Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized GSM or LTE connection attempts Corporate Control: SIEM, Mobile Carrier Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistent covert signaling through encoded LTE messages Corporate Control: LTE Network Signaling Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify baseband firmware to inject hidden signaling Corporate Control: Mobile Device Firmware Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure signaling persists across mobile carrier updates Corporate Control: Carrier Network Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes in mobile signaling parameters Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt GSM/LTE traffic to prevent detection Corporate Control: Secure Communication Protocols</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify carrier logs to hide covert signaling activity Corporate Control: Carrier Log Redaction</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through GSM/LTE beaconing Corporate Control: Mobile Beaconing Strategies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor cellular traffic patterns for anomalies Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple GSM/LTE persistence mechanisms for redundancy Corporate Control: Multi-Carrier Communication Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure covert mobile signaling remains undetected Corporate Control: Mobile Traffic Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in cellular network traffic Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Modify TCP Packet Structures for Covert Communication]
+    B[Deploy Malware Using TCP Padding as a Signaling Channel]
+    C[Ensure Persistent TCP-Based Data Exchange]
+    D[Prevent Detection of Covert TCP Signaling]
+    E[Persistence Achieved via TCP Packet Padding]
+
+    A -->|"Modify malware networking stack to encode signals into TCP padding Corporate Control: TCP/IP Stack Configuration"| B
+    A -->|"Ensure TCP packets look legitimate while carrying hidden data Corporate Control: Network Traffic Obfuscation"| B
+    A -->|"Determine firewall rules allowing outbound TCP communication Corporate Control: Network Security Policies"| B
+    A -->|"Monitor for unusual TCP padding usage in network traffic Corporate Control: SIEM, Deep Packet Inspection (DPI)"| B
+    B -->|"Deploy malware that encodes persistent C2 instructions in TCP padding Corporate Control: Covert Traffic Signaling Mechanisms"| C
+    B -->|"Ensure TCP packets are routed through normal enterprise network paths Corporate Control: Network Proxy Routing"| C
+    B -->|"Modify packet size and padding dynamically to avoid detection Corporate Control: Adaptive Packet Encoding"| C
+    B -->|"Monitor for unusual patterns in TCP sequence numbers Corporate Control: Network Intrusion Detection (NIDS)"| C
+    C -->|"Encrypt TCP padding data to evade detection Corporate Control: Encrypted TCP Payloads"| D
+    C -->|"Rotate encoding schemes periodically to prevent signature-based detection Corporate Control: Dynamic Packet Encoding"| D
+    C -->|"Ensure persistence by modifying kernel networking stack Corporate Control: OS Kernel-Level Networking"| D
+    C -->|"Monitor TCP connections for abnormal padding behavior Corporate Control: Threat Intelligence Monitoring"| D
+    D -->|"Modify system logs to remove traces of TCP-based signaling Corporate Control: Log Scrubbing Techniques"| E
+    D -->|"Deploy multiple TCP packet padding mechanisms for redundancy Corporate Control: Distributed Covert Signaling Networks"| E
+    D -->|"Ensure attacker persistence by integrating TCP signaling with malware Corporate Control: Malware C2 Frameworks"| E
+    D -->|"SOC continuously monitors TCP traffic patterns for anomalies Corporate Control: Security Operations Center (SOC)"| E

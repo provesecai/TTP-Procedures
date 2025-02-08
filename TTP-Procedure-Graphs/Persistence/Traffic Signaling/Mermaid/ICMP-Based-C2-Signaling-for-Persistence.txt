@@ -1,0 +1,23 @@
+graph TD;
+    A[Modify ICMP Packet Handling]
+    B[Deploy Covert ICMP Listener]
+    C[Maintain Persistent ICMP Signaling for C2]
+    D[Prevent Detection of ICMP-Based Persistence]
+    E[Persistence Achieved via ICMP-Based C2 Signaling]
+
+    A -->|"Modify system networking stack to intercept ICMP packets Corporate Control: Network Configuration"| B
+    A -->|"Identify methods to process ICMP requests stealthily Corporate Control: Kernel-Level Packet Processing"| B
+    A -->|"Ensure ICMP traffic blends in with normal network behavior Corporate Control: Network Traffic Analysis"| B
+    A -->|"Monitor for unusual ICMP traffic patterns Corporate Control: Intrusion Detection Systems (IDS)"| B
+    B -->|"Deploy hidden ICMP listener to interpret crafted ping packets Corporate Control: Server Network Stack"| C
+    B -->|"Configure ICMP payloads to deliver encrypted C2 commands Corporate Control: Encrypted Network Signaling"| C
+    B -->|"Ensure persistence by embedding ICMP processing into legitimate services Corporate Control: System Network Services"| C
+    B -->|"Monitor ICMP traffic for unauthorized echo requests Corporate Control: SIEM, Packet Capture Tools"| C
+    C -->|"Regularly change ICMP request structures to evade detection Corporate Control: Dynamic Packet Encoding"| D
+    C -->|"Prevent removal by altering firewall and security configurations Corporate Control: Network Security Policies"| D
+    C -->|"Ensure persistence across OS updates Corporate Control: Kernel-Level Packet Filtering"| D
+    C -->|"Monitor for abnormal system responses to ICMP requests Corporate Control: Security Information and Event Management (SIEM)"| D
+    D -->|"Encrypt ICMP payloads to prevent detection Corporate Control: Traffic Encryption Policies"| E
+    D -->|"Modify system logs to erase traces of ICMP communication Corporate Control: Log Scrubbing, Network Packet Logging"| E
+    D -->|"Deploy multiple ICMP handlers across networked devices Corporate Control: Distributed C2 Infrastructure"| E
+    D -->|"SOC continuously monitors for abnormal ICMP activity Corporate Control: Security Operations Center (SOC)"| E

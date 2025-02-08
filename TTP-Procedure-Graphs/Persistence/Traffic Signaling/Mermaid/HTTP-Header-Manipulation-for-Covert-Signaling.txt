@@ -1,0 +1,23 @@
+graph TD;
+    A[Modify HTTP Headers for Stealth C2 Communication]
+    B[Deploy Malware that Encodes Commands in HTTP Requests]
+    C[Ensure Persistent HTTP-Based Signaling]
+    D[Prevent Detection of Covert HTTP Signaling]
+    E[Persistence Achieved via HTTP Header Manipulation]
+
+    A -->|"Identify web application HTTP request and response handling Corporate Control: Web Application Security"| B
+    A -->|"Modify headers such as User-Agent, Cookie, and Referer for data exchange Corporate Control: HTTP Security Policies"| B
+    A -->|"Ensure HTTP header values remain inconspicuous Corporate Control: Web Application Firewall (WAF)"| B
+    A -->|"Monitor for unexpected HTTP header modifications Corporate Control: SIEM, Proxy Logs"| B
+    B -->|"Deploy malware that encodes C2 instructions into HTTP headers Corporate Control: Application Layer Attack Techniques"| C
+    B -->|"Ensure headers dynamically change per request to avoid pattern detection Corporate Control: HTTP Request Randomization"| C
+    B -->|"Modify server-side request processing to accept encoded headers Corporate Control: Web Server Configuration"| C
+    B -->|"Monitor for unauthorized HTTP header manipulations Corporate Control: Security Information and Event Management (SIEM)"| C
+    C -->|"Rotate header formats to prevent security tools from flagging traffic Corporate Control: Encrypted Header Payloads"| D
+    C -->|"Prevent removal by modifying server request validation policies Corporate Control: HTTP Security Headers"| D
+    C -->|"Ensure persistence across application updates Corporate Control: Web Application Patch Management"| D
+    C -->|"Monitor HTTP request logs for unusual header values Corporate Control: Threat Intelligence Monitoring"| D
+    D -->|"Encrypt HTTP header payloads to avoid deep packet inspection Corporate Control: TLS Encryption and HTTPS Implementation"| E
+    D -->|"Modify web server logs to remove evidence of C2 activity Corporate Control: Web Log Scrubbing Techniques"| E
+    D -->|"Deploy multiple HTTP-based C2 signaling methods for redundancy Corporate Control: Multiple Proxy Routes"| E
+    D -->|"SOC continuously monitors HTTP traffic anomalies Corporate Control: Security Operations Center (SOC)"| E

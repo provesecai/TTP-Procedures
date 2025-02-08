@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Border Gateway Protocol (BGP) Routing Tables]
+    B[Manipulate BGP Announcements to Redirect Traffic]
+    C[Maintain Persistent Traffic Flow Through Attacker Infrastructure]
+    D[Prevent Detection of BGP Hijacking]
+    E[Persistence Achieved via BGP Traffic Redirection]
+
+    A -->|"Identify target autonomous systems (AS) for traffic redirection Corporate Control: ISP Routing Policies"| B
+    A -->|"Analyze BGP peering relationships for exploitable routes Corporate Control: Network Backbone Configuration"| B
+    A -->|"Determine access methods to inject rogue BGP announcements Corporate Control: ISP Border Routers"| B
+    A -->|"Monitor for unauthorized BGP route changes Corporate Control: SIEM, Network Flow Monitoring"| B
+    B -->|"Announce attacker-controlled prefixes to reroute victim traffic Corporate Control: BGP Route Injection"| C
+    B -->|"Ensure persistence by modifying AS path attributes Corporate Control: BGP Route Manipulation"| C
+    B -->|"Modify routing tables to avoid detection Corporate Control: ISP Traffic Filtering Rules"| C
+    B -->|"Monitor for unexpected changes in network route paths Corporate Control: Network Security Operations"| C
+    C -->|"Periodically update BGP advertisements to evade tracking Corporate Control: Dynamic Route Adjustments"| D
+    C -->|"Use route flapping techniques to disguise malicious BGP activity Corporate Control: Traffic Load Balancing"| D
+    C -->|"Prevent rollback by manipulating route propagation Corporate Control: Multi-Homed Network Configurations"| D
+    C -->|"Monitor for anomalies in network route tables Corporate Control: Threat Intelligence and BGP Monitoring"| D
+    D -->|"Modify routing logs to remove traces of BGP hijacking Corporate Control: Log Scrubbing, ISP Network Logging"| E
+    D -->|"Deploy multiple BGP route hijacking techniques for redundancy Corporate Control: Distributed Routing Manipulation"| E
+    D -->|"Ensure persistent traffic control through indirect routing strategies Corporate Control: Multi-Hop Routing Exploits"| E
+    D -->|"SOC continuously monitors for unauthorized BGP announcements Corporate Control: Security Operations Center (SOC)"| E

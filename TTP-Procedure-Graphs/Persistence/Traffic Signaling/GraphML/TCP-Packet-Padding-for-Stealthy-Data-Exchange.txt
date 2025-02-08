@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TCP-Packet-Padding-for-Stealthy-Data-Exchange" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify TCP Packets to Include Covert Data</data>
+</node>
+<node id="B">
+<data key="label">Deploy TCP Packet Padding Mechanism</data>
+</node>
+<node id="C">
+<data key="label">Maintain Stealthy Data Exchange Using TCP Padding</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Covert TCP Communication</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via TCP Packet Padding</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify TCP payloads to embed data in padding fields Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure data exchange resembles legitimate network traffic Corporate Control: Deep Packet Inspection (DPI)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Implement dynamic padding techniques to avoid pattern detection Corporate Control: Adaptive Network Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalies in TCP packet size variations Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish a covert communication channel using TCP padding Corporate Control: Network Protocol Exploitation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying TCP header fields dynamically Corporate Control: TCP Packet Manipulation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify firewall and IDS settings to allow covert TCP padding Corporate Control: Firewall Configuration Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized TCP payload alterations Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt TCP padding data to prevent detection Corporate Control: Encrypted Packet Transmission</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify network logs to hide evidence of modified TCP packets Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through TCP-based data exfiltration Corporate Control: Data Leak Prevention Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor TCP session lengths and traffic patterns for anomalies Corporate Control: SIEM, Network Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple TCP padding techniques for redundancy Corporate Control: Multi-Protocol Communication Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure TCP padding communication remains undetected Corporate Control: Network Traffic Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in TCP traffic Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

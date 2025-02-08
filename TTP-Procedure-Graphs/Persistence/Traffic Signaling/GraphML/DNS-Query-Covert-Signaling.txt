@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS-Query-Covert-Signaling" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Malware to Use DNS for Covert Signaling</data>
+</node>
+<node id="B">
+<data key="label">Deploy DNS Query-Based Communication with C2</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent DNS-Based Covert Signaling</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious DNS Traffic</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via DNS Query Signaling</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify malware to encode data in DNS queries Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure DNS query formats resemble legitimate traffic Corporate Control: DNS Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify network settings to route DNS queries through attacker-controlled resolvers Corporate Control: DNS Forwarding Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous DNS query patterns Corporate Control: SIEM, DNS Logs"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistent DNS-based signaling by embedding commands in subdomains Corporate Control: DNS Request Handling"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure DNS polling intervals mimic normal traffic patterns Corporate Control: Network Security Policies"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify firewall and proxy settings to allow outbound DNS traffic Corporate Control: Firewall Access Control Lists"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected DNS resolution requests Corporate Control: Threat Intelligence, SOC"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt DNS payloads to prevent signature-based detection Corporate Control: Encrypted DNS (DNS over HTTPS/DNS over TLS)"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DNS logs to remove traces of covert signaling Corporate Control: Log Scrubbing, DNS Query Filtering"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across network changes Corporate Control: DNS Configuration Policies"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor DNS query patterns for encoded command instructions Corporate Control: Security Operations Center (SOC)"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple DNS-based persistence methods for redundancy Corporate Control: Multiple DNS Resolvers"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure encrypted DNS traffic remains undetected Corporate Control: DNS Traffic Obfuscation"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in DNS query traffic Corporate Control: Security Operations Center (SOC)"</data>
+</edge>
+</graph>
+</graphml>

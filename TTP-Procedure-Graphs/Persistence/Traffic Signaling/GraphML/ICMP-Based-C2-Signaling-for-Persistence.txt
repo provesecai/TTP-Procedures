@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ICMP-Based-C2-Signaling-for-Persistence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify ICMP Packet Handling for Covert Signaling</data>
+</node>
+<node id="B">
+<data key="label">Deploy Covert ICMP Listener</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistent ICMP Signaling for C2</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of ICMP-Based Persistence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via ICMP-Based C2 Signaling</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify system networking stack to intercept ICMP packets Corporate Control: Network Configuration"</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify methods to process ICMP requests stealthily Corporate Control: Kernel-Level Packet Processing"</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure ICMP traffic blends in with normal network behavior Corporate Control: Network Traffic Analysis"</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual ICMP traffic patterns Corporate Control: Intrusion Detection Systems (IDS)"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy hidden ICMP listener to interpret crafted ping packets Corporate Control: Server Network Stack"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure ICMP payloads to deliver encrypted C2 commands Corporate Control: Encrypted Network Signaling"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by embedding ICMP processing into legitimate services Corporate Control: System Network Services"</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor ICMP traffic for unauthorized echo requests Corporate Control: SIEM, Packet Capture Tools"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Regularly change ICMP request structures to evade detection Corporate Control: Dynamic Packet Encoding"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by altering firewall and security configurations Corporate Control: Network Security Policies"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across OS updates Corporate Control: Kernel-Level Packet Filtering"</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal system responses to ICMP requests Corporate Control: Security Information and Event Management (SIEM)"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt ICMP payloads to prevent detection Corporate Control: Traffic Encryption Policies"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to erase traces of ICMP communication Corporate Control: Log Scrubbing, Network Packet Logging"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple ICMP handlers across networked devices Corporate Control: Distributed C2 Infrastructure"</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for abnormal ICMP activity Corporate Control: Security Operations Center (SOC)"</data>
+</edge>
+</graph>
+</graphml>

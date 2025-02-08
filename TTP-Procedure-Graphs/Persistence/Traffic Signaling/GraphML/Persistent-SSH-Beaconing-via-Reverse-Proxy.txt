@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Persistent-SSH-Beaconing-via-Reverse-Proxy" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify SSH Client to Route Traffic via Reverse Proxy</data>
+</node>
+<node id="B">
+<data key="label">Deploy Reverse Proxy to Hide SSH Traffic</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent SSH Beaconing for C2</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of SSH-Based Covert Traffic</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via SSH Beaconing</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify SSH client settings to proxy traffic through a reverse proxy Corporate Control: SSH Proxy Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure traffic blends with legitimate SSH connections Corporate Control: SSH Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify firewall rules to allow outbound SSH through proxy Corporate Control: Network Firewall Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual SSH tunneling activity Corporate Control: SIEM, Network Traffic Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish a persistent SSH connection via an attacker-controlled proxy Corporate Control: Reverse Proxy Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify proxy settings to allow encrypted SSH communication Corporate Control: Secure Proxy Protocols</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure proxy relays SSH traffic in a stealthy manner Corporate Control: Network Traffic Obfuscation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized SSH session persistence Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt SSH payloads to prevent deep packet inspection Corporate Control: SSH Tunnel Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging mechanisms to remove traces of SSH activity Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure SSH beaconing continues even after proxy restarts Corporate Control: Proxy Auto-Reconnect</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SSH session lengths and traffic patterns Corporate Control: SIEM, Network Intrusion Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple reverse proxy connections for redundancy Corporate Control: Distributed Proxy Deployment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SSH beaconing remains undetected Corporate Control: SSH Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors SSH traffic anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

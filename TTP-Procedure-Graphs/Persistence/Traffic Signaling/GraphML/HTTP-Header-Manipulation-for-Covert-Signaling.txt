@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HTTP-Header-Manipulation-for-Covert-Signaling" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify HTTP Headers for Covert Signaling</data>
+</node>
+<node id="B">
+<data key="label">Deploy HTTP-Based Covert Communication Channel</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent HTTP Header Signaling</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious HTTP Traffic</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via HTTP Header Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Modify malware to embed commands within HTTP headers Corporate Control: Web Application Firewall (WAF) Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure HTTP requests mimic legitimate browsing behavior Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify web proxies and load balancers to forward covert messages Corporate Control: Proxy Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor HTTP traffic for anomalies Corporate Control: SIEM, HTTP Traffic Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Establish persistent HTTP-based signaling through encrypted headers Corporate Control: HTTPS Request Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure HTTP requests blend in with normal traffic patterns Corporate Control: Web Request Rate Limiting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify web server configurations to allow covert HTTP signaling Corporate Control: Web Server Request Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications in HTTP headers Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt HTTP payloads to evade detection Corporate Control: HTTPS End-to-End Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify web logs to remove traces of covert HTTP headers Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across web proxy changes Corporate Control: Reverse Proxy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor HTTP request patterns for encoded command instructions Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple HTTP-based persistence techniques Corporate Control: Multiple Web Applications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure HTTP header-based communication remains undetected Corporate Control: Web Application Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for anomalies in HTTP header traffic Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

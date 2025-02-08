@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Socket-Filter-Installation-for-Covert-Communication" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Develop Custom Socket Filter</data>
+</node>
+<node id="B">
+<data key="label">Install Socket Filter on Target System</data>
+</node>
+<node id="C">
+<data key="label">Maintain Covert Communication Channel</data>
+</node>
+<node id="D">
+<data key="label">Hide Socket Filter from Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Socket Filter</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Create a filter that monitors for specific packet characteristics Corporate Control: Network Development Environment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Define the criteria that will trigger the filter Corporate Control: Network Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Test the filter in a controlled environment Corporate Control: Quality Assurance Processes</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized filter development activities Corporate Control: Development Environment Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy the filter onto the target system's network stack Corporate Control: System Configuration Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the filter is active and monitoring the correct network interface Corporate Control: Network Interface Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify the filter does not interfere with normal network operations Corporate Control: Network Performance Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to network stack configurations Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use the filter to establish a covert communication channel Corporate Control: Network Communication Protocols</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Regularly update the filter criteria to avoid detection Corporate Control: Change Management Procedures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the communication channel remains stable and reliable Corporate Control: Network Reliability Standards</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unusual network traffic patterns Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Integrate the filter into existing network processes to avoid detection Corporate Control: Network Process Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use encryption to conceal the filter's activities Corporate Control: Data Encryption Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove evidence of the filter's installation Corporate Control: Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for signs of unauthorized filter integration Corporate Control: Security Audits</data>
+</edge>
+</graph>
+</graphml>

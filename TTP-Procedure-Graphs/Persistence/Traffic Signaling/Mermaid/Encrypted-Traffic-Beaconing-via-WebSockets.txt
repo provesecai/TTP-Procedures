@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify WebSocket-Enabled Applications]
+    B[Deploy Persistent WebSocket C2 Channel]
+    C[Ensure Continuous Encrypted Communication]
+    D[Prevent Detection of WebSocket-Based Signaling]
+    E[Persistence Achieved via WebSocket Beaconing]
+
+    A -->|"Identify applications using WebSockets for real-time communication Corporate Control: Web Application Frameworks"| B
+    A -->|"Analyze security policies around WebSocket connections Corporate Control: Web Application Firewall (WAF)"| B
+    A -->|"Determine privilege escalation methods to inject WebSocket handlers Corporate Control: Web Server Access Controls"| B
+    A -->|"Monitor for unauthorized WebSocket API modifications Corporate Control: SIEM, Application Logs"| B
+    B -->|"Inject rogue WebSocket handlers into existing services Corporate Control: Web Server Backend Services"| C
+    B -->|"Modify WebSocket handshake to establish a persistent C2 channel Corporate Control: Secure WebSocket Protocols"| C
+    B -->|"Ensure WebSocket beacons remain active across server restarts Corporate Control: Auto-Reconnect WebSocket Settings"| C
+    B -->|"Monitor for unexpected WebSocket activity originating from the application Corporate Control: Network Intrusion Detection (NIDS)"| C
+    C -->|"Encrypt WebSocket messages to avoid security inspections Corporate Control: WebSocket Secure (WSS) Protocol"| D
+    C -->|"Rotate encryption keys dynamically to prevent traffic correlation Corporate Control: Session-Based Key Rotation"| D
+    C -->|"Prevent security tools from flagging WebSocket messages as anomalous Corporate Control: Traffic Rate Normalization"| D
+    C -->|"Monitor WebSocket traffic patterns for unusual communication behavior Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Modify application logs to remove traces of WebSocket communication Corporate Control: Log Scrubbing Techniques"| E
+    D -->|"Deploy multiple WebSocket C2 pathways for redundancy Corporate Control: Distributed WebSocket Servers"| E
+    D -->|"Use obfuscated WebSocket message formats to evade detection Corporate Control: Data Encoding Techniques"| E
+    D -->|"SOC continuously monitors WebSocket connections for anomalies Corporate Control: Security Operations Center (SOC)"| E
