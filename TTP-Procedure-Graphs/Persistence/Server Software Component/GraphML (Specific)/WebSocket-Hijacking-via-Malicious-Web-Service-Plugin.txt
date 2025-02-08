@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WebSocket-Hijacking-via-Malicious-Web-Service-Plugin" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WebSockets in Application Architecture</data>
+</node>
+<node id="B">
+<data key="label">Modify WebSocket Handlers for Persistent Control</data>
+</node>
+<node id="C">
+<data key="label">Maintain C2 Communication via WebSockets</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious WebSocket Activity</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebSocket Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze WebSocket server configurations (Socket.io, SignalR) Corporate Control: Web Application Framework</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privileged API endpoints interacting with WebSockets Corporate Control: Real-Time Messaging Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permission levels required to modify WebSocket handlers Corporate Control: WebSocket Authentication Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized WebSocket connections Corporate Control: SIEM, API Gateway Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue WebSocket event handlers in backend code Corporate Control: Web Server Event Loop</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify WebSocket payloads to include attacker-controlled data Corporate Control: Application Protocol Handlers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure WebSocket persistence across server restarts Corporate Control: Session Token Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor WebSocket usage for abnormal traffic patterns Corporate Control: Network Intrusion Detection (NIDS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt WebSocket messages to prevent traffic analysis Corporate Control: WebSocket Secure (WSS) Protocol</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify event triggers dynamically to evade security scans Corporate Control: Asynchronous Event Processing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through WebSocket API updates Corporate Control: API Version Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WebSocket activity for anomalies Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify application logs to erase traces of WebSocket modifications Corporate Control: Log Redaction Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple rogue WebSocket handlers across services Corporate Control: Distributed API Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt C2 traffic over WebSockets to evade security tools Corporate Control: Encrypted WebSocket Communications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors WebSocket activity for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

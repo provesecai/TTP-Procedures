@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Vulnerable Web Applications]
+    B[Deploy Malicious Web Shell]
+    C[Maintain Web Shell Access]
+    D[Conceal Web Shell Presence]
+    E[Persistence Achieved via Web Shell]
+
+    A -->|"Scan for exploitable web application vulnerabilities Corporate Control: Web Application Firewall (WAF)"| B
+    A -->|"Identify unrestricted file upload functionalities Corporate Control: Web Server Security Policies"| B
+    A -->|"Determine server-side execution capabilities (e.g., PHP, ASPX, JSP) Corporate Control: Application Security Settings"| B
+    A -->|"Monitor logs for unauthorized file uploads Corporate Control: Security Information and Event Management (SIEM)"| B
+    B -->|"Upload and execute web shell on server Corporate Control: Web Server File System"| C
+    B -->|"Modify file permissions to allow execution Corporate Control: File System Access Controls"| C
+    B -->|"Ensure web shell remains accessible via HTTP requests Corporate Control: Web Server Configurations"| C
+    B -->|"Monitor for unexpected changes in web directories Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Regularly access web shell for remote command execution Corporate Control: Web Server Logs"| D
+    C -->|"Modify web shell code periodically to evade detection Corporate Control: Web Application Updates"| D
+    C -->|"Ensure persistence through web server updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor for abnormal web server behavior Corporate Control: SOC, Threat Intelligence"| D
+    D -->|"Obfuscate web shell code to prevent signature-based detection Corporate Control: Code Obfuscation Tools"| E
+    D -->|"Modify web server logs to hide shell execution Corporate Control: Log Scrubbing, SIEM"| E
+    D -->|"Deploy multiple web shells in different directories for redundancy Corporate Control: Multiple Web Directories"| E
+    D -->|"SOC continuously monitors web request patterns for anomalies Corporate Control: Security Operations Center (SOC)"| E

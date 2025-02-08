@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze JMX Remote Management Configuration]
+    B[Inject Malicious JMX MBean for Persistent Access]
+    C[Ensure Execution of Malicious Code via JMX]
+    D[Prevent Detection of Malicious JMX Component]
+    E[Persistence Achieved via JMX MBean Injection]
+
+    A -->|"Identify JMX endpoints running on Java applications Corporate Control: Java Enterprise Application Security"| B
+    A -->|"Analyze security policies restricting MBean registration Corporate Control: JMX Access Control"| B
+    A -->|"Determine if remote JMX connections are exposed Corporate Control: Network Firewall Rules"| B
+    A -->|"Monitor unauthorized MBean modifications Corporate Control: SIEM, Application Security Logs"| B
+    B -->|"Deploy rogue MBean with attacker-controlled code Corporate Control: Java JMX Management API"| C
+    B -->|"Modify JMX configuration to allow persistent execution Corporate Control: JMX Remote Method Invocation (RMI)"| C
+    B -->|"Ensure MBean reloads automatically after JVM restart Corporate Control: Application Server Lifecycle Settings"| C
+    B -->|"Monitor JMX execution behavior for anomalies Corporate Control: Application Performance Monitoring (APM)"| C
+    C -->|"Modify JMX attributes dynamically to evade security scans Corporate Control: JMX Attribute Manipulation"| D
+    C -->|"Prevent removal of malicious MBean by modifying JMX security settings Corporate Control: Java Security Manager"| D
+    C -->|"Ensure persistence across application updates Corporate Control: Patch Management Policies"| D
+    C -->|"Monitor for unauthorized JMX method invocations Corporate Control: Security Event Monitoring"| D
+    D -->|"Encrypt MBean payloads to evade detection Corporate Control: Java Code Obfuscation Techniques"| E
+    D -->|"Modify application logs to remove traces of MBean execution Corporate Control: Log Redaction Techniques"| E
+    D -->|"Deploy multiple malicious MBeans across different services Corporate Control: Distributed JMX Configuration"| E
+    D -->|"SOC continuously monitors JMX activity for anomalies Corporate Control: Security Operations Center (SOC)"| E

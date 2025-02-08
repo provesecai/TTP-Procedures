@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Apache Tomcat Configuration]
+    B[Inject Malicious Tomcat Valve Component]
+    C[Maintain Persistent Execution on HTTP Requests]
+    D[Prevent Detection of Malicious Valve]
+    E[Persistence Achieved via Tomcat Valve Manipulation]
+
+    A -->|"Identify Apache Tomcat valve execution points Corporate Control: Server Configuration Policies"| B
+    A -->|"Analyze valve processing chain for modification opportunities Corporate Control: Java Servlet Specification"| B
+    A -->|"Determine necessary privileges for modifying valve configuration Corporate Control: Web Server Permissions"| B
+    A -->|"Monitor for unauthorized Tomcat valve modifications Corporate Control: File Integrity Monitoring (FIM)"| B
+    B -->|"Inject rogue Java valve component into conf/server.xml Corporate Control: Web Application Configuration"| C
+    B -->|"Modify valve logic to execute attacker-controlled payloads Corporate Control: Tomcat Request Processing Pipeline"| C
+    B -->|"Ensure persistence by modifying Tomcat auto-deploy settings Corporate Control: Server Auto-Redeployment Policies"| C
+    B -->|"Monitor Tomcat access logs for unexpected request behavior Corporate Control: Application Security Logs"| C
+    C -->|"Modify response filtering dynamically to evade detection Corporate Control: Java Servlet Request Wrappers"| D
+    C -->|"Prevent removal by modifying Tomcat security settings Corporate Control: Java Security Manager Policies"| D
+    C -->|"Ensure persistence through Tomcat updates Corporate Control: Server Patch Management"| D
+    C -->|"Monitor for anomalies in Tomcat request logs Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Obfuscate Java code within valve to evade detection Corporate Control: Java Code Minification"| E
+    D -->|"Modify Tomcat logs to remove traces of valve execution Corporate Control: Log Scrubbing Techniques"| E
+    D -->|"Deploy redundant malicious valves across Tomcat instances Corporate Control: Multiple Application Contexts"| E
+    D -->|"SOC continuously monitors Tomcat configuration changes Corporate Control: Security Operations Center (SOC)"| E

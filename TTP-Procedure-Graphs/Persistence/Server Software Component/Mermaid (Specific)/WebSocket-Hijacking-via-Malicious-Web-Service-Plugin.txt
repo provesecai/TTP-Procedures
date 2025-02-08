@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify WebSockets in Application Architecture]
+    B[Modify WebSocket Handlers for Persistent Control]
+    C[Maintain C2 Communication via WebSockets]
+    D[Prevent Detection of Malicious WebSocket Activity]
+    E[Persistence Achieved via WebSocket Hijacking]
+
+    A -->|"Analyze WebSocket server configurations (Socket.io, SignalR) Corporate Control: Web Application Framework"| B
+    A -->|"Determine privileged API endpoints interacting with WebSockets Corporate Control: Real-Time Messaging Security Policies"| B
+    A -->|"Identify permission levels required to modify WebSocket handlers Corporate Control: WebSocket Authentication Policies"| B
+    A -->|"Monitor for unauthorized WebSocket connections Corporate Control: SIEM, API Gateway Logs"| B
+    B -->|"Inject rogue WebSocket event handlers in backend code Corporate Control: Web Server Event Loop"| C
+    B -->|"Modify WebSocket payloads to include attacker-controlled data Corporate Control: Application Protocol Handlers"| C
+    B -->|"Ensure WebSocket persistence across server restarts Corporate Control: Session Token Management"| C
+    B -->|"Monitor WebSocket usage for abnormal traffic patterns Corporate Control: Network Intrusion Detection (NIDS)"| C
+    C -->|"Encrypt WebSocket messages to prevent traffic analysis Corporate Control: WebSocket Secure (WSS) Protocol"| D
+    C -->|"Modify event triggers dynamically to evade security scans Corporate Control: Asynchronous Event Processing"| D
+    C -->|"Ensure persistence through WebSocket API updates Corporate Control: API Version Control"| D
+    C -->|"Monitor WebSocket activity for anomalies Corporate Control: Security Event Monitoring"| D
+    D -->|"Modify application logs to erase traces of WebSocket modifications Corporate Control: Log Redaction Policies"| E
+    D -->|"Deploy multiple rogue WebSocket handlers across services Corporate Control: Distributed API Services"| E
+    D -->|"Encrypt C2 traffic over WebSockets to evade security tools Corporate Control: Encrypted WebSocket Communications"| E
+    D -->|"SOC continuously monitors WebSocket activity for anomalies Corporate Control: Security Operations Center (SOC)"| E

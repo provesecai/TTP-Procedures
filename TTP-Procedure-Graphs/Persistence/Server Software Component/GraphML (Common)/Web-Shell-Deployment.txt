@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Web-Shell-Deployment" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Web Applications</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Web Shell</data>
+</node>
+<node id="C">
+<data key="label">Maintain Web Shell Access</data>
+</node>
+<node id="D">
+<data key="label">Conceal Web Shell Presence</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Web Shell</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Scan for exploitable web application vulnerabilities Corporate Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unrestricted file upload functionalities Corporate Control: Web Server Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine server-side execution capabilities (e.g., PHP, ASPX, JSP) Corporate Control: Application Security Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor logs for unauthorized file uploads Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload and execute web shell on server Corporate Control: Web Server File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file permissions to allow execution Corporate Control: File System Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure web shell remains accessible via HTTP requests Corporate Control: Web Server Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected changes in web directories Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Regularly access web shell for remote command execution Corporate Control: Web Server Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify web shell code periodically to evade detection Corporate Control: Web Application Updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through web server updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal web server behavior Corporate Control: SOC, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate web shell code to prevent signature-based detection Corporate Control: Code Obfuscation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify web server logs to hide shell execution Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple web shells in different directories for redundancy Corporate Control: Multiple Web Directories</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors web request patterns for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

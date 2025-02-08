@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Apache-Tomcat-Valve-Configuration" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Apache Tomcat Configuration</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Tomcat Valve Component</data>
+</node>
+<node id="C">
+<data key="label">Maintain Persistent Execution on HTTP Requests</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious Valve</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Tomcat Valve Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Apache Tomcat valve execution points Corporate Control: Server Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze valve processing chain for modification opportunities Corporate Control: Java Servlet Specification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine necessary privileges for modifying valve configuration Corporate Control: Web Server Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized Tomcat valve modifications Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue Java valve component into conf/server.xml Corporate Control: Web Application Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify valve logic to execute attacker-controlled payloads Corporate Control: Tomcat Request Processing Pipeline</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying Tomcat auto-deploy settings Corporate Control: Server Auto-Redeployment Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor Tomcat access logs for unexpected request behavior Corporate Control: Application Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify response filtering dynamically to evade detection Corporate Control: Java Servlet Request Wrappers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying Tomcat security settings Corporate Control: Java Security Manager Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through Tomcat updates Corporate Control: Server Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in Tomcat request logs Corporate Control: SIEM, Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate Java code within valve to evade detection Corporate Control: Java Code Minification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify Tomcat logs to remove traces of valve execution Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant malicious valves across Tomcat instances Corporate Control: Multiple Application Contexts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors Tomcat configuration changes Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

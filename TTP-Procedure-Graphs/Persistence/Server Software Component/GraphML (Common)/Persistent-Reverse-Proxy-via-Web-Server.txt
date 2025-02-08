@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Persistent-Reverse-Proxy-via-Web-Server" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web Server Reverse Proxy Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Configure Malicious Reverse Proxy</data>
+</node>
+<node id="C">
+<data key="label">Maintain Hidden Communication Channel</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Reverse Proxy Configuration</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Reverse Proxy Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze web server (Apache, Nginx, IIS) for reverse proxy capabilities Corporate Control: Server Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable proxy configurations Corporate Control: Web Server Routing Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods to modify proxy settings Corporate Control: Administrative Privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized reverse proxy modifications Corporate Control: SIEM, Firewall Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious proxy rules to tunnel attacker traffic Corporate Control: Web Server Proxy Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify proxy settings to forward traffic to C2 servers Corporate Control: Network Routing Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure proxy remains persistent across server reboots Corporate Control: Startup Configuration Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor proxy activity for unauthorized connections Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify proxy headers dynamically to evade detection Corporate Control: HTTP Header Manipulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent proxy rule removal by altering server configurations Corporate Control: File System Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure reverse proxy remains undetected in traffic logs Corporate Control: Network Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outbound traffic for suspicious proxy usage Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt proxy logs to prevent analysis Corporate Control: Log Encryption Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify firewall rules to allow persistent proxy access Corporate Control: Firewall Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple reverse proxies for redundancy Corporate Control: Multiple Proxy Configurations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors proxy activity for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

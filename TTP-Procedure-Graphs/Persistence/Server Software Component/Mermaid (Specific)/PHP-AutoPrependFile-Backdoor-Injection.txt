@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify PHP Configuration Files]
+    B[Modify php.ini to Load Malicious Script]
+    C[Ensure Malicious Code Executes on Every Request]
+    D[Prevent Detection of PHP Backdoor]
+    E[Persistence Achieved via PHP AutoPrependFile Injection]
+
+    A -->|"Locate php.ini or .user.ini files Corporate Control: Web Server Configuration"| B
+    A -->|"Determine execution settings for PHP directives Corporate Control: PHP Runtime Settings"| B
+    A -->|"Identify writable directories for backdoor storage Corporate Control: File System Access Policies"| B
+    A -->|"Monitor php.ini modifications Corporate Control: SIEM, FIM"| B
+    B -->|"Modify auto_prepend_file to include malicious PHP script Corporate Control: PHP Configuration Settings"| C
+    B -->|"Ensure script executes before every page load Corporate Control: Web Application Frameworks"| C
+    B -->|"Modify web server reload policies to maintain persistence Corporate Control: Web Server Configuration"| C
+    B -->|"Monitor unauthorized PHP configuration changes Corporate Control: File Integrity Monitoring (FIM)"| C
+    C -->|"Ensure PHP execution remains enabled even after updates Corporate Control: Patch Management Policies"| D
+    C -->|"Modify error handling mechanisms to evade detection Corporate Control: Web Server Log Management"| D
+    C -->|"Prevent removal by restricting write permissions Corporate Control: NTFS/Linux File Permissions"| D
+    C -->|"Monitor PHP request anomalies Corporate Control: Web Application Firewall (WAF), SIEM"| D
+    D -->|"Encrypt PHP backdoor to prevent signature-based detection Corporate Control: Code Obfuscation Techniques"| E
+    D -->|"Modify web server logs to erase evidence of execution Corporate Control: Log Scrubbing, SIEM"| E
+    D -->|"Deploy multiple PHP backdoors in redundant configurations Corporate Control: Multiple php.ini Modifications"| E
+    D -->|"SOC continuously monitors PHP runtime activity Corporate Control: Security Operations Center (SOC)"| E

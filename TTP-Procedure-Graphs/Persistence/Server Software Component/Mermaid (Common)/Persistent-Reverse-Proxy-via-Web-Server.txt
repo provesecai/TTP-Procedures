@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Web Server Reverse Proxy Capabilities]
+    B[Configure Malicious Reverse Proxy]
+    C[Maintain Hidden Communication Channel]
+    D[Prevent Detection of Reverse Proxy Configuration]
+    E[Persistence Achieved via Reverse Proxy Manipulation]
+
+    A -->|"Analyze web server (Apache, Nginx, IIS) for reverse proxy capabilities Corporate Control: Server Configuration Policies"| B
+    A -->|"Identify vulnerable proxy configurations Corporate Control: Web Server Routing Rules"| B
+    A -->|"Determine access methods to modify proxy settings Corporate Control: Administrative Privileges"| B
+    A -->|"Monitor unauthorized reverse proxy modifications Corporate Control: SIEM, Firewall Logs"| B
+    B -->|"Inject malicious proxy rules to tunnel attacker traffic Corporate Control: Web Server Proxy Configuration"| C
+    B -->|"Modify proxy settings to forward traffic to C2 servers Corporate Control: Network Routing Policies"| C
+    B -->|"Ensure proxy remains persistent across server reboots Corporate Control: Startup Configuration Files"| C
+    B -->|"Monitor proxy activity for unauthorized connections Corporate Control: Security Event Monitoring"| C
+    C -->|"Modify proxy headers dynamically to evade detection Corporate Control: HTTP Header Manipulation"| D
+    C -->|"Prevent proxy rule removal by altering server configurations Corporate Control: File System Permissions"| D
+    C -->|"Ensure reverse proxy remains undetected in traffic logs Corporate Control: Network Anomaly Detection"| D
+    C -->|"Monitor outbound traffic for suspicious proxy usage Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Encrypt proxy logs to prevent analysis Corporate Control: Log Encryption Methods"| E
+    D -->|"Modify firewall rules to allow persistent proxy access Corporate Control: Firewall Security Policies"| E
+    D -->|"Deploy multiple reverse proxies for redundancy Corporate Control: Multiple Proxy Configurations"| E
+    D -->|"SOC continuously monitors proxy activity for anomalies Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-DLL-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web Services Running on Target Server</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious DLL into Web Service Process</data>
+</node>
+<node id="C">
+<data key="label">Ensure DLL Execution on Web Service Startup</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious DLL</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Web Service DLL Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze running web services (IIS, Apache, Tomcat) Corporate Control: Server Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable web service components Corporate Control: Web Service Security Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine privilege escalation methods for DLL injection Corporate Control: Windows Service Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to web service files Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious DLL into web service execution path Corporate Control: Windows Service Registry</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify web service startup routines to load malicious DLL Corporate Control: Windows API Hooking</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by configuring auto-reload of DLL Corporate Control: Web Server Module Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized DLL modifications Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DLL code dynamically to evade security scans Corporate Control: DLL Packing & Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure malicious DLL remains after server restarts Corporate Control: System Boot Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal of DLL by modifying file permissions Corporate Control: NTFS Access Control Lists (ACLs)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected behavior in web service logs Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt DLL payload to evade antivirus detection Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of DLL injection Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant DLL injections for resilience Corporate Control: Multiple Web Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors DLL behavior within web services Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

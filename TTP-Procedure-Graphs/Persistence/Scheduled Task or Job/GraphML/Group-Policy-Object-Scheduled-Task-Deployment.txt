@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GPO-Scheduled-Task-Deployment" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Domain and Privileges</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Scheduled Task via GPO</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Execution Across Domain</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task and Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via GPO Deployment</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify target domain and gain Domain Admin privileges Corporate Control: Active Directory</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify Group Policy Management access Corporate Control: GPO Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable logging for GPO changes Corporate Control: Domain Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for existing GPOs Corporate Control: GPO Inventory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a malicious scheduled task via GPO Corporate Control: Group Policy Editor</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run at system startup or user login Corporate Control: GPO Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs with SYSTEM privileges Corporate Control: Privileged Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify task deployment across domain Corporate Control: Domain Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test task execution on domain-joined systems Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate task and payload to evade detection Third Party Control: Antivirus</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide task from GPO management interface Corporate Control: GPO Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection attempts Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence is undetectable Corporate Control: Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Respond to changes in monitoring behavior Corporate Control: Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access through periodic GPO updates Corporate Control: GPO Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade automated detection tools Third Party Control: Antivirus</data>
+</edge>
+</graph>
+</graphml>

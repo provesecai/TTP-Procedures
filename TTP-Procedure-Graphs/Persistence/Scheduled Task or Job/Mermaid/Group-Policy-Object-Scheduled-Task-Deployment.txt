@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target Domain and Privileges]
+    B[Create Malicious Scheduled Task via GPO]
+    C[Ensure Task Execution Across Domain]
+    D[Conceal Task and Evade Detection]
+    E[Persistence Achieved via GPO Deployment]
+
+    A -->|"Identify target domain and gain Domain Admin privileges Corporate Control: Active Directory"| B
+    A -->|"Verify Group Policy Management access Corporate Control: GPO Management"| B
+    A -->|"Disable logging for GPO changes Corporate Control: Domain Logs"| B
+    A -->|"Monitor for existing GPOs Corporate Control: GPO Inventory"| B
+    B -->|"Create a malicious scheduled task via GPO Corporate Control: Group Policy Editor"| C
+    B -->|"Set task to run at system startup or user login Corporate Control: GPO Configuration"| C
+    B -->|"Ensure task runs with SYSTEM privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify task deployment across domain Corporate Control: Domain Logs"| C
+    C -->|"Test task execution on domain-joined systems Corporate Control: System Logs"| D
+    C -->|"Obfuscate task and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide task from GPO management interface Corporate Control: GPO Management"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic GPO updates Corporate Control: GPO Management"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

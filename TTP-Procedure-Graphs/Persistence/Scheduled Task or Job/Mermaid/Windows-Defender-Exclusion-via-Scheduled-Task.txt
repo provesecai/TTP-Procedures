@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Windows Defender Configuration]
+    B[Create Scheduled Task to Add Exclusion]
+    C[Ensure Exclusion Persists Across Reboots]
+    D[Conceal Task and Evade Detection]
+    E[Persistence Achieved via Defender Exclusion]
+
+    A -->|"Identify Windows Defender configuration on the target system Corporate Control: Windows Defender"| B
+    A -->|"Verify permissions to modify Defender settings Corporate Control: Privileged Account"| B
+    A -->|"Disable logging for Defender changes Corporate Control: System Logs"| B
+    A -->|"Monitor for existing exclusions Corporate Control: Windows Defender"| B
+    B -->|"Create a scheduled task to add a malicious exclusion Corporate Control: Task Scheduler"| C
+    B -->|"Set task to run at system startup Corporate Control: Task Scheduler"| C
+    B -->|"Ensure task runs with elevated privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify exclusion creation in Defender logs Corporate Control: Windows Defender"| C
+    C -->|"Test exclusion persistence across reboots Corporate Control: System Logs"| D
+    C -->|"Obfuscate task and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide task from Task Scheduler UI Corporate Control: Task Scheduler"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic task updates Corporate Control: Task Scheduler"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

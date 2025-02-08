@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-WebAssembly-WASM-Modules" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WebAssembly Execution Environment</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious WASM Module into Server-Side Application</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Execution of WASM Backdoor</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious WebAssembly Code</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via WebAssembly Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze WebAssembly (WASM) runtime environments on web servers Corporate Control: Application Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods for modifying WASM execution Corporate Control: Web Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permission levels required to upload and execute WASM modules Corporate Control: Web Application Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized WASM file modifications Corporate Control: File Integrity Monitoring (FIM), SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue WebAssembly module into application container Corporate Control: Web Application Package Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify application runtime to auto-load malicious WASM module Corporate Control: WebAssembly Execution Engine</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying WASM module loader scripts Corporate Control: JavaScript/WebAssembly Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor execution of WASM modules for anomalies Corporate Control: Application Performance Monitoring (APM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt WebAssembly code to evade security scanners Corporate Control: WASM Code Obfuscation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify web application settings to prevent WASM removal Corporate Control: WebAssembly Memory Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure WASM persistence across application updates Corporate Control: Application Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor WebAssembly module executions for unauthorized behavior Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify application logs to remove traces of WASM execution Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple WASM backdoors across different application modules Corporate Control: Web Application Modularity</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure WASM execution remains undetected by altering runtime signatures Corporate Control: Dynamic WASM Code Packing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors WASM activity in production environments Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

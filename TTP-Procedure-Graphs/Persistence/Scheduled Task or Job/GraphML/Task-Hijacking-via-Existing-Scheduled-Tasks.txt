@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Task-Hijacking-via-Existing-Scheduled-Tasks" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Existing Scheduled Tasks</data>
+</node>
+<node id="B">
+<data key="label">Hijack Task and Replace Payload</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Execution with Malicious Payload</data>
+</node>
+<node id="D">
+<data key="label">Conceal Hijacked Task and Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Task Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify existing scheduled tasks on the target system Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify task permissions and execution context Corporate Control: Privileged Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable logging for task modifications Corporate Control: System Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for task execution patterns Corporate Control: System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack an existing task and replace its payload Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run at its original schedule Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs with elevated privileges Corporate Control: Privileged Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify task modification in system logs Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test task execution with malicious payload Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate payload to evade detection Third Party Control: Antivirus</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide task modifications from Task Scheduler UI Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection attempts Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence is undetectable Corporate Control: Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Respond to changes in monitoring behavior Corporate Control: Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access through periodic task updates Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade automated detection tools Third Party Control: Antivirus</data>
+</edge>
+</graph>
+</graphml>

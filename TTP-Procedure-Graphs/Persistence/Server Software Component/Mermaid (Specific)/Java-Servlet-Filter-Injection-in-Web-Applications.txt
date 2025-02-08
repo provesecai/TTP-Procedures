@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Java Servlet Web Applications]
+    B[Inject Malicious Servlet Filter]
+    C[Ensure Code Execution on Every HTTP Request]
+    D[Prevent Detection of Malicious Filter]
+    E[Persistence Achieved via Java Servlet Filter Injection]
+
+    A -->|"Analyze Java web application (Spring Boot, Tomcat) Corporate Control: Application Security Policies"| B
+    A -->|"Identify servlet filters in web.xml or annotations Corporate Control: Java EE Web Configuration"| B
+    A -->|"Determine access points for modifying servlet filters Corporate Control: Application File Permissions"| B
+    A -->|"Monitor for unauthorized changes to servlet filters Corporate Control: File Integrity Monitoring (FIM), SIEM"| B
+    B -->|"Inject malicious filter into web.xml or Java annotations Corporate Control: Web Application Configuration"| C
+    B -->|"Modify request and response flow to execute backdoor code Corporate Control: Java Servlet API"| C
+    B -->|"Ensure filter loads automatically on web server startup Corporate Control: Application Initialization Settings"| C
+    B -->|"Monitor servlet execution anomalies Corporate Control: Application Performance Monitoring (APM)"| C
+    C -->|"Modify response data dynamically to evade detection Corporate Control: Java Reflection, Code Obfuscation"| D
+    C -->|"Ensure filter remains active across application updates Corporate Control: Patch Management Policies"| D
+    C -->|"Restrict access to web.xml to prevent filter removal Corporate Control: Application File Access Controls"| D
+    C -->|"Monitor web application logs for unexpected behavior Corporate Control: SIEM, Threat Intelligence"| D
+    D -->|"Encrypt Java payload to evade signature detection Corporate Control: Java Class Encryption"| E
+    D -->|"Modify logs to remove evidence of filter execution Corporate Control: Log Scrubbing, SIEM"| E
+    D -->|"Deploy multiple servlet filters across applications Corporate Control: Multiple Web Application Instances"| E
+    D -->|"SOC continuously monitors Java web application behavior Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cloud-Based-Task-Scheduling" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cloud Provider and Access</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Scheduled Task in Cloud</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Execution in Cloud Environment</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task and Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Cloud Task Scheduling</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify cloud provider (e.g., AWS, Azure, GCP) Third Party Control: Cloud Platform</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain access to cloud management console Corporate Control: Cloud Admin Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify permissions to create scheduled tasks Third Party Control: Cloud IAM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for existing cloud tasks Corporate Control: Cloud Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a malicious scheduled task in the cloud Third Party Control: Cloud Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run at specific intervals Third Party Control: Cloud Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs with elevated privileges Corporate Control: Cloud Admin Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify task creation in cloud logs Third Party Control: Cloud Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test task execution in the cloud environment Third Party Control: Cloud Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate task and payload to evade detection Third Party Control: Cloud Security Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide task from cloud management console Third Party Control: Cloud Platform</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection attempts Corporate Control: Cloud Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence is undetectable Corporate Control: Cloud Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Respond to changes in monitoring behavior Corporate Control: Cloud Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access through periodic task updates Third Party Control: Cloud Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade automated detection tools Third Party Control: Cloud Security Tools</data>
+</edge>
+</graph>
+</graphml>

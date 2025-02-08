@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-Server-API-Endpoints" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify API Endpoints Running on Web Server</data>
+</node>
+<node id="B">
+<data key="label">Modify API Code or Configuration</data>
+</node>
+<node id="C">
+<data key="label">Ensure API Executes Malicious Payload</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of API Manipulation</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via API Endpoint Hijacking</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze API technologies (REST, GraphQL, SOAP) Corporate Control: API Gateway Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerabilities in API authentication or validation Corporate Control: API Security Mechanisms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods for modifying API configurations Corporate Control: API Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API logs for unauthorized modifications Corporate Control: SIEM, API Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious code into API response handlers Corporate Control: Web Application Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify API routing to redirect traffic to attacker infrastructure Corporate Control: Web Server Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by preventing API changes from being reverted Corporate Control: Version Control & Configuration Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API calls for anomalies Corporate Control: API Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify API behavior dynamically to evade security controls Corporate Control: API Gateway Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure API remains operational after server updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback of API changes by modifying permissions Corporate Control: API Role-Based Access Control (RBAC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized API modifications Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt API payload responses to hide malicious behavior Corporate Control: API Encryption Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify API logs to erase traces of endpoint modifications Corporate Control: API Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple API persistence mechanisms Corporate Control: Multi-Service API Redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors API traffic for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

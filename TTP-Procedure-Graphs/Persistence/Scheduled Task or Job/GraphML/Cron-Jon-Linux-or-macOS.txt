@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cron-Job-Persistence-Linux-macOS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access System and Identify Writable Cron Directories</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Cron Job Entry</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistence and Redundancy</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Gain access to cron job directories with appropriate permissions Corporate Control: Linux/macOS File Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine user/system-wide cron job locations Corporate Control: /etc/crontab, /var/spool/cron</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check system for existing cron jobs to avoid detection Corporate Control: Security Logging and Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze user privileges to identify escalation opportunities Corporate Control: User Role Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create new cron job to execute malicious script at scheduled intervals Corporate Control: Crontab Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure cron job executes under a privileged user account Third Party Control: Privilege Escalation Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify environment variables to ensure persistence Corporate Control: User Profile Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy backup cron job in another user’s crontab for redundancy Corporate Control: Multi-User Crontab Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use multiple cron jobs across different users for redundancy Corporate Control: System Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check and modify cron job entries if removed Corporate Control: Linux Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script executed by cron is not easily removable Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage system-wide cron directories to affect multiple users Corporate Control: /etc/cron.d Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps and file attributes to blend in Corporate Control: File System Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use process hiding techniques to evade detection Third Party Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt or obfuscate script content to prevent analysis Corporate Control: Code Obfuscation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistence Achieved - Cron job ensures long-term execution</data>
+</edge>
+</graph>
+</graphml>

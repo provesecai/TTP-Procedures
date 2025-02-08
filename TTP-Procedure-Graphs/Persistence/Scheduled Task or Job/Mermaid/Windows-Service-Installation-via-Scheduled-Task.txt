@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target System and Privileges]
+    B[Create Scheduled Task to Install Malicious Service]
+    C[Ensure Service Execution on Reboot]
+    D[Conceal Service and Evade Detection]
+    E[Persistence Achieved via Service Installation]
+
+    A -->|"Identify target system and gain administrative privileges Corporate Control: Privileged Account"| B
+    A -->|"Verify Task Scheduler access Corporate Control: Task Scheduler"| B
+    A -->|"Disable logging for service installations Corporate Control: System Logs"| B
+    A -->|"Monitor for existing services Corporate Control: Service Manager"| B
+    B -->|"Create a scheduled task to install a malicious service Corporate Control: Task Scheduler"| C
+    B -->|"Set task to run at system startup Corporate Control: Task Scheduler"| C
+    B -->|"Ensure service runs with SYSTEM privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify service installation in system logs Corporate Control: System Logs"| C
+    C -->|"Test service execution on system reboot Corporate Control: System Logs"| D
+    C -->|"Obfuscate service and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide service from Service Manager UI Corporate Control: Service Manager"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic service updates Corporate Control: Service Manager"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

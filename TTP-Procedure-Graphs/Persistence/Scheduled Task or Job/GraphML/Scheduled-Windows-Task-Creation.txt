@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scheduled-Windows-Task-Creation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target System and Privileges</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Scheduled Task</data>
+</node>
+<node id="C">
+<data key="label">Ensure Task Persistence</data>
+</node>
+<node id="D">
+<data key="label">Obfuscate and Hide the Task</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Assess available Windows Task Scheduler permissions Corporate Control: Active Directory Policies, User Role Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify privileged accounts or accessible systems Corporate Control: IT System Administration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for existing scheduled tasks to avoid detection Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs to identify automation opportunities Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use schtasks.exe or PowerShell to create a hidden scheduled task Corporate Control: Windows Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure task to execute malicious payload at system startup or login Corporate Control: Windows Registry, Scheduled Task Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set execution under SYSTEM or Administrator account Third Party Control: Malware Persistence Techniques</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify task attributes to prevent modification Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure periodic execution by setting a recurring trigger Corporate Control: Task Scheduler, Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use auto-recovery or multiple scheduled tasks to prevent removal Corporate Control: Group Policy Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor task execution status to confirm persistence Third Party Control: Remote Command Execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution parameters to evade signature-based detection Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Rename task to blend with legitimate system tasks Corporate Control: Task Scheduler Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify registry entries to hide task visibility Corporate Control: Windows Registry</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable task logs or clear event history Corporate Control: Windows Event Viewer</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistence Achieved - Malicious task ensures continuous execution</data>
+</edge>
+</graph>
+</graphml>

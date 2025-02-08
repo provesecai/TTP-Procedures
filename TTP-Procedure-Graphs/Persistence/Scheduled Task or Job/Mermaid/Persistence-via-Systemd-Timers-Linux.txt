@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target Linux System and Privileges]
+    B[Create Malicious Systemd Timer]
+    C[Ensure Timer Execution on Reboot]
+    D[Conceal Timer and Evade Detection]
+    E[Persistence Achieved via Systemd Timer]
+
+    A -->|"Identify target Linux system and gain root privileges Corporate Control: Privileged Account"| B
+    A -->|"Verify Systemd service availability Corporate Control: Systemd Configuration"| B
+    A -->|"Disable logging for Systemd changes Corporate Control: System Logs"| B
+    A -->|"Monitor for existing Systemd timers Corporate Control: Systemd Inventory"| B
+    B -->|"Create a malicious Systemd timer Corporate Control: Systemd Configuration"| C
+    B -->|"Set timer to run at system startup Corporate Control: Systemd Configuration"| C
+    B -->|"Ensure timer runs with root privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify timer creation in system logs Corporate Control: System Logs"| C
+    C -->|"Test timer execution on system reboot Corporate Control: System Logs"| D
+    C -->|"Obfuscate timer and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide timer from Systemd management tools Corporate Control: Systemd Configuration"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic timer updates Corporate Control: Systemd Configuration"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target System and Privileges]
+    B[Create Malicious Scheduled Task]
+    C[Ensure Task Persistence]
+    D[Obfuscate and Hide the Task]
+    E[Persistence Achieved]
+
+    A -->|"Assess available Windows Task Scheduler permissions Corporate Control: Active Directory Policies, User Role Management"| B
+    A -->|"Identify privileged accounts or accessible systems Corporate Control: IT System Administration"| B
+    A -->|"Check for existing scheduled tasks to avoid detection Corporate Control: Security Information and Event Management (SIEM)"| B
+    A -->|"Analyze system logs to identify automation opportunities Corporate Control: Windows Event Viewer"| B
+    B -->|"Use schtasks.exe or PowerShell to create a hidden scheduled task Corporate Control: Windows Task Scheduler"| C
+    B -->|"Configure task to execute malicious payload at system startup or login Corporate Control: Windows Registry, Scheduled Task Settings"| C
+    B -->|"Set execution under SYSTEM or Administrator account Third Party Control: Malware Persistence Techniques"| C
+    B -->|"Modify task attributes to prevent modification Corporate Control: Windows Security Policies"| C
+    C -->|"Ensure periodic execution by setting a recurring trigger Corporate Control: Task Scheduler, Event Logs"| D
+    C -->|"Use auto-recovery or multiple scheduled tasks to prevent removal Corporate Control: Group Policy Restrictions"| D
+    C -->|"Monitor task execution status to confirm persistence Third Party Control: Remote Command Execution"| D
+    C -->|"Modify execution parameters to evade signature-based detection Corporate Control: Endpoint Detection and Response (EDR)"| D
+    D -->|"Rename task to blend with legitimate system tasks Corporate Control: Task Scheduler Audit Logs"| E
+    D -->|"Modify registry entries to hide task visibility Corporate Control: Windows Registry"| E
+    D -->|"Disable task logs or clear event history Corporate Control: Windows Event Viewer"| E
+    D -->|"Persistence Achieved - Malicious task ensures continuous execution"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Third-Party Remote Management Tool]
+    B[Create Malicious Scheduled Task via Tool]
+    C[Ensure Task Execution on Target Systems]
+    D[Conceal Task and Evade Detection]
+    E[Persistence Achieved via Third-Party Tool]
+
+    A -->|"Identify third-party remote management software (e.g., TeamViewer, AnyDesk) Third Party Control: Remote Management Software"| B
+    A -->|"Verify tool is installed and running on target system Corporate Control: IT Inventory"| B
+    A -->|"Gain administrative access to the tool's configuration Third Party Control: Remote Management Software"| B
+    A -->|"Disable security features of the tool (e.g., notifications) Third Party Control: Remote Management Software"| B
+    B -->|"Create a scheduled task using the tool's scripting capabilities Third Party Control: Remote Management Software"| C
+    B -->|"Set task to run at system startup or user login Corporate Control: Task Scheduler"| C
+    B -->|"Ensure task runs with elevated privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify task creation in the tool's logs Third Party Control: Remote Management Software"| C
+    C -->|"Test task execution on target systems Corporate Control: System Logs"| D
+    C -->|"Obfuscate task and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide task from tool's interface Third Party Control: Remote Management Software"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic task updates Third Party Control: Remote Management Software"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

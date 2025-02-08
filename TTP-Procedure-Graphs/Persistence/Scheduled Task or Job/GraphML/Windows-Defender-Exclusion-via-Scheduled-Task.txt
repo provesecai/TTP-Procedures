@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Windows-Defender-Exclusion-via-Scheduled-Task" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Windows Defender Configuration</data>
+</node>
+<node id="B">
+<data key="label">Create Scheduled Task to Add Exclusion</data>
+</node>
+<node id="C">
+<data key="label">Ensure Exclusion Persists Across Reboots</data>
+</node>
+<node id="D">
+<data key="label">Conceal Task and Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Defender Exclusion</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify Windows Defender configuration on the target system Corporate Control: Windows Defender</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify permissions to modify Defender settings Corporate Control: Privileged Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable logging for Defender changes Corporate Control: System Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for existing exclusions Corporate Control: Windows Defender</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a scheduled task to add a malicious exclusion Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set task to run at system startup Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure task runs with elevated privileges Corporate Control: Privileged Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify exclusion creation in Defender logs Corporate Control: Windows Defender</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test exclusion persistence across reboots Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate task and payload to evade detection Third Party Control: Antivirus</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide task from Task Scheduler UI Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection attempts Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence is undetectable Corporate Control: Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Respond to changes in monitoring behavior Corporate Control: Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access through periodic task updates Corporate Control: Task Scheduler</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade automated detection tools Third Party Control: Antivirus</data>
+</edge>
+</graph>
+</graphml>

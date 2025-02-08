@@ -1,0 +1,23 @@
+graph TD;
+    A[Access System and Identify Writable Cron Directories]
+    B[Create Malicious Cron Job Entry]
+    C[Ensure Persistence and Redundancy]
+    D[Evade Detection]
+    E[Persistence Achieved]
+
+    A -->|"Gain access to cron job directories with appropriate permissions Corporate Control: Linux/macOS File Permissions"| B
+    A -->|"Determine user/system-wide cron job locations Corporate Control: /etc/crontab, /var/spool/cron"| B
+    A -->|"Check system for existing cron jobs to avoid detection Corporate Control: Security Logging and Monitoring"| B
+    A -->|"Analyze user privileges to identify escalation opportunities Corporate Control: User Role Management"| B
+    B -->|"Create new cron job to execute malicious script at scheduled intervals Corporate Control: Crontab Configuration"| C
+    B -->|"Ensure cron job executes under a privileged user account Third Party Control: Privilege Escalation Techniques"| C
+    B -->|"Modify environment variables to ensure persistence Corporate Control: User Profile Configuration"| C
+    B -->|"Deploy backup cron job in another user’s crontab for redundancy Corporate Control: Multi-User Crontab Settings"| C
+    C -->|"Use multiple cron jobs across different users for redundancy Corporate Control: System Monitoring Tools"| D
+    C -->|"Check and modify cron job entries if removed Corporate Control: Linux Audit Logs"| D
+    C -->|"Ensure script executed by cron is not easily removable Corporate Control: File Integrity Monitoring"| D
+    C -->|"Leverage system-wide cron directories to affect multiple users Corporate Control: /etc/cron.d Configuration"| D
+    D -->|"Modify timestamps and file attributes to blend in Corporate Control: File System Auditing"| E
+    D -->|"Use process hiding techniques to evade detection Third Party Control: Anti-Forensic Techniques"| E
+    D -->|"Encrypt or obfuscate script content to prevent analysis Corporate Control: Code Obfuscation Tools"| E
+    D -->|"Persistence Achieved - Cron job ensures long-term execution"| E

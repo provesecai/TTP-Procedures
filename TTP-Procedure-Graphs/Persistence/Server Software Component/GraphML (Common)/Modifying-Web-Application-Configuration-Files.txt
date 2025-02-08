@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Web-Application-Configuration-Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web Application Configuration Files</data>
+</node>
+<node id="B">
+<data key="label">Modify Configuration Files to Enable Malicious Code Execution</data>
+</node>
+<node id="C">
+<data key="label">Ensure Configuration Remains Active Across Server Restarts</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Configuration Modifications</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Web Configuration Manipulation</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze application server settings (Apache, Nginx, IIS) Corporate Control: Server Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical configuration files (.htaccess, web.config) Corporate Control: Web Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine necessary privileges to modify configuration files Corporate Control: File System Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized changes to configuration files Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious directives in web configuration files Corporate Control: Web Application Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify rewrite rules to redirect traffic to attacker-controlled servers Corporate Control: Web Server Routing Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistent execution of malicious scripts Corporate Control: Web Server Execution Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unexpected changes in configuration settings Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal of malicious configurations by enforcing permission changes Corporate Control: File System Access Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify backup configuration files to reinfect upon rollback Corporate Control: Backup and Recovery Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through web application updates Corporate Control: Patch Management Procedures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in web application behavior Corporate Control: Threat Intelligence, SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt configuration files to prevent signature-based detection Corporate Control: Web Server Encryption Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to erase traces of configuration changes Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant malicious configurations across multiple applications Corporate Control: Multi-App Persistence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors web server configuration integrity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

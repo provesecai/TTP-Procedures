@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target System and Privileges]
+    B[Create Scheduled Task Using at Command]
+    C[Ensure Task Execution at Specified Time]
+    D[Conceal Task and Evade Detection]
+    E[Persistence Achieved via at Command]
+
+    A -->|"Identify target system and gain administrative privileges Corporate Control: Privileged Account"| B
+    A -->|"Verify at command availability on the system Corporate Control: System Configuration"| B
+    A -->|"Disable logging for at command usage Corporate Control: System Logs"| B
+    A -->|"Monitor for existing scheduled tasks Corporate Control: Task Scheduler"| B
+    B -->|"Use at command to schedule a malicious task Corporate Control: Command Line Interface"| C
+    B -->|"Set task to run at a specific time Corporate Control: System Clock"| C
+    B -->|"Ensure task runs with elevated privileges Corporate Control: Privileged Account"| C
+    B -->|"Verify task creation in system logs Corporate Control: System Logs"| C
+    C -->|"Test task execution at the specified time Corporate Control: System Logs"| D
+    C -->|"Obfuscate task and payload to evade detection Third Party Control: Antivirus"| D
+    C -->|"Hide task from Task Scheduler UI Corporate Control: Task Scheduler"| D
+    C -->|"Monitor for detection attempts Corporate Control: Endpoint Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Threat Hunting"| E
+    D -->|"Maintain access through periodic task updates Corporate Control: Task Scheduler"| E
+    D -->|"Evade automated detection tools Third Party Control: Antivirus"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify API Endpoints Running on Web Server]
+    B[Modify API Code or Configuration]
+    C[Ensure API Executes Malicious Payload]
+    D[Prevent Detection of API Manipulation]
+    E[Persistence Achieved via API Endpoint Hijacking]
+
+    A -->|"Analyze API technologies (REST, GraphQL, SOAP) Corporate Control: API Gateway Security Policies"| B
+    A -->|"Identify vulnerabilities in API authentication or validation Corporate Control: API Security Mechanisms"| B
+    A -->|"Determine access methods for modifying API configurations Corporate Control: API Access Control"| B
+    A -->|"Monitor API logs for unauthorized modifications Corporate Control: SIEM, API Logging"| B
+    B -->|"Inject malicious code into API response handlers Corporate Control: Web Application Frameworks"| C
+    B -->|"Modify API routing to redirect traffic to attacker infrastructure Corporate Control: Web Server Configuration"| C
+    B -->|"Ensure persistence by preventing API changes from being reverted Corporate Control: Version Control & Configuration Management"| C
+    B -->|"Monitor API calls for anomalies Corporate Control: API Security Analytics"| C
+    C -->|"Modify API behavior dynamically to evade security controls Corporate Control: API Gateway Filtering"| D
+    C -->|"Ensure API remains operational after server updates Corporate Control: Patch Management Policies"| D
+    C -->|"Prevent rollback of API changes by modifying permissions Corporate Control: API Role-Based Access Control (RBAC)"| D
+    C -->|"Monitor for unauthorized API modifications Corporate Control: Threat Intelligence, SIEM"| D
+    D -->|"Encrypt API payload responses to hide malicious behavior Corporate Control: API Encryption Techniques"| E
+    D -->|"Modify API logs to erase traces of endpoint modifications Corporate Control: API Log Scrubbing"| E
+    D -->|"Deploy multiple API persistence mechanisms Corporate Control: Multi-Service API Redundancy"| E
+    D -->|"SOC continuously monitors API traffic for anomalies Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Persistent-ASP.NET-HTTP-Module-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify ASP.NET Web Application</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious HTTP Module</data>
+</node>
+<node id="C">
+<data key="label">Ensure Persistent Execution on HTTP Requests</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious HTTP Module</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via ASP.NET HTTP Module Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze ASP.NET web application structure Corporate Control: IIS Web Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify global.asax or web.config modifications Corporate Control: Application Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access methods for modifying HTTP modules Corporate Control: ASP.NET Middleware Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized HTTP module changes Corporate Control: File Integrity Monitoring (FIM), SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject custom HTTP module into web.config Corporate Control: ASP.NET Request Pipeline</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify pipeline processing to execute malicious logic Corporate Control: IIS ASP.NET Execution Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure module loads on every web request Corporate Control: IIS Application Pool Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized HTTP module execution Corporate Control: Web Application Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify response headers to manipulate API traffic Corporate Control: HTTP Response Handling</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying IIS security settings Corporate Control: NTFS File Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence through application updates Corporate Control: ASP.NET Update Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor web request anomalies Corporate Control: SIEM, WAF</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt module logic to evade detection Corporate Control: ASP.NET Code Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify IIS logs to erase traces of execution Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple HTTP modules for redundancy Corporate Control: Multiple ASP.NET Web Applications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors IIS request processing Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

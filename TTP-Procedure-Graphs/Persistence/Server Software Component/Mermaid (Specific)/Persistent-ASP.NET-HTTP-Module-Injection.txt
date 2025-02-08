@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify ASP.NET Web Application]
+    B[Inject Malicious HTTP Module]
+    C[Ensure Persistent Execution on HTTP Requests]
+    D[Prevent Detection of Malicious HTTP Module]
+    E[Persistence Achieved via ASP.NET HTTP Module Injection]
+
+    A -->|"Analyze ASP.NET web application structure Corporate Control: IIS Web Server Configuration"| B
+    A -->|"Identify global.asax or web.config modifications Corporate Control: Application Security Policies"| B
+    A -->|"Determine access methods for modifying HTTP modules Corporate Control: ASP.NET Middleware Configuration"| B
+    A -->|"Monitor for unauthorized HTTP module changes Corporate Control: File Integrity Monitoring (FIM), SIEM"| B
+    B -->|"Inject custom HTTP module into web.config Corporate Control: ASP.NET Request Pipeline"| C
+    B -->|"Modify pipeline processing to execute malicious logic Corporate Control: IIS ASP.NET Execution Settings"| C
+    B -->|"Ensure module loads on every web request Corporate Control: IIS Application Pool Configuration"| C
+    B -->|"Monitor unauthorized HTTP module execution Corporate Control: Web Application Logs"| C
+    C -->|"Modify response headers to manipulate API traffic Corporate Control: HTTP Response Handling"| D
+    C -->|"Prevent removal by modifying IIS security settings Corporate Control: NTFS File Permissions"| D
+    C -->|"Ensure persistence through application updates Corporate Control: ASP.NET Update Management"| D
+    C -->|"Monitor web request anomalies Corporate Control: SIEM, WAF"| D
+    D -->|"Encrypt module logic to evade detection Corporate Control: ASP.NET Code Obfuscation"| E
+    D -->|"Modify IIS logs to erase traces of execution Corporate Control: Log Scrubbing, SIEM"| E
+    D -->|"Deploy multiple HTTP modules for redundancy Corporate Control: Multiple ASP.NET Web Applications"| E
+    D -->|"SOC continuously monitors IIS request processing Corporate Control: Security Operations Center (SOC)"| E

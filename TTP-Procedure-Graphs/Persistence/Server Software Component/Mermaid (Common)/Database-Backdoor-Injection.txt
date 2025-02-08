@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Target Database System]
+    B[Inject Malicious SQL Triggers or Stored Procedures]
+    C[Ensure Persistent Execution on Database Events]
+    D[Prevent Detection of Malicious Database Modifications]
+    E[Persistence Achieved via Database Backdoor Injection]
+
+    A -->|"Analyze database type (MySQL, MSSQL, PostgreSQL, Oracle) Corporate Control: Database Security Policies"| B
+    A -->|"Identify permissions for stored procedures and triggers Corporate Control: Database Access Control"| B
+    A -->|"Determine vulnerability points in SQL authentication Corporate Control: Database Query Logs"| B
+    A -->|"Monitor database modification logs for unauthorized changes Corporate Control: SIEM, Database Audit Logs"| B
+    B -->|"Create hidden stored procedures with embedded backdoor commands Corporate Control: Database Management System"| C
+    B -->|"Inject SQL triggers that execute attacker commands on database updates Corporate Control: Database Event Triggers"| C
+    B -->|"Ensure persistence by modifying database system tables Corporate Control: Database Schema Configuration"| C
+    B -->|"Monitor unauthorized stored procedure executions Corporate Control: Database Activity Monitoring (DAM)"| C
+    C -->|"Modify database triggers dynamically to evade security scans Corporate Control: Database Security Policies"| D
+    C -->|"Ensure malicious SQL code executes across database updates Corporate Control: Database Patch Management"| D
+    C -->|"Prevent removal of backdoor by restricting admin access Corporate Control: Access Control Lists (ACLs)"| D
+    C -->|"Monitor database performance for anomalies Corporate Control: Database Security Intelligence"| D
+    D -->|"Encrypt stored procedures and triggers to evade detection Corporate Control: SQL Encryption Techniques"| E
+    D -->|"Modify database logs to remove evidence of backdoor execution Corporate Control: Database Log Management"| E
+    D -->|"Deploy redundant database persistence mechanisms Corporate Control: Multiple SQL Injection Points"| E
+    D -->|"SOC continuously monitors database activity for anomalies Corporate Control: Security Operations Center (SOC)"| E

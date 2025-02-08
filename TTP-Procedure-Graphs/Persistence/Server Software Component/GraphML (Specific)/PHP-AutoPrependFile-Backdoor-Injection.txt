@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PHP-AutoPrependFile-Backdoor-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify PHP Configuration Files</data>
+</node>
+<node id="B">
+<data key="label">Modify php.ini to Load Malicious Script</data>
+</node>
+<node id="C">
+<data key="label">Ensure Malicious Code Executes on Every Request</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of PHP Backdoor</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via PHP AutoPrependFile Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Locate php.ini or .user.ini files Corporate Control: Web Server Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine execution settings for PHP directives Corporate Control: PHP Runtime Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable directories for backdoor storage Corporate Control: File System Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor php.ini modifications Corporate Control: SIEM, FIM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify auto_prepend_file to include malicious PHP script Corporate Control: PHP Configuration Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script executes before every page load Corporate Control: Web Application Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify web server reload policies to maintain persistence Corporate Control: Web Server Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized PHP configuration changes Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure PHP execution remains enabled even after updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify error handling mechanisms to evade detection Corporate Control: Web Server Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by restricting write permissions Corporate Control: NTFS/Linux File Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor PHP request anomalies Corporate Control: Web Application Firewall (WAF), SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt PHP backdoor to prevent signature-based detection Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify web server logs to erase evidence of execution Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple PHP backdoors in redundant configurations Corporate Control: Multiple php.ini Modifications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors PHP runtime activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

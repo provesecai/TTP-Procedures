@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Cloud Provider and Access]
+    B[Create Malicious Scheduled Task in Cloud]
+    C[Ensure Task Execution in Cloud Environment]
+    D[Conceal Task and Evade Detection]
+    E[Persistence Achieved via Cloud Task Scheduling]
+
+    A -->|"Identify cloud provider (e.g., AWS, Azure, GCP) Third Party Control: Cloud Platform"| B
+    A -->|"Gain access to cloud management console Corporate Control: Cloud Admin Account"| B
+    A -->|"Verify permissions to create scheduled tasks Third Party Control: Cloud IAM"| B
+    A -->|"Monitor for existing cloud tasks Corporate Control: Cloud Logs"| B
+    B -->|"Create a malicious scheduled task in the cloud Third Party Control: Cloud Scheduler"| C
+    B -->|"Set task to run at specific intervals Third Party Control: Cloud Scheduler"| C
+    B -->|"Ensure task runs with elevated privileges Corporate Control: Cloud Admin Account"| C
+    B -->|"Verify task creation in cloud logs Third Party Control: Cloud Logs"| C
+    C -->|"Test task execution in the cloud environment Third Party Control: Cloud Scheduler"| D
+    C -->|"Obfuscate task and payload to evade detection Third Party Control: Cloud Security Tools"| D
+    C -->|"Hide task from cloud management console Third Party Control: Cloud Platform"| D
+    C -->|"Monitor for detection attempts Corporate Control: Cloud Monitoring"| D
+    D -->|"Ensure persistence is undetectable Corporate Control: Cloud Security Operations"| E
+    D -->|"Respond to changes in monitoring behavior Corporate Control: Cloud Threat Hunting"| E
+    D -->|"Maintain access through periodic task updates Third Party Control: Cloud Scheduler"| E
+    D -->|"Evade automated detection tools Third Party Control: Cloud Security Tools"| E

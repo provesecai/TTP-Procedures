@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Plugin-Installation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Targeted CMS and Plugin Ecosystem</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious CMS Plugin</data>
+</node>
+<node id="C">
+<data key="label">Ensure Plugin Executes on CMS Load</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious Plugin</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Malicious CMS Plugin</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Analyze CMS ecosystem (WordPress, Joomla, Drupal) Corporate Control: CMS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify vulnerable plugins or weak authentication mechanisms Corporate Control: Plugin Update Mechanisms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine upload paths for plugin installation Corporate Control: Web Server Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor CMS logs for plugin modifications Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Install malicious plugin with embedded backdoor Corporate Control: CMS Plugin Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify plugin settings to enable persistent execution Corporate Control: Plugin Configuration Files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure plugin is loaded automatically on CMS startup Corporate Control: Web Application Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected changes in plugin directories Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify plugin behavior dynamically to evade security scans Corporate Control: CMS Plugin Security Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject encrypted malicious code within plugin files Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure plugin remains functional after CMS updates Corporate Control: Plugin Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized plugin updates Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt plugin source code to evade detection Corporate Control: CMS Code Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify CMS logs to remove traces of plugin installation Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple plugins for redundancy Corporate Control: Multiple CMS Extensions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors CMS behavior and installed plugins Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

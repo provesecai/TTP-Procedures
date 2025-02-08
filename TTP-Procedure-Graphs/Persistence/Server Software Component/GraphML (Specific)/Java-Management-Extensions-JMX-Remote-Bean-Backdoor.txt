@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Java-Management-Extensions-JMX-Remote-Bean-Backdoor" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze JMX Remote Management Configuration</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious JMX MBean for Persistent Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Execution of Malicious Code via JMX</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious JMX Component</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via JMX MBean Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify JMX endpoints running on Java applications Corporate Control: Java Enterprise Application Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze security policies restricting MBean registration Corporate Control: JMX Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine if remote JMX connections are exposed Corporate Control: Network Firewall Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized MBean modifications Corporate Control: SIEM, Application Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy rogue MBean with attacker-controlled code Corporate Control: Java JMX Management API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify JMX configuration to allow persistent execution Corporate Control: JMX Remote Method Invocation (RMI)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure MBean reloads automatically after JVM restart Corporate Control: Application Server Lifecycle Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor JMX execution behavior for anomalies Corporate Control: Application Performance Monitoring (APM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify JMX attributes dynamically to evade security scans Corporate Control: JMX Attribute Manipulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal of malicious MBean by modifying JMX security settings Corporate Control: Java Security Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence across application updates Corporate Control: Patch Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized JMX method invocations Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt MBean payloads to evade detection Corporate Control: Java Code Obfuscation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify application logs to remove traces of MBean execution Corporate Control: Log Redaction Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple malicious MBeans across different services Corporate Control: Distributed JMX Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors JMX activity for anomalies Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

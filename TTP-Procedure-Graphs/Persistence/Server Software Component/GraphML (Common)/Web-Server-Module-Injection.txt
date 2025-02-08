@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Web-Server-Module-Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Analyze Web Server for Modifiable Modules</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Web Server Module</data>
+</node>
+<node id="C">
+<data key="label">Ensure Module Executes on Server Startup</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Malicious Module</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Web Server Module Injection</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify web server software (Apache, Nginx, IIS) Corporate Control: Server Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze server module dependencies and permissions Corporate Control: Web Server Security Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine modification points within server configuration Corporate Control: Web Server Module Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor server logs for unexpected module modifications Corporate Control: SIEM, Security Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious module into server directory Corporate Control: Web Server File System</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify server configuration files to load the malicious module Corporate Control: Configuration File Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure module execution occurs on web server startup Corporate Control: Server Boot Processes</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized server configuration changes Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify module behavior dynamically to evade detection Corporate Control: Server Configuration Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure module remains active through server updates Corporate Control: Web Server Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent removal by modifying access permissions Corporate Control: File System Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor server performance for anomalies Corporate Control: Threat Intelligence, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt module payload to prevent signature detection Corporate Control: Web Server Encryption Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify server logs to erase traces of module injection Corporate Control: Log Scrubbing, SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant modules across multiple servers Corporate Control: Multiple Web Server Nodes</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors web server module activity Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

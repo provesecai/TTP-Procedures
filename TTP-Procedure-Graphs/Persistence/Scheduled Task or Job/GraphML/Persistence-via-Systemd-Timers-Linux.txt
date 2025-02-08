@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Persistence-via-Systemd-Timers-Linux" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Linux System and Privileges</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Systemd Timer</data>
+</node>
+<node id="C">
+<data key="label">Ensure Timer Execution on Reboot</data>
+</node>
+<node id="D">
+<data key="label">Conceal Timer and Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Persistence Achieved via Systemd Timer</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Identify target Linux system and gain root privileges Corporate Control: Privileged Account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Verify Systemd service availability Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable logging for Systemd changes Corporate Control: System Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for existing Systemd timers Corporate Control: Systemd Inventory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create a malicious Systemd timer Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set timer to run at system startup Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure timer runs with root privileges Corporate Control: Privileged Account</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify timer creation in system logs Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test timer execution on system reboot Corporate Control: System Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate timer and payload to evade detection Third Party Control: Antivirus</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hide timer from Systemd management tools Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for detection attempts Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence is undetectable Corporate Control: Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Respond to changes in monitoring behavior Corporate Control: Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access through periodic timer updates Corporate Control: Systemd Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade automated detection tools Third Party Control: Antivirus</data>
+</edge>
+</graph>
+</graphml>

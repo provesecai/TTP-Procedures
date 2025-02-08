@@ -1,0 +1,23 @@
+graph TD;
+    A[Analyze Web Gateway Configuration]
+    B[Inject Malicious Reverse Proxy Rules]
+    C[Maintain Persistent Traffic Redirection]
+    D[Prevent Detection of Reverse Proxy Modifications]
+    E[Persistence Achieved via Reverse Proxy Implant]
+
+    A -->|"Identify reverse proxy configurations (HAProxy, Nginx, Apache) Corporate Control: Web Server Routing Rules"| B
+    A -->|"Determine access control policies for modifying proxy settings Corporate Control: Firewall Security Policies"| B
+    A -->|"Analyze existing load balancing and proxy forwarding logic Corporate Control: Web Application Load Balancers"| B
+    A -->|"Monitor unauthorized proxy configuration changes Corporate Control: SIEM, Firewall Logs"| B
+    B -->|"Inject rogue proxy forwarding rules Corporate Control: Web Server Routing Policies"| C
+    B -->|"Modify request headers to route traffic through attacker-controlled infrastructure Corporate Control: HTTP Header Manipulation"| C
+    B -->|"Ensure persistence by modifying web gateway reload mechanisms Corporate Control: Reverse Proxy Configuration Files"| C
+    B -->|"Monitor outbound proxy traffic for anomalies Corporate Control: Network Intrusion Detection Systems (NIDS)"| C
+    C -->|"Encrypt proxy connections to evade security tools Corporate Control: TLS Encrypted Reverse Proxy"| D
+    C -->|"Modify firewall settings to prevent removal of malicious rules Corporate Control: Access Control Lists (ACLs)"| D
+    C -->|"Ensure proxy persistence through configuration backups Corporate Control: Configuration Rollback Policies"| D
+    C -->|"Monitor proxy request anomalies Corporate Control: Security Operations Center (SOC)"| D
+    D -->|"Modify logs to remove traces of reverse proxy rule execution Corporate Control: Log Scrubbing Techniques"| E
+    D -->|"Deploy multiple proxy implants across different gateways Corporate Control: Distributed Proxy Configuration"| E
+    D -->|"Ensure attacker access through redundant traffic forwarding Corporate Control: Multiple Entry Points"| E
+    D -->|"SOC continuously monitors proxy rule modifications Corporate Control: Security Operations Center (SOC)"| E
