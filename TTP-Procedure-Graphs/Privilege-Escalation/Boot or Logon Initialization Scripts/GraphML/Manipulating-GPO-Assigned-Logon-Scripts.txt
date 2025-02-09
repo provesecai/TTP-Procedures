@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating-GPO-Assigned-Logon-Scripts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access to Group Policy Object (GPO) Management</data>
+</node>
+<node id="B">
+<data key="label">Modify GPO Logon Scripts for Privilege Escalation</data>
+</node>
+<node id="C">
+<data key="label">Trigger Execution During Domain Logon</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of GPO Logon Script Modification</data>
+</node>
+<node id="E">
+<data key="label">Domain Administrator Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Obtain access to Group Policy Management Console</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify GPOs assigned logon scripts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying logon scripts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to GPO settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify logon scripts to execute malicious commands at logon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script executes with Domain Admin privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying GPO refresh policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized privilege escalations via GPO modifications</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User logs in, triggering execution of malicious GPO script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm administrative privileges by executing privileged network commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script remains active after GPO updates</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized GPO logon script executions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of GPO logon script modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued domain administrative access by modifying security policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized GPO modifications</data>
+</edge>
+</graph>
+</graphml>

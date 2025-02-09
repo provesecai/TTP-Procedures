@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-XDG-Autostart-Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to User Account on Linux System</data>
+</node>
+<node id="B">
+<data key="label">Modify XDG Autostart Configuration to Execute Malicious Commands</data>
+</node>
+<node id="C">
+<data key="label">Trigger Execution During User GUI Session Start</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of XDG Autostart Modification</data>
+</node>
+<node id="E">
+<data key="label">Root Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Log in with a standard user account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable XDG autostart files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure modified autostart entry executes with elevated privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to XDG autostart files</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify or create a .desktop file with a malicious payload</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution at every graphical session startup</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file attributes to prevent detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to autostart entries</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User logs into graphical session, triggering execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm root privileges by executing administrative commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script remains active across multiple logins</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalations via autostart execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of XDG autostart modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued root access by modifying execution policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized XDG autostart modifications</data>
+</edge>
+</graph>
+</graphml>

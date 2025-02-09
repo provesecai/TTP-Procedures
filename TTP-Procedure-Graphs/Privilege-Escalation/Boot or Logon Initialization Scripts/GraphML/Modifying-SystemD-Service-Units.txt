@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-SystemD-Service-Units" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to User Account on Linux System</data>
+</node>
+<node id="B">
+<data key="label">Modify SystemD Service Unit to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Trigger Execution During System Startup</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of SystemD Service Modification</data>
+</node>
+<node id="E">
+<data key="label">Root Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Log in with a standard user account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable SystemD service unit files</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure modified service unit executes with root privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to SystemD service units</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify or create a SystemD service file with a malicious payload</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution at every system startup</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file attributes to prevent detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to SystemD services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">System boots, triggering execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm root privileges by executing administrative commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service remains active across reboots</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalations via SystemD execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of SystemD service modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued root access by modifying execution policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized SystemD service modifications</data>
+</edge>
+</graph>
+</graphml>

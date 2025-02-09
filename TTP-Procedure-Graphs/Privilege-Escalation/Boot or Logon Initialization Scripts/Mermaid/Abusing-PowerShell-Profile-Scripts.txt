@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to User Account with PowerShell Access]
+    B[Modify PowerShell Profile Script to Execute Malicious Code]
+    C[Trigger Execution During PowerShell Session Start]
+    D[Evade Detection of PowerShell Profile Modification]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Log in with a standard user account Corporate Control: Windows User Account Management"| B
+    A -->|"Identify writable PowerShell profile scripts (e.g., Microsoft.PowerShell_profile.ps1) Corporate Control: Windows File System Security"| B
+    A -->|"Ensure modified profile script executes with administrative privileges Corporate Control: Windows Execution Policies"| B
+    A -->|"Monitor for unauthorized changes to PowerShell profile scripts Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Insert malicious commands into PowerShell profile script Corporate Control: Windows PowerShell Configuration"| C
+    B -->|"Ensure script executes every time PowerShell starts Corporate Control: PowerShell Execution Policies"| C
+    B -->|"Modify file attributes to prevent detection Corporate Control: Windows Access Control Lists (ACLs)"| C
+    B -->|"Monitor for unexpected executions of modified PowerShell profile scripts Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User launches PowerShell, triggering execution Corporate Control: PowerShell Session Management"| D
+    C -->|"Confirm administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure script remains active across PowerShell sessions Corporate Control: Windows Session Management"| D
+    C -->|"Monitor for unauthorized privilege escalations via PowerShell execution Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of PowerShell profile modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate PowerShell Exploitation Techniques"| E
+    D -->|"Ensure continued administrative access by modifying execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized PowerShell profile modifications Corporate Control: Security Operations Center (SOC)"| E

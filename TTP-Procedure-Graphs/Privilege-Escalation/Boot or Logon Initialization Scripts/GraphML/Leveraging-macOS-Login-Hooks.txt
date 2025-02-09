@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging-macOS-Login-Hooks" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to macOS Standard User Account</data>
+</node>
+<node id="B">
+<data key="label">Configure Malicious Login Hook</data>
+</node>
+<node id="C">
+<data key="label">Trigger Login Hook Execution at User Logon</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Login Hook Modification</data>
+</node>
+<node id="E">
+<data key="label">Root Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Log in with a low-privilege macOS user account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable login hook locations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify login hook to execute with root privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to login hooks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert a script to escalate privileges upon login</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script runs with administrator rights</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure execution persistence across reboots</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual login hook executions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User logs in, triggering execution of malicious login hook</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify root access by executing administrative commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure login hook remains active after reboot</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected login hook modifications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of login hook modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation methods for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued root access by modifying authentication policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized login hook modifications</data>
+</edge>
+</graph>
+</graphml>

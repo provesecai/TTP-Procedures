@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to User Account on Linux System]
+    B[Modify XDG Autostart Configuration to Execute Malicious Commands]
+    C[Trigger Execution During User GUI Session Start]
+    D[Evade Detection of XDG Autostart Modification]
+    E[Root Privileges Achieved]
+
+    A -->|"Log in with a standard user account Corporate Control: Linux User Account Management"| B
+    A -->|"Identify writable XDG autostart files (e.g., ~/.config/autostart/*.desktop) Corporate Control: Unix File System Security"| B
+    A -->|"Ensure modified autostart entry executes with elevated privileges Corporate Control: Linux Security Policies"| B
+    A -->|"Monitor for unauthorized changes to XDG autostart files Corporate Control: SIEM, Linux System Logs"| B
+    B -->|"Modify or create a .desktop file with a malicious payload Corporate Control: Linux GUI Startup Configuration"| C
+    B -->|"Ensure execution at every graphical session startup Corporate Control: Unix Execution Policies"| C
+    B -->|"Modify file attributes to prevent detection Corporate Control: Unix Access Control Lists (ACLs)"| C
+    B -->|"Monitor for unauthorized changes to autostart entries Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User logs into graphical session, triggering execution Corporate Control: Unix GUI Session Management"| D
+    C -->|"Confirm root privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure script remains active across multiple logins Corporate Control: Unix Session Management"| D
+    C -->|"Monitor for unauthorized privilege escalations via autostart execution Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of XDG autostart modification Corporate Control: Log Scrubbing, Linux Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate XDG Exploitation Techniques"| E
+    D -->|"Ensure continued root access by modifying execution policies Corporate Control: Linux Security Module (LSM) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized XDG autostart modifications Corporate Control: Security Operations Center (SOC)"| E

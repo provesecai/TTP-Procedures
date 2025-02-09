@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to macOS Standard User Account]
+    B[Configure Malicious Login Hook]
+    C[Trigger Login Hook Execution at User Logon]
+    D[Evade Detection of Login Hook Modification]
+    E[Root Privileges Achieved]
+
+    A -->|"Log in with a low-privilege macOS user account Corporate Control: macOS User Management"| B
+    A -->|"Identify writable login hook locations Corporate Control: macOS Configuration Profiles"| B
+    A -->|"Modify login hook to execute with root privileges Corporate Control: System Integrity Protection (SIP)"| B
+    A -->|"Monitor for unauthorized changes to login hooks Corporate Control: SIEM, macOS System Logs"| B
+    B -->|"Insert a script to escalate privileges upon login Corporate Control: macOS Login Hooks"| C
+    B -->|"Ensure script runs with administrator rights Corporate Control: macOS Authentication Policies"| C
+    B -->|"Configure execution persistence across reboots Corporate Control: User Rights Assignment"| C
+    B -->|"Monitor for unusual login hook executions Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User logs in, triggering execution of malicious login hook Corporate Control: macOS Login Process"| D
+    C -->|"Verify root access by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure login hook remains active after reboot Corporate Control: macOS Session Management"| D
+    C -->|"Monitor for unexpected login hook modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of login hook modification Corporate Control: Log Scrubbing, macOS Security Logs"| E
+    D -->|"Deploy additional privilege escalation methods for redundancy Corporate Control: Alternate macOS Hook Exploitation Techniques"| E
+    D -->|"Ensure continued root access by modifying authentication policies Corporate Control: macOS Security Policy Management"| E
+    D -->|"SOC continuously monitors for unauthorized login hook modifications Corporate Control: Security Operations Center (SOC)"| E

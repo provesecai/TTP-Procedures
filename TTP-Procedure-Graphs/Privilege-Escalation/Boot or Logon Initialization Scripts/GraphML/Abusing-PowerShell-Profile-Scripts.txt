@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-PowerShell-Profile-Scripts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to User Account with PowerShell Access</data>
+</node>
+<node id="B">
+<data key="label">Modify PowerShell Profile Script to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Trigger Execution During PowerShell Session Start</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of PowerShell Profile Modification</data>
+</node>
+<node id="E">
+<data key="label">Administrative Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Log in with a standard user account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable PowerShell profile scripts</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure modified profile script executes with administrative privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to PowerShell profile scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious commands into PowerShell profile script</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script executes every time PowerShell starts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file attributes to prevent detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected executions of modified PowerShell profile scripts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User launches PowerShell, triggering execution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm administrative privileges by executing privileged commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure script remains active across PowerShell sessions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalations via PowerShell execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of PowerShell profile modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued administrative access by modifying execution policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized PowerShell profile modifications</data>
+</edge>
+</graph>
+</graphml>

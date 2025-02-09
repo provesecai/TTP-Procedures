@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Network User Account]
+    B[Modify Network Logon Script to Execute Malicious Commands]
+    C[Trigger Malicious Script at Network Logon]
+    D[Evade Detection of Network Logon Script Modification]
+    E[Domain Administrative Privileges Achieved]
+
+    A -->|"Obtain credentials for a network user account Corporate Control: User Account Management"| B
+    A -->|"Identify network logon script locations Corporate Control: Group Policy Management"| B
+    A -->|"Ensure script execution occurs with domain privileges Corporate Control: Active Directory Security Policies"| B
+    A -->|"Monitor for unauthorized changes to network logon scripts Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Insert commands to add user to Domain Admins group Corporate Control: Windows Group Policy Management"| C
+    B -->|"Modify logon scripts to ensure execution at each network logon Corporate Control: Windows Active Directory Policies"| C
+    B -->|"Prepare for privilege escalation upon next network logon Corporate Control: User Rights Assignment"| C
+    B -->|"Monitor for unauthorized modifications to network login scripts Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User logs in, triggering malicious network logon script Corporate Control: Windows Authentication Framework"| D
+    C -->|"Script executes with domain administrator privileges Corporate Control: Access Control Policies"| D
+    C -->|"Confirm privilege escalation by executing privileged network commands Corporate Control: Windows Security Token Management"| D
+    C -->|"Monitor for anomalies in network logon execution Corporate Control: SIEM, Behavioral Analytics"| D
+    D -->|"Modify script attributes to avoid detection Corporate Control: Windows File System Security"| E
+    D -->|"Delete malicious script after execution Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Ensure continued domain administrative access by modifying security settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized network logon script modifications Corporate Control: Security Operations Center (SOC)"| E

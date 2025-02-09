@@ -1,0 +1,23 @@
+graph TD;
+    A[Access to Group Policy Object (GPO) Management]
+    B[Modify GPO Logon Scripts for Privilege Escalation]
+    C[Trigger Execution During Domain Logon]
+    D[Evade Detection of GPO Logon Script Modification]
+    E[Domain Administrator Privileges Achieved]
+
+    A -->|"Obtain access to Group Policy Management Console Corporate Control: Active Directory Security Policies"| B
+    A -->|"Identify GPOs assigned logon scripts Corporate Control: Windows Group Policy Management"| B
+    A -->|"Determine feasibility of modifying logon scripts Corporate Control: Role-Based Access Control (RBAC)"| B
+    A -->|"Monitor for unauthorized modifications to GPO settings Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Modify logon scripts to execute malicious commands at logon Corporate Control: Windows Script Execution Policies"| C
+    B -->|"Ensure script executes with Domain Admin privileges Corporate Control: Windows Authentication Mechanisms"| C
+    B -->|"Ensure persistence by modifying GPO refresh policies Corporate Control: Windows Security Group Policies"| C
+    B -->|"Monitor for unauthorized privilege escalations via GPO modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User logs in, triggering execution of malicious GPO script Corporate Control: Windows Authentication Framework"| D
+    C -->|"Confirm administrative privileges by executing privileged network commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure script remains active after GPO updates Corporate Control: Windows Group Policy Refresh Mechanisms"| D
+    C -->|"Monitor for unauthorized GPO logon script executions Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of GPO logon script modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate GPO Exploitation Techniques"| E
+    D -->|"Ensure continued domain administrative access by modifying security policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized GPO modifications Corporate Control: Security Operations Center (SOC)"| E

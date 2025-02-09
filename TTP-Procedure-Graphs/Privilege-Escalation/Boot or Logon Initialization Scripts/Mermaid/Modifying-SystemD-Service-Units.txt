@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to User Account on Linux System]
+    B[Modify SystemD Service Unit to Execute Malicious Code]
+    C[Trigger Execution During System Startup]
+    D[Evade Detection of SystemD Service Modification]
+    E[Root Privileges Achieved]
+
+    A -->|"Log in with a standard user account Corporate Control: Linux User Account Management"| B
+    A -->|"Identify writable SystemD service unit files (e.g., /etc/systemd/system/) Corporate Control: Unix File System Security"| B
+    A -->|"Ensure modified service unit executes with root privileges Corporate Control: Linux Security Policies"| B
+    A -->|"Monitor for unauthorized changes to SystemD service units Corporate Control: SIEM, Linux System Logs"| B
+    B -->|"Modify or create a SystemD service file with a malicious payload Corporate Control: Linux Boot Configuration"| C
+    B -->|"Ensure execution at every system startup Corporate Control: Unix Execution Policies"| C
+    B -->|"Modify file attributes to prevent detection Corporate Control: Unix Access Control Lists (ACLs)"| C
+    B -->|"Monitor for unauthorized changes to SystemD services Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"System boots, triggering execution Corporate Control: Linux Boot Process"| D
+    C -->|"Confirm root privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure service remains active across reboots Corporate Control: Unix Session Management"| D
+    C -->|"Monitor for unauthorized privilege escalations via SystemD execution Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of SystemD service modification Corporate Control: Log Scrubbing, Linux Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate SystemD Exploitation Techniques"| E
+    D -->|"Ensure continued root access by modifying execution policies Corporate Control: Linux Security Module (LSM) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized SystemD service modifications Corporate Control: Security Operations Center (SOC)"| E

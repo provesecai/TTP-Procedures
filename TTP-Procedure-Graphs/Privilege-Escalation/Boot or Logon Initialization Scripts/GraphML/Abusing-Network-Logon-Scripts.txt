@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Network-Logon-Scripts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Network User Account</data>
+</node>
+<node id="B">
+<data key="label">Modify Network Logon Script to Execute Malicious Commands</data>
+</node>
+<node id="C">
+<data key="label">Trigger Malicious Script at Network Logon</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Network Logon Script Modification</data>
+</node>
+<node id="E">
+<data key="label">Domain Administrative Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Obtain credentials for a network user account</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify network logon script locations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure script execution occurs with domain privileges</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to network logon scripts</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert commands to add user to Domain Admins group</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify logon scripts to ensure execution at each network logon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prepare for privilege escalation upon next network logon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to network login scripts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User logs in, triggering malicious network logon script</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script executes with domain administrator privileges</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm privilege escalation by executing privileged network commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in network logon execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify script attributes to avoid detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete malicious script after execution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued domain administrative access by modifying security settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized network logon script modifications</data>
+</edge>
+</graph>
+</graphml>
