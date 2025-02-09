@@ -1,0 +1,23 @@
+graph TD;
+    A[Access Group Policy Editor with Standard User Rights]
+    B[Modify Group Policy to Grant Elevated Privileges]
+    C[Validate Elevated Privileges on Target Account]
+    D[Conceal Unauthorized Group Policy Changes]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Gain access to Group Policy Editor using compromised credentials Corporate Control: Windows Group Policy Management"| B
+    A -->|"Identify policy settings affecting user roles Corporate Control: Active Directory Access Control"| B
+    A -->|"Check for misconfigured privilege escalation policies Corporate Control: Windows Security Configuration"| B
+    A -->|"Monitor for unauthorized Group Policy modifications Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify Group Policy to add target user to privileged groups Corporate Control: Windows Active Directory Management"| C
+    B -->|"Use 'gpedit.msc' or 'gpupdate /force' to enforce changes Corporate Control: Group Policy Execution"| C
+    B -->|"Ensure policy remains active after system reboot Corporate Control: Windows Security Group Policies"| C
+    B -->|"Monitor for unexpected privilege modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify elevated privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying Group Policy refresh intervals Corporate Control: Windows Policy Enforcement"| D
+    C -->|"Modify security settings to evade detection Corporate Control: Windows Group Policy Hardening"| D
+    C -->|"Monitor for unauthorized changes to Active Directory Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of Group Policy modifications Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation techniques for redundancy Corporate Control: Alternate Group Policy Exploitation Methods"| E
+    D -->|"Ensure continued administrative access by modifying security settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Group Policy changes Corporate Control: Security Operations Center (SOC)"| E

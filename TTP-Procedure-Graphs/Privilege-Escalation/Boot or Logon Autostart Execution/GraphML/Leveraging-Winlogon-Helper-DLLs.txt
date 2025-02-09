@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging-Winlogon-Helper-DLLs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Low-Privilege Access to the System</data>
+</node>
+<node id="B">
+<data key="label">Modify Winlogon Notify Key to Load Malicious DLL</data>
+</node>
+<node id="C">
+<data key="label">Confirm Execution During User Logon</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Winlogon Modification</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Access system with compromised credentials</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable Winlogon registry entries</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying Notify key</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to Winlogon settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious DLL into Winlogon Notify registry key</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure DLL to execute with SYSTEM privileges at logon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure persistence by modifying registry security permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new DLLs loaded by Winlogon</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM-level execution by accessing protected processes</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure DLL remains active after system reboot</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DLL attributes to prevent security scans</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal DLL loads at logon</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of Winlogon modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying authentication event logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Winlogon modifications</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,81 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating-and-Assigning-Custom-Roles-in-Cloud-Environments" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify IAM Policies Allowing Custom Role Creation</data>
+</node>
+<node id="B">
+<data key="label">Create a Custom Role with Elevated Permissions</data>
+</node>
+<node id="C">
+<data key="label">Assign the Custom Role to a Target User or System</data>
+</node>
+<node id="D">
+<data key="label">Ensure Persistence of the Custom Role Assignment</data>
+</node>
+<node id="E">
+<data key="label">Evade Detection of Unauthorized Role Modification</data>
+</node>
+<node id="F">
+<data key="label">Privileged Access Achieved via Custom Role Exploitation</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing IAM policies and permissions Corporate Control: Cloud IAM Policy Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify users with privileges to create or modify roles Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for misconfigured role-creation policies Corporate Control: Cloud Security Best Practices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized role creation requests Corporate Control: Cloud SIEM, IAM Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Define a new role with excessive privileges Corporate Control: Role-Based Access Control (RBAC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure the new role has unrestricted administrative capabilities Corporate Control: Cloud Service Provider Security Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify permission boundaries to avoid removal Corporate Control: Cloud Privilege Escalation Prevention</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for anomalous role creation activities Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Assign the custom role to a specific user, service account, or workload Corporate Control: Cloud Security Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure the role remains assigned despite security policy updates Corporate Control: IAM Role Persistence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify IAM policies to prevent revocation of the custom role Corporate Control: Cloud Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized modifications to role assignments Corporate Control: SIEM, IAM Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Verify administrator access via the custom role Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify IAM logs to remove traces of custom role creation Corporate Control: Log Scrubbing, Cloud Security Event Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence by modifying policy versioning and access lists Corporate Control: Identity Federation and Multi-Tenancy Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for suspicious IAM role modifications Corporate Control: Threat Intelligence and Behavioral Analysis</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Deploy redundant role-based privilege escalation methods Corporate Control: Multi-Factor Authentication Evasion</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Ensure SYSTEM-level cloud admin access across multiple environments Corporate Control: Cloud Role Trust Policies</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">SOC continuously monitors for unauthorized role modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

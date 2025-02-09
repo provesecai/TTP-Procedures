@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to Registry Editor with User Privileges]
+    B[Modify AppInit_DLLs to Load Malicious DLL]
+    C[Validate SYSTEM Privileges via DLL Execution]
+    D[Evade Detection of AppInit_DLLs Modification]
+    E[Privileged Execution Achieved]
+
+    A -->|"Identify writable AppInit_DLLs registry entries Corporate Control: Windows Registry Security Policies"| B
+    A -->|"Check for privilege escalation feasibility Corporate Control: Windows Security Group Policies"| B
+    A -->|"Ensure user permissions allow modification Corporate Control: Windows Access Control Lists"| B
+    A -->|"Monitor for unauthorized registry modifications Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Inject malicious DLL path into AppInit_DLLs Corporate Control: Windows Registry Management"| C
+    B -->|"Ensure DLL executes with SYSTEM privileges Corporate Control: Windows Security Token Management"| C
+    B -->|"Modify execution settings to ensure persistence Corporate Control: Windows Boot Configuration"| C
+    B -->|"Monitor for unauthorized DLL loads Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying security policies Corporate Control: Windows Group Policy Enforcement"| D
+    C -->|"Modify registry attributes to evade detection Corporate Control: Windows Security Policy Enforcement"| D
+    C -->|"Monitor for unauthorized privilege escalation via DLL injection Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of AppInit_DLLs modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional DLL injection methods for redundancy Corporate Control: Alternate AppInit_DLLs Exploitation Techniques"| E
+    D -->|"Ensure continued privileged access by modifying DLL execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized AppInit_DLLs modifications Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Compromise Standard User Account]
+    B[Add User to Local Administrators Group]
+    C[Verify Administrative Privileges]
+    D[Conceal Elevated Privileges]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Gain access to a standard user account Corporate Control: User Account Management"| B
+    A -->|"Utilize phishing to obtain user credentials Corporate Control: Email Security"| B
+    A -->|"Establish initial foothold with limited privileges Corporate Control: Endpoint Protection"| B
+    A -->|"Monitor for unauthorized access attempts Corporate Control: SIEM"| B
+    B -->|"Add compromised user to local administrators group Corporate Control: Group Policy Management"| C
+    B -->|"Use 'net localgroup administrators [user] /add' command Corporate Control: Command Line Auditing"| C
+    B -->|"Elevate privileges to administrative level Corporate Control: Privilege Management"| C
+    B -->|"Detect changes to local group memberships Corporate Control: Security Monitoring"| C
+    C -->|"Confirm administrative rights on the system Corporate Control: Access Control Lists"| D
+    C -->|"Execute privileged commands to validate access Corporate Control: System Logs"| D
+    C -->|"Ensure stability of elevated privileges Corporate Control: User Rights Assignment"| D
+    C -->|"Monitor for abnormal administrative activities Corporate Control: Intrusion Detection Systems"| D
+    D -->|"Alter logs to hide group membership change Corporate Control: Log Management"| E
+    D -->|"Use tools to clean event logs Corporate Control: Security Information and Event Management (SIEM)"| E
+    D -->|"Maintain elevated access without detection Corporate Control: Access Control Policies"| E
+    D -->|"Implement continuous monitoring for unauthorized privilege escalations Corporate Control: Security Operations Center (SOC)"| E

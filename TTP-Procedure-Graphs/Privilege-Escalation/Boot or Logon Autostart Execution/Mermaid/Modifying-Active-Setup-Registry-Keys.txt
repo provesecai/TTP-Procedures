@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Writable Active Setup Registry Keys]
+    B[Modify Active Setup Keys to Execute Malicious Code]
+    C[Validate SYSTEM Privileges via Logon Execution]
+    D[Evade Detection of Active Setup Key Modification]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Scan for writable Active Setup registry keys Corporate Control: Windows Registry Security Policies"| B
+    A -->|"Identify processes dependent on Active Setup execution Corporate Control: Windows System Services"| B
+    A -->|"Determine feasibility of modifying Active Setup settings Corporate Control: Windows Group Policy Enforcement"| B
+    A -->|"Monitor for unauthorized modifications to Active Setup registry keys Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify Active Setup settings to execute payload during user logon Corporate Control: Windows Registry Management"| C
+    B -->|"Configure payload to run with SYSTEM privileges Corporate Control: Windows Authentication Policies"| C
+    B -->|"Ensure execution at every logon session Corporate Control: Windows Session Persistence Policies"| C
+    B -->|"Monitor for unauthorized execution of Active Setup modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM access by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying execution policy settings Corporate Control: Windows Security Token Management"| D
+    C -->|"Modify registry attributes to evade detection Corporate Control: Windows File System Security"| D
+    C -->|"Monitor for unauthorized modifications to registry keys Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of Active Setup modifications Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Active Setup Exploitation Methods"| E
+    D -->|"Ensure continued privileged access by modifying session security settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Active Setup modifications Corporate Control: Security Operations Center (SOC)"| E

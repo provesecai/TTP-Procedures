@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Assigning-Password-Never-Expires-to-Admin-Account" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Admin Account with Modifiable Password Settings</data>
+</node>
+<node id="B">
+<data key="label">Modify Account Policy to Enable "Password Never Expires"</data>
+</node>
+<node id="C">
+<data key="label">Validate Unrestricted Access to Admin Account</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Policy Modification</data>
+</node>
+<node id="E">
+<data key="label">Persistent Access Achieved via Password Policy Modification</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate admin accounts with modifiable password policies Corporate Control: Active Directory User Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts without enforced password expiration Corporate Control: Windows Group Policy Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to password policies Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify account properties to enable "Password Never Expires" Corporate Control: Active Directory Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure user account remains active indefinitely Corporate Control: Windows Authentication Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify NTFS permissions to prevent unauthorized changes Corporate Control: Windows Security Descriptors</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected changes in password policy settings Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing privileged tasks Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to remove traces of policy modification Corporate Control: Log Scrubbing, Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying authentication enforcement policies Corporate Control: Group Policy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized password policy modifications Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple policy modification techniques for redundancy Corporate Control: Alternate Password Policy Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued privileged access by modifying session expiration policies Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized password policy changes Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

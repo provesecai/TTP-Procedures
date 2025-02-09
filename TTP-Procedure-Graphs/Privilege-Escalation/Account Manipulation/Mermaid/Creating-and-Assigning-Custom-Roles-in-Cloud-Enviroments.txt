@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to Cloud Role Management Interface]
+    B[Create Custom Role with Elevated Privileges]
+    C[Assign Custom Role to Target Account]
+    D[Evade Detection of Unauthorized Role Creation]
+    E[Privileged Cloud Access Achieved]
+
+    A -->|"Log in to cloud IAM management console Corporate Control: Cloud Identity and Access Management (IAM)"| B
+    A -->|"Identify IAM misconfigurations allowing role creation Corporate Control: Cloud Security Policies"| B
+    A -->|"Determine feasibility of assigning elevated permissions Corporate Control: Role-Based Access Control (RBAC)"| B
+    A -->|"Monitor for unauthorized role modifications Corporate Control: SIEM, Cloud Security Logs"| B
+    B -->|"Create a new IAM role with administrative privileges Corporate Control: Cloud Role Management"| C
+    B -->|"Modify role policies to allow unrestricted access Corporate Control: Identity Federation Settings"| C
+    B -->|"Ensure role persists by configuring trust relationships Corporate Control: Cloud Role Trust Policies"| C
+    B -->|"Monitor for unexpected IAM role creations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Assign custom role to target user for privileged access Corporate Control: Cloud Security Group Management"| D
+    C -->|"Verify ability to execute privileged actions via assigned role Corporate Control: User Privilege Validation"| D
+    C -->|"Modify session token expiration policies to maintain access Corporate Control: Cloud Session Management"| D
+    C -->|"Monitor for unauthorized role assignments Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify cloud logs to remove traces of role creation Corporate Control: Log Scrubbing, Cloud Security Logs"| E
+    D -->|"Deploy additional role-based privilege escalation techniques for redundancy Corporate Control: Alternate Cloud Role Exploitation Methods"| E
+    D -->|"Ensure continued privileged access by modifying IAM enforcement settings Corporate Control: Cloud Security Policies"| E
+    D -->|"SOC continuously monitors for unauthorized cloud role modifications Corporate Control: Security Operations Center (SOC)"| E

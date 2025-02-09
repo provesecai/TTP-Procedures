@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Dormant Privileged Account]
+    B[Reactivate and Take Control of Account]
+    C[Validate Privileged Access with Hijacked Account]
+    D[Evade Detection of Account Reactivation]
+    E[Full Administrative Access Achieved]
+
+    A -->|"Scan for disabled or inactive privileged accounts Corporate Control: Active Directory User Auditing"| B
+    A -->|"Identify accounts with historical administrator rights Corporate Control: IAM Role Analysis"| B
+    A -->|"Determine feasibility of reactivating dormant accounts Corporate Control: User Authentication Logs"| B
+    A -->|"Monitor for unauthorized account reactivation attempts Corporate Control: SIEM, Identity Protection Systems"| B
+    B -->|"Modify account status to enable and reset credentials Corporate Control: Windows User Management"| C
+    B -->|"Use administrative tools to reset password of dormant account Corporate Control: Helpdesk Access Control"| C
+    B -->|"Ensure persistence by modifying last logon timestamp Corporate Control: Cloud Account Persistence Policies"| C
+    B -->|"Monitor for unauthorized changes to dormant account status Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure long-term access by modifying password change policies Corporate Control: Active Directory Policy Enforcement"| D
+    C -->|"Modify authentication logs to evade detection Corporate Control: Security Event Auditing"| D
+    C -->|"Monitor for unauthorized privilege persistence Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of account reactivation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional account manipulation techniques for redundancy Corporate Control: Alternate Dormant Account Exploitation Methods"| E
+    D -->|"Ensure continued privileged access by modifying session expiration policies Corporate Control: IAM Role Modifications"| E
+    D -->|"SOC continuously monitors for unauthorized dormant account activations Corporate Control: Security Operations Center (SOC)"| E

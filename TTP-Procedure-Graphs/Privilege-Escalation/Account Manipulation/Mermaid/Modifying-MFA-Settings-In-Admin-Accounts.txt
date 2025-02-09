@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Access to MFA Management Interface]
+    B[Modify MFA Settings to Disable or Bypass]
+    C[Validate Privileged Account Access Without MFA]
+    D[Evade Detection of MFA Configuration Changes]
+    E[Unrestricted Privileged Access Achieved]
+
+    A -->|"Log in with compromised privileged account Corporate Control: Identity and Access Management (IAM)"| B
+    A -->|"Identify MFA policies applied to target account Corporate Control: Multi-Factor Authentication Logs"| B
+    A -->|"Determine feasibility of modifying MFA settings Corporate Control: User Access Management"| B
+    A -->|"Monitor for unauthorized MFA configuration changes Corporate Control: SIEM, Cloud Security Logs"| B
+    B -->|"Disable or modify MFA to allow login without secondary factor Corporate Control: Cloud Identity Policies"| C
+    B -->|"Use social engineering to reset MFA settings Corporate Control: Helpdesk Authentication Protocols"| C
+    B -->|"Modify authentication policies to enforce weaker MFA Corporate Control: Identity Federation Settings"| C
+    B -->|"Monitor for sudden changes in MFA settings Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify ability to access privileged systems without MFA Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure continued access by modifying MFA enforcement policies Corporate Control: Security Group Management"| D
+    C -->|"Modify security logs to evade detection Corporate Control: Log Scrubbing, Security Event Management"| D
+    C -->|"Monitor for unauthorized MFA exemptions Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of MFA manipulation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple authentication manipulation techniques for redundancy Corporate Control: Alternate MFA Exploitation Methods"| E
+    D -->|"Ensure continued privileged access by modifying authentication policies Corporate Control: Cloud Security Policies"| E
+    D -->|"SOC continuously monitors for unauthorized MFA modifications Corporate Control: Security Operations Center (SOC)"| E

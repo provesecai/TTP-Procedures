@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Disabled Administrator Account]
+    B[Reactivate Administrator Account]
+    C[Validate Privileged Access]
+    D[Conceal Account Activation]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Scan for disabled administrator accounts in Active Directory Corporate Control: User Account Policies"| B
+    A -->|"Check misconfigurations that allow reactivation Corporate Control: Windows Security Policies"| B
+    A -->|"Determine feasibility of enabling account without triggering alerts Corporate Control: SIEM, Authentication Logs"| B
+    A -->|"Monitor for unauthorized account reactivation attempts Corporate Control: Endpoint Detection and Response (EDR)"| B
+    B -->|"Reactivate disabled administrator account using command line Corporate Control: User Account Management"| C
+    B -->|"Use 'net user administrator /active:yes' command Corporate Control: Command Line Auditing"| C
+    B -->|"Ensure persistence by modifying security policies Corporate Control: Windows Group Policy Settings"| C
+    B -->|"Monitor for unexpected changes in user account states Corporate Control: SIEM, Windows Event Logs"| C
+    C -->|"Confirm administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure long-term access by modifying login requirements Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify session management settings to evade detection Corporate Control: Windows Security Group Policies"| D
+    C -->|"Monitor for unauthorized privileged account logins Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of administrator reactivation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate Account Activation Methods"| E
+    D -->|"Ensure continued administrator access by modifying security group settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized administrator account activations Corporate Control: Security Operations Center (SOC)"| E

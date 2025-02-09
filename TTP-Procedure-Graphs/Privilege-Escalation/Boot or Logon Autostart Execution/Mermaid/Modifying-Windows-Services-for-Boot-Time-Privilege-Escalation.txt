@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify a Writable Windows Service]
+    B[Modify Service to Execute Malicious Payload]
+    C[Validate SYSTEM Privileges via Service Execution]
+    D[Evade Detection of Service Modification]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate services with modifiable execution settings Corporate Control: Windows Service Management"| B
+    A -->|"Identify services running under SYSTEM context Corporate Control: Windows Security Group Policies"| B
+    A -->|"Determine feasibility of modifying service execution settings Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor for unauthorized service modifications Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify service binary path to execute malicious payload Corporate Control: Windows Task Scheduler"| C
+    B -->|"Ensure service restarts automatically with SYSTEM privileges Corporate Control: Windows Service Recovery Policies"| C
+    B -->|"Modify security descriptors to maintain persistence Corporate Control: Windows Privilege Management"| C
+    B -->|"Monitor for unauthorized service modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure long-term access by modifying execution policies Corporate Control: Windows Security Policy Enforcement"| D
+    C -->|"Modify system attributes to evade detection Corporate Control: Windows Boot Security"| D
+    C -->|"Monitor for unauthorized service executions Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of service modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional service modification techniques for redundancy Corporate Control: Alternate Service Exploitation Methods"| E
+    D -->|"Ensure continued privileged access by modifying security settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized service modifications Corporate Control: Security Operations Center (SOC)"| E

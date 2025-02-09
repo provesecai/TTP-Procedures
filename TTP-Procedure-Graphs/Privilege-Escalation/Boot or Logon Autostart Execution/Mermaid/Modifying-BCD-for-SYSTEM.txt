@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Writable Boot Configuration Data (BCD)]
+    B[Modify BCD to Load Malicious Bootloader]
+    C[Validate SYSTEM Privileges via Boot Execution]
+    D[Evade Detection of BCD Modification]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Enumerate boot configuration settings responsible for OS startup Corporate Control: Windows Boot Manager"| B
+    A -->|"Identify writable BCD settings Corporate Control: Windows Secure Boot Policies"| B
+    A -->|"Determine feasibility of modifying boot sequence Corporate Control: Windows Boot Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to BCD settings Corporate Control: SIEM, Windows Boot Logs"| B
+    B -->|"Modify BCD to execute malicious bootloader at startup Corporate Control: Windows Boot Configuration Management"| C
+    B -->|"Ensure SYSTEM privileges by replacing default boot parameters Corporate Control: Windows Kernel Execution"| C
+    B -->|"Modify security descriptors to maintain persistence Corporate Control: Windows Boot Configuration Data Policies"| C
+    B -->|"Monitor for unauthorized modifications to boot settings Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM access by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure long-term access by modifying OS startup settings Corporate Control: Windows Boot Security Policies"| D
+    C -->|"Modify execution attributes to evade detection Corporate Control: Windows Secure Boot Configuration"| D
+    C -->|"Monitor for unauthorized boot sequence modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of BCD modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Boot Loader Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying boot security policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized BCD modifications Corporate Control: Security Operations Center (SOC)"| E

@@ -1,0 +1,23 @@
+graph TD;
+    A[Gain Initial Access to System]
+    B[Create New Privileged User Account]
+    C[Verify Administrator Privileges]
+    D[Conceal New Account Creation]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Compromise an existing user account Corporate Control: User Authentication Management"| B
+    A -->|"Gain access to command execution capabilities Corporate Control: Endpoint Protection"| B
+    A -->|"Enumerate local or domain administrators Corporate Control: Active Directory Policies"| B
+    A -->|"Monitor for unauthorized new account creation Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Create a new user with administrator privileges Corporate Control: Windows User Account Management"| C
+    B -->|"Use 'net user [user] /add' and add to administrators group Corporate Control: Command Line Monitoring"| C
+    B -->|"Ensure persistence by adding account to privileged groups Corporate Control: Group Policy Management"| C
+    B -->|"Monitor for unauthorized administrative account creations Corporate Control: Intrusion Detection Systems"| C
+    C -->|"Verify elevated access by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure new account retains admin rights across reboots Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify security descriptor attributes to evade detection Corporate Control: Windows Group Policies"| D
+    C -->|"Monitor for unexpected privileged account activity Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of new user creation Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation methods for redundancy Corporate Control: Alternate Account Manipulation Techniques"| E
+    D -->|"Ensure continued administrator access by modifying account policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized privileged account creations Corporate Control: Security Operations Center (SOC)"| E

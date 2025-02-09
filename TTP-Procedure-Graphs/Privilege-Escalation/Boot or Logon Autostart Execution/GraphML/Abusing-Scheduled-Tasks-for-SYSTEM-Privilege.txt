@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Scheduled-Tasks-for-SYSTEM-Privilege" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Scheduled Task Running as SYSTEM</data>
+</node>
+<node id="B">
+<data key="label">Modify Task Parameters to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Trigger Task Execution for SYSTEM Privilege</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Scheduled Task Modification</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate scheduled tasks with elevated privileges Corporate Control: Windows Task Scheduler Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable tasks configured to run as SYSTEM Corporate Control: Windows Task Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized scheduled task modifications Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify task execution parameters to run malicious payload Corporate Control: Windows Security Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges are retained across executions Corporate Control: Windows Task Scheduler Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution frequency to maintain persistence Corporate Control: Active Directory Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized changes to scheduled tasks Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify task logs to erase traces of scheduled execution Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying execution triggers Corporate Control: Windows Security Event Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalation via task execution Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of task modification Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional task manipulation techniques for redundancy Corporate Control: Alternate Task Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized scheduled task privilege modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

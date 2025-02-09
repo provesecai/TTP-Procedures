@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Privilege Access to the System]
+    B[Modify Winlogon Notify Key to Load Malicious DLL]
+    C[Confirm Execution During User Logon]
+    D[Evade Detection of Winlogon Modification]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Access system with compromised credentials Corporate Control: User Authentication Logs"| B
+    A -->|"Identify writable Winlogon registry entries Corporate Control: Windows Registry Security"| B
+    A -->|"Determine feasibility of modifying Notify key Corporate Control: Group Policy Enforcement"| B
+    A -->|"Monitor for unauthorized modifications to Winlogon settings Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Insert malicious DLL into Winlogon Notify registry key Corporate Control: Windows Registry Management"| C
+    B -->|"Configure DLL to execute with SYSTEM privileges at logon Corporate Control: Windows Security Token Management"| C
+    B -->|"Ensure persistence by modifying registry security permissions Corporate Control: Windows Access Control Lists"| C
+    B -->|"Monitor for new DLLs loaded by Winlogon Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify SYSTEM-level execution by accessing protected processes Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure DLL remains active after system reboot Corporate Control: Windows Session Management"| D
+    C -->|"Modify DLL attributes to prevent security scans Corporate Control: Windows File System Permissions"| D
+    C -->|"Monitor for abnormal DLL loads at logon Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of Winlogon modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy multiple privilege escalation vectors for redundancy Corporate Control: Alternate DLL Injection Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying authentication event logs Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Winlogon modifications Corporate Control: Security Operations Center (SOC)"| E

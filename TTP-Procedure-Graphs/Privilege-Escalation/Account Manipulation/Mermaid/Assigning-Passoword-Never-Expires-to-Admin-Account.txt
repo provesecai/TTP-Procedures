@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Administrator Account with Expiring Password]
+    B[Modify Account Settings to Prevent Password Expiry]
+    C[Validate Persistent Privileged Access]
+    D[Evade Detection of Password Expiry Modification]
+    E[Long-Term Administrative Privileges Achieved]
+
+    A -->|"Enumerate administrator accounts with password expiration Corporate Control: Windows Credential Management"| B
+    A -->|"Check group policy settings for enforced password changes Corporate Control: Windows Security Policies"| B
+    A -->|"Determine feasibility of modifying account password settings Corporate Control: Active Directory User Management"| B
+    A -->|"Monitor for unauthorized password policy modifications Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Modify administrator account to never require password change Corporate Control: Windows Authentication Management"| C
+    B -->|"Use 'net user administrator /passwordchg:no' command Corporate Control: Command Line Auditing"| C
+    B -->|"Ensure persistence by modifying policy enforcement settings Corporate Control: Windows Group Policy Enforcement"| C
+    B -->|"Monitor for unexpected password policy modifications Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure password remains unchanged across sessions Corporate Control: Windows Authentication Policies"| D
+    C -->|"Modify event logs to evade detection Corporate Control: Windows Security Event Management"| D
+    C -->|"Monitor for unauthorized password policy bypass Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of password expiry modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Password Policy Exploitation Techniques"| E
+    D -->|"Ensure continued administrative access by modifying authentication mechanisms Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized password expiration modifications Corporate Control: Security Operations Center (SOC)"| E

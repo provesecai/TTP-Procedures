@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Assigning-Delegation-Rights-to-a-Low-Privilege-User" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify User Account with Modifiable Delegation Rights</data>
+</node>
+<node id="B">
+<data key="label">Modify Delegation Settings to Assign Higher Privileges</data>
+</node>
+<node id="C">
+<data key="label">Validate Privileged Access via Delegated User</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Delegation Rights Modification</data>
+</node>
+<node id="E">
+<data key="label">Privileged Access Achieved via Delegation Exploitation</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate accounts that allow delegation modification Corporate Control: Active Directory Delegation Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured delegation policies allowing privilege escalation Corporate Control: Windows Group Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized delegation right assignments Corporate Control: SIEM, Active Directory Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify user account settings to allow delegation Corporate Control: Windows Kerberos Delegation Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure user account inherits administrative privileges Corporate Control: Windows Privilege Escalation Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify delegation tokens to maintain privilege escalation Corporate Control: NTFS Access Control Lists (ACLs)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected delegation modifications Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to remove traces of delegation abuse Corporate Control: Log Scrubbing, Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying delegation enforcement policies Corporate Control: Group Policy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized delegation modifications Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple delegation escalation techniques for redundancy Corporate Control: Alternate Delegation Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued privileged access by modifying authentication mechanisms Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized delegation privilege escalations Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

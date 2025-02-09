@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Changing-Account-Privileges-via-Group-Policy-Modification" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Group Policy with Modifiable Account Privileges</data>
+</node>
+<node id="B">
+<data key="label">Modify Group Policy to Assign Elevated Privileges</data>
+</node>
+<node id="C">
+<data key="label">Validate Privileged Access for Target Account</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Group Policy Modification</data>
+</node>
+<node id="E">
+<data key="label">Persistent Privileged Access Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing Group Policy Objects (GPOs) affecting user privileges Corporate Control: Group Policy Management Console (GPMC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify modifiable group policies that impact admin roles Corporate Control: Active Directory Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to Group Policy settings Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify policy to add user to privileged security groups Corporate Control: Windows Security Group Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure user account inherits administrative privileges Corporate Control: Windows Privilege Escalation Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify group assignment settings to maintain persistence Corporate Control: NTFS Access Control Lists (ACLs)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unexpected changes in GPO privilege settings Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to remove traces of GPO modification Corporate Control: Log Scrubbing, Windows Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying Group Policy refresh intervals Corporate Control: Group Policy Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalation via GPO Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy multiple privilege escalation techniques for redundancy Corporate Control: Alternate Group Policy Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying authentication policies Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Group Policy privilege escalations Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

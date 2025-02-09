@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify User Account with Replication Permissions]
+    B[Modify Account to Extract Credential Hashes]
+    C[Validate Privileged Credentials Extraction]
+    D[Evade Detection of Account Replication Abuse]
+    E[Privileged Credential Theft Achieved]
+
+    A -->|"Enumerate accounts with domain replication permissions Corporate Control: Active Directory Security Policies"| B
+    A -->|"Identify replication misconfigurations allowing data extraction Corporate Control: Windows Security Group Management"| B
+    A -->|"Determine feasibility of modifying replication settings Corporate Control: Windows Authentication Mechanisms"| B
+    A -->|"Monitor for unauthorized replication permission changes Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Modify account replication settings to extract credential hashes Corporate Control: Active Directory Domain Services"| C
+    B -->|"Use 'DCSync' technique to obtain NTLM hashes Corporate Control: Windows API Execution Policies"| C
+    B -->|"Ensure replication settings persist for continuous credential theft Corporate Control: Windows Domain Replication Policies"| C
+    B -->|"Monitor for unauthorized data replication activities Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify extracted hashes by performing pass-the-hash attack Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure persistence by modifying directory synchronization settings Corporate Control: Windows Group Policy Enforcement"| D
+    C -->|"Modify event logs to evade detection Corporate Control: Windows Security Event Auditing"| D
+    C -->|"Monitor for unauthorized Active Directory replication attempts Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of replication abuse Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional replication-based privilege escalation vectors for redundancy Corporate Control: Alternate Account Replication Exploitation Methods"| E
+    D -->|"Ensure continued access by modifying directory replication settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized account replication activities Corporate Control: Security Operations Center (SOC)"| E

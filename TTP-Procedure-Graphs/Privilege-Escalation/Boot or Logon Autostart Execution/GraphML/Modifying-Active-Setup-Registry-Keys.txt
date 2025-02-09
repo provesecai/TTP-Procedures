@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Active-Setup-Registry-Keys" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Writable Active Setup Registry Keys</data>
+</node>
+<node id="B">
+<data key="label">Modify Active Setup Keys to Execute Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM Privileges via Logon Execution</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of Active Setup Key Modification</data>
+</node>
+<node id="E">
+<data key="label">Administrative Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Scan for writable Active Setup registry keys</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify processes dependent on Active Setup execution</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying Active Setup settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to Active Setup registry keys</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Active Setup settings to execute payload during user logon</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure payload to run with SYSTEM privileges</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure execution at every logon session</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized execution of Active Setup modifications</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing privileged commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying execution policy settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry attributes to evade detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized modifications to registry keys</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of Active Setup modifications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued privileged access by modifying session security settings</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized Active Setup modifications</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,23 @@
+graph TD;
+    A[Identify Low-Privilege User Account]
+    B[Enable Kerberos Delegation for Privileged Access]
+    C[Validate Elevated Privileges]
+    D[Conceal Kerberos Delegation Manipulation]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Enumerate user accounts with standard privileges Corporate Control: Active Directory User Management"| B
+    A -->|"Identify accounts with potential delegation rights Corporate Control: Windows Group Policy Settings"| B
+    A -->|"Determine feasibility of enabling delegation for privilege escalation Corporate Control: Windows Security Group Policies"| B
+    A -->|"Monitor for unauthorized delegation right assignments Corporate Control: SIEM, Windows Security Logs"| B
+    B -->|"Enable unconstrained Kerberos delegation on low-privilege account Corporate Control: Active Directory Kerberos Policies"| C
+    B -->|"Modify user account settings to allow delegation to privileged services Corporate Control: Windows Authentication Settings"| C
+    B -->|"Ensure persistence by modifying account security settings Corporate Control: Windows User Privilege Enforcement"| C
+    B -->|"Monitor for unauthorized modifications to delegation policies Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure long-term access by modifying delegation attributes Corporate Control: Kerberos Ticket Granting Policies"| D
+    C -->|"Modify authentication event logs to evade detection Corporate Control: Windows Event Auditing"| D
+    C -->|"Monitor for unauthorized delegation assignments Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of delegation right modifications Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Kerberos Delegation Exploitation Techniques"| E
+    D -->|"Ensure continued administrative access by modifying authentication policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Kerberos delegation modifications Corporate Control: Security Operations Center (SOC)"| E

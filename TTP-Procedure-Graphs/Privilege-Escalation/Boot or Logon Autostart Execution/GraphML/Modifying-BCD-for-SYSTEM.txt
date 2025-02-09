@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-BCD-for-SYSTEM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Writable Boot Configuration Data (BCD)</data>
+</node>
+<node id="B">
+<data key="label">Modify BCD to Load Malicious Bootloader</data>
+</node>
+<node id="C">
+<data key="label">Validate SYSTEM Privileges via Boot Execution</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of BCD Modification</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions  -->
+<edge source="A" target="B">
+<data key="label">Enumerate boot configuration settings responsible for OS startup</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable BCD settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying boot sequence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to BCD settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify BCD to execute malicious bootloader at startup</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges by replacing default boot parameters</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security descriptors to maintain persistence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to boot settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify SYSTEM access by executing privileged commands</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure long-term access by modifying OS startup settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution attributes to evade detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized boot sequence modifications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of BCD modification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying boot security policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized BCD modifications</data>
+</edge>
+</graph>
+</graphml>

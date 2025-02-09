@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing-Time-Providers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Modifiable Windows Time Providers</data>
+</node>
+<node id="B">
+<data key="label">Register Malicious Time Provider</data>
+</node>
+<node id="C">
+<data key="label">Ensure Execution at SYSTEM Privilege</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection of Time Provider Modification</data>
+</node>
+<node id="E">
+<data key="label">SYSTEM Privileges Achieved</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate existing time providers on the system Corporate Control: Windows Time Service Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable registry settings for time providers Corporate Control: Windows Registry Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to time provider settings Corporate Control: SIEM, Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Register a malicious DLL as a custom time provider Corporate Control: Windows Service Configuration Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry settings to load malicious time provider Corporate Control: Windows Registry Key Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYSTEM privileges are assigned to time provider execution Corporate Control: Windows Time Synchronization Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized execution of time providers Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate SYSTEM access by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to remove traces of time provider modifications Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying time provider refresh intervals Corporate Control: Windows Time Synchronization Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalation via time provider execution Corporate Control: SIEM, Windows Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of time provider modification Corporate Control: Log Scrubbing, Security Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional execution methods for redundancy Corporate Control: Alternate Time Provider Exploitation Methods</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM access by modifying execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized time provider modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>
