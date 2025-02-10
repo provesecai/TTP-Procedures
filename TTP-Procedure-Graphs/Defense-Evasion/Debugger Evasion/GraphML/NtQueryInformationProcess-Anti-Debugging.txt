@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NtQueryInformationProcess" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Invoke NtQueryInformationProcess API</data>
+</node>
+<node id="B">
+<data key="label">Query ProcessDebugPort</data>
+</node>
+<node id="C">
+<data key="label">Modify Execution Flow Based on Debugger Detection</data>
+</node>
+<node id="D">
+<data key="label">Deploy Debugger Evasion Techniques</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Call NtQueryInformationProcess with ProcessDebugPort flag Corporate Control: Windows Kernel API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect presence of debugger by checking return values Corporate Control: Process Integrity Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API calls for suspicious debugger checks Corporate Control: SIEM and Threat Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track API hooking attempts to override return values Corporate Control: Advanced Endpoint Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inspect function parameters for anomaly detection Corporate Control: Security Operations Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evaluate returned ProcessDebugPort value Corporate Control: Debugging Prevention Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unexpected return values for security analysis Corporate Control: Threat Intelligence Framework</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution flow based on API response Corporate Control: Runtime Protection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect tampering with API call results Corporate Control: Memory Protection Strategies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Terminate process if debugging is detected Corporate Control: Anti-Debugging Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject misleading execution paths Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delay execution to evade automated analysis Corporate Control: Behavioral Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log and alert security teams on debugging attempts Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion achieved through API-based detection Corporate Control: Continuous Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution flow remains concealed from analysis tools Corporate Control: Application Security Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from runtime memory Corporate Control: Memory Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Anti-debugging persistence ensured Corporate Control: Advanced Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion fully implemented Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

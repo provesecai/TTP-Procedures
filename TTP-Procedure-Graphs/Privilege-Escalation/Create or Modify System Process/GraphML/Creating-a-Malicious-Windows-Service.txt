@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Creating-a-Malicious-Windows-Service" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Low-Level Access</data>
+</node>
+<node id="B">
+<data key="label">Create Malicious Windows Service</data>
+</node>
+<node id="C">
+<data key="label">Start Malicious Service</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Service</data>
+</node>
+<node id="E">
+<data key="label">Administrative Privileges Achieved</data>
+</node>
+<!--  Edges with Corporate Control Sections -->
+<edge source="A" target="B">
+<data key="label">Gain access to a standard user account Corporate Control: User Account Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify permissions to create new services Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess system configurations for service creation Corporate Control: Group Policy Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized service creation attempts Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'sc.exe' to create a new service pointing to malicious executable Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure service to run with SYSTEM privileges Corporate Control: Windows Service Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Set service to auto-start with system boot Corporate Control: Windows Startup Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new services with unusual configurations Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Start the malicious service to execute payload Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service remains running across reboots Corporate Control: Windows Service Recovery Options</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized service start events Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Rename service to mimic legitimate services Corporate Control: Windows Service Naming Conventions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify service description to avoid suspicion Corporate Control: Windows Service Descriptions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide service executable in system directories Corporate Control: File System Permissions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for services with suspicious names or descriptions Corporate Control: Threat Hunting, Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

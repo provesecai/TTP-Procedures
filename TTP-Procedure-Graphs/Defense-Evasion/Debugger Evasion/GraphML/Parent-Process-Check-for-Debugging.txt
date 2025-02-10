@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ParentProcessCheck" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Retrieve Parent Process Information</data>
+</node>
+<node id="B">
+<data key="label">Analyze Parent Process Name and ID</data>
+</node>
+<node id="C">
+<data key="label">Determine Debugging Status Based on Parent Process</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Flow Based on Analysis</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Query parent process using NtQueryInformationProcess Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious parent-child process relationships Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in parent process lineage Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unexpected parent process changes Corporate Control: Process Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare parent process name against expected values Corporate Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify known debugger parent processes Corporate Control: Anti-Debugging Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze process creation timestamps for inconsistencies Corporate Control: System Process Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for mismatched execution context Corporate Control: Kernel Debugging Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution path if debugger detected Corporate Control: Code Execution Integrity</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger misleading error messages Corporate Control: Anti-Reverse Engineering Strategies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Introduce artificial execution delays Corporate Control: Timing Evasion Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log debugging attempts for forensic analysis Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger presence successfully bypassed Corporate Control: Continuous Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution flow remains hidden from forensic tools Corporate Control: Memory Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Anti-debugging techniques persist in execution Corporate Control: Advanced Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution integrity maintained against debugging Corporate Control: System Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion fully implemented Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

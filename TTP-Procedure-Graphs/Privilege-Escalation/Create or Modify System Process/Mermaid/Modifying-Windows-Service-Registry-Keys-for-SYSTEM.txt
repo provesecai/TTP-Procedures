@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Modify Windows Service Registry Keys]
+    C[Trigger Execution of Modified Service]
+    D[Evade Detection of Registry Modification]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Gain access to a standard Windows user account Corporate Control: Windows User Account Management"| B
+    A -->|"Identify service registry keys running with SYSTEM privileges Corporate Control: Windows Registry Configuration"| B
+    A -->|"Assess permissions to modify service registry values Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to service registry keys Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify ImagePath registry key to execute malicious payload Corporate Control: Windows Registry Management"| C
+    B -->|"Ensure service restarts automatically with system boot Corporate Control: Windows Service Startup Settings"| C
+    B -->|"Modify security descriptors to maintain persistence Corporate Control: Windows File System Permissions"| C
+    B -->|"Monitor for unauthorized modifications to service registry settings Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Restart service to execute malicious payload Corporate Control: Windows Service Control Manager"| D
+    C -->|"Confirm SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure service remains modified across reboots Corporate Control: Windows Service Recovery Policies"| D
+    C -->|"Monitor for unauthorized privilege escalations via service registry modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of registry key modification Corporate Control: Log Scrubbing, Windows Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Service Registry Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized service registry modifications Corporate Control: Security Operations Center (SOC)"| E

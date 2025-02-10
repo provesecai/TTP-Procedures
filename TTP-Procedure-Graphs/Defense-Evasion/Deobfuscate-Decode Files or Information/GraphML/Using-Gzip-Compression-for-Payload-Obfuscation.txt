@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="GzipCompressionEvasion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compress Payload Using Gzip</data>
+</node>
+<node id="B">
+<data key="label">Deliver Gzip-Compressed Payload</data>
+</node>
+<node id="C">
+<data key="label">Decompress Payload in Memory</data>
+</node>
+<node id="D">
+<data key="label">Execute Decompressed Payload</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use Gzip to obfuscate payload before delivery Corporate Control: File Compression Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual file compression patterns Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log attempts to compress executable files Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor network transfers of compressed payloads Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver compressed file via phishing or web download Corporate Control: Email and Web Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze compressed files for embedded scripts Third Party Control: Cloud-Based Sandbox Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized file decompression attempts Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor decompression of unexpected file formats Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decompress and load payload into memory Corporate Control: Memory Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious decompression commands Third Party Control: Cloud Endpoint Protection Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze system calls for decompression-related behavior Corporate Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized memory modifications Third Party Control: Cloud-Based Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload in a stealthy manner Corporate Control: In-Memory Execution Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to hide decompression Third Party Control: Cloud Log Management Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution using stealth compression techniques Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis by altering file attributes Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

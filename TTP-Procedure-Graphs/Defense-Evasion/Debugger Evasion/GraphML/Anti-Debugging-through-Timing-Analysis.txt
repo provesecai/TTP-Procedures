@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TimingAnalysis" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Retrieve System Time Before Execution</data>
+</node>
+<node id="B">
+<data key="label">Execute Function with Known Runtime</data>
+</node>
+<node id="C">
+<data key="label">Compare Execution Time Against Expected Value</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Flow Based on Analysis</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Call GetTickCount or QueryPerformanceCounter to retrieve time Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system time retrieval calls Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze suspicious delays in execution Corporate Control: Behavioral Analysis Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect tampering with time-related API functions Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log execution time anomalies for threat detection Corporate Control: Threat Intelligence Platform</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Measure time taken for execution of known operations Corporate Control: Code Execution Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unexpected delays or pauses Corporate Control: Application Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify interference from debugging tools Corporate Control: Anti-Debugging Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect abnormal variations in process timing Corporate Control: Kernel-Level Process Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution flow if debugger presence is inferred Corporate Control: Runtime Protection Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy misleading execution paths to evade detection Corporate Control: Advanced Anti-Reverse Engineering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger artificial execution slowdowns Corporate Control: Timing Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log anomalies detected in execution flow Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution time manipulation successful for evasion Corporate Control: Continuous Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from runtime analysis Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Anti-debugging persistence achieved Corporate Control: Advanced Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion successfully implemented Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution remains hidden from forensic analysis Corporate Control: Application Security Hardening</data>
+</edge>
+</graph>
+</graphml>

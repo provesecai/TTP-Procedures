@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MacroEncoding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Embed Encoded Script in Office Macro</data>
+</node>
+<node id="B">
+<data key="label">Deliver Document via Phishing Email</data>
+</node>
+<node id="C">
+<data key="label">Decode and Execute Malicious Script</data>
+</node>
+<node id="D">
+<data key="label">Remove Execution Traces</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use VBA macro to store encoded payload Corporate Control: Document Integrity Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect macro-enabled document attachments Third Party Control: Cloud Email Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor file metadata for embedded scripts Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log execution of suspicious Office macros Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver macro-embedded document via phishing Corporate Control: Email Filtering and Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze attachments for hidden scripts Third Party Control: Cloud-Based Sandbox Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect user enabling of macros Corporate Control: Endpoint Behavior Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log macro execution attempts Third Party Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode payload using VBA script Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious document-based execution Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze system calls for macro activity Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized script execution Third Party Control: Cloud Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove traces of decoded script Corporate Control: Log Scrubbing and Anonymization</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to evade forensic analysis Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade security monitoring by renaming processes Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution using background processes Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

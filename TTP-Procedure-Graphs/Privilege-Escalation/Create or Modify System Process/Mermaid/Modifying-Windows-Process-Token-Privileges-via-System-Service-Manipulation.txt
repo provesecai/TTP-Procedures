@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Identify Target System Service Running as SYSTEM]
+    C[Modify Process Token Privileges]
+    D[Trigger Execution of Modified Service]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Gain access to a standard Windows user account Corporate Control: Windows User Account Management"| B
+    A -->|"Enumerate system services running as SYSTEM Corporate Control: Windows Task Manager"| B
+    A -->|"Determine feasibility of modifying process token privileges Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to process tokens Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify process token to enable SeAssignPrimaryTokenPrivilege Corporate Control: Windows Security Token Management"| C
+    B -->|"Inject new permissions into an existing SYSTEM process Corporate Control: Windows Service Control Manager"| C
+    B -->|"Ensure modified process executes attacker-controlled code Corporate Control: Windows Process Execution Policies"| C
+    B -->|"Monitor for unauthorized modifications to process tokens Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Restart the modified service to trigger execution Corporate Control: Windows Task Scheduler"| D
+    C -->|"Confirm SYSTEM privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure process remains active after session changes Corporate Control: Windows Security Session Management"| D
+    C -->|"Monitor for unauthorized privilege escalations via process token modifications Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of process token modification Corporate Control: Log Scrubbing, Windows Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Windows Process Token Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying execution policies Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized process token modifications Corporate Control: Security Operations Center (SOC)"| E

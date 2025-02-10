@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Create Malicious Windows Service]
+    C[Start Malicious Service]
+    D[Conceal Malicious Service]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Gain access to a standard user account Corporate Control: User Account Management"| B
+    A -->|"Identify permissions to create new services Corporate Control: Windows Service Control Manager"| B
+    A -->|"Assess system configurations for service creation Corporate Control: Group Policy Settings"| B
+    A -->|"Monitor for unauthorized service creation attempts Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Use 'sc.exe' to create a new service pointing to malicious executable Corporate Control: Windows Service Control Manager"| C
+    B -->|"Configure service to run with SYSTEM privileges Corporate Control: Windows Service Configuration"| C
+    B -->|"Set service to auto-start with system boot Corporate Control: Windows Startup Settings"| C
+    B -->|"Monitor for new services with unusual configurations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Start the malicious service to execute payload Corporate Control: Windows Service Control Manager"| D
+    C -->|"Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure service remains running across reboots Corporate Control: Windows Service Recovery Options"| D
+    C -->|"Monitor for unauthorized service start events Corporate Control: SIEM, Windows Event Logs"| D
+    D -->|"Rename service to mimic legitimate services Corporate Control: Windows Service Naming Conventions"| E
+    D -->|"Modify service description to avoid suspicion Corporate Control: Windows Service Descriptions"| E
+    D -->|"Hide service executable in system directories Corporate Control: File System Permissions"| E
+    D -->|"Monitor for services with suspicious names or descriptions Corporate Control: Threat Hunting, Anomaly Detection"| E

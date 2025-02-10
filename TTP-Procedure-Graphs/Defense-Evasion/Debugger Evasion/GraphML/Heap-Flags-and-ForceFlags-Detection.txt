@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HeapFlagsDetection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Heap Metadata in PEB</data>
+</node>
+<node id="B">
+<data key="label">Inspect Heap Flags and ForceFlags</data>
+</node>
+<node id="C">
+<data key="label">Determine Debugging Status</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Flow Based on Results</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Read Heap Flags and ForceFlags in PEB structure Corporate Control: Windows Heap Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized access to heap structures Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor direct memory access to heap metadata Corporate Control: Kernel Security Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log heap modifications for forensic analysis Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze Heap Flags for debugging artifacts Corporate Control: Debugging Prevention Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unexpected ForceFlags values Corporate Control: Memory Protection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate heap anomalies with debugging attempts Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect forced heap exceptions Corporate Control: Behavioral Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter execution flow if debugging is detected Corporate Control: Anti-Debugging Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger misleading heap operations Corporate Control: Code Execution Obfuscation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject false heap metadata values Corporate Control: Advanced Evasion Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor heap manipulation logs Corporate Control: Continuous Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger detection successfully bypassed Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution path concealed from debugging tools Corporate Control: Application Security Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Heap integrity maintained with false values Corporate Control: Anti-Reverse Engineering Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from process memory Corporate Control: Memory Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistent anti-debugging techniques maintained Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

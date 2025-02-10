@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Identify Systemd Service Running as Root]
+    C[Modify Service File to Execute Malicious Code]
+    D[Restart Modified Service]
+    E[Root Privileges Achieved]
+
+    A -->|"Gain access to a standard user account Corporate Control: Linux User Account Management"| B
+    A -->|"Enumerate systemd services with root privileges Corporate Control: Systemd Configuration"| B
+    A -->|"Assess permissions to modify existing service files Corporate Control: Linux File System Permissions"| B
+    A -->|"Monitor for unauthorized modifications to systemd services Corporate Control: SIEM, Linux System Logs"| B
+    B -->|"Modify the ExecStart parameter of a service to execute a malicious payload Corporate Control: Systemd Service Configuration"| C
+    B -->|"Ensure persistence by setting Restart=always Corporate Control: Systemd Startup Configuration"| C
+    B -->|"Modify security attributes to maintain persistence Corporate Control: Unix Access Control Lists (ACLs)"| C
+    B -->|"Monitor for unauthorized changes to systemd service files Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Restart the modified service to trigger execution Corporate Control: Systemd Service Manager"| D
+    C -->|"Confirm root privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure service remains active after system reboot Corporate Control: Linux Boot Policies"| D
+    C -->|"Monitor for unauthorized privilege escalations via service modification Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of service modification Corporate Control: Log Scrubbing, Linux Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Systemd Exploitation Techniques"| E
+    D -->|"Ensure continued root access by modifying execution policies Corporate Control: Linux Security Module (LSM) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized systemd service modifications Corporate Control: Security Operations Center (SOC)"| E

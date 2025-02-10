@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Modify an Existing Scheduled Task]
+    C[Trigger Execution During Task Run]
+    D[Evade Detection of Scheduled Task Modification]
+    E[SYSTEM Privileges Achieved]
+
+    A -->|"Gain access to a standard Windows user account Corporate Control: Windows User Account Management"| B
+    A -->|"Enumerate scheduled tasks running with SYSTEM privileges Corporate Control: Windows Task Scheduler"| B
+    A -->|"Assess permissions to modify existing scheduled tasks Corporate Control: Windows Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to scheduled tasks Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Modify the scheduled task action to execute a malicious payload Corporate Control: Windows Task Configuration"| C
+    B -->|"Ensure task runs with SYSTEM privileges Corporate Control: Windows Task Scheduler Execution Policies"| C
+    B -->|"Modify security descriptors to maintain persistence Corporate Control: Windows File System Permissions"| C
+    B -->|"Monitor for unauthorized scheduled task executions Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Scheduled task triggers execution Corporate Control: Windows Task Scheduler"| D
+    C -->|"Confirm SYSTEM privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure scheduled task remains active across reboots Corporate Control: Windows Task Recovery Policies"| D
+    C -->|"Monitor for unauthorized privilege escalations via scheduled tasks Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of scheduled task modification Corporate Control: Log Scrubbing, Security Event Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Scheduled Task Exploitation Techniques"| E
+    D -->|"Ensure continued SYSTEM access by modifying security settings Corporate Control: Windows Local Security Authority (LSA) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized scheduled task modifications Corporate Control: Security Operations Center (SOC)"| E

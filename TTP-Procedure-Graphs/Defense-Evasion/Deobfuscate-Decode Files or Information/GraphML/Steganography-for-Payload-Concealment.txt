@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Steganography" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Embed Payload in Image or Media File</data>
+</node>
+<node id="B">
+<data key="label">Transfer Steganographic File to Target</data>
+</node>
+<node id="C">
+<data key="label">Extract Encoded Payload from Media File</data>
+</node>
+<node id="D">
+<data key="label">Execute Extracted Payload</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed data using steganography tools Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual file size anomalies Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect known steganographic techniques Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inspect media file structures for anomalies Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Transfer image via email or web service Third Party Control: Cloud-Based Email Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network traffic for steganographic patterns Corporate Control: Network Intrusion Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual file access behaviors Third Party Control: Cloud Web Security Gateways</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log image file transfers for forensic analysis Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract payload using specialized decoding tools Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect payload extraction from media files Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze system calls related to data extraction Corporate Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized data recovery techniques Third Party Control: Cloud Endpoint Protection Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload in memory Corporate Control: In-Memory Execution Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection using legitimate process execution Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to erase traces Corporate Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution stealthily Third Party Control: Advanced Persistence Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

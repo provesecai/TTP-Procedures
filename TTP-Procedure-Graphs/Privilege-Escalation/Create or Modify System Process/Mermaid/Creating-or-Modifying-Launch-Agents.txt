@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Modify or Create a macOS Launch Agent]
+    C[Trigger Execution During User Login]
+    D[Evade Detection of Launch Agent Modification]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Gain access to a standard macOS user account Corporate Control: macOS User Account Management"| B
+    A -->|"Identify writable LaunchAgents directories Corporate Control: macOS File System Permissions"| B
+    A -->|"Assess permissions to modify or create LaunchAgents Corporate Control: macOS Security Policies"| B
+    A -->|"Monitor for unauthorized modifications to LaunchAgents Corporate Control: SIEM, macOS Security Logs"| B
+    B -->|"Modify or create a LaunchAgent to execute malicious script Corporate Control: macOS Service Management"| C
+    B -->|"Ensure execution at every user login Corporate Control: macOS Session Management"| C
+    B -->|"Modify security descriptors to maintain persistence Corporate Control: macOS File System ACLs"| C
+    B -->|"Monitor for unauthorized modifications to LaunchAgents Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"User logs in, triggering LaunchAgent execution Corporate Control: macOS Authentication Framework"| D
+    C -->|"Confirm administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure LaunchAgent remains active after reboots Corporate Control: macOS Launchd Service Management"| D
+    C -->|"Monitor for unauthorized privilege escalations via LaunchAgents Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of LaunchAgent modification Corporate Control: Log Scrubbing, macOS Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate LaunchAgent Exploitation Techniques"| E
+    D -->|"Ensure continued administrative access by modifying security policies Corporate Control: macOS Security Policy Management"| E
+    D -->|"SOC continuously monitors for unauthorized LaunchAgent modifications Corporate Control: Security Operations Center (SOC)"| E

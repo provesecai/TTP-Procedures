@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CustomEncoding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Payload with Custom Encoding</data>
+</node>
+<node id="B">
+<data key="label">Use Custom Decoder to Decode Payload</data>
+</node>
+<node id="C">
+<data key="label">Execute Decoded Payload in Memory</data>
+</node>
+<node id="D">
+<data key="label">Remove Decoding Artifacts</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Retrieve encoded payload from external source Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Store encoded payload in a legitimate format Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual data encoding patterns Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized data transfers Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decode payload using custom script Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect execution of unknown decoding routines Third Party Control: Cloud-Based Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor suspicious script execution Corporate Control: Host-Based Intrusion Prevention Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log execution of unknown decoding functions Third Party Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute payload directly from memory Corporate Control: In-Memory Execution Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process memory for injected code Third Party Control: Cloud Endpoint Protection Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious memory modifications Corporate Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze payload execution behavior Third Party Control: Behavioral Analytics Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove custom decoder and payload traces Corporate Control: Memory Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove execution traces Third Party Control: Cloud Log Management Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure payload persistence using stealth tactics Corporate Control: Advanced Evasion Frameworks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic detection Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

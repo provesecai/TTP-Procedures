@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="InlinePatching" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Debugging APIs in Process Memory</data>
+</node>
+<node id="B">
+<data key="label">Modify Debugging API Instructions</data>
+</node>
+<node id="C">
+<data key="label">Redirect API Calls to False Returns</data>
+</node>
+<node id="D">
+<data key="label">Monitor for API Hooking and Restore Changes</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan process memory for IsDebuggerPresent and similar APIs Corporate Control: Memory Integrity Checks</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to API memory Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log attempts to alter debugging function behavior Corporate Control: SIEM and Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect inline patching attempts via checksum verification Corporate Control: Anti-Tampering Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify return values of debugging functions Corporate Control: Code Execution Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject false jump instructions into debugger detection functions Corporate Control: Process Memory Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure changes persist across function calls Corporate Control: Kernel Hooking Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor patched API behavior for anomalies Corporate Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Continuously check for API restoration attempts Corporate Control: Runtime Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Restore modified instructions if tampering detected Corporate Control: Process Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution delays if API hooking detected Corporate Control: Advanced Evasion Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log any API modifications for forensic analysis Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger successfully evaded via function patching Corporate Control: Continuous Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution remains hidden from debugging tools Corporate Control: Memory Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">API tampering protection persists Corporate Control: Kernel-Level Security Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution integrity maintained against forensic analysis Corporate Control: System Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion fully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

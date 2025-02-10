@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AESPayloadEncryption" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Encrypt Payload Using AES</data>
+</node>
+<node id="B">
+<data key="label">Deliver AES Encrypted Payload</data>
+</node>
+<node id="C">
+<data key="label">Decrypt Payload in Memory</data>
+</node>
+<node id="D">
+<data key="label">Execute Decrypted Payload</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Encrypt payload before transfer using AES Corporate Control: Endpoint Encryption Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor encrypted file transfers Third Party Control: Cloud Network Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log suspicious encryption routines Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized encryption of executables Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver encrypted payload via email or web Corporate Control: Email Filtering Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze encrypted attachments for hidden payloads Third Party Control: Cloud-Based Sandbox Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual encrypted file execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log execution of encrypted payloads Third Party Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decrypt payload in memory without writing to disk Corporate Control: Memory Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized decryption functions Third Party Control: Cloud Endpoint Protection Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system calls for in-memory decryption Corporate Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect registry-stored decryption keys Third Party Control: Cloud-Based Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute payload without leaving artifacts Corporate Control: In-Memory Execution Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to avoid detection Third Party Control: Cloud Log Management Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution using stealth tactics Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis through encryption Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

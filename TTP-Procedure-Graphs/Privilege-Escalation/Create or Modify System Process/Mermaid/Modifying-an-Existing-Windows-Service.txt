@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Identify Vulnerable Service]
+    C[Modify Service Configuration]
+    D[Restart Service]
+    E[Administrative Privileges Achieved]
+
+    A -->|"Gain access to a standard user account Corporate Control: User Account Management"| B
+    A -->|"Enumerate services with misconfigurations Corporate Control: Windows Service Control Manager"| B
+    A -->|"Assess permissions to modify service configurations Corporate Control: Group Policy Settings"| B
+    A -->|"Monitor for unauthorized service enumeration activities Corporate Control: SIEM, Windows Event Logs"| B
+    B -->|"Identify a service running with SYSTEM privileges Corporate Control: Windows Service Control Manager"| C
+    B -->|"Check if the service's executable path is writable Corporate Control: File System Permissions"| C
+    B -->|"Determine if the service auto-starts with the system Corporate Control: Windows Startup Settings"| C
+    B -->|"Monitor for unusual access to service configurations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Replace service executable with malicious payload Corporate Control: File System Permissions"| D
+    C -->|"Modify service parameters to point to malicious executable Corporate Control: Windows Registry"| D
+    C -->|"Ensure service is set to auto-start Corporate Control: Windows Service Configuration"| D
+    C -->|"Monitor for changes to service executables or parameters Corporate Control: SIEM, File Integrity Monitoring"| D
+    D -->|"Restart the modified service to execute payload Corporate Control: Windows Service Control Manager"| E
+    D -->|"Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation"| E
+    D -->|"Ensure service remains modified across reboots Corporate Control: Windows Service Recovery Options"| E
+    D -->|"Monitor for unauthorized service restarts Corporate Control: SIEM, Windows Event Logs"| E

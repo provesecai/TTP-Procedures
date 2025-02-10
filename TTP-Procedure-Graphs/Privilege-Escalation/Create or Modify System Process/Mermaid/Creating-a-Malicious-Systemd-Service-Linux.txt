@@ -1,0 +1,23 @@
+graph TD;
+    A[Obtain Low-Level Access]
+    B[Create Malicious Systemd Service]
+    C[Enable and Start Service]
+    D[Conceal Malicious Service]
+    E[Root Privileges Achieved]
+
+    A -->|"Gain access to a standard user account Corporate Control: User Account Management"| B
+    A -->|"Identify permissions to create new systemd services Corporate Control: Systemd Configuration"| B
+    A -->|"Assess system configurations for service creation Corporate Control: Linux File System Permissions"| B
+    A -->|"Monitor for unauthorized service creation attempts Corporate Control: SIEM, System Logs"| B
+    B -->|"Create a new service file in '/etc/systemd/system/' pointing to malicious executable Corporate Control: Systemd Service Files"| C
+    B -->|"Configure service to run with root privileges Corporate Control: Systemd Service Configuration"| C
+    B -->|"Set service to auto-start with system boot Corporate Control: Systemd Startup Settings"| C
+    B -->|"Monitor for new service files with unusual configurations Corporate Control: Endpoint Detection and Response (EDR)"| C
+    C -->|"Enable and start the malicious service to execute payload Corporate Control: Systemd Service Manager"| D
+    C -->|"Verify root privileges by executing administrative commands Corporate Control: User Privilege Validation"| D
+    C -->|"Ensure service remains active across reboots Corporate Control: Unix System Policies"| D
+    C -->|"Monitor for unauthorized privilege escalations via Systemd execution Corporate Control: SIEM, Threat Intelligence Feeds"| D
+    D -->|"Modify system logs to remove traces of Systemd service creation Corporate Control: Log Scrubbing, Linux Security Logs"| E
+    D -->|"Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate Systemd Exploitation Techniques"| E
+    D -->|"Ensure continued root access by modifying execution policies Corporate Control: Linux Security Module (LSM) Configuration"| E
+    D -->|"SOC continuously monitors for unauthorized Systemd service modifications Corporate Control: Security Operations Center (SOC)"| E

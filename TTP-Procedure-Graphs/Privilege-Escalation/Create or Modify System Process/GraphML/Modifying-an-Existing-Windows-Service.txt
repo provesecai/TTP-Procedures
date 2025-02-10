@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-an-Existing-Windows-Service" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Low-Level Access</data>
+</node>
+<node id="B">
+<data key="label">Identify Vulnerable Service</data>
+</node>
+<node id="C">
+<data key="label">Modify Service Configuration</data>
+</node>
+<node id="D">
+<data key="label">Restart Service</data>
+</node>
+<node id="E">
+<data key="label">Administrative Privileges Achieved</data>
+</node>
+<!--  Edges with Corporate Control Sections -->
+<edge source="A" target="B">
+<data key="label">Gain access to a standard user account Corporate Control: User Account Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate services with misconfigurations Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Assess permissions to modify service configurations Corporate Control: Group Policy Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized service enumeration activities Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify a service running with SYSTEM privileges Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check if the service's executable path is writable Corporate Control: File System Permissions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Determine if the service auto-starts with the system Corporate Control: Windows Startup Settings</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unusual access to service configurations Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replace service executable with malicious payload Corporate Control: File System Permissions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify service parameters to point to malicious executable Corporate Control: Windows Registry</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure service is set to auto-start Corporate Control: Windows Service Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for changes to service executables or parameters Corporate Control: SIEM, File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restart the modified service to execute payload Corporate Control: Windows Service Control Manager</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Verify administrative privileges by executing privileged commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure service remains modified across reboots Corporate Control: Windows Service Recovery Options</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized service restarts Corporate Control: SIEM, Windows Event Logs</data>
+</edge>
+</graph>
+</graphml>

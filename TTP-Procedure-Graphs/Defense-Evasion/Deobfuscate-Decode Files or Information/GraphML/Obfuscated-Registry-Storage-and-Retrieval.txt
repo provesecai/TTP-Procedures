@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RegistryObfuscation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Store Obfuscated Payload in Windows Registry</data>
+</node>
+<node id="B">
+<data key="label">Retrieve and Decode Registry Payload</data>
+</node>
+<node id="C">
+<data key="label">Execute Decoded Payload in Memory</data>
+</node>
+<node id="D">
+<data key="label">Remove Registry Artifacts</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Store encrypted payload in registry key Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized registry modifications Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log suspicious registry key creations Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect registry manipulation techniques Third Party Control: Advanced Threat Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Retrieve and decode registry-stored payload Corporate Control: Memory Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor registry access patterns for anomalies Third Party Control: Cloud Endpoint Protection Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze system calls accessing registry keys Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized registry data extraction Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute decoded payload without writing to disk Corporate Control: In-Memory Execution Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor suspicious process memory modifications Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized execution attempts Corporate Control: Advanced Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log execution attempts for forensic tracking Third Party Control: Cloud-Based Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Clear registry payload traces after execution Corporate Control: Log Scrubbing and Anonymization</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify registry timestamps to evade forensic tools Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection using registry persistence techniques Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution using stealth registry keys Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

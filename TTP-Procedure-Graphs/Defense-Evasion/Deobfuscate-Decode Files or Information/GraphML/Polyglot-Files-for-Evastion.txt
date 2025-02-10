@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PolyglotFiles" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Polyglot File with Dual File Format</data>
+</node>
+<node id="B">
+<data key="label">Deliver Polyglot File via Email or Web</data>
+</node>
+<node id="C">
+<data key="label">Activate Malicious Component of File</data>
+</node>
+<node id="D">
+<data key="label">Remove File Format Artifacts</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Craft file that appears valid in multiple formats Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for abnormal file format structures Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log attempts to create polyglot files Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual file metadata changes Third Party Control: Advanced Threat Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver file through trusted channels Corporate Control: Email Security Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze attachments for dual-format payloads Third Party Control: Cloud-Based Sandbox Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect changes in file execution context Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor user interactions with the file Third Party Control: Cloud Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute hidden payload in secondary file format Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious file execution behavior Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze process creation linked to polyglot files Corporate Control: SIEM Correlation Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized execution of hybrid files Third Party Control: Cloud Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove polyglot metadata and logs Corporate Control: Log Scrubbing and Anonymization</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to prevent forensic recovery Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade security tools by renaming execution context Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution stealthily using secondary format Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

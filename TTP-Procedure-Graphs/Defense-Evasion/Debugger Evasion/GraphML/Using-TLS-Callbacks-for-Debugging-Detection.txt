@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TLSCallbacks" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register TLS Callback in Executable</data>
+</node>
+<node id="B">
+<data key="label">Invoke TLS Callback Before Main Execution</data>
+</node>
+<node id="C">
+<data key="label">Check Debugging Status in TLS Callback</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Based on Debugging Detection</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Embed TLS callback functions in PE header Corporate Control: PE File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in TLS section Corporate Control: Application Execution Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modification of TLS entries Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log suspicious TLS callback activity Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute debugging checks before main function Corporate Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze debugger artifacts in memory Corporate Control: Kernel-Level Debugging Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized hooks on TLS callbacks Corporate Control: Memory Integrity Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate TLS activity with known evasion patterns Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter execution path if debugger is detected Corporate Control: Anti-Debugging Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution delays or process termination Corporate Control: Application Hardening Strategies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy misleading TLS callback redirections Corporate Control: Advanced Anti-Reverse Engineering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log debugging detection events Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger detection successfully bypassed Corporate Control: Continuous Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution path concealed from debugging tools Corporate Control: Code Execution Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">TLS artifacts removed from process runtime Corporate Control: Memory Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Anti-debugging persistence achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution remains protected from forensic tools Corporate Control: Advanced Security Analytics</data>
+</edge>
+</graph>
+</graphml>

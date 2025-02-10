@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-macOS-System-Extensions-Execution" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Low-Level Access</data>
+</node>
+<node id="B">
+<data key="label">Modify System Extension for Malicious Execution</data>
+</node>
+<node id="C">
+<data key="label">Trigger Execution of Compromised System Extension</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection of System Extension Modification</data>
+</node>
+<node id="E">
+<data key="label">Root Privileges Achieved</data>
+</node>
+<!--  Edges with Corporate Control Sections -->
+<edge source="A" target="B">
+<data key="label">Gain access to a standard macOS user account Corporate Control: macOS User Account Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify writable system extensions Corporate Control: macOS System Integrity Protection (SIP)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine feasibility of modifying system extensions Corporate Control: macOS File System Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized modifications to system extensions Corporate Control: SIEM, macOS Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify an existing system extension to execute malicious payload Corporate Control: macOS System Extension Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure extension runs with root privileges Corporate Control: macOS Authentication Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution policies to maintain persistence Corporate Control: macOS Boot Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized modifications to system extension execution Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution by restarting the modified extension Corporate Control: macOS Kernel Extension Framework</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm root privileges by executing administrative commands Corporate Control: User Privilege Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure extension remains active after system updates Corporate Control: macOS System Integrity Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized privilege escalations via system extensions Corporate Control: SIEM, Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of system extension modification Corporate Control: Log Scrubbing, macOS Security Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional privilege escalation vectors for redundancy Corporate Control: Alternate macOS Extension Exploitation Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued root access by modifying execution policies Corporate Control: macOS Security Policy Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SOC continuously monitors for unauthorized system extension modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

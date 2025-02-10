@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SEHAntiDebugging" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register Structured Exception Handler (SEH)</data>
+</node>
+<node id="B">
+<data key="label">Trigger Exception in Code</data>
+</node>
+<node id="C">
+<data key="label">Check Debugger Exception Handling</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Flow Based on Debugging Status</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Set up custom SEH for exception handling Corporate Control: Windows Error Handling Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SEH registration in memory Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unexpected SEH modifications Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abnormal SEH chaining Corporate Control: Kernel Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cause intentional exception to invoke SEH Corporate Control: Application Security Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze exception handling behavior Corporate Control: Behavioral Threat Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect modifications in exception handling flow Corporate Control: Runtime Integrity Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor execution anomalies Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Determine if debugger intercepts SEH Corporate Control: Debugger Detection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution path based on results Corporate Control: Code Obfuscation Frameworks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log and analyze debugger interaction Corporate Control: Forensic Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution delays or terminate process Corporate Control: Timing Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger presence successfully evaded Corporate Control: Continuous Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution remains hidden from debugging tools Corporate Control: Application Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from execution logs Corporate Control: Memory Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistent anti-debugging achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution obfuscation successfully maintained Corporate Control: Advanced Security Analytics</data>
+</edge>
+</graph>
+</graphml>

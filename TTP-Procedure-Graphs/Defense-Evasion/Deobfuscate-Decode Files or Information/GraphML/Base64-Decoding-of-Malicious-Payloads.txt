@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Base64Decoding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Base64 Encoded Payload</data>
+</node>
+<node id="B">
+<data key="label">Use Built-in Tools to Decode Payload</data>
+</node>
+<node id="C">
+<data key="label">Execute Decoded Malicious Payload</data>
+</node>
+<node id="D">
+<data key="label">Clean Up Decoding Artifacts</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Retrieve encoded payload from external source Corporate Control: Network Traffic Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Store encoded payload on disk Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalous file creation Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized file downloads Corporate Control: Web Proxy Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decode using certutil or similar tool Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect use of system utilities for decoding Corporate Control: Process Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor command-line arguments for decoding commands Corporate Control: Command-Line Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alert on unexpected tool usage Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute payload to establish foothold Corporate Control: Behavior-Based Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized process execution Corporate Control: Host-Based Intrusion Prevention Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalous network connections Corporate Control: Network Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate process execution with known attack patterns Corporate Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove base64 artifacts from logs Corporate Control: Log Scrubbing and Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete decoded payload after execution Corporate Control: Endpoint Security Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to evade forensic tools Corporate Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution without detection Corporate Control: Advanced Evasion Frameworks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

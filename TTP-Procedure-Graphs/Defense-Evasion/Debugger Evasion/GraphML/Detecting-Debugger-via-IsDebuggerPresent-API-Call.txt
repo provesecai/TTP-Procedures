@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="IsDebuggerPresent" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Invoke IsDebuggerPresent API</data>
+</node>
+<node id="B">
+<data key="label">Check Debugging Status</data>
+</node>
+<node id="C">
+<data key="label">Modify Execution Flow</data>
+</node>
+<node id="D">
+<data key="label">Deploy Countermeasures</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Call IsDebuggerPresent API to detect debugger presence Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for API hooking to bypass detection Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze return value for debugging artifacts Corporate Control: Process Integrity Checks</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor system calls related to debugger detection Corporate Control: Kernel Mode Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify API call anomalies through behavioral monitoring Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evaluate debugging status from API return value Corporate Control: Anti-Debugging Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual API return values indicating tampering Corporate Control: Memory Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution flow based on debugger status Corporate Control: Code Execution Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log detection event for forensic analysis Corporate Control: Threat Intelligence Platform</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">If debugger detected, alter control flow or obfuscate execution Corporate Control: Runtime Application Self-Protection (RASP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy misleading execution paths to misdirect analysis Corporate Control: Behavioral Evasion Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution delay if debugging is active Corporate Control: Timing Analysis Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Terminate process if tampering is detected Corporate Control: System Process Termination Policy</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugging successfully bypassed or prevented Corporate Control: Continuous Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution path remains concealed from analysts Corporate Control: Anti-Reverse Engineering Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from logs Corporate Control: Log Scrubbing and Obfuscation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist stealthy execution without detection Corporate Control: Advanced Evasion Frameworks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion fully achieved through layered techniques Corporate Control: Security Operations Center (SOC) Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

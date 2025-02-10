@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CheckPEB" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Process Environment Block (PEB)</data>
+</node>
+<node id="B">
+<data key="label">Check BeingDebugged Flag</data>
+</node>
+<node id="C">
+<data key="label">Modify Execution Flow Based on Debugging</data>
+</node>
+<node id="D">
+<data key="label">Deploy Countermeasures</data>
+</node>
+<node id="E">
+<data key="label">Debugger Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access PEB structure using assembly instructions Corporate Control: Memory Protection Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Read BeingDebugged flag at offset 0x02 Corporate Control: Process Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect debugger attachment through direct memory access Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor abnormal access to PEB memory structures Corporate Control: SIEM, Security Event Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Correlate PEB access attempts with known evasion techniques Corporate Control: Threat Intelligence Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check if BeingDebugged flag is set to 1 Corporate Control: Debugging Prevention Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log access attempts to PEB for anomaly detection Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution path based on debugging status Corporate Control: Runtime Protection Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect and report unauthorized memory reads Corporate Control: Kernel Memory Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Terminate execution or mislead analysis if debugging detected Corporate Control: Anti-Analysis Countermeasures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject decoy code paths to mislead debuggers Corporate Control: Code Obfuscation Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delay execution or introduce artificial crashes Corporate Control: Timing Analysis Countermeasures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log debugging attempts for further forensic analysis Corporate Control: Security Event Logging Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugging bypassed through direct PEB manipulation Corporate Control: Continuous Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution path remains hidden from forensic tools Corporate Control: Advanced Evasion Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger artifacts removed from runtime memory Corporate Control: Memory Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistent anti-debugging achieved Corporate Control: SOC Monitoring and Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Debugger evasion successfully completed Corporate Control: Threat Intelligence Analytics</data>
+</edge>
+</graph>
+</graphml>

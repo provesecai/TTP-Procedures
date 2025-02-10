@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XORObfuscation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain XOR-Encoded Payload</data>
+</node>
+<node id="B">
+<data key="label">Use XOR Key to Decrypt Payload</data>
+</node>
+<node id="C">
+<data key="label">Execute Decrypted Payload</data>
+</node>
+<node id="D">
+<data key="label">Remove XOR Key and Decoding Artifacts</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Retrieve XOR-encoded payload from an external server Corporate Control: Network Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Store obfuscated payload on disk Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor payload delivery using IDS Corporate Control: Network Intrusion Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unusual file access patterns Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decrypt using XOR operation in memory Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect XOR operations in unexpected processes Corporate Control: Behavior-Based Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor command-line arguments for decoding commands Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alert on unauthorized XOR decryption Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute decrypted payload without detection Corporate Control: Advanced Evasion Frameworks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized process execution Corporate Control: Host-Based Intrusion Prevention Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate process behavior with known threats Corporate Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log and analyze XOR decryption attempts Corporate Control: Forensic Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove XOR key and clear memory traces Corporate Control: Memory Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify file timestamps to evade forensic tools Corporate Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution with stealth Corporate Control: Stealth Persistence Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion fully implemented Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execution remains hidden from security tools Corporate Control: Application Security Hardening</data>
+</edge>
+</graph>
+</graphml>
