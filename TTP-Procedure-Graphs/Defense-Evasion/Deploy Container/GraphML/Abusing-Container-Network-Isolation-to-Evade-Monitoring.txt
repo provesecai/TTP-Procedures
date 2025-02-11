@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ContainerNetworkEvasion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Misconfigured Network Isolation Policies</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Container with Custom Networking</data>
+</node>
+<node id="C">
+<data key="label">Establish Outbound Connections Without Detection</data>
+</node>
+<node id="D">
+<data key="label">Mask Malicious Traffic as Legitimate Application Data</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze Kubernetes network policies for misconfigurations Corporate Control: Kubernetes Network Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unsecured inter-container communication Third Party Control: Cloud Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit lack of egress restrictions in the environment Corporate Control: Firewall Rule Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy container with custom network namespace Corporate Control: Container Runtime Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use alternate routing to bypass security monitoring Third Party Control: Cloud SIEM Traffic Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Manipulate IP tables to redirect security logs Corporate Control: Network Monitoring Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish encrypted outbound connections Corporate Control: TLS Traffic Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Route malicious traffic through legitimate services Third Party Control: Cloud API Gateway Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify DNS settings to evade detection Corporate Control: DNS Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist network access using hidden proxy tunnels Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Blend malicious traffic with container-to-container communication Third Party Control: AI-Powered Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection by utilizing trusted cloud services Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

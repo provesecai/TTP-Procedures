@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AbusingSidecarContainers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Sidecar Container in Existing Application Pod</data>
+</node>
+<node id="B">
+<data key="label">Modify Sidecar to Intercept and Manipulate Traffic</data>
+</node>
+<node id="C">
+<data key="label">Execute Malicious Code via Sidecar Container</data>
+</node>
+<node id="D">
+<data key="label">Bypass Security Monitoring by Blending with Application</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Deploy sidecar container in an existing Kubernetes pod Corporate Control: Kubernetes Namespace Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage Kubernetes admission controllers to add sidecar Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Manipulate deployment scripts to include hidden sidecar Corporate Control: CI/CD Pipeline Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Abuse service mesh configurations to route traffic Third Party Control: API Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify environment variables to inject malicious commands Corporate Control: Cloud Infrastructure Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter network policies to allow outbound C2 communications Third Party Control: Cloud Firewall Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor application logs for credentials and secrets Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Abuse API requests for unauthorized operations Third Party Control: Cloud API Gateway Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute remote commands via legitimate service interactions Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject backdoor into the application’s memory Third Party Control: Runtime Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify audit logs to erase execution traces Corporate Control: Cloud Log Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use legitimate application interactions to stay hidden Third Party Control: Cloud Workload Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade network monitoring by leveraging encrypted communication Corporate Control: Network Intrusion Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable security telemetry from the application pod Third Party Control: Cloud SIEM Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist within infrastructure using auto-scaling policies Corporate Control: Cloud Auto-Scaling Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement time-based execution to minimize anomaly detection Third Party Control: Advanced Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

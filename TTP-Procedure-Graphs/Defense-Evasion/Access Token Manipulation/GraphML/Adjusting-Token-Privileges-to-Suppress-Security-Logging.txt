@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TokenPrivilegeManipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain a High-Privilege Token</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Privileges to Disable Logging</data>
+</node>
+<node id="C">
+<data key="label">Execute Commands Without Generating Logs</data>
+</node>
+<node id="D">
+<data key="label">Remove Traces of Token Privilege Modification</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify a process with logging privileges Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor privilege escalation attempts Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unauthorized token modifications Corporate Control: SIEM Event Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual API calls modifying security tokens Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter SeDebugPrivilege to suppress logging Corporate Control: Advanced Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor processes modifying security privileges Third Party Control: Cloud Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log suspicious token privilege alterations Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect privilege modifications in security logs Third Party Control: Cloud SIEM Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute processes without generating audit logs Corporate Control: Application Security Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution anomalies with disabled logging Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect process execution under modified security context Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unusual security privilege changes Third Party Control: Cloud Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to erase traces Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution under altered token privileges Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis Corporate Control: Anti-Forensic Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by SIEM and endpoint monitoring Third Party Control: Cloud-Based Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

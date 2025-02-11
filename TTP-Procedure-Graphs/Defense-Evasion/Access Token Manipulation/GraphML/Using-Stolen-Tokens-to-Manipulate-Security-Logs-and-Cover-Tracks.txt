@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="StolenToken_LogManipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain a Security Token with Log Management Rights</data>
+</node>
+<node id="B">
+<data key="label">Use Token to Modify or Delete Security Logs</data>
+</node>
+<node id="C">
+<data key="label">Remove Evidence of Unauthorized Access</data>
+</node>
+<node id="D">
+<data key="label">Ensure Long-Term Log Tampering Persistence</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify tokens with log management privileges Corporate Control: Security Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized log access Third Party Control: Cloud-Based Log Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect privilege escalation for log modification Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unauthorized access to security logs Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter security logs using administrative token Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unexpected log modifications Third Party Control: Cloud-Based Security Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor token-based log changes Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate log alterations with unauthorized access Third Party Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continued log manipulation using stolen token Corporate Control: Advanced Log Scrubbing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in log retention policies Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor token activity for signs of tampering Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log attempts to bypass logging policies Third Party Control: Cloud Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic tools through persistent log alteration Corporate Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to conceal manipulation Third Party Control: Cloud-Based Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by SIEM policies Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist under an unaltered security context Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

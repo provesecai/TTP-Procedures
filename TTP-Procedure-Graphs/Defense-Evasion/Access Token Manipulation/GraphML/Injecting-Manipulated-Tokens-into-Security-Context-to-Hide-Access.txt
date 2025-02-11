@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TokenInjection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Access to a High-Privilege Token</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Attributes for Evasion</data>
+</node>
+<node id="C">
+<data key="label">Inject Manipulated Token into a Process</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands Under New Security Context</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Extract token from privileged process Corporate Control: Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized token access Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log privilege token modifications Corporate Control: SIEM Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual token-related API calls Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security token attributes Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized changes to token privileges Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor process injection attempts Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze token manipulation patterns Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use injected token to execute stealthy commands Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect process execution under manipulated token Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor security context changes Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized process injections Third Party Control: Cloud Endpoint Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to erase evidence Corporate Control: Log Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution under altered security context Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis Corporate Control: Anti-Forensic Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by SIEM and endpoint monitoring Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

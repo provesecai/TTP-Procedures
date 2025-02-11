@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="KubernetesOperatorEvasion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Kubernetes Operators and Their Associated Permissions</data>
+</node>
+<node id="B">
+<data key="label">Modify Existing Kubernetes Operator to Include Malicious Workloads</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malicious Operator with Automated Execution Triggers</data>
+</node>
+<node id="D">
+<data key="label">Ensure Long-Term Persistence by Auto-Restarting Malicious Pods</data>
+</node>
+<node id="E">
+<data key="label">Obfuscate Malicious Operator Behavior to Avoid Detection</data>
+</node>
+<node id="F">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate cluster roles and permissions assigned to operators Corporate Control: Kubernetes RBAC Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan operator configurations for misconfigured API permissions Third Party Control: Cloud IAM Security Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify operators with privileged access to critical components Corporate Control: Kubernetes Admission Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify operator logic to execute hidden tasks Corporate Control: Kubernetes Security Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert malicious container runtime instructions into custom controllers Third Party Control: Cloud-Based CI/CD Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use operator reconciliation loops to execute malware persistently Corporate Control: Workload Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage auto-scaling policies to ensure pod re-creation Corporate Control: Kubernetes Workload Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify operator to restart if deleted Third Party Control: Kubernetes Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent termination by modifying operator self-healing mechanisms Corporate Control: Incident Response Playbooks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use legitimate application names and labels to avoid flagging Corporate Control: Cloud Security Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt command execution within operator payloads Third Party Control: Cloud Workload Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify log entries to remove execution traces Corporate Control: Advanced SIEM Threat Correlation</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Persist execution by dynamically modifying operator logic Third Party Control: Advanced Kubernetes Security Forensics</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Deploy redundant operators across multiple namespaces Corporate Control: Cluster Segmentation and Monitoring</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Remain undetected by mimicking normal cluster operations Third Party Control: AI-Powered Anomaly Detection</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

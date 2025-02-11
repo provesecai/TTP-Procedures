@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ImpersonateAnonymousToken" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain System's Anonymous Logon Token</data>
+</node>
+<node id="B">
+<data key="label">Impersonate Anonymous Token for Execution</data>
+</node>
+<node id="C">
+<data key="label">Bypass Security Policies and Logging</data>
+</node>
+<node id="D">
+<data key="label">Ensure Long-Term Persistence Under Anonymous Identity</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify system processes using anonymous tokens Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized access to system tokens Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API calls requesting anonymous logon Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log attempts to impersonate anonymous tokens Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use impersonated token for executing commands Corporate Control: Process Execution Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect execution of processes under anonymous identity Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor logs for execution anomalies Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze anonymous logon events Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass security policies by running as anonymous Corporate Control: Advanced Threat Mitigation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect security events missing user attribution Third Party Control: Cloud-Based SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for log discrepancies and missing authentication details Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log security bypass attempts Third Party Control: Cloud-Based Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove evidence of impersonation Corporate Control: Log Scrubbing Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continuous execution under anonymous context Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by SIEM and endpoint solutions Corporate Control: Advanced Evasion Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic identification of attacker Third Party Control: Cloud-Based Security Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

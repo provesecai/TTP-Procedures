@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="MasqueradingServiceContainer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malicious Container with a Legitimate Service Name</data>
+</node>
+<node id="B">
+<data key="label">Modify Container Metadata to Appear Benign</data>
+</node>
+<node id="C">
+<data key="label">Blend Malicious Traffic with Normal Application Logs</data>
+</node>
+<node id="D">
+<data key="label">Alter Security Policies to Prevent Detection</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Assign a name similar to production services Corporate Control: Kubernetes Namespace Hardening</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use legitimate image signatures to bypass scanning Third Party Control: Cloud Security Scanners</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify container environment variables to avoid flagging Corporate Control: Application Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Route traffic through service mesh for anonymity Corporate Control: Network Intrusion Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Blend malicious command executions into logs Third Party Control: Cloud-Based SIEM Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure container lifecycle mimics normal workload behavior Corporate Control: Workload Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify firewall rules to allow outbound C2 connections Corporate Control: Firewall Rule Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Adjust security configurations to allow persistence Third Party Control: Cloud Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Abuse service account permissions to maintain access Corporate Control: IAM Role Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist under normal operational activity Corporate Control: Kubernetes Admission Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection using legitimate infrastructure logs Third Party Control: Advanced Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy secondary containers to re-establish access Corporate Control: SIEM Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

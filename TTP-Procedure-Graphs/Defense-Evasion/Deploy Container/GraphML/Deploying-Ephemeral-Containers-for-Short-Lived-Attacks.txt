@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EphemeralContainers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Container Orchestration Misconfigurations</data>
+</node>
+<node id="B">
+<data key="label">Deploy Ephemeral Container with Malicious Payload</data>
+</node>
+<node id="C">
+<data key="label">Execute Short-Lived Attack Without Persisting</data>
+</node>
+<node id="D">
+<data key="label">Automatically Terminate Container to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate Kubernetes RBAC misconfigurations Corporate Control: Role-Based Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze pod security policies for ephemeral container permissions Third Party Control: Cloud Security Posture Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage cloud IAM misconfigurations to deploy temporary workloads Corporate Control: Cloud Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unrestricted namespace creation settings Third Party Control: Kubernetes Policy Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy container with --rm flag for automatic removal Corporate Control: Container Deployment Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use short-lived containers for reconnaissance and data exfiltration Third Party Control: Cloud Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Invoke ephemeral container using admin privileges Corporate Control: Kubernetes Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Launch attack scripts within a transient process Third Party Control: Endpoint Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform attack actions without writing to disk Corporate Control: Memory Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to remove traces of activity Third Party Control: Cloud-Based Security Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Utilize self-destruct scripts to erase forensic evidence Corporate Control: Incident Response Playbooks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Dynamically remove logs upon container shutdown Third Party Control: SIEM Log Correlation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Destroy ephemeral container after execution Corporate Control: Auto-Healing and Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure no residual artifacts remain in system memory Third Party Control: Cloud Memory Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist stealth by repeatedly launching short-lived containers Corporate Control: Kubernetes Runtime Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by mimicking legitimate ephemeral workloads Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

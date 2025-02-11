@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TokenTheft_LSASS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access LSASS Process to Extract Tokens</data>
+</node>
+<node id="B">
+<data key="label">Dump LSASS Memory for Cached Tokens</data>
+</node>
+<node id="C">
+<data key="label">Extract and Reuse Cached Token</data>
+</node>
+<node id="D">
+<data key="label">Execute Actions Under Stolen Token</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access LSASS memory using API calls Corporate Control: Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized LSASS access Third Party Control: Cloud Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious memory read operations Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unauthorized attempts to query LSASS Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract cached security tokens from LSASS Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect token extraction patterns Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for suspicious LSASS memory dumps Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze anomalies in process memory access Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Reuse stolen token for privilege evasion Corporate Control: Security Log Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in token reuse patterns Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of processes using stolen tokens Corporate Control: Advanced SIEM Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate stolen token usage with security incidents Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution attributes to evade monitoring Corporate Control: Application Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log modifications to process security context Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade endpoint monitoring using token manipulation Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution without triggering alerts Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

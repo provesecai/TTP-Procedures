@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PassTheToken" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Steal Token from Active Session</data>
+</node>
+<node id="B">
+<data key="label">Reuse Token for Network Authentication</data>
+</node>
+<node id="C">
+<data key="label">Establish Session Without Credentials</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands Under Stolen Token</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Extract token from memory Corporate Control: Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized token requests Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log token theft attempts Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor anomalous authentication requests Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Authenticate using stolen token Corporate Control: Network Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual authentication behavior Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor suspicious network logins Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze lateral movement patterns Third Party Control: Advanced Threat Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish a hidden session with token Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect new process creation under stolen token Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log security context modifications Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze execution anomalies Third Party Control: Cloud Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution flow to bypass logging Corporate Control: Application Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase execution traces Third Party Control: Cloud Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade endpoint monitoring Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist access using stolen token Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

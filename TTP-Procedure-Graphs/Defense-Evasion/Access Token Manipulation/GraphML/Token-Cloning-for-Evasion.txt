@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TokenCloning" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Extract Token from Privileged Process</data>
+</node>
+<node id="B">
+<data key="label">Clone Token Using DuplicateToken API</data>
+</node>
+<node id="C">
+<data key="label">Associate Cloned Token with New Process</data>
+</node>
+<node id="D">
+<data key="label">Use Cloned Token to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Extract token from running process Corporate Control: Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized token reads Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor anomalous process memory access Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log token extraction attempts Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Create duplicate token using API Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect token cloning attempts Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor suspicious token duplication Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze execution patterns using cloned tokens Third Party Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Associate cloned token with a hidden process Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized process execution Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for token-based privilege misuse Corporate Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unexpected token usage Third Party Control: Cloud Security Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade endpoint monitoring using cloned token Corporate Control: Advanced Evasion Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to erase traces Third Party Control: Cloud Log Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution with stolen token Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by forensic tools Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

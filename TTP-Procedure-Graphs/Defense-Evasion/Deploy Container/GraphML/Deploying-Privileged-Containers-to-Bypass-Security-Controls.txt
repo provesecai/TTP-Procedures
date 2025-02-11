@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PrivilegedContainerDeployment" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Security Constraints in Container Environment</data>
+</node>
+<node id="B">
+<data key="label">Deploy Privileged Container with Elevated Permissions</data>
+</node>
+<node id="C">
+<data key="label">Execute Malicious Activities Within Privileged Container</data>
+</node>
+<node id="D">
+<data key="label">Conceal Malicious Activities from Host Monitoring</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Assess existing security policies and identify gaps Corporate Control: Security Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate container runtime configurations Third Party Control: Cloud Security Posture Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for misconfigurations allowing privileged mode Corporate Control: Container Hardening Guidelines</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy container with --privileged flag to gain elevated access Corporate Control: Container Runtime Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Abuse privileged container for direct host interactions Third Party Control: Cloud Container Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system settings via privileged container Corporate Control: Endpoint Security Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform unauthorized actions within the container Corporate Control: Application Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to hide privileged container execution Third Party Control: Cloud Security Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy additional privileged containers for redundancy Corporate Control: Container Lifecycle Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Utilize rootkit techniques to hide processes from host detection Corporate Control: Host Intrusion Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable container security logging Third Party Control: Cloud SIEM Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist using additional privileged deployments Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

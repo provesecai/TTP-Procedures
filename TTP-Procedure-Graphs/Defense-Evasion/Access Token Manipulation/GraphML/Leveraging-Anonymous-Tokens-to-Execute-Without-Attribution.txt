@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="AnonymousTokenExecution" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain an Anonymous Security Token</data>
+</node>
+<node id="B">
+<data key="label">Use Anonymous Token to Execute Commands</data>
+</node>
+<node id="C">
+<data key="label">Bypass User Attribution in System Logs</data>
+</node>
+<node id="D">
+<data key="label">Ensure Persistent Execution Under Anonymous Context</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Generate or obtain an anonymous token Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized token assignments Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log attempts to use anonymous authentication Corporate Control: SIEM Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect system calls creating anonymous tokens Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute commands with anonymous user privileges Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect execution of unauthorized anonymous processes Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor system behavior for anonymous activity Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze execution anomalies tied to anonymous tokens Third Party Control: Cloud Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass security logging using anonymous context Corporate Control: Advanced Log Scrubbing Techniques</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor security logs for missing user attribution Third Party Control: Cloud SIEM Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect missing authentication details in system logs Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log anomalies related to anonymous execution Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution under an untraceable identity Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution logs to remove traces Third Party Control: Cloud-Based Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by user behavior monitoring Corporate Control: Endpoint Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic attribution techniques Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

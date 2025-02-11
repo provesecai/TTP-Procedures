@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SystemTokenExecution" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Steal SYSTEM Token from a High-Privilege Process</data>
+</node>
+<node id="B">
+<data key="label">Use SYSTEM Token to Execute Commands</data>
+</node>
+<node id="C">
+<data key="label">Avoid Detection by Security Tools</data>
+</node>
+<node id="D">
+<data key="label">Ensure Persistent SYSTEM Privileges</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Extract SYSTEM token from process memory Corporate Control: Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized SYSTEM token access Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unusual SYSTEM token requests Corporate Control: SIEM Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect process tampering attempts Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute commands using SYSTEM privileges Corporate Control: Process Execution Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor execution of commands under SYSTEM token Third Party Control: Cloud-Based Endpoint Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze SYSTEM token usage for anomalies Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log SYSTEM-level process execution Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass security tools by executing as SYSTEM Corporate Control: Advanced Threat Mitigation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect SYSTEM-level execution anomalies Third Party Control: Cloud-Based SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SYSTEM token usage for inconsistencies Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log security events related to SYSTEM token execution Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist SYSTEM access by modifying security logs Corporate Control: Log Scrubbing Techniques</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure continued SYSTEM token execution Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by forensic security tools Corporate Control: Anti-Forensic Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent revocation of SYSTEM token Third Party Control: Cloud-Based Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

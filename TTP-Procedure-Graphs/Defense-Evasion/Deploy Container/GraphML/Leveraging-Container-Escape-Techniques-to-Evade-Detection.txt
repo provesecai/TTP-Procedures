@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ContainerEscapeEvasion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Container with Misconfigured Security Settings</data>
+</node>
+<node id="B">
+<data key="label">Identify and Exploit Privileged Access</data>
+</node>
+<node id="C">
+<data key="label">Escape to Host by Exploiting Kernel Vulnerabilities</data>
+</node>
+<node id="D">
+<data key="label">Modify Host-Based Security Configurations</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Deploy container with host process mount enabled Corporate Control: Container Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze container runtime for misconfigured privileges Third Party Control: Cloud Security Posture Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit unprotected hostPath mounts Corporate Control: Kubernetes RBAC Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use privileged container to access host resources Corporate Control: Runtime Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage Linux capabilities to manipulate host system Third Party Control: Cloud Infrastructure Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Invoke system calls to gain host root access Corporate Control: Kernel Exploit Mitigation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable host security tools to avoid detection Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify host logs to erase evidence of escape Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persist on host using newly created systemd service Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional containers with host access Corporate Control: Kubernetes Audit Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use root access to modify security configurations Third Party Control: Advanced Host Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis by altering system timestamps Corporate Control: Log Integrity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain undetected by host-based monitoring tools Third Party Control: Cloud Intrusion Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

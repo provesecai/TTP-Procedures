@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ObfuscatedContainerImages" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Container Image with Obfuscated Code</data>
+</node>
+<node id="B">
+<data key="label">Modify Image Metadata to Appear Legitimate</data>
+</node>
+<node id="C">
+<data key="label">Upload Obfuscated Image to Registry</data>
+</node>
+<node id="D">
+<data key="label">Deploy Container from Obfuscated Image</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use obfuscation techniques to hide malicious code Corporate Control: Static Code Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Encrypt payloads within multi-stage builds Third Party Control: Cloud Security Scanners</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compress malicious scripts using UPX Corporate Control: Threat Intelligence and Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify container labels and tags to match production norms Corporate Control: CI/CD Security Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject benign-looking dependencies Third Party Control: Cloud-Based Threat Hunting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Sign container image with a valid certificate Corporate Control: Code Signing and Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store image in a registry with weak authentication Corporate Control: Registry Access Control Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy image using automated orchestration tools Third Party Control: Kubernetes Admission Controllers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Mask execution through normal container workloads Corporate Control: Runtime Behavior Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Execute obfuscated code inside running container Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use environment variables to reconstruct malicious payload Third Party Control: Cloud Workload Protection Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist in the network by deploying additional obfuscated containers Corporate Control: Container Lifecycle Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade signature-based detection mechanisms Third Party Control: Cloud-Based Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Incident Response</data>
+</edge>
+</graph>
+</graphml>

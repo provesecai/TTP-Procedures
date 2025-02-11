@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HidingMaliciousCode" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Existing Containerized Application</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Running Container</data>
+</node>
+<node id="C">
+<data key="label">Modify Application Behavior to Mask Malicious Execution</data>
+</node>
+<node id="D">
+<data key="label">Avoid Detection by Security Tools and Container Audits</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify vulnerable applications running inside containers Corporate Control: Vulnerability Scanners</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access runtime memory to inject shellcode Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify container startup scripts to execute payload Corporate Control: CI/CD Pipeline Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Manipulate entrypoint scripts to load hidden malware Corporate Control: Image Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disguise malicious processes as legitimate system services Third Party Control: Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage host mounts to establish persistence Corporate Control: Host Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify container logs to remove execution traces Corporate Control: SIEM and Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use process hollowing to run undetected Third Party Control: Cloud Workload Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt payload execution to evade signature detection Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist within application updates by modifying images Corporate Control: Container Image Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy redundant backdoors in alternative containers Third Party Control: Cloud Intrusion Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evasion maintained via legitimate service execution Corporate Control: Endpoint Detection and Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

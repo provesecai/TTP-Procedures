@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TokenManipulation_NtSetInformationToken" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain Access to a Privileged Token</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Attributes via NtSetInformationToken</data>
+</node>
+<node id="C">
+<data key="label">Use Modified Token to Execute Commands</data>
+</node>
+<node id="D">
+<data key="label">Alter Token Privileges to Prevent Detection</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify target process with high privileges Corporate Control: Windows API Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual token access attempts Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect process modifications to security tokens Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log unauthorized token enumeration attempts Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify token privileges using NtSetInformationToken Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor token privilege changes in real-time Third Party Control: Advanced Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalous token attribute modifications Corporate Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log security token changes for forensic analysis Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use altered token to execute commands stealthily Corporate Control: Application Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unexpected process execution under modified tokens Third Party Control: Endpoint Security Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate process execution anomalies with token modifications Corporate Control: SIEM Correlation Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alert security teams on unauthorized token-based execution Third Party Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify execution attributes to prevent detection Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log attempts to bypass token-based security controls Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade endpoint security tools using token manipulation Corporate Control: Advanced Evasion Strategies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution under an altered security context Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

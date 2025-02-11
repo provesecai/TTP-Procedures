@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EncryptedPayloads" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious Payload with Strong Encryption</data>
+</node>
+<node id="B">
+<data key="label">Store Encrypted Payload in Container Image</data>
+</node>
+<node id="C">
+<data key="label">Deploy Container with Encrypted Payload</data>
+</node>
+<node id="D">
+<data key="label">Decrypt Payload at Runtime for Execution</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Encrypt malicious scripts to bypass signature detection Corporate Control: Static Code Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use strong compression to obfuscate code Third Party Control: Cloud-Based Malware Sandboxing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed payload within multi-layer container images Corporate Control: Image Integrity Scanning</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store encrypted binaries in container filesystem Corporate Control: CI/CD Pipeline Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify container metadata to appear benign Third Party Control: Cloud Security Posture Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use environment variables for hidden decryption keys Corporate Control: Secret Management Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automatically decrypt payloads in memory Corporate Control: Memory Protection and Execution Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use runtime unpacking techniques to load malware Third Party Control: Behavioral Malware Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invoke payload execution with delay tactics Corporate Control: Advanced Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain evasion by dynamically encrypting logs Corporate Control: Cloud Log Integrity Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade security tools by executing in isolated namespaces Third Party Control: Container Isolation Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use runtime obfuscation to hide execution traces Corporate Control: Forensic Analysis and Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

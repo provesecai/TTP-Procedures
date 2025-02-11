@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="CreateProcessWithToken" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Steal Token from High-Privilege Process</data>
+</node>
+<node id="B">
+<data key="label">Use CreateProcessWithTokenW API</data>
+</node>
+<node id="C">
+<data key="label">Launch Malicious Process with Stolen Token</data>
+</node>
+<node id="D">
+<data key="label">Modify Execution Context to Avoid Detection</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Extract token from memory Corporate Control: Windows Credential Guard</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized token queries Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor high-privilege token access Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log token manipulation attempts Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Invoke CreateProcessWithTokenW API Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect suspicious process creation Third Party Control: Cloud Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate process launch with stolen tokens Corporate Control: SIEM Event Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze execution anomalies Third Party Control: Cloud-Based Forensic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify execution path to evade security tools Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process execution under stolen tokens Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized security context changes Corporate Control: SOC Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log suspicious token usage Third Party Control: Cloud Security Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase execution traces from security logs Corporate Control: Advanced Log Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist execution under modified process Third Party Control: Cloud Forensic Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade endpoint security policies Corporate Control: Application Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealth access using token manipulation Third Party Control: Cloud Continuous Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: SOC Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

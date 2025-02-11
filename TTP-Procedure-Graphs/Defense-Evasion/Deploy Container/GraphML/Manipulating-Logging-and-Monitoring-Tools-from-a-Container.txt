@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LoggingManipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Logging and Monitoring Services in the Environment</data>
+</node>
+<node id="B">
+<data key="label">Modify Container Logging Configuration to Suppress Events</data>
+</node>
+<node id="C">
+<data key="label">Tamper with SIEM and Security Logs</data>
+</node>
+<node id="D">
+<data key="label">Prevent Detection by Disabling Security Alerts</data>
+</node>
+<node id="E">
+<data key="label">Persist and Maintain Log Manipulation for Long-Term Evasion</data>
+</node>
+<node id="F">
+<data key="label">Defense Evasion Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Enumerate logging configurations and log forwarding rules Corporate Control: Cloud Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze SIEM event collection points for gaps Third Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit unsecured logging endpoints to alter log settings Corporate Control: SIEM Log Integrity</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify application logs to exclude security-related events Third Party Control: Cloud Security Compliance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify log rotation policies to overwrite evidence Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject fake logs to mask malicious actions Third Party Control: Cloud Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Corrupt or truncate security event logs Corporate Control: Endpoint Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable system logging services to prevent forensic analysis Corporate Control: SOC Monitoring and Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Manipulate SIEM dashboards to hide anomalies Third Party Control: Cloud Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter security event timestamps to disrupt correlation Corporate Control: Cloud Compliance Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistently modify logs to evade detection Corporate Control: Kubernetes Audit Log Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy script-based automation to continuously clean logs Third Party Control: Cloud-Based SIEM Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish redundant logging evasion mechanisms Corporate Control: Advanced Endpoint Security</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Remain undetected across multiple security monitoring tools Third Party Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Evade forensic examination through log manipulation Corporate Control: Incident Response Playbooks</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Maintain stealth by continuously altering log trails Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>
