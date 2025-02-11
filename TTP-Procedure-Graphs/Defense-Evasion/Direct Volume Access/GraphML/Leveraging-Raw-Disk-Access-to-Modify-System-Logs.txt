@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ModifySystemLogs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Access System Log Storage Volumes</data>
+</node>
+<node id="B">
+<data key="label">Use Direct Volume Access to Modify Log Entries</data>
+</node>
+<node id="C">
+<data key="label">Replace or Corrupt Critical Security Event Logs</data>
+</node>
+<node id="D">
+<data key="label">Prevent Log Restoration and Forensic Analysis</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for log storage locations using direct volume access Corporate Control: Security Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unprotected log files on raw disk Third Party Control: Cloud-Based Log Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass file permissions by accessing logs via raw disk reads Corporate Control: Endpoint Security Hardening</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Map log storage sectors for direct modification Third Party Control: SIEM Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject false log entries to create misleading forensic trails Corporate Control: Log Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify or delete security event logs Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace critical forensic timestamps with fake entries Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter log signatures to prevent detection Third Party Control: Cloud Security Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable log restoration mechanisms Corporate Control: Backup and Recovery Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Manipulate log retention settings Third Party Control: SOC-Based Log Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Continuously overwrite logs to prevent forensic analysis Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Corrupt audit log file structure to avoid detection Third Party Control: Cloud-Based Log Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure long-term evasion by modifying security logs Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by maintaining fake but plausible logs Third Party Control: Advanced SIEM Correlation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist log modifications by creating redundant copies Corporate Control: Forensic Data Recovery Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

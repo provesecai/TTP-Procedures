@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BypassingFileSystemMonitoring" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Volume Sectors Unmonitored by File System</data>
+</node>
+<node id="B">
+<data key="label">Write Malicious Data Directly to Raw Disk Sectors</data>
+</node>
+<node id="C">
+<data key="label">Access and Execute Malicious Code Without File System API</data>
+</node>
+<node id="D">
+<data key="label">Evade Endpoint Detection by Bypassing Security Agents</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan raw disk volumes for unmonitored areas Corporate Control: File System Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify locations that evade traditional scanning Third Party Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Manipulate disk partitioning schemes to evade detection Corporate Control: Disk Encryption and Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Write malicious code into low-level disk structures Corporate Control: Kernel-Level Storage Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage direct volume access to inject payloads Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass Windows API logging for stealthy execution Corporate Control: OS Security Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve and execute malicious payload directly from disk Corporate Control: Memory Integrity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid security software hooks by using raw disk reads Third Party Control: Advanced Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persist malicious code without triggering alerts Corporate Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade real-time security agents by avoiding monitored files Corporate Control: SIEM-Based Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic recovery by directly altering volume structures Third Party Control: Forensic Data Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain long-term evasion by rewriting sectors dynamically Corporate Control: SOC Continuous Monitoring</data>
+</edge>
+</graph>
+</graphml>

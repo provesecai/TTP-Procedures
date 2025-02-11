@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DisableSecurityMechanisms" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Access Security Configuration Files on Disk</data>
+</node>
+<node id="B">
+<data key="label">Modify or Corrupt Security Configuration Using Direct Disk Writes</data>
+</node>
+<node id="C">
+<data key="label">Ensure Changes Persist Across Reboots</data>
+</node>
+<node id="D">
+<data key="label">Prevent Security Tools from Detecting Tampered Configurations</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for system security files stored on disk Corporate Control: System Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify security policies stored in raw disk sectors Third Party Control: Cloud-Based Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass file access restrictions using direct disk writes Corporate Control: Kernel-Level Disk Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable security auditing logs to prevent detection Third Party Control: SIEM Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify security policy files to remove restrictions Corporate Control: Endpoint Security Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Corrupt disk sectors storing security settings Third Party Control: AI-Based Configuration Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Rewrite security policy rules to allow unauthorized actions Corporate Control: Advanced Threat Prevention</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure changes persist beyond system reboots Third Party Control: Cloud Configuration Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify kernel settings to prevent security alerts Corporate Control: Intrusion Prevention Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable integrity checks on security configurations Third Party Control: Cloud-Based Security Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Continuously alter security settings dynamically Corporate Control: Endpoint Protection Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use obfuscation techniques to mask configuration tampering Third Party Control: AI-Powered Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic recovery of original security settings Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure security logs do not register unauthorized changes Third Party Control: Advanced SIEM Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain evasion by continuously modifying security configurations Corporate Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Policy Enforcement</data>
+</edge>
+</graph>
+</graphml>

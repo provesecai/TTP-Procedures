@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ManipulatingShadowCopies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Volume Shadow Copies for Manipulation</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Shadow Copies</data>
+</node>
+<node id="C">
+<data key="label">Redirect File Reads to Compromised Shadow Copies</data>
+</node>
+<node id="D">
+<data key="label">Modify Volume Shadow Service to Prevent Deletion</data>
+</node>
+<node id="E">
+<data key="label">Persist Malicious Data in Volume Snapshots</data>
+</node>
+<node id="F">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identify accessible volume shadow copies Corporate Control: Endpoint Backup and Recovery Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for unprotected snapshots containing sensitive data Third Party Control: Cloud-Based Backup Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit VSS misconfigurations to gain modification access Corporate Control: Volume Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject payloads into shadow copies for later retrieval Corporate Control: Shadow Copy Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry to force applications to read from shadow copies Third Party Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt and store payloads inside hidden volume snapshots Corporate Control: Encrypted Volume Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect system processes to execute code from shadow copies Corporate Control: Operating System Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Utilize symbolic links to point applications to manipulated snapshots Third Party Control: Cloud Security Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure file restoration retrieves compromised files Corporate Control: Data Recovery and Forensic Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify shadow copy permissions to block deletion Corporate Control: Security Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable security tools that monitor shadow copy integrity Third Party Control: Advanced Threat Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Automate persistence by creating new shadow copies Corporate Control: SIEM-Based Anomaly Detection</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Maintain access even after system reboots Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Prevent forensic investigation by destroying logs Third Party Control: Cloud-Based Forensic Analysis</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Evade signature-based detection by executing from snapshots Corporate Control: Host-Based Intrusion Prevention Systems</data>
+</edge>
+<edge source="E" target="F">
+<data key="label">Defense evasion successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

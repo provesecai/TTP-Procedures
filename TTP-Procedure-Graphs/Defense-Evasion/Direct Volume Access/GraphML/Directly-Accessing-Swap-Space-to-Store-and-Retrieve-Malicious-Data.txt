@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SwapSpaceEvasion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Swap Partitions for Malicious Data Storage</data>
+</node>
+<node id="B">
+<data key="label">Write Malicious Payloads Directly to Swap Space</data>
+</node>
+<node id="C">
+<data key="label">Retrieve and Execute Payload Without File System Traces</data>
+</node>
+<node id="D">
+<data key="label">Prevent Swap Partition Forensic Analysis</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan system memory and swap usage for available space Corporate Control: Memory Protection Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify swap partitions with unencrypted storage Third Party Control: Cloud-Based Memory Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify swap configuration to allow persistent storage Corporate Control: OS Kernel Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by bypassing standard memory allocation Third Party Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious payloads directly into swap space Corporate Control: Disk Write Protection Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt stored payloads to prevent analysis Third Party Control: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system paging mechanisms to retrieve hidden code Corporate Control: Virtual Memory Security Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use kernel-mode execution to bypass swap read restrictions Third Party Control: Advanced Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure payload execution without standard process tracking Corporate Control: Host-Based Intrusion Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Manipulate memory paging to remove execution traces Third Party Control: Forensic Memory Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify swap read/write privileges dynamically Corporate Control: Endpoint Hardening Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use rapid overwriting techniques to prevent data retrieval Third Party Control: Memory Forensics and Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic investigation by destroying swap contents Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by continuously shifting swap allocation Third Party Control: AI-Powered Memory Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence by repeatedly reloading payloads from swap Corporate Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Virtual Memory Monitoring Policies</data>
+</edge>
+</graph>
+</graphml>

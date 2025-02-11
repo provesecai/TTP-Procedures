@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="OverwritingForensicEvidence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Forensic Artifacts Stored in Disk Sectors</data>
+</node>
+<node id="B">
+<data key="label">Overwrite Security and System Logs Using Raw Disk Writes</data>
+</node>
+<node id="C">
+<data key="label">Modify File Metadata and Timestamps to Prevent Recovery</data>
+</node>
+<node id="D">
+<data key="label">Ensure Artifacts Cannot Be Recovered with Forensic Tools</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Locate stored security event logs on disk Corporate Control: SIEM Log Integrity Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify forensic markers in unallocated disk space Third Party Control: Cloud-Based Digital Forensics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass OS logging mechanisms using direct disk writes Corporate Control: Endpoint Protection and Forensics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for deleted file remnants to overwrite forensic traces Third Party Control: Memory and Disk Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Overwrite system logs with random data Corporate Control: Advanced Endpoint Detection and Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Erase metadata associated with deleted files Third Party Control: AI-Based Threat Hunting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify timestamps to prevent forensic correlation Corporate Control: SIEM-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use secure deletion techniques to remove forensic traces Third Party Control: Cloud Security Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure forensic artifacts are irrecoverable Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use disk wiping utilities to sanitize deleted file space Third Party Control: Endpoint Security and Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify disk signatures to prevent forensic tracking Corporate Control: Digital Forensic Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Apply continuous overwriting to prevent data restoration Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealth by removing all forensic evidence Corporate Control: Endpoint Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection by ensuring logs do not contain traces Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist across investigations by continuously erasing logs Corporate Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Advanced Digital Forensics</data>
+</edge>
+</graph>
+</graphml>

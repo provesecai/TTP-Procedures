@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="InjectBootRecords" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Access Master Boot Record (MBR) or GPT</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Code into Boot Sector</data>
+</node>
+<node id="C">
+<data key="label">Modify Boot Sequence to Execute Malicious Code</data>
+</node>
+<node id="D">
+<data key="label">Prevent Boot Sector Integrity Checks</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate disk partitions to locate boot sector Corporate Control: Secure Boot Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze BIOS/UEFI configurations for write access Third Party Control: Firmware Integrity Validation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass OS security protections using direct disk writes Corporate Control: Kernel-Level Disk Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify system recovery options to prevent restoration Third Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed bootkit to execute before OS loads Corporate Control: Boot Sequence Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate injected code to avoid detection Third Party Control: AI-Based Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify firmware configurations to allow execution Corporate Control: Trusted Platform Module (TPM) Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject encrypted malicious payload for stealth Third Party Control: Threat Intelligence Correlation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter system logs to remove traces of modifications Corporate Control: Endpoint Detection and Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable BIOS integrity checks to allow persistence Third Party Control: Security Patch Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replace OS boot signatures with forged ones Corporate Control: Secure Boot Validation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Continuously rewrite boot sector to prevent detection Third Party Control: SIEM-Based Log Correlation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain long-term stealth by modifying boot process Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure execution remains hidden from forensic tools Third Party Control: Advanced Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist across reboots by securing boot-level execution Corporate Control: OS Kernel Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

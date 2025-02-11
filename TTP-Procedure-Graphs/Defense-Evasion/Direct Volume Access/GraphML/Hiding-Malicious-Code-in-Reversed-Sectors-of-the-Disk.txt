@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HidingInReservedSectors" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Reserved Disk Sectors Not Used by the OS</data>
+</node>
+<node id="B">
+<data key="label">Write Malicious Payloads to Reserved Disk Areas</data>
+</node>
+<node id="C">
+<data key="label">Modify File System References to Prevent Detection</data>
+</node>
+<node id="D">
+<data key="label">Ensure Malicious Code Executes Without Being Scanned</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for reserved disk sectors with available space Corporate Control: Disk Integrity Verification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify non-mapped storage areas on disk Third Party Control: Cloud-Based Disk Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass file system structures by writing directly to disk Corporate Control: Secure Disk Partitioning Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid logging disk modifications to remain undetected Third Party Control: Endpoint Monitoring and Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt stored payloads to prevent analysis Corporate Control: Encrypted Volume Storage Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify disk metadata to hide allocated space Third Party Control: SIEM-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure reserved sector access is blocked from user mode Corporate Control: Kernel-Level Disk Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prevent standard forensic tools from scanning hidden sectors Third Party Control: Cloud-Based Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Redirect security software read requests to clean areas Corporate Control: Advanced File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify disk controller logic to bypass security scans Third Party Control: AI-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use rootkit-like methods to conceal hidden code Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persist changes across system reboots for long-term evasion Third Party Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealth persistence without being detected Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic investigation by modifying access timestamps Third Party Control: Digital Forensic Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent recovery of hidden payloads by dynamically shifting storage Corporate Control: OS Kernel Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Secure Storage and Disk Policy Enforcement</data>
+</edge>
+</graph>
+</graphml>

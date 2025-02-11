@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HidingMaliciousCode" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Unallocated Disk Space for Malicious Storage</data>
+</node>
+<node id="B">
+<data key="label">Write Malicious Code Directly to Unallocated Sectors</data>
+</node>
+<node id="C">
+<data key="label">Access Hidden Code Without File System Interference</data>
+</node>
+<node id="D">
+<data key="label">Evade Security Scanners and File Integrity Monitors</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for available unallocated disk space Corporate Control: Storage Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unused sectors on disk with forensic tools Third Party Control: Disk Analysis Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit low-level disk access permissions Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Write payload directly to unallocated disk blocks Corporate Control: Disk Encryption and Protection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify disk sectors without creating file entries Third Party Control: SIEM and Logging Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage raw disk read/write operations to execute code Corporate Control: Operating System Hardening Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve hidden payloads via direct sector reads Corporate Control: File Integrity Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evade endpoint detection by bypassing standard storage APIs Third Party Control: AI-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify access timestamps to prevent forensic analysis Corporate Control: Security Audit and Logging Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist within unallocated space undetected Corporate Control: Advanced Forensic Disk Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade signature-based detection solutions Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain access by periodically rewriting payload Corporate Control: Host-Based Intrusion Prevention Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

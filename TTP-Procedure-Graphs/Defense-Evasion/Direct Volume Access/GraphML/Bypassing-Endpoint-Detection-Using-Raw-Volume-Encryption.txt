@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RawVolumeEncryption" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible Disk Volumes for Encryption</data>
+</node>
+<node id="B">
+<data key="label">Encrypt Malicious Payloads Directly on Raw Disk</data>
+</node>
+<node id="C">
+<data key="label">Use Custom Decryption Mechanism for Execution</data>
+</node>
+<node id="D">
+<data key="label">Prevent Security Software from Scanning Encrypted Sectors</data>
+</node>
+<node id="E">
+<data key="label">Defense Evasion Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for available raw disk partitions Corporate Control: Disk Access Control Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unencrypted sectors for malicious storage Third Party Control: Cloud-Based Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass OS security layers using raw disk writes Corporate Control: File System Encryption Standards</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid logging by writing directly to disk Third Party Control: SIEM Log Integrity Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt malware payloads to prevent analysis Corporate Control: Data Encryption Compliance Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store decryption keys in memory for runtime retrieval Third Party Control: Endpoint Memory Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify boot sector to automatically decrypt payloads Corporate Control: Secure Boot Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use polymorphic encryption to evade static analysis Third Party Control: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept security software disk scan requests Corporate Control: Intrusion Detection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use kernel-level hooking to disable file system scanning Third Party Control: Cloud Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt decrypted payloads post-execution to remove traces Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Continuously modify decryption routines to evade detection Third Party Control: Security Patch Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealth persistence with encrypted execution Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade forensic analysis by encrypting execution logs Third Party Control: Advanced Threat Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist payload access even after system reboot Corporate Control: OS Disk Encryption Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Defense evasion successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>
