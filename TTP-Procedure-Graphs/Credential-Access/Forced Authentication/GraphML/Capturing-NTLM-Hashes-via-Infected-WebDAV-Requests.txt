@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="WebDAV_NTLM_Capture" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malicious WebDAV Share to Target Network</data>
+</node>
+<node id="B">
+<data key="label">Trigger Forced Authentication via WebDAV Redirect</data>
+</node>
+<node id="C">
+<data key="label">Capture NTLM Hashes from WebDAV Authentication</data>
+</node>
+<node id="D">
+<data key="label">Store and Prepare NTLM Hashes for Offline Cracking</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy WebDAV share on an attacker-controlled host Corporate Control: Network Security Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure WebDAV is accessible to the target network Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify WebDAV requests to evade logging Corporate Control: Secure Authentication Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilize trusted domains for hosting WebDAV Third Party Control: AI-Based Network Security Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Force victim system to authenticate via WebDAV Corporate Control: SIEM-Based Authentication Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept authentication requests from WebDAV shares Third Party Control: AI-Based WebDAV Security Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication prompts to capture NTLM hashes Corporate Control: Endpoint Security and Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use proxy redirection to obfuscate attack origin Third Party Control: API-Based Authentication Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract and store NTLM hashes for cracking Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate NTLM hashes against known password lists Third Party Control: Dark Web Credential Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure extracted hashes remain undetected Corporate Control: SIEM-Based Hash Authentication Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify NTLM authentication requests for persistence Third Party Control: AI-Based Credential Theft Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cracked NTLM hashes for lateral movement Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain unauthorized access using captured credentials Third Party Control: AI-Based Identity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist in the network by injecting credentials into future sessions Corporate Control: SIEM-Based Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity Protection</data>
+</edge>
+</graph>
+</graphml>

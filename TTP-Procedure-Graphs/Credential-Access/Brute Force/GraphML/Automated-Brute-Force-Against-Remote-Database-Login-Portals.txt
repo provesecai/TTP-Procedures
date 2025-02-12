@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Database_BruteForce" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Remote Database Servers with Authentication</data>
+</node>
+<node id="B">
+<data key="label">Execute Brute Force Attack Against Database Logins</data>
+</node>
+<node id="C">
+<data key="label">Monitor for Successful Database Authentication</data>
+</node>
+<node id="D">
+<data key="label">Extract and Validate Compromised Database Credentials</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for database servers with weak authentication Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify publicly exposed database login portals Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate valid database users through error messages Corporate Control: Secure Database Configuration Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade detection by spreading login attempts across different IPs Third Party Control: AI-Based Database Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Launch brute-force attack against common database credentials Corporate Control: Multi-Factor Authentication (MFA) for Database Access</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use slow, distributed brute force to avoid triggering security alerts Third Party Control: API-Based Security Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for login responses to refine attack strategy Corporate Control: SIEM-Based Database Authentication Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify attack frequency based on failed login responses Third Party Control: AI-Based Identity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract and validate successfully compromised credentials Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test credentials on additional database instances Third Party Control: Dark Web Credential Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store compromised credentials for long-term access Corporate Control: Database Activity Monitoring (DAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistent access by modifying database user policies Third Party Control: AI-Based Account Takeover Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised database credentials for unauthorized queries Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage stolen database credentials for further exploitation Third Party Control: AI-Based Credential Security Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain long-term persistence in database authentication Corporate Control: SIEM-Based Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity and Access Monitoring</data>
+</edge>
+</graph>
+</graphml>

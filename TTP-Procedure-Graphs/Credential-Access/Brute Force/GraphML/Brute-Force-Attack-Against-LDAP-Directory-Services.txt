@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LDAP_BruteForce" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Publicly Accessible LDAP Servers</data>
+</node>
+<node id="B">
+<data key="label">Deploy Automated Brute Force Attack on LDAP</data>
+</node>
+<node id="C">
+<data key="label">Monitor for Successful Bind Requests</data>
+</node>
+<node id="D">
+<data key="label">Extract and Validate LDAP Credentials</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for exposed LDAP services Corporate Control: LDAP Access Control Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze directory authentication weaknesses Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure attack evades intrusion detection systems Corporate Control: SIEM-Based LDAP Authentication Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass account lockouts using low-speed brute force Third Party Control: AI-Based LDAP Threat Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute brute-force against LDAP user accounts Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Rotate request sources to avoid being flagged Third Party Control: Cloud-Based Access Control Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor authentication responses for credential validity Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evade detection by randomizing user requests Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract LDAP bind credentials Corporate Control: SIEM-Based LDAP Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate credentials against directory services Third Party Control: Dark Web Credential Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store extracted credentials for long-term use Corporate Control: Secure LDAP Authentication Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure access persistence for continued attacks Third Party Control: AI-Based Credential Abuse Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised credentials for privilege escalation Corporate Control: Continuous Identity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage LDAP credentials for lateral movement Third Party Control: Cloud-Based Account Compromise Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate credentials for external use Corporate Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

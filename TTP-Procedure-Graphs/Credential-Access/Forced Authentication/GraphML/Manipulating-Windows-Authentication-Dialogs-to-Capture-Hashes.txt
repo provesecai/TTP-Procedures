@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Windows_Auth_Dialog" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Fake Windows Authentication Prompt</data>
+</node>
+<node id="B">
+<data key="label">Trigger Forced Authentication via Windows UI Interaction</data>
+</node>
+<node id="C">
+<data key="label">Capture NTLM Hashes from Authentication Attempts</data>
+</node>
+<node id="D">
+<data key="label">Store and Prepare Hashes for Offline Cracking</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Display fake login prompt resembling Windows authentication Corporate Control: Endpoint Protection and Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure prompt triggers authentication request Third Party Control: AI-Based User Behavior Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify prompt design to evade security detections Corporate Control: Secure UI Interaction Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilize screen overlays to capture input Third Party Control: API-Based Identity Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect authentication request to attacker-controlled SMB share Corporate Control: SIEM-Based Authentication Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract NTLM authentication details Third Party Control: AI-Based Credential Theft Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure authentication relay remains undetected Corporate Control: Endpoint Security and Threat Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify attack parameters to bypass detection Third Party Control: AI-Based Credential Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store and validate captured NTLM hashes Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify extracted credentials against known lists Third Party Control: Dark Web Credential Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure captured credentials remain undetected Corporate Control: SIEM-Based Authentication Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify authentication flows for persistence Third Party Control: AI-Based Identity Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use NTLM credentials for unauthorized access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage compromised credentials for lateral movement Third Party Control: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain unauthorized authentication persistence Corporate Control: SIEM-Based Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity Protection</data>
+</edge>
+</graph>
+</graphml>

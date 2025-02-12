@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="TLS_Downgrade" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target TLS-Encrypted Sessions</data>
+</node>
+<node id="B">
+<data key="label">Force TLS Downgrade to Weaker Encryption</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Decrypt Login Credentials</data>
+</node>
+<node id="D">
+<data key="label">Extract Session Cookies or Authentication Tokens</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Monitor network for TLS handshake attempts Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify outdated TLS configurations on target services Third Party Control: SSL Certificate Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Force connection downgrade to weaker encryption Corporate Control: TLS Security Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Manipulate handshake responses to prevent strong ciphers Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept session data over downgraded connection Corporate Control: Endpoint TLS Inspection Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decrypt session traffic using known weak ciphers Third Party Control: Cloud-Based Traffic Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract plaintext login credentials Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store captured authentication data for later use Third Party Control: Threat Intelligence Feed</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze decrypted traffic for authentication tokens Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replay session tokens to impersonate users Third Party Control: API Security and Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify session headers to maintain access Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use extracted session data to bypass authentication Third Party Control: Cloud-Based Identity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obtain persistent access using hijacked sessions Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate login credentials for further use Third Party Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure access across multiple authentication attempts Corporate Control: Multi-Factor Authentication (MFA) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

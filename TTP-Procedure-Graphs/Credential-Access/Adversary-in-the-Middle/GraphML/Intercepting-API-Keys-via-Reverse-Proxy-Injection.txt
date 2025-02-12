@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ReverseProxy" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Reverse Proxy to Intercept API Requests</data>
+</node>
+<node id="B">
+<data key="label">Manipulate API Requests to Extract Authentication Tokens</data>
+</node>
+<node id="C">
+<data key="label">Capture and Store Stolen API Keys</data>
+</node>
+<node id="D">
+<data key="label">Replay API Keys to Access Restricted Data</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Set up rogue reverse proxy to inspect API traffic Corporate Control: API Gateway and Security Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Redirect API requests through attacker-controlled servers Third Party Control: Cloud-Based API Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass API authentication by modifying requests Corporate Control: Secure API Token Validation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure seamless request forwarding to avoid detection Third Party Control: AI-Based API Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract API keys from request headers Corporate Control: API Security Logging and Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify responses to capture additional authentication data Third Party Control: Cloud-Based API Gateway Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store extracted API tokens for future use Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for API key reuse patterns Third Party Control: AI-Powered API Behavior Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replay API keys to access protected endpoints Corporate Control: API Access Control Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify API requests to impersonate legitimate users Third Party Control: Cloud-Based Identity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure API key persistence for long-term access Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalies in API authentication logs Third Party Control: Advanced Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use API keys to exfiltrate sensitive data Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit API credentials for further attacks Third Party Control: Cloud-Based Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistent API access for future attacks Corporate Control: Continuous Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: API Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

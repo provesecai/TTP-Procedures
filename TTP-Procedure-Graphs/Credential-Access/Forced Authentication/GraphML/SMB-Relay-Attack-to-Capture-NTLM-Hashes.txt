@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SMB_Relay" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SMB Servers Accepting NTLM Authentication</data>
+</node>
+<node id="B">
+<data key="label">Intercept SMB Authentication Requests via MITM</data>
+</node>
+<node id="C">
+<data key="label">Relay NTLM Authentication to Target System</data>
+</node>
+<node id="D">
+<data key="label">Capture NTLM Hashes for Offline Cracking</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for SMBv1/SMBv2 endpoints Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify hosts without SMB signing enforced Third Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Position MITM relay attack for authentication hijacking Corporate Control: SIEM-Based SMB Access Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade detection by randomizing relay attack patterns Third Party Control: AI-Based SMB Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Relay captured NTLM authentication to another host Corporate Control: Secure SMB Authentication Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure authentication relay avoids detection Third Party Control: API-Based Security Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor authentication responses for relay success Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify relay attack speed to avoid security triggers Third Party Control: AI-Based Identity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture NTLM hashes for offline cracking Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate captured NTLM hashes for credential reuse Third Party Control: Dark Web Credential Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store extracted hashes for long-term use Corporate Control: Secure NTLM Authentication Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by modifying authentication behavior Third Party Control: AI-Based Credential Theft Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cracked NTLM hashes for unauthorized access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage NTLM credentials for lateral movement Third Party Control: AI-Based Credential Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain unauthorized access via NTLM relay Corporate Control: SIEM-Based Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity Protection</data>
+</edge>
+</graph>
+</graphml>

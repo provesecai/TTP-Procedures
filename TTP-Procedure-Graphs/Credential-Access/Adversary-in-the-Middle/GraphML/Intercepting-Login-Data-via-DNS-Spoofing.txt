@@ -1,0 +1,60 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS_Spoofing" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise DNS Resolution for Target Domains</data>
+</node>
+<node id="B">
+<data key="label">Redirect Users to Attacker-Controlled Websites</data>
+</node>
+<node id="C">
+<data key="label">Capture Authentication Credentials Entered by Users</data>
+</node>
+<node id="D">
+<data key="label">Store or Use Stolen Credentials for Further Exploitation</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Poison local or upstream DNS cache Corporate Control: Network Security Appliance Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit misconfigured DNS servers to modify records Third Party Control: Cloud-Based DNS Security Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass detection by targeting unmonitored DNS queries Corporate Control: SIEM-Based DNS Query Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure persistent spoofing through dynamic DNS updates Third Party Control: DNS Logging and Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Clone legitimate websites to steal login data Corporate Control: Web Traffic Filtering and Proxy Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject fake SSL certificates to avoid warnings Third Party Control: Certificate Transparency Logs and Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor entered credentials in real time Corporate Control: Endpoint Web Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure seamless user experience to avoid suspicion Third Party Control: AI-Based Phishing Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract credentials from web form submissions Corporate Control: SIEM-Based User Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept authentication tokens for session hijacking Third Party Control: API Security and Identity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify authentication responses to bypass MFA Corporate Control: Advanced Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store login credentials for future attacks Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use credentials for unauthorized access to services Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate stolen authentication data Third Party Control: Cloud-Based Threat Intelligence Correlation</

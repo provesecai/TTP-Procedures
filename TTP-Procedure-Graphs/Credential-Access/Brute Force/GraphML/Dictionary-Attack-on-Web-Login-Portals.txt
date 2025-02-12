@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DictionaryAttack" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Select Target Web Login Portal</data>
+</node>
+<node id="B">
+<data key="label">Deploy Dictionary Attack Using Common Passwords</data>
+</node>
+<node id="C">
+<data key="label">Monitor for Successful Authentication Attempts</data>
+</node>
+<node id="D">
+<data key="label">Capture and Validate Retrieved Credentials</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify vulnerable web login endpoints Corporate Control: Web Application Firewall (WAF) Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze login portal structure to optimize attack Third Party Control: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine rate-limiting policies on authentication Corporate Control: SIEM-Based Security Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure attack avoids detection using botnets Third Party Control: Cloud-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute rapid dictionary attack on login fields Corporate Control: Brute Force Detection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adjust request intervals to evade account lockouts Third Party Control: Credential Abuse Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor HTTP responses for authentication success Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Rotate IP addresses to bypass IP-based rate limits Third Party Control: Cloud-Based Traffic Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log successful authentication attempts for credential extraction Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate retrieved credentials against additional services Third Party Control: Dark Web Credential Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistence by storing cracked credentials Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify login behavior to avoid detection Third Party Control: AI-Based User Behavior Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised credentials to access sensitive services Corporate Control: Continuous Identity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage stolen passwords for lateral movement Third Party Control: Cloud-Based Credential Reuse Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate credentials for additional attacks Corporate Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NTLM_HashCracking" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Obtain NTLM Hashes from Compromised System</data>
+</node>
+<node id="B">
+<data key="label">Use Precomputed Hash Tables for Brute Force</data>
+</node>
+<node id="C">
+<data key="label">Match NTLM Hashes to Common Passwords</data>
+</node>
+<node id="D">
+<data key="label">Extract and Store Recovered Passwords</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Dump NTLM hashes using credential extraction tools Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exfiltrate stolen NTLM hashes for offline cracking Third Party Control: Cloud-Based Threat Intelligence Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze hash storage policies for weaknesses Corporate Control: Active Directory Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade detection using encrypted exfiltration techniques Third Party Control: AI-Based Data Exfiltration Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Run brute-force attack against precomputed hash lists Corporate Control: Secure Password Hashing Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage GPU-based parallel processing for faster cracking Third Party Control: Cloud-Based Password Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify hash cracking speed to avoid detection Corporate Control: SIEM-Based Threat Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evade detection by using decentralized cracking nodes Third Party Control: Distributed Hash Cracking Networks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract matched passwords from cracked hashes Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate recovered credentials against live systems Third Party Control: Dark Web Credential Reuse Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure password persistence for future use Corporate Control: Multi-Factor Authentication (MFA) Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify credential storage to evade security controls Third Party Control: AI-Based Credential Behavior Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cracked credentials to access restricted accounts Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for credential reuse across multiple services Third Party Control: Cloud-Based Credential Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage compromised passwords for lateral movement Corporate Control: SIEM-Based Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

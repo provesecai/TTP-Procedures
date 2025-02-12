@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fake_VPN_Auth_Portal" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Fake VPN Login Page Resembling Corporate Portal</data>
+</node>
+<node id="B">
+<data key="label">Lure Employees to Fake VPN Portal via Phishing Emails</data>
+</node>
+<node id="C">
+<data key="label">Trigger Forced Authentication Using NTLM Challenge</data>
+</node>
+<node id="D">
+<data key="label">Capture and Extract NTLM Hashes from Login Requests</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Host fake VPN login portal on attacker-controlled server Corporate Control: Web Filtering and DNS Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure portal visually mimics legitimate login page Third Party Control: AI-Based Website Spoofing Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify portal response behavior to evade detection Corporate Control: Secure SSO and MFA Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use trusted certificates for HTTPS encryption Third Party Control: Cloud-Based Domain Reputation Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send phishing emails with urgent VPN update alerts Corporate Control: Email Security Gateway and Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect victims to fake VPN login page Third Party Control: AI-Based Phishing Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure user credentials are captured in real-time Corporate Control: SIEM-Based Email Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify redirection techniques to bypass security filters Third Party Control: API-Based URL Reputation Scanning</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger NTLM authentication challenge Corporate Control: Secure VPN Access Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept NTLM hashes from authentication attempt Third Party Control: AI-Based Identity Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify authentication relay to remain undetected Corporate Control: Endpoint Security and Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure authentication bypasses traditional detection mechanisms Third Party Control: AI-Based Credential Theft Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage NTLM credentials for unauthorized VPN access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistence using stolen VPN credentials Third Party Control: AI-Based Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Utilize credentials for lateral movement Corporate Control: SIEM-Based Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity Protection</data>
+</edge>
+</graph>
+</graphml>

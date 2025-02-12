@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="NTLM_MITM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target System Using NTLM Authentication</data>
+</node>
+<node id="B">
+<data key="label">Intercept NTLM Challenge-Response Authentication</data>
+</node>
+<node id="C">
+<data key="label">Relay or Crack Captured NTLM Hash</data>
+</node>
+<node id="D">
+<data key="label">Use Recovered Credentials for Unauthorized Access</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Monitor network traffic for NTLM authentication attempts Corporate Control: SIEM-Based Network Traffic Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use ARP spoofing or rogue DHCP to intercept authentication Third Party Control: Cloud-Based Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass SMB signing to allow NTLM relay Corporate Control: SMB Security Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Intercept NTLM authentication packets Third Party Control: Endpoint Security Suite</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture NTLM challenge-response hashes Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Relay captured hashes to authenticate as a legitimate user Third Party Control: Identity Access Management (IAM) Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract NTLM hashes for offline cracking Corporate Control: Secure Authentication Protocols</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze authentication traffic for vulnerabilities Third Party Control: AI-Powered Credential Theft Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use recovered credentials to access remote services Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage NTLM relay attacks for lateral movement Third Party Control: Advanced Threat Intelligence Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Inject session credentials into attack tools Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for successful authentication events Third Party Control: Behavioral Analytics for Credential Abuse</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access sensitive user accounts Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Escalate privileges using harvested credentials Third Party Control: Cloud-Based Credential Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate credentials for further attacks Corporate Control: Data Loss Prevention (DLP) Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>
