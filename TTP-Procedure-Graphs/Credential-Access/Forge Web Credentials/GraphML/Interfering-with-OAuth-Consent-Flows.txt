@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Interfering_With_OAuth_Consent_Flows" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web Applications Using OAuth Authentication</data>
+</node>
+<node id="B">
+<data key="label">Manipulate OAuth Consent Flows</data>
+</node>
+<node id="C">
+<data key="label">Obtain Unauthorized OAuth Tokens</data>
+</node>
+<node id="D">
+<data key="label">Use OAuth Tokens to Access Web Services</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor OAuth implementation weaknesses Corporate Control: OAuth Security Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured consent prompts Third Party Control: Identity Federation Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Spoof OAuth client requests Corporate Control: Secure OAuth Token Handling</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Intercept OAuth authorization codes Third Party Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit weak OAuth redirects to steal tokens Corporate Control: Secure Redirect Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replay stolen tokens to maintain access Third Party Control: Cloud-Based Identity Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify token claims to escalate privileges Corporate Control: OAuth Session Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor OAuth consent logs for anomalies Third Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use stolen tokens to access user accounts Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract OAuth-based authentication cookies Third Party Control: Web Access Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass token expiration policies Corporate Control: OAuth Refresh Token Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continuous session hijacking Third Party Control: AI-Based Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure unauthorized OAuth access remains undetected Corporate Control: Secure API Access Logs</data>
+</edge>
+</graph>
+</graphml>

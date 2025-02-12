@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_Web_Sessions_Using_Forged_Cookies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web Services Using Cookie-Based Authentication</data>
+</node>
+<node id="B">
+<data key="label">Analyze and Extract Valid Authentication Cookies</data>
+</node>
+<node id="C">
+<data key="label">Forge Authentication Cookies with Elevated Privileges</data>
+</node>
+<node id="D">
+<data key="label">Use Forged Cookies to Access Target Accounts</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify session cookie storage methods Corporate Control: Web Application Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for exposed authentication cookies Third Party Control: Web Proxy Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze session management implementations Corporate Control: Secure Cookie Handling Best Practices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for insecure cookie transmission Third Party Control: TLS Encryption & HTTPS Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract valid authentication cookies from memory Corporate Control: Browser Security & Session Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify session attributes to escalate privileges Third Party Control: Web Application Firewall (WAF) Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replay intercepted cookies to gain unauthorized access Corporate Control: SIEM Alerts for Session Reuse</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit weak cookie signing mechanisms Third Party Control: Digital Signature Integrity Checks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Authenticate as a legitimate user using forged cookies Corporate Control: Web Authentication Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to remove unauthorized cookie usage Third Party Control: Security Information & Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use forged cookies to escalate account privileges Corporate Control: Multi-Factor Authentication Bypass</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain access by renewing forged cookies Third Party Control: Session Timeout Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection by disabling cookie expiration Third Party Control: Web Application Session Monitoring</data>
+</edge>
+</graph>
+</graphml>

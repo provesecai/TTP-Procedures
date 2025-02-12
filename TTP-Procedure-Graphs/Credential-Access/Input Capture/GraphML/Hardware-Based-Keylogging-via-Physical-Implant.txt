@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hardware_Keylogger" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Physical Hardware Keylogger to Capture Keystrokes</data>
+</node>
+<node id="B">
+<data key="label">Ensure Keylogger Remains Undetected in Target Environment</data>
+</node>
+<node id="C">
+<data key="label">Record and Store All Keystrokes Entered on the System</data>
+</node>
+<node id="D">
+<data key="label">Retrieve Logged Data via Wireless or Physical Access</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use inconspicuous USB or keyboard implants Corporate Control: Physical Security Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure hardware keylogger evades detection Third Party Control: AI-Based Endpoint Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify keylogger firmware to mimic legitimate devices Corporate Control: Secure USB Device Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy keylogger in high-risk physical areas Third Party Control: Physical Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure continuous keylogging across multiple sessions Corporate Control: Endpoint Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt stored keystrokes to prevent tampering Third Party Control: Secure Data Storage Practices</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify keylogger data transmission to blend with normal traffic Corporate Control: Network Security Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Persist keylogging functionality through power cycles Third Party Control: AI-Based Persistent Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store keystrokes in hidden system partitions Corporate Control: Secure Boot and File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Transmit logged keystrokes over covert wireless channels Third Party Control: RF Signal Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure collected data is accessible only to the attacker Corporate Control: Endpoint Device Isolation Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify keylogging retrieval process to avoid detection Third Party Control: AI-Based Behavior Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use captured credentials for unauthorized access Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist access via stored credentials for future attacks Third Party Control: AI-Based Credential Theft Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication mechanisms to ensure persistence Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

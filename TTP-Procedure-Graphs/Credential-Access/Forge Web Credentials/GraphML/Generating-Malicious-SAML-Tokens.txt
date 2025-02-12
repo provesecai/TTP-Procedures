@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_SAML_Tokens" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Forge Malicious SAML Token with Elevated Privileges</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Signature to Bypass Integrity Checks</data>
+</node>
+<node id="C">
+<data key="label">Inject Token into Authentication Workflows</data>
+</node>
+<node id="D">
+<data key="label">Ensure Persistence of Forged Token in SSO Systems</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Generate a valid SAML assertion with manipulated attributes Corporate Control: Identity Provider (IdP) Token Validation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass token signature verification using weak certificates Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify assertion expiration time to maintain access Corporate Control: Token Expiry Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure token is valid for multiple identity providers Third Party Control: Federated Authentication Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject forged SAML token into login requests Corporate Control: Secure Authentication Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure token is accepted by authentication APIs Third Party Control: Cloud Identity Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication cookies using forged SAML token Corporate Control: Browser Session Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate token persistence across multiple logins Third Party Control: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure token remains active for extended periods Corporate Control: Access Token Revocation Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify federated login flows to reuse the token Third Party Control: AI-Based Access Control Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evade detection by generating new tokens dynamically Corporate Control: Real-Time Identity Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure token injection does not trigger alerts Third Party Control: Cloud-Based Authentication Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use forged token for unauthorized system access Corporate Control: Identity Access Management (IAM) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for token replay attacks Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication tokens to avoid detection Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Multi-Factor Authentication (MFA) Enforcement</data>
+</edge>
+</graph>
+</graphml>

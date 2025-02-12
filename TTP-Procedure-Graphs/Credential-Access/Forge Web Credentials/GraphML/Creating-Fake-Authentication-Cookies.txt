@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fake_Authentication_Cookies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Generate Fake Authentication Cookies</data>
+</node>
+<node id="B">
+<data key="label">Modify Session Tokens to Bypass Validation</data>
+</node>
+<node id="C">
+<data key="label">Inject Fake Cookies into Browser Sessions</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection Using Cookie Encryption</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Generate cookies with stolen user attributes Corporate Control: Web Application Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify session validation using weak encryption Third Party Control: AI-Based Browser Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure cookies persist across browser restarts Corporate Control: Secure Session Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use stolen session IDs to create new cookies Third Party Control: Cloud Security Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject fake cookies into active sessions Corporate Control: Secure Authentication Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify browser settings to accept fake cookies Third Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure cookies bypass multi-factor authentication Corporate Control: Federated Identity Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replay authentication cookies across services Third Party Control: Secure Browser Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt fake cookies to evade security logs Corporate Control: Secure Token Storage Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure fake cookies remain valid for extended periods Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use dynamic encryption keys to hide fake cookies Corporate Control: Web Access Logs Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify session expiration timers to retain access Third Party Control: Cloud-Based Identity Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use fake cookies for persistent credential access Corporate Control: Identity Access Management (IAM) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalous cookie activity Third Party Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Multi-Factor Authentication (MFA) Enforcement</data>
+</edge>
+</graph>
+</graphml>

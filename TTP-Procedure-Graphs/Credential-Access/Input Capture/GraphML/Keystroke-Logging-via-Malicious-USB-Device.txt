@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Keystroke_Logging_USB" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Rogue USB Device with Keystroke Logging Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Ensure Device is Plugged into Target System via Social Engineering</data>
+</node>
+<node id="C">
+<data key="label">Record and Store All Keystrokes in Hidden Storage</data>
+</node>
+<node id="D">
+<data key="label">Retrieve Logged Data via Wireless or Physical Access</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use commercially available hardware keyloggers Corporate Control: USB Device Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure USB device remains undetected by security tools Third Party Control: AI-Based Endpoint Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify USB firmware to bypass security scans Corporate Control: Endpoint Security Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy USB device within target's premises Third Party Control: Physical Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Trick employees into plugging in USB device Corporate Control: Employee Security Awareness Training</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Utilize HID emulation to avoid detection Third Party Control: Advanced USB Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure keystroke recording is performed in stealth mode Corporate Control: Endpoint Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify data storage location to evade detection Third Party Control: AI-Based USB Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store captured keystrokes in hidden partitions Corporate Control: Endpoint Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Transmit stored keystrokes via encrypted channels Third Party Control: SIEM-Based Network Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify keystroke storage to mimic legitimate log files Corporate Control: Endpoint File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Persist keystroke capture across system reboots Third Party Control: AI-Based Persistent Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use captured credentials for unauthorized access Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Automate credential harvesting for lateral movement Third Party Control: AI-Based Credential Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication mechanisms to ensure long-term access Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Identity Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

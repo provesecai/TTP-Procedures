@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Generating_Fake_X509_Certificates" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Systems Using TLS Certificate-Based Authentication</data>
+</node>
+<node id="B">
+<data key="label">Generate Fraudulent X.509 Certificates</data>
+</node>
+<node id="C">
+<data key="label">Use Fake Certificates to Authenticate as a Legitimate User</data>
+</node>
+<node id="D">
+<data key="label">Modify Certificate Logs to Conceal Attack</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Analyze TLS authentication implementation Corporate Control: Certificate Authority Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify weak cryptographic key generation Corporate Control: Public Key Infrastructure (PKI) Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit misconfigured certificate validation Corporate Control: SSL/TLS Certificate Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify trusted certificate authorities to impersonate Third Party Control: Digital Certificate Trust Chains</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Forge X.509 certificate with legitimate-looking credentials Corporate Control: Certificate Transparency Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate certificates with stolen private keys Third Party Control: Key Management Systems (KMS)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify certificate metadata to appear valid Corporate Control: Endpoint Security for PKI</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use automation to generate multiple fake certificates Third Party Control: Cloud-Based Certificate Issuers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Authenticate to services requiring TLS authentication Corporate Control: Mutual TLS (mTLS) Verification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use certificate-based authentication to bypass MFA Third Party Control: Identity & Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify certificate logs to remove unauthorized use Corporate Control: SIEM Monitoring for Certificate Activity</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continued access by renewing fake certificates Third Party Control: Certificate Lifecycle Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by disabling certificate revocation checks Third Party Control: Certificate Revocation List (CRL) Bypass</data>
+</edge>
+</graph>
+</graphml>

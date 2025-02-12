@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_API_Hooks" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Inject Malicious Hooks into System APIs to Intercept Keystrokes</data>
+</node>
+<node id="B">
+<data key="label">Modify System Call Handling to Capture Keyboard Input</data>
+</node>
+<node id="C">
+<data key="label">Store Logged Keystrokes in Attacker-Controlled Space</data>
+</node>
+<node id="D">
+<data key="label">Transmit Captured Data to Remote Server</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Hook Windows API functions responsible for keyboard input Corporate Control: Secure API Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure hook injection is undetected by antivirus Third Party Control: AI-Based Behavioral Threat Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify event handling to bypass security monitoring Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure persistence of API hooks across reboots Third Party Control: Advanced Malware Threat Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept keystrokes and process credentials in real-time Corporate Control: Secure Input Handling Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure keystrokes are logged without triggering security alerts Third Party Control: AI-Based System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify data capture methods to blend with normal processes Corporate Control: SIEM-Based System Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain logging functionality even after software updates Third Party Control: Next-Gen Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt and store captured credentials for later use Corporate Control: Secure System Storage Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Transmit data using covert channels to evade detection Third Party Control: Network Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging behavior to bypass endpoint monitoring Corporate Control: Endpoint File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure data transmission occurs in intervals to avoid alerts Third Party Control: AI-Based Traffic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use harvested credentials for unauthorized system access Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store credentials for use in later attacks Third Party Control: Dark Web Credential Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication mechanisms to maintain access Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

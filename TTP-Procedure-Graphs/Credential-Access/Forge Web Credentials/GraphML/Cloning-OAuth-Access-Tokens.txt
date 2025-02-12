@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Cloning_OAuth_Tokens" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Capture and Clone OAuth Access Token</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Claims to Retain Authorization</data>
+</node>
+<node id="C">
+<data key="label">Inject Forged Token into Web Authentication Requests</data>
+</node>
+<node id="D">
+<data key="label">Evade Detection Using Token Refresh Methods</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Steal OAuth token via XSS or Man-in-the-Middle Corporate Control: OAuth Token Encryption Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Clone valid access token and modify claims Third Party Control: AI-Based API Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure token refresh remains undetected Corporate Control: Access Token Expiry Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use stolen refresh tokens to regain access Third Party Control: Cloud Security Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject cloned token into authentication headers Corporate Control: Secure API Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure token mimics legitimate authentication flows Third Party Control: Behavior-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify session validation to accept cloned tokens Corporate Control: Federated Identity Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replay tokens across multiple OAuth services Third Party Control: OAuth Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extend token lifetime by modifying refresh attributes Corporate Control: OAuth Revocation Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure cloned tokens bypass authentication logs Third Party Control: AI-Based Session Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify browser session cookies to store cloned tokens Corporate Control: Secure Browser Session Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use automation to refresh forged tokens dynamically Third Party Control: Cloud-Based Identity Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use cloned OAuth tokens to access user accounts Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for OAuth token anomalies Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain credential access using new cloned tokens Corporate Control: Identity Access Management (IAM) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Keylogging_Browser_Extension" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Develop Malicious Browser Extension with Keylogging Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Distribute Malicious Extension via Phishing or Fake Store</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Capture User Keystrokes in Web Forms</data>
+</node>
+<node id="D">
+<data key="label">Send Captured Credentials to Attacker Server</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Ensure extension bypasses security checks Corporate Control: Browser Extension Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify extension metadata to mimic legitimate software Third Party Control: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure compatibility with multiple browser versions Corporate Control: Browser Security Patch Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage open-source browser extension frameworks Third Party Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy extension via phishing emails Corporate Control: Email Security Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit weak extension store review process Third Party Control: Cloud-Based Store Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use social engineering tactics to increase downloads Corporate Control: User Awareness Training Programs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious extension is auto-installed via group policies Third Party Control: Endpoint Security and Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept user input in login fields Corporate Control: Secure Input Handling</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt and transmit credentials to command server Third Party Control: SIEM-Based Network Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify JavaScript execution flow to avoid detection Corporate Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate keystroke capture mechanism Third Party Control: Advanced Threat Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Utilize stolen credentials for unauthorized access Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persist access via stored session cookies Third Party Control: AI-Based Credential Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication mechanisms to evade detection Corporate Control: SIEM-Based Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Continuous Authentication Monitoring</data>
+</edge>
+</graph>
+</graphml>

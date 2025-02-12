@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Forging_JWTs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Forged JSON Web Token (JWT)</data>
+</node>
+<node id="B">
+<data key="label">Modify Token Signature to Bypass Validation</data>
+</node>
+<node id="C">
+<data key="label">Inject Token into Web Authentication Requests</data>
+</node>
+<node id="D">
+<data key="label">Ensure Persistent Access via Token Refresh</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Generate a JWT with elevated privileges Corporate Control: Secure Token Verification Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify signature to use weak cryptographic algorithms Third Party Control: AI-Based Authentication Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Remove expiration limits from token payload Corporate Control: Token Expiry Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Replay forged JWT across multiple services Third Party Control: Identity Federation Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject JWT into authentication headers Corporate Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure JWT is accepted by authentication APIs Third Party Control: AI-Based API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify browser cookies to include forged JWT Corporate Control: Secure Browser Session Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use dynamic key generation to avoid detection Third Party Control: Cloud Security Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extend token lifetime through refresh attacks Corporate Control: OAuth Token Revocation Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify identity provider settings to retain access Third Party Control: Cloud-Based Authentication Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure JWT persists across multiple sessions Corporate Control: SIEM-Based Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evade detection by rotating forged JWT keys Third Party Control: Threat Intelligence Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use forged JWT for unauthorized system access Corporate Control: Identity Access Management (IAM) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for anomalous JWT activity Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication mechanisms to maintain access Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Multi-Factor Authentication (MFA) Enforcement</data>
+</edge>
+</graph>
+</graphml>

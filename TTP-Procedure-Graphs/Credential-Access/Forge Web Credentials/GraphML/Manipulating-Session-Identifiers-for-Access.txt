@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Session_Identifier_Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Steal or Generate Valid Session Identifiers</data>
+</node>
+<node id="B">
+<data key="label">Modify Session Identifiers for Unauthorized Access</data>
+</node>
+<node id="C">
+<data key="label">Inject Manipulated Session Identifiers into Authentication Workflows</data>
+</node>
+<node id="D">
+<data key="label">Maintain Persistent Access Through Session Fixation</data>
+</node>
+<node id="E">
+<data key="label">Credential Access Successfully Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Capture valid session identifiers using packet sniffing Corporate Control: TLS Session Encryption</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Generate fake session IDs using brute force Third Party Control: AI-Based Traffic Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify session tokens to match active users Corporate Control: Secure API Token Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Replay session tokens across multiple services Third Party Control: Behavior-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject manipulated session IDs into authentication cookies Corporate Control: Secure Browser Cookie Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify session attributes to bypass MFA Third Party Control: Cloud Authentication Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure modified session identifiers bypass validation Corporate Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evade detection using dynamically generated session IDs Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure session identifiers persist across logins Corporate Control: Identity Access Management (IAM) Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify session expiration times to extend access Third Party Control: AI-Based Session Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Rotate session identifiers to maintain access Corporate Control: Secure Session Timeout Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for anomalous session activity Third Party Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use manipulated session identifiers for continued credential access Corporate Control: Multi-Factor Authentication (MFA) Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Credential access successfully achieved Corporate Control: Web Access Logs Monitoring</data>
+</edge>
+</graph>
+</graphml>
