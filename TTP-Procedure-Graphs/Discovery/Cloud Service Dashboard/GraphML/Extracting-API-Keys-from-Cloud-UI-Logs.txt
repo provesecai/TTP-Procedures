@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_API_Keys_from_Cloud_UI_Logs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Logging Interface</data>
+</node>
+<node id="B">
+<data key="label">Filter Logs for API Key Exposure</data>
+</node>
+<node id="C">
+<data key="label">Extract API Keys and Metadata</data>
+</node>
+<node id="D">
+<data key="label">Validate API Key Permissions</data>
+</node>
+<node id="E">
+<data key="label">API Keys Successfully Discovered</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Gain dashboard access to cloud logs Corporate Control: IAM Role Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Browse admin logs for authentication traces Corporate Control: Cloud Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Search logs for sensitive API key leaks Corporate Control: Cloud Compliance Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract API keys embedded in logs Corporate Control: Secure Logging Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze logs for unintentional exposure Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for API key access violations Corporate Control: Cloud Auditing Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify permissions linked to discovered keys Corporate Control: API Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Attempt unauthorized API requests Corporate Control: Rate Limiting & API Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check API access scope (admin, read-only) Corporate Control: Cloud Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Save API keys for later use or escalation Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare API exploitation strategies Corporate Control: Endpoint Protection Services</data>
+</edge>
+</graph>
+</graphml>

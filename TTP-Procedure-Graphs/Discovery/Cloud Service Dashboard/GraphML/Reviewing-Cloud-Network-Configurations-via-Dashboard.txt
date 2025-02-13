@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Reviewing_Cloud_Network_Configurations_via_Dashboard" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Networking Dashboard</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Virtual Networks and Subnets</data>
+</node>
+<node id="C">
+<data key="label">Analyze Firewall Rules and ACLs</data>
+</node>
+<node id="D">
+<data key="label">Inspect External Exposure and Peering</data>
+</node>
+<node id="E">
+<data key="label">Cloud Network Configuration Successfully Discovered</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Navigate to cloud networking dashboard Corporate Control: IAM Networking Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query API for existing virtual networks Corporate Control: Cloud Network Visibility Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unsecured or overly permissive subnets Third Party Control: External Security Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor real-time networking logs Corporate Control: Cloud Traffic Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Export networking data for offline analysis Third Party Control: SIEM & Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract firewall rules applied to subnets Corporate Control: Cloud Firewall Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze access control lists (ACLs) for vulnerabilities Corporate Control: Network Access Control Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify exposed network services to the internet Third Party Control: Penetration Testing Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for open ports and unfiltered traffic Corporate Control: Security Group Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Review external network peering and VPN settings Corporate Control: Network Peering Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-check ingress/egress traffic monitoring Third Party Control: External Traffic Analysis Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze load balancer configurations for security gaps Corporate Control: Cloud Load Balancer Rules</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evaluate DNS and CDN configurations for exposure Third Party Control: Managed DNS Security Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile findings for further analysis Corporate Control: Network Security Team</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Correlate network settings with compliance reports Third Party Control: Regulatory Compliance Assessments</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Determine misconfigurations for potential exploitation Corporate Control: Cloud Configuration Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store identified vulnerabilities for further use Third Party Control: Security Incident Response Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cloud network configurations successfully reviewed Corporate Control: Cloud Monitoring & Security Operations</data>
+</edge>
+</graph>
+</graphml>

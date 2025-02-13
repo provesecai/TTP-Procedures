@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying_Storage_Buckets_in_Cloud_Dashboards" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Storage Dashboard</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Available Storage Buckets</data>
+</node>
+<node id="C">
+<data key="label">Analyze Bucket Configurations and Access</data>
+</node>
+<node id="D">
+<data key="label">Inspect Permissions and Data Visibility</data>
+</node>
+<node id="E">
+<data key="label">Storage Buckets Successfully Discovered</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Gain access to cloud storage dashboard Corporate Control: IAM Role Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Browse through storage management interface Corporate Control: Cloud Storage Visibility Settings</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify public or unsecured storage buckets Corporate Control: Data Protection Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor audit logs for bucket enumeration attempts Corporate Control: Cloud Security Event Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query API endpoints for bucket listings Corporate Control: Cloud API Access Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract metadata from identified buckets Corporate Control: Object Storage Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze storage tiers and lifecycle rules Corporate Control: Cloud Storage Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Review bucket logging configurations Corporate Control: Security Log Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify encryption policies for data security Corporate Control: Cloud Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check IAM permissions on each bucket Corporate Control: Role-Based Access Controls (RBAC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Determine cross-region bucket replication settings Corporate Control: Cloud Data Residency Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze storage logs for access anomalies Corporate Control: SIEM & Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-check exposed buckets with known assets Corporate Control: Cloud Inventory Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store identified bucket details for future access Corporate Control: Cloud Security Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify potential sensitive data leaks Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract metadata for threat modeling Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Flag misconfigured storage settings for exploitation Corporate Control: Continuous Compliance Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bucket access successfully discovered Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+</graph>
+</graphml>

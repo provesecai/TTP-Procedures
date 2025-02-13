@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="EnumerateActiveSessions" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Access Cloud Dashboard</data>
+</node>
+<node id="B">
+<data key="label">Navigate to User Activity Panel</data>
+</node>
+<node id="C">
+<data key="label">Extract Active Session Details</data>
+</node>
+<node id="D">
+<data key="label">Analyze User Logins and Session Tokens</data>
+</node>
+<node id="E">
+<data key="label">Active User Sessions Discovered</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Log into cloud service dashboard Corporate Control: Cloud IAM Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use existing credentials to gain dashboard access Corporate Control: Multi-Factor Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor cloud login events Third Party Control: Cloud SIEM Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Browse to session management section Corporate Control: Cloud Access Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Query active session records Corporate Control: Cloud Console API</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Filter users based on last activity timestamps Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture user login IPs, device info Corporate Control: Cloud Authentication Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Export session history for later analysis Corporate Control: Log Retention Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-check with known suspicious logins Third Party Control: Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm valid active sessions Corporate Control: IAM Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Report unauthorized sessions to security teams Third Party Control: Cloud SOC</data>
+</edge>
+</graph>
+</graphml>

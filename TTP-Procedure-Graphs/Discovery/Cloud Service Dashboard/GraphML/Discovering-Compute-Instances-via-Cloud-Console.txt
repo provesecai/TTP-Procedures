@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Discovering_Compute_Instances" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Dashboard Compute Section</data>
+</node>
+<node id="B">
+<data key="label">List Available Compute Instances</data>
+</node>
+<node id="C">
+<data key="label">Analyze Instance Details</data>
+</node>
+<node id="D">
+<data key="label">Cross-reference with Networking Data</data>
+</node>
+<node id="E">
+<data key="label">Compute Infrastructure Successfully Discovered</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">View compute dashboard with existing access Corporate Control: Cloud IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify running virtual machines Corporate Control: Cloud Compute Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API requests to enumerate instances Corporate Control: Cloud Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract instance metadata (OS, size, tags) Corporate Control: Cloud Metadata Service</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for auto-scaling configurations Corporate Control: Cloud Scaling Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Review attached disks and snapshots Corporate Control: Cloud Storage Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Compare instances with active VPCs Corporate Control: Cloud Network Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify public and private IP allocations Corporate Control: Cloud Firewall Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze network peering and NAT rules Corporate Control: Cloud Security Groups</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Document cloud infrastructure for further analysis Corporate Control: Cloud Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Export findings for potential exploitation Corporate Control: Cloud Audit Controls</data>
+</edge>
+</graph>
+</graphml>

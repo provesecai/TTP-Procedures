@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Checking_Recent_Login_Activity_in_Cloud_Console" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Console Audit Logs</data>
+</node>
+<node id="B">
+<data key="label">Retrieve Recent Login Events</data>
+</node>
+<node id="C">
+<data key="label">Analyze Login Patterns and Anomalies</data>
+</node>
+<node id="D">
+<data key="label">Correlate Login Data with IAM Roles</data>
+</node>
+<node id="E">
+<data key="label">Login Activity Successfully Discovered</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Navigate to cloud provider's logging dashboard Corporate Control: Cloud Audit Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Filter login-related activities in logs Corporate Control: Cloud Security Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query API for raw login event data Third Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract authentication success/failure rates Corporate Control: Cloud Identity and Access Management (IAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Export login history for forensic analysis Third Party Control: Digital Forensics & Incident Response (DFIR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify login attempts from untrusted IPs Corporate Control: Network Security & Zero Trust Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect logins outside of normal work hours Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference authentication with geolocation Third Party Control: External Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for repeated failed authentication attempts Corporate Control: Brute-force Attack Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate login data with IAM role permissions Corporate Control: Cloud Identity Governance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze session tokens and access durations Third Party Control: Identity Threat Detection Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify suspicious logins from privileged accounts Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Review multi-factor authentication (MFA) usage Third Party Control: MFA Authentication Logs</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile findings on login anomalies Corporate Control: Security Incident & Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert security teams about unauthorized access Third Party Control: Managed Security Services Provider (MSSP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store reports for compliance audits Corporate Control: Cloud Compliance & Risk Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Login activity successfully discovered Corporate Control: Cloud Governance & Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evaluate data for insider threat indicators Third Party Control: Behavioral Threat Analytics</data>
+</edge>
+</graph>
+</graphml>

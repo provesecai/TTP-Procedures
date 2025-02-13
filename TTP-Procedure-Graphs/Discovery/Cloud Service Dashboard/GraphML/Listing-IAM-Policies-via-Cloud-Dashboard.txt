@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ListingIAMPolicies" edgedefault="directed">
+<!-- Nodes -->
+<node id="A">
+<data key="label">Access Cloud IAM Dashboard</data>
+</node>
+<node id="B">
+<data key="label">Open IAM Policies Section</data>
+</node>
+<node id="C">
+<data key="label">Retrieve User and Role Policies</data>
+</node>
+<node id="D">
+<data key="label">Analyze Policy Permissions</data>
+</node>
+<node id="E">
+<data key="label">IAM Policies Successfully Discovered</data>
+</node>
+<!-- Edges -->
+<edge source="A" target="B">
+<data key="label">Authenticate with valid credentials Corporate Control: Cloud IAM Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use session tokens or API keys for access Corporate Control: Session Token Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass multi-factor authentication if misconfigured Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for administrator privileges in IAM settings Corporate Control: Privileged Account Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Browse IAM settings section Corporate Control: Cloud Management Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">List all user accounts and roles Corporate Control: Cloud User Directory</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify API-based IAM configurations Third Party Control: Security Audit Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture assigned permissions and group memberships Corporate Control: IAM Role-Based Access</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract JSON-based IAM policies for analysis Corporate Control: Cloud Policy Engine</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Sort policies by least-privileged vs. overly permissive Corporate Control: IAM Least Privilege Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify wildcard permissions allowing broad access Third Party Control: Security Compliance Scanner</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check inherited policies and linked service accounts Corporate Control: Identity Federation Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate policy privilege report Corporate Control: Cloud Governance Framework</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Flag excessive privileges for remediation Corporate Control: Role-Based Access Control Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate configurations against security benchmarks Third Party Control: CIS Security Benchmarks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance with regulatory IAM policies Third Party Control: Compliance Monitoring Services</data>
+</edge>
+</graph>
+</graphml>
