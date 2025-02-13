@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying-Privileged-Applications" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Running Applications via API Calls</data>
+</node>
+<node id="B">
+<data key="label">Identify Applications Running with Elevated Privileges</data>
+</node>
+<node id="C">
+<data key="label">Analyze Access Permissions and Roles</data>
+</node>
+<node id="D">
+<data key="label">Correlate Privileged Applications with User Activity</data>
+</node>
+<node id="E">
+<data key="label">Successful Identification of Privileged Applications</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Invoke API calls to list active processes Corporate Control: Windows System API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Retrieve process security attributes Corporate Control: Access Control Lists (ACLs)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for administrator-only processes Third-Party Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Correlate process names with security logs Corporate Control: Windows Security Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure API calls remain undetected Third-Party Control: SIEM Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze privilege level of each application Corporate Control: User Privilege Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for applications requiring system permissions Third-Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalous privilege escalation Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare against a whitelist of allowed applications Third-Party Control: Enterprise Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Determine if privileged applications are tied to a user Corporate Control: User Access Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure only high-risk applications remain in scope Third-Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect misuse of privileged applications Corporate Control: Threat Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Apply behavioral analytics to application usage Third-Party Control: AI-Driven Security Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate alert for suspicious privilege use Corporate Control: SOC Monitoring Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log all privileged applications for future analysis Third-Party Control: Forensic Investigation Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance with security frameworks Corporate Control: Governance and Risk Compliance (GRC) Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Finalize application discovery results Corporate Control: Security Operations Team</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Privileged application list successfully identified Third-Party Control: Threat Intelligence Reports</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Discovering-Browser-History" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Locate Browser History Storage Files</data>
+</node>
+<node id="B">
+<data key="label">Extract and Parse Visited URLs</data>
+</node>
+<node id="C">
+<data key="label">Analyze Frequented Websites for Credential Reuse</data>
+</node>
+<node id="D">
+<data key="label">Use Identified Targets for Phishing or Further Attacks</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered and Exploited Browser History</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Identify browser cache and history locations Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan local files for stored browsing data Third-Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to browser history Corporate Control: SIEM and Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract domains frequently visited by users Corporate Control: Secure Web Gateway Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate browsing patterns to sensitive sites Third-Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze behavioral patterns for targeted attacks Corporate Control: Cyber Threat Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify login pages and authentication portals Corporate Control: IAM and Access Control Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Attempt credential harvesting through cloned pages Third-Party Control: Web Application Security Firewalls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Determine high-value targets for phishing Corporate Control: Adaptive Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit stored browsing history for cyberattacks Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain unauthorized access via session replay Third-Party Control: Advanced Threat Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Launch targeted spear-phishing campaigns Corporate Control: Digital Forensics and Incident Response (DFIR)</data>
+</edge>
+</graph>
+</graphml>

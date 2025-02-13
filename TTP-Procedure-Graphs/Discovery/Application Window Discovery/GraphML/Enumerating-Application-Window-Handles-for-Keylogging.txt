@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating-Window-Handles" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Window Handles in User Session</data>
+</node>
+<node id="B">
+<data key="label">Track Window Handle Changes and Associated Processes</data>
+</node>
+<node id="C">
+<data key="label">Analyze Windows for Potential Keystroke Logging</data>
+</node>
+<node id="D">
+<data key="label">Extract and Correlate Keystrokes with Window Titles</data>
+</node>
+<node id="E">
+<data key="label">Successfully Logged Keystrokes with Application Context</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Monitor process memory for active window handles Corporate Control: Windows GUI APIs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Capture window changes in real-time Third-Party Control: Security Monitoring Agents</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze active processes associated with windows Corporate Control: Process Tracking Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalies in window transitions Third-Party Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure visibility over application interactions Corporate Control: Security Event Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare process handles with known sensitive applications Corporate Control: Threat Intelligence Databases</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unauthorized access attempts Third-Party Control: SIEM Correlation Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor window handles for unauthorized changes Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference against suspicious behavior models Third-Party Control: Machine Learning-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture keystrokes associated with specific windows Corporate Control: Endpoint Security Software</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log input events from high-risk applications Third-Party Control: Third-Party Keystroke Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze timing and frequency of keystroke events Corporate Control: Security Audit Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized keyboard input Third-Party Control: Cloud-Based Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store logs for forensic analysis Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert SOC teams on suspicious input activity Third-Party Control: Managed Detection and Response (MDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Flag high-risk application activity Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate risk reports for security auditing Third-Party Control: External Cybersecurity Consultants</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Successfully logged keystrokes associated with application activity Corporate Control: Enterprise Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

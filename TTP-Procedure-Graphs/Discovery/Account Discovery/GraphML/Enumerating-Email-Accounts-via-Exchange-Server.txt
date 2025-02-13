@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating_Email_Accounts_Exchange_Server" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible Exchange Services</data>
+</node>
+<node id="B">
+<data key="label">Query Exchange for Active Mailboxes</data>
+</node>
+<node id="C">
+<data key="label">Extract Email Addresses and User Details</data>
+</node>
+<node id="D">
+<data key="label">Correlate Accounts with Active Directory</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Exchange Email Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use Exchange Management Shell 'Get-Mailbox' Corporate Control: Exchange Admin Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate mailboxes using Outlook Web Access (OWA) Corporate Control: Web Application Firewalls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Perform LDAP queries for Exchange users Corporate Control: Active Directory Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check SMTP VRFY command for valid addresses Corporate Control: Email Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract email addresses via Exchange API Corporate Control: API Access Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify shared mailboxes and aliases Corporate Control: Email Management Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate addresses with department roles Corporate Control: Organizational IAM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Filter results to find high-privilege users Corporate Control: Role-Based Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Match email users with AD accounts Corporate Control: Active Directory Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect inactive accounts based on last login Corporate Control: Account Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check permissions on executive mailboxes Corporate Control: Privileged Access Reviews</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate group membership for email policies Corporate Control: Email Group Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile list of actively used email accounts Corporate Control: Enterprise Email Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Assess security risk of discovered mailboxes Corporate Control: Risk Assessment Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Map Exchange email accounts to login activity Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare report for IAM team on discovered users Corporate Control: Identity Management Audits</data>
+</edge>
+</graph>
+</graphml>

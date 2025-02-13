@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying_Local_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Local User Accounts via System Commands</data>
+</node>
+<node id="B">
+<data key="label">Extract Account Details from Registry and SAM</data>
+</node>
+<node id="C">
+<data key="label">Identify Privileged and Admin-Level Accounts</data>
+</node>
+<node id="D">
+<data key="label">Cross-Reference with Active Processes</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Local User Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Run 'net user' or 'wmic' commands Corporate Control: Windows Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use PowerShell to list user accounts Corporate Control: PowerShell Logging Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access system logs for account activity Corporate Control: Event Log Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage 'quser' for active sessions Corporate Control: Remote Session Management</data>
+</edge>
+<edge source="A" target="C">
+<data key="label">Query 'whoami' for account context Corporate Control: User Access Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract registry keys related to user accounts Third Party Control: Endpoint Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract Security Account Manager (SAM) data Corporate Control: Windows Kernel Protections</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze NTUSER.DAT for user settings Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="B" target="D">
+<data key="label">Analyze user access logs for anomalies Corporate Control: SIEM & Log Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-check admin activity with running services Third Party Control: Behavioral Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Compare active logins with privileged accounts Corporate Control: Account Monitoring Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check service account privileges Corporate Control: Service Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete account discovery and privilege mapping Corporate Control: Identity & Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Correlate discovered accounts with known roles Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm access levels of each user Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate a list of viable targets for escalation Corporate Control: Red Team Simulations</data>
+</edge>
+</graph>
+</graphml>

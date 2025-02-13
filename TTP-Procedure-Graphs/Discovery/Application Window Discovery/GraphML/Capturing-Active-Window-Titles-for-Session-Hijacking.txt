@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Capturing-Active-Window-Titles" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor Foreground Window Changes in User Sessions</data>
+</node>
+<node id="B">
+<data key="label">Log Active Window Titles for Analysis</data>
+</node>
+<node id="C">
+<data key="label">Cross-Reference Windows with Known Sensitive Applications</data>
+</node>
+<node id="D">
+<data key="label">Analyze for Potential Unauthorized Session Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Successfully Identified High-Risk Session Activity</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Use system hooks to track foreground windows Corporate Control: Windows UI Accessibility API</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Continuously capture active session window changes Third-Party Control: Endpoint Security Monitoring Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor transitions between privileged and non-privileged apps Corporate Control: SIEM Visibility Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure process integrity remains intact Third-Party Control: Next-Gen Behavioral Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Stealthily observe window transitions Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare captured windows against critical application lists Corporate Control: Enterprise Threat Intelligence Databases</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unauthorized access to restricted applications Third-Party Control: Zero Trust Security Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze historical access patterns for anomalies Corporate Control: SIEM Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate timestamps for unexpected window focus changes Third-Party Control: Cloud-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in user session workflows Corporate Control: User Privilege Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-reference with existing insider threat indicators Third-Party Control: External Threat Intel Providers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure windows align with expected session behaviors Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate sudden session transfers to high-risk apps Third-Party Control: Advanced SIEM Correlation Engines</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log findings for forensic auditing Corporate Control: Security Incident Event Management Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger alerts for unauthorized application usage Third-Party Control: SOC Threat Monitoring Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Flag suspicious window focus switches Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate detailed risk reports for security teams Third-Party Control: External Cybersecurity Auditors</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Successfully identified potential session hijacking Corporate Control: Enterprise Cyber Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

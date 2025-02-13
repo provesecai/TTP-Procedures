@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Querying_Network_Shares_User_Data" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible Network Shares</data>
+</node>
+<node id="B">
+<data key="label">Enumerate Shared Folders and Permissions</data>
+</node>
+<node id="C">
+<data key="label">Scan for User Data in Shared Locations</data>
+</node>
+<node id="D">
+<data key="label">Analyze Discovered User Information</data>
+</node>
+<node id="E">
+<data key="label">Successfully Identified User Data from Network Shares</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List SMB shares using 'net view' Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan network drives for open shares Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify shares accessible via guest accounts Corporate Control: File Server Access Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check misconfigured NFS shares Corporate Control: Network Segmentation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Browse shares for user profiles Corporate Control: File Access Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract usernames from stored configuration files Corporate Control: Endpoint Encryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze group-based folder access Corporate Control: IAM Role Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify home directories and shared workspaces Corporate Control: Network File Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract metadata from shared documents Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze email signatures and stored credentials Corporate Control: User Access Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate usernames with domain accounts Corporate Control: Active Directory Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check last accessed timestamps for recent activity Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile list of discovered user data Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Assess exposure risk of discovered files Corporate Control: Threat Intelligence Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Notify security teams of high-risk disclosures Corporate Control: Incident Response Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare compliance report for discovered user information Corporate Control: Compliance & Governance</data>
+</edge>
+</graph>
+</graphml>

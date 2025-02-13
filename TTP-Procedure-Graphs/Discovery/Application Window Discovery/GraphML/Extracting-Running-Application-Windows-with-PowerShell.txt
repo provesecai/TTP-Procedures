@@ -1,0 +1,51 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting-Running-Application-Windows-PowerShell" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Running Applications via PowerShell</data>
+</node>
+<node id="B">
+<data key="label">Extract Application Window Titles</data>
+</node>
+<node id="C">
+<data key="label">Map Application Titles to Active User Sessions</data>
+</node>
+<node id="D">
+<data key="label">Filter Out Non-Relevant Processes</data>
+</node>
+<node id="E">
+<data key="label">Successful Discovery of Running Applications</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Execute PowerShell script to list open windows Corporate Control: Windows PowerShell Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query system processes and match them with UI windows Corporate Control: Windows Task Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure script execution rights Corporate Control: Group Policy Execution Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify active user session linked to each window Corporate Control: Windows Session Tracking</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Determine window ownership via process ID mapping Corporate Control: Windows Process Explorer</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract metadata from window attributes Corporate Control: Windows UI APIs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Apply filters to exclude system processes Third-Party Control: EDR Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure focus remains on user-related application windows Third-Party Control: Security Monitoring Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate application list and confirm findings Corporate Control: Security Event Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store discovered application windows for further use Corporate Control: Network Monitoring Systems</data>
+</edge>
+</graph>
+</graphml>

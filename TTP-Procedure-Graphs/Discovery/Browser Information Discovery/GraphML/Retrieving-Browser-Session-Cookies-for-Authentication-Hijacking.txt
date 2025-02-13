@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Retrieving-Browser-Session-Cookies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Locate Browser Cookie Storage Files</data>
+</node>
+<node id="B">
+<data key="label">Extract and Decode Session Cookies</data>
+</node>
+<node id="C">
+<data key="label">Validate Cookie Expiry and Authentication Context</data>
+</node>
+<node id="D">
+<data key="label">Use Stolen Cookies for Session Hijacking</data>
+</node>
+<node id="E">
+<data key="label">Successfully Gained Unauthorized Access via Cookies</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Identify encrypted storage locations for browser cookies Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan browser directories for active session data Third-Party Control: Cloud-Based Security Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized attempts to read session cookies Corporate Control: SIEM and Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decrypt session cookies using browser API vulnerabilities Corporate Control: Secure API Gateways</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract cookie authentication tokens Third-Party Control: Web Application Security Firewalls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze session cookie data for reuse potential Corporate Control: Security Monitoring Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate cookie-based authentication mechanisms Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor session cookie replay attempts Third-Party Control: Advanced Threat Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for multi-factor authentication bypass via cookies Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hijack authenticated user session using stolen cookies Corporate Control: Incident Response Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Access sensitive accounts without user credentials Third-Party Control: Cloud Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evade detection by rotating session cookies Corporate Control: Continuous Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

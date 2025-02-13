@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Detecting-Foreground-Changes" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register Global Windows Hook for Foreground Detection</data>
+</node>
+<node id="B">
+<data key="label">Monitor Window Focus Changes in Real-Time</data>
+</node>
+<node id="C">
+<data key="label">Capture Window Titles and Associated Processes</data>
+</node>
+<node id="D">
+<data key="label">Log and Analyze Foreground Activity</data>
+</node>
+<node id="E">
+<data key="label">Use Discovered Information for Further Actions</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Use SetWindowsHookEx to track foreground changes Third-Party Control: Windows UI Framework</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure permissions allow hook registration Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security hooks monitoring Corporate Control: Application Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disguise activity as legitimate background process Corporate Control: Threat Detection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor window transition patterns Corporate Control: User Access Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify frequent application switches Third-Party Control: Application Monitoring Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Associate window activity with user sessions Corporate Control: Identity Management Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze foreground trends for valuable applications Corporate Control: System Activity Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate process data with known application signatures Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log results for post-analysis Third-Party Control: Cloud-Based SIEM Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt and store extracted foreground logs Corporate Control: Secure Logging Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain stealth by avoiding sudden spikes in monitoring Corporate Control: Behavioral Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use extracted data for social engineering strategies Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to remove traces of hook registration Corporate Control: Log Integrity Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Export identified high-value targets Third-Party Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hide collected data in encrypted containers Corporate Control: Data Protection Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish automated alerting based on foreground activity Corporate Control: AI-Based Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

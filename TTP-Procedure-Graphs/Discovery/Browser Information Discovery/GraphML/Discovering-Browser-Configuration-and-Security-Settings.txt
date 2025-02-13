@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Discovering-Browser-Security-Settings" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Locate Browser Security Settings</data>
+</node>
+<node id="B">
+<data key="label">Extract Current Security Policies</data>
+</node>
+<node id="C">
+<data key="label">Analyze Weak or Misconfigured Security Controls</data>
+</node>
+<node id="D">
+<data key="label">Use Discovered Weaknesses for Bypassing Protections</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered and Exploited Security Gaps</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Access browser security configuration files Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to security settings Third-Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect attempts to disable built-in security features Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify missing security patches or updates Corporate Control: Vulnerability Scanning Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for unsafe privacy configurations Third-Party Control: Risk-Based Access Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor policy changes affecting browser security Corporate Control: Security Incident Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit weak settings to disable security features Corporate Control: Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass security measures using outdated configurations Third-Party Control: Advanced Threat Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify opportunities for session hijacking Corporate Control: Adaptive Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain unauthorized access using relaxed security settings Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify security configurations to evade detection Third-Party Control: Cyber Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve persistence using discovered browser weaknesses Corporate Control: Incident Response Teams</data>
+</edge>
+</graph>
+</graphml>

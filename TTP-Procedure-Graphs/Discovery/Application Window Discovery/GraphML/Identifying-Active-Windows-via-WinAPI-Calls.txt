@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying-Active-Windows" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Load WinAPI Functions for Window Enumeration</data>
+</node>
+<node id="B">
+<data key="label">Invoke EnumWindows to List All Open Windows</data>
+</node>
+<node id="C">
+<data key="label">Retrieve Window Titles and Associated Processes</data>
+</node>
+<node id="D">
+<data key="label">Filter Windows Based on Targeted Applications</data>
+</node>
+<node id="E">
+<data key="label">Extract Relevant Application Details for Discovery</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Load necessary libraries and API functions Corporate Control: Windows API Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure process has sufficient permissions to invoke EnumWindows Corporate Control: Process Access Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check if API call monitoring is active to evade detection Corporate Control: Security Logging and SIEM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security warnings by modifying function call parameters Corporate Control: Application Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enumerate all currently open windows Corporate Control: User Interface Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture handle references for further processing Corporate Control: Application Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify top-level windows associated with GUI applications Corporate Control: Endpoint Protection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Filter background and non-user-facing windows Corporate Control: User Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for automated enumeration activity Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract metadata such as window title, class, and process ID Corporate Control: System Access Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate window data with known application fingerprints Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Map running processes to active user sessions Corporate Control: Identity and Access Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze extracted window data for potential sensitive applications Corporate Control: Data Loss Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Validate running processes against security policies Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify high-value application windows such as password managers Corporate Control: Secure Desktop Environments</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log extracted data for further reconnaissance Corporate Control: Security Logging and SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Determine potential user interaction vulnerabilities Corporate Control: User Education and Awareness</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Export discovered window metadata for use in further attacks Corporate Control: Data Encryption Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system event logs to hide enumeration activity Corporate Control: Log Integrity and Monitoring</data>
+</edge>
+</graph>
+</graphml>

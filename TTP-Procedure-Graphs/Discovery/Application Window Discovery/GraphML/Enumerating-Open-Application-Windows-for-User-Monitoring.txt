@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating-Application-Windows" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Open Application Windows in User Session</data>
+</node>
+<node id="B">
+<data key="label">Capture Window Titles and Process Associations</data>
+</node>
+<node id="C">
+<data key="label">Monitor Foreground Window Changes in Real-Time</data>
+</node>
+<node id="D">
+<data key="label">Correlate Application Usage with User Activity</data>
+</node>
+<node id="E">
+<data key="label">Enumerated Active Application Windows Successfully</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Enumerate active window handles Corporate Control: Windows API Calls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract metadata from application windows Third-Party Control: Endpoint Monitoring Software</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Log process identifiers associated with open windows Corporate Control: Security Logging Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized applications in session Third-Party Control: Cloud-Based Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure real-time visibility over active sessions Corporate Control: IT Administration Console</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track changes in the active window focus Corporate Control: GUI Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect frequent application switching behavior Third-Party Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log timestamps and duration of application usage Corporate Control: User Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized remote desktop sessions Third-Party Control: SIEM Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate application activity with user login sessions Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalous usage patterns indicating reconnaissance Third-Party Control: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Assess compliance with corporate application policies Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate application usage linked to suspicious behavior Third-Party Control: Threat Hunting Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate reports on user activity monitoring Corporate Control: Security Operations Dashboard</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert security teams on unauthorized app access Third-Party Control: Managed Detection and Response (MDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance with IT security policies Corporate Control: Security Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Log application window history for forensic review Third-Party Control: External Security Audit Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Successfully enumerated active application windows Corporate Control: Enterprise Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

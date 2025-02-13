@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying_Privileged_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Domain Admin Groups</data>
+</node>
+<node id="B">
+<data key="label">Extract User Accounts with Privileged Access</data>
+</node>
+<node id="C">
+<data key="label">Correlate with Group Policy Objects (GPOs)</data>
+</node>
+<node id="D">
+<data key="label">Analyze Administrative Session Logs</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Privileged Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Run 'net group Domain Admins' Corporate Control: AD Group Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts in 'Enterprise Admins' Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract built-in administrator accounts Corporate Control: Windows Security Groups</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Local Admin Rights via GPOs Corporate Control: Network Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for privileged service accounts Corporate Control: Least Privilege Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference with login activity Corporate Control: SIEM and Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze nested admin groups Third Party Control: Compliance Audits</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Validate admin roles via Kerberos tickets Corporate Control: Kerberos Authentication Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze policy assignments to user groups Corporate Control: Microsoft Group Policy Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for misconfigured admin groups Third Party Control: Cloud IAM Security Reviews</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify shadow admin accounts Corporate Control: Active Directory Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect accounts with excessive permissions Corporate Control: Zero Trust Policy Reviews</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm list of privileged accounts Corporate Control: Security Operations Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized privilege escalations Corporate Control: IT Security Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Correlate findings with security posture Corporate Control: Enterprise Risk Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile intelligence for red team exercises Corporate Control: Cyber Threat Analysis</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying-Auto-Fill-Form-Data" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Locate Autofill Configuration and Data</data>
+</node>
+<node id="B">
+<data key="label">Extract Autofill Stored Data</data>
+</node>
+<node id="C">
+<data key="label">Analyze Captured Information</data>
+</node>
+<node id="D">
+<data key="label">Use Extracted Autofill Data for Credential Theft</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered and Exploited Autofill Data</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Identify browser autofill storage locations Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access autofill settings for active users Third-Party Control: Cloud Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to autofill settings Corporate Control: Security Information Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract stored addresses, emails, and payment data Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decrypt autofill-protected data Third-Party Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze autofill contents for sensitive information Corporate Control: Secure Data Handling Guidelines</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Verify extracted autofill data against online services Corporate Control: Fraud Detection and Prevention Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for reusability in credential-stuffing attacks Third-Party Control: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Determine security risks associated with autofill data Corporate Control: Digital Forensics and Incident Response (DFIR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use extracted autofill data to impersonate legitimate users Corporate Control: Incident Response Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication workflows to bypass security Third-Party Control: Managed Detection and Response (MDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieve unauthorized access using autofill-stored credentials Corporate Control: Privileged Account Monitoring</data>
+</edge>
+</graph>
+</graphml>

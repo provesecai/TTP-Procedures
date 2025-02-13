@@ -1,0 +1,45 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating-Browser-Extensions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Browser Add-on Storage Paths</data>
+</node>
+<node id="B">
+<data key="label">Extract Installed Extensions and Permissions</data>
+</node>
+<node id="C">
+<data key="label">Analyze Extension Capabilities for Exploitation</data>
+</node>
+<node id="D">
+<data key="label">Use Malicious or Vulnerable Extensions for Discovery</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Active Browser Extensions</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Locate extension registry keys and manifest files Corporate Control: Windows Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to extension settings Third-Party Control: Security Analytics Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract permissions and API access of installed extensions Corporate Control: Endpoint Security Configurations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify high-risk extensions with elevated privileges Third-Party Control: Cloud-Based Security Scanners</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze browser extension capabilities for monitoring user activity Corporate Control: Threat Intelligence and Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect browser add-ons communicating with external servers Third-Party Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use vulnerable extensions to capture browser session data Corporate Control: SIEM and Endpoint Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify extension configurations to bypass security mechanisms Third-Party Control: Secure Browser Management</data>
+</edge>
+</graph>
+</graphml>

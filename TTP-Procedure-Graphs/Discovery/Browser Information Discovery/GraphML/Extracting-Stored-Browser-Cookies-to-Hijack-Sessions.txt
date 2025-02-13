@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting-Stored-Browser-Cookies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cookie Storage Locations</data>
+</node>
+<node id="B">
+<data key="label">Extract Stored Cookies from Browser</data>
+</node>
+<node id="C">
+<data key="label">Analyze Cookies for Session Hijacking</data>
+</node>
+<node id="D">
+<data key="label">Use Stolen Cookies to Impersonate Users</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered and Exploited Stored Cookies</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Locate encrypted cookie databases Corporate Control: Browser Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan local browser directories for active cookies Third-Party Control: Cloud-Based Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized cookie access Corporate Control: Security Information Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check permissions required to access cookie storage Corporate Control: Endpoint Security Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Decrypt cookies using browser key material Corporate Control: Credential Protection Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for HTTP-only flags to prevent JavaScript access Third-Party Control: Web Application Firewalls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze expiration timestamps for long-lived sessions Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect any missing security attributes on cookies Corporate Control: Secure API Gateway</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Replay stolen cookies in a browser session Corporate Control: Incident Response Teams</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use cookies to bypass authentication prompts Third-Party Control: Fraud Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Test whether Multi-Factor Authentication (MFA) is enforced Corporate Control: Adaptive Authentication Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for abnormal browser session activity Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain persistent access to a victim’s web account Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify authentication tokens for extended access Third-Party Control: Advanced Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent session hijacking Corporate Control: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoid detection by rotating session cookies Corporate Control: Network Behavior Analysis</data>
+</edge>
+</graph>
+</graphml>

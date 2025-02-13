@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating_Cloud_User_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cloud Service and Authentication Methods</data>
+</node>
+<node id="B">
+<data key="label">Query Cloud Identity Services for User Account Data</data>
+</node>
+<node id="C">
+<data key="label">Extract and Analyze Cloud User Attributes</data>
+</node>
+<node id="D">
+<data key="label">Correlate and Expand Cloud Account Enumeration</data>
+</node>
+<node id="E">
+<data key="label">Cloud Account Discovery Successfully Completed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify cloud identity providers (Azure, AWS, GCP) Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized API calls to identity services Corporate Control: Cloud Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect suspicious queries using cloud SIEM Third Party Control: Cloud Security Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Restrict API access based on roles and permissions Corporate Control: IAM Role-Based Access Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract IAM user and group information Third Party Control: Cloud Identity Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized IAM enumeration attempts Corporate Control: Threat Detection & Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor excessive API queries for account data Third Party Control: Rate Limiting and API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze cloud identity configurations for exposure Corporate Control: Cloud Compliance Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-reference cloud accounts with application access Third Party Control: Cloud Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify high-privilege cloud accounts Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalous access to cloud identity systems Third Party Control: SIEM & Security Operations Center</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure logging of cloud authentication queries Corporate Control: Security Monitoring & Compliance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cloud user account discovery completed Corporate Control: Cloud Security Posture Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert triggered if unauthorized enumeration detected Third Party Control: Cloud Security Threat Detection</data>
+</edge>
+</graph>
+</graphml>

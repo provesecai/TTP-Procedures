@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_WMI_To_List_Domain_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Execute WMI Queries for User Enumeration</data>
+</node>
+<node id="B">
+<data key="label">Extract Local and Domain Account Information</data>
+</node>
+<node id="C">
+<data key="label">Correlate Discovered Users with Active Directory</data>
+</node>
+<node id="D">
+<data key="label">Analyze Logon Events for Account Activity</data>
+</node>
+<node id="E">
+<data key="label">Successfully Identified Domain Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Run 'wmic useraccount get name' Corporate Control: Windows Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query AD objects with WMI Corporate Control: Active Directory Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use PowerShell 'Get-WMIObject' for enumeration Corporate Control: PowerShell Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">List all accounts from Win32_UserAccount Corporate Control: Endpoint Detection & Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference usernames with NTDS.dit Corporate Control: Active Directory Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract account SID mappings Corporate Control: Windows Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for disabled or inactive users Corporate Control: Identity Access Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Map accounts to GPO assigned privileges Corporate Control: Group Policy Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze logon events for user authentication Corporate Control: Security Event Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in logon activity Corporate Control: SIEM and Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor accounts with high logon failures Corporate Control: Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify excessive logon attempts Corporate Control: SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile list of frequently used accounts Corporate Control: Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify service accounts requiring investigation Corporate Control: Enterprise Security Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate account roles and privileges Corporate Control: Least Privilege Policy Reviews</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Determine risky accounts for remediation Corporate Control: IT Governance Teams</data>
+</edge>
+</graph>
+</graphml>

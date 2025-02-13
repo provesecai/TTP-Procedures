@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Logging-Active-Window-Names" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enable System Logging for Window Events</data>
+</node>
+<node id="B">
+<data key="label">Monitor and Capture Active Window Titles</data>
+</node>
+<node id="C">
+<data key="label">Correlate Window Titles with User Activity</data>
+</node>
+<node id="D">
+<data key="label">Filter and Categorize Window Data</data>
+</node>
+<node id="E">
+<data key="label">Successful Contextual Reconnaissance</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Configure system event logs to capture window title changes Corporate Control: Windows Security Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enable auditing for application focus changes Third-Party Control: SIEM Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for user session transitions Corporate Control: Endpoint Monitoring Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify software used for active monitoring Third-Party Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure proper data collection policies Corporate Control: Compliance and Logging Regulations</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract metadata from captured window logs Corporate Control: Log Analysis Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Determine window origin and process ownership Third-Party Control: Advanced Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect patterns in window title transitions Corporate Control: User Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare with historical data for anomalies Third-Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Categorize windows by application type Corporate Control: Security Management Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Filter out non-relevant or system-generated data Third-Party Control: Data Cleaning Algorithms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure correlation with user behavior logs Corporate Control: SIEM Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Apply machine learning for activity prediction Third-Party Control: AI-Driven Analysis Tools</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify behavioral trends based on active window usage Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate alerts for high-risk applications Third-Party Control: Threat Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store logs for forensic investigations Corporate Control: Digital Forensics Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance with security policies Third-Party Control: External Compliance Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reconnaissance data fully processed and stored Corporate Control: Data Retention Policies</data>
+</edge>
+</graph>
+</graphml>

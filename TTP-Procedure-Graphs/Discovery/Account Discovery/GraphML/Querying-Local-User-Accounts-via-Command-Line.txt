@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Querying_Local_User_Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Local System and Available Command-Line Tools</data>
+</node>
+<node id="B">
+<data key="label">Execute Commands to Enumerate Local User Accounts</data>
+</node>
+<node id="C">
+<data key="label">Extract and Analyze Local User Account Information</data>
+</node>
+<node id="D">
+<data key="label">Correlate and Expand Account Enumeration Data</data>
+</node>
+<node id="E">
+<data key="label">Local Account Discovery Successfully Completed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify OS version and available command-line tools Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor execution of enumeration commands Third Party Control: SIEM Log Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Restrict use of local account discovery commands Corporate Control: Group Policy and Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure audit logging of command-line queries Third Party Control: Log Integrity Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute 'net user' or 'wmic useraccount' commands Corporate Control: Endpoint Command Execution Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect abnormal spikes in account enumeration Third Party Control: SIEM Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for command-line execution anomalies Corporate Control: EDR and Process Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track unauthorized attempts to list local accounts Third Party Control: Endpoint Security Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate extracted user account data with logins Corporate Control: Windows Security Event Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify privileged accounts and their attributes Third Party Control: Threat Intelligence & SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for enumeration of hidden or disabled accounts Corporate Control: Endpoint Access Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze historical trends in local user enumeration Third Party Control: SOC Incident Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Local user account discovery completed Corporate Control: Incident Response and Mitigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger alerts on unauthorized account queries Third Party Control: Intrusion Detection System (IDS)</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_SMB_Account_Info" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SMB-Enabled Hosts and Open Shares</data>
+</node>
+<node id="B">
+<data key="label">Query SMB for User and Session Information</data>
+</node>
+<node id="C">
+<data key="label">Extract and Analyze SMB-Related User Accounts</data>
+</node>
+<node id="D">
+<data key="label">Expand Discovery to Identify Privileged Accounts</data>
+</node>
+<node id="E">
+<data key="label">SMB Account Discovery Successfully Completed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify hosts running SMB services Corporate Control: Network Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor SMB enumeration attempts in logs Third Party Control: SIEM & Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Restrict SMB queries to authorized users Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect excessive SMB queries for account data Third Party Control: IDS & Network Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Retrieve SMB session information and user IDs Corporate Control: Network Security Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor suspicious SMB queries for user enumeration Third Party Control: Endpoint Security & SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Restrict unauthorized SMB user queries Corporate Control: Endpoint Access Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure encryption of SMB session data Third Party Control: Secure File Transfer & Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate SMB user accounts with AD groups Corporate Control: Active Directory Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify administrator and service accounts Third Party Control: Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor SMB queries for excessive data retrieval Corporate Control: Endpoint & Network Activity Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alert on unauthorized SMB-based enumeration Third Party Control: SIEM & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">SMB-based account discovery completed Corporate Control: SOC & Security Event Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Investigate anomalous SMB activity patterns Third Party Control: Threat Hunting & SIEM Monitoring</data>
+</edge>
+</graph>
+</graphml>

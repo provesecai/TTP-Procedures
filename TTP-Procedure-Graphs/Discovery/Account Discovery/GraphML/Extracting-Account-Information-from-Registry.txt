@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_Account_Info_From_Registry" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Windows Registry Hive for Account Data</data>
+</node>
+<node id="B">
+<data key="label">Extract Stored Usernames and Group Associations</data>
+</node>
+<node id="C">
+<data key="label">Analyze Cached Credentials and SID Mapping</data>
+</node>
+<node id="D">
+<data key="label">Cross-Reference with Domain Accounts</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Registry-Based Account Information</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Access HKLM\SAM registry keys Corporate Control: Windows Registry Permissions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use reg.exe to export user account details Corporate Control: Endpoint Hardening Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage SYSTEM-level access for protected registry keys Corporate Control: Windows Security Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check HKLM\SYSTEM for cryptographic keys Third Party Control: SIEM Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract last logged-in user data from NTUSER.dat Corporate Control: User Profile Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze stored credential hashes in LSA secrets Corporate Control: Windows Credential Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-match discovered SIDs with AD accounts Third Party Control: Active Directory Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify default admin accounts and unused profiles Corporate Control: IT Governance Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for administrative user mappings Third Party Control: Group Policy Object (GPO) Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate cached credentials with active AD users Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use PowerShell scripts to decode registry credentials Corporate Control: Windows Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unusual registry access Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Verify extracted accounts against target lists Corporate Control: IT Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage findings for privilege escalation Corporate Control: Identity Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Determine access gaps in registry-based controls Corporate Control: Security Operations Center</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm registry security gaps in enterprise network Corporate Control: Compliance & Audit Teams</data>
+</edge>
+</graph>
+</graphml>

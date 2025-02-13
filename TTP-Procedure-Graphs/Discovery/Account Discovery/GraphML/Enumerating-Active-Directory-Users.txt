@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating_Active_Directory_Users" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Directory Server and Access Method</data>
+</node>
+<node id="B">
+<data key="label">Query Active Directory for User Account Details</data>
+</node>
+<node id="C">
+<data key="label">Extract and Analyze User Account Attributes</data>
+</node>
+<node id="D">
+<data key="label">Correlate and Expand User Discovery</data>
+</node>
+<node id="E">
+<data key="label">Account Discovery Successfully Completed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify domain controllers and accessible AD services Corporate Control: Active Directory Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized LDAP or Kerberos queries Third Party Control: SIEM Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Windows Event Logs for user enumeration Corporate Control: Windows Security Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure AD query permissions are properly restricted Third Party Control: IAM Policies and Privileged Access Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract user objects including name, SID, and groups Corporate Control: Active Directory Group Policy</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze AD schema to determine high-value accounts Third Party Control: Cloud Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor large volume AD queries indicative of discovery Corporate Control: SIEM Rules for Anomalous Activity</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized user enumeration attempts Third Party Control: Behavioral Analytics & Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-check user account information with login history Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Expand queries to find administrator and service accounts Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor excessive AD queries targeting sensitive accounts Corporate Control: AD Query Rate-Limiting Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure user access logs are secured against tampering Third Party Control: Log Integrity Verification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Account discovery completed, user details extracted Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger alerts if excessive user enumeration detected Third Party Control: Intrusion Detection System (IDS)</data>
+</edge>
+</graph>
+</graphml>

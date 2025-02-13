@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting-Browser-Download-History" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Locate Download History Database</data>
+</node>
+<node id="B">
+<data key="label">Extract and Parse Downloaded File Metadata</data>
+</node>
+<node id="C">
+<data key="label">Analyze Downloaded Files for Sensitive Information</data>
+</node>
+<node id="D">
+<data key="label">Use Identified Files for Reconnaissance</data>
+</node>
+<node id="E">
+<data key="label">Successfully Discovered Downloaded Files and Contents</data>
+</node>
+<!--  Edges with Conditions -->
+<edge source="A" target="B">
+<data key="label">Access browser download logs Corporate Control: Endpoint Security Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized attempts to read download history Third-Party Control: Security Incident Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Correlate downloaded files with known malware Corporate Control: Threat Intelligence Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract file names, hashes, and sources Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Check for sensitive documents in downloads Third-Party Control: Cloud-Based Security Scanners</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify security software downloads Corporate Control: Security Operations Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-reference file types with known data leaks Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify high-risk downloads containing confidential data Third-Party Control: Risk-Based Access Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor suspicious downloads with automation Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use file metadata for targeted attacks Corporate Control: Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify organizational trends based on downloaded data Third-Party Control: Cyber Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exploit identified files for social engineering Corporate Control: Incident Response</data>
+</edge>
+</graph>
+</graphml>
