@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Monitoring_Driver_Load_Events_for_Security_Tools" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor System Logs for Driver Load Events Related to Security Tools</data>
+</node>
+<node id="B">
+<data key="label">Analyze Driver Load Patterns for Abnormal or Unauthorized Activity</data>
+</node>
+<node id="C">
+<data key="label">Correlate Findings with Security Software Load Events</data>
+</node>
+<node id="D">
+<data key="label">Detect Attempts to Bypass or Disable Security Drivers</data>
+</node>
+<node id="E">
+<data key="label">Completed Monitoring of Driver Load Events for Security Tools</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use Event ID 12 and 13 to track driver load and start events. Corporate Control: Windows Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor "/var/log/kern.log" in Linux for driver load failures. Corporate Control: Linux System Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use PowerShell "Get-WinEvent -LogName System -FilterXPath" to track driver-related events. Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploy SIEM-based driver load event tracking. Third Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify security tools associated with loaded drivers. Corporate Control: IT Asset Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track failed driver loads that could indicate security bypass attempts. Corporate Control: Endpoint Protection Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare driver load timing with known attack behaviors. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate alerts when security-related drivers are unexpectedly removed. Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized modifications to kernel-mode security drivers. Corporate Control: Kernel Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate patterns of frequent security driver reinstalls. Third Party Control: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Flag repeated security driver load failures as potential attack indicators. Corporate Control: SOC Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate unusual driver load activity with privilege escalation attempts. Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile a security report summarizing detected driver activity. Corporate Control: Compliance and Risk Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Apply countermeasures to mitigate risks from unauthorized driver modifications. Corporate Control: Endpoint Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement automated responses for suspicious driver load events. Corporate Control: Security Orchestration and Automation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete driver load event monitoring process. Corporate Control: Incident Response Documentation</data>
+</edge>
+</graph>
+</graphml>

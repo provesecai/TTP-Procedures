@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-RDS-Gateway-Sessions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active RDS Gateway Sessions</data>
+</node>
+<node id="B">
+<data key="label">Hijack Established RDS Session</data>
+</node>
+<node id="C">
+<data key="label">Gain Full Control Over Hijacked Session</data>
+</node>
+<node id="D">
+<data key="label">Erase Evidence and Maintain Access</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor network traffic for active RDS Gateway sessions on TCP/443. Corporate Control: Intrusion Detection System (IDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate RDS user session details using 'query session' command. Corporate Control: Windows Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify session timeout misconfigurations allowing reconnection. Third Party: Security Audit Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit credential reuse for session hijacking. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'mstsc /shadow' command to assume control of an active RDS session. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify session registry values to prevent user awareness. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass multi-factor authentication for session takeover. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack existing RDP authentication tokens. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute administrative tasks within the hijacked session. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to hide session hijacking activity. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable event logging during session interaction. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms within the hijacked session. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete session logs to remove evidence of unauthorized access. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of hijacked session activity to evade forensic detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by clearing system logs and RDP connection history. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional RDS-enabled hosts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

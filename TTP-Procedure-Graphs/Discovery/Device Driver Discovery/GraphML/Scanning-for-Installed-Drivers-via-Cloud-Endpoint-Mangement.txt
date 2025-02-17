@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scanning_for_Installed_Drivers_via_Cloud_Endpoint_Management" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Cloud Endpoint Management Dashboard</data>
+</node>
+<node id="B">
+<data key="label">Retrieve Installed Drivers Across Managed Devices</data>
+</node>
+<node id="C">
+<data key="label">Analyze Driver Versions for Security and Compliance</data>
+</node>
+<node id="D">
+<data key="label">Detect Unauthorized or Unapproved Drivers</data>
+</node>
+<node id="E">
+<data key="label">Completed Scanning for Installed Drivers via Cloud Endpoint Management</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Query Google Endpoint Manager or Microsoft Intune for device driver lists. Third Party Control: Cloud Endpoint Management Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use AWS Systems Manager "DescribeInstanceInformation" to list managed drivers. Third Party Control: AWS Systems Manager</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Retrieve driver inventory from Azure Defender for Endpoint. Third Party Control: Microsoft Security Center</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor cloud-based driver activity logs for unexpected changes. Corporate Control: SIEM Integration with Cloud Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare installed drivers against approved baseline configurations. Corporate Control: IT Asset Management Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify drivers flagged for security vulnerabilities. Third Party Control: CVE Database Cross-Check</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect outdated drivers requiring updates. Corporate Control: Patch Management Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate alerts for discrepancies between cloud-managed endpoints. Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify unauthorized driver installations bypassing security controls. Corporate Control: Zero Trust Security Framework</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Correlate unauthorized drivers with recent cloud access logs. Third Party Control: Cloud Security Monitoring Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate drivers that enable privilege escalation attacks. Corporate Control: SOC Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor behavioral anomalies in cloud-managed driver execution. Corporate Control: Security Behavior Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile security report on unauthorized or vulnerable drivers. Corporate Control: Cloud Compliance and Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Recommend remediation actions, including auto-removal or updates. Corporate Control: Cloud Security Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Apply policies to block unapproved driver installations. Corporate Control: Endpoint Protection Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete cloud endpoint driver scan and security assessment. Corporate Control: Incident Response and Risk Mitigation</data>
+</edge>
+</graph>
+</graphml>

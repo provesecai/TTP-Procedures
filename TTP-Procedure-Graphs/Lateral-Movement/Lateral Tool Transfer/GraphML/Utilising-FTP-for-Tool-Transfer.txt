@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Utilizing-FTP-for-Tool-Transfer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify FTP-Enabled Target Systems</data>
+</node>
+<node id="B">
+<data key="label">Authenticate and Transfer Malicious Files</data>
+</node>
+<node id="C">
+<data key="label">Execute Transferred Tools on Target System</data>
+</node>
+<node id="D">
+<data key="label">Erase Transfer Artifacts to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for FTP services running on TCP/21. Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify FTP servers with anonymous login enabled. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate writable directories on FTP servers. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual FTP authentication attempts. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Transfer payloads via FTP PUT commands. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file attributes to disguise malicious tools. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised credentials to authenticate. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store payloads in hidden FTP directories. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute transferred payloads via batch scripts. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system settings to ensure execution. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cover execution trails by modifying logs. Third Party: Security Auditing Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms via FTP payloads. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete FTP logs to remove evidence of transfer. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of transferred files. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase execution traces from event logs. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by clearing FTP transaction history. Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Lateral movement completed successfully. Corporate Control: Network Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

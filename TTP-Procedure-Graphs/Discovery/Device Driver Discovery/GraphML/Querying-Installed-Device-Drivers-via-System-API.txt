@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Querying_Installed_Device_Drivers_via_System_API" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Invoke System API to Enumerate Installed Drivers</data>
+</node>
+<node id="B">
+<data key="label">Extract Driver Details, Paths, and Execution Status</data>
+</node>
+<node id="C">
+<data key="label">Analyze Driver Digital Signatures and Source Verification</data>
+</node>
+<node id="D">
+<data key="label">Identify Drivers Running with Elevated Kernel Privileges</data>
+</node>
+<node id="E">
+<data key="label">Complete Discovery of Installed Device Drivers and Privilege Status</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use EnumDeviceDrivers() or NtQuerySystemInformation() to retrieve list of loaded drivers. Corporate Control: OS API Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan system32\drivers directory for installed drivers and DLLs. Corporate Control: Endpoint Security Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query driver registry keys under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services. Corporate Control: Windows Registry Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API calls that request driver enumeration data. Corporate Control: SIEM and Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract driver metadata including vendor name, version, and hash values. Corporate Control: Security Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify driver digital signatures against trusted CA certificates. Third Party Control: Code Signing Certificate Authorities</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare driver hashes with known malware signatures. Third Party Control: Threat Intelligence Databases</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log unverified or unsigned drivers for security review. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify drivers running at kernel level with SYSTEM or NT AUTHORITY permissions. Corporate Control: Kernel Security Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Match drivers with known privilege escalation vulnerabilities. Third Party Control: CVE Vulnerability Databases</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Assess drivers that provide direct access to hardware or memory. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Flag unsigned or deprecated drivers for security investigation. Corporate Control: Patch Management Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile final report of identified drivers with privilege status and risks. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert security teams of newly detected drivers or privilege risks. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure forensic logs capture driver discovery attempts for auditing. Corporate Control: Incident Response Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate list of security recommendations based on discovered drivers. Corporate Control: IT Security Compliance Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Completed device driver discovery process with categorized risk assessment. Corporate Control: Enterprise Risk Management</data>
+</edge>
+</graph>
+</graphml>

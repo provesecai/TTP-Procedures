@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-Windows-Remote-Assistance-Sessions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Remote Assistance Sessions</data>
+</node>
+<node id="B">
+<data key="label">Exploit Remote Assistance Feature to Hijack Session</data>
+</node>
+<node id="C">
+<data key="label">Gain Full Control Over Remote System</data>
+</node>
+<node id="D">
+<data key="label">Erase Logs and Maintain Access</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate active Remote Assistance sessions using 'msra.exe' or Event ID 4624. Corporate Control: Windows Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unsecured Remote Assistance invitations sent via email or chat. Third Party: Security Awareness Training</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage misconfigured Remote Assistance Group Policy settings. Corporate Control: Group Policy Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit weakly protected session invitation files (RCBuddy/MSRCIncident). Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised credentials to connect as a helper to an active session. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage RDP features within the Remote Assistance session for lateral movement. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system registry keys to disable Remote Assistance prompts. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject commands into an active Remote Assistance session via clipboard redirection. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Move laterally to additional hosts within the remote environment. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Windows Event Logs to remove traces of session hijacking. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable Remote Assistance logging to remain undetected. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms within the hijacked session. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete session logs to remove evidence of Remote Assistance hijacking. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of session hijack activity to avoid detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by clearing system logs and RDP connection history. Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by establishing access to another system. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

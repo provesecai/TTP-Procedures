@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Utilizing-WebDAV-for-Malicious-File-Deployment" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify WebDAV-Enabled Target Systems</data>
+</node>
+<node id="B">
+<data key="label">Authenticate and Transfer Malicious Files via WebDAV</data>
+</node>
+<node id="C">
+<data key="label">Execute Transferred Tools on Target System</data>
+</node>
+<node id="D">
+<data key="label">Erase Transfer Logs to Avoid Detection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for WebDAV-enabled directories on target servers. Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured WebDAV permissions allowing file uploads. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual WebDAV activity for unauthorized uploads. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine WebDAV authentication mechanisms and credential leaks. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Upload malicious scripts disguised as legitimate web content. Corporate Control: Web Application Firewalls (WAF)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify metadata and timestamps to blend with existing files. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised WebDAV credentials to deploy payloads. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage WebDAV mounts for seamless file execution. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution via scheduled tasks or browser-based scripts. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system settings to ensure persistent execution. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove WebDAV logs to hide file upload history. Third Party: Security Auditing Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure continued access by altering user permissions. Corporate Control: Windows Group Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete WebDAV access logs to remove evidence. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of uploaded files to avoid forensic detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by disabling logging features on the WebDAV server. Corporate Control: Web Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Verify execution and successful lateral movement on the compromised host. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

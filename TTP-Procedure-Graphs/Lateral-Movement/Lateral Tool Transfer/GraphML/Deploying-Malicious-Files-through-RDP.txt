@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Deploying-Malicious-Files-through-RDP" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify RDP-Enabled Target Systems</data>
+</node>
+<node id="B">
+<data key="label">Establish RDP Session and Transfer Tools</data>
+</node>
+<node id="C">
+<data key="label">Execute Transferred Tools on Remote System</data>
+</node>
+<node id="D">
+<data key="label">Remove Transfer Artifacts to Conceal Activity</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for open RDP ports (TCP 3389). Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate RDP session access permissions. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured RDP settings allowing file transfer. Corporate Control: Group Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor abnormal RDP connection attempts. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Transfer payloads via RDP clipboard or drive mapping. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify transferred files to blend with legitimate content. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage stolen credentials for authentication. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use hidden directories to store transferred tools. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute transferred payloads through RDP session. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage PowerShell or command prompt for execution. Corporate Control: PowerShell Execution Policy Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure execution by modifying system policies. Third Party: Security Auditing Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Configure persistence mechanisms via RDP payloads. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete transferred files and session logs. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps to prevent detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Erase event logs containing RDP session activity. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by clearing remote desktop history. Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Lateral movement completed successfully. Corporate Control: Network Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

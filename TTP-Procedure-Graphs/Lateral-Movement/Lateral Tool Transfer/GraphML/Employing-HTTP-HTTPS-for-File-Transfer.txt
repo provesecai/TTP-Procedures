@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Employing-HTTP-HTTPS-for-File-Transfer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Web-Exposed Target Systems</data>
+</node>
+<node id="B">
+<data key="label">Leverage HTTP/HTTPS for Malicious File Transfer</data>
+</node>
+<node id="C">
+<data key="label">Execute Downloaded Tools on Target System</data>
+</node>
+<node id="D">
+<data key="label">Erase Web Transfer Logs to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for externally accessible web servers and exposed admin panels. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured web-based file repositories. Corporate Control: Web Application Firewalls (WAF)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized HTTP download activity. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage default or weak credentials for web access. Corporate Control: Credential Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use HTTP GET requests to download malicious payloads. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify user-agent strings to evade logging detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised web admin accounts to deploy files. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Download scripts to execute commands on target hosts. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution via scheduled tasks or service injection. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms via web-based malware. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to hide execution traces. Third Party: Security Auditing Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate downloaded files to avoid detection. Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete web server logs to erase transfer history. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of downloaded files to blend with legitimate traffic. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by disabling logging features on compromised web servers. Corporate Control: Web Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure lateral movement by verifying successful file execution. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

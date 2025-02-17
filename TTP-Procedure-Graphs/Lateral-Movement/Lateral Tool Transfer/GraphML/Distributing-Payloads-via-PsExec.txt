@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Distributing-Payloads-via-PsExec" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Systems with Admin Shares</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Tools Using PsExec</data>
+</node>
+<node id="C">
+<data key="label">Execute Transferred Tools via Remote Process</data>
+</node>
+<node id="D">
+<data key="label">Erase Artifacts to Maintain Stealth</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for open ADMIN$ and C$ shares. Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify Windows hosts running PsExec. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PsExec executions across network. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Copy payloads to remote ADMIN$ shares. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file metadata to resemble system processes. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen credentials to execute PsExec remotely. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute payload using PsExec service. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy malware for future remote control. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete PsExec logs to erase evidence. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of executed files. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by disabling security event logging. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+</graph>
+</graphml>

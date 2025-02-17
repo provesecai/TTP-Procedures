@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_Device_Drivers_from_System_Logs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Query System Event Logs for Driver-Related Entries</data>
+</node>
+<node id="B">
+<data key="label">Extract and Categorize Logged Driver Installations and Load Events</data>
+</node>
+<node id="C">
+<data key="label">Analyze Logged Events for Potential Anomalies or Security Risks</data>
+</node>
+<node id="D">
+<data key="label">Correlate Findings with Threat Intelligence for Malicious Drivers</data>
+</node>
+<node id="E">
+<data key="label">Completed Extraction of Device Drivers from System Logs</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use Event Viewer to filter logs for driver installation and loading events. Corporate Control: Windows Event Log Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Execute PowerShell "Get-EventLog -LogName System -Source 'DriverFrameworks-UserMode'" to retrieve driver logs. Corporate Control: Windows Logging Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify timestamped logs associated with driver activity. Corporate Control: System Monitoring Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized attempts to clear or modify driver logs. Corporate Control: SIEM Event Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Categorize drivers by manufacturer, version, and trust level. Corporate Control: IT Asset Management Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect excessive or abnormal driver installations. Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference log entries with device hardware activity. Corporate Control: System Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare extracted drivers with known vulnerable versions. Third Party Control: Vulnerability Management Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze suspicious log entries that indicate unauthorized driver loads. Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate anomalies in log patterns indicating persistence techniques. Third Party Control: Threat Intelligence Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify potential driver-based rootkits or malicious payloads. Corporate Control: Advanced Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Generate alerts for log events matching known attack indicators. Corporate Control: SOC Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile system log driver extraction report for security teams. Corporate Control: IT Compliance and Security Documentation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Recommend remediation steps for high-risk driver log anomalies. Corporate Control: IT Risk Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Implement security policies to prevent unauthorized driver modifications. Corporate Control: Endpoint Protection Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete driver log extraction and security assessment. Corporate Control: Security Event Reporting</data>
+</edge>
+</graph>
+</graphml>

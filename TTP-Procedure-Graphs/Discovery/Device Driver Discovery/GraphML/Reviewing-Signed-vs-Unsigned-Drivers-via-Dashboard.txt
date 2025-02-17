@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Reviewing_Signed_vs_Unsigned_Drivers_via_Dashboard" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Device Management Dashboard to Review Installed Drivers</data>
+</node>
+<node id="B">
+<data key="label">Identify and Categorize Signed vs. Unsigned Drivers</data>
+</node>
+<node id="C">
+<data key="label">Analyze Security Risks Associated with Unsigned or Outdated Drivers</data>
+</node>
+<node id="D">
+<data key="label">Check for Potentially Malicious or Unauthorized Drivers</data>
+</node>
+<node id="E">
+<data key="label">Completed Review of Signed vs. Unsigned Drivers</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Navigate to the Windows Device Manager to list installed drivers. Corporate Control: Windows Device Management Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use "sigverif.exe" to scan for unsigned drivers. Corporate Control: Windows Security Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query driver certificates and digital signatures via PowerShell. Corporate Control: Digital Signature Verification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor dashboard activity for unusual driver management operations. Corporate Control: SIEM Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference unsigned drivers with known vulnerabilities. Third Party Control: CVE Database</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify outdated drivers that require updates or replacement. Corporate Control: Patch Management Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate security alerts for drivers that fail digital signature checks. Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate driver usage patterns with malware signatures. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect drivers exhibiting suspicious behavior such as frequent modifications. Corporate Control: Host Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate unauthorized driver installations via forensic analysis. Third Party Control: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Assess unsigned drivers for privilege escalation risks. Corporate Control: Least Privilege Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Notify security teams of high-risk drivers requiring immediate attention. Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile a report summarizing findings on signed and unsigned drivers. Corporate Control: IT Governance and Risk Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Recommend remediation actions, including driver updates or removals. Corporate Control: System Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Apply security controls to prevent unsigned driver execution. Corporate Control: Endpoint Protection Configuration</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete driver signature verification and security assessment. Corporate Control: Security Documentation and Compliance</data>
+</edge>
+</graph>
+</graphml>

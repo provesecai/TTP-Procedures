@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scanning_Kernel_Modules_in_Linux_for_Installed_Drivers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">List Installed Kernel Modules Using Linux Command-Line Tools</data>
+</node>
+<node id="B">
+<data key="label">Extract Module Details and Identify Third-Party or Untrusted Drivers</data>
+</node>
+<node id="C">
+<data key="label">Analyze Driver Configurations and Module Dependencies</data>
+</node>
+<node id="D">
+<data key="label">Check for Kernel-Level Persistence Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Completed Linux Kernel Module Discovery</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Execute "lsmod" to retrieve active kernel modules. Corporate Control: Linux System Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use "modinfo" to extract detailed metadata for each module. Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">List dynamically loaded drivers using "dmesg | grep -i driver". Corporate Control: Kernel Log Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor attempts to access or modify kernel modules. Corporate Control: System Integrity Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify driver signatures and origins against trusted repositories. Third Party Control: Linux Kernel Security Modules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect third-party or unsigned kernel modules loaded into memory. Corporate Control: Host Intrusion Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze module dependencies and linked services. Corporate Control: System Dependency Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-check loaded modules against known Linux kernel exploits. Third Party Control: Threat Intelligence Databases</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate kernel module modifications that indicate persistence. Corporate Control: Kernel Debugging and Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify modules with elevated privileges that could be exploited. Corporate Control: Least Privilege Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect rootkits or hidden drivers using forensic techniques. Third Party Control: Rootkit Detection Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Generate real-time alerts for unauthorized module installations. Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Document findings and report high-risk kernel modules. Corporate Control: Security Compliance and Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Initiate remediation for vulnerable or unauthorized kernel modules. Corporate Control: IT Security Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert SOC for further analysis of flagged kernel modules. Corporate Control: SOC Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete Linux kernel module discovery with appropriate risk mitigation. Corporate Control: Threat Response Planning</data>
+</edge>
+</graph>
+</graphml>

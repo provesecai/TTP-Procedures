@@ -1,0 +1,54 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging-SCP-to-Copy-Files-between-Systems" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify SSH-Enabled Target Systems</data>
+</node>
+<node id="B">
+<data key="label">Authenticate and Transfer Malicious Files via SCP</data>
+</node>
+<node id="C">
+<data key="label">Execute Transferred Tools on Remote System</data>
+</node>
+<node id="D">
+<data key="label">Erase Transfer Artifacts to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for open SSH ports (TCP 22) on network hosts. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate SSH-enabled accounts with SCP access. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized SCP transfers. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Transfer malicious tools using SCP commands. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file names to resemble legitimate scripts. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised SSH keys to bypass authentication. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute transferred payloads through SSH sessions. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms via SCP payloads. Corporate Control: Endpoint Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete SCP logs to remove transfer traces. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of transferred files. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover tracks by erasing authentication logs. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+</graph>
+</graphml>

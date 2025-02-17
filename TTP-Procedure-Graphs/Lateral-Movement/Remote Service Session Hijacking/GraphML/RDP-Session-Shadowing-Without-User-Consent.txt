@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="RDP-Session-Shadowing-Without-User-Consent" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Enumerate Active RDP Sessions</data>
+</node>
+<node id="B">
+<data key="label">Initiate Session Shadowing Without Consent</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Interact with Hijacked RDP Session</data>
+</node>
+<node id="D">
+<data key="label">Cover Tracks and Maintain Persistence</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use 'query user' to identify active RDP sessions and usernames. Corporate Control: Windows Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate session privileges using 'qwinsta' and check for administrative sessions. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual session enumeration activity. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine shadowing restrictions in Group Policy (GPO) settings. Corporate Control: Windows Group Policy Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'mstsc /shadow:[sessionID] /control /noConsentPrompt' to shadow an active session without alerting the user. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry keys (HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services) to disable user notification of session shadowing. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Abuse weak RDP shadow policies allowing session hijacking. Corporate Control: Group Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit misconfigured RDP permissions that allow unauthorized shadowing. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage session shadowing to execute commands within the hijacked session. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Windows Event Logs to erase traces of unauthorized session hijacking (Event IDs 4624, 4779). Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable session timeout policies to maintain long-term access. Corporate Control: Windows Event Log Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy scheduled tasks within the hijacked session to establish persistence. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete RDP logs to remove evidence of shadowing using 'wevtutil cl Security'. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of session hijack activity using 'timestomp'. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remain hidden by disabling security event logs temporarily. Corporate Control: Windows Security Policy Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful lateral movement by accessing further remote systems. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

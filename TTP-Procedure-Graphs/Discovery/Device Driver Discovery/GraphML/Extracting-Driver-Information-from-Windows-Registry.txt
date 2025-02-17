@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_Driver_Information_from_Windows_Registry" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Windows Registry to Extract Driver Entries</data>
+</node>
+<node id="B">
+<data key="label">Query Specific Registry Keys for Driver Paths and Configurations</data>
+</node>
+<node id="C">
+<data key="label">Correlate Registry Data with Running System Drivers</data>
+</node>
+<node id="D">
+<data key="label">Analyze Driver Entries for Suspicious or Vulnerable Components</data>
+</node>
+<node id="E">
+<data key="label">Completed Registry-Based Device Driver Discovery</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Access HKLM\SYSTEM\CurrentControlSet\Services to list installed drivers. Corporate Control: Registry Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use PowerShell (Get-ItemProperty) to retrieve driver metadata from registry. Corporate Control: PowerShell Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract driver file paths from registry entries for cross-validation. Corporate Control: Windows Registry Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized attempts to modify or query driver registry keys. Corporate Control: Endpoint Security Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-reference registry-stored drivers with actively running system drivers. Corporate Control: System Process Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect registry entries referencing missing or unsigned drivers. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify driver persistence mechanisms stored in registry settings. Corporate Control: Security Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate registry data with known vulnerability databases. Third Party Control: CVE Lookup Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze driver configurations for signs of privilege escalation risks. Corporate Control: Vulnerability Management Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify registry-stored drivers with misconfigurations or backdoors. Corporate Control: Windows Group Policy Settings</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform forensic analysis on registry-modified drivers. Third Party Control: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor and report anomalous registry driver configurations. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate a detailed report of registry-stored device drivers and security implications. Corporate Control: IT Risk Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert security operations center regarding discovered registry-based threats. Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile findings into an actionable remediation plan for system hardening. Corporate Control: IT Governance and Security Compliance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete registry driver discovery with documented security risks and countermeasures. Corporate Control: Security Documentation and Reporting</data>
+</edge>
+</graph>
+</graphml>

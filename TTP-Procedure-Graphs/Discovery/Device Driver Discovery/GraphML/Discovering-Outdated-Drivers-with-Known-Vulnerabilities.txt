@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Discovering_Outdated_Drivers_with_Known_Vulnerabilities" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan System for Outdated or Unpatched Drivers</data>
+</node>
+<node id="B">
+<data key="label">Compare Driver Versions Against Known Vulnerability Databases</data>
+</node>
+<node id="C">
+<data key="label">Identify Drivers with Known Exploits or Security Risks</data>
+</node>
+<node id="D">
+<data key="label">Assess Potential Impact of Exploitable Drivers</data>
+</node>
+<node id="E">
+<data key="label">Completed Discovery of Outdated Drivers with Known Vulnerabilities</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Execute "driverquery /FO CSV /V" to list driver versions. Corporate Control: Windows Driver Management Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract driver details using "lsmod" or "modinfo" in Linux. Corporate Control: Linux Kernel Module Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use PowerShell "Get-WmiObject Win32_PnPSignedDriver" for driver version details. Corporate Control: IT Asset Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor logs for frequent driver update failures. Corporate Control: Endpoint Protection Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-check driver versions against the NVD (National Vulnerability Database). Third Party Control: CVE Database</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare extracted drivers with recent security advisories. Third Party Control: Vendor Security Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unpatched drivers flagged in vulnerability reports. Corporate Control: Patch Management Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generate alerts for drivers matching known exploit signatures. Corporate Control: SIEM-Based Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Assess likelihood of driver exploitation based on attack surface. Corporate Control: Security Risk Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate potential use of vulnerable drivers in privilege escalation. Third Party Control: Penetration Testing Reports</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify dependency chains between vulnerable drivers. Corporate Control: Kernel Hardening Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Notify security teams of high-risk outdated drivers. Corporate Control: SOC Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile security report on outdated drivers requiring immediate patches. Corporate Control: IT Compliance Documentation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Recommend mitigation actions, including driver updates or replacements. Corporate Control: Change Management Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Apply automatic updates to remove vulnerable driver versions. Corporate Control: Endpoint Hardening Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete discovery and risk assessment of outdated drivers. Corporate Control: Security Incident Reporting</data>
+</edge>
+</graph>
+</graphml>

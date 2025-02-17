@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking-Disconnected-RDP-Sessions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Disconnected RDP Sessions</data>
+</node>
+<node id="B">
+<data key="label">Reconnect to Disconnected Session</data>
+</node>
+<node id="C">
+<data key="label">Perform Actions Within Hijacked Session</data>
+</node>
+<node id="D">
+<data key="label">Cover Tracks and Terminate Session</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use 'query user' or 'qwinsta' to enumerate all active and disconnected RDP sessions. Corporate Control: Windows Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify target session based on inactivity timeout and session privileges. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous RDP session queries originating from unusual endpoints. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze system logs for disconnected session details stored in Event ID 4778. Corporate Control: Windows Group Policy Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'tscon [sessionID] /dest:console' to forcibly reconnect to a target session without credentials. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Windows registry keys (HKLM\System\CurrentControlSet\Control\Terminal Server) to bypass session lock mechanisms. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy PowerShell scripts to automatically reconnect hijacked sessions without user interaction. Corporate Control: Group Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure session persistence by disabling automatic disconnection policies using 'sc config TermService start= auto'. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use hijacked session to interact with privileged processes, escalate access, and execute commands. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Windows Event Logs to erase traces of unauthorized session hijacking by clearing Event IDs 4779 and 4624. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable screen lock policies within the hijacked session by modifying 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop'. Corporate Control: Windows Event Log Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy lateral movement techniques such as remote process execution via PowerShell Remoting. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete Windows security logs related to session hijacking using 'wevtutil cl Security'. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alter timestamps of session activity to evade forensic analysis using 'timestomp'. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Terminate session cleanly to avoid triggering session logoff alerts in security monitoring tools. Corporate Control: Windows Session Timeout Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful lateral movement by verifying access to additional target machines within the environment. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

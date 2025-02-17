@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SSH-Agent-Hijacking-via-Unix-Domain-Sockets" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active SSH Agent Sockets</data>
+</node>
+<node id="B">
+<data key="label">Access SSH Agent and Extract Active Keys</data>
+</node>
+<node id="C">
+<data key="label">Hijack SSH Sessions for Lateral Movement</data>
+</node>
+<node id="D">
+<data key="label">Erase Tracks to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for active SSH agent sockets in /tmp or /run/user/. Corporate Control: Endpoint Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate running user processes with active SSH agents. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for anomalous access to SSH agent sockets. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured SSH agent forwarding that allows unauthorized access. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use SSH_AUTH_SOCK variable to interact with the hijacked SSH agent. Corporate Control: File Permission Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">List active SSH identities using 'ssh-add -l'. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Forward SSH agent connection to another machine for remote authentication. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Utilize extracted private keys for lateral movement to additional hosts. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage hijacked session to move laterally through SSH commands. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to remove traces of unauthorized SSH agent usage. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable SSH key forwarding logs to remain undetected. Corporate Control: Linux Security Modules (LSM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure persistent access by adding authorized keys to ~/.ssh/authorized_keys. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Delete temporary SSH socket files to remove evidence. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of hijacked SSH actions. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful lateral movement by verifying access to new systems. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

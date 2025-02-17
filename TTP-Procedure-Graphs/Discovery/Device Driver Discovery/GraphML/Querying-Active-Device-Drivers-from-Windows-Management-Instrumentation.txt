@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Querying_Active_Device_Drivers_from_Windows_Management_Instrumentation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Query Active Device Drivers from WMI</data>
+</node>
+<node id="B">
+<data key="label">Identify Device Driver Configuration and Execution Status</data>
+</node>
+<node id="C">
+<data key="label">Cross-reference Device Driver Entries in WMI with System Registry</data>
+</node>
+<node id="D">
+<data key="label">Perform in-depth analysis of drivers and configuration for further exploitation</data>
+</node>
+<node id="E">
+<data key="label">Completed Device Driver Discovery via WMI</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use WMI query (e.g., "SELECT * FROM Win32_SystemDriver") to retrieve active driver information. Corporate Control: WMI Query Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate running drivers and their configuration using Windows Management Instrumentation (WMI). Corporate Control: Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze driver load status and associated execution processes via WMI queries. Corporate Control: Security Event Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized WMI query execution attempts. Corporate Control: SIEM (Security Information and Event Management)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cross-check driver entries with system registry and file system data for integrity. Corporate Control: Windows Registry Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Determine discrepancies between WMI and system registry to identify unregistered or hidden drivers. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Catalog driver version and configuration data for comparison against known vulnerable drivers. Corporate Control: Patch Management Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate driver data with known vulnerabilities in device drivers. Third Party Control: CVE Databases</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze driver information against OS configuration files for persistent configuration settings. Corporate Control: Device Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform forensic analysis on identified drivers and configuration for potential exploitation vectors. Third Party Control: Forensic Tools and Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Examine registry and filesystem for unauthorized driver load paths or unverified digital signatures. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Check for conflicting or malicious entries in the WMI data. Corporate Control: Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile detailed report on discovered device drivers, including metadata and vulnerability risk. Corporate Control: Risk Assessment and Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert SOC teams regarding potential high-risk device drivers. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Final analysis concludes with discovered device drivers and associated privilege risks documented. Corporate Control: IT Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate a prioritized list of drivers requiring patching, auditing, or further examination. Corporate Control: Vulnerability Management Systems</data>
+</edge>
+</graph>
+</graphml>

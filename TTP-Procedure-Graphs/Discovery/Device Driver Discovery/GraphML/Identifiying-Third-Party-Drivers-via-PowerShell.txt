@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Identifying_Third-Party_Drivers_via_PowerShell" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Execute PowerShell Commands to Identify Third-Party Drivers</data>
+</node>
+<node id="B">
+<data key="label">Extract Driver Manufacturer and Digital Signature Information</data>
+</node>
+<node id="C">
+<data key="label">Compare Identified Drivers Against System Baseline</data>
+</node>
+<node id="D">
+<data key="label">Analyze Third-Party Drivers for Potential Security Risks</data>
+</node>
+<node id="E">
+<data key="label">Completed Third-Party Driver Discovery via PowerShell</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use "Get-WmiObject Win32_PnPSignedDriver" to list third-party drivers. Corporate Control: PowerShell Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Run "Get-WindowsDriver -Online" to enumerate installed drivers. Corporate Control: System Integrity Checks</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract driver details including version, manufacturer, and signing status. Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor PowerShell execution logs for unauthorized driver queries. Corporate Control: SIEM Event Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Compare extracted drivers against a baseline of authorized drivers. Corporate Control: Configuration Management Database (CMDB)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unsigned or outdated third-party drivers for further analysis. Third Party Control: Digital Signature Verification Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Correlate driver manufacturer data with known vulnerabilities. Third Party Control: CVE Database Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Audit driver installation history and modification timestamps. Corporate Control: System Log Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Perform security risk assessment on flagged third-party drivers. Corporate Control: Security Compliance Audits</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-reference drivers with threat intelligence databases. Third Party Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze driver privilege levels and potential attack vectors. Corporate Control: Privilege Escalation Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Generate alerts for high-risk third-party drivers needing updates or removal. Corporate Control: Vulnerability Management Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compile detailed third-party driver discovery report. Corporate Control: Security Documentation and Compliance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Notify SOC about any high-risk or unauthorized third-party drivers. Corporate Control: SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Recommend remediation steps such as removal, replacement, or patching. Corporate Control: IT Security Governance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Complete third-party driver discovery with risk mitigation strategies in place. Corporate Control: Risk Assessment and Policy Enforcement</data>
+</edge>
+</graph>
+</graphml>

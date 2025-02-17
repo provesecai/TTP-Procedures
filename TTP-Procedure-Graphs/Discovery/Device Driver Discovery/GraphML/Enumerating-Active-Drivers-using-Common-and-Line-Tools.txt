@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enumerating_Active_Drivers_using_Command_Line_Tools" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Run Command-Line Tool to List Active Device Drivers</data>
+</node>
+<node id="B">
+<data key="label">Extract Metadata from Active Device Drivers</data>
+</node>
+<node id="C">
+<data key="label">Analyze Driver Signatures, Versions, and Load Status</data>
+</node>
+<node id="D">
+<data key="label">Search for Elevated Privileges or Hidden Drivers</data>
+</node>
+<node id="E">
+<data key="label">Final Report of Device Drivers with Security Implications</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Use command-line tools like "driverquery" or "sc query" to list active drivers on the system. Corporate Control: Command-Line Tool Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Execute PowerShell commands like "Get-WmiObject Win32_SystemDriver" to retrieve active drivers. Corporate Control: PowerShell Remoting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Query device drivers using command-line utilities and check driver status. Corporate Control: Device Management Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track command-line execution of driver enumeration tools for unauthorized access attempts. Corporate Control: Security Monitoring Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract metadata like driver file path, version, and load status using command-line outputs. Corporate Control: OS Configuration Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Verify driver digital signatures and versions using system tools like "sigcheck". Corporate Control: File Integrity Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Review driver configurations and compare against OS baseline for security policy compliance. Third Party Control: Vulnerability Databases</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for drivers without valid signatures or unverified drivers flagged for further analysis. Corporate Control: Endpoint Security Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze drivers with suspicious or unexpected file paths or signature mismatches. Corporate Control: Forensic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect drivers loaded into unusual memory regions or flagged as having high privilege levels. Corporate Control: Privilege Escalation Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Cross-reference discovered drivers with known vulnerability databases for risk assessment. Third Party Control: CVE Databases</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Flag high-risk or unverified drivers for security intervention or audit. Corporate Control: Incident Response Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Generate final report on discovered drivers, including signatures and risk ratings. Corporate Control: Reporting and Risk Assessment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Alert relevant security teams about high-risk driver findings. Third Party Control: External Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Provide detailed findings to SOC and IT teams for remediation action. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure final audit logs include all identified driver anomalies and next steps for remediation. Corporate Control: Audit Trail Systems</data>
+</edge>
+</graph>
+</graphml>
