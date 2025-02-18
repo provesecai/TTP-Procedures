@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="LLMNR_NBT-NS_Poisoning" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor Network for LLMNR and NBT-NS Requests</data>
+</node>
+<node id="B">
+<data key="label">Respond to Name Resolution Requests with Spoofed Replies</data>
+</node>
+<node id="C">
+<data key="label">Intercept NTLM Authentication Hashes</data>
+</node>
+<node id="D">
+<data key="label">Crack or Relay Captured NTLM Hashes</data>
+</node>
+<node id="E">
+<data key="label">Successfully Obtain Credentials</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Analyze network for LLMNR and NBT-NS queries. Corporate Control: Network Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify systems relying on LLMNR/NBT-NS. Corporate Control: Network Configuration Best Practices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unexpected responses to name resolution requests. Corporate Control: SIEM & Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in network traffic patterns. Third Party: Network Traffic Analysis Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Spoof legitimate responses with adversary-controlled IPs. Corporate Control: Endpoint Protection Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect legitimate traffic to adversary-controlled resources. Corporate Control: DNS Security & Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor and block unauthorized LLMNR/NBT-NS responses. Third Party: Network Security Audits</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unexpected system interactions. Corporate Control: Anomaly Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture NTLMv2 hashes from victim machines. Corporate Control: Credential Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store captured hashes for offline cracking. Corporate Control: Secure Authentication Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized authentication attempts. Corporate Control: Access Control and Identity Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal login activity. Third Party: Behavioral Analysis and Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Crack captured hashes using brute force. Corporate Control: Strong Password Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Relay valid NTLM hashes to authenticate to services. Corporate Control: Multifactor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for excessive failed login attempts. Corporate Control: Account Lockout and Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect usage of known cracking tools. Third Party: External Penetration Testing</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Network_Share_Data_Collection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan Network for Shared Drives and Folders</data>
+</node>
+<node id="B">
+<data key="label">Identify and Access High-Value Shared Files</data>
+</node>
+<node id="C">
+<data key="label">Extract and Archive Confidential Data</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Hide Collected Files</data>
+</node>
+<node id="E">
+<data key="label">Successfully Store Extracted Network Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate network shares using SMB and NFS protocols. Corporate Control: Network Segmentation & Access Control Lists (ACLs)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized network drive scans. Corporate Control: SIEM & Network Behavior Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor excessive network queries for file shares. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze abnormal file access patterns. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">List high-value files based on extensions (.pdf, .docx). Corporate Control: Data Classification & Content Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor access logs for unauthorized file openings. Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect mass file copying from network shares. Third Party: AI-Powered Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze network logs for unusual download traffic. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Compress and encrypt stolen files to evade detection. Corporate Control: Secure File Storage & Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unexpected encryption operations. Corporate Control: Endpoint Threat Detection & Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify unauthorized modifications to file archives. Third Party: Digital Forensics & Incident Response (DFIR) Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in compressed file sizes and timestamps. Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store encrypted files in concealed directories. Corporate Control: Endpoint Security & Privileged Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized file movements. Corporate Control: Data Loss Prevention (DLP) Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect hidden file transfers over encrypted channels. Corporate Control: Zero Trust Network Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify attempts to exfiltrate network-stored data externally. Third Party: External Cyber Threat Intelligence Monitoring</data>
+</edge>
+</graph>
+</graphml>

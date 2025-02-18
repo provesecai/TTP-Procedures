@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injected_Macros_in_Enterprise_Spreadsheet_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Frequently Used Shared Spreadsheet Files</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Macros into Shared File</data>
+</node>
+<node id="C">
+<data key="label">User Opens the Compromised Spreadsheet</data>
+</node>
+<node id="D">
+<data key="label">Malicious Macro Executes Code</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for spreadsheet files frequently accessed by multiple users. Corporate Control: File Access Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify spreadsheet templates with weak permission settings. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor modification attempts on shared spreadsheets. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for unsigned macros in frequently used files. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed a VBA macro that launches a PowerShell script. Corporate Control: Document Security Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure macro activation upon document opening. Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor spreadsheet changes for unauthorized modifications. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect suspicious macro execution attempts. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User opens the infected spreadsheet file. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Macro automatically runs hidden malicious commands. Corporate Control: Application Execution Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of PowerShell scripts via Excel. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalous behavior from office applications. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish remote access using embedded malware. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised machine as a pivot for lateral movement. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound connections from office applications. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Spread additional infected spreadsheets for deeper access. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement via newly accessed internal hosts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

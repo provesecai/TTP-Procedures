@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Scripts_in_Shared_Drive" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Shared Drives with Write Access</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious Script in Shared Folder</data>
+</node>
+<node id="C">
+<data key="label">User Executes Malicious Script</data>
+</node>
+<node id="D">
+<data key="label">Establish Connection to Compromised System</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate network shares with read/write permissions. Corporate Control: Network Access Control (NAC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify commonly used scripts in shared locations. Corporate Control: File Usage Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to shared drives. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan shared drives for anomalous script uploads. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious PowerShell or Batch script into shared folders. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script mimics legitimate administrative tools. Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for new executable scripts in shared locations. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track download and execution activity of shared scripts. Corporate Control: Security Event Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User unknowingly runs malicious script. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Script downloads and executes secondary payload. Corporate Control: Network Intrusion Prevention System (IPS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for execution of suspicious command-line arguments. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track remote command execution initiated via scripts. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Attacker gains control of the compromised system. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised system as a pivot for lateral movement. Corporate Control: Network Segmentation Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound connections for unusual traffic. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional scripts in other shared locations. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional shared scripts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

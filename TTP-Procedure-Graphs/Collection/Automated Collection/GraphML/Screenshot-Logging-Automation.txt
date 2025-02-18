@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Screenshot_Logging_Automation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Automated Screenshot Capture Script</data>
+</node>
+<node id="B">
+<data key="label">Configure Periodic or Event-Triggered Capture</data>
+</node>
+<node id="C">
+<data key="label">Store and Archive Captured Screenshots</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Hide Captured Images</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect Screen Activity Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject code to monitor active window screenshots. Corporate Control: Endpoint Monitoring & Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized screenshot requests. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect execution of suspicious screen capture scripts. Corporate Control: SIEM & Host Intrusion Detection (HIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify attempts to bypass security screen protections. Third Party: Advanced Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Schedule automatic screen captures at intervals. Corporate Control: Process Execution Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect sudden increases in screenshot file creation. Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor access to screen capture APIs. Corporate Control: Application Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect new files being written to unauthorized directories. Third Party: Red Teaming & Adversary Simulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt and obfuscate screenshot storage. Corporate Control: Secure Cryptographic Storage</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized encryption processes. Corporate Control: Security Incident and Event Monitoring (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect movement of images to external storage. Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify unusual file modification timestamps. Third Party: Digital Forensics & Incident Response (DFIR) Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze images for valuable on-screen data. Corporate Control: AI-Powered Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor compressed archives containing large image sets. Corporate Control: Secure File Access Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect attempts to exfiltrate screenshots via email. Corporate Control: Email Security & DLP Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor network logs for outbound image transmission. Third Party: Cloud Security & Network Behavior Analytics</data>
+</edge>
+</graph>
+</graphml>

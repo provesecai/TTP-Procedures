@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Proxy_Injection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malicious Proxy to Intercept Traffic</data>
+</node>
+<node id="B">
+<data key="label">Manipulate Network Settings to Redirect Traffic</data>
+</node>
+<node id="C">
+<data key="label">Monitor and Log Sensitive User Data</data>
+</node>
+<node id="D">
+<data key="label">Extract Authentication Credentials and Private Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect Intercepted Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject rogue proxy settings into network configurations. Corporate Control: Secure Proxy Auto-Configuration (PAC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Manipulate browser settings using Group Policy modifications. Corporate Control: Endpoint Protection Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized proxy settings changes. Corporate Control: Network Security Event Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in outbound web traffic. Third Party: Web Traffic Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Route victim traffic through adversary-controlled proxy. Corporate Control: Enforce HTTPS Proxy Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify SSL/TLS connections to perform decryption. Corporate Control: TLS Inspection & Certificate Pinning</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network logs for unauthorized proxy activity. Third Party: Advanced Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect proxy redirections to untrusted locations. Corporate Control: DNS Security & URL Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept user credentials during login attempts. Corporate Control: Secure Authentication Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor and capture sensitive form submissions. Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track behavioral patterns in browsing activities. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify anomalies in network session persistence. Third Party: Network Threat Hunting Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use extracted credentials for further exploitation. Corporate Control: Enforce Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze compromised browsing sessions for financial transactions. Corporate Control: Fraud Detection Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor user authentication behavior post-compromise. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized credential use across multiple services. Third Party: Dark Web Credential Monitoring Services</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromised_Templates_in_Shared_Office_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Shared Office Templates</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Macros in Templates</data>
+</node>
+<node id="C">
+<data key="label">User Opens Shared Document Template</data>
+</node>
+<node id="D">
+<data key="label">Macros Execute Malicious Commands</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for frequently used shared templates. Corporate Control: File Access Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify templates with weak permissions. Corporate Control: Access Control Lists (ACLs)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor template modification activities. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate accessible template storage locations. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed VBA macros with malicious payloads. Corporate Control: Email and Document Security Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify macros to appear legitimate. Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor template integrity for unauthorized changes. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log all document modifications in shared repositories. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User opens the compromised template. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Macros execute PowerShell commands. Corporate Control: Application Execution Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for execution of suspicious macros. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized macro-based PowerShell execution. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Malware establishes a remote connection. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compromised host used for lateral movement. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound network connections for anomalies. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional backdoors via template propagation. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional shared templates. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

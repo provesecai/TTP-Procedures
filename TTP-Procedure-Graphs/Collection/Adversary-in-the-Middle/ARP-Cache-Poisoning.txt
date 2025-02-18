@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ARP_Cache_Poisoning" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Devices and Their MAC Addresses</data>
+</node>
+<node id="B">
+<data key="label">Send Spoofed ARP Replies Associating Attacker’s MAC with Target IP</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Redirect Network Traffic</data>
+</node>
+<node id="D">
+<data key="label">Extract Credentials and Sensitive Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Capture Authentication Information</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for devices communicating over ARP. Corporate Control: Network Discovery Tools</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor MAC-to-IP mappings for anomalies. Corporate Control: Network Inventory and Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect excessive ARP requests. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unauthorized ARP updates. Third Party: Network Traffic Analysis Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject manipulated ARP entries into victim cache. Corporate Control: Endpoint Security Solutions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect legitimate traffic through attacker’s machine. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network path deviations. Corporate Control: Network Flow Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect abnormal MAC address changes. Third Party: Threat Intelligence Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Intercept login credentials in transit. Corporate Control: Enforce Encrypted Communication</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify ARP cache to persist MITM attack. Corporate Control: ARP Table Protection Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for sudden increases in ARP updates. Corporate Control: Anomaly Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized MAC-IP associations. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract captured session tokens and passwords. Corporate Control: Secure Authentication & Token Validation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze intercepted traffic for sensitive data. Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unusual authentication attempts. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect usage of known packet-capturing tools. Third Party: External Penetration Testing</data>
+</edge>
+</graph>
+</graphml>

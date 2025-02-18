@@ -1,0 +1,81 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-VNC" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible VNC Services</data>
+</node>
+<node id="B">
+<data key="label">Obtain Valid VNC Credentials</data>
+</node>
+<node id="C">
+<data key="label">Establish VNC Session</data>
+</node>
+<node id="D">
+<data key="label">Execute Remote Commands</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for open VNC ports (TCP/5900, 5901). Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify VNC services running with weak authentication. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized VNC login attempts. Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Intercept VNC authentication packets using packet sniffers. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit default or weak VNC passwords. Corporate Control: Password Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen credentials to authenticate via VNC. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass VNC authentication using replay attacks. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack active VNC sessions via session token theft. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit insecure VNC encryption for unauthorized access. Corporate Control: Security Configuration Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use brute-force techniques to crack VNC passwords. Third Party: Security Audit Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish interactive VNC session for remote execution. Corporate Control: User Session Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms within the VNC session. Corporate Control: Security Event Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify VNC configurations to prevent detection. Third Party: Security Configuration Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exfiltrate credentials stored in VNC session history. Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use VNC session hopping to pivot through the network. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of VNC access. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Create scheduled tasks via VNC for persistence. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable security software within the VNC session. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Move laterally by leveraging additional VNC sessions. Corporate Control: Network Segmentation Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional VNC-enabled hosts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

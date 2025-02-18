@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-Citrix-Remote-Services" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Citrix Remote Sessions</data>
+</node>
+<node id="B">
+<data key="label">Exploit Weak Citrix Authentication</data>
+</node>
+<node id="C">
+<data key="label">Hijack Active Citrix Session</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands in Hijacked Citrix Session</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for open Citrix NetScaler and Citrix Gateway services. Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor network traffic for active Citrix authentication packets. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured Citrix session timeout policies. Corporate Control: Citrix Security Configuration Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Harvest Citrix session authentication tokens from memory. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage credential stuffing attacks against Citrix authentication portals. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject stolen session tokens into Citrix authentication requests. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass multi-factor authentication via Citrix API exploits. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use keylogging techniques to capture Citrix login credentials. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit Citrix web interface vulnerabilities to hijack sessions. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Citrix registry settings to allow session persistence. Corporate Control: Security Configuration Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute remote commands using Citrix session controls. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Citrix event logs to remove traces of unauthorized session access. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain persistence by modifying Citrix session timeout settings. Corporate Control: Citrix Group Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use Citrix Receiver exploits to escalate privileges. Corporate Control: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy additional lateral movement techniques from within the Citrix session. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify Citrix configuration files to ensure continued access. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable Citrix logging features to evade forensic analysis. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage Citrix virtual desktop infrastructure (VDI) to pivot to other systems. Corporate Control: Lateral Movement Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful lateral movement by accessing additional Citrix-hosted resources. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+</graph>
+</graphml>

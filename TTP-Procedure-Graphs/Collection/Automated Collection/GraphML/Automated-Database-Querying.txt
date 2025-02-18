@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Automated_Database_Querying" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Access Vulnerable Databases</data>
+</node>
+<node id="B">
+<data key="label">Deploy Automated Queries to Extract Data</data>
+</node>
+<node id="C">
+<data key="label">Store Retrieved Database Records</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Conceal Extracted Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Capture and Store High-Value Database Records</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for open or weakly secured database instances. Corporate Control: Database Access Control & Firewall Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized queries to sensitive tables. Corporate Control: Database Audit Logging & Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor excessive query execution on critical databases. Corporate Control: SIEM & Database Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze database query patterns for anomalies. Third Party: Threat Intelligence Database Security Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use automated scripts to extract targeted records. Corporate Control: Role-Based Access Controls (RBAC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor real-time database interactions. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect bulk data extraction attempts. Third Party: AI-Powered Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track unauthorized SQL execution and large response sizes. Corporate Control: SQL Injection & Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt extracted data to evade detection. Corporate Control: Secure Database Encryption Standards</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for suspicious encrypted data movements. Corporate Control: Data Loss Prevention (DLP) Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized access to stored query results. Third Party: External Cyber Threat Intelligence Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze data exfiltration patterns in logs. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Store extracted records in hidden directories. Corporate Control: Endpoint Security & Privileged Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized movement of encrypted database records. Corporate Control: Database Security & Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect hidden database exfiltration over covert channels. Corporate Control: Zero Trust Network Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify attempts to transfer extracted records externally. Third Party: Managed Threat Detection & Response (MDR)</data>
+</edge>
+</graph>
+</graphml>

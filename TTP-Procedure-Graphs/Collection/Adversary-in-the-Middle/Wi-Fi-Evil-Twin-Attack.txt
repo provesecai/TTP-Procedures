@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Wi-Fi_Evil_Twin_Attack" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Clone a Legitimate Wi-Fi Network</data>
+</node>
+<node id="B">
+<data key="label">Broadcast Rogue Wi-Fi Network with Stronger Signal</data>
+</node>
+<node id="C">
+<data key="label">Intercept Network Traffic and Credentials</data>
+</node>
+<node id="D">
+<data key="label">Extract Authentication Data from Captured Traffic</data>
+</node>
+<node id="E">
+<data key="label">Successfully Harvest Sensitive Credentials</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for commonly used corporate Wi-Fi SSIDs. Corporate Control: Wi-Fi Network Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify weak security configurations on networks. Corporate Control: Wireless Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized attempts to impersonate SSIDs. Corporate Control: Wireless Intrusion Detection Systems (WIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual Wi-Fi behavior through RF monitoring. Third Party: External Wireless Security Assessments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Broadcast a stronger signal to force client connections. Corporate Control: Rogue AP Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log all authentication attempts from victim devices. Corporate Control: Wi-Fi Access Control Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for sudden changes in network associations. Third Party: Threat Intelligence & Red Teaming</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized SSID changes in corporate zones. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture authentication handshakes and credentials. Corporate Control: WPA3 and Secure Wi-Fi Authentication</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decrypt intercepted traffic containing passwords. Corporate Control: End-to-End Encryption Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for repeated failed login attempts. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect credential misuse from unauthorized locations. Third Party: External Threat Monitoring Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract cleartext credentials from compromised traffic. Corporate Control: Secure Authentication Mechanisms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze compromised authentication tokens for session hijacking. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor user authentication logs for anomalies. Corporate Control: SIEM & Log Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect reuse of stolen credentials on additional networks. Third Party: External Penetration Testing</data>
+</edge>
+</graph>
+</graphml>

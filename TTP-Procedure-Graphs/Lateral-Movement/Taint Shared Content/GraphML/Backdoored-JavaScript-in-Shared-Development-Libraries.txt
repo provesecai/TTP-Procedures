@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Backdoored_JavaScript_in_Shared_Development_Libraries" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Shared JavaScript Libraries</data>
+</node>
+<node id="B">
+<data key="label">Inject Backdoor into JavaScript Code</data>
+</node>
+<node id="C">
+<data key="label">Developer Deploys Tainted Library</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes on Multiple Applications</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for commonly used JavaScript libraries in shared repositories. Corporate Control: Software Repository Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify libraries without signature verification. Corporate Control: Secure Software Development Practices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor modifications to frequently accessed libraries. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for outdated or unpatched shared scripts. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious functions within the library code. Corporate Control: Static Code Analysis Tools</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure backdoor is triggered under specific conditions. Corporate Control: Code Review and Approval Processes</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unusual changes to shared library functions. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect suspicious API calls in modified scripts. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developer unknowingly deploys compromised library. Corporate Control: Secure Development Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Library backdoor activates upon execution. Corporate Control: Application Security Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of shared libraries across applications. Corporate Control: Runtime Application Self-Protection (RASP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal execution patterns in web applications. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish unauthorized access via the compromised library. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Leverage infected web applications for lateral movement. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unexpected network requests from applications. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Spread the tainted library to additional projects. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement via exploited web infrastructure. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

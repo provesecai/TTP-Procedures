@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Session_Hijacking_via_HTTP_MITM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Intercept HTTP Session Cookies in Transit</data>
+</node>
+<node id="B">
+<data key="label">Extract Session Tokens from Captured Traffic</data>
+</node>
+<node id="C">
+<data key="label">Replay or Inject Stolen Session Tokens</data>
+</node>
+<node id="D">
+<data key="label">Establish Unauthorized Access to User Accounts</data>
+</node>
+<node id="E">
+<data key="label">Successfully Hijack User Sessions</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor unencrypted HTTP traffic for authentication headers. Corporate Control: Enforce HTTPS Everywhere</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify services using weak session management. Corporate Control: Secure Web Application Development Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unexpected session traffic. Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized HTTP traffic sniffing. Third Party: External Security Audits</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract session tokens from HTTP traffic. Corporate Control: Secure Authentication Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log and analyze authentication requests. Corporate Control: Web Application Firewalls (WAF)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for repeated use of the same session ID. Third Party: Behavioral Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in active user session behaviors. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use stolen tokens to gain access to active sessions. Corporate Control: Implement HTTP-Only & Secure Cookie Flags</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify requests using the compromised session. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor session login patterns for irregularities. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect replayed session tokens. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Hijack user accounts without needing passwords. Corporate Control: Session Expiry & Regeneration Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Gain unauthorized access to restricted systems. Corporate Control: Zero Trust Architecture Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized account access attempts. Corporate Control: Security Event Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect reuse of stolen sessions across different IPs. Third Party: Adversary Simulation Testing</data>
+</edge>
+</graph>
+</graphml>

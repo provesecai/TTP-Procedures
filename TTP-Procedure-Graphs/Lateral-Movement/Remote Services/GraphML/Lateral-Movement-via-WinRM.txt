@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-WinRM" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Hosts with WinRM Enabled</data>
+</node>
+<node id="B">
+<data key="label">Obtain Valid User Credentials</data>
+</node>
+<node id="C">
+<data key="label">Establish WinRM Session</data>
+</node>
+<node id="D">
+<data key="label">Execute Remote Commands</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for WinRM open ports (TCP/5985, 5986). Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate Active Directory for machines allowing WinRM access. Corporate Control: Windows Group Policy Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual WinRM authentication attempts. Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify hosts with WinRM enabled and no MFA requirement. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Check for stored credentials in Windows Credential Manager. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen credentials to authenticate via WinRM. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage pass-the-hash attack to gain access. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack Kerberos tickets to establish WinRM session. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit default or weak passwords in administrative accounts. Corporate Control: Password Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious PowerShell scripts via WinRM session. Third Party: Security Audit Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use 'Invoke-Command' to execute remote commands. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify WinRM configurations to prevent detection. Corporate Control: Windows Event Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms within the WinRM session. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypass execution policy restrictions via PowerShell. Corporate Control: Script Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract user credentials from memory. Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify event logs to erase traces of WinRM access. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Create scheduled tasks for future access. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Move laterally to additional hosts via WinRM. Corporate Control: Network Segmentation Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional WinRM-enabled hosts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

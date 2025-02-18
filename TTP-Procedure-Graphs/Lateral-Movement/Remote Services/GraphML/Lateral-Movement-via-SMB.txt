@@ -1,0 +1,81 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-SMB" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible SMB Shares</data>
+</node>
+<node id="B">
+<data key="label">Obtain Valid SMB Credentials</data>
+</node>
+<node id="C">
+<data key="label">Connect to SMB Share</data>
+</node>
+<node id="D">
+<data key="label">Upload and Execute Malicious Payload</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate SMB shares using 'smbclient -L'. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan for misconfigured SMB shares with weak permissions. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized SMB access attempts. Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Extract network share lists from domain controllers. Corporate Control: Active Directory Group Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use tools like 'Responder' to poison SMB authentication requests. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverage credentials obtained from previous compromise. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use pass-the-hash attacks to authenticate to SMB. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Steal NTLM hashes from memory using Mimikatz. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass SMB authentication using stolen Kerberos tickets. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify NTLM relay attacks to hijack authentication requests. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Mount SMB shares and upload malicious payloads. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy scripts to maintain persistence across SMB shares. Corporate Control: Security Group Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use SMB exec tools to run code on remote systems. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Leverage PowerShell remoting over SMB for execution. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit weak access control lists to modify system files. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify SMB event logs to remove traces of unauthorized access. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy hidden scheduled tasks via SMB shares for persistence. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable security alerts related to SMB activity. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Move laterally to additional SMB-enabled hosts. Corporate Control: Network Segmentation Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional SMB shares. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

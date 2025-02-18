@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="BGP_Hijacking_for_Data_Interception" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify and Target Vulnerable BGP Routers</data>
+</node>
+<node id="B">
+<data key="label">Announce Malicious BGP Routes to Reroute Traffic</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Log Sensitive Network Traffic</data>
+</node>
+<node id="D">
+<data key="label">Extract Authentication Data and Confidential Information</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect High-Value Network Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for misconfigured or unprotected BGP routers. Corporate Control: Secure BGP Configuration Best Practices</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor global BGP announcements for anomalies. Corporate Control: Border Gateway Protocol (BGP) Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized route advertisements. Corporate Control: Route Origin Validation (ROV)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor external BGP traffic for irregular changes. Third Party: Global BGP Security Auditing Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Announce adversary-controlled BGP prefixes. Corporate Control: Route Filtering and Prefix Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Redirect traffic through adversary-controlled networks. Corporate Control: Secure Autonomous System Number (ASN) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unexpected traffic rerouting. Third Party: Global Internet Traffic Analysis Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect abnormal spikes in BGP route changes. Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Capture sensitive data from intercepted traffic. Corporate Control: End-to-End Network Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract plaintext credentials and authentication tokens. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze rerouted traffic for high-value intelligence. Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in encrypted versus plaintext traffic. Third Party: Advanced Network Threat Intelligence Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use captured data for further espionage or exploitation. Corporate Control: Zero Trust Network Access (ZTNA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor affected users for unauthorized access attempts. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized credential reuse on targeted systems. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Report hijacked traffic patterns to external monitoring bodies. Third Party: Internet-Wide BGP Incident Response Teams</data>
+</edge>
+</graph>
+</graphml>

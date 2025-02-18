@@ -1,0 +1,81 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-Rexec" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible Rexec Services</data>
+</node>
+<node id="B">
+<data key="label">Obtain Valid Rexec Credentials</data>
+</node>
+<node id="C">
+<data key="label">Establish Rexec Session</data>
+</node>
+<node id="D">
+<data key="label">Execute Remote Commands</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for open Rexec ports (TCP/512). Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor failed Rexec authentication attempts. Corporate Control: SIEM Log Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify systems running Rexec with default settings. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Harvest Rexec credentials from configuration files. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit weak or reused Rexec passwords. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use stolen credentials to authenticate via Rexec. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit trust relationships between Rexec-enabled hosts. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify authentication policies to bypass restrictions. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replay stolen credentials to establish a remote session. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Utilize credential stuffing techniques to gain access. Corporate Control: Password Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establish interactive Rexec session for command execution. Corporate Control: User Session Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms within the Rexec session. Corporate Control: Security Event Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify Rexec configurations to evade detection. Third Party: Security Configuration Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exfiltrate credentials stored in Rexec session history. Corporate Control: Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use Rexec session hopping to pivot through the network. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to remove traces of Rexec access. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Create scheduled tasks via Rexec for persistence. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable security software within the Rexec session. Corporate Control: Endpoint Protection Platforms (EPP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Move laterally by leveraging additional Rexec sessions. Corporate Control: Network Segmentation Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional Rexec-enabled hosts. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

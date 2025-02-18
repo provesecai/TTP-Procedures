@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Trojanized_Software_in_Internal_Repository" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Internal Code Repositories</data>
+</node>
+<node id="B">
+<data key="label">Modify Software with Malicious Code</data>
+</node>
+<node id="C">
+<data key="label">Developer Deploys Tainted Software</data>
+</node>
+<node id="D">
+<data key="label">Malware Activates on Multiple Systems</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate internal repositories with weak access controls. Corporate Control: Version Control Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to software repositories. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify repositories storing widely used internal software. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain repository access via stolen credentials. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert backdoor into source code to execute post-installation. Corporate Control: Static Application Security Testing (SAST)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify scripts in deployment pipelines for stealth persistence. Corporate Control: CI/CD Security Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious code bypasses security scanning. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized repository modifications. Corporate Control: Code Review and Change Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Developer compiles and distributes tainted software. Corporate Control: Application Whitelisting Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malicious code executes upon installation on user systems. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor software deployment for unexpected behaviors. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log and flag unauthorized changes in software builds. Corporate Control: Software Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish remote access via compromised endpoints. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use infected systems to explore internal network further. Corporate Control: Network Segmentation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor lateral movement attempts from tainted software. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Propagate malicious code by leveraging update mechanisms. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional internal resources. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

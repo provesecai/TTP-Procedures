@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Executables_in_Shared_Software_Installers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Shared Software Installers</data>
+</node>
+<node id="B">
+<data key="label">Replace Executable with Trojanized Version</data>
+</node>
+<node id="C">
+<data key="label">User Installs Compromised Software</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes on Target System</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate shared directories containing installers. Corporate Control: Network Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unsigned executables stored in shared repositories. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor changes to installation files in shared locations. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan shared folders for executable replacements. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed backdoor into an installer. Corporate Control: Endpoint Protection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file metadata to match legitimate software. Corporate Control: File Reputation Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor installation files for unauthorized modifications. Third Party: Security Audit Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect execution of unsigned software. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User installs the trojanized software. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Malware deploys persistence mechanisms. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of software installation scripts. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious process injections from installers. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish remote access from infected system. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use compromised system for lateral movement. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unusual network connections post-installation. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Propagate malware through additional software installers. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement via expanded network access. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Scheduled_Data_Harvesting" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Automated Script for Data Search</data>
+</node>
+<node id="B">
+<data key="label">Schedule Regular Execution of the Collection Script</data>
+</node>
+<node id="C">
+<data key="label">Scan System for Targeted Files</data>
+</node>
+<node id="D">
+<data key="label">Automatically Archive and Store Extracted Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect Targeted Files</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy scripts designed to scan user directories. Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized execution of automated scripts. Corporate Control: SIEM & Security Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor scheduled script execution patterns. Corporate Control: Host Intrusion Detection Systems (HIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track unusual file access events. Third Party: External Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure script to execute at predefined intervals. Corporate Control: Endpoint Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry or task scheduler to maintain execution. Corporate Control: Windows Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized modifications to task scheduler. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor task execution and script persistence. Corporate Control: SIEM & Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Search for specified document extensions. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log identified files and their locations. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect repeated access to sensitive file types. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor abnormal access patterns. Third Party: Threat Intelligence & Cyber Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Compress and encrypt collected data for exfiltration. Corporate Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure extracted data remains hidden from detection tools. Corporate Control: Advanced Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized file compression. Corporate Control: SIEM Alerting & File Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect abnormal data movement or encryption attempts. Third Party: Cloud Security & External Analysis</data>
+</edge>
+</graph>
+</graphml>

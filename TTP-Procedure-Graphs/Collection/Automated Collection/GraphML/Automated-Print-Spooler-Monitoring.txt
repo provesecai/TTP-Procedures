@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Automated_Print_Spooler_Monitoring" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Script to Monitor Print Spooler Queue</data>
+</node>
+<node id="B">
+<data key="label">Capture Print Job Contents in Real Time</data>
+</node>
+<node id="C">
+<data key="label">Extract and Process Printed Documents</data>
+</node>
+<node id="D">
+<data key="label">Store or Transmit Extracted Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect Printed Document Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor spooler service activity for print jobs. Corporate Control: Secure Print Spooler Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized print job interception attempts. Corporate Control: Print Job Logging & Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor print spooler API access logs. Corporate Control: SIEM & Host Intrusion Detection (HIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze abnormal print job activity. Third Party: Threat Intelligence Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract raw data from intercepted print jobs. Corporate Control: Print Server Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log all intercepted print requests. Corporate Control: Data Loss Prevention (DLP) for Print Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor excessive print job activity by unauthorized users. Third Party: Red Team Security Assessments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect spooler logs being modified or deleted. Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Filter print jobs for documents containing sensitive terms. Corporate Control: AI-Based Data Classification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract text from intercepted document images. Corporate Control: Secure Optical Character Recognition (OCR) Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized access to print job cache files. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unusual spikes in print job volume. Third Party: Managed Security Service Providers (MSSPs)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Encrypt and store extracted document contents. Corporate Control: Secure Cryptographic Storage</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized data transmissions via print logs. Corporate Control: SIEM Alerting & Network Traffic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect print data exfiltration attempts over external channels. Corporate Control: Network Behavior Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify attempts to transfer print logs to external storage. Third Party: Cloud Security & External Data Loss Prevention</data>
+</edge>
+</graph>
+</graphml>

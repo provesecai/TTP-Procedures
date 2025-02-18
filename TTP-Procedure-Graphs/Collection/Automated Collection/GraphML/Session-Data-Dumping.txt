@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Session_Data_Dumping" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor Active User Sessions and Authentication Data</data>
+</node>
+<node id="B">
+<data key="label">Extract Session Cookies and Tokens</data>
+</node>
+<node id="C">
+<data key="label">Store Captured Session Data for Future Use</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Conceal Stolen Session Data</data>
+</node>
+<node id="E">
+<data key="label">Successfully Capture and Store Valid Session Data</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor memory processes for session data in browsers. Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized attempts to dump session information. Corporate Control: SIEM & Network Authentication Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze endpoint memory for volatile credential storage. Corporate Control: Application Sandboxing & Secure Containers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor network traffic for session token harvesting attempts. Third Party: Advanced Network Traffic Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract session data from local storage and browser memory. Corporate Control: Secure Browser & Token Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log stolen session data for use in future attacks. Corporate Control: User Access & Token Revocation Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for sudden spikes in session token creation. Third Party: Behavioral Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect large-scale attempts to dump authentication data. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt session tokens to evade detection. Corporate Control: Secure Cryptographic Storage</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor attempts to exfiltrate encrypted session data. Corporate Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized access to session storage locations. Corporate Control: Identity & Access Management (IAM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify suspicious storage patterns of session tokens. Third Party: Cyber Threat Hunting & AI Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use stolen session data to maintain persistent access. Corporate Control: Zero Trust Security Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized reuse of stolen session cookies. Corporate Control: Adaptive Authentication & MFA</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect session hijacking attempts in critical applications. Corporate Control: SIEM & Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify abnormal login patterns using compromised sessions. Third Party: Dark Web Credential & Session Monitoring</data>
+</edge>
+</graph>
+</graphml>

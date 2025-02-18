@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="VOIP_Call_Interception" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor SIP/RTP Traffic on Target Network</data>
+</node>
+<node id="B">
+<data key="label">Inject or Manipulate SIP/RTP Packets</data>
+</node>
+<node id="C">
+<data key="label">Intercept and Record VOIP Call Data</data>
+</node>
+<node id="D">
+<data key="label">Extract Audio Transcripts and Call Metadata</data>
+</node>
+<node id="E">
+<data key="label">Successfully Capture Sensitive Communications</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor network traffic for unencrypted SIP/RTP sessions. Corporate Control: Enforce SIP TLS Encryption</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized SIP registration attempts. Corporate Control: VOIP Firewall & Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze network traffic for RTP anomalies. Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect rogue devices attempting SIP registrations. Third Party: External VOIP Security Assessments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Manipulate SIP headers to reroute calls. Corporate Control: SIP Authentication Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject rogue RTP streams to intercept calls. Corporate Control: Secure RTP (SRTP) Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized RTP stream injections. Third Party: VOIP Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in call routing behavior. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Record voice call traffic for data extraction. Corporate Control: End-to-End VOIP Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze intercepted audio for key phrases. Corporate Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized call recording software. Corporate Control: Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized RTP sessions. Third Party: VOIP Traffic Analysis Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Extract sensitive information from calls. Corporate Control: Behavioral Analytics on VOIP Traffic</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for voice phishing attacks post-interception. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized access to VOIP logs. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Report stolen call transcripts to monitoring services. Third Party: External Threat Intelligence Feeds</data>
+</edge>
+</graph>
+</graphml>

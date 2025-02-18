@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SSL_TLS_Downgrade_Attack" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Monitor Encrypted Network Traffic for Downgrade Opportunities</data>
+</node>
+<node id="B">
+<data key="label">Intercept TLS Handshakes and Force Weaker Cipher Negotiation</data>
+</node>
+<node id="C">
+<data key="label">Decrypt Intercepted Traffic and Extract Sensitive Data</data>
+</node>
+<node id="D">
+<data key="label">Analyze Captured Data for Credentials and Session Tokens</data>
+</node>
+<node id="E">
+<data key="label">Successfully Collect Encrypted Communications</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor SSL/TLS traffic for vulnerable cipher negotiations. Corporate Control: TLS 1.2+ Enforcement Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect forced downgrade attempts. Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify services using deprecated encryption. Corporate Control: Secure Web Application Configurations</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze network behavior for downgrade patterns. Third Party: External SSL/TLS Security Assessments</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Intercept downgraded HTTPS sessions. Corporate Control: HTTP Strict Transport Security (HSTS)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Force clients to negotiate insecure encryption methods. Corporate Control: SSL Certificate Pinning</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network paths for SSL downgrade attacks. Third Party: SSL/TLS Traffic Analysis Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect use of weak ciphers in server handshakes. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decrypt traffic to extract authentication tokens. Corporate Control: Enforce End-to-End Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze captured HTTPS sessions for login credentials. Corporate Control: Application-Level Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor authentication logs for anomalies. Corporate Control: User Behavior Analytics (UBA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized decryption attempts. Third Party: External Cybersecurity Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use extracted data for further exploitation. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor compromised accounts for misuse. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect credential use outside normal geographic locations. Corporate Control: SIEM & Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Report compromised credentials to external monitoring services. Third Party: Dark Web Credential Monitoring</data>
+</edge>
+</graph>
+</graphml>

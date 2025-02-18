@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious_Document_on_Network_Share" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accessible Network Shares</data>
+</node>
+<node id="B">
+<data key="label">Upload Malicious Document to Shared Folder</data>
+</node>
+<node id="C">
+<data key="label">User Opens Malicious Document</data>
+</node>
+<node id="D">
+<data key="label">Malware Executes and Establishes Connection</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Scan for shared folders with write permissions. Corporate Control: Network Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify frequently accessed shared folders. Corporate Control: File Access Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unusual access attempts on shared folders. Corporate Control: SIEM Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate network shares using built-in Windows tools. Third Party: External Penetration Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious macros in a commonly used document. Corporate Control: Endpoint Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure document looks legitimate to entice users. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for changes in shared folder content. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track document downloads and executions. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User opens document triggering embedded malicious macro. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Macro downloads and executes payload. Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of unsigned macros. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Log unauthorized macro execution attempts. Third Party: Security Audit Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish remote access to infected system. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use infected system to enumerate network and move laterally. Corporate Control: Network Segmentation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound connections for unusual activity. Corporate Control: Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy additional payloads across accessible shares. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement by accessing additional shared resources. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

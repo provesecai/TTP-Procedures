@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Lateral-Movement-via-X11-Forwarding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active X11 Forwarding Sessions</data>
+</node>
+<node id="B">
+<data key="label">Exploit Weak X11 Authentication</data>
+</node>
+<node id="C">
+<data key="label">Hijack Active X11 Session</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands in Hijacked X11 Session</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for active X11 forwarding sessions (TCP/6000-6005). Corporate Control: Network Intrusion Detection System (NIDS)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized X11 connection attempts. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify misconfigured X11 security settings allowing unauthenticated access. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Intercept X11 authentication requests via network sniffing. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Leverage compromised SSH sessions for X11 session hijacking. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'xhost +' command to allow unrestricted X11 connections. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture keystrokes from the hijacked X11 session. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use 'xwd' to take screenshots of the active X11 session. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hijack GUI applications running within the X11 session. Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify X11 authentication files to maintain access. Third Party: Security Audit and Compliance Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute GUI-based commands within the hijacked session. Corporate Control: User Activity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Deploy persistence mechanisms to retain session control. Corporate Control: Security Event Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent session timeout to maintain persistent access. Third Party: Red Team Security Testing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable logging features within X11 to avoid detection. Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exfiltrate sensitive data through the hijacked X11 session. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Remove all traces of unauthorized X11 session access. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify timestamps of hijacked X11 session activity to evade forensic detection. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful lateral movement by using hijacked session for further compromise. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>

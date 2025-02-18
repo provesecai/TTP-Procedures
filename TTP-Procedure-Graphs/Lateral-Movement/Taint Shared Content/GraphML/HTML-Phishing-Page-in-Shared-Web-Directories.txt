@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="HTML_Phishing_Page_in_Shared_Web_Directories" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Shared Web Directories</data>
+</node>
+<node id="B">
+<data key="label">Upload Malicious HTML Phishing Page</data>
+</node>
+<node id="C">
+<data key="label">User Visits the Compromised Page</data>
+</node>
+<node id="D">
+<data key="label">Credentials or Tokens Harvested</data>
+</node>
+<node id="E">
+<data key="label">Lateral Movement Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for publicly accessible web directories. Corporate Control: Web Application Firewall (WAF)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify shared web hosting locations with weak permissions. Corporate Control: Web Directory Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications in web directories. Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unexpected new files in shared web directories. Third Party: External Web Security Testing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy credential-harvesting form within shared content. Corporate Control: Email and Web Content Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure malicious page mimics legitimate login pages. Corporate Control: Brand Monitoring & Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unusual web directory activity. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log all changes to shared website files. Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">User unknowingly enters login credentials. Corporate Control: User Awareness Training</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Harvest authentication cookies for session hijacking. Corporate Control: Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized credential submissions. Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal web traffic from internal users. Third Party: Digital Forensics Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Use harvested credentials for lateral movement. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Authenticate into additional internal resources. Corporate Control: Identity and Access Management (IAM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unusual login attempts using stolen credentials. Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Deploy phishing links through internal messaging. Third Party: Adversary Simulation Testing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm lateral movement via expanded authentication access. Corporate Control: Lateral Movement Detection</data>
+</edge>
+</graph>
+</graphml>
