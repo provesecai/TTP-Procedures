@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Utilizing_MQTT_for_Low_Profile_C2_in_IoT_Environments" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with Embedded MQTT Client</data>
+</node>
+<node id="B">
+<data key="label">Establish MQTT Connection to Broker Server</data>
+</node>
+<node id="C">
+<data key="label">Send and Receive C2 Commands via MQTT Topics</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands and Respond Through MQTT Messages</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via MQTT Protocol in IoT Environment</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with MQTT communication support. Corporate Control: IoT Network Security & Firewall Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized MQTT broker connection attempts. Corporate Control: SIEM & Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abnormal MQTT traffic volumes from IoT devices. Third Party: AI-Based Anomaly Detection & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze MQTT session patterns for malicious command injection. Third Party: Global IoT Security Research & Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Subscribe to MQTT topics for receiving C2 instructions. Corporate Control: Intrusion Detection & Network Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor MQTT topic activity for unauthorized message exchanges. Corporate Control: Secure MQTT Broker Policies & Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in MQTT publish-subscribe interactions. Third Party: Cyber Threat Intelligence & AI-Powered Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify malware families leveraging MQTT for covert C2. Third Party: IoT Security Research & Advanced Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Send encoded MQTT payloads to transmit system status. Corporate Control: Secure Communication Policies & IoT Device Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor IoT endpoints for unexpected MQTT message execution. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect recurring patterns of MQTT-based C2 exchanges. Third Party: Advanced AI-Based Network Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze MQTT traffic for hidden command control structures. Third Party: Global Cybersecurity Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain C2 persistence using MQTT for continuous control. Corporate Control: Secure IoT Communication Policies & Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-lived MQTT sessions indicative of malware persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent MQTT control patterns in infected networks. Third Party: AI-Based IoT Security & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block MQTT-based C2 operations. Third Party: Global IoT Threat Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

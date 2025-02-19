@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Enabling_System_Microphone_for_Covert_Recording" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Available Microphone Devices</data>
+</node>
+<node id="B">
+<data key="label">Activate Microphone without User Notification</data>
+</node>
+<node id="C">
+<data key="label">Record and Store Captured Audio</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Hide Stored Audio Files</data>
+</node>
+<node id="E">
+<data key="label">Covert Audio Capture Successfully Executed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan system for active and inactive microphone devices. Corporate Control: Endpoint Device Inventory & Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify microphone permissions set for installed applications. Corporate Control: Application Permission Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized microphone activation attempts. Corporate Control: SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor microphone access via system logs. Third Party: Cloud Security & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Enable microphone recording stealthily without alerting users. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor microphone input activation logs for anomalies. Corporate Control: SIEM & Endpoint Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized software attempting to use the microphone. Third Party: Threat Intelligence Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track real-time access to audio input devices. Third Party: AI-Based Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encode recorded audio to bypass detection mechanisms. Corporate Control: Secure File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unexpected large audio file creation. Corporate Control: Endpoint DLP & Data Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect attempts to obfuscate audio files. Third Party: Advanced Malware Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze file modification timestamps for inconsistencies. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate encrypted audio files via covert network channels. Corporate Control: Data Loss Prevention (DLP) & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted file transfers for unauthorized activity. Corporate Control: Insider Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unusual outbound encrypted traffic patterns. Third Party: Dark Web Intelligence & Cybersecurity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify audio files being sold on underground markets. Third Party: Dark Web Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

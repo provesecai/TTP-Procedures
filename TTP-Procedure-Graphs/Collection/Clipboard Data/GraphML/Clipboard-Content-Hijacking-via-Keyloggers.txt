@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Clipboard_Content_Hijacking_via_Keyloggers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Install Keylogger on Target System</data>
+</node>
+<node id="B">
+<data key="label">Monitor Clipboard Copy Events in Real Time</data>
+</node>
+<node id="C">
+<data key="label">Capture and Log Clipboard Data with Keystrokes</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Captured Clipboard Logs</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Extracted via Keylogger</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy keylogger with clipboard monitoring functionality. Corporate Control: Anti-Malware & Keylogger Prevention</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor clipboard modification attempts by keyloggers. Corporate Control: Endpoint Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect clipboard monitoring via injected system hooks. Corporate Control: SIEM & Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track keystroke-clipboard interaction patterns. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log clipboard data alongside user keystrokes. Corporate Control: Secure Clipboard Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard changes linked to keystroke logging malware. Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect clipboard hijacking attempts using keyloggers. Third Party: AI-Powered Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze clipboard keystroke correlations for anomaly detection. Third Party: Advanced Threat Intelligence Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt captured clipboard data before storage. Corporate Control: Secure Encryption Standards</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor clipboard logs for unauthorized encryption attempts. Corporate Control: Zero Trust Security Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect attempts to modify clipboard storage logs. Third Party: External Threat Intelligence Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze clipboard-hijacking malware behavior. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Transmit clipboard keystroke logs to an external server. Corporate Control: Data Exfiltration Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor clipboard data transmission attempts. Corporate Control: SIEM & Insider Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard hijacking attacks targeting sensitive data. Corporate Control: Privileged Access Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify clipboard logs being transferred to external locations. Third Party: Dark Web Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

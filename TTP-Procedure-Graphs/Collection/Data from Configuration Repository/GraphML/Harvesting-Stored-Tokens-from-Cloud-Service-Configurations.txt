@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Harvesting_Stored_Tokens_from_Cloud_Service_Configurations" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cloud Configuration Files Storing Access Tokens</data>
+</node>
+<node id="B">
+<data key="label">Access and Read Unprotected Cloud Service Configuration Files</data>
+</node>
+<node id="C">
+<data key="label">Extract and Decode Stored Access Tokens</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Extracted Cloud Service Tokens</data>
+</node>
+<node id="E">
+<data key="label">Cloud Service Access Tokens Successfully Extracted</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan cloud storage for misconfigured service credentials. Corporate Control: Cloud Security & Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to cloud-hosted configuration files. Corporate Control: SIEM & Role-Based Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect attempts to retrieve stored access tokens. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify access token exposure in cloud environments. Third Party: External Cybersecurity Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract access tokens stored in plaintext configuration files. Corporate Control: Secure Encryption & Token Management Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor token retrieval operations for suspicious activity. Corporate Control: Cloud Security & SIEM Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized API calls accessing stored tokens. Third Party: Advanced Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify token extraction scripts targeting misconfigured cloud services. Third Party: External Cybersecurity Threat Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt extracted cloud service tokens for later use. Corporate Control: Secure Token Storage & Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor encrypted storage of extracted access tokens. Corporate Control: SIEM & Insider Threat Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized exfiltration of stored cloud tokens. Third Party: Dark Web Intelligence & Cyber Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze cloud token movements for suspicious activity. Third Party: External Cybersecurity Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate extracted access tokens through covert channels. Corporate Control: Cloud Data Loss Prevention (DLP) & Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor token exfiltration via unauthorized cloud sync operations. Corporate Control: Cloud Intrusion Detection & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect access token misuse in cloud service environments. Corporate Control: Zero Trust Security & Access Control Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify compromised cloud service tokens being resold. Third Party: Dark Web Cyber Intelligence & Threat Detection</data>
+</edge>
+</graph>
+</graphml>

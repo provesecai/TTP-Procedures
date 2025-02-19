@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Employing_SMTP_Email_for_Covert_C2_Messaging" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with SMTP Email Capabilities</data>
+</node>
+<node id="B">
+<data key="label">Use Compromised Email Accounts for C2 Messaging</data>
+</node>
+<node id="C">
+<data key="label">Send and Receive C2 Commands via Encrypted Emails</data>
+</node>
+<node id="D">
+<data key="label">Parse Incoming Emails for Hidden C2 Instructions</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via SMTP Email Communications</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with SMTP email handling capabilities. Corporate Control: Email Security Gateway & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor suspicious outbound SMTP traffic from endpoints. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual email behavior patterns linked to malware. Third Party: Advanced Threat Intelligence & Email Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze email metadata for signs of C2 communication. Third Party: AI-Based Email Threat Detection & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use compromised email accounts to send C2 commands. Corporate Control: Secure Email Gateway & DLP Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor email traffic for encoded C2 instructions. Corporate Control: SIEM & Network Intrusion Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect hidden commands within email attachments or body text. Third Party: Threat Intelligence & Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify emails with anomalous metadata linked to C2. Third Party: AI-Based Behavioral Email Security & Cyber Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decrypt received email messages for command execution. Corporate Control: Secure Email Gateway & Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor endpoint email activity for unauthorized decryption. Corporate Control: SIEM & Email Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in email parsing and command execution behavior. Third Party: AI-Based Threat Detection & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze email attachments for embedded malware commands. Third Party: Global Threat Intelligence & Cybersecurity Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain C2 persistence using periodic SMTP email updates. Corporate Control: Email Filtering & Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect recurring email-based C2 messaging patterns. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent email modifications indicative of malware. Third Party: AI-Based Email Security & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block SMTP-based C2 communications. Third Party: Global Cyber Threat Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

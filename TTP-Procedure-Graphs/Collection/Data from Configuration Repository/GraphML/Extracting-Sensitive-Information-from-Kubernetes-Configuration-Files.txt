@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_Sensitive_Information_from_Kubernetes_Configuration_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Kubernetes Configuration Files Storing Sensitive Data</data>
+</node>
+<node id="B">
+<data key="label">Access and Read Misconfigured Kubernetes Secrets</data>
+</node>
+<node id="C">
+<data key="label">Extract and Decode Kubernetes Stored Credentials</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Extracted Kubernetes Secrets</data>
+</node>
+<node id="E">
+<data key="label">Kubernetes Configuration Secrets Successfully Extracted</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan Kubernetes clusters for plaintext secrets in configuration files. Corporate Control: Kubernetes RBAC & Secure Storage Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to Kubernetes secrets. Corporate Control: SIEM & Kubernetes API Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect public exposure of Kubernetes configuration secrets. Third Party: Cloud Security Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unauthorized attempts to list Kubernetes secrets. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Retrieve stored credentials from Kubernetes secrets. Corporate Control: Kubernetes API Security & Encryption Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API calls accessing Kubernetes secrets storage. Corporate Control: Kubernetes SIEM & Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect automation scripts harvesting Kubernetes stored credentials. Third Party: External Cloud Security Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify privilege escalation attempts using Kubernetes secrets. Third Party: Advanced Kubernetes Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt extracted Kubernetes secrets for future use. Corporate Control: Secure Kubernetes Configuration & Key Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized encryption of Kubernetes secrets. Corporate Control: SIEM & Insider Threat Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized Kubernetes secret exfiltration attempts. Third Party: Dark Web Intelligence & Cyber Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze Kubernetes secret access anomalies. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate Kubernetes secrets through covert channels. Corporate Control: Cloud Security & Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor Kubernetes secret exfiltration attempts. Corporate Control: SIEM & Kubernetes Intrusion Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized Kubernetes secret modifications before exfiltration. Corporate Control: Secure Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify Kubernetes secrets being resold on underground forums. Third Party: Dark Web Cyber Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

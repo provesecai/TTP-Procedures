@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_WebSockets_for_Persistent_C2_Control" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy WebSocket-Enabled C2 Malware</data>
+</node>
+<node id="B">
+<data key="label">Initiate Persistent WebSocket Connections</data>
+</node>
+<node id="C">
+<data key="label">Exchange Encrypted C2 Commands in Real-Time</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands and Send System Responses</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via WebSocket Communication</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy malware using WebSockets for C2. Corporate Control: Web Application Firewall (WAF) & Secure Browsing Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized WebSocket initiation attempts. Corporate Control: SIEM & Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect excessive WebSocket activity from infected hosts. Third Party: Threat Intelligence & Network Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze WebSocket payloads for encoded C2 commands. Third Party: AI-Based Network Security & Cyber Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Maintain persistent WebSocket connectivity for real-time C2. Corporate Control: Intrusion Detection Systems (IDS) & Network Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor WebSocket sessions for anomalous patterns. Corporate Control: SIEM & Advanced Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect encrypted C2 commands within WebSocket traffic. Third Party: AI-Based Threat Detection & Traffic Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify malware families that leverage WebSockets for C2. Third Party: Cybersecurity Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Send encrypted C2 instructions to compromised hosts. Corporate Control: Network Intrusion Prevention & TLS Termination</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor execution of WebSocket-retrieved commands. Corporate Control: Endpoint Security & SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in real-time WebSocket-based command execution. Third Party: AI-Based Threat Detection & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze WebSocket data streams for unauthorized system control. Third Party: Global Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain WebSocket-based C2 persistence for real-time control. Corporate Control: Secure Network Communications & Intrusion Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect and disrupt long-lived WebSocket sessions. Corporate Control: Network Intrusion Detection & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze WebSocket headers for C2-related fingerprinting. Third Party: AI-Based Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block ongoing WebSocket-based C2 communications. Third Party: Advanced Network Security & SOC Response</data>
+</edge>
+</graph>
+</graphml>

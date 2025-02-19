@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging_HTTPS_for_Encrypted_C2_Communication" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Establish HTTPS-Based C2 Server</data>
+</node>
+<node id="B">
+<data key="label">Configure Malware to Use HTTPS for C2 Traffic</data>
+</node>
+<node id="C">
+<data key="label">Encrypt and Exchange C2 Commands via TLS</data>
+</node>
+<node id="D">
+<data key="label">Maintain Persistent HTTPS-Based C2 Channel</data>
+</node>
+<node id="E">
+<data key="label">HTTPS Encrypted C2 Successfully Established</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy TLS certificate for secure HTTPS communication. Corporate Control: Certificate Authority & Secure Web Gateways</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor issuance of suspicious SSL/TLS certificates. Corporate Control: SIEM & Network Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abnormal HTTPS certificate fingerprints. Third Party: Global SSL Certificate Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze suspicious encrypted network connections. Third Party: AI-Based Network Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configure malware to tunnel C2 traffic through HTTPS. Corporate Control: Endpoint Security & Application Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor excessive HTTPS requests to untrusted domains. Corporate Control: Web Proxy & DNS Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect TLS-encrypted command execution patterns. Third Party: Advanced Threat Intelligence & Network Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify misuse of encrypted channels for C2. Third Party: Deep Packet Inspection & Cyber Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Send and receive encrypted C2 instructions via HTTPS. Corporate Control: Network Traffic Inspection & TLS Termination</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor encrypted HTTPS payloads for hidden data. Corporate Control: SIEM & Intrusion Prevention Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in TLS handshake behavior. Third Party: Threat Intelligence & SSL Certificate Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify HTTPS tunnels used for C2 traffic obfuscation. Third Party: AI-Based Anomaly Detection & Network Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain HTTPS persistence for long-term C2 control. Corporate Control: Secure Web Gateway & Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-lived HTTPS sessions with C2 indicators. Corporate Control: SIEM & Network Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze encrypted traffic patterns for covert C2 communication. Third Party: Global Threat Intelligence & Machine Learning Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block C2 communication through HTTPS decryption. Third Party: Cybersecurity Operations & Incident Response</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,81 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Monitoring_Clipboard_Changes" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Initialize Clipboard Monitoring Script</data>
+</node>
+<node id="B">
+<data key="label">Detect Clipboard Content Modifications</data>
+</node>
+<node id="C">
+<data key="label">Extract, Process, and Store Clipboard Entries</data>
+</node>
+<node id="D">
+<data key="label">Encrypt, Conceal, and Prepare Data for Exfiltration</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Collected and Stored</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy system hooks to monitor clipboard updates. Corporate Control: Clipboard Access Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Register clipboard event listeners to detect changes. Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor clipboard process interactions for unauthorized access. Corporate Control: SIEM & Process Anomaly Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track clipboard modifications triggered by hidden background processes. Third Party: Advanced Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify clipboard monitoring attempts by suspicious applications. Third Party: Threat Hunting and Forensic Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture clipboard data and categorize it by type (text, images, sensitive information). Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect passwords, financial information, or other confidential data copied to clipboard. Corporate Control: Secure Clipboard Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze clipboard entries for repeated sensitive data extractions. Corporate Control: AI-Driven Insider Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard interactions between applications (e.g., password managers, remote desktop clients). Third Party: Endpoint Security Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect encrypted clipboard content indicating concealed data exfiltration. Third Party: Cloud Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt clipboard data using strong encryption algorithms. Corporate Control: Secure Encryption Standards</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Aggregate clipboard data from multiple user sessions for further analysis. Corporate Control: Behavioral Monitoring & Data Classification</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized clipboard data modifications before exfiltration. Corporate Control: SIEM Correlation & Event Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor file system changes related to clipboard storage files. Third Party: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal clipboard storage patterns associated with malware activity. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Transmit encrypted clipboard logs over covert network channels. Corporate Control: Network Intrusion Detection (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for clipboard data exfiltration attempts using DNS tunneling. Corporate Control: Network Behavior Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard data movements to unauthorized cloud storage. Corporate Control: Cloud Security & Access Control Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify attempts to move clipboard-stored credentials into external documents or email. Third Party: External Cyber Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted clipboard transfers using steganographic techniques. Third Party: Advanced Data Exfiltration Prevention</data>
+</edge>
+</graph>
+</graphml>

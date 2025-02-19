@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Periodic_Clipboard_Data_Harvesting" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Schedule Regular Clipboard Capture Tasks</data>
+</node>
+<node id="B">
+<data key="label">Execute Clipboard Capture at Defined Intervals</data>
+</node>
+<node id="C">
+<data key="label">Aggregate and Log Clipboard Entries</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Prepare Captured Data for Storage</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Collected Over Time</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Configure task scheduler to execute clipboard collection scripts. Corporate Control: Endpoint Task Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized scheduled clipboard capture tasks. Corporate Control: SIEM & Process Anomaly Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track clipboard polling requests from non-system processes. Corporate Control: Endpoint Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect background clipboard monitoring scripts. Third Party: AI-Driven Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture clipboard data at predefined time intervals. Corporate Control: Data Loss Prevention (DLP) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard polling frequency by untrusted applications. Corporate Control: Threat Intelligence & SIEM Correlation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log all clipboard data changes to a local file. Corporate Control: File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect clipboard capture activity linked to malware behaviors. Third Party: External Threat Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt clipboard logs for storage. Corporate Control: Secure Data Storage & Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor clipboard logs for unauthorized access. Corporate Control: Zero Trust Security Model</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect attempts to tamper with clipboard storage files. Third Party: Endpoint Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze clipboard logs for large-scale sensitive data theft. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prepare collected clipboard data for future attacks. Corporate Control: Insider Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor attempts to access encrypted clipboard archives. Corporate Control: Endpoint Privileged Access Control</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard logs being transferred to external storage. Third Party: Cloud Security & DLP Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze clipboard data storage patterns for anomalies. Third Party: Behavioral Threat Analytics</data>
+</edge>
+</graph>
+</graphml>

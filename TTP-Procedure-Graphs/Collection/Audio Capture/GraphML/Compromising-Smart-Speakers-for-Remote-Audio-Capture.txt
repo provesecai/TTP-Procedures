@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Smart_Speakers_for_Remote_Audio_Capture" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Vulnerable Smart Speakers on Target Network</data>
+</node>
+<node id="B">
+<data key="label">Exploit Firmware or API Weaknesses to Gain Control</data>
+</node>
+<node id="C">
+<data key="label">Enable Continuous Audio Recording Without User Awareness</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Transmit Captured Smart Speaker Audio</data>
+</node>
+<node id="E">
+<data key="label">Smart Speaker Hijacked for Covert Audio Capture</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan network for connected smart speakers and IoT devices. Corporate Control: Network Access Control & IoT Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized device scanning attempts on internal networks. Corporate Control: SIEM & Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect known vulnerabilities in smart speaker firmware. Third Party: IoT Threat Intelligence & Vendor Security Updates</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze API weaknesses exposing unauthorized device controls. Third Party: Advanced IoT Security Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit misconfigured API settings to gain unauthorized access. Corporate Control: Secure API Management & Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor smart speaker firmware updates for unauthorized changes. Corporate Control: IoT Security & Device Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in smart speaker behavior linked to audio activation. Third Party: AI-Based IoT Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify rogue commands triggering unauthorized recording. Third Party: Cyber Threat Intelligence & AI Security Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encode and buffer recorded audio for external transmission. Corporate Control: Secure File Storage & Data Encryption</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor encrypted audio storage for unauthorized data retention. Corporate Control: SIEM & Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious patterns in smart speaker data storage operations. Third Party: Dark Web Intelligence & IoT Security Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze outbound connections from compromised smart speakers. Third Party: External Cybersecurity Threat Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate smart speaker recordings to remote attacker-controlled infrastructure. Corporate Control: Network Intrusion Detection & Secure Communications</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted IoT traffic for unauthorized audio data transfers. Corporate Control: DLP & SIEM Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect dark web sales of compromised smart speaker recordings. Third Party: Dark Web Threat Intelligence & Cyber Surveillance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify underground networks specializing in IoT-based surveillance data. Third Party: Cyber Threat Intelligence & Dark Web Market Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Harvesting_Application_API_Keys_from_Configuration_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Configuration Files Containing API Keys</data>
+</node>
+<node id="B">
+<data key="label">Access Unprotected or Misconfigured Configuration Files</data>
+</node>
+<node id="C">
+<data key="label">Extract API Keys from Configuration Entries</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store API Keys for Future Use</data>
+</node>
+<node id="E">
+<data key="label">API Keys Successfully Extracted from Configuration Files</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan application directories for plaintext configuration files. Corporate Control: Secure Configuration Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor access attempts to sensitive configuration files. Corporate Control: Endpoint DLP & File Access Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect script-based enumeration of application settings. Corporate Control: SIEM & File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify suspicious interactions with API key storage locations. Third Party: External Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Parse plaintext API keys from application settings files. Corporate Control: Data Encryption & Secure Storage Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized access to API key repositories. Corporate Control: Cloud Security & Compliance Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized reading of API keys from config files. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify attempts to modify application API credentials. Third Party: Advanced Threat Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encode extracted API keys to avoid detection. Corporate Control: Secure Encryption & Compliance Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized encryption of sensitive API keys. Corporate Control: SIEM & Endpoint Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect API key exfiltration attempts via cloud sync mechanisms. Third Party: Dark Web Intelligence & Threat Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze API key storage patterns for anomalies. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate API keys through covert channels. Corporate Control: Data Loss Prevention & SIEM Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted API key exfiltration attempts. Corporate Control: Insider Threat Monitoring & Zero Trust Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized API key transfers to external repositories. Corporate Control: Privileged Access Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify API keys being sold on the dark web. Third Party: Dark Web Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

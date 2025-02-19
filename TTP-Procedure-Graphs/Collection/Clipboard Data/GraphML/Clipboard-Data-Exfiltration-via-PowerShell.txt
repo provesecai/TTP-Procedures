@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Clipboard_Data_Exfiltration_via_PowerShell" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Execute PowerShell Script to Access Clipboard</data>
+</node>
+<node id="B">
+<data key="label">Retrieve Clipboard Contents Using PowerShell Cmdlet</data>
+</node>
+<node id="C">
+<data key="label">Encode Clipboard Data for Concealment</data>
+</node>
+<node id="D">
+<data key="label">Transmit Encoded Clipboard Data to Remote Server</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Exfiltrated</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Invoke PowerShell to access clipboard memory. Corporate Control: PowerShell Logging & Script Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect clipboard scraping scripts executed via PowerShell. Corporate Control: SIEM & Endpoint Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for excessive clipboard access by PowerShell processes. Corporate Control: EDR & Process Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track abnormal clipboard usage associated with PowerShell execution. Third Party: Threat Intelligence Data Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract clipboard content using 'Get-Clipboard' cmdlet. Corporate Control: PowerShell Command Execution Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard access by PowerShell without user interaction. Corporate Control: Behavior-based Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track scripts attempting to copy sensitive clipboard data. Corporate Control: DLP Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect clipboard-based data leakage attempts. Third Party: AI-Driven Threat Analysis Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Convert clipboard content into Base64 encoding. Corporate Control: Data Encoding Detection Mechanisms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Store encoded data in a concealed temporary file. Corporate Control: Secure Temporary Storage Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor attempts to store clipboard content in encoded formats. Corporate Control: Endpoint File Integrity Monitoring (FIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify PowerShell scripts using encoding methods to evade detection. Third Party: Advanced Threat Detection Engines</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Send clipboard data via HTTP POST to an attacker-controlled server. Corporate Control: Network Intrusion Detection (IDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for abnormal network activity linked to clipboard exfiltration. Corporate Control: SIEM & Data Exfiltration Alerts</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard data transfers using encrypted PowerShell payloads. Corporate Control: Privileged Access Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify clipboard data being sent to suspicious external servers. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze PowerShell network connections for exfiltration behaviors. Third Party: External Managed Threat Detection</data>
+</edge>
+</graph>
+</graphml>

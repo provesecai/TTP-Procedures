@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Clipboard_Data_Collection_via_Rogue_Clipboard_Manager" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Rogue Clipboard Manager Application</data>
+</node>
+<node id="B">
+<data key="label">Continuously Monitor Clipboard Activity</data>
+</node>
+<node id="C">
+<data key="label">Capture and Log Clipboard Data from User Sessions</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Captured Clipboard Data</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Collected via Malicious Manager</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Distribute clipboard manager with hidden data collection functionality. Corporate Control: Application Whitelisting & Execution Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized clipboard manager installations. Corporate Control: Endpoint Behavior & Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect clipboard manager applications accessing sensitive clipboard data. Corporate Control: Data Loss Prevention (DLP) Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify clipboard manager applications exhibiting suspicious behavior. Third Party: Threat Intelligence & Malware Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log clipboard data in real-time from all active user sessions. Corporate Control: Secure Clipboard Data Access Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard API calls made by the rogue application. Corporate Control: Advanced Threat Detection & SIEM Integration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze clipboard access patterns to detect unauthorized data capture. Third Party: AI-Powered Cyber Threat Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect clipboard manager data transfers to untrusted storage locations. Third Party: External Cyber Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt clipboard data to evade detection. Corporate Control: Secure Encryption & Compliance Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor clipboard data being encrypted for potential exfiltration. Corporate Control: Insider Threat Monitoring & SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect clipboard data storage linked to potential credential theft. Corporate Control: Endpoint Security & Zero Trust Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify clipboard data being stored with obfuscation techniques. Third Party: External Cybersecurity Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate clipboard logs via encrypted channels. Corporate Control: Data Exfiltration Prevention & DLP</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor clipboard data transfers to unauthorized external servers. Corporate Control: Network Intrusion Detection (NIDS) & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard data exfiltration via rogue clipboard managers. Corporate Control: SIEM & Privileged Access Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify clipboard data being transferred to dark web forums. Third Party: Dark Web Cyber Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

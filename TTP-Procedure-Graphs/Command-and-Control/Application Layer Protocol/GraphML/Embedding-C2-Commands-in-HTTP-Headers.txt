@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_C2_Commands_in_HTTP_Headers" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Establish Malware-Injected HTTP Client on Target</data>
+</node>
+<node id="B">
+<data key="label">Modify HTTP Headers to Contain C2 Instructions</data>
+</node>
+<node id="C">
+<data key="label">Parse and Execute Commands Hidden in HTTP Headers</data>
+</node>
+<node id="D">
+<data key="label">Send Status Updates via Modified HTTP Headers</data>
+</node>
+<node id="E">
+<data key="label">C2 Channel Established via HTTP Header Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy malware with custom HTTP header manipulation. Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unexpected HTTP header modifications. Corporate Control: Web Proxy & SIEM</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect malformed HTTP headers indicative of C2 activity. Third Party: Threat Intelligence & AI-Based Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze HTTP header anomalies for embedded payloads. Third Party: Advanced Threat Detection Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract encoded commands from HTTP headers. Corporate Control: Secure Web Gateway & Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor HTTP traffic for non-standard header fields. Corporate Control: Network Traffic Analysis & SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect embedded command structures in HTTP headers. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify HTTP header anomalies linked to known C2 frameworks. Third Party: AI-Based Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute decoded commands retrieved from HTTP headers. Corporate Control: Endpoint Security & SIEM Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system processes triggered via HTTP header payloads. Corporate Control: Host-Based Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized script execution originating from network requests. Third Party: Network-Based Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze execution logs for correlation with known C2 methodologies. Third Party: AI-Powered Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Send encoded status reports back to C2 infrastructure. Corporate Control: Network Intrusion Detection & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor outbound HTTP header modifications for C2 communication patterns. Corporate Control: Secure Web Proxy & Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect ongoing C2 communications hidden within HTTP headers. Third Party: Advanced Network Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Mitigate and disrupt header-based C2 activity. Third Party: Global Cyber Threat Monitoring & Response</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_SSH_Keys_from_Unprotected_Configuration_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Configuration Files Storing SSH Private Keys</data>
+</node>
+<node id="B">
+<data key="label">Access Unprotected or Misconfigured SSH Configuration Files</data>
+</node>
+<node id="C">
+<data key="label">Extract and Decode SSH Private Keys</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Extracted SSH Keys</data>
+</node>
+<node id="E">
+<data key="label">SSH Keys Successfully Extracted from Configuration Files</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan SSH configuration directories for private keys stored in plaintext. Corporate Control: Secure Configuration Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to SSH private key files. Corporate Control: Endpoint DLP & File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect automated searches for SSH keys in configuration directories. Corporate Control: SIEM & Threat Intelligence Integration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify SSH key harvesting attempts targeting misconfigured storage. Third Party: External Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract SSH private keys from unencrypted configuration files. Corporate Control: Secure Encryption & Key Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor attempts to access SSH keys without proper permissions. Corporate Control: Privileged Access Management (PAM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized export of SSH keys for later use. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify SSH key movements to unauthorized locations. Third Party: External Cybersecurity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt extracted SSH keys to prevent detection. Corporate Control: Secure Key Storage & Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor encryption attempts on extracted SSH credentials. Corporate Control: SIEM & Data Protection Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized SSH key storage in external locations. Third Party: Dark Web Monitoring & Threat Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze SSH key access patterns for anomalies. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate SSH private keys via covert network channels. Corporate Control: Data Loss Prevention (DLP) & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted SSH key exfiltration attempts. Corporate Control: Network Intrusion Detection & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized SSH private key modifications before exfiltration. Corporate Control: Endpoint Protection & Secure Configuration Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify stolen SSH keys being sold on underground markets. Third Party: Dark Web Intelligence & Cyber Threat Monitoring</data>
+</edge>
+</graph>
+</graphml>

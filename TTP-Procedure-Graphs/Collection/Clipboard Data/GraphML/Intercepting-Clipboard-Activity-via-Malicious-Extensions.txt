@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Intercepting_Clipboard_Activity_via_Malicious_Extensions" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malicious Browser Extension</data>
+</node>
+<node id="B">
+<data key="label">Monitor Clipboard Activity via Web-based Scripts</data>
+</node>
+<node id="C">
+<data key="label">Capture Clipboard Data from User Sessions</data>
+</node>
+<node id="D">
+<data key="label">Encode and Conceal Clipboard Data for Exfiltration</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Collected via Browser Extension</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject JavaScript hooks to monitor clipboard events. Corporate Control: Web Security & Extension Whitelisting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized clipboard API access within browsers. Corporate Control: Endpoint Browser Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track browser extensions with clipboard access permissions. Corporate Control: Cloud Security Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify clipboard data theft via malicious extensions. Third Party: Web-Based Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture clipboard content copied on web pages. Corporate Control: Secure Clipboard API Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect clipboard access linked to suspicious web scripts. Corporate Control: Advanced Threat Protection (ATP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard API calls made by browser extensions. Corporate Control: Browser Behavior Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze web script behavior for clipboard data leaks. Third Party: Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate clipboard data before exfiltration. Corporate Control: Secure Web Gateway Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for encoded clipboard content transfers. Corporate Control: Endpoint Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect clipboard exfiltration attempts via malicious extensions. Corporate Control: Web Security & Browser Isolation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify clipboard data storage attempts by extensions. Third Party: External Cybersecurity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Transmit clipboard data to remote servers. Corporate Control: Network Intrusion Detection (NIDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for clipboard exfiltration via HTTPS traffic. Corporate Control: SIEM & TLS Inspection Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard-based phishing attempts via extensions. Corporate Control: Advanced Endpoint Threat Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify unauthorized clipboard data movements in web sessions. Third Party: Threat Intelligence Feeds</data>
+</edge>
+</graph>
+</graphml>

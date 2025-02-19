@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Clipboard_Data_Collection_via_Clipboard_Overlay_Techniques" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Fake Clipboard Overlay</data>
+</node>
+<node id="B">
+<data key="label">Intercept Clipboard Data Using Overlay Interface</data>
+</node>
+<node id="C">
+<data key="label">Capture Clipboard Content in Real-Time</data>
+</node>
+<node id="D">
+<data key="label">Store and Encrypt Clipboard Data</data>
+</node>
+<node id="E">
+<data key="label">Clipboard Data Successfully Captured via Overlay</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Create deceptive clipboard overlay to capture copied data. Corporate Control: Secure UI & Process Isolation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor applications creating suspicious clipboard overlays. Corporate Control: Endpoint Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect overlay techniques modifying clipboard operations. Corporate Control: File Integrity & Process Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify clipboard hijacking overlays mimicking trusted applications. Third Party: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Capture clipboard interactions within overlay interface. Corporate Control: Clipboard Security & Data Integrity Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor clipboard API calls made by suspicious overlays. Corporate Control: Advanced Threat Protection (ATP)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track clipboard interactions associated with phishing overlays. Third Party: Cybersecurity Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized access to clipboard functions via overlays. Third Party: AI-Powered Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt clipboard data to prevent detection. Corporate Control: Secure Clipboard Encryption Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor clipboard encryption by suspicious processes. Corporate Control: SIEM & Behavioral Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect clipboard storage manipulation attempts. Corporate Control: Endpoint Security & Process Isolation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify clipboard data being encoded for stealth exfiltration. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate clipboard data through covert overlay mechanisms. Corporate Control: Data Exfiltration Prevention & DLP</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for clipboard data transmission via phishing overlays. Corporate Control: SIEM & Insider Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect clipboard hijacking attacks leveraging overlays. Corporate Control: Network Intrusion Detection Systems (NIDS)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify clipboard data being exfiltrated via UI overlay exploits. Third Party: External Cybersecurity Threat Analysis</data>
+</edge>
+</graph>
+</graphml>

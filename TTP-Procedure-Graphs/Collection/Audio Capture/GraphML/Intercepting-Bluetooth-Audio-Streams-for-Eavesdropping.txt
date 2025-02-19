@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Intercepting_Bluetooth_Audio_Streams_for_Eavesdropping" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Scan for Nearby Bluetooth Audio Devices</data>
+</node>
+<node id="B">
+<data key="label">Exploit Bluetooth Weaknesses to Intercept Audio</data>
+</node>
+<node id="C">
+<data key="label">Capture and Store Bluetooth Audio Streams</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Transmit Captured Bluetooth Audio</data>
+</node>
+<node id="E">
+<data key="label">Bluetooth Audio Eavesdropping Successfully Executed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify active Bluetooth connections within range. Corporate Control: Bluetooth Device Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized Bluetooth pairing attempts. Corporate Control: Endpoint Bluetooth Activity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect scanning of Bluetooth-enabled audio devices. Third Party: External Cybersecurity Threat Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Bluetooth protocol weaknesses for potential exploitation. Third Party: Advanced Wireless Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use Bluetooth interception tools to capture audio packets. Corporate Control: Secure Wireless Protocols & Encryption Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor Bluetooth traffic anomalies. Corporate Control: SIEM & Wireless Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized Bluetooth eavesdropping attempts. Third Party: AI-Based Bluetooth Security Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify rogue Bluetooth devices conducting packet sniffing. Third Party: External Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt intercepted Bluetooth audio for covert storage. Corporate Control: Secure Data Encryption & Storage Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor encrypted file creation for anomalies. Corporate Control: SIEM & Insider Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized movement of intercepted Bluetooth audio. Third Party: Dark Web Monitoring & Cyber Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze behavioral patterns linked to Bluetooth audio theft. Third Party: External Cybersecurity Threat Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate Bluetooth audio via covert channels. Corporate Control: Data Loss Prevention (DLP) & Network Intrusion Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor unauthorized transmission of Bluetooth audio data. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect stolen Bluetooth audio recordings being sold online. Third Party: Dark Web Cyber Threat Intelligence & Surveillance</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify Bluetooth eavesdropping activity on underground forums. Third Party: Cyber Threat Intelligence & Wireless Security Research</data>
+</edge>
+</graph>
+</graphml>

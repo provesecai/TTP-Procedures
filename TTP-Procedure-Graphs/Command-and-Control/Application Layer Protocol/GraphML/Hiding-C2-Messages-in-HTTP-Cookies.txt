@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hiding_C2_Messages_in_HTTP_Cookies" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware That Manipulates HTTP Cookies</data>
+</node>
+<node id="B">
+<data key="label">Embed C2 Commands Within Custom HTTP Cookies</data>
+</node>
+<node id="C">
+<data key="label">Receive and Parse Commands via Malicious Cookies</data>
+</node>
+<node id="D">
+<data key="label">Transmit Responses Through Encrypted Cookie Data</data>
+</node>
+<node id="E">
+<data key="label">C2 Communication Hidden Within HTTP Cookies</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with custom HTTP cookie handling. Corporate Control: Web Proxy & Secure Browser Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to HTTP cookies. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect HTTP cookies containing encoded payloads. Third Party: Threat Intelligence & Deep Packet Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze unusual cookie behaviors for hidden commands. Third Party: AI-Based Threat Monitoring & Network Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract commands embedded in HTTP cookies. Corporate Control: Web Application Firewall (WAF) & SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor HTTP cookies for excessive or unusual values. Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect malicious cookie structures linked to C2. Third Party: Cyber Threat Intelligence & Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify cookie injection attempts through AI-based analysis. Third Party: Advanced Network Security & AI-Powered Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use cookies for sending status updates to C2 server. Corporate Control: Secure Web Gateway & Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outbound cookie data for covert C2 communication. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect obfuscated command execution via cookies. Third Party: AI-Based Threat Detection & Deep Packet Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze HTTP cookie fields for encoded malware commands. Third Party: Cybersecurity Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain C2 persistence using periodic HTTP cookie updates. Corporate Control: Network Intrusion Detection & Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect recurring cookie-based C2 signals. Corporate Control: SIEM & Web Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent cookie modifications indicative of malware. Third Party: AI-Powered Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block cookie-based C2 communications. Third Party: Global Cyber Threat Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

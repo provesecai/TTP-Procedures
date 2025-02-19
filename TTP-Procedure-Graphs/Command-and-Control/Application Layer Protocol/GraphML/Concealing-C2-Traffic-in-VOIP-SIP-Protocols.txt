@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Concealing_C2_Traffic_in_VOIP_SIP_Protocols" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with SIP Protocol Support</data>
+</node>
+<node id="B">
+<data key="label">Establish SIP Communication with Compromised VOIP Server</data>
+</node>
+<node id="C">
+<data key="label">Embed C2 Commands Within SIP INVITE Messages</data>
+</node>
+<node id="D">
+<data key="label">Extract and Execute Commands Hidden in SIP Payloads</data>
+</node>
+<node id="E">
+<data key="label">C2 Communication Established via SIP Protocol</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Deploy malware to interact with SIP VOIP networks. Corporate Control: VOIP Security Policies & Firewall Rules</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual SIP connection attempts from endpoints. Corporate Control: SIEM & VOIP Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalous SIP traffic patterns indicative of malware activity. Third Party: AI-Based Network Security & SIP Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze VOIP metadata for signs of hidden command injection. Third Party: Global VOIP Security Research & Cyber Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify SIP INVITE messages to contain hidden C2 instructions. Corporate Control: Secure VOIP Gateway & Traffic Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor SIP messages for unauthorized header modifications. Corporate Control: SIEM & SIP Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect hidden C2 commands within SIP message payloads. Third Party: Cyber Threat Intelligence & AI-Based SIP Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify malware families leveraging SIP for covert command execution. Third Party: Global Cybersecurity Research & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract embedded commands from incoming SIP messages. Corporate Control: Secure VOIP Configuration & Network Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor endpoint behavior for unauthorized SIP-based command execution. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in SIP message parsing indicative of malware activity. Third Party: Advanced AI-Based Threat Intelligence & VOIP Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze VOIP call logs for suspicious SIP-based command traffic. Third Party: Cyber Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain covert C2 communication through VOIP protocols. Corporate Control: Secure SIP Protocol Enforcement & Network Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect encrypted SIP data transfers containing malware C2. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent SIP message modifications indicative of malware control. Third Party: AI-Based SIP Security & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block SIP-based C2 operations. Third Party: Global VOIP Threat Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

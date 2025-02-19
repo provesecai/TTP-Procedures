@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_IRC_Channels_for_Real_Time_C2_Coordination" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with Embedded IRC Client</data>
+</node>
+<node id="B">
+<data key="label">Connect to Remote IRC Server as a Bot</data>
+</node>
+<node id="C">
+<data key="label">Send and Receive C2 Commands via IRC Messages</data>
+</node>
+<node id="D">
+<data key="label">Execute Commands and Transmit System Responses</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via IRC Botnet Infrastructure</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with IRC protocol handling capabilities. Corporate Control: Network Firewall & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor outgoing connections to known IRC servers. Corporate Control: SIEM & Secure Web Proxy</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual IRC traffic patterns linked to botnets. Third Party: Global Threat Intelligence & AI-Based Network Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze command traffic within IRC message structures. Third Party: Advanced Network Security & SOC Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Authenticate and maintain persistent IRC connection. Corporate Control: Intrusion Detection & Network Behavior Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor IRC activity for suspicious command traffic. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalous user-agent strings associated with IRC bots. Third Party: AI-Based Behavioral Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify malicious IRC-based C2 networks. Third Party: Cybersecurity Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Send encoded commands via private IRC channels. Corporate Control: Network Intrusion Detection & Endpoint Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor IRC message contents for hidden C2 commands. Corporate Control: Secure Web Gateway & Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect recurring IRC botnet communication patterns. Third Party: Global Cyber Threat Intelligence & SOC Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze IRC logs for known malware C2 indicators. Third Party: Advanced AI-Based Threat Detection & Network Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistent C2 communications through IRC. Corporate Control: Secure Communication Policies & Web Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect IRC botnet behavior through machine learning. Corporate Control: SIEM & Cyber Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Analyze encrypted IRC data for hidden malware control. Third Party: AI-Based Threat Detection & Cybersecurity Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block IRC-based C2 activity. Third Party: Global Cyber Threat Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

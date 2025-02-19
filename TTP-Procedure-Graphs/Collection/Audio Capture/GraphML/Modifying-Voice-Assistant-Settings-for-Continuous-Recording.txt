@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_Voice_Assistant_Settings_for_Continuous_Recording" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Voice Assistant Configuration Files</data>
+</node>
+<node id="B">
+<data key="label">Modify Settings to Enable Continuous Recording</data>
+</node>
+<node id="C">
+<data key="label">Capture and Store Unfiltered Audio Data</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Conceal Recorded Voice Assistant Data</data>
+</node>
+<node id="E">
+<data key="label">Voice Assistant Exploited for Continuous Audio Capture</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify configuration files controlling voice assistant behavior. Corporate Control: Endpoint Device Security & Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modification of voice assistant settings. Corporate Control: SIEM & Voice Assistant Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in voice assistant activity logs. Third Party: Threat Intelligence & AI-Based Behavioral Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unauthorized voice assistant reconfiguration attempts. Third Party: External Cybersecurity Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter voice assistant wake-word detection to always-on mode. Corporate Control: Secure Configuration Management & SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unexpected activation of continuous recording. Corporate Control: Endpoint Security & Insider Threat Prevention</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect voice assistant firmware tampering attempts. Third Party: Advanced Cybersecurity Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze deviations in expected voice assistant behavior. Third Party: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encode and store captured audio logs for later processing. Corporate Control: Secure Data Encryption & Storage Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor storage for unauthorized audio file creation. Corporate Control: SIEM & Endpoint Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized audio data storage modifications. Third Party: Threat Intelligence & File Integrity Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify attempts to export recorded audio logs. Third Party: External Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate captured voice assistant data via covert channels. Corporate Control: Network Intrusion Detection & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor encrypted voice assistant data transmission. Corporate Control: Endpoint Security & Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized sales of voice assistant recordings online. Third Party: Dark Web Cyber Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify marketplace listings for stolen voice assistant data. Third Party: Underground Cyber Threat Intelligence Platforms</data>
+</edge>
+</graph>
+</graphml>

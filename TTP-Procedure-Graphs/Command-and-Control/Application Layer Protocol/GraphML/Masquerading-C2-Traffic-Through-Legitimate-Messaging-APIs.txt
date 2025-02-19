@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Masquerading_C2_Traffic_Through_Legitimate_Messaging_APIs" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware With Messaging API Integration</data>
+</node>
+<node id="B">
+<data key="label">Establish C2 Communication Over Public Messaging Platforms</data>
+</node>
+<node id="C">
+<data key="label">Encode C2 Instructions Within Messaging API Requests</data>
+</node>
+<node id="D">
+<data key="label">Parse and Execute Commands From Incoming API Responses</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via Legitimate Messaging API</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with API support for messaging services. Corporate Control: API Security Gateway & Application Whitelisting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual outbound API traffic patterns. Corporate Control: SIEM & Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abuse of messaging APIs for unauthorized communication. Third Party: Cyber Threat Intelligence & API Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze messaging API metadata for covert C2 exchanges. Third Party: AI-Based API Security & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use API requests to send encoded C2 commands. Corporate Control: Secure API Gateway & Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API payloads for obfuscated command data. Corporate Control: SIEM & API Request Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in API usage linked to malware behavior. Third Party: AI-Based API Threat Detection & Cyber Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify API calls designed to evade security monitoring. Third Party: Global Threat Intelligence & API Security Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract and process C2 instructions from API responses. Corporate Control: Application Security Monitoring & API Gateway Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor API usage patterns for unauthorized execution behavior. Corporate Control: SIEM & Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in API response parsing indicative of malware activity. Third Party: AI-Based API Security & Cyber Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze API logs for malware-related API interactions. Third Party: Global Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain covert C2 operations using API-based communication. Corporate Control: API Monitoring & Application Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-lived API sessions indicative of malware persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent API modifications linked to malware control. Third Party: AI-Based API Security & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block API-based C2 operations. Third Party: Global API Security Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

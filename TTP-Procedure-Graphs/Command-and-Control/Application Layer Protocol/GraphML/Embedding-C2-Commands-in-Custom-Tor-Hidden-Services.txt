@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_C2_Commands_in_Custom_Tor_Hidden_Services" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with Tor Integration</data>
+</node>
+<node id="B">
+<data key="label">Establish Connection to a Custom Tor Hidden Service</data>
+</node>
+<node id="C">
+<data key="label">Send and Receive C2 Commands Over the Tor Network</data>
+</node>
+<node id="D">
+<data key="label">Parse and Execute Instructions from Hidden Service Responses</data>
+</node>
+<node id="E">
+<data key="label">C2 Established via Custom Tor Hidden Service</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject malware with Tor support for anonymous C2 communication. Corporate Control: Secure Network Proxy & Web Filtering</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unusual Tor network traffic from endpoints. Corporate Control: SIEM & Network Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect malware leveraging Tor for covert communication. Third Party: Cyber Threat Intelligence & Tor Network Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze Tor metadata for C2-related activity. Third Party: AI-Based Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use hidden services to relay encrypted C2 commands. Corporate Control: Secure Web Gateway & Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor Tor-exit node traffic for unauthorized activity. Corporate Control: SIEM & Network Security Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect Tor-based malware command execution patterns. Third Party: AI-Based Threat Detection & Cybersecurity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify persistent Tor connections linked to malware. Third Party: Global Cybersecurity Intelligence & Network Security Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract and decrypt C2 instructions received from hidden service. Corporate Control: Secure Proxy & Deep Packet Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor system behavior for unauthorized Tor-based command execution. Corporate Control: SIEM & Endpoint Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalies in data exchanges with Tor hidden services. Third Party: AI-Based Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze Tor traffic patterns for hidden malware activity. Third Party: Cybersecurity Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain C2 persistence via custom Tor-based infrastructure. Corporate Control: Secure Network Policies & Proxy Restrictions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect encrypted Tor traffic containing malicious activity. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent modifications in Tor configurations used for C2. Third Party: AI-Based Network Security & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block Tor-based C2 infrastructure. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

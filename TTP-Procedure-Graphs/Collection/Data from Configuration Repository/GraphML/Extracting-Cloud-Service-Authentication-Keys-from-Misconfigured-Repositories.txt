@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Extracting_Cloud_Service_Authentication_Keys_from_Misconfigured_Repositories" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Cloud Repositories Containing Authentication Keys</data>
+</node>
+<node id="B">
+<data key="label">Access and Read Unprotected Cloud Service Keys</data>
+</node>
+<node id="C">
+<data key="label">Extract and Decode Stored Cloud Service Authentication Keys</data>
+</node>
+<node id="D">
+<data key="label">Encrypt and Store Extracted Authentication Keys</data>
+</node>
+<node id="E">
+<data key="label">Cloud Service Authentication Keys Successfully Extracted</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan cloud storage for authentication keys stored in plaintext. Corporate Control: Cloud Security & Access Control Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to cloud service authentication repositories. Corporate Control: SIEM & Role-Based Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect misconfigured repositories exposing authentication keys. Third Party: Cloud Security Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify cloud credential harvesting attempts. Third Party: External Cybersecurity Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Extract plaintext authentication keys from cloud service repositories. Corporate Control: Secure Storage & Encryption Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor API calls retrieving stored authentication keys. Corporate Control: Cloud SIEM & Threat Detection Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized decryption attempts of stored authentication keys. Third Party: Cyber Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify scripts automating authentication key extraction. Third Party: Advanced Cloud Security Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Encrypt extracted authentication keys for later use. Corporate Control: Secure Encryption & Key Management Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor unauthorized encryption of authentication keys. Corporate Control: SIEM & Insider Threat Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unauthorized exfiltration of stored cloud authentication keys. Third Party: Dark Web Intelligence & Cyber Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze authentication key access anomalies for potential breaches. Third Party: External Cyber Threat Intelligence Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Exfiltrate extracted authentication keys through covert channels. Corporate Control: Cloud Data Loss Prevention (DLP) & Security Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor authentication key exfiltration via unauthorized methods. Corporate Control: Network Intrusion Detection & SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect unauthorized modifications to cloud authentication keys. Corporate Control: Endpoint Security & Secure Configuration Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify authentication keys being sold on underground forums. Third Party: Dark Web Cyber Threat Intelligence & Monitoring</data>
+</edge>
+</graph>
+</graphml>
