@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Morse_Code_Encoding_for_Concealed_Communication" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Develop Morse Code Encoding for C2 Commands</data>
+</node>
+<node id="B">
+<data key="label">Convert Malicious C2 Messages into Morse Code</data>
+</node>
+<node id="C">
+<data key="label">Transmit Morse-Encoded Data Over Network Channels</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute Morse-Encoded Payload on Target</data>
+</node>
+<node id="E">
+<data key="label">Establish Persistent Morse-Based C2 Communication</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Implement Morse encoding in malware payload Corporate Control: Endpoint Security & SIEM Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor script execution for non-standard encoding Corporate Control: Application Whitelisting & Memory Scanning</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect Morse-based communication through pattern analysis Third Party: AI-Based Threat Detection & Digital Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed Morse-encoded payload in C2 traffic Corporate Control: Firewall Deep Packet Inspection (DPI) & Web Proxy Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze for anomalous Morse encoding patterns in logs Third Party: Threat Intelligence & Behavior-Based Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode and execute encoded C2 instructions on infected host Corporate Control: Process Monitoring & System Call Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify Morse-based payloads using heuristic analysis Third Party: Sandboxing & Malware Analysis Platforms</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain covert communication using Morse encoding Corporate Control: Secure DNS Policies & Endpoint Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term encoded C2 persistence Third Party: Security Operations Center (SOC) & Incident Response</data>
+</edge>
+</graph>
+</graphml>

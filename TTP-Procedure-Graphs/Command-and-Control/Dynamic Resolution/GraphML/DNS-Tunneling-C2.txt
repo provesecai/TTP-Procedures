@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS-Tunneling-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Configure DNS Tunnel for C2 Traffic</data>
+</node>
+<node id="B">
+<data key="label">Encode C2 Commands in DNS Queries</data>
+</node>
+<node id="C">
+<data key="label">Evade Network Monitoring via DNS Traffic</data>
+</node>
+<node id="D">
+<data key="label">Establish Bidirectional DNS-Based C2 Channel</data>
+</node>
+<node id="E">
+<data key="label">Maintain Covert and Persistent C2 Access</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Creates subdomain-based communication for DNS tunneling Corporate Control: DNS Firewall Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Encodes C2 payloads into DNS TXT records Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilizes third-party DNS resolvers for tunneling Third Party Control: Public DNS Services</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disguises C2 traffic as standard DNS lookups Corporate Control: Network Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Breaks C2 traffic into small DNS requests Corporate Control: SIEM and DNS Query Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypts commands to avoid signature-based detection Corporate Control: TLS Inspection and Decryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Routes queries through multiple recursive DNS servers Third Party Control: DNS Infrastructure Providers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Utilizes time-based query patterns for evasion Corporate Control: Behavior-Based Network Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Establishes persistent connection using DNS tunneling Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Implements domain fronting to mask C2 endpoints Corporate Control: Proxy and CDN Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses multiple DNS records to maintain communication Corporate Control: DNS Query Behavior Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Dynamically shifts between different DNS tunneling tools Corporate Control: Intrusion Prevention Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures uninterrupted C2 even with network monitoring Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Allows long-term persistence over DNS-based C2 Corporate Control: DNS Reputation Blocking</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypasses restrictive firewall rules using DNS Corporate Control: Network Traffic Inspection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintains control even if primary C2 infrastructure is blocked Corporate Control: Network Security Appliances</data>
+</edge>
+</graph>
+</graphml>

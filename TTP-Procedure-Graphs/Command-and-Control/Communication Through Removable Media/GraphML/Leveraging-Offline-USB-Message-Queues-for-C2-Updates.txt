@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Leveraging_Offline_USB_Message_Queues_for_C2_Updates" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Encrypted Message Queue on USB Storage</data>
+</node>
+<node id="B">
+<data key="label">Drop USB on Target System to Transfer C2 Messages</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malware to Read Queued C2 Commands</data>
+</node>
+<node id="D">
+<data key="label">Process and Execute Retrieved C2 Instructions</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via Offline USB Queue</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Establish offline C2 message storage in USB queue. Corporate Control: USB Storage Policy & Device Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized structured queue modifications on USB. Corporate Control: SIEM & USB Forensic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abnormal data patterns in queued messages. Third Party: AI-Based Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify structured message storage indicative of C2. Third Party: Digital Forensics & Advanced Threat Research</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy USB on an air-gapped or restricted network. Corporate Control: Endpoint Security & USB Device Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized USB insertions with queued commands. Corporate Control: SIEM & Security Operations Center (SOC)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect malware attempting to read structured queues. Third Party: AI-Based USB Security & Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze removable media logs for structured queue access. Third Party: Cybersecurity Research & Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve and parse queued commands from USB storage. Corporate Control: Endpoint Protection & Data Integrity Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor queued command execution attempts. Corporate Control: SIEM & Data Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect queued C2 execution linked to USB payloads. Third Party: Advanced Malware Detection & Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze command queue logs for unauthorized behavior. Third Party: Cybersecurity Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 using offline USB queue. Corporate Control: Endpoint Hardening & USB Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term offline queue-based C2 persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify malicious queue interactions linked to C2. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block USB message queue-based C2 communication pathways. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

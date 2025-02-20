@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS-Over-HTTPS-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Establish DoH Tunnel</data>
+</node>
+<node id="B">
+<data key="label">Encrypt C2 Commands in DNS Queries</data>
+</node>
+<node id="C">
+<data key="label">Bypass DNS Monitoring and Filtering</data>
+</node>
+<node id="D">
+<data key="label">Maintain Persistent Encrypted C2 Channel</data>
+</node>
+<node id="E">
+<data key="label">Achieve Stealthy Command and Control</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Configures DoH resolvers on infected system Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Routes C2 traffic through DoH to prevent DNS logging Corporate Control: Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Hides C2 communication within HTTPS requests Corporate Control: TLS Inspection, Proxy Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoids traditional DNS filtering by using encrypted queries Corporate Control: DNS Sinkhole Implementation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encodes command payloads inside DNS requests Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Utilizes compromised third-party DoH providers Third Party Control: External DNS Providers</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Generates randomized DoH queries to evade detection Corporate Control: SIEM Log Correlation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exfiltrates stolen data through DoH responses Corporate Control: Content Inspection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automates DoH-based C2 beaconing Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disguises malicious C2 traffic as legitimate web requests Corporate Control: Behavioral Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses multiple DoH endpoints for redundancy Corporate Control: Endpoint Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Rotates C2 domains dynamically for resilience Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintains persistent control over compromised host Corporate Control: Endpoint Monitoring Solutions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures stealthy communication remains undetected Corporate Control: SOC and Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Uses DoH to communicate with backup C2 servers Corporate Control: Web Proxy and SSL Interception</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoids detection by frequently changing DoH providers Corporate Control: DNS Threat Intelligence Feeds</data>
+</edge>
+</graph>
+</graphml>

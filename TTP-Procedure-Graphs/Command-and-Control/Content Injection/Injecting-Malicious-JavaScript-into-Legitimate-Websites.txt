@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_JavaScript_into_Legitimate_Websites" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise Website Content Management System (CMS)</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious JavaScript Code</data>
+</node>
+<node id="C">
+<data key="label">Users Load Compromised Web Pages</data>
+</node>
+<node id="D">
+<data key="label">JavaScript Code Executes to Establish C2</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Web Code Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit CMS plugin vulnerabilities. Corporate Control: CMS Security Hardening & Patching Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized admin logins. Corporate Control: SIEM & Web Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan CMS plugins for integrity violations. Third Party: Threat Intelligence & Security Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate unexpected modifications in page source. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 beacon in JavaScript files. Corporate Control: Web Security Gateway & JavaScript Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor CMS-generated scripts for unauthorized edits. Corporate Control: SIEM & Endpoint Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect injected JavaScript anomalies. Third Party: Machine Learning-Based Web Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Reverse engineer JavaScript payloads. Third Party: Cybersecurity Research & Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims unknowingly execute malicious code. Corporate Control: Browser Security & Content Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor web traffic for JavaScript-based anomalies. Corporate Control: SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious outbound requests. Third Party: Network Threat Intelligence & SOC Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate web-based malware infection chains. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish long-term C2 persistence. Corporate Control: Endpoint Security & Host-Based Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Track attacker-controlled web infrastructure. Corporate Control: SIEM & Web Monitoring Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect continued JavaScript-based C2 operations. Third Party: Web Intelligence & Advanced Threat Research</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer malicious JavaScript payloads. Third Party: Malware Analysis & Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

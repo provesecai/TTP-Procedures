@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ROT13_Encoding_to_Obfuscate_Command_Data" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Implement ROT13 Encoding for C2 Messages</data>
+</node>
+<node id="B">
+<data key="label">Convert C2 Instructions into ROT13-Encoded Format</data>
+</node>
+<node id="C">
+<data key="label">Embed ROT13 Encoded Data into Network Traffic</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute ROT13-Encoded Payload on Target</data>
+</node>
+<node id="E">
+<data key="label">Establish ROT13-Encoded Command Persistence</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Utilize ROT13 to obfuscate C2 data Corporate Control: Security Awareness Training & Endpoint Whitelisting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized ROT13 encoding in active processes Corporate Control: SIEM & Endpoint Activity Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect obfuscated command strings in memory dumps Third Party: Reverse Engineering & Threat Hunting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert encoded C2 payloads into standard communication channels Corporate Control: Secure Web Gateway & Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for encrypted payloads using entropy-based detection Third Party: Advanced Threat Intelligence & Machine Learning-Based Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Process ROT13 decryption and execute commands on infected host Corporate Control: Process Memory Protection & System Integrity Checks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze repeated ROT13 decryption attempts in logs Third Party: Threat Detection AI & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain long-term stealthy C2 through ROT13 encoding Corporate Control: Secure DNS Policies & Endpoint Security Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect persistence of encoded C2 traffic patterns Third Party: Security Operations Center (SOC) & Real-Time Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

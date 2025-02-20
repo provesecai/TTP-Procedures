@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_Rogue_iFrames_for_Remote_Control" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Web Pages to Contain Rogue iFrames</data>
+</node>
+<node id="B">
+<data key="label">Deliver Compromised Web Page to Target</data>
+</node>
+<node id="C">
+<data key="label">Victim Loads Page and Executes Embedded iFrame</data>
+</node>
+<node id="D">
+<data key="label">iFrame Redirects Victim to C2 Server</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via iFrame Exploitation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Modify web pages to inject hidden iFrames leading to C2. Corporate Control: Web Content Filtering & Content Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor website changes for unauthorized iFrame injections. Corporate Control: SIEM & Web Page Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect and analyze rogue iFrame activity. Third Party: AI-Based Web Security & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor HTML structure changes for injected iFrames. Third Party: Digital Forensics & Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver modified web page containing rogue iFrame. Corporate Control: Web Security Gateway & Content Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unexpected web page behaviors. Corporate Control: SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze user interactions with injected iFrames. Third Party: Threat Intelligence & Web Application Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor browser execution of unauthorized iFrames. Third Party: Advanced Threat Hunting & SOC Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">iFrame loads external content directing victim to C2. Corporate Control: Network Intrusion Detection & URL Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect browser-based redirections linked to C2. Corporate Control: SIEM & Endpoint Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify patterns of malicious iFrame execution. Third Party: AI-Based Behavior Analysis & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track hidden iFrame redirections in web traffic. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 connection via rogue iFrame. Corporate Control: Endpoint Hardening & Browser Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for long-term persistence of rogue iFrames. Corporate Control: SIEM & Web Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify repeated attempts to execute rogue iFrames. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer iFrame-based C2 payloads. Third Party: Malware Analysis & Global Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

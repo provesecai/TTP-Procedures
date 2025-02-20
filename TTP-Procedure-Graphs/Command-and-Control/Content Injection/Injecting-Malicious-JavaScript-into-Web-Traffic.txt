@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_JavaScript_into_Web_Traffic" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Web Pages to Inject Malicious JavaScript</data>
+</node>
+<node id="B">
+<data key="label">Deliver Injected Web Page to Target User</data>
+</node>
+<node id="C">
+<data key="label">Execute JavaScript to Establish C2 Channel</data>
+</node>
+<node id="D">
+<data key="label">Obfuscate JavaScript Payload to Evade Detection</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Injected JavaScript</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Modify legitimate web pages to include malicious JavaScript. Corporate Control: Web Application Firewall & Content Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor web traffic for unauthorized JavaScript injections. Corporate Control: SIEM & Network Traffic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized changes to hosted web pages. Third Party: Web Integrity Monitoring & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze web logs for unusual script injections. Third Party: Digital Forensics & Threat Hunting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deliver modified web page with embedded JavaScript to victim. Corporate Control: Secure Web Gateway & Content Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor outbound web traffic for unexpected script execution. Corporate Control: SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unusual web browsing patterns leading to C2 activation. Third Party: Threat Intelligence & AI-Based Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze browser behavior for unauthorized script execution. Third Party: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute JavaScript to establish communication with C2 server. Corporate Control: Web Proxy & Network Intrusion Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for unauthorized outbound connections from browsers. Corporate Control: SIEM & Firewall Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify unusual JavaScript behaviors linked to C2. Third Party: Machine Learning-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Track script execution flows for signs of C2. Third Party: Advanced Threat Hunting & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obfuscate JavaScript payloads to avoid signature-based detection. Corporate Control: Endpoint Security & Heuristic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for encoded script activity within web traffic. Corporate Control: SIEM & Deep Packet Inspection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect abnormal script obfuscation techniques. Third Party: AI-Based Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer JavaScript payloads to uncover C2 mechanisms. Third Party: Digital Forensics & Malware Analysis</data>
+</edge>
+</graph>
+</graphml>

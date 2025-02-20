@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS-CNAME-Cloaking-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register a Legitimate-Looking Domain</data>
+</node>
+<node id="B">
+<data key="label">Use CNAME Records to Mask C2 Infrastructure</data>
+</node>
+<node id="C">
+<data key="label">Redirect Malicious Queries to Actual C2 Server</data>
+</node>
+<node id="D">
+<data key="label">Rotate CNAME Entries to Avoid Detection</data>
+</node>
+<node id="E">
+<data key="label">Achieve Stealthy and Resilient C2 Operations</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Registers domain with a reputable provider Third Party Control: Domain Registrars</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configures domain with CNAME records pointing to C2 Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Uses TLS to disguise communication as HTTPS Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploys multiple aliases to spread C2 infrastructure Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Routes DNS queries to hidden C2 endpoints Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Dynamically updates CNAME records for resilience Corporate Control: Passive DNS Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disguises malicious activity within legitimate DNS lookups Corporate Control: Network Intrusion Prevention</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implements load balancing to obscure C2 location Third Party Control: CDN and Proxy Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses disposable CNAME records to rotate infrastructure Corporate Control: DNS Query Pattern Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evades detection by frequently changing C2 aliases Corporate Control: SIEM and Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hides real IP addresses behind CNAME redirections Corporate Control: Threat Intelligence Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Bypasses DNS filtering mechanisms using trusted domains Corporate Control: Anomaly-Based Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintains long-term stealthy access Corporate Control: DNS-Based Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures uninterrupted control of compromised devices Corporate Control: Endpoint Monitoring and Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Minimizes the risk of domain blacklisting Corporate Control: Reputation Scoring and Domain Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Facilitates attacker-controlled domain resolution Corporate Control: Network Monitoring and Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hexadecimal_Encoding_for_Obfuscation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Generate Hexadecimal Encoding Mechanism</data>
+</node>
+<node id="B">
+<data key="label">Convert Malicious Payloads into Hexadecimal Format</data>
+</node>
+<node id="C">
+<data key="label">Inject Hex-Encoded Commands into Network Traffic</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute Hexadecimal Encoded Payload</data>
+</node>
+<node id="E">
+<data key="label">Maintain Persistent Hex-Encoded Command Channel</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Utilize scripting languages (Python, PowerShell) to automate hexadecimal encoding Corporate Control: Application Whitelisting & Execution Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for abnormal encoding script executions Corporate Control: SIEM Logging & Endpoint Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use behavioral analysis to detect encoding anomalies Third Party: AI-Driven Threat Intelligence & Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed hex-encoded data into HTTP, DNS, or SMTP packets Corporate Control: Network Traffic Analysis & Firewall Deep Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor network for unusual hexadecimal traffic patterns Third Party: Threat Intelligence & Intrusion Detection Systems (IDS)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode hexadecimal payload on compromised system Corporate Control: Process Memory Protection & Endpoint Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Flag and investigate unauthorized hex decoding Third Party: Advanced Malware Analysis & Reverse Engineering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish an encrypted, hex-encoded command channel Corporate Control: Secure Network Segmentation & Anomaly-Based Traffic Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for persistent encoded communication traffic Third Party: Security Information and Event Management (SIEM) & Incident Response</data>
+</edge>
+</graph>
+</graphml>

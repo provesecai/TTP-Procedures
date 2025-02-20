@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying_HTTP_Responses_to_Include_C2_Commands" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Intercept and Modify HTTP Responses</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Content into HTTP Response Body</data>
+</node>
+<node id="C">
+<data key="label">Execute Malicious Content in Victim's Browser</data>
+</node>
+<node id="D">
+<data key="label">Establish Persistent C2 Channel via Modified Responses</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via HTTP Response Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Intercept HTTP responses using proxy attack methods. Corporate Control: Secure Web Gateway & Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor HTTP traffic for unauthorized content modifications. Corporate Control: SIEM & HTTP Header Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect manipulation of HTTP responses in real-time. Third Party: AI-Based Network Analysis & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze response patterns for unexpected content injection. Third Party: Threat Hunting & Digital Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed hidden C2 commands within modified response content. Corporate Control: Web Content Filtering & HTTP Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect unauthorized modifications of response payloads. Corporate Control: SIEM & Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify anomalies in HTTP response structures. Third Party: Behavioral Analysis & Machine Learning-Based Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track web traffic patterns linked to modified responses. Third Party: Digital Forensics & SOC Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Execute modified HTTP response content in victim's browser. Corporate Control: Endpoint Protection & Browser Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor browser activity for unauthorized script execution. Corporate Control: SIEM & Endpoint Behavior Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unusual HTTP behavior leading to C2 activation. Third Party: AI-Powered Threat Intelligence & Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze network logs for persistent HTTP-based C2 attempts. Third Party: Threat Hunting & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistent C2 channel using HTTP response manipulation. Corporate Control: Network Security Monitoring & Threat Mitigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor long-term HTTP request-response anomalies. Corporate Control: SIEM & Threat Intelligence Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent C2 traffic patterns. Third Party: Global Cyber Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer response-based C2 payloads for analysis. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+</graph>
+</graphml>

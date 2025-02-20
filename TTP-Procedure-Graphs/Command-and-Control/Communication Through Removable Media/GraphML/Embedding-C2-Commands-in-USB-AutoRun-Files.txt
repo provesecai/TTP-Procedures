@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Embedding_C2_Commands_in_USB_AutoRun_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Malicious AutoRun File with C2 Instructions</data>
+</node>
+<node id="B">
+<data key="label">Drop AutoRun File into USB Root Directory</data>
+</node>
+<node id="C">
+<data key="label">Execute Malicious AutoRun Script Upon USB Insertion</data>
+</node>
+<node id="D">
+<data key="label">Retrieve and Execute C2 Commands from AutoRun</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via USB AutoRun</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Generate AutoRun.inf with malicious C2 link. Corporate Control: USB Device Policy & Group Policy Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Embed payloads within USB auto-execution settings. Corporate Control: Endpoint Protection & AutoRun Prevention</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized AutoRun modifications. Third Party: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect embedded C2 URLs in AutoRun scripts. Third Party: AI-Based Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure AutoRun script triggers on USB connection. Corporate Control: USB Device Whitelisting & Endpoint Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor USB insertions triggering unknown AutoRun files. Corporate Control: SIEM & USB Activity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze AutoRun file activity patterns for anomalies. Third Party: Threat Intelligence & AI-Based Malware Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Block AutoRun execution on unauthorized endpoints. Third Party: Endpoint Protection & Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve encoded C2 instructions from AutoRun payload. Corporate Control: Endpoint Logging & Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor endpoint behavior for unauthorized script execution. Corporate Control: SIEM & Network Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect execution of encoded C2 commands from USB. Third Party: AI-Based Threat Intelligence & Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze AutoRun execution logs for unauthorized behavior. Third Party: Cybersecurity Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 communication through USB AutoRun. Corporate Control: Endpoint Hardening & USB Control Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-lived USB AutoRun-based C2 channels. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent AutoRun modifications linked to C2. Third Party: AI-Based Threat Detection & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disrupt and block AutoRun-based C2 operations. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

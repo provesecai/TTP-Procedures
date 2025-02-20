@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Base64_Encoding_for_C2_Communications" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare Base64 Encoding for C2 Commands</data>
+</node>
+<node id="B">
+<data key="label">Convert Malicious C2 Commands to Base64</data>
+</node>
+<node id="C">
+<data key="label">Embed Encoded Data in HTTP/S Communications</data>
+</node>
+<node id="D">
+<data key="label">Decode Base64 Data on Compromised Host</data>
+</node>
+<node id="E">
+<data key="label">Achieve Persistent C2 Communication</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enable encoding functions in malware Corporate Control: Endpoint Security & SIEM Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze network traffic for encoded payloads Corporate Control: Network IDS & Traffic Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prevent unauthorized execution of encoding scripts Corporate Control: Application Whitelisting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject Base64 strings into C2 traffic Corporate Control: SSL/TLS Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalous encoded content Third Party: Threat Intelligence & Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Process Base64 decoding on infected host Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor process memory for encoded command execution Third Party: Memory Scanning & Reverse Engineering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealthy C2 using encoded messages Corporate Control: Secure Web Gateway & Traffic Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify encoded C2 activity via forensic analysis Third Party: Digital Forensics & Incident Response</data>
+</edge>
+</graph>
+</graphml>

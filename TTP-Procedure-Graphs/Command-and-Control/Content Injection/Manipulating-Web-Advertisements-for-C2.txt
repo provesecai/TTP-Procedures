@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Manipulating_Web_Advertisements_for_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Online Ad Network</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious JavaScript into Ad Content</data>
+</node>
+<node id="C">
+<data key="label">Compromised Ads Displayed on Legitimate Websites</data>
+</node>
+<node id="D">
+<data key="label">Injected JavaScript Connects to C2 Server</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Malvertising</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit ad platform vulnerabilities. Corporate Control: Ad Security Policies & Vendor Risk Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized access to ad management. Corporate Control: SIEM & AdTech Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track unusual ad publishing activity. Third Party: Threat Intelligence & Global Ad Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate ad metadata for integrity violations. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 beacons in ad scripts. Corporate Control: Web Security Gateway & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor ad delivery for unauthorized JavaScript injection. Corporate Control: Content Filtering & Behavior Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect anomalies in ad-based traffic. Third Party: AI-Powered Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze ad traffic for malware-like patterns. Third Party: Digital Ad Security Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims unknowingly execute injected JavaScript. Corporate Control: Browser Security & Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outbound traffic for anomalous ad-based connections. Corporate Control: SIEM & Network Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect suspicious web requests to attacker C2 servers. Third Party: Global Threat Intelligence & Network Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate website ad interactions for hidden payloads. Third Party: Cyber Forensics & Threat Research</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistence via ad-driven C2 channels. Corporate Control: Zero Trust Web Security & DNS Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term malicious ad campaign persistence. Corporate Control: SIEM & Incident Response Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor global ad networks for cyber-threat indicators. Third Party: Ad Fraud Intelligence & Cyber Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer ad-based malware payloads. Third Party: Malware Analysis & Cybersecurity Research</data>
+</edge>
+</graph>
+</graphml>

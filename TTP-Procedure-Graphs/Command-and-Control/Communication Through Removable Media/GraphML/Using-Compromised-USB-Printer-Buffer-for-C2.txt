@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using_Compromised_USB_Printer_Buffer_for_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify USB Printer Buffer to Store C2 Commands</data>
+</node>
+<node id="B">
+<data key="label">Deploy Infected USB Printer to Target System</data>
+</node>
+<node id="C">
+<data key="label">Trigger Printer to Process and Execute C2 Commands</data>
+</node>
+<node id="D">
+<data key="label">Retrieve Processed Data from Infected Printer Buffer</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via USB Printer Buffer</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Embed C2 payloads within printer memory buffer. Corporate Control: USB Device Security & Printer Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized buffer modifications. Corporate Control: SIEM & Device Configuration Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect suspicious memory usage in printer buffer. Third Party: AI-Based Threat Intelligence & Cybersecurity Research</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze printer firmware for C2-related manipulations. Third Party: Digital Forensics & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Install infected printer onto target network. Corporate Control: USB Access Restrictions & Device Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized printer insertions. Corporate Control: SIEM & Network Access Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect abnormal print jobs triggering C2 execution. Third Party: AI-Based Malware Detection & SOC Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze printer job logs for hidden C2 triggers. Third Party: Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Process hidden C2 commands stored in print buffer. Corporate Control: Endpoint Security & Data Execution Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor printer activity for unexpected buffer executions. Corporate Control: SIEM & Device Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect print spooler anomalies linked to C2. Third Party: AI-Based Threat Intelligence & Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trace printer buffer activities for C2 indicators. Third Party: Cyber Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 using printer memory buffer. Corporate Control: Endpoint Hardening & Printer Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term C2 persistence through print buffer. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify unauthorized printer interactions linked to C2. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block execution of C2 payloads hidden in printer buffer. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

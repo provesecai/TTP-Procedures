@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Abusing_Removable_Media_File_Synchronization_for_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Deploy Malware with File Sync Mechanism</data>
+</node>
+<node id="B">
+<data key="label">Sync C2 Instructions to USB-Connected Host</data>
+</node>
+<node id="C">
+<data key="label">Modify Synced Files to Embed C2 Payload</data>
+</node>
+<node id="D">
+<data key="label">Trigger Execution of Synced C2 Commands</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via File Synchronization</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Create file synchronization rule targeting USB. Corporate Control: USB Device Policy & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor file sync activity for unauthorized changes. Corporate Control: SIEM & File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized auto-sync configurations. Third Party: Threat Intelligence & AI-Based Behavior Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze removable media sync metadata for anomalies. Third Party: Cybersecurity Research & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 commands in file sync metadata. Corporate Control: Endpoint Data Loss Prevention & USB Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor modification patterns in synced files. Corporate Control: SIEM & File Integrity Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect covert C2 signals within file sync events. Third Party: AI-Based Threat Intelligence & USB Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unauthorized file sync modifications for C2. Third Party: Global Cyber Threat Research & Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution of modified synced file commands. Corporate Control: Endpoint Security & File Access Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor synced file execution attempts. Corporate Control: SIEM & Endpoint Behavioral Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal execution linked to file sync. Third Party: AI-Based Malware Detection & SOC Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze synced file execution logs for C2 activity. Third Party: Advanced Threat Intelligence & Behavioral Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 channel via file sync. Corporate Control: Endpoint Hardening & USB Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term file sync-based C2 persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify unauthorized file sync paths linked to C2. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block sync-based C2 communication mechanisms. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

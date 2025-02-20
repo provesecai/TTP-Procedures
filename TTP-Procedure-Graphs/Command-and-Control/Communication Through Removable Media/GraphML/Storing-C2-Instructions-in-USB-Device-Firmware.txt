@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Storing_C2_Instructions_in_USB_Device_Firmware" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify USB Firmware to Store C2 Payload</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised USB to Target System</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malware to Extract C2 Instructions from USB Firmware</data>
+</node>
+<node id="D">
+<data key="label">Execute Extracted C2 Commands on Compromised Host</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via USB Firmware</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Inject C2 commands within USB firmware updates. Corporate Control: Firmware Integrity Verification & Device Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized firmware modifications. Corporate Control: Endpoint Protection & SIEM Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in USB firmware integrity checks. Third Party: AI-Based Firmware Analysis & Threat Research</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze firmware updates for embedded C2 payloads. Third Party: Cybersecurity Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy infected USB onto target system. Corporate Control: USB Device Whitelisting & Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized USB insertions. Corporate Control: SIEM & USB Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect hidden C2 execution from firmware-stored payloads. Third Party: AI-Based USB Security & Malware Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze USB firmware interactions on endpoints. Third Party: SOC Monitoring & Advanced Threat Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Extract and execute C2 commands from modified USB firmware. Corporate Control: Endpoint Threat Detection & Firmware Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor firmware-stored command execution attempts. Corporate Control: SIEM & Endpoint Security Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect hidden C2 execution from firmware-based storage. Third Party: Digital Forensics & Behavioral Malware Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze logs of USB firmware command execution. Third Party: Cyber Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 using USB firmware-level instructions. Corporate Control: Endpoint Hardening & USB Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term firmware-based C2 persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify unauthorized firmware modifications linked to C2. Third Party: AI-Based Firmware Security & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block firmware-modified USB devices from executing C2. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

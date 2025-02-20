@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DGA-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Generate Randomized C2 Domains</data>
+</node>
+<node id="B">
+<data key="label">Register Newly Generated C2 Domains</data>
+</node>
+<node id="C">
+<data key="label">Cycle Through Active and Inactive C2 Domains</data>
+</node>
+<node id="D">
+<data key="label">Establish Redundant C2 Communication Channels</data>
+</node>
+<node id="E">
+<data key="label">Achieve Adaptive and Resilient C2 Infrastructure</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Utilizes cryptographic seed to generate pseudo-random domains Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploys DGA-based malware to infected endpoints Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoids signature-based detection through domain obfuscation Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configures DGA parameters dynamically for adaptability Corporate Control: DNS Traffic Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Registers valid DGA domains ahead of time Third Party Control: Domain Registrars</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Cycles through daily DGA-generated domains Corporate Control: DNS Query Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensures active domain resolution before use Corporate Control: Passive DNS Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypts DNS traffic to hide DGA queries Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Switches to alternative domains when current C2 is blocked Corporate Control: SIEM and SOC Alerting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintains resilience against domain takedown efforts Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Randomizes query times to evade detection Corporate Control: Intrusion Detection Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Implements fallback mechanism if primary domain is seized Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Achieves persistent C2 through ever-changing domains Corporate Control: SOC and Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evades reputation-based domain blacklists Corporate Control: Anomaly Detection and AI-based Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reduces likelihood of detection by security vendors Corporate Control: DNS Forensics and Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Sustains long-term control over infected systems Corporate Control: Network Security Appliances</data>
+</edge>
+</graph>
+</graphml>

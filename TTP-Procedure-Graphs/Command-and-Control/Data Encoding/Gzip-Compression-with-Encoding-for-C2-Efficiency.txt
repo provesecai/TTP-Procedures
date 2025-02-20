@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Gzip_Compression_with_Encoding_for_C2_Efficiency" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Utilize Gzip Compression with Encoding for C2 Traffic</data>
+</node>
+<node id="B">
+<data key="label">Compress and Encode C2 Payloads Using Gzip</data>
+</node>
+<node id="C">
+<data key="label">Transmit Compressed Encoded Data Over Covert Channels</data>
+</node>
+<node id="D">
+<data key="label">Decompress and Decode Payload on Target System</data>
+</node>
+<node id="E">
+<data key="label">Establish Efficient C2 Communication via Gzip Encoding</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use Gzip compression to reduce C2 payload size Corporate Control: Endpoint Security & Memory Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor script execution for compression anomalies Corporate Control: SIEM Logging & Application Whitelisting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect compressed payloads using entropy analysis Third Party: Machine Learning-Based Threat Detection & Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed compressed payloads within alternative protocols Corporate Control: Firewall Deep Packet Inspection & Network Traffic Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify patterns of compressed malicious payload delivery Third Party: Intrusion Detection Systems (IDS) & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decompress and decode payload before execution Corporate Control: Behavioral Monitoring & System Call Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Flag unauthorized decompression in process execution Third Party: Security Information and Event Management (SIEM) & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain stealthy communication via compressed payloads Corporate Control: Endpoint Protection & Network Segmentation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect and mitigate compressed C2 activity Third Party: Security Operations Center (SOC) & Incident Response Teams</data>
+</edge>
+</graph>
+</graphml>

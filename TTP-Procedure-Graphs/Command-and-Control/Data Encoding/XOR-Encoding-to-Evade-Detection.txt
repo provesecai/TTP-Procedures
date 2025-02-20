@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="XOR_Encoding_to_Evade_Detection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Generate XOR Encoding Mechanism for C2 Traffic</data>
+</node>
+<node id="B">
+<data key="label">Encrypt Command Data Using XOR Encoding</data>
+</node>
+<node id="C">
+<data key="label">Inject XOR-Encoded Payloads into Network Communications</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute XOR Payload on Compromised Host</data>
+</node>
+<node id="E">
+<data key="label">Maintain XOR-Based Encrypted C2 Channel</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use randomized XOR keys to evade detection Corporate Control: Cryptographic Integrity Verification & Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unauthorized XOR encoding behavior Corporate Control: Behavioral Analytics & SIEM Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify XOR usage via entropy-based analysis Third Party: Threat Intelligence & Malware Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed XOR-encoded payloads in TCP, HTTP, or DNS traffic Corporate Control: IDS & Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for repeated XOR-encoded traffic anomalies Third Party: Advanced Threat Hunting & Network Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode XOR payload on infected host and execute commands Corporate Control: Memory Analysis & Heuristic Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect XOR decryption attempts in process memory Third Party: Endpoint Threat Intelligence & Reverse Engineering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent, stealthy XOR-encrypted C2 communication Corporate Control: Secure DNS Filtering & Anomaly-Based Traffic Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify and disrupt XOR-encoded C2 persistence Third Party: Security Operations Center (SOC) & Incident Response</data>
+</edge>
+</graph>
+</graphml>

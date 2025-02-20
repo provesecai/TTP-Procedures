@@ -1,0 +1,70 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Employing_Encrypted_C2_Channels_via_USB_Exfiltrated_Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Encrypt C2 Instructions Within USB-Stored Files</data>
+</node>
+<node id="B">
+<data key="label">Transfer Encrypted Files via USB to Targeted Host</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malware to Decrypt C2 Instructions</data>
+</node>
+<node id="D">
+<data key="label">Execute Decrypted C2 Commands on Compromised Host</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via Encrypted USB Files</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Embed C2 signals within encrypted documents. Corporate Control: Endpoint Data Loss Prevention & Encryption Policy</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized file encryption activities. Corporate Control: SIEM & USB Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in USB file encryption patterns. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze encrypted file metadata for hidden C2 payloads. Third Party: Advanced Digital Forensics & Malware Research</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Transfer encrypted payloads to compromised endpoints. Corporate Control: Endpoint Security & File Integrity Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor encrypted file access attempts on USB. Corporate Control: SIEM & USB Security Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect decryption requests targeting USB-stored files. Third Party: Behavioral AI-Based Detection & SOC Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify unauthorized decryption of removable media content. Third Party: Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve and decrypt C2 commands from USB file payloads. Corporate Control: Endpoint Protection & Data Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor decrypted USB-based payload execution attempts. Corporate Control: SIEM & Data Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect hidden decryption-based command execution. Third Party: Advanced Malware Detection & Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze decrypted file logs for unauthorized behavior. Third Party: Cybersecurity Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 channel using encrypted USB files. Corporate Control: Endpoint Hardening & USB Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term encrypted USB-based C2 persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify malicious encrypted USB file interactions linked to C2. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block encrypted USB file-based C2 communication pathways. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>
+ 

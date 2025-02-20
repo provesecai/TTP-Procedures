@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="DNS-TXT-Records-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register a Malicious Domain</data>
+</node>
+<node id="B">
+<data key="label">Embed C2 Commands in DNS TXT Records</data>
+</node>
+<node id="C">
+<data key="label">Relay C2 Instructions Through TXT Queries</data>
+</node>
+<node id="D">
+<data key="label">Decrypt and Execute Received Commands</data>
+</node>
+<node id="E">
+<data key="label">Achieve Persistent Command and Control</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Registers a domain through a third-party provider Third Party Control: Domain Registrars</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Configures DNS TXT records to store encoded payloads Corporate Control: DNS Firewall Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilizes multiple TXT records to store segmented data Corporate Control: Passive DNS Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Encrypts commands to prevent detection Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encodes payloads in base64 within DNS TXT queries Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Uses infected clients to periodically query TXT records Corporate Control: SIEM and DNS Query Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Hides encoded C2 data in legitimate-looking DNS responses Corporate Control: Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implements domain rotation to avoid detection Corporate Control: DNS Reputation Scoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decrypts and parses received DNS TXT payload Corporate Control: Host-based Security Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Executes encoded C2 instructions on compromised machine Corporate Control: Endpoint Detection & Response (EDR)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Transmits execution results back via DNS TXT responses Corporate Control: DNS Traffic Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evades content inspection by splitting data across queries Corporate Control: Network Security Appliances</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures long-term, covert C2 operation Corporate Control: Threat Hunting and Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Avoids signature-based detection with obfuscated data Corporate Control: Security Operations Center (SOC)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Allows for real-time attacker control over infected machines Corporate Control: SIEM Event Correlation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintains resilience even if some domains are blacklisted Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+</graph>
+</graphml>

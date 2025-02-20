@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting_Malicious_Commands_into_API_Responses" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Compromise API Gateway or Web Service</data>
+</node>
+<node id="B">
+<data key="label">Modify API Responses to Include Malicious Payloads</data>
+</node>
+<node id="C">
+<data key="label">Client Applications Process Altered API Data</data>
+</node>
+<node id="D">
+<data key="label">Injected Commands Execute on Compromised Systems</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via API Content Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit API vulnerabilities to manipulate responses. Corporate Control: API Gateway Security & Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor API logs for unusual response modifications. Corporate Control: SIEM & API Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Scan API endpoints for unauthorized changes. Third Party: Security Assessments & Penetration Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate API layer attacks. Third Party: Digital Forensics & API Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 commands in API responses. Corporate Control: Content Security Policies & API Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor outgoing API responses for anomalies. Corporate Control: SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect injected commands in API traffic. Third Party: AI-Based API Security & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Investigate API content injection techniques. Third Party: Malware Analysis & Cyber Threat Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Clients unknowingly execute injected API responses. Corporate Control: Endpoint Security & Application Whitelisting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor application behavior for unexpected API-driven actions. Corporate Control: SIEM & Host-Based Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect unusual API processing behavior. Third Party: Application Security & Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate API-based attack payloads. Third Party: Cybersecurity Research & Reverse Engineering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistent C2 access through API layer. Corporate Control: Application Firewall & API Security Controls</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Track API-based C2 mechanisms. Corporate Control: SIEM & Web Application Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect API command execution abuse. Third Party: Global Threat Intelligence & Digital Risk Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer malicious API payloads. Third Party: Threat Hunting & Digital Forensics</data>
+</edge>
+</graph>
+</graphml>

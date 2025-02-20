@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="URL_Encoding_for_Web-Based_C2_Traffic" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare URL Encoding Mechanism for C2 Traffic</data>
+</node>
+<node id="B">
+<data key="label">Encode Malicious Payloads and Commands Using URL Encoding</data>
+</node>
+<node id="C">
+<data key="label">Inject URL-Encoded Data into HTTP/S Requests</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute URL-Encoded Payload on Compromised Host</data>
+</node>
+<node id="E">
+<data key="label">Maintain Stealthy Command Channel via URL Encoding</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Implement encoding functions in malware Corporate Control: Application Execution Monitoring & Web Proxy Filtering</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized use of URL encoding in scripts Corporate Control: SIEM & Endpoint Protection Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use behavioral analysis to identify encoded payloads Third Party: Threat Intelligence & AI-Based Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed URL-encoded C2 commands within HTTP requests Corporate Control: Secure Web Gateway & TLS Decryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect patterns of URL-encoded obfuscation in network logs Third Party: IDS & Heuristic-Based Traffic Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode malicious commands and execute on host Corporate Control: EDR & Behavioral Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze web traffic for repetitive URL encoding signatures Third Party: Web Application Firewall (WAF) & Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain encrypted, URL-encoded communication Corporate Control: DNS Filtering & SSL Deep Packet Inspection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify persistent URL-encoded C2 traffic Third Party: Advanced Security Operations Center (SOC) Monitoring</data>
+</edge>
+</graph>
+</graphml>

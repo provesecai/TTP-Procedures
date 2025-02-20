@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Bulletproof-Hosting-DNS-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Acquire Bulletproof Hosting for C2</data>
+</node>
+<node id="B">
+<data key="label">Register Dynamic DNS Services with Bulletproof Host</data>
+</node>
+<node id="C">
+<data key="label">Implement Dynamic DNS for Resilient C2</data>
+</node>
+<node id="D">
+<data key="label">Rotate Hosted C2 Infrastructure to Evade Takedowns</data>
+</node>
+<node id="E">
+<data key="label">Achieve Long-Term, Undetected C2</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Selects bulletproof hosting provider resistant to law enforcement Third Party Control: Offshore Hosting Providers</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Deploys C2 server in high-privacy jurisdictions Third Party Control: Anonymous Web Hosting</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Encrypts communications to avoid monitoring Corporate Control: Network Traffic Inspection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Uses fake credentials to register hosting anonymously Corporate Control: Domain Name Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configures dynamic DNS to maintain constant connectivity Corporate Control: DNS Reputation and Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implements rapid domain switching to avoid blacklisting Corporate Control: Passive DNS Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Uses wildcard subdomains to support multiple C2 endpoints Corporate Control: Network Intrusion Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Links dynamic DNS to bulletproof-hosted IP addresses Corporate Control: SIEM and SOC Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Rotates C2 domains and IP addresses dynamically Corporate Control: Network Firewall and RPZ</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automates domain switching through botnet management Third Party Control: Malicious Domain Providers</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disguises traffic as legitimate DNS queries Corporate Control: DNS Query Pattern Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintains fallback domains in case of blacklisting Corporate Control: DNS Traffic Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures C2 remains online despite takedown attempts Corporate Control: Threat Intelligence and SOC</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Provides a persistent foothold over infected machines Corporate Control: Advanced Persistent Threat (APT) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Evades law enforcement and corporate monitoring Corporate Control: DNS Security and Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Sustains long-term operations without easy attribution Corporate Control: Network and Endpoint Threat Hunting</data>
+</edge>
+</graph>
+</graphml>

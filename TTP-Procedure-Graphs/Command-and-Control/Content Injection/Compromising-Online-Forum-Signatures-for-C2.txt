@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Online_Forum_Signatures_for_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Forum User Accounts</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Links in Forum Signatures</data>
+</node>
+<node id="C">
+<data key="label">Users Interact with Infected Forum Posts</data>
+</node>
+<node id="D">
+<data key="label">Malicious Links Redirect to C2 Infrastructure</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Forum Content Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use credential stuffing or phishing. Corporate Control: Multi-Factor Authentication & User Account Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized forum account activity. Corporate Control: SIEM & User Behavior Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect credential compromise attempts. Third Party: Cyber Threat Intelligence & Breach Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate social engineering campaigns. Third Party: Digital Forensics & Cybercrime Research</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 URLs in forum signatures. Corporate Control: URL Filtering & Web Security Gateway</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor signature changes for unauthorized edits. Corporate Control: SIEM & Content Integrity Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect forum signature injection patterns. Third Party: AI-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track malicious domain associations. Third Party: Global Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users unknowingly interact with infected forum content. Corporate Control: User Security Awareness & Phishing Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor network traffic for suspicious forum-based connections. Corporate Control: SIEM & Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect attacker-controlled forum URLs. Third Party: Domain Reputation & Cyber Threat Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate social engineering-driven infections. Third Party: Cybercrime Analysis & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain long-term C2 persistence via forums. Corporate Control: Endpoint Protection & Zero Trust Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Track malicious forum-based activities. Corporate Control: SIEM & Automated Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor global forum abuse for threat indicators. Third Party: Threat Intelligence & Social Engineering Research</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer forum-based C2 infrastructure. Third Party: Malware Analysis & Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

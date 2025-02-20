@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Utilizing_Hidden_Partitions_on_USB_for_C2_Communication" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Create Hidden Partition on USB Drive</data>
+</node>
+<node id="B">
+<data key="label">Embed C2 Payloads within Hidden USB Partition</data>
+</node>
+<node id="C">
+<data key="label">Deploy Malware that Reads Hidden Partition Data</data>
+</node>
+<node id="D">
+<data key="label">Extract and Execute C2 Commands from Hidden Partition</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via Hidden USB Partition</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Partition USB into visible and hidden segments. Corporate Control: USB Access Control Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized partition modifications on removable media. Corporate Control: SIEM & Endpoint Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect USB devices with hidden partitions. Third Party: Threat Intelligence & USB Forensic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze USB partition metadata for anomalies. Third Party: AI-Based Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Store encoded C2 payloads within hidden partitions. Corporate Control: Secure USB Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor hidden partition activity on endpoint devices. Corporate Control: SIEM & USB Device Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect malware attempting to access hidden USB partitions. Third Party: Endpoint Protection & Behavioral Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify USB-based hidden partition threats. Third Party: Threat Intelligence & Malware Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Retrieve and parse hidden partition data for C2 commands. Corporate Control: Endpoint Security Policies & SIEM</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor USB-mounted hidden partition execution attempts. Corporate Control: Secure USB Logging & Endpoint Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect abnormal read operations on hidden partitions. Third Party: AI-Based Anomaly Detection & USB Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze hidden partition access logs for C2 activity. Third Party: Cyber Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish C2 channel using hidden USB partition. Corporate Control: SIEM & USB Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect persistent hidden partition-based malware. Corporate Control: Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify hidden USB partitions being leveraged for C2. Third Party: USB Forensics & Advanced Malware Research</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block hidden partition C2 communication pathways. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

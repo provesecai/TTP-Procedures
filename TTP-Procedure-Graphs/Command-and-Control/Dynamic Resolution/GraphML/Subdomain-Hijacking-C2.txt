@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Subdomain-Hijacking-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Orphaned Subdomain</data>
+</node>
+<node id="B">
+<data key="label">Claim and Configure Hijacked Subdomain</data>
+</node>
+<node id="C">
+<data key="label">Redirect C2 Traffic Through Hijacked Subdomain</data>
+</node>
+<node id="D">
+<data key="label">Maintain Persistent C2 Channel</data>
+</node>
+<node id="E">
+<data key="label">Achieve Covert Command and Control</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Identifies abandoned subdomains still linked to DNS Corporate Control: DNS Asset Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Registers expired or unclaimed subdomain Third Party Control: Domain Registrars</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Takes control over misconfigured CNAME entries Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disguises subdomain as part of a legitimate service Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Configures subdomain to point to C2 infrastructure Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implements HTTPS to blend in with legitimate services Corporate Control: TLS Interception and Decryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypts C2 traffic within normal web traffic Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Rotates hijacked subdomains to maintain persistence Corporate Control: Passive DNS Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Uses subdomain to route commands and responses Corporate Control: DNS Query Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evades domain filtering using a trusted subdomain Corporate Control: Network Intrusion Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintains control without needing to register new domains Corporate Control: Threat Hunting and Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoids immediate takedown due to legitimate association Corporate Control: SOC and DNS Security Operations</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures uninterrupted attacker communication Corporate Control: DNS Traffic Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Allows attacker to maintain undetected access Corporate Control: Advanced Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypasses traditional security controls Corporate Control: Intrusion Detection and Prevention Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Supports long-term C2 operations Corporate Control: Network Monitoring and Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

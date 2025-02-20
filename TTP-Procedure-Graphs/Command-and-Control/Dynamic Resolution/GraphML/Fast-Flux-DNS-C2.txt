@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fast-Flux-DNS-C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Register Malicious Domain with Fast-Flux</data>
+</node>
+<node id="B">
+<data key="label">Continuously Rotate C2 IP Addresses</data>
+</node>
+<node id="C">
+<data key="label">Distribute C2 Infrastructure Across Botnet</data>
+</node>
+<node id="D">
+<data key="label">Maintain Resilient and Untraceable C2</data>
+</node>
+<node id="E">
+<data key="label">Achieve Persistent Command and Control</data>
+</node>
+<!--  Edges with Conditions/Weaknesses  -->
+<edge source="A" target="B">
+<data key="label">Registers malicious domain using bulletproof hosting Third Party Control: Domain Registrars</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Associates multiple IPs with the same domain dynamically Corporate Control: DNS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilizes compromised nodes to host transient C2 servers Corporate Control: Network Intrusion Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evades domain takedown efforts using redundant servers Corporate Control: Threat Intelligence Feeds</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Implements botnet-based fast-flux architecture Third Party Control: ISP and CDN Infrastructure</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Rapidly rotates A and NS records to prevent blacklisting Corporate Control: DNS Firewall and RPZ</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Leverages P2P botnet nodes to sustain flux Corporate Control: SIEM and SOC Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypts DNS queries to evade signature detection Corporate Control: Deep Packet Inspection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Routes C2 traffic through ever-changing proxy nodes Corporate Control: Network Behavior Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Hides C2 origin by distributing nodes globally Third Party Control: Cloud Hosting Services</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Automates domain and IP rotation using scripts Corporate Control: Endpoint Monitoring Solutions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevents easy attribution to specific operators Corporate Control: Threat Intelligence Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintains uninterrupted C2 connection despite disruptions Corporate Control: DNS Sinkholing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensures continuous communication with infected hosts Corporate Control: Intrusion Prevention Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypasses domain takedowns through rapid regeneration Corporate Control: SOC and Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Sustains botnet-driven C2 infrastructure Corporate Control: Traffic Analysis and Anomaly Detection</data>
+</edge>
+</graph>
+</graphml>

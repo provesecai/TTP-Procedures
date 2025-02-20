@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Hijacking_Autorun_Features_on_USB_to_Trigger_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Modify Autorun.inf on USB to Execute C2 Payload</data>
+</node>
+<node id="B">
+<data key="label">Distribute Compromised USB to Target System</data>
+</node>
+<node id="C">
+<data key="label">Trigger Automatic Execution of C2 Payload</data>
+</node>
+<node id="D">
+<data key="label">Establish Communication with Remote C2 Server</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via USB Autorun Exploit</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Embed malicious commands in Autorun.inf file. Corporate Control: Endpoint Security & Group Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized modifications to Autorun.inf. Corporate Control: SIEM & USB Forensic Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect abnormal autorun activity on USB devices. Third Party: AI-Based Malware Analysis & Threat Research</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze autorun logs for suspicious execution triggers. Third Party: Cyber Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert infected USB into targeted host system. Corporate Control: USB Device Whitelisting & Endpoint Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor unauthorized USB insertions and autorun execution. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect auto-execution attempts linked to malicious USBs. Third Party: AI-Based USB Security & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze autorun interactions with system processes. Third Party: Digital Forensics & Behavioral Threat Hunting</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Trigger execution of embedded C2 payload from USB. Corporate Control: Endpoint Hardening & Execution Policy Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor C2 payload execution attempts from removable media. Corporate Control: SIEM & Endpoint Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect anomalous process execution linked to USB autorun. Third Party: AI-Based Malware Detection & SOC Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze execution logs to trace C2 behavior. Third Party: Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish persistent C2 using autorun USB exploit. Corporate Control: Endpoint Hardening & USB Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term autorun-based C2 persistence. Corporate Control: SIEM & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify malicious autorun modifications linked to C2. Third Party: AI-Based Threat Analysis & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Block autorun execution for untrusted removable media. Third Party: Global Cybersecurity Intelligence & Incident Response</data>
+</edge>
+</graph>
+</graphml>

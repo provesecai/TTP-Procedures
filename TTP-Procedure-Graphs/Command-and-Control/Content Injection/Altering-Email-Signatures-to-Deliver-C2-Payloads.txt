@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering_Email_Signatures_to_Deliver_C2_Payloads" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Corporate Email Accounts</data>
+</node>
+<node id="B">
+<data key="label">Modify Email Signatures to Contain C2 Beacon</data>
+</node>
+<node id="C">
+<data key="label">Compromised Email Signatures Delivered to Recipients</data>
+</node>
+<node id="D">
+<data key="label">Payload Executes and Connects to C2 Server</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Email Signature Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use stolen credentials to access email management. Corporate Control: Multi-Factor Authentication & Email Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized email account access. Corporate Control: SIEM & User Behavior Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in email activity logs. Third Party: AI-Powered Email Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate changes to email settings. Third Party: Threat Intelligence & Incident Response</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject hidden JavaScript payloads within email signatures. Corporate Control: Secure Email Gateway & Content Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor email templates for unauthorized modifications. Corporate Control: SIEM & Policy-Based Email Integrity Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect hidden scripts within email content. Third Party: AI-Based Email Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track signature changes via email metadata analysis. Third Party: Forensics & Email Security Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victims receive emails with compromised signatures. Corporate Control: Email Gateway Monitoring & Anti-Phishing Measures</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outbound email activity for anomalies. Corporate Control: SIEM & Advanced Threat Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify script execution within email clients. Third Party: Behavioral Analysis & Threat Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate email attachments and links for C2 payloads. Third Party: Digital Forensics & Email Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Persistently communicate with C2 through email signatures. Corporate Control: Advanced Endpoint Security & Data Loss Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor long-term email signature-based persistence. Corporate Control: SIEM & Incident Response Automation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Identify recurring use of malicious email signatures. Third Party: SOC & Global Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer email-based C2 mechanisms. Third Party: Digital Forensics & Malware Analysis</data>
+</edge>
+</graph>
+</graphml>

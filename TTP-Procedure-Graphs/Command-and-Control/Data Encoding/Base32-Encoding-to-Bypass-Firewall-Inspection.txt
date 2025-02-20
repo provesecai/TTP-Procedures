@@ -1,0 +1,48 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Base32_Encoding_to_Bypass_Firewall_Inspection" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Prepare Base32 Encoding for Command and Control</data>
+</node>
+<node id="B">
+<data key="label">Encode Malicious C2 Payloads Using Base32</data>
+</node>
+<node id="C">
+<data key="label">Inject Base32-Encoded Data into Network Packets</data>
+</node>
+<node id="D">
+<data key="label">Decode and Execute Base32-Encoded Payload on Target</data>
+</node>
+<node id="E">
+<data key="label">Establish Encrypted Base32 C2 Persistence</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use Base32 encoding to evade detection Corporate Control: SIEM Logging & Endpoint Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized Base32 encoding in scripts Corporate Control: Application Whitelisting & Execution Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect Base32 obfuscation via entropy-based analysis Third Party: Threat Intelligence Feeds & Sandboxing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed Base32-encoded payloads into standard communication channels Corporate Control: Secure Web Gateway & TLS Decryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Identify Base32 encoding in unexpected traffic patterns Third Party: IDS & Heuristic-Based Anomaly Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Decode payload and execute commands on infected host Corporate Control: Memory Integrity Checks & Process Execution Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Analyze repeated Base32 decoding attempts in logs Third Party: Digital Forensics & Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain encrypted, Base32-based C2 communication Corporate Control: Firewall Inspection & Behavioral Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term encoded C2 persistence Third Party: Advanced Threat Intelligence & Incident Response Teams</data>
+</edge>
+</graph>
+</graphml>

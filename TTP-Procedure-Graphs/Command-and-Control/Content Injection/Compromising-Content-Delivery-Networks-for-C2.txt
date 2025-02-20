@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Content_Delivery_Networks_for_C2" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Content Delivery Network (CDN) Infrastructure</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious Content into CDN-Hosted Assets</data>
+</node>
+<node id="C">
+<data key="label">Victim Requests CDN-Hosted Content, Receiving Injected Payload</data>
+</node>
+<node id="D">
+<data key="label">Payload Establishes C2 Communication via CDN</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Achieved via Compromised CDN</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit weak authentication to gain CDN access. Corporate Control: Identity and Access Management (IAM) Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor for unauthorized changes to CDN configurations. Corporate Control: SIEM & File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect unusual CDN activity. Third Party: Threat Intelligence & Global Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Track CDN access logs for anomalous uploads. Third Party: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed malicious scripts within frequently accessed CDN files. Corporate Control: Web Security Gateway & Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor CDN distribution for injected content anomalies. Corporate Control: Content Integrity Verification</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect behavioral anomalies in CDN traffic. Third Party: AI-Based Threat Intelligence & Network Behavior Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Analyze CDN metadata for unauthorized script inclusion. Third Party: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Victim loads compromised content, executing hidden scripts. Corporate Control: Endpoint Security & Browser Threat Mitigation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor outgoing web traffic for unauthorized scripts. Corporate Control: SIEM & Network Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Identify CDN-based C2 beaconing patterns. Third Party: Machine Learning-Based Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate CDN interactions using threat intelligence feeds. Third Party: Cyber Threat Analysis & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistence via CDN-based C2 communication. Corporate Control: Zero Trust Architecture & Data Loss Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Detect long-term CDN-based command channels. Corporate Control: SIEM & Network Intrusion Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor CDN telemetry for hidden command patterns. Third Party: Global Cyber Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer CDN-based C2 payloads. Third Party: Malware Analysis & Incident Response</data>
+</edge>
+</graph>
+</graphml>

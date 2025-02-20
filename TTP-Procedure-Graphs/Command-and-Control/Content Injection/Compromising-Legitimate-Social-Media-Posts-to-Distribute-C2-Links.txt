@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Compromising_Legitimate_Social_Media_Posts_to_Distribute_C2_Links" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Access to Corporate Social Media Accounts</data>
+</node>
+<node id="B">
+<data key="label">Inject Malicious URLs into Social Media Posts</data>
+</node>
+<node id="C">
+<data key="label">Victims Click on Compromised Social Media Links</data>
+</node>
+<node id="D">
+<data key="label">Malicious Links Redirect Users to C2 Server</data>
+</node>
+<node id="E">
+<data key="label">Command and Control Established via Social Media Content Injection</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Use stolen credentials to modify social media accounts. Corporate Control: Multi-Factor Authentication & Social Media Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Monitor unauthorized activity on corporate social media. Corporate Control: SIEM & Social Media Security Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Detect anomalies in social media account behavior. Third Party: AI-Powered Social Media Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Investigate changes to social media content metadata. Third Party: Cyber Threat Intelligence & Digital Forensics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Embed C2 URLs in social media posts. Corporate Control: Web Security Gateway & URL Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for unauthorized URL modifications. Corporate Control: Policy-Based Content Integrity Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Detect malicious link patterns in social media. Third Party: Machine Learning-Based Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Track domain reputation to identify attacker infrastructure. Third Party: Threat Intelligence & Cyber Research</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Users unknowingly interact with compromised social content. Corporate Control: Employee Security Awareness & Phishing Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor web traffic for social media-based anomalies. Corporate Control: SIEM & Web Traffic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Detect user redirections to attacker-controlled domains. Third Party: Global Threat Intelligence & SOC Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Investigate malware hidden behind URL shorteners. Third Party: Digital Forensics & Cyber Threat Research</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Establish long-term C2 through social media. Corporate Control: Data Loss Prevention & Zero Trust Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for persistent social media abuse campaigns. Corporate Control: SIEM & Automated Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Track global social media C2 operations. Third Party: Cyber Threat Intelligence & Digital Adversary Profiling</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Reverse engineer social media C2 infrastructure. Third Party: Malware Analysis & Incident Response</data>
+</edge>
+</graph>
+</graphml>
