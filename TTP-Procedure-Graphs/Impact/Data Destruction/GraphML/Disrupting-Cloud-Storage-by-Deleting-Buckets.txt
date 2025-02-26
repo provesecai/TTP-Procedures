@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disrupting-Cloud-Storage-by-Deleting-Buckets" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Cloud Storage Buckets</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Cloud Storage Management</data>
+</node>
+<node id="C">
+<data key="label">Delete Storage Buckets and Associated Files</data>
+</node>
+<node id="D">
+<data key="label">Ensure Data is Unrecoverable</data>
+</node>
+<node id="E">
+<data key="label">Cloud Data Permanently Destroyed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List available storage buckets - Corporate Control: Cloud Access Security Broker (CASB) & IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify business-critical storage locations - Third-Party Control: Cloud Storage Analytics & Data Classification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Map interdependencies between storage and applications - Corporate Control: Cloud Resource Dependency Tracking</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade cloud security monitoring - Third-Party Control: AI-Powered Threat Detection & Cloud Security Posture Management (CSPM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use API calls to delete cloud storage buckets - Corporate Control: Cloud Security Logging & API Access Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable storage redundancy and failover mechanisms - Third-Party Control: Multi-Cloud Data Protection & Backup Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Remove storage access permissions for recovery users - Corporate Control: Cloud Identity Governance & Role-Based Access Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify storage retention settings to allow deletion - Third-Party Control: Cloud Security Compliance & Automated Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Confirm bucket deletion propagates across all regions - Corporate Control: Cloud Data Replication & Synchronization Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invalidate storage versioning and rollback capabilities - Third-Party Control: Cloud Object Storage Configuration & Data Recovery Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify cloud monitoring logs to remove deletion traces - Corporate Control: Security Information and Event Management (SIEM) & Forensic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure deleted data is not backed up elsewhere - Third-Party Control: Cloud Backup Monitoring & Disaster Recovery Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm all storage assets remain permanently deleted - Corporate Control: Security Operations Center (SOC) Cloud Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure storage services cannot be reinstated - Third-Party Control: Automated Cloud Policy Enforcement & Access Revocation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic investigation of deleted cloud data - Corporate Control: Cloud Security Logging & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for attempts to restore deleted data - Third-Party Control: Advanced Threat Intelligence & Security Analytics</data>
+</edge>
+</graph>
+</graphml>

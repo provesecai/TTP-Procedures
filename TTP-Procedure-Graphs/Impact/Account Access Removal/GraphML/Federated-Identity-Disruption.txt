@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Federated-Identity-Disruption" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Federated User Accounts</data>
+</node>
+<node id="B">
+<data key="label">Modify or Revoke Federated Identity Credentials</data>
+</node>
+<node id="C">
+<data key="label">Ensure Propagation of Changes Across Services</data>
+</node>
+<node id="D">
+<data key="label">Prevent Identity Restoration</data>
+</node>
+<node id="E">
+<data key="label">Access Disrupted via Federated Identity Manipulation</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate federated identities linked to cloud services - Corporate Control: Identity & Access Management (IAM) Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify Single Sign-On (SSO) accounts for high-impact removal - Third-Party Control: Cloud Identity Provider (CSPM) Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access to federated identity settings - Corporate Control: Privileged Identity Management (PIM) & Role Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify security logs to hide changes - Third-Party Control: Security Information and Event Management (SIEM) & API Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Revoke federated identity authentication permissions - Corporate Control: Access Governance & Federated IAM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Remove linked authentication tokens and sessions - Third-Party Control: Cloud Authentication Service API Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Propagate identity removal across all connected applications - Corporate Control: Cloud Identity Federation & Directory Synchronization</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Monitor for authentication failures due to revocation - Third-Party Control: Anomaly Detection & Cloud Security Posture Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure removed identities cannot be restored - Corporate Control: IAM Policy Hardening & Role-Based Access Control (RBAC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Block federated identity recovery workflows - Third-Party Control: Automated Identity Lifecycle Governance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable emergency login mechanisms for federated accounts - Corporate Control: Privileged Access Security Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure federated access logs are modified to hide actions - Third-Party Control: Cloud Audit Log Integrity & AI-Based Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm federated identity revocation is permanent - Corporate Control: Security Operations Center (SOC) & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized access attempts post-revocation - Third-Party Control: Threat Intelligence & Continuous Authentication</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify historical logs to prevent detection - Corporate Control: Security Event Correlation & Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent new identity federation with deleted accounts - Third-Party Control: Identity Provider Enforcement & Zero Trust Policies</data>
+</edge>
+</graph>
+</graphml>

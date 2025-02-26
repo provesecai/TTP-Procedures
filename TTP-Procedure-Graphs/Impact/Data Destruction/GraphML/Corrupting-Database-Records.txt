@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Corrupting-Database-Records" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Databases</data>
+</node>
+<node id="B">
+<data key="label">Modify or Replace Critical Data</data>
+</node>
+<node id="C">
+<data key="label">Ensure Data Corruption is Widespread</data>
+</node>
+<node id="D">
+<data key="label">Prevent Data Restoration</data>
+</node>
+<node id="E">
+<data key="label">Database Integrity Compromised</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate databases with sensitive data - Corporate Control: Database Activity Monitoring (DAM) & Access Audits</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain write permissions for database tables - Third-Party Control: Cloud Database IAM & Privileged Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify transactional databases for maximum impact - Corporate Control: Data Governance & Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade database activity logging mechanisms - Third-Party Control: SIEM-Based Log Analysis & Threat Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify or delete essential records - Corporate Control: Role-Based Access Control (RBAC) & Data Validation Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject garbage data into relational database fields - Third-Party Control: Cloud SQL Injection Protection & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter time-sensitive financial or inventory records - Corporate Control: Data Validation Frameworks & Security Compliance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure database indexes are corrupted - Third-Party Control: Automated Database Integrity & Threat Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove or alter database transaction logs - Corporate Control: Database Backup Retention & Change Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disrupt replication across distributed databases - Third-Party Control: Cloud-Based Database Sync & Integrity Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify database permissions to prevent recovery - Corporate Control: Database Access Control & Privileged Session Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable automated database repair tools - Third-Party Control: Cloud SQL Recovery & Data Restoration Restrictions</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate corruption across all database instances - Corporate Control: Digital Forensics & Data Integrity Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure corrupted records remain undetected - Third-Party Control: Database Traffic Analysis & Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to obscure destruction timeline - Corporate Control: Security Operations Center (SOC) Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic investigation of corrupted records - Third-Party Control: Cloud Security Event Reconstruction & SIEM Policies</data>
+</edge>
+</graph>
+</graphml>

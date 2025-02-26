@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disabling-Administrative-Accounts" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active Administrative Accounts</data>
+</node>
+<node id="B">
+<data key="label">Disable Targeted Admin Accounts</data>
+</node>
+<node id="C">
+<data key="label">Ensure Account Disabling is Propagated</data>
+</node>
+<node id="D">
+<data key="label">Prevent Account Reactivation</data>
+</node>
+<node id="E">
+<data key="label">Administrative Access Removed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List all privileged administrator accounts - Corporate Control: IAM Logs & Role-Based Access Controls (RBAC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify accounts with access to security configurations - Third-Party Control: Cloud IAM Logs & Privileged Account Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access to disable administrative users - Corporate Control: Group Policy Management & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify logs to remove traces of account disablement - Third-Party Control: Security Information and Event Management (SIEM) Alerting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute command to disable administrator accounts - Corporate Control: Directory Services & Centralized Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable cloud-based administrative accounts - Third-Party Control: Cloud IAM & API Security Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure account changes propagate across federated systems - Corporate Control: Federated Identity Management & Single Sign-On (SSO)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Log out all active admin sessions - Third-Party Control: Remote Session Termination & Access Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent disabled accounts from being re-enabled - Corporate Control: Identity Governance Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Restrict role escalation attempts - Third-Party Control: Adaptive Access Controls & AI-Based Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove backup accounts with admin privileges - Corporate Control: Access Review & Compliance Audits</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure admin account disablement remains enforced - Third-Party Control: Cloud Governance & Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm admin access removal from all systems - Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure recovery methods are unavailable - Third-Party Control: Incident Response & Account Lockdown</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify audit logs to prevent reactivation tracking - Corporate Control: Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable additional authentication mechanisms - Third-Party Control: Cloud Privileged Access Management (PAM)</data>
+</edge>
+</graph>
+</graphml>

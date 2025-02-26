@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Encrypting-Data-Without-Recovery-Keys" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Data for Encryption</data>
+</node>
+<node id="B">
+<data key="label">Encrypt Files and Storage Devices</data>
+</node>
+<node id="C">
+<data key="label">Ensure No Decryption Keys Are Stored</data>
+</node>
+<node id="D">
+<data key="label">Prevent Data Restoration Attempts</data>
+</node>
+<node id="E">
+<data key="label">Data Permanently Unrecoverable</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate sensitive files and storage locations - Corporate Control: Data Loss Prevention (DLP) & File Access Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain necessary privileges for encryption - Third-Party Control: Cloud IAM & Privileged Access Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade endpoint detection systems - Third-Party Control: Endpoint Detection and Response (EDR) & Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure encryption covers all backups - Corporate Control: Backup Integrity & Encryption Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use strong encryption algorithms (AES-256) - Corporate Control: Security Policy Enforcement & Cryptographic Standards</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Destroy encryption keys after encryption - Third-Party Control: Cloud Key Management & Encryption Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify registry or cloud settings to enforce encryption - Corporate Control: Identity & Access Management Policy Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Propagate encryption across network drives - Third-Party Control: Cloud Storage Security & Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delete shadow copies and recovery partitions - Corporate Control: System Restore & Disaster Recovery Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure logs do not track encryption events - Third-Party Control: Security Information and Event Management (SIEM) Manipulation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable recovery options in operating systems - Corporate Control: Endpoint Security & OS Configuration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disrupt decryption attempts through key obfuscation - Third-Party Control: Cryptographic Key Management & Secure API Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm encrypted files remain unrecoverable - Corporate Control: Digital Forensics & Data Integrity Checks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure no key remnants remain for decryption - Third-Party Control: Automated Cryptographic Key Destruction</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent access to forensic recovery tools - Corporate Control: Secure Boot & System Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Invalidate backup authentication mechanisms - Third-Party Control: Zero Trust Security & Adaptive Access Controls</data>
+</edge>
+</graph>
+</graphml>

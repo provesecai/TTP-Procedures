@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Tampering-with-Group-Policies-for-Access-Revocation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Critical Group Policies</data>
+</node>
+<node id="B">
+<data key="label">Modify Policies to Revoke User Access</data>
+</node>
+<node id="C">
+<data key="label">Ensure Policy Changes Are Applied</data>
+</node>
+<node id="D">
+<data key="label">Block Policy Restoration Attempts</data>
+</node>
+<node id="E">
+<data key="label">User Access Revoked via Group Policy</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate security policies affecting user access - Corporate Control: Group Policy Management Console (GPMC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify policies affecting remote access - Third-Party Control: Cloud Identity Governance & Compliance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain privileges to modify Group Policies - Corporate Control: Active Directory (AD) Audit Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify logs to obscure changes - Third-Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable user authentication settings in GPO - Corporate Control: Role-Based Access Control (RBAC) & IAM Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Restrict access to shared network resources - Third-Party Control: Cloud Resource Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy new policies across distributed environments - Corporate Control: Group Policy Object (GPO) Replication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify remote desktop access policies - Third-Party Control: Cloud Policy Automation & Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Block administrator access to policy settings - Corporate Control: IT Admin Role Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure affected users cannot undo changes - Third-Party Control: Endpoint Privilege Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Apply settings to cloud policy configurations - Corporate Control: Cloud Identity Security Frameworks</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor logs for attempted rollbacks - Third-Party Control: Cloud Security Posture Management (CSPM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate that group policy changes remain effective - Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure access revocation persists across all sessions - Third-Party Control: Automated Cloud Compliance Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to hide administrative changes - Corporate Control: Digital Forensics & SIEM Integrity Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Enforce policy lockout for high-value targets - Third-Party Control: Adaptive Access Control Mechanisms</data>
+</edge>
+</graph>
+</graphml>

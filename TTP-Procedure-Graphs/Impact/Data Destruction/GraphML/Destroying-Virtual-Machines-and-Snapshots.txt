@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Destroying-Virtual-Machines-and-Snapshots" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target VMs and Snapshots</data>
+</node>
+<node id="B">
+<data key="label">Corrupt or Delete VM Disk Images</data>
+</node>
+<node id="C">
+<data key="label">Remove Snapshots and Backups</data>
+</node>
+<node id="D">
+<data key="label">Disable Recovery Features</data>
+</node>
+<node id="E">
+<data key="label">Virtual Machines Unrecoverable</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate active VM instances - Corporate Control: Cloud VM Inventory & Role-Based Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify VM storage locations - Third-Party Control: Cloud Security Posture Management (CSPM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain elevated privileges for VM destruction - Corporate Control: Privileged Identity Management (PIM) Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade logging mechanisms to hide deletions - Third-Party Control: Cloud Security Event Monitoring & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Delete VM disk images and attached storage - Corporate Control: Cloud IAM & Virtualized Storage Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Overwrite VM data blocks to prevent reconstruction - Third-Party Control: Secure File Deletion & Cloud Disk Encryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure VM snapshots are corrupted or removed - Corporate Control: Backup & Disaster Recovery Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify cloud VM metadata to disable auto-recovery - Third-Party Control: Cloud Automation Security & Policy Compliance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove access to VM recovery images - Corporate Control: Security Policy Hardening & Federated Identity Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify auto-recovery configurations to prevent rollback - Third-Party Control: Cloud Identity & API Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure all VM disk backups are erased - Corporate Control: Cloud Storage Retention Policies & Compliance Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Tamper with hypervisor logs to hide deletions - Third-Party Control: SIEM Forensic Analysis & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm all virtual machines remain irrecoverable - Corporate Control: Security Operations Center (SOC) Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection of VM destruction events - Third-Party Control: Cloud Anomaly Detection & Threat Hunting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure no forensic reconstruction is possible - Corporate Control: Incident Response & Forensic Data Scrubbing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Invalidate alternative access paths to VM storage - Third-Party Control: Cloud Compliance & Automated Security Enforcement</data>
+</edge>
+</graph>
+</graphml>

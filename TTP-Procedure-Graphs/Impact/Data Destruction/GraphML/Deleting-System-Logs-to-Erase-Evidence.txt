@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Deleting-System-Logs-to-Erase-Evidence" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Log Files for Deletion</data>
+</node>
+<node id="B">
+<data key="label">Delete System and Security Logs</data>
+</node>
+<node id="C">
+<data key="label">Ensure Log Deletion is Permanent</data>
+</node>
+<node id="D">
+<data key="label">Prevent Log Recovery and Re-Creation</data>
+</node>
+<node id="E">
+<data key="label">Integrity of System Logs Compromised</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate system event logs and security logs - Corporate Control: Security Information and Event Management (SIEM) Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify logs with forensic value - Corporate Control: Endpoint Detection and Response (EDR) Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary permissions to delete or modify logs - Third-Party Control: Cloud IAM & Role-Based Access Control (RBAC)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade logging protections and integrity checks - Third-Party Control: Cloud Log Tamper Detection & Alerting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Delete system logs via command-line tools or scripts - Corporate Control: Endpoint Logging Policy & System Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Purge cloud-based log records from centralized repositories - Third-Party Control: Cloud Log Retention Policies & Compliance Auditing</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify audit policies to disable future log generation - Corporate Control: Group Policy Object (GPO) & Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Bypass immutable log storage protections - Third-Party Control: Cloud Security Posture Management (CSPM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Overwrite deleted log file sectors to prevent recovery - Corporate Control: Secure File Deletion & Data Wiping Tools</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Block log forwarding to external monitoring systems - Third-Party Control: Cloud Security Gateway & SIEM Integration</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure deleted logs are not recoverable by forensic tools - Corporate Control: Data Integrity Protection & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry keys and system settings to disable logging - Third-Party Control: Cloud Configuration & Compliance Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm logs cannot be retrieved from any backup - Corporate Control: Backup and Disaster Recovery Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure real-time logging mechanisms remain disabled - Third-Party Control: API Security & Continuous Monitoring Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify forensic timestamps to conceal log tampering - Corporate Control: Time Synchronization & System Integrity Checks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent re-enablement of security logs via policy modifications - Third-Party Control: Cloud Identity Governance & Policy Enforcement</data>
+</edge>
+</graph>
+</graphml>

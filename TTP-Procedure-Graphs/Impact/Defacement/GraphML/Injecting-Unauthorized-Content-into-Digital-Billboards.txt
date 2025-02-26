@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Injecting-Unauthorized-Content-into-Digital-Billboards" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Digital Billboard Infrastructure</data>
+</node>
+<node id="B">
+<data key="label">Gain Control of Digital Signage Management System</data>
+</node>
+<node id="C">
+<data key="label">Modify Displayed Content</data>
+</node>
+<node id="D">
+<data key="label">Ensure Unauthorized Content Persists</data>
+</node>
+<node id="E">
+<data key="label">Public Billboard Displays Unauthorized Message</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate digital signage controllers and software - Corporate Control: Asset Management & Infrastructure Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify cloud-based signage management platforms - Third-Party Control: Cloud Digital Signage Security & Access Control</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access to digital signage control systems - Corporate Control: Identity & Access Management (IAM) & Role-Based Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security measures preventing unauthorized content - Third-Party Control: Cloud SIEM & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace scheduled advertisements with unauthorized content - Corporate Control: Digital Billboard Scheduling & Content Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify firmware to force unauthorized content display - Third-Party Control: Secure Firmware Update & Endpoint Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure real-time signage updates propagate changes - Corporate Control: Content Management System (CMS) Logging</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable automated rollback of unauthorized modifications - Third-Party Control: Cloud Digital Signage Security & Threat Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Lock content settings to prevent reversion - Corporate Control: Secure Display Configuration & Access Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure unauthorized content propagates to all digital screens - Third-Party Control: CDN & Cloud-Based Digital Display Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging mechanisms to hide content changes - Corporate Control: Digital Forensics & Audit Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent administrators from restoring original content - Third-Party Control: Cloud Access Governance & Compliance Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm unauthorized content is displayed on all billboards - Corporate Control: SOC Monitoring & Digital Asset Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure security alerts do not trigger intervention - Third-Party Control: AI-Based Threat Intelligence & Risk Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent backup restoration of signage settings - Corporate Control: Backup Integrity & Disaster Recovery Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for removal attempts and block administrative actions - Third-Party Control: Security Event Monitoring & Threat Mitigation</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="PowerShell-Command-Loop-for-DoS" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target System</data>
+</node>
+<node id="B">
+<data key="label">Deploy Recursive PowerShell Command</data>
+</node>
+<node id="C">
+<data key="label">Trigger Continuous Resource Consumption</data>
+</node>
+<node id="D">
+<data key="label">Prevent Execution Interruption</data>
+</node>
+<node id="E">
+<data key="label">System Becomes Unresponsive</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Determine PowerShell execution policies - Corporate Control: IT Asset Management & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify user privilege levels for PowerShell execution - Third-Party Control: Cloud-Based Identity & Access Management (IAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary execution rights - Corporate Control: Privileged Access Management (PAM) & Security Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass PowerShell script monitoring - Third-Party Control: AI-Based Script Detection & Execution Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy infinite loop script consuming CPU cycles - Corporate Control: OS Process Execution & Performance Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script runs indefinitely without termination - Third-Party Control: Cloud-Based Endpoint Threat Detection & Execution Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate script execution to evade detection - Corporate Control: Security Information and Event Management (SIEM) & Log Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify execution settings to run at high priority - Third-Party Control: AI-Based Behavioral Analysis & Process Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable administrator access to stop script execution - Corporate Control: Incident Response & Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent termination via Task Manager or CLI - Third-Party Control: Cloud-Based Endpoint Protection & Process Locking</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure high CPU consumption persists after restarts - Corporate Control: Secure Configuration Management & OS Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify security logs to hide PowerShell execution traces - Third-Party Control: AI-Driven Threat Intelligence & Compliance Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm CPU and memory overload - Corporate Control: IT Support & Performance Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure script remains persistent across reboots - Third-Party Control: Cloud-Based Security Policy Enforcement & Incident Response</data>
+</edge>
+</graph>
+</graphml>

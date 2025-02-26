@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Defacing-External-Public-Websites" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Public Website</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Website Content Management System</data>
+</node>
+<node id="C">
+<data key="label">Modify Website Content</data>
+</node>
+<node id="D">
+<data key="label">Deploy Unauthorized Changes</data>
+</node>
+<node id="E">
+<data key="label">External Website Defaced</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Locate external web servers and cloud hosting - Corporate Control: Web Asset Management & Security Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify website frameworks and content management systems - Third-Party Control: Cloud Web Application Security & Threat Intelligence</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access to CMS through admin credentials or exploits - Corporate Control: Web Application Security & IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade cloud-based security monitoring - Third-Party Control: Cloud WAF & API Threat Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter web page content and inject malicious scripts - Corporate Control: Web Content Integrity & Change Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify website themes, headers, and images - Third-Party Control: Content Delivery Network (CDN) & Data Caching Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy malware through website modifications - Corporate Control: Endpoint Threat Detection & Browser Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure modifications persist across website updates - Third-Party Control: Website Versioning & Automated Compliance Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Publish changes and push updates across all web pages - Corporate Control: Web Hosting Security & Content Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure cached versions of old pages are removed - Third-Party Control: Cloud CDN Caching Policies & Content Filtering</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify metadata and page redirects to prevent reversal - Corporate Control: Web Domain Security & DNS Configuration Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evade rollback attempts by altering database records - Third-Party Control: Web Database Security & Audit Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate website defacement is live - Corporate Control: SOC Monitoring & Digital Forensics Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure rollback mechanisms are disrupted - Third-Party Control: Cloud Web Compliance & Automated Threat Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify website logs to obscure unauthorized changes - Corporate Control: SIEM Log Analysis & Web Application Security</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure website remains defaced across all backups - Third-Party Control: Cloud Backup Policy Management & Recovery Monitoring</data>
+</edge>
+</graph>
+</graphml>

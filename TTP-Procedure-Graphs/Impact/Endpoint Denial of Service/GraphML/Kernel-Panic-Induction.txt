@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Kernel-Panic-Induction" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Kernel Vulnerabilities</data>
+</node>
+<node id="B">
+<data key="label">Deploy Exploit to Trigger Kernel Panic</data>
+</node>
+<node id="C">
+<data key="label">Force Kernel Into Unrecoverable State</data>
+</node>
+<node id="D">
+<data key="label">Prevent System Recovery</data>
+</node>
+<node id="E">
+<data key="label">System Crashes with Kernel Panic</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan target system for kernel weaknesses - Corporate Control: OS Security & Kernel Integrity Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify unpatched kernel vulnerabilities - Third-Party Control: Cloud-Based Vulnerability Scanning & Patch Compliance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain execution privileges for exploit deployment - Corporate Control: Privileged Access Management (PAM) & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass runtime protections for kernel execution - Third-Party Control: AI-Based Exploit Detection & Security Event Correlation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy specially crafted packets or code execution - Corporate Control: OS Hardening & Secure Boot Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Force abnormal conditions causing memory corruption - Third-Party Control: Cloud Security Posture Management (CSPM) & Memory Integrity Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure kernel operations exceed safe execution limits - Corporate Control: Secure Configuration Management & Security Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system exceptions to prevent graceful failure - Third-Party Control: Cloud-Based Threat Monitoring & Behavioral Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable recovery tools that detect system corruption - Corporate Control: Incident Response & Kernel Debugging Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify boot configurations to prevent system startup - Third-Party Control: Secure Boot Protection & Cloud-Based System Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure system crashes before administrator intervention - Corporate Control: Security Operations Center (SOC) & Incident Resolution</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent emergency recovery mode activation - Third-Party Control: AI-Based Automated Incident Response & OS Protection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm complete kernel panic crash - Corporate Control: IT Help Desk & Security Event Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistence across reboot attempts - Third-Party Control: Cloud-Based Kernel Monitoring & Endpoint Threat Intelligence</data>
+</edge>
+</graph>
+</graphml>

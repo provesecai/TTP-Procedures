@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Application-Level-Flooding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Application</data>
+</node>
+<node id="B">
+<data key="label">Generate High-Volume Requests</data>
+</node>
+<node id="C">
+<data key="label">Overload Application Processing Queues</data>
+</node>
+<node id="D">
+<data key="label">Sustain Continuous Request Overload</data>
+</node>
+<node id="E">
+<data key="label">Application Becomes Unresponsive</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify web or enterprise applications vulnerable to flooding - Corporate Control: IT Asset Inventory & Application Security Testing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate API endpoints handling application requests - Third-Party Control: Cloud API Security & Gateway Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze application response to high loads - Corporate Control: Performance Testing & Load Balancing Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade monitoring tools detecting high request volumes - Third-Party Control: AI-Based Security Analytics & Web Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Send automated high-frequency application requests - Corporate Control: Web Application Firewall (WAF) & Traffic Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use distributed clients to amplify request traffic - Third-Party Control: Cloud DDoS Protection & Traffic Inspection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure application request handling is fully occupied - Corporate Control: Application Logging & Performance Metrics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate traffic source to bypass IP rate limiting - Third-Party Control: Cloud-Based Network Traffic Analysis & Risk Assessment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain flooding attack until resource exhaustion - Corporate Control: Incident Response & Security Operations Center (SOC)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent application scaling mechanisms from mitigating attack - Third-Party Control: Cloud Auto-Scaling & Application Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to prevent tracking of excessive requests - Corporate Control: Security Information and Event Management (SIEM) & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure prolonged load to maintain unavailability - Third-Party Control: AI-Driven Threat Hunting & Network Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm application slowdown or unresponsiveness - Corporate Control: IT Support & System Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure attack remains effective against recovery attempts - Third-Party Control: Incident Response Automation & Cloud Security Hardening</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify application logs to obscure request anomalies - Corporate Control: Digital Forensics & Compliance Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent backup restoration from mitigating attack - Third-Party Control: Cloud Backup Security & Data Integrity Protection</data>
+</edge>
+</graph>
+</graphml>

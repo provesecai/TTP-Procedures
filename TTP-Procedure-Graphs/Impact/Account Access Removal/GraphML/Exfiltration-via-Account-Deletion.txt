@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Exfiltration-via-Account-Deletion" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Accounts for Deletion</data>
+</node>
+<node id="B">
+<data key="label">Execute Account Deletion</data>
+</node>
+<node id="C">
+<data key="label">Confirm and Propagate Changes</data>
+</node>
+<node id="D">
+<data key="label">Prevent Account Recovery</data>
+</node>
+<node id="E">
+<data key="label">Disruption of Access via Account Deletion</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate active users with elevated privileges - Corporate Control: Active Directory Audit Logs & Identity Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical system accounts for deletion - Third-Party Control: Cloud Access Security Broker (CASB) & User Behavior Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use stolen admin credentials to delete accounts - Corporate Control: Privileged Access Management (PAM) Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify logs to mask account deletion attempts - Third-Party Control: Security Information and Event Management (SIEM) Alerting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute deletion commands via PowerShell or AD tools - Corporate Control: Endpoint Logging & System Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Remove linked accounts and email access - Third-Party Control: Cloud Email Access Logs & MFA Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure deletion propagates across all connected systems - Corporate Control: IAM Federation & Single Sign-On (SSO) Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify API calls to delete accounts via cloud IAM - Third-Party Control: Cloud Provider Security API Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Eliminate account recovery options (password resets) - Corporate Control: Identity Verification & Support Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove backup admin accounts for redundancy - Third-Party Control: Cloud Privileged Identity Management (PIM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify access logs to remove deletion traces - Corporate Control: Log Integrity Verification & Forensics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Force directory replication to finalize deletion - Third-Party Control: Cloud Directory Synchronization & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate permanent account deletion with no recovery - Corporate Control: IAM Policy Review & User Behavior Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure access removal is irreversible - Third-Party Control: Federated Identity Lockout & Credential Expiry Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Trigger automated alerts to hide malicious intent - Corporate Control: SOC Alert Triage & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable remaining user sessions for full impact - Third-Party Control: Endpoint Detection and Response (EDR) & Remote Session Management</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify group policies to prevent restoration - Corporate Control: Group Policy Object (GPO) Auditing & Role-Based Access Control</data>
+</edge>
+</graph>
+</graphml>

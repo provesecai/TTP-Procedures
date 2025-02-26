@@ -1,0 +1,75 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Unauthorized-Fund-Transfer" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Access Compromised Financial Accounts</data>
+</node>
+<node id="B">
+<data key="label">Initiate Unauthorized Fund Transfer</data>
+</node>
+<node id="C">
+<data key="label">Alter Transaction Logs</data>
+</node>
+<node id="D">
+<data key="label">Disable Security Notifications</data>
+</node>
+<node id="E">
+<data key="label">Funds Diverted to Attacker-Controlled Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Utilize stolen credentials to access accounts - Corporate Control: Identity and Access Management (IAM) & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass multi-factor authentication - Third-Party Control: Authentication Services & Cloud Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit session hijacking vulnerabilities - Corporate Control: Secure Session Management & Fraud Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prevent alerting financial institutions - Third-Party Control: Transaction Monitoring & Security Event Logging</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate access logs to prevent tracking - Corporate Control: Secure Logging & Audit Systems</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute fund transfers to external accounts - Corporate Control: Financial Transaction Systems & Payment Gateway Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Avoid triggering fraud detection algorithms - Third-Party Control: AI-Based Fraud Detection & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify transaction metadata to mimic legitimate transfers - Corporate Control: Banking System Access & Data Integrity Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use multiple small transfers to avoid suspicion - Third-Party Control: Anti-Money Laundering (AML) Compliance & Risk Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify banking logs to remove traces of unauthorized transfers - Corporate Control: Secure Log Management & Forensic Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Alter financial record timestamps to blend with regular activity - Third-Party Control: Cloud-Based Audit Logs & Compliance Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable alerts tied to suspicious transactions - Corporate Control: Fraud Prevention Systems & Transaction Alerts</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress notifications to the account owner - Third-Party Control: Cloud Email Security & Notification Filters</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful fund diversion - Corporate Control: Banking Transaction Validation & SOC Oversight</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure fraudulent transactions remain undetected - Third-Party Control: AI-Driven Transaction Monitoring & Cyber Risk Assessment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure account reconciliation does not detect discrepancies - Corporate Control: Reconciliation & Fraud Investigation Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent financial institution rollback of transactions - Third-Party Control: Banking Policy Compliance & Regulatory Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure ongoing access for future fraudulent transactions - Corporate Control: Insider Threat Monitoring & Privileged Account Management</data>
+</edge>
+</graph>
+</graphml>

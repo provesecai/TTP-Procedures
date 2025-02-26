@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Defacing-Internal-Intranet-Portals" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Intranet Portal</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Content Management System</data>
+</node>
+<node id="C">
+<data key="label">Modify Intranet Content</data>
+</node>
+<node id="D">
+<data key="label">Ensure Unauthorized Content Persists</data>
+</node>
+<node id="E">
+<data key="label">Intranet Portal Displays Defaced Content</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify intranet portal software and configurations - Corporate Control: IT Asset Management & Internal Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Determine access controls for intranet content modification - Third-Party Control: Cloud Content Security & IAM Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain administrative privileges for CMS access - Corporate Control: Role-Based Access Control (RBAC) & Identity Governance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security policies restricting unauthorized modifications - Third-Party Control: AI-Based Cloud Security & Access Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Replace internal announcements with unauthorized messages - Corporate Control: Content Management Policy & Workflow Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify user dashboards with misleading content - Third-Party Control: Web Application Security & UI Modification Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject unauthorized images, links, and pop-ups - Corporate Control: Endpoint Security & Secure Application Development</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure changes persist across portal refreshes - Third-Party Control: Cloud Backup Security & Versioning Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent rollback of intranet content to previous versions - Corporate Control: Change Management & Secure File Storage</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure unauthorized modifications sync across all intranet users - Third-Party Control: Cloud-Based Content Synchronization & CDN Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logging to hide content changes - Corporate Control: Security Information and Event Management (SIEM) Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable administrative tools that could restore original content - Third-Party Control: Cloud IAM & Web Application Firewall Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm unauthorized content is live across the intranet - Corporate Control: Security Operations Center (SOC) & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance policies do not detect intranet defacement - Third-Party Control: AI-Based Threat Detection & Compliance Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify forensic logs to obscure defacement history - Corporate Control: Digital Forensics & Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent future intranet portal content recovery - Third-Party Control: Cloud Backup Policy & Retention Enforcement</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Session-Hijacking-and-Forced-Logout" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Active User Sessions</data>
+</node>
+<node id="B">
+<data key="label">Hijack or Terminate Sessions</data>
+</node>
+<node id="C">
+<data key="label">Invalidate Authentication Tokens</data>
+</node>
+<node id="D">
+<data key="label">Prevent Re-login Attempts</data>
+</node>
+<node id="E">
+<data key="label">User Sessions Disrupted</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Monitor active logins and sessions - Corporate Control: Endpoint Monitoring & SIEM Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify long-lived sessions in cloud environments - Third-Party Control: Cloud Identity Provider Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Access authentication tokens to hijack sessions - Corporate Control: Privileged Session Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify session logs to evade detection - Third-Party Control: Security Analytics & User Behavior Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Terminate active user sessions - Corporate Control: IAM Session Expiry & Access Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Force logout of all connected user devices - Third-Party Control: Mobile Device Management (MDM) Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Invalidate persistent authentication cookies - Corporate Control: Web Access Control & Token Expiry Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure sessions cannot be restored - Third-Party Control: Cloud Security Posture Management (CSPM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Revoke all authentication tokens and credentials - Corporate Control: Identity Lifecycle Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify password reset workflows to prevent recovery - Third-Party Control: Cloud Account Recovery Restrictions</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Enforce stricter login attempts to prevent re-entry - Corporate Control: Adaptive Access Control & IAM Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure all terminated sessions are logged - Third-Party Control: Threat Intelligence & Automated Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm users remain locked out - Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure session expiry logs are deleted - Third-Party Control: Digital Forensics & Log Integrity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent automated re-authentication - Corporate Control: API Access Restrictions & Token Revocation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Restrict network-level access for affected users - Third-Party Control: Zero Trust Network Access (ZTNA) Enforcement</data>
+</edge>
+</graph>
+</graphml>

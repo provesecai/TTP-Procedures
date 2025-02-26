@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="POS-Fraud" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to POS System</data>
+</node>
+<node id="B">
+<data key="label">Manipulate Transaction Authorization</data>
+</node>
+<node id="C">
+<data key="label">Initiate Fraudulent Purchases</data>
+</node>
+<node id="D">
+<data key="label">Bypass Payment Processing Verification</data>
+</node>
+<node id="E">
+<data key="label">Unauthorized Transactions Approved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit remote access vulnerabilities in POS systems - Corporate Control: Endpoint Security & POS Software Patching</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass POS authentication mechanisms - Third-Party Control: Cloud-Based POS Security & Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Inject malicious scripts into payment processing - Corporate Control: Secure POS Configuration & Firmware Integrity Checks</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify stored transaction data - Third-Party Control: Cloud POS Data Integrity & AI-Based Fraud Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Authorize high-value fraudulent transactions - Corporate Control: Payment Approval Workflow & Real-Time Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adjust tax and fee calculations to avoid detection - Third-Party Control: Cloud-Based Transaction Anomaly Detection & Risk Scoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure purchases appear as legitimate transactions - Corporate Control: Secure POS Logging & Financial Audits</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Suppress system alerts related to unusual transactions - Third-Party Control: AI-Driven Behavioral Risk Analysis & Automated Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use cloned or synthetic credit card details - Corporate Control: Payment Processing Security & Cardholder Data Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure stolen card data remains active for multiple transactions - Third-Party Control: Cloud-Based Fraud Monitoring & Chargeback Prevention</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit POS offline transaction capabilities - Corporate Control: Payment Gateway Policies & Risk-Based Authentication</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable alert mechanisms tied to transaction verification - Third-Party Control: Cloud-Based Fraud Prevention & AI-Based Transaction Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure approval of fraudulent transactions - Corporate Control: Financial System Oversight & Banking Compliance Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection by transaction monitoring teams - Third-Party Control: AI-Driven Chargeback Analysis & Transaction Risk Scoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover fraud traces by blending with legitimate transactions - Corporate Control: Secure Merchant Payment Systems & POS Data Encryption</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Manipulate POS logs to ensure continued access - Third-Party Control: Cloud-Based Retail Security & Transaction Log Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Enable repeatable fraud attempts on compromised POS devices - Corporate Control: POS Endpoint Monitoring & Retail Security Teams</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fork-Bomb-Attack" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Operating System</data>
+</node>
+<node id="B">
+<data key="label">Execute Fork Bomb Script</data>
+</node>
+<node id="C">
+<data key="label">Overload CPU and Memory Resources</data>
+</node>
+<node id="D">
+<data key="label">Prevent System from Terminating Processes</data>
+</node>
+<node id="E">
+<data key="label">System Becomes Unresponsive</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Determine OS version and process handling limitations - Corporate Control: IT Asset Management & OS Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify systems lacking resource limitation controls - Third-Party Control: Cloud-Based OS Hardening & Policy Compliance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary execution privileges to launch fork bomb - Corporate Control: Privileged Access Management (PAM) & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade security monitoring detecting fork bomb execution - Third-Party Control: AI-Based Endpoint Threat Detection & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy recursive process creation loop - Corporate Control: OS Hardening & Execution Policy Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure maximum process spawning rate to exhaust resources - Third-Party Control: Cloud-Based Process Monitoring & System Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify system process limits to allow unrestricted forks - Corporate Control: Security Policy Enforcement & OS Configuration</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate attack scripts to evade process monitoring tools - Third-Party Control: Cloud-Based Behavioral Analysis & Threat Intelligence</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system recovery by overwhelming resource allocation - Corporate Control: Incident Response & Threat Mitigation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable administrative tools to prevent termination of processes - Third-Party Control: Cloud Endpoint Security & Compliance Lockdown</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to hide excessive process creation alerts - Corporate Control: Digital Forensics & Security Information Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure system remains in a high-load state indefinitely - Third-Party Control: AI-Based Security Analytics & Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm system slowdown or unresponsiveness - Corporate Control: IT Support & SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure fork bomb remains undetected in system logs - Third-Party Control: Cloud-Based Threat Intelligence & Log Management</data>
+</edge>
+</graph>
+</graphml>

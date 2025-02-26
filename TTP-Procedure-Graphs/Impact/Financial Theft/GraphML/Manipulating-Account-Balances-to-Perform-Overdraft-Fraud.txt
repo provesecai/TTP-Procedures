@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Overdraft-Fraud" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Banking System</data>
+</node>
+<node id="B">
+<data key="label">Modify Account Balance in Banking Database</data>
+</node>
+<node id="C">
+<data key="label">Initiate Overdraft Withdrawals</data>
+</node>
+<node id="D">
+<data key="label">Evade Fraud Detection Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Withdraw Funds Beyond Legitimate Balance</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Bypass banking authentication controls - Corporate Control: Identity & Access Management (IAM) and Privileged Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit API vulnerabilities in online banking - Third-Party Control: Cloud API Security & Threat Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilize compromised admin credentials - Corporate Control: Endpoint Security & Insider Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify banking session variables - Third-Party Control: Cloud-Based Financial Fraud Monitoring & Behavioral Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Prevent unauthorized access alerts from triggering - Corporate Control: Secure Logging & Audit Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Increase account balance artificially - Corporate Control: Database Access Control & Secure Configuration Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure overdraft approvals remain hidden - Third-Party Control: AI-Based Banking Transaction Analysis & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify transaction timestamps to align with legitimate activity - Corporate Control: Secure Banking Ledger & Transaction Validation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit delay in reconciliation processes - Third-Party Control: Automated Banking Compliance & Risk Assessment</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Manipulate back-end banking logs to remove evidence - Corporate Control: Secure Data Retention & Tamper Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Withdraw funds before balance correction occurs - Corporate Control: Real-Time Banking Monitoring & SOC Oversight</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure overdraft requests blend with normal user behavior - Third-Party Control: Cloud-Based Behavioral Risk Analysis & Machine Learning Fraud Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify alerts to prevent transaction notifications - Corporate Control: Financial Fraud Prevention & Secure Event Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Route withdrawals through multiple transactions to evade scrutiny - Third-Party Control: AML (Anti-Money Laundering) Compliance Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful overdraft fraud - Corporate Control: Banking Oversight & Forensic Accounting Investigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure fraudulent withdrawals remain unnoticed - Third-Party Control: Cloud-Based Real-Time Financial Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent banking transaction rollback - Corporate Control: Secure Banking Transaction Processing & Reversal Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure ongoing unauthorized overdrafts remain possible - Third-Party Control: Risk-Based Authentication & Behavioral AI</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obscure fraudulent transactions among high-volume legitimate banking traffic - Corporate Control: SIEM and Fraud Detection Systems</data>
+</edge>
+</graph>
+</graphml>

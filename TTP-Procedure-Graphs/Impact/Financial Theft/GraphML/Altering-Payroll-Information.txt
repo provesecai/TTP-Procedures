@@ -1,0 +1,66 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering-Payroll-Information" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Payroll System</data>
+</node>
+<node id="B">
+<data key="label">Modify Employee Bank Details</data>
+</node>
+<node id="C">
+<data key="label">Manipulate Payroll Processing Schedule</data>
+</node>
+<node id="D">
+<data key="label">Disable Payroll Change Notifications</data>
+</node>
+<node id="E">
+<data key="label">Salaries Redirected to Attacker-Controlled Account</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Bypass payroll authentication - Corporate Control: Identity and Access Management (IAM) & Multi-Factor Authentication (MFA)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit unsecured payroll database - Third-Party Control: Cloud-Based Payroll Systems & Database Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Utilize stolen HR credentials - Corporate Control: Endpoint Protection & Privileged Access Management (PAM)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Avoid detection by payroll fraud monitoring - Third-Party Control: Payroll Anomaly Detection & AI-Based Fraud Analysis</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify payroll logs to mask access - Corporate Control: Secure System Logging & Compliance Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify employee account details - Corporate Control: Financial System Data Integrity & Audit Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure altered records match payroll approvals - Third-Party Control: AI-Based Payroll Fraud Detection & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use social engineering to confirm changes - Corporate Control: Security Awareness & Employee Training Programs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prevent HR personnel from detecting alterations - Third-Party Control: Payroll Integrity Scanners & Audit Reports</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Adjust payroll schedule for immediate processing - Corporate Control: Financial Transaction Oversight & Change Control Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress audit logs to prevent discovery - Third-Party Control: Cloud-Based Finance Policy Enforcement & Access Logs</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove manual approvals from payroll processing - Corporate Control: HR Security Policies & Process Automation Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate fraudulent payments among regular transactions - Third-Party Control: AI-Based Payment Fraud Analysis & Risk Assessment</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful salary redirection - Corporate Control: Finance Department Oversight & SOC Investigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure fraudulent activity remains undetected - Third-Party Control: Banking Fraud Prevention & AML (Anti-Money Laundering) Compliance</data>
+</edge>
+</graph>
+</graphml>

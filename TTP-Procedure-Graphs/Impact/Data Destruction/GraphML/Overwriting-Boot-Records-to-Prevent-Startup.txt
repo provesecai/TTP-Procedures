@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Overwriting-Boot-Records-to-Prevent-Startup" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Boot Sectors</data>
+</node>
+<node id="B">
+<data key="label">Overwrite or Corrupt Boot Records</data>
+</node>
+<node id="C">
+<data key="label">Ensure Changes Persist Across Reboots</data>
+</node>
+<node id="D">
+<data key="label">Prevent Boot Record Recovery</data>
+</node>
+<node id="E">
+<data key="label">System Fails to Boot</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate boot records for target systems - Corporate Control: Secure Boot & BIOS Configuration Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain permissions to modify boot records - Third-Party Control: Endpoint Security & Privileged Access Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify critical startup sequences for maximum impact - Corporate Control: OS Security Policies & Firmware Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security measures preventing boot record tampering - Third-Party Control: Secure Boot Enforcement & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Overwrite boot sectors with random data - Corporate Control: System Hardening & Secure Storage Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify Master Boot Record (MBR) or GUID Partition Table (GPT) - Third-Party Control: SIEM & OS Forensic Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure boot loader configurations are disrupted - Corporate Control: OS Configuration & Security Policy Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Tamper with system firmware and UEFI settings - Third-Party Control: BIOS/UEFI Security & Hardware-Level Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable access to boot recovery tools - Corporate Control: OS Security Lockdown & Access Control Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify startup sequences to ensure failures persist - Third-Party Control: Cloud System Image Integrity & Secure Boot Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Corrupt backup boot partitions - Corporate Control: Enterprise OS Security Policies & Compliance Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent remote reinstallation of boot records - Third-Party Control: Cloud Device Management & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm boot failures on all affected systems - Corporate Control: SOC Incident Response & Disaster Recovery</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure no alternative boot methods are available - Third-Party Control: Secure Boot Enforcement & Cloud-Based Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to prevent detection of tampering - Corporate Control: SIEM Event Integrity & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized attempts to restore boot records - Third-Party Control: Endpoint Security & Remote Recovery Restrictions</data>
+</edge>
+</graph>
+</graphml>

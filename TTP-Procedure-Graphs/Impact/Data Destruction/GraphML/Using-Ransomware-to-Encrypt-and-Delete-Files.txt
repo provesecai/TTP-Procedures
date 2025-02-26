@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Using-Ransomware-to-Encrypt-and-Delete-Files" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Files for Encryption</data>
+</node>
+<node id="B">
+<data key="label">Encrypt Files with Strong Algorithms</data>
+</node>
+<node id="C">
+<data key="label">Delete Unencrypted Versions</data>
+</node>
+<node id="D">
+<data key="label">Prevent Recovery Attempts</data>
+</node>
+<node id="E">
+<data key="label">Data Unavailable Unless Ransom Paid</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for valuable files across system and network drives - Corporate Control: Data Classification & Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify backup and archived files - Third-Party Control: Cloud Storage Access Monitoring & Backup Policy Enforcement</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary privileges for encryption - Corporate Control: Privileged Access Management (PAM) & IAM Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade security monitoring for file modifications - Third-Party Control: Endpoint Detection and Response (EDR) & SIEM Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Encrypt files using AES-256 or RSA encryption - Corporate Control: File Encryption Policies & Cryptographic Security Standards</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure encryption propagates across all storage locations - Third-Party Control: Cloud Storage Monitoring & Data Loss Prevention</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify file headers to prevent manual recovery - Corporate Control: Security Policy Hardening & Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Destroy original decryption keys after encryption - Third-Party Control: Key Management Systems & Encryption Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Wipe system restore points to prevent rollback - Corporate Control: Backup Integrity Policies & OS Recovery Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delete shadow copies and other recovery files - Third-Party Control: Cloud Backup Monitoring & Forensic Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry settings to disable recovery tools - Corporate Control: OS Hardening & Security Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure ransom note delivery for extortion - Third-Party Control: Email Security & Content Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure all encrypted files remain inaccessible - Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent key reconstruction attempts - Third-Party Control: AI-Powered Threat Detection & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized decryption attempts - Corporate Control: SIEM Alerting & Real-Time Security Analytics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Invalidate all alternate access routes - Third-Party Control: Network Segmentation & Adaptive Security Policies</data>
+</edge>
+</graph>
+</graphml>

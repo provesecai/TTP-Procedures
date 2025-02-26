@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering-Login-Banners-with-Unauthorized-Messages" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Login Banner Configuration</data>
+</node>
+<node id="B">
+<data key="label">Modify System Banner Settings</data>
+</node>
+<node id="C">
+<data key="label">Ensure Unauthorized Banner Persists</data>
+</node>
+<node id="D">
+<data key="label">Prevent Admin or User Reversal</data>
+</node>
+<node id="E">
+<data key="label">Unauthorized Login Banner Displayed</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Locate system policy files controlling login banners - Corporate Control: Endpoint Security Configuration Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify login scripts and banner files - Corporate Control: OS Configuration & Group Policy Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain necessary permissions to modify banners - Third-Party Control: Privileged Access Management (PAM) & Identity Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security monitoring for unauthorized banner edits - Third-Party Control: SIEM Policy Violation Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify login banner files to display unauthorized content - Corporate Control: Operating System File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Update authentication scripts with altered messages - Third-Party Control: Cloud IAM Security & Compliance Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure banner propagates across all authentication points - Corporate Control: Federated Identity Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable rollback of banner settings - Third-Party Control: Cloud Configuration Monitoring & Compliance Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent login policy updates from reverting changes - Corporate Control: OS Security Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable administrative tools for modifying banners - Third-Party Control: Zero Trust Endpoint Security & Role Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry or configuration settings to lock banners - Corporate Control: Endpoint Hardening & Configuration Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Monitor for policy enforcement attempts - Third-Party Control: Threat Intelligence & SIEM Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate unauthorized banner appears across all endpoints - Corporate Control: SOC Incident Response & Security Compliance Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure authentication logs do not trigger alerts - Third-Party Control: Cloud SIEM & Compliance Policy Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify audit logs to obscure banner changes - Corporate Control: Digital Forensics & Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure banner settings persist after updates - Third-Party Control: Cloud Security Posture Management (CSPM)</data>
+</edge>
+</graph>
+</graphml>

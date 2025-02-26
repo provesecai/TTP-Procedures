@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-System-Error-Messages" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Error Messages</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to System Configuration Files</data>
+</node>
+<node id="C">
+<data key="label">Modify Error Message Content</data>
+</node>
+<node id="D">
+<data key="label">Ensure Changes Persist</data>
+</node>
+<node id="E">
+<data key="label">System Displays Modified Error Messages</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate system logs and error message templates - Corporate Control: Endpoint Monitoring & OS Security Configuration</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify application-specific error messages - Third-Party Control: Cloud Application Monitoring & Logging Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain necessary permissions to modify error messages - Corporate Control: Role-Based Access Control (RBAC) & Identity Governance</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass logging mechanisms to prevent detection - Third-Party Control: SIEM & Log Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Edit system error message files - Corporate Control: Secure OS Configuration & System Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject misleading text into critical error messages - Third-Party Control: Application Security & Configuration Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify application responses to generate fake alerts - Corporate Control: Secure Coding Practices & API Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure error modifications apply across system components - Third-Party Control: Cloud System Policy Enforcement & Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent system administrators from restoring default messages - Corporate Control: Change Management & Security Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure modified error messages persist across reboots - Third-Party Control: Cloud Security Posture Management (CSPM) & Configuration Lockdown</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obscure forensic logging of error message alterations - Corporate Control: Digital Forensics & Security Event Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure users cannot override altered messages - Third-Party Control: Endpoint Security Policy & User Privilege Restriction</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm modified error messages appear in logs - Corporate Control: SOC Incident Response & Security Compliance Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent security tools from flagging altered messages - Third-Party Control: AI-Based Threat Intelligence & Compliance Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify system logs to obscure unauthorized changes - Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure error message modifications persist indefinitely - Third-Party Control: Cloud Backup & Configuration Policy Locking</data>
+</edge>
+</graph>
+</graphml>

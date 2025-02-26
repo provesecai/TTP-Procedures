@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Stock-Trading-Manipulation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Trading Platform</data>
+</node>
+<node id="B">
+<data key="label">Manipulate Market Orders and Pricing</data>
+</node>
+<node id="C">
+<data key="label">Execute Unauthorized Trades</data>
+</node>
+<node id="D">
+<data key="label">Bypass Fraud Detection Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Cause Financial Loss or Gain</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit API vulnerabilities in trading platforms - Corporate Control: Secure API Management & Access Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compromise trading account credentials - Third-Party Control: Online Brokerage Identity & Authentication Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify market order parameters to influence pricing - Corporate Control: Trading System Risk Controls & Order Validation</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit real-time price update delays - Third-Party Control: High-Frequency Trading (HFT) Compliance & Market Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject fraudulent trades into order books - Corporate Control: Secure Trading Ledger & Market Integrity Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Trigger flash crashes using rapid transactions - Third-Party Control: AI-Based Trading Risk Monitoring & Fraud Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use algorithmic trading bots for manipulation - Corporate Control: Secure Trade Execution Systems & AI Trading Policy Compliance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit trading volume thresholds to force sell-offs - Third-Party Control: Market Exchange Fraud Prevention & Trade Surveillance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Mask unauthorized trades within legitimate transactions - Corporate Control: Trade Surveillance & Transaction Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify trade timestamps to align with market fluctuations - Third-Party Control: AI-Based Behavioral Trade Analytics & Risk Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit latency between order execution and validation - Corporate Control: Secure Financial Ledger & Market Compliance Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress regulatory alerts tied to abnormal trading patterns - Third-Party Control: Cloud-Based Trade Compliance & Regulatory Reporting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure successful manipulation of stock pricing - Corporate Control: Financial Oversight & Risk Assessment Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent trade reversals by market regulators - Third-Party Control: Market Regulatory Compliance & AI-Based Trade Risk Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Manipulate market perception for continued financial gain - Corporate Control: Secure Trading System Policies & Order Processing Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure persistent access to compromised trading platforms - Third-Party Control: Cyber Threat Intelligence & Insider Risk Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover fraudulent transactions within high-frequency trading activity - Corporate Control: SIEM & Market Fraud Detection Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="SYN-Flood-on-Endpoint" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Endpoint</data>
+</node>
+<node id="B">
+<data key="label">Initiate SYN Flood Attack</data>
+</node>
+<node id="C">
+<data key="label">Exhaust Available Connection Slots</data>
+</node>
+<node id="D">
+<data key="label">Prevent System from Handling New Requests</data>
+</node>
+<node id="E">
+<data key="label">Endpoint Becomes Unresponsive</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Identify endpoint's open ports and services - Corporate Control: Network Scanning & Firewall Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze connection rate limits for SYN handling - Third-Party Control: Cloud-Based Traffic Inspection & Network Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access to a high-bandwidth attack source - Corporate Control: Enterprise Network Traffic Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Evade Intrusion Detection System (IDS) triggers - Third-Party Control: AI-Based Intrusion Prevention & Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy automated scripts to send excessive SYN requests - Corporate Control: Endpoint Security & Network Firewall Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use botnet traffic to amplify SYN request volume - Third-Party Control: Cloud DDoS Protection & Traffic Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure SYN packets consume all available session slots - Corporate Control: Network Load Balancing & Session Rate Limiting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify attack patterns to bypass connection tracking - Third-Party Control: Behavioral Traffic Analysis & SIEM Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Sustain SYN flood at maximum capacity - Corporate Control: Security Operations Center (SOC) & Traffic Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable connection reset mechanisms - Third-Party Control: AI-Based Threat Mitigation & Network Security Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify network logs to obscure excessive SYN traffic - Corporate Control: Log Management & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure firewall configurations do not mitigate attack - Third-Party Control: Cloud-Based Firewall & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm endpoint inability to process new connections - Corporate Control: IT Support & Incident Resolution</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure SYN flood is not detected or mitigated - Third-Party Control: Cloud-Based Intrusion Prevention & Attack Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify forensic logs to obscure SYN flood attempts - Corporate Control: Digital Forensics & Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent recovery by adjusting attack intensity - Third-Party Control: AI-Based Traffic Pattern Analysis & Threat Correlation</data>
+</edge>
+</graph>
+</graphml>

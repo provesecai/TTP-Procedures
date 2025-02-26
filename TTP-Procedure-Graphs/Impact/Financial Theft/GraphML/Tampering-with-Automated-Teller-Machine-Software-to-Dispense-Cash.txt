@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="ATM-Cash-Out" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to ATM Software</data>
+</node>
+<node id="B">
+<data key="label">Deploy ATM Malware or Exploit Software Vulnerabilities</data>
+</node>
+<node id="C">
+<data key="label">Override Withdrawal Limits</data>
+</node>
+<node id="D">
+<data key="label">Suppress ATM Security Alerts</data>
+</node>
+<node id="E">
+<data key="label">Dispense Large Amounts of Cash to Attacker</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit ATM network vulnerabilities - Corporate Control: Secure ATM Network Configuration & Firewall Protection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass physical security controls - Third-Party Control: ATM Vendor Security Policies & Tamper Detection Systems</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Compromise ATM service administrator credentials - Corporate Control: Privileged Access Management & Identity Verification</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Insert fraudulent ATM firmware updates - Third-Party Control: ATM Manufacturer Firmware Integrity Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject malicious commands to modify cash withdrawal limits - Corporate Control: Secure Transaction Processing & Banking Compliance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Evade anomaly detection by replicating normal transaction behavior - Third-Party Control: AI-Based Fraud Detection & Behavioral Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify ATM withdrawal logs to conceal unauthorized cash outs - Corporate Control: Secure ATM Transaction Logs & Security Event Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prevent ATM reconciliation from detecting inconsistencies - Third-Party Control: Banking Audit and Reconciliation Systems</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable alert notifications to bank fraud teams - Corporate Control: Secure Banking Event Logs & Fraud Detection Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure transactions blend with normal user behavior - Third-Party Control: Cloud-Based ATM Monitoring & Machine Learning Risk Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent real-time ATM network monitoring from flagging anomalies - Corporate Control: SIEM & Endpoint Security for ATM Infrastructure</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress ATM camera recording to avoid forensic analysis - Third-Party Control: Physical Security & Surveillance System Tamper Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm successful ATM cash withdrawal fraud - Corporate Control: Banking Oversight & Financial Risk Teams</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure repeated ATM fraud attempts remain undetected - Third-Party Control: ATM Security and Banking Network Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent forensic teams from tracing fraud back to attacker - Corporate Control: Digital Forensics and Banking Fraud Investigation</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Bypass ATM daily withdrawal limits for ongoing fraud - Third-Party Control: Automated Banking Compliance & Risk-Based Transaction Limits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Cover transaction trails to avoid investigation - Corporate Control: Banking Compliance & Risk Assessment Teams</data>
+</edge>
+</graph>
+</graphml>

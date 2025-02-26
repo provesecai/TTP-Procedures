@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Malicious-Script-Execution-for-CPU-Overload" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target System</data>
+</node>
+<node id="B">
+<data key="label">Deploy Malicious CPU-Intensive Script</data>
+</node>
+<node id="C">
+<data key="label">Maximize CPU Utilization</data>
+</node>
+<node id="D">
+<data key="label">Prevent User Intervention</data>
+</node>
+<node id="E">
+<data key="label">System Becomes Unresponsive</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Analyze system architecture and CPU limits - Corporate Control: IT Asset Management & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify execution policies for scripts - Third-Party Control: Cloud Execution Policy & Threat Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain execution privileges for high-impact scripts - Corporate Control: Identity & Access Management (IAM) & Privileged Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass endpoint monitoring detecting high CPU usage - Third-Party Control: AI-Based Anomaly Detection & Security Analytics</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute an infinite loop to overload CPU - Corporate Control: OS Process Security & Execution Policy Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure script runs at highest priority - Third-Party Control: Cloud-Based CPU Monitoring & Process Isolation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify task scheduling to prioritize attack script - Corporate Control: System Performance Monitoring & Resource Allocation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure CPU overload persists across system reboots - Third-Party Control: AI-Based Process Persistence Detection & Cloud Security Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable administrator tools for process termination - Corporate Control: Endpoint Hardening & Privilege Restriction Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obfuscate running processes to evade detection - Third-Party Control: Behavioral Threat Detection & SIEM Correlation</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system logs to hide CPU spikes - Corporate Control: Digital Forensics & Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure OS task manager cannot terminate processes - Third-Party Control: Cloud-Based Endpoint Control & Security Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm system slowdown or complete freeze - Corporate Control: IT Help Desk & SOC Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent detection and automatic mitigation - Third-Party Control: AI-Based Threat Prevention & Auto-Healing Systems</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Overwriting-Files-with-Random-Data" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Files for Overwriting</data>
+</node>
+<node id="B">
+<data key="label">Overwrite Files with Random Data</data>
+</node>
+<node id="C">
+<data key="label">Ensure Overwritten Data is Irrecoverable</data>
+</node>
+<node id="D">
+<data key="label">Prevent Data Recovery Attempts</data>
+</node>
+<node id="E">
+<data key="label">Data Integrity Compromised</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Scan for critical files in system directories - Corporate Control: File Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify sensitive data files - Third-Party Control: Data Loss Prevention (DLP) Solutions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Enumerate file types based on extensions - Corporate Control: Endpoint Detection and Response (EDR)</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate file metadata to evade detection - Third-Party Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use random byte patterns to overwrite files - Corporate Control: Security Hardening & Data Protection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Repeat overwrite cycles multiple times - Third-Party Control: Cloud File Security & Redundancy Checks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Target user files and application data - Corporate Control: Application Security & Privilege Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use automation to overwrite files in bulk - Third-Party Control: Cloud API Security & Data Control Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delete file system index entries - Corporate Control: Endpoint Security & System Hardening</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Overwrite allocated and unallocated disk space - Third-Party Control: Cloud Storage Management & Data Governance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure system restore points are corrupted - Corporate Control: Backup and Recovery Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable file recovery tools - Third-Party Control: Cloud Security & Ransomware Protection Services</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Validate destruction of overwritten files - Corporate Control: Digital Forensics & SIEM Alerting</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm no valid file copies remain - Third-Party Control: Automated Cloud Compliance & Auditing</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to prevent recovery attempts - Corporate Control: Log Scrubbing & Security Event Tampering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent affected systems from rolling back changes - Third-Party Control: Cloud Incident Response & Recovery Monitoring</data>
+</edge>
+</graph>
+</graphml>

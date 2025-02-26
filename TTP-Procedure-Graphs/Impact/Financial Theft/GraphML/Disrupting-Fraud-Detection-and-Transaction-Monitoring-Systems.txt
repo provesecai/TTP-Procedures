@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fraud-Detection-Disruption" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Fraud Detection Systems</data>
+</node>
+<node id="B">
+<data key="label">Disable or Manipulate Fraud Detection Algorithms</data>
+</node>
+<node id="C">
+<data key="label">Ensure Anomalous Transactions Appear Normal</data>
+</node>
+<node id="D">
+<data key="label">Suppress Fraud Alerts and Regulatory Reports</data>
+</node>
+<node id="E">
+<data key="label">Maintain Uninterrupted Fraudulent Activity</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit security flaws in fraud detection software - Corporate Control: Secure Software Patching & Vulnerability Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use insider access to modify fraud detection thresholds - Third-Party Control: Insider Threat Monitoring & Behavioral Analytics</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Tamper with rule-based fraud detection mechanisms - Corporate Control: Secure AI Fraud Models & Real-Time Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Disable fraud detection logs to erase traces of manipulation - Third-Party Control: Cloud-Based Security Logging & AI-Driven Threat Intelligence</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adjust transaction monitoring parameters to ignore theft - Corporate Control: Secure Banking SIEM & Transaction Risk Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject noise into fraud detection models to degrade accuracy - Third-Party Control: AI-Based Fraud Analysis & Adaptive Risk Scoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify user behavior baselines to normalize fraudulent transactions - Corporate Control: Secure Data Analytics & Banking Transaction Oversight</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Exploit machine learning model weaknesses in fraud detection - Third-Party Control: AI Fraud Model Security & Algorithmic Monitoring</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure fraud alerts are suppressed at system level - Corporate Control: Secure SOC & Fraud Investigation Teams</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Tamper with regulatory reports to avoid detection - Third-Party Control: Banking Compliance & AI-Based Risk Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify fraud monitoring dashboards to conceal anomalies - Corporate Control: Banking Threat Intelligence & Real-Time Security Analytics</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Exploit system delays to execute fraud before detection - Third-Party Control: AI-Powered Transaction Risk Detection & Banking SIEM</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure fraudulent transactions remain undetected - Corporate Control: SIEM & Risk-Based Transaction Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain persistent access to fraud monitoring controls - Third-Party Control: Cloud-Based Security Compliance & AI-Based Risk Analysis</data>
+</edge>
+</graph>
+</graphml>

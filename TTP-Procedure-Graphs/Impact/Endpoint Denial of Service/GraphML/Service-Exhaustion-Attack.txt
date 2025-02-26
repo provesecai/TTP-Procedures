@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Service-Exhaustion-Attack" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Service</data>
+</node>
+<node id="B">
+<data key="label">Generate High-Volume Service Requests</data>
+</node>
+<node id="C">
+<data key="label">Overload Service Threads and Queues</data>
+</node>
+<node id="D">
+<data key="label">Sustain Request Flooding</data>
+</node>
+<node id="E">
+<data key="label">Service Becomes Unavailable</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate available service endpoints - Corporate Control: IT Asset Management & Network Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Analyze request handling capabilities - Third-Party Control: Cloud Service Load Testing & Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify authentication and rate limiting controls - Corporate Control: API Security & Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass anomaly detection mechanisms - Third-Party Control: AI-Based Security Event Monitoring & SIEM</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy automated scripts to flood service - Corporate Control: Endpoint Protection & Rate Limiting Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use distributed bots to amplify request volume - Third-Party Control: Cloud DDoS Protection & Rate Control</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure requests bypass standard rate limits - Corporate Control: Web Application Firewall (WAF) Rules</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Obfuscate attack source through anonymized traffic - Third-Party Control: Cloud Traffic Analysis & Behavioral Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Maintain continuous high request volume - Corporate Control: Security Operations Center (SOC) Incident Response</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent logging of request spikes - Third-Party Control: SIEM & Log Tampering Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify service configurations to prevent auto-recovery - Corporate Control: Secure Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Avoid detection by randomizing request patterns - Third-Party Control: AI-Based Anomaly Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm service disruption or crash - Corporate Control: IT Support & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure rate-limiting policies do not mitigate attack - Third-Party Control: Cloud API Security & Advanced Threat Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Obscure service logs to hide DoS attempts - Corporate Control: Log Management & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent auto-scaling recovery of service - Third-Party Control: Cloud Infrastructure Monitoring & DDoS Mitigation</data>
+</edge>
+</graph>
+</graphml>

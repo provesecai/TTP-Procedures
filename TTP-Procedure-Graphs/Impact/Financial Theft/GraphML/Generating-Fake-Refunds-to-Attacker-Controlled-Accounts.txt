@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Fake-Refunds" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Refund System</data>
+</node>
+<node id="B">
+<data key="label">Manipulate Refund Approval Processes</data>
+</node>
+<node id="C">
+<data key="label">Generate High-Value Fake Refund Transactions</data>
+</node>
+<node id="D">
+<data key="label">Bypass Fraud Detection Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Funds Transferred to Attacker-Controlled Accounts</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit admin credentials to access refund systems - Corporate Control: Identity & Access Management (IAM) & Privileged Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass refund request approval policies - Third-Party Control: Cloud-Based Financial Fraud Monitoring & AI-Based Risk Assessment</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify refund system logs to hide unauthorized access - Corporate Control: Secure Logging & Audit Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obfuscate refund request origins - Third-Party Control: Payment Gateway Security & Behavioral Anomaly Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Adjust refund validation criteria - Corporate Control: Secure Payment Processing & Refund Approval Mechanisms</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure fraudulent refund requests match past trends - Third-Party Control: AI-Based Transaction Analysis & Risk-Based Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute refunds across multiple accounts - Corporate Control: Secure Account Validation & Transfer Reconciliation</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Trigger refunds outside standard business hours - Third-Party Control: Cloud-Based Fraud Detection & Behavioral Risk Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure transactions pass refund verification checks - Corporate Control: Secure Transaction Auditing & Payment Gateway Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify transaction timestamps to evade risk profiling - Third-Party Control: AI-Powered Fraud Prevention & Pattern Recognition</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Use synthetic identities to validate refund claims - Corporate Control: Identity Fraud Prevention & Secure Refund Processing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress notifications to fraud prevention teams - Third-Party Control: Automated Risk Scoring & Cloud Compliance Systems</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure successful transfer of fraudulent refunds - Corporate Control: Secure Financial Reconciliation & Banking Oversight</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent rollback or dispute of fraudulent transactions - Third-Party Control: Banking Fraud Compliance & AML (Anti-Money Laundering) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure funds reach attacker-controlled financial entities - Corporate Control: Payment Gateway Risk Monitoring & Account Verification</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Manipulate chargeback mechanisms to cover fraud traces - Third-Party Control: AI-Based Chargeback Analytics & Fraud Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Maintain continued access to refund systems for future fraud - Corporate Control: Insider Threat Monitoring & IT Security Policies</data>
+</edge>
+</graph>
+</graphml>

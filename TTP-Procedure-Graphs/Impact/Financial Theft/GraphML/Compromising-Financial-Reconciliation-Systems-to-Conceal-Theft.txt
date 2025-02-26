@@ -1,0 +1,72 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Financial-Reconciliation-Tampering" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Gain Unauthorized Access to Financial Reconciliation Systems</data>
+</node>
+<node id="B">
+<data key="label">Modify Transaction Logs and Financial Records</data>
+</node>
+<node id="C">
+<data key="label">Manipulate Account Balances to Mask Theft</data>
+</node>
+<node id="D">
+<data key="label">Bypass Internal Audit Mechanisms</data>
+</node>
+<node id="E">
+<data key="label">Ensure Fraudulent Transactions Remain Undetected</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Exploit weak authentication in financial systems - Corporate Control: Privileged Access Management (PAM) & Secure Authentication</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Use insider credentials to bypass access restrictions - Third-Party Control: Behavioral Analytics & Insider Threat Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify reconciliation timestamps to evade fraud checks - Corporate Control: Secure Logging & Database Integrity Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Exploit cloud-based reconciliation software vulnerabilities - Third-Party Control: Cloud Financial System Security & Data Encryption</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter transaction metadata to hide anomalies - Corporate Control: Transaction Verification & Secure Banking Logs</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure fraudulent transactions match normal spending patterns - Third-Party Control: AI-Based Financial Fraud Analysis & Risk Scoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable alerts triggered by unusual balance adjustments - Corporate Control: Secure SIEM & Real-Time Financial Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Distribute fraudulent funds across multiple accounts - Third-Party Control: Banking AML (Anti-Money Laundering) Compliance & Transaction Risk Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Suppress audit trails of unauthorized transactions - Corporate Control: Financial Auditing Systems & Fraud Response Teams</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify financial reports to match tampered records - Third-Party Control: Cloud-Based Financial Compliance & Automated Risk Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure fraudulent transactions bypass regulatory oversight - Corporate Control: Regulatory Compliance Audits & Financial Risk Assessment</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Manipulate AI-based transaction monitoring to ignore theft - Third-Party Control: Banking Threat Intelligence & AI-Powered Fraud Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm fraudulent transactions remain hidden in financial systems - Corporate Control: SIEM & Risk-Based Compliance Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent external audits from uncovering fraudulent activity - Third-Party Control: Cloud-Based Audit Logging & AI-Based Financial Threat Detection</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify bank reconciliation statements to reflect false balances - Corporate Control: Secure Banking Ledger & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure ongoing theft without triggering fraud alerts - Third-Party Control: AI-Based AML & Financial Threat Intelligence Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Conceal financial irregularities within high-volume transactions - Corporate Control: Financial Risk Assessment & Regulatory Compliance</data>
+</edge>
+</graph>
+</graphml>

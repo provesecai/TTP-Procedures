@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Internal-Website-Content" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Internal Website</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Website Content Management System</data>
+</node>
+<node id="C">
+<data key="label">Modify Website Content</data>
+</node>
+<node id="D">
+<data key="label">Deploy Unauthorized Changes</data>
+</node>
+<node id="E">
+<data key="label">Internal Website Defaced</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate internal web servers hosting key applications - Corporate Control: Network Architecture and Asset Management</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify web applications lacking integrity monitoring - Third-Party Control: Web Application Security & Change Detection</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain access credentials for content management - Corporate Control: Identity and Access Management (IAM) & Role-Based Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass web security monitoring - Third-Party Control: Cloud WAF & Anomaly Detection Services</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter website templates and published content - Corporate Control: Content Management System (CMS) Access Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject unauthorized HTML, JavaScript, or images - Third-Party Control: Web Code Integrity & Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure modifications persist through CMS updates - Corporate Control: Website Versioning & File Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Deploy scripts to automate content alteration - Third-Party Control: Cloud Web Automation & API Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Publish modified website content - Corporate Control: Web Content Governance & Publishing Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure rapid propagation of changes across all mirrors - Third-Party Control: Content Delivery Network (CDN) Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify database records for dynamic content - Corporate Control: Database Security & Access Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Evade content rollback mechanisms - Third-Party Control: Backup & Disaster Recovery Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Verify defacement is live and persistent - Corporate Control: Security Operations Center (SOC) Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure logs do not flag unauthorized changes - Third-Party Control: SIEM & Cloud Web Activity Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify historical logs to obscure evidence - Corporate Control: Digital Forensics & Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure web application firewalls do not revert changes - Third-Party Control: Cloud WAF & AI-Based Web Security</data>
+</edge>
+</graph>
+</graphml>

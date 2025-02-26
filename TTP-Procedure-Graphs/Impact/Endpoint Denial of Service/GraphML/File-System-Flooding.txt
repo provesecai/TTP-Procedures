@@ -1,0 +1,63 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="File-System-Flooding" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target File System</data>
+</node>
+<node id="B">
+<data key="label">Generate Mass File Creation</data>
+</node>
+<node id="C">
+<data key="label">Consume Available Disk Space</data>
+</node>
+<node id="D">
+<data key="label">Ensure Files Persist to Prevent Recovery</data>
+</node>
+<node id="E">
+<data key="label">System Storage Becomes Unusable</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Determine storage quotas and disk limits - Corporate Control: IT Asset Management & Disk Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify file creation permissions - Third-Party Control: Cloud-Based Storage Access Control & Security Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary execution privileges - Corporate Control: Identity Access Management (IAM) & Endpoint Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass file system monitoring for rapid file creation - Third-Party Control: AI-Based Anomaly Detection & Cloud Security</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute script to create endless files - Corporate Control: OS Security & File System Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use varying file sizes to maximize storage consumption - Third-Party Control: Cloud-Based File Integrity Monitoring & Storage Analysis</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure files are created faster than system cleanup - Corporate Control: Endpoint Security & Process Rate Limiting</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Prevent auto-deletion of unnecessary files - Third-Party Control: Cloud Compliance & Backup Integrity Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system policies to prevent file cleanup - Corporate Control: Secure Configuration Management & Security Policy Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure files remain persistent across system reboots - Third-Party Control: Cloud File Retention Policies & Backup Control</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify logs to hide excessive file creation - Corporate Control: SIEM & Digital Forensics Analysis</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent endpoint security solutions from deleting files - Third-Party Control: AI-Based Security Automation & Threat Prevention</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm storage is fully consumed and system unusable - Corporate Control: IT Help Desk & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure recovery options remain disabled - Third-Party Control: Cloud Security Policy Enforcement & Incident Prevention</data>
+</edge>
+</graph>
+</graphml>

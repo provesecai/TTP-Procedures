@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Formatting-Storage-Drives" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Drives for Formatting</data>
+</node>
+<node id="B">
+<data key="label">Wipe Disk Partitions and File Systems</data>
+</node>
+<node id="C">
+<data key="label">Ensure Formatting is Irreversible</data>
+</node>
+<node id="D">
+<data key="label">Prevent Drive Recovery Attempts</data>
+</node>
+<node id="E">
+<data key="label">Complete Data Destruction Achieved</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List all available storage devices - Corporate Control: Disk Encryption & Storage Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges for drive modification - Third-Party Control: Privileged Access Management (PAM) & Identity Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Ensure persistence by modifying boot configurations - Corporate Control: BIOS & Firmware Integrity Protections</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Target cloud storage volumes and virtual disks - Third-Party Control: Cloud Storage Management & Data Retention Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Execute full disk formatting commands - Corporate Control: Secure Erase & Data Sanitization Standards</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Overwrite file allocation tables (FAT) and master boot records (MBR) - Third-Party Control: Endpoint Forensics & Data Integrity Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Use multiple overwrites to ensure no data remains - Corporate Control: Enterprise Secure Deletion Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable journaling to prevent data reconstruction - Third-Party Control: Cloud File System Security & Data Protection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Delete system recovery points and backups - Corporate Control: Backup Management & Disaster Recovery Enforcement</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disrupt logging mechanisms to avoid detection - Third-Party Control: SIEM Integrity Protection & Audit Logging</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify disk headers to prevent forensic recovery - Corporate Control: Endpoint Security & Disk Protection Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure data erasure policies persist after reboot - Third-Party Control: Cloud Compliance & Data Protection Frameworks</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm drive formatting is irreversible - Corporate Control: Digital Forensics & Data Security Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Invalidate secondary authentication for recovery - Third-Party Control: Adaptive Security & Zero Trust Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for attempts to restore deleted volumes - Corporate Control: Security Operations Center (SOC) Threat Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure deleted data cannot be reconstructed - Third-Party Control: AI-Based Data Recovery Prevention</data>
+</edge>
+</graph>
+</graphml>

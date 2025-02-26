@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Multi-Factor-Authentication-Revocation" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Accounts with MFA Enabled</data>
+</node>
+<node id="B">
+<data key="label">Revoke MFA for Target Accounts</data>
+</node>
+<node id="C">
+<data key="label">Invalidate Authentication Tokens</data>
+</node>
+<node id="D">
+<data key="label">Block MFA Reconfiguration Attempts</data>
+</node>
+<node id="E">
+<data key="label">MFA Disabled and Security Weakened</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List users with MFA enabled - Corporate Control: Identity Provider Security Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify admin accounts with strong authentication requirements - Third-Party Control: Cloud IAM MFA Policy Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain access to MFA configuration settings - Corporate Control: Privileged Identity Management (PIM) & Policy Restrictions</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Modify logs to remove MFA modification traces - Third-Party Control: Security Information and Event Management (SIEM) Detection</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable MFA enforcement for selected accounts - Corporate Control: IAM Multi-Factor Authentication Enforcement</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Remove secondary authentication devices - Third-Party Control: Cloud Access Security Broker (CASB) & Risk-Based Authentication</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter API tokens and authentication settings - Corporate Control: Cloud Authentication Policy & Role Restrictions</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify mobile push notification settings - Third-Party Control: Mobile Device Management (MDM) & Endpoint Security</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent users from re-enabling MFA - Corporate Control: IAM Lockout Policy & Role-Based Access Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Remove email and phone-based authentication options - Third-Party Control: Cloud Identity Provider Security Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Invalidate session tokens to force new authentication - Corporate Control: IAM Session Management & Token Expiry Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify authentication app settings to disable MFA alerts - Third-Party Control: Third-Party MFA Provider Logs & Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm MFA remains disabled across all systems - Corporate Control: Identity Governance and Compliance Audits</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure MFA removal persists through account resets - Third-Party Control: Cloud Federation & Single Sign-On (SSO) Policies</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify event logs to prevent tracking - Corporate Control: Security Operations Center (SOC) Forensic Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Disable alternative MFA backup mechanisms - Third-Party Control: User Behavior Analytics & Adaptive Authentication</data>
+</edge>
+</graph>
+</graphml>

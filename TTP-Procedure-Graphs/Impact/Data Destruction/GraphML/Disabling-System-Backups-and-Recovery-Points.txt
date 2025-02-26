@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Disabling-System-Backups-and-Recovery-Points" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Backup and Recovery Systems</data>
+</node>
+<node id="B">
+<data key="label">Delete or Disable System Backups</data>
+</node>
+<node id="C">
+<data key="label">Ensure Backups Cannot Be Restored</data>
+</node>
+<node id="D">
+<data key="label">Prevent Future Backups from Being Created</data>
+</node>
+<node id="E">
+<data key="label">Backup and Recovery System Disabled</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">List all available backup solutions - Corporate Control: Backup Management & Disaster Recovery Planning</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify cloud and on-premises backup storage - Third-Party Control: Cloud Backup Monitoring & Storage Access Logs</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain administrative privileges for backup deletion - Corporate Control: Privileged Identity Management (PIM) & IAM Policies</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass security policies preventing deletion - Third-Party Control: Data Retention Enforcement & Cloud Storage Governance</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Delete local and networked backup files - Corporate Control: Endpoint Protection & Backup Policy Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify cloud storage policies to disable backup retention - Third-Party Control: Cloud Compliance & Automated Security Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Destroy system restore points and shadow copies - Corporate Control: System Integrity Monitoring & OS Security Hardening</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure deleted backups are not retrievable - Third-Party Control: Cloud Backup Encryption & Data Erasure Compliance</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify system settings to prevent automatic backup creation - Corporate Control: Group Policy Object (GPO) & System Administration Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable cloud-based backup scheduling - Third-Party Control: Cloud Automation Security & Data Loss Prevention (DLP)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure offline backups are also deleted - Corporate Control: Enterprise Backup Strategy & Secure Archival Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify registry settings to prevent rollback - Third-Party Control: Cloud Configuration Security & Policy Enforcement</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm backup destruction is permanent - Corporate Control: Security Operations Center (SOC) & Incident Response</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Monitor for unauthorized backup restoration attempts - Third-Party Control: Threat Intelligence & Cloud Log Analysis</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure forensic analysis cannot reconstruct backups - Corporate Control: Digital Forensics & Data Integrity Review</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Invalidate secondary authentication methods for backup recovery - Third-Party Control: Cloud IAM & Multi-Factor Authentication (MFA) Governance</data>
+</edge>
+</graph>
+</graphml>

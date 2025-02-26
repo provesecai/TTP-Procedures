@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Altering-Email-Signatures-or-Footers-with-Unauthorized-Content" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Email System</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Email Signature Templates</data>
+</node>
+<node id="C">
+<data key="label">Modify Email Signatures and Footers</data>
+</node>
+<node id="D">
+<data key="label">Ensure Unauthorized Content Persists</data>
+</node>
+<node id="E">
+<data key="label">Emails Sent with Unauthorized Footers</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate email servers and cloud-hosted services - Corporate Control: IT Asset Management & Email System Monitoring</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify company-wide email signature policies - Third-Party Control: Cloud Email Security & Compliance Auditing</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Obtain administrative privileges to modify templates - Corporate Control: Identity and Access Management (IAM) & Role-Based Access Controls</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass email security monitoring and policy enforcement - Third-Party Control: AI-Based Email Threat Intelligence & Filtering</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Insert unauthorized messages into email signatures - Corporate Control: Email Template Management & Policy Controls</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify footers across organization-wide email accounts - Third-Party Control: Cloud Email Security & Configuration Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure unauthorized content appears in all outgoing emails - Corporate Control: Email Gateway Security & Filtering Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Disable rollback mechanisms for signature restoration - Third-Party Control: Cloud Email Retention & Archiving Policies</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Lock email configuration settings to prevent reversal - Corporate Control: IT Policy Enforcement & Secure Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure unauthorized content propagates across all users - Third-Party Control: Email Synchronization & Cloud Compliance Auditing</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify email monitoring logs to hide signature changes - Corporate Control: Security Information and Event Management (SIEM)</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Prevent email security tools from detecting altered signatures - Third-Party Control: AI-Based Threat Intelligence & Email Filtering</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm unauthorized email footers appear in sent messages - Corporate Control: Security Operations Center (SOC) Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure compliance policies do not trigger alerts - Third-Party Control: Automated Email Compliance & Threat Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify logs to obscure unauthorized footer modifications - Corporate Control: Digital Forensics & Email Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent administrators from restoring original signatures - Third-Party Control: Cloud IAM Policy Enforcement & Security Monitoring</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,69 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="Modifying-Internal-Application-Interfaces" edgedefault="directed">
+<!--  Nodes  -->
+<node id="A">
+<data key="label">Identify Target Internal Application</data>
+</node>
+<node id="B">
+<data key="label">Gain Access to Application Configuration</data>
+</node>
+<node id="C">
+<data key="label">Modify UI Elements and Layout</data>
+</node>
+<node id="D">
+<data key="label">Ensure UI Changes Persist</data>
+</node>
+<node id="E">
+<data key="label">Internal Application Displays Altered UI</data>
+</node>
+<!--  Edges with Conditions/Weaknesses -->
+<edge source="A" target="B">
+<data key="label">Enumerate internal business-critical applications - Corporate Control: IT Asset Management & Application Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Identify UI framework and rendering engine - Third-Party Control: Application Security & Code Integrity Checks</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Gain necessary privileges for UI modification - Corporate Control: Role-Based Access Control (RBAC) & Identity Security</data>
+</edge>
+<edge source="A" target="B">
+<data key="label">Bypass UI integrity validation mechanisms - Third-Party Control: Cloud Application Security & Compliance Frameworks</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Modify application layout to mislead users - Corporate Control: Secure Development Lifecycle & Change Management</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Alter displayed labels, buttons, or instructions - Third-Party Control: Application Code Analysis & UI Security Monitoring</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Inject unauthorized JavaScript or stylesheets - Corporate Control: Web Application Security & Content Policies</data>
+</edge>
+<edge source="B" target="C">
+<data key="label">Ensure GUI changes affect all user sessions - Third-Party Control: Cloud Application Security Posture Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Modify underlying application code or database records - Corporate Control: Software Integrity & Configuration Management</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Disable rollback and UI restoration features - Third-Party Control: Continuous Application Monitoring & Threat Detection</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Ensure UI modifications persist across application updates - Corporate Control: DevOps Security & Software Update Controls</data>
+</edge>
+<edge source="C" target="D">
+<data key="label">Obscure log traces of UI changes - Third-Party Control: SIEM & Compliance Logging</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Confirm UI modifications affect all users - Corporate Control: IT Support & Incident Response Monitoring</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Prevent application security controls from reverting changes - Third-Party Control: Zero Trust Application Security & Threat Intelligence</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Modify forensic data to obscure change history - Corporate Control: Security Event Monitoring & Digital Forensics</data>
+</edge>
+<edge source="D" target="E">
+<data key="label">Ensure future updates do not override UI modifications - Third-Party Control: Software Composition Analysis & Secure Deployment Policies</data>
+</edge>
+</graph>
+</graphml>
