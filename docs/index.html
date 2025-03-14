@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE ATT&CK File Browser</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        input {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        .folder {
+            font-weight: bold;
+            color: darkred;
+        }
+
+        .file {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>MITRE ATT&CK File Browser</h1>
+    
+    <p>Type something to search:</p>
+    <input type="text" id="searchBox" onkeyup="searchFiles()">
+    
+    <br><br>
+    <div id="fileList">
+        <!-- Files will be shown here -->
+    </div>
+
+    <br>
+    <p>Click a file to open it.</p>
+</body>
+</html>
