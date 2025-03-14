@@ -1,5 +1,5 @@
-var directoryData = []; // Stores the full directory list
-var repoRoot = "docs/"; // Adjust if necessary based on GitHub Pages structure
+var directoryData = []; // Stores all files and folders
+var repoRoot = "docs/"; // Adjust if needed
 
 // Load directory.json and display only top-level folders
 function loadFiles() {
@@ -7,17 +7,22 @@ function loadFiles() {
         .then(response => response.json())
         .then(function(data) {
             directoryData = data;
-            var topFolders = directoryData.filter(item => isTopLevel(item.Path));
-            showFiles(topFolders, document.getElementById("fileList"));
+            resetToParentFolders(); // Show only main folders on page load
         })
         .catch(function(error) {
             console.log("Error loading directory.json", error);
         });
 }
 
-// Check if a folder is a top-level folder inside "TTP-Procedure-Graphs"
-function isTopLevel(path) {
-    return path.split("/").length === 2; // Ensures only direct children of "TTP-Procedure-Graphs"
+// Show only the **top-level folders inside "TTP-Procedure-Graphs"**
+function resetToParentFolders() {
+    var parentFolders = directoryData.filter(item => isTopLevelFolder(item.Path));
+    showFiles(parentFolders, document.getElementById("fileList"));
+}
+
+// Check if a folder is **directly inside "TTP-Procedure-Graphs"**
+function isTopLevelFolder(path) {
+    return path.startsWith("TTP-Procedure-Graphs/") && path.split("/").length === 2;
 }
 
 // Display files and folders
@@ -36,7 +41,7 @@ function showFiles(filesList, parentElement) {
             subList.className = "hidden";
             listItem.appendChild(subList);
 
-            // Toggle open/close when clicking the folder
+            // Clicking a folder expands its contents
             listItem.onclick = function(event) {
                 event.stopPropagation();
                 subList.classList.toggle("hidden");
@@ -55,7 +60,7 @@ function showFiles(filesList, parentElement) {
             // Clicking a file should open it properly
             listItem.onclick = function(event) {
                 event.stopPropagation();
-                window.open(repoRoot + item.Path, "_blank"); // Ensure correct GitHub Pages URL
+                window.open(repoRoot + item.Path, "_blank");
             };
         }
 
@@ -63,11 +68,16 @@ function showFiles(filesList, parentElement) {
     });
 }
 
-// Search function: Finds matching folders and files
+// Search function: Filters both files and folders
 function searchFiles() {
     var query = document.getElementById("search").value.toLowerCase();
-    var filtered = directoryData.filter(item => item.Path.toLowerCase().includes(query));
-    showFiles(filtered, document.getElementById("fileList"));
+
+    if (query.trim() === "") {
+        resetToParentFolders(); // When search is empty, reset to only parent folders
+    } else {
+        var filtered = directoryData.filter(item => item.Path.toLowerCase().includes(query));
+        showFiles(filtered, document.getElementById("fileList"));
+    }
 }
 
 // Load files when the page loads
