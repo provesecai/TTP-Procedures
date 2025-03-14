@@ -8,6 +8,10 @@ function loadFiles() {
         .then(function(data) {
             directoryData = data;
             console.log("Loaded directory data:", directoryData.length, "entries"); // Debugging log
+
+            // 🔴 Add this line to print the first 10 entries
+            console.log("First 10 entries from directory.json:", directoryData.slice(0, 10));
+
             resetToParentFolders(); // Show only main folders on page load
         })
         .catch(function(error) {
