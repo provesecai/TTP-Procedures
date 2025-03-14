@@ -1,5 +1,5 @@
 var directoryData = []; // ✅ Global variable to store API data
-var repoOwner = "provsecai"; // ✅ Your GitHub username (fix typo)
+var repoOwner = "provesecai"; // ✅ Your GitHub username (fix typo)
 var repoName = "TTP-Procedures"; // ✅ Your repository name
 var branch = "main"; // ✅ Correct branch
 
