@@ -9,7 +9,7 @@ function loadFiles() {
             directoryData = data;
             console.log("Loaded directory data:", directoryData.length, "entries"); // Debugging log
 
-            // 🔴 Add this line to print the first 10 entries
+            // Print the first few entries to inspect the structure
             console.log("First 10 entries from directory.json:", directoryData.slice(0, 10));
 
             resetToParentFolders(); // Show only main folders on page load
@@ -23,20 +23,20 @@ function loadFiles() {
 function resetToParentFolders() {
     console.log("Resetting to only show parent folders...");
 
-    // Extract folders that are **direct children** of "TTP-Procedure-Graphs/"
+    // Extract only the direct child folders inside "TTP-Procedure-Graphs"
     var parentFolders = directoryData.filter(item => 
-        item.IsFolder && isTopLevelFolder(item.Path)
+        item.IsFolder && isDirectChildOfRoot(item.Path)
     );
 
-    console.log("Parent folders found:", parentFolders.length); // Debugging log
+    console.log("Parent folders found:", parentFolders.length, parentFolders); // Debugging log
     showFiles(parentFolders, document.getElementById("fileList"));
 }
 
 // Check if a folder is **directly inside "TTP-Procedure-Graphs"**
-function isTopLevelFolder(path) {
+function isDirectChildOfRoot(path) {
     let parts = path.split("/");
 
-    // Ensure it's under "TTP-Procedure-Graphs/" and **not nested deeper**
+    // Ensure it's a **direct child** of "TTP-Procedure-Graphs"
     return parts.length === 2 && parts[0] === "TTP-Procedure-Graphs";
 }
 
