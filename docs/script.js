@@ -1,20 +1,19 @@
-var repoOwner = "provesecai"; // ✅ Your GitHub username
+var directoryData = []; // ✅ Global variable to store API data
+var repoOwner = "provsecai"; // ✅ Your GitHub username
 var repoName = "TTP-Procedures"; // ✅ Your repository name
-var branch = "main"; // ✅ Change if using a different branch
+var branch = "main"; // ✅ Correct branch
 
-var repoRoot = `https://${repoOwner}.github.io/${repoName}/`; // ✅ Fixed Template Literal
-
-// Load GitHub directory contents
 async function loadFiles() {
-    let apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/TTP-Procedure-Graphs?ref=${branch}`; // ✅ Fixed Template Literal
+    let apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/TTP-Procedure-Graphs?ref=${branch}`;
 
     try {
         let response = await fetch(apiUrl);
         let data = await response.json();
 
         console.log("GitHub API Data:", data); // Debugging log
-        
+
         if (Array.isArray(data)) {
+            directoryData = data; // ✅ Store API results in global variable
             showFiles(data, document.getElementById("fileList"));
         } else {
             console.error("Failed to fetch repository contents. Check API limits.");
@@ -24,7 +23,24 @@ async function loadFiles() {
     }
 }
 
-// Display files and folders
+// ✅ Search function (filters dynamically loaded GitHub API data)
+function searchFiles() {
+    var query = document.getElementById("search").value.toLowerCase();
+    console.log("Search query:", query); // Debugging log
+
+    if (query.trim() === "") {
+        console.log("Search empty, resetting view..."); // Debugging log
+        loadFiles(); // Reloads original structure when search is cleared
+        return;
+    }
+
+    var filtered = directoryData.filter(item => item.path.toLowerCase().includes(query));
+    
+    console.log("Search results:", filtered.length, filtered); // Debugging log
+    showFiles(filtered, document.getElementById("fileList"));
+}
+
+// ✅ Function to display files and folders
 function showFiles(filesList, parentElement) {
     parentElement.innerHTML = ""; // Clear before adding
 
@@ -60,7 +76,7 @@ function showFiles(filesList, parentElement) {
             listItem.className = "file";
             listItem.textContent = "📄 " + item.name;
 
-            // 🔹 Fixing file URLs for GitHub Pages
+            // ✅ FIX: Construct the correct GitHub Pages file URL
             let fileUrl = `https://${repoOwner}.github.io/${repoName}/${item.path}`;
 
             // Clicking a file should open it properly
@@ -75,26 +91,7 @@ function showFiles(filesList, parentElement) {
     });
 }
 
-
-function searchFiles() {
-    var query = document.getElementById("search").value.toLowerCase();
-    console.log("Search query:", query); // Debugging log
-
-    if (query.trim() === "") {
-        console.log("Search empty, resetting view..."); // Debugging log
-        loadFiles(); // Reloads the top-level structure when search is cleared
-        return;
-    }
-
-    var filtered = directoryData.filter(item => item.path.toLowerCase().includes(query));
-
-    console.log("Search results:", filtered.length, filtered); // Debugging log
-    showFiles(filtered, document.getElementById("fileList"));
-}
-
-
-
-// Fetch files from GitHub API dynamically
+// ✅ Function to fetch subfolders dynamically
 async function fetchGitHubContents(path) {
     let apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?ref=${branch}`;
 
@@ -108,7 +105,5 @@ async function fetchGitHubContents(path) {
     }
 }
 
-// Search function: Not needed as everything updates dynamically, but you can add filtering if required
-
-// Load files when the page loads
+// ✅ Load files when the page loads
 window.onload = loadFiles;
