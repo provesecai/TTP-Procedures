@@ -7,7 +7,7 @@ function loadFiles() {
         .then(response => response.json())
         .then(function(data) {
             directoryData = data;
-            console.log("Loaded directory data:", directoryData); // Debugging log
+            console.log("Loaded directory data:", directoryData.length, "entries"); // Debugging log
             resetToParentFolders(); // Show only main folders on page load
         })
         .catch(function(error) {
@@ -18,14 +18,22 @@ function loadFiles() {
 // Show only the **top-level folders inside "TTP-Procedure-Graphs"**
 function resetToParentFolders() {
     console.log("Resetting to only show parent folders...");
-    var parentFolders = directoryData.filter(item => isTopLevelFolder(item.Path));
-    console.log("Parent folders found:", parentFolders); // Debugging log
+
+    // Extract folders that are **direct children** of "TTP-Procedure-Graphs/"
+    var parentFolders = directoryData.filter(item => 
+        item.IsFolder && isTopLevelFolder(item.Path)
+    );
+
+    console.log("Parent folders found:", parentFolders.length); // Debugging log
     showFiles(parentFolders, document.getElementById("fileList"));
 }
 
 // Check if a folder is **directly inside "TTP-Procedure-Graphs"**
 function isTopLevelFolder(path) {
-    return path.startsWith("TTP-Procedure-Graphs/") && path.split("/").length === 2;
+    let parts = path.split("/");
+
+    // Ensure it's under "TTP-Procedure-Graphs/" and **not nested deeper**
+    return parts.length === 2 && parts[0] === "TTP-Procedure-Graphs";
 }
 
 // Display files and folders
@@ -88,7 +96,7 @@ function searchFiles() {
         resetToParentFolders(); // When search is empty, reset to only parent folders
     } else {
         var filtered = directoryData.filter(item => item.Path.toLowerCase().includes(query));
-        console.log("Search results:", filtered); // Debugging log
+        console.log("Search results:", filtered.length); // Debugging log
         showFiles(filtered, document.getElementById("fileList"));
     }
 }
