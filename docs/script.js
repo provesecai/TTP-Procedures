@@ -60,17 +60,39 @@ function showFiles(filesList, parentElement) {
             listItem.className = "file";
             listItem.textContent = "📄 " + item.name;
 
+            // 🔹 Fixing file URLs for GitHub Pages
+            let fileUrl = `https://${repoOwner}.github.io/${repoName}/${item.path}`;
+
             // Clicking a file should open it properly
             listItem.onclick = function(event) {
                 event.stopPropagation();
-                console.log("Opening file:", repoRoot + item.path); // Debugging log
-                window.open(repoRoot + item.path, "_blank");
+                console.log("Opening file:", fileUrl); // Debugging log
+                window.open(fileUrl, "_blank"); // ✅ Fixed GitHub Pages URL
             };
         }
 
         parentElement.appendChild(listItem);
     });
 }
+
+
+function searchFiles() {
+    var query = document.getElementById("search").value.toLowerCase();
+    console.log("Search query:", query); // Debugging log
+
+    if (query.trim() === "") {
+        console.log("Search empty, resetting view..."); // Debugging log
+        loadFiles(); // Reloads the top-level structure when search is cleared
+        return;
+    }
+
+    var filtered = directoryData.filter(item => item.path.toLowerCase().includes(query));
+
+    console.log("Search results:", filtered.length, filtered); // Debugging log
+    showFiles(filtered, document.getElementById("fileList"));
+}
+
+
 
 // Fetch files from GitHub API dynamically
 async function fetchGitHubContents(path) {
