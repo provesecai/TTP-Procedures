@@ -1,4 +1,4 @@
-var directoryData = []; // Stores all files and folders
+var directoryData = []; // Stores the full directory list
 var repoRoot = "docs/"; // Adjust if needed
 
 // Load directory.json and display only top-level folders
@@ -7,16 +7,19 @@ function loadFiles() {
         .then(response => response.json())
         .then(function(data) {
             directoryData = data;
+            console.log("Loaded directory data:", directoryData); // Debugging log
             resetToParentFolders(); // Show only main folders on page load
         })
         .catch(function(error) {
-            console.log("Error loading directory.json", error);
+            console.error("Error loading directory.json", error);
         });
 }
 
 // Show only the **top-level folders inside "TTP-Procedure-Graphs"**
 function resetToParentFolders() {
+    console.log("Resetting to only show parent folders...");
     var parentFolders = directoryData.filter(item => isTopLevelFolder(item.Path));
+    console.log("Parent folders found:", parentFolders); // Debugging log
     showFiles(parentFolders, document.getElementById("fileList"));
 }
 
@@ -28,6 +31,11 @@ function isTopLevelFolder(path) {
 // Display files and folders
 function showFiles(filesList, parentElement) {
     parentElement.innerHTML = ""; // Clear before adding
+
+    if (filesList.length === 0) {
+        console.log("No files to display"); // Debugging log
+        return;
+    }
 
     filesList.forEach(function(item) {
         var listItem = document.createElement("li");
@@ -47,6 +55,7 @@ function showFiles(filesList, parentElement) {
                 subList.classList.toggle("hidden");
 
                 if (subList.innerHTML === "") {
+                    console.log("Expanding folder:", item.Path); // Debugging log
                     var filtered = directoryData.filter(function(subItem) {
                         return subItem.Path.startsWith(item.Path + "/") && subItem.Path !== item.Path;
                     });
@@ -60,6 +69,7 @@ function showFiles(filesList, parentElement) {
             // Clicking a file should open it properly
             listItem.onclick = function(event) {
                 event.stopPropagation();
+                console.log("Opening file:", repoRoot + item.Path); // Debugging log
                 window.open(repoRoot + item.Path, "_blank");
             };
         }
@@ -71,11 +81,14 @@ function showFiles(filesList, parentElement) {
 // Search function: Filters both files and folders
 function searchFiles() {
     var query = document.getElementById("search").value.toLowerCase();
+    console.log("Search query:", query); // Debugging log
 
     if (query.trim() === "") {
+        console.log("Search empty, resetting view..."); // Debugging log
         resetToParentFolders(); // When search is empty, reset to only parent folders
     } else {
         var filtered = directoryData.filter(item => item.Path.toLowerCase().includes(query));
+        console.log("Search results:", filtered); // Debugging log
         showFiles(filtered, document.getElementById("fileList"));
     }
 }
