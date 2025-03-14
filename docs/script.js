@@ -1,4 +1,4 @@
-var repoOwner = "provsecai"; // ✅ Your GitHub username
+var repoOwner = "provesecai"; // ✅ Your GitHub username
 var repoName = "TTP-Procedures"; // ✅ Your repository name
 var branch = "main"; // ✅ Change if using a different branch
 
