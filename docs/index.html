@@ -8,36 +8,41 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        
         input {
             width: 90%;
             padding: 5px;
             margin-bottom: 10px;
             border: 1px solid black;
         }
-
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
         .folder {
             font-weight: bold;
             color: darkred;
+            cursor: pointer;
         }
-
         .file {
             color: blue;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
     <h1>MITRE ATT&CK File Browser</h1>
     
-    <p>Type something to search:</p>
-    <input type="text" id="searchBox" onkeyup="searchFiles()">
+    <p>Search for a file or folder:</p>
+    <input type="text" id="search" onkeyup="searchFiles()">
     
-    <br><br>
-    <div id="fileList">
-        <!-- Files will be shown here -->
-    </div>
+    <ul id="fileList">
+        <!-- Files and folders will be displayed here -->
+    </ul>
 
     <br>
-    <p>Click a file to open it.</p>
+    <p>Click on a folder to expand/collapse.</p>
 </body>
 </html>

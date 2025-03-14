@@ -1,55 +1,65 @@
-var stuff = []; // Global variable to store file data
+var directoryData = []; // Stores the full directory list
 
-// Load directory.json
-function getData() {
+// Loads directory.json and displays files
+function loadFiles() {
     fetch("directory.json")
         .then(response => response.json())
         .then(function(data) {
-            stuff = data;
-            showFiles(stuff);
+            directoryData = data;
+            showFiles(directoryData, document.getElementById("fileList"));
         })
         .catch(function(error) {
-            console.log("Error loading directory.json");
+            console.log("Error loading directory.json", error);
         });
 }
 
-// Display files and folders
-function showFiles(filesStuff) {
-    var container = document.getElementById("fileList");
-    container.innerHTML = ""; // Clears before adding
+// Creates collapsible file structure
+function showFiles(filesList, parentElement) {
+    parentElement.innerHTML = ""; // Clear before adding
+    
+    filesList.forEach(function(item) {
+        var listItem = document.createElement("li");
+        
+        if (item.IsFolder) {
+            listItem.className = "folder";
+            listItem.textContent = "📁 " + item.Name;
 
-    for (var i = 0; i < filesStuff.length; i++) {
-        var temp = document.createElement("div");
-
-        if (filesStuff[i].IsFolder) {
-            temp.innerHTML = "** Folder: " + filesStuff[i].Name; // Adds folder label
-            temp.style.color = "brown"; 
+            // Create sublist for child items
+            var subList = document.createElement("ul");
+            subList.className = "hidden"; // Hidden by default
+            listItem.appendChild(subList);
+            
+            listItem.onclick = function(event) {
+                event.stopPropagation(); // Prevent triggering parent clicks
+                subList.classList.toggle("hidden");
+                if (subList.innerHTML === "") {
+                    // Show files within this folder
+                    var filtered = directoryData.filter(function(subItem) {
+                        return subItem.Path.startsWith(item.Path + "/") && subItem.Path !== item.Path;
+                    });
+                    showFiles(filtered, subList);
+                }
+            };
         } else {
-            temp.innerHTML = "File: " + filesStuff[i].Name;
-            temp.style.color = "blue";
-
-            // Click to open file
-            temp.onclick = function() {
-                window.open(filesStuff[i].Path, "_blank");
+            listItem.className = "file";
+            listItem.textContent = "📄 " + item.Name;
+            listItem.onclick = function() {
+                window.open(item.Path, "_blank");
             };
         }
 
-        container.appendChild(temp);
-    }
+        parentElement.appendChild(listItem);
+    });
 }
 
-// Search function
+// Filters files based on search input
 function searchFiles() {
-    var searchText = document.getElementById("searchBox").value.toLowerCase();
-    
-    var filteredFiles = [];
-    for (var j = 0; j < stuff.length; j++) {
-        if (stuff[j].Path.toLowerCase().includes(searchText)) {
-            filteredFiles.push(stuff[j]);
-        }
-    }
-
-    showFiles(filteredFiles); // Show filtered results
+    var query = document.getElementById("search").value.toLowerCase();
+    var filtered = directoryData.filter(function(item) {
+        return item.Path.toLowerCase().includes(query);
+    });
+    showFiles(filtered, document.getElementById("fileList"));
 }
 
-window.onload = getData;
+// Load files on page load
+window.onload = loadFiles;
