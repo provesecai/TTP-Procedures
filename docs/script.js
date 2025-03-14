@@ -1,43 +1,27 @@
-var directoryData = []; // Stores the full directory list
-var repoRoot = "docs/"; // Adjust if needed
+var repoOwner = "provsecai"; // ✅ Your GitHub username
+var repoName = "TTP-Procedures"; // ✅ Your repository name
+var branch = "main"; // ✅ Change if using a different branch
 
-// Load directory.json and display only top-level folders
-function loadFiles() {
-    fetch("directory.json")
-        .then(response => response.json())
-        .then(function(data) {
-            directoryData = data;
-            console.log("Loaded directory data:", directoryData.length, "entries"); // Debugging log
+var repoRoot = `https://${repoOwner}.github.io/${repoName}/`; // ✅ Fixed Template Literal
 
-            // Print the first few entries to inspect the structure
-            console.log("First 10 entries from directory.json:", directoryData.slice(0, 10));
+// Load GitHub directory contents
+async function loadFiles() {
+    let apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/TTP-Procedure-Graphs?ref=${branch}`; // ✅ Fixed Template Literal
 
-            resetToParentFolders(); // Show only main folders on page load
-        })
-        .catch(function(error) {
-            console.error("Error loading directory.json", error);
-        });
-}
+    try {
+        let response = await fetch(apiUrl);
+        let data = await response.json();
 
-// Show only the **top-level folders inside "TTP-Procedure-Graphs"**
-function resetToParentFolders() {
-    console.log("Resetting to only show parent folders...");
-
-    // Extract only the direct child folders inside "TTP-Procedure-Graphs"
-    var parentFolders = directoryData.filter(item => 
-        item.IsFolder && isDirectChildOfRoot(item.Path)
-    );
-
-    console.log("Parent folders found:", parentFolders.length, parentFolders); // Debugging log
-    showFiles(parentFolders, document.getElementById("fileList"));
-}
-
-// Check if a folder is **directly inside "TTP-Procedure-Graphs"**
-function isDirectChildOfRoot(path) {
-    let parts = path.split("/");
-
-    // Ensure it's a **direct child** of "TTP-Procedure-Graphs"
-    return parts.length === 2 && parts[0] === "TTP-Procedure-Graphs";
+        console.log("GitHub API Data:", data); // Debugging log
+        
+        if (Array.isArray(data)) {
+            showFiles(data, document.getElementById("fileList"));
+        } else {
+            console.error("Failed to fetch repository contents. Check API limits.");
+        }
+    } catch (error) {
+        console.error("Error fetching GitHub repo structure:", error);
+    }
 }
 
 // Display files and folders
@@ -52,37 +36,35 @@ function showFiles(filesList, parentElement) {
     filesList.forEach(function(item) {
         var listItem = document.createElement("li");
 
-        if (item.IsFolder) {
+        if (item.type === "dir") { // 🔹 Folder
             listItem.className = "folder";
-            listItem.textContent = "📁 " + item.Name;
+            listItem.textContent = "📁 " + item.name;
 
             // Create hidden sublist
             var subList = document.createElement("ul");
             subList.className = "hidden";
             listItem.appendChild(subList);
 
-            // Clicking a folder expands its contents
-            listItem.onclick = function(event) {
+            // Clicking a folder loads its contents
+            listItem.onclick = async function(event) {
                 event.stopPropagation();
                 subList.classList.toggle("hidden");
 
                 if (subList.innerHTML === "") {
-                    console.log("Expanding folder:", item.Path); // Debugging log
-                    var filtered = directoryData.filter(function(subItem) {
-                        return subItem.Path.startsWith(item.Path + "/") && subItem.Path !== item.Path;
-                    });
-                    showFiles(filtered, subList);
+                    console.log("Expanding folder:", item.path); // Debugging log
+                    let subFiles = await fetchGitHubContents(item.path);
+                    showFiles(subFiles, subList);
                 }
             };
-        } else {
+        } else { // 🔹 File
             listItem.className = "file";
-            listItem.textContent = "📄 " + item.Name;
+            listItem.textContent = "📄 " + item.name;
 
             // Clicking a file should open it properly
             listItem.onclick = function(event) {
                 event.stopPropagation();
-                console.log("Opening file:", repoRoot + item.Path); // Debugging log
-                window.open(repoRoot + item.Path, "_blank");
+                console.log("Opening file:", repoRoot + item.path); // Debugging log
+                window.open(repoRoot + item.path, "_blank");
             };
         }
 
@@ -90,20 +72,21 @@ function showFiles(filesList, parentElement) {
     });
 }
 
-// Search function: Filters both files and folders
-function searchFiles() {
-    var query = document.getElementById("search").value.toLowerCase();
-    console.log("Search query:", query); // Debugging log
+// Fetch files from GitHub API dynamically
+async function fetchGitHubContents(path) {
+    let apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?ref=${branch}`;
 
-    if (query.trim() === "") {
-        console.log("Search empty, resetting view..."); // Debugging log
-        resetToParentFolders(); // When search is empty, reset to only parent folders
-    } else {
-        var filtered = directoryData.filter(item => item.Path.toLowerCase().includes(query));
-        console.log("Search results:", filtered.length); // Debugging log
-        showFiles(filtered, document.getElementById("fileList"));
+    try {
+        let response = await fetch(apiUrl);
+        let data = await response.json();
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        console.error("Error fetching folder contents:", error);
+        return [];
     }
 }
+
+// Search function: Not needed as everything updates dynamically, but you can add filtering if required
 
 // Load files when the page loads
 window.onload = loadFiles;
