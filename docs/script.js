@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     const repoName = "TTP-Procedures"; //Repository Name 
     const baseApiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents`;
 
+    //Ensuring config.js exists and has a token 
+    let headers = {};
+    if (typeof config !== "undefined" && config.githubToken) {
+        headers = {
+            "Authorization": `token ${config.githubToken}`,
+            "Accept": "application/vnd.github.v3+json"
+        };
+    }
+
     // Function to get files from GitHub
     function fetchFiles(folderPath) {
         let url = baseApiUrl;
@@ -13,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             url += `/${folderPath}`; // Add folder path to API URL so it recognises it and can list
         }
 
-        fetch(url)
+        fetch(url, {headers}) //headers uses PAT token
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`GitHub API error: ${response.status}`); //Logs errors, good practice for debugging in future
