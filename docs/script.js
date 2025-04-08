@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     var repoName = "TTP-Procedures";
     // Set up the GitHub API so that the files automatically update when added or removed#
     // Now using cloudflare worker, added workers link below
-    var apiUrl = "http://github-proxy.perticamatteo8.workers.dev";
+    var apiUrl = "https://github-proxy.perticamatteo8.workers.dev";
 
     
     // Initates headers for the start of the API token for authentication
