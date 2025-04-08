@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           // This is a file.
           // The code that makes the file open in a new tab when clicked on
           var a = document.createElement("a");
-          a.href = "https://raw.githubusercontent.com/" + "provesecai" + "/" + "TTP-Procedures" + "/main/" + tree[key].path;
+          a.href = `https://github-proxy.perticamatteo8.workers.dev/raw/${tree[key].path}`;
           a.target = "_blank"; // New tab
           a.innerHTML = key;
           li.appendChild(a);
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Allows for files to be opended in new tab (same as in collapsible file tree)
             var a = document.createElement("a");
-            a.href = "https://raw.githubusercontent.com/provesecai/TTP-Procedures/main/" + filePath;
+            a.href = `https://github-proxy.perticamatteo8.workers.dev/raw/${filePath}`;
             a.target = "_blank";
             a.innerHTML = fileName;
             li.appendChild(a);
