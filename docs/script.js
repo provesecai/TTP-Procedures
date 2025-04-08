@@ -14,16 +14,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Initates headers for the start of the API token for authentication
     var headers = {};
 
-    // Try and find config.js if it exists and if it does grab it
-    /** 
-    if (typeof config !== "undefined" && config.githubToken) {
-      headers = {
-        "Authorization": "token " + config.githubToken, // Retrive token from inside file
-        "Accept": "application/vnd.github.v3+json"         // API format 
-      };
-    }
-    */
-   
     // Fetching the files tree strcuture from GitHub using XMLHttp (could switch to fetch if needed)
     var xhr = new XMLHttpRequest(); // Creates a new object, to make HTTP requests
     xhr.open("GET", apiUrl, true); // GET request for apiURL 
