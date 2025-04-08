@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Define the GitHub repository owner and repository name
     var repoOwner = "provesecai";
     var repoName = "TTP-Procedures";
-    // Set up the GitHub API so that the files automatically update when added or removed
-    var apiUrl = "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/git/trees/main?recursive=1";
+    // Set up the GitHub API so that the files automatically update when added or removed#
+    // Now using cloudflare worker, added workers link below
+    var apiUrl = "http://github-proxy.perticamatteo8.workers.dev";
+
     
     // Initates headers for the start of the API token for authentication
     var headers = {};
