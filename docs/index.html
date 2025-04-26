@@ -4,73 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Provesecai Cyber Threat Graph Explorer</title>
+  <script src="config.js"></script>
   <script defer src="script.js"></script>
-  <!--CSS styling begins below-->
   <style>
-    /* Folder Buttons Syling */
-    .collapsible {
-      background-color: #ffffff;
-      color: rgb(66, 69, 253); /* Text colour */
-      cursor: pointer;
-      padding: 4px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 4px;
-      display: inline-block;
-      width: auto; /* Width is decided by page rather than being set */
-      min-width: 150px;
-      margin-left: -25px;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 24px;
+      color: #333;
+      line-height: 1.6;
     }
-    /* Change background on hover over folder buttons */
-    .collapsible:hover {
-      background-color: #ffffff;
+  
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
     }
-    /* Style for expand folder button */
-    .active {
-      background-color: #ffffff;
+  
+    #search-box {
+      width: 90%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      margin: 0 auto 30px auto;
+      display: block;
     }
-    /* Style for lists of items when collapsible open */
+  
     ul {
-      list-style-type: disc; /* Style Type for bullet points*/
-      margin: 0;
-      padding-left: 15px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 800px;
     }
-    /* Listed items styling */
+  
     li {
-      margin: 0;
-      padding-left: 15px;
+      background-color: #ffffff;
+      margin: 4px 0;
+      padding: 6px 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
     }
+  
+    li:hover {
+      background-color: #f0f0f0;
+    }
+  
+    .collapsible {
+      background: none;
+      border: none;
+      color: #1a237e;
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+    }
+  
+    .collapsible:hover {
+      text-decoration: underline;
+    }
+  
+    .active {
+      color: #0d47a1;
+    }
+  
     .content {
       display: none;
-      margin-left: 20px;
-      padding: 5px;
+      padding-left: 14px;
+      margin-top: 4px;
+      border-left: 2px solid #d1d9ff;
     }
-    /* Search box styling */
-    #search-box {
-      width: 80%;
-      padding: 8px;
-      margin-bottom: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+  
+    a.download-btn {
+      font-size: 14px;
+      color: #1a237e;
+      text-decoration: none;
+      margin-left: auto;
+      font-weight: 500;
     }
-    /* Hides elements when is needed */
+  
+    a.download-btn:hover {
+      color: #0d47a1;
+    }
+  
+    #search-results {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+  
     .hidden {
-      display: none; /* What actually keeps them hidden */
+      display: none;
     }
-  </style>
+  
+    .footer-note {
+      position: fixed;
+      bottom: 12px;
+      right: 16px;
+      font-size: 12px;
+      color: #777;
+      background: #f5f5f5;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+  
+    @media (max-width: 600px) {
+      .footer-note {
+        font-size: 11px;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  </style>  
 </head>
-<!-- Visable contents of the page when loaded -->
 <body>
   <h1>Provesecai Cyber Threat Graph Explorer</h1>
-  <!-- Search box id -->
   <input type="text" id="search-box" placeholder="Search files..." oninput="searchFiles()">
-  <!--The collapsible file structure id-->
   <ul id="file-list"></ul>
-  <!-- What appears when searching - Hidden unless something is searched for -->
   <ul id="search-results" class="hidden"></ul>
+  <div class="footer-note">
+    These graphs were generated using AI and Machine Learning
+  </div>
 </body>
 </html>
