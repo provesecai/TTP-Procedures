@@ -1,6 +1,6 @@
 # ProveSecAI Cyber Threat Graph Explorer
 
-A comprehensive and high-fidelity repository for exploring and visualising cyber attack tactics, techniques, and procedures (TTPs). Built upon the **MITRE ATT&CK® Enterprise Matrix**, this resource transforms raw threat intelligence into actionable, graph-based data structures.
+The TTP procedures are generated using Large Language Models (LLMs) trained to process and extract intelligence from vast quantities of unstructured data, including global threat intelligence reports, security news articles, incident reports, and research papers. They are built upon the **MITRE ATT&CK® Enterprise Matrix**, this resource transforms raw threat intelligence into actionable, graph-based data structures.
 
 ---
 
